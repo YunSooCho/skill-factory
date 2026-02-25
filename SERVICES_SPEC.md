@@ -245,7 +245,7 @@
 | 243 | Mineta | Translation | [mineta.jp](https://mineta.jp) | ⏱️ (timeout) |
 | 244 | T-4 Translation | Translation | [t4inc.jp](https://www.t4inc.jp) | ⏱️ (timeout) |
 | 245 | SignTime | Document | [signtime.jp](https://signtime.jp) | ✅ (200) |
-| 246 | DocuSign Japan | Document | [docusign.com/ja](https://www.docusign.com/ja) | ❌ (404) |
+| 246 | DocuSign Japan | Document | [docusign.com](https://www.docusign.com) | ✅ (200) |
 | 247 | GyroSign | Document | [gyrosign.co.jp](https://gyrosign.co.jp) | ⏱️ (timeout) |
 | 248 | e-saifu | Document | [e-saifu.co.jp](https://www.e-saifu.co.jp) | ⏱️ (timeout) |
 | 249 | TalentBoard | タレントマネジメント | [talentboard.jp](https://talentboard.jp) | ⏱️ (timeout) |
@@ -283,7 +283,7 @@
 | 281 | SAP Concur | 経費精算 | [concur.co.jp](https://www.concur.co.jp) | ✅ (200) |
 | 282 | Dynamics 365 | ERP | [microsoft.com/ja-jp/dynamics365](https://www.microsoft.com/ja-jp/dynamics365) | ⏱️ (timeout) |
 | 283 | Freshworks | CRM | [freshworks.com/ja](https://www.freshworks.com/ja) | ✅ (200) |
-| 284 | RingCentral | Communication | [ringcentral.com/ja](https://www.ringcentral.com/ja) | ❌ (404) |
+| 284 | RingCentral | Communication | [ringcentral.com](https://www.ringcentral.com) | ✅ (200) |
 | 285 | Twilio | Communication | [twilio.com/ja](https://www.twilio.com/ja) | ✅ (200) |
 | 286 | SendGrid | Email | [sendgrid.com/ja](https://www.sendgrid.com/ja) | ❌ (404) |
 | 287 | Xero Japan | 会計 | [xero.com/jp](https://www.xero.com/jp) | ❌ (404) |
@@ -809,10 +809,118 @@
 | 807 | Offis | オフィス | [offis.jp](https://offis.jp) | ✅ (200) |
 | 808 | OfficeMall | オフィス | [officemall.jp](https://officemall.jp) | ✅ (200) |
 | 809 | WorkLife | オフィス | [worklife.jp](https://worklife.jp) | ✅ (200) |
+| 810 | Streak | CRM | [streak.com](https://streak.com) | ✅ (301) |
+| 811 | Nutshell | CRM | [nutshell.com](https://www.nutshell.com) | ✅ (301) |
+| 812 | Capsule CRM | CRM | [capsulecrm.com](https://www.capsulecrm.com) | ✅ (200) |
+| 813 | Copper CRM | CRM | [copper.com](https://www.copper.com) | ✅ (301) |
+| 814 | Nimble CRM | CRM | [nimble.com](https://www.nimble.com) | ✅ (301) |
+| 815 | Sellf | CRM | [sellf.io](https://sellf.io) | ✅ (301) |
+| 816 | Freshsales CRM | CRM | [freshsales.io](https://freshsales.io) | ✅ (301) |
+| 817 | QuickBooks US | 会計 | [quickbooks.intuit.com](https://quickbooks.intuit.com) | ✅ (200) |
+| 818 | Wave Accounting | 会計 | [waveapps.com](https://www.waveapps.com) | ✅ (200) |
+| 819 | AccountantsWorld | 会計 | [accountantsworld.com](https://www.accountantsworld.com) | ✅ (200) |
+| 820 | KashFlow | 会計 | [kashflow.com](https://www.kashflow.com) | ✅ (200) |
+| 821 | Mightynets | 会計 | [mightynets.com](https://www.mightynets.com) | ✅ (200) |
+| 822 | FreeAgent | 会計 | [freeagent.com](https://www.freeagent.com) | ✅ (200) |
+| 823 | Clockify | 勤怠管理 | [clockify.me](https://clockify.me) | ✅ (200) |
+| 824 | Toggl | 勤怠管理 | [toggl.com](https://www.toggl.com) | ✅ (302) |
+| 825 | Harvest | 勤怠管理 | [harvestapp.com](https://harvestapp.com) | ✅ (302) |
+| 826 | RescueTime | 勤怠管理 | [rescuetime.com](https://rescuetime.com) | ✅ (301) |
+| 827 | PandaDoc | Document | [pandadoc.com](https://www.pandadoc.com) | ✅ (200) |
+| 828 | SignRequest | Document | [signrequest.com](https://www.signrequest.com) | ✅ (302) |
+| 829 | RightSignature | Document | [rightsignature.com](https://www.rightsignature.com) | ✅ (200) |
+| 830 | SignEasy | Document | [signeasy.com](https://www.signeasy.com) | ✅ (301) |
+| 831 | DrChrono | 医療 | [drchrono.com](https://www.drchrono.com) | ✅ (200) |
+| 832 | Greenway Healthcare | 医療 | [greenwayhealth.com](https://www.greenwayhealth.com) | ✅ (200) |
+| 833 | Nextech Healthcare | 医療 | [nextech.com](https://www.nextech.com) | ✅ (200) |
+| 834 | Epic Systems | 医療 | [epic.com](https://www.epic.com) | ✅ (200) |
+| 835 | Khan Academy | 教育 | [khanacademy.org](https://www.khanacademy.org) | ✅ (200) |
+| 836 | Codecademy | 教育 | [codecademy.com](https://www.codecademy.com) | ✅ (200) |
+| 837 | Lynda | 教育 | [lynda.com](https://www.lynda.com) | ✅ (301) |
+| 838 | Slido | Communication | [slido.com](https://www.slido.com) | ✅ (200) |
+| 839 | Poll Everywhere | Communication | [polleverywhere.com](https://www.polleverywhere.com) | ✅ (200) |
+| 840 | Mentimeter | Communication | [mentimeter.com](https://www.mentimeter.com) | ✅ (200) |
+| 841 | Kahoot | 教育 | [kahoot.com](https://www.kahoot.com) | ✅ (301) |
+| 842 | Quizlet | 教育 | [quizlet.com](https://www.quizlet.com) | ✅ (301) |
+| 843 | Brilliant | 教育 | [brilliant.org](https://www.brilliant.org) | ✅ (301) |
+| 844 | Domestika | 教育 | [domestika.org](https://www.domestika.org) | ✅ (302) |
+| 845 | Creativebug | 教育 | [creativebug.com](https://www.creativebug.com) | ✅ (200) |
+| 846 | Workato | RPA | [workato.com](https://www.workato.com) | ✅ (200) |
+| 847 | Fivetran | RPA | [fivetran.com](https://www.fivetran.com) | ✅ (200) |
+| 848 | Parabola | RPA | [parabola.io](https://www.parabola.io) | ✅ (301) |
+| 849 | n8n | RPA | [n8n.io](https://www.n8n.io) | ✅ (301) |
+| 850 | Integromat (Make) | RPA | [integromat.com](https://www.integromat.com) | ✅ (301) |
+| 851 | Power Automate | RPA | [powerautomate.com](https://www.powerautomate.com) | ✅ (301) |
+| 852 | ContractBook | 法務 | [contractbook.com](https://www.contractbook.com) | ✅ (301) |
+| 853 | Juro | 法務 | [juro.com](https://www.juro.com) | ✅ (301) |
+| 854 | NetDocuments | 法務 | [netdocuments.com](https://www.netdocuments.com) | ✅ (200) |
+| 855 | Ironclad | 法務 | [ironcladapp.com](https://www.ironcladapp.com) | ✅ (301) |
+| 856 | Eversign | 法務 | [eversign.com](https://www.eversign.com) | ✅ (301) |
+| 857 | HelloSign | 法務 | [hellosign.com](https://www.hellosign.com) | ✅ (301) |
+| 858 | ContractSafe | 法務 | [contractsafe.com](https://www.contractsafe.com) | ✅ (200) |
+| 859 | Plex Systems | 製造 | [plex.com](https://www.plex.com) | ✅ (301) |
+| 860 | QAD | 製造 | [qad.com](https://www.qad.com) | ✅ (200) |
+| 861 | IFS | 製造 | [ifs.com](https://www.ifs.com) | ✅ (301) |
+| 862 | Acumatica | 製造 | [acumatica.com](https://www.acumatica.com) | ✅ (200) |
+| 863 | ERPNext | ERP | [erpnext.com](https://www.erpnext.com) | ✅ (308) |
+| 864 | Tryton | ERP | [tryton.org](https://www.tryton.org) | ✅ (200) |
+| 865 | Adempiere | ERP | [adempiere.org](https://www.adempiere.org) | ✅ (200) |
+| 866 | Gliffy | Diagram | [gliffy.com](https://www.gliffy.com) | ✅ (200) |
+| 867 | Lucidchart | Diagram | [lucidchart.com](https://www.lucidchart.com) | ✅ (301) |
+| 868 | Diagrams.net | Diagram | [app.diagrams.net](https://app.diagrams.net) | ✅ (200) |
+| 869 | Visual Paradigm | Diagram | [visual-paradigm.com](https://www.visual-paradigm.com) | ✅ (200) |
+| 870 | YWorks | Diagram | [yworks.com](https://www.yworks.com) | ✅ (200) |
+| 871 | Concept Draw | Diagram | [conceptdraw.com](https://www.conceptdraw.com) | ✅ (200) |
+| 872 | Buffer | Social Media | [buffer.com](https://www.buffer.com) | ✅ (301) |
+| 873 | AgoraPulse | Social Media | [agorapulse.com](https://www.agorapulse.com) | ✅ (200) |
+| 874 | Sendible | Social Media | [sendible.com](https://www.sendible.com) | ✅ (200) |
+| 875 | Mention | Social Media | [mention.com](https://www.mention.com) | ✅ (301) |
+| 876 | Sprout Social | Social Media | [sproutsocial.com](https://sproutsocial.com) | ✅ (200) |
+| 877 | SocialPilot | Social Media | [socialpilot.co](https://www.socialpilot.co) | ✅ (200) |
+| 878 | CrowdFire | Social Media | [crowdfireapp.com](https://crowdfireapp.com) | ✅ (301) |
+| 879 | Linguee | Translation | [linguee.com](https://www.linguee.com) | ✅ (200) |
+| 880 | Babelfish | Translation | [babelfish.com](https://www.babelfish.com) | ✅ (200) |
+| 881 | Systran | Translation | [systran.net](https://www.systran.net) | ✅ (301) |
+| 882 | Bing Translate | Translation | [bing.com/translator](https://www.bing.com/translator) | ✅ (200) |
+| 883 | Yandex Translate | Translation | [yandex.com/translate](https://www.yandex.com/translate) | ✅ (302) |
+| 884 | Swagger | Documentation | [swagger.io](https://www.swagger.io) | ✅ (301) |
+| 885 | GitBook | Documentation | [gitbook.com](https://www.gitbook.com) | ✅ (200) |
+| 886 | ReadTheDocs | Documentation | [readthedocs.io](https://www.readthedocs.io) | ✅ (302) |
+| 887 | Docusaurus | Documentation | [docusaurus.io](https://www.docusaurus.io) | ✅ (200) |
+| 888 | MkDocs | Documentation | [mkdocs.org](https://www.mkdocs.org) | ✅ (200) |
+| 889 | Sphinx | Documentation | [sphinx-doc.org](https://www.sphinx-doc.org) | ✅ (302) |
+| 890 | Jekyll | Documentation | [jekyllrb.com](https://www.jekyllrb.com) | ✅ (301) |
+| 891 | Hugo | Documentation | [hugo.com](https://www.hugo.com) | ✅ (302) |
+| 892 | Dev.to | Content | [dev.to](https://dev.to) | ✅ (200) |
+| 893 | Hashnode | Content | [hashnode.com](https://hashnode.com) | ✅ (200) |
+| 894 | Ghost | Content | [ghost.org](https://ghost.org) | ✅ (200) |
+| 895 | WordPress | Content | [wordpress.com](https://www.wordpress.com) | ✅ (301) |
+| 896 | Blogger | Content | [blogger.com](https://www.blogger.com) | ✅ (302) |
+| 897 | Tumblr | Content | [tumblr.com](https://tumblr.com) | ✅ (301) |
+| 898 | CamCard | 名片管理 | [camcard.com](https://www.camcard.com) | ✅ (200) |
+| 899 | ScanBizCards | 名片管理 | [scanbizcards.com](https://www.scanbizcards.com) | ✅ (200) |
+| 900 | Evernote Scannable | 名片管理 | [evernote.com](https://www.evernote.com) | ✅ (200) |
+| 901 | BizCard | 名片管理 | [bizcard.com](https://www.bizcard.com) | ✅ (200) |
+| 902 | Gitea Main | Git | [gitea.io](https://gitea.io) | ✅ (200) |
+| 903 | Forgejo | Git | [forgejo.org](https://forgejo.org) | ✅ (200) |
+| 904 | RhodeCode | Git | [rhodecode.com](https://rhodecode.com) | ✅ (200) |
+| 905 | Gogs | Git | [gogs.io](https://gogs.io) | ✅ (200) |
+| 906 | Gitee | Git | [gitee.com](https://gitee.com) | ✅ (200) |
+| 907 | BMC Helix | IT Service | [bmc.com](https://www.bmc.com) | ✅ (200) |
+| 908 | VictorOps | IT Service | [victorops.com](https://www.victorops.com) | ✅ (200) |
+| 909 | Opsgenie | IT Service | [opsgenie.com](https://www.opsgenie.com) | ✅ (200) |
+| 910 | LiquidSpace | オフィス | [liquidspace.com](https://www.liquidspace.com) | ✅ (200) |
+| 911 | Bing Translator | Translation | [bing.com/translator](https://www.bing.com/translator) | ✅ (200) |
+| 912 | Reverso Translation | Translation | [reverso.net](https://www.reverso.net) | ⚠️ (403) |
+| 913 | Kinsta | Cloud | [kinsta.com](https://www.kinsta.com) | ✅ (200) |
+| 914 | Scaleway | Cloud | [scaleway.com](https://www.scaleway.com) | ✅ (200) |
+| 915 | Linode | Cloud | [linode.com](https://www.linode.com) | ✅ (200) |
+| 916 | Vultr | Cloud | [vultr.com](https://www.vultr.com) | ✅ (200) |
 
 ---
 
-**Total**: 809 services (all with URL検証カラム)
+**Total**: 916 services (all with URL検証カラム)
 
 ---
-**Last updated**: 2026-02-25 21:30 (Asia/Tokyo)
+
+**Last updated**: 2026-02-25 22:33 (Asia/Tokyo)
