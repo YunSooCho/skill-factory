@@ -25,8 +25,7 @@
 | 21 | manaba | 教育 | [manaba.jp](https://www.manaba.jp) | ✅ (200)
 | 22 | Schoo | 教育 | [schoo.jp](https://www.schoo.jp) | ✅ (200)
 | 23 | Studyplus | 教育 | [studyplus.jp](https://www.studyplus.jp) | ✅ (200)
-| 24 | SAP ERP | 製造 | [sap.com/jp](https://www.sap.com/jp) | ❌ (404)
-| 25 | Oracle NetSuite | 製造 | [oracle.com/jp/netsuite](https://www.oracle.com/jp/netsuite) | ⚠️ (403)
+| 24 | SAP ERP | 製造 | [sap.com/jp](https://www.sap.com/jp) | ❌ (404) | 25 | Oracle NetSuite | 製造 | [oracle.com/jp/netsuite](https://www.oracle.com/jp/netsuite) | ⚠️ (403)
 | 26 | Smart Factory | 製造 | [smart-factory.jp](https://www.smart-factory.jp) | ⏱️ (timeout)
 | 27 | freee | 会計 | [freee.co.jp](https://www.freee.co.jp) | ✅ (200)
 | 28 | Money Forward | 会計 | [moneyforward.com](https://www.moneyforward.com) | ✅ (200)
@@ -68,8 +67,7 @@
 | 64 | Autodesk | Design | [autodesk.co.jp](https://autodesk.co.jp) | ⚠️ (403)
 | 65 | Zoom | Communication | [zoom.us](https://zoom.us) | ✅ (200)
 | 66 | Box | Storage | [box.com](https://box.com) | ✅ (200)
-| 67 | Gengo | Translation | [gengo.com](https://gengo.com) | ❌ (502)
-| 68 | Crowdin | Translation | [crowdin.com](https://crowdin.com) | ✅ (200)
+| 67 | Gengo | Translation | [gengo.com](https://gengo.com) | ✅ (200) | 68 | Crowdin | Translation | [crowdin.com](https://crowdin.com) | ✅ (200)
 | 69 | GitHub | Git | [github.com](https://github.com) | ✅ (200)
 | 70 | GitLab | Git | [gitlab.com](https://gitlab.com) | ✅ (200)
 | 71 | AWS | Cloud | [aws.amazon.com/jp](https://aws.amazon.com/jp) | ✅ (200)
@@ -118,8 +116,7 @@
 | 114 | GitKraken | Git | [gitkraken.com](https://gitkraken.com) | ✅ (200)
 | 115 | Bitbucket | Git | [bitbucket.org](https://bitbucket.org) | ✅ (200)
 | 116 | Sourcegraph | Git | [sourcegraph.com](https://sourcegraph.com) | ✅ (200)
-| 117 | Microsoft Azure | Cloud | [azure.microsoft.com/ja-jp](https://azure.microsoft.com/ja-jp) | ⏱️ (timeout)
-| 118 | Oracle Cloud | Cloud | [oracle.com/jp/cloud](https://www.oracle.com/jp/cloud) | ✅ (200)
+| 117 | Microsoft Azure | Cloud | [azure.microsoft.com/ja-jp](https://azure.microsoft.com/ja-jp) | ✅ (200) | 118 | Oracle Cloud | Cloud | [oracle.com/jp/cloud](https://www.oracle.com/jp/cloud) | ✅ (200)
 | 119 | DigitalOcean | Cloud | [digitalocean.com](https://digitalocean.com) | ✅ (200)
 | 120 | Google Drive | Storage | [drive.google.com](https://drive.google.com) | ✅ (200)
 | 121 | OneDrive | Storage | [onedrive.com](https://onedrive.com) | ✅ (200)
@@ -247,8 +244,7 @@
 | 243 | Mineta | Translation | [mineta.jp](https://mineta.jp) | ⏱️ (timeout)
 | 244 | T-4 Translation | Translation | [t4inc.jp](https://www.t4inc.jp) | ⏱️ (timeout)
 | 245 | SignTime | Document | [signtime.jp](https://signtime.jp) | ✅ (200)
-| 246 | DocuSign Japan | Document | [docusign.com/ja](https://www.docusign.com/ja) | ❌ (404)
-| 247 | GyroSign | Document | [gyrosign.co.jp](https://gyrosign.co.jp) | ⏱️ (timeout)
+| 246 | DocuSign Japan | Document | [docusign.com/ja](https://www.docusign.com/ja) | ❌ (404) | 247 | GyroSign | Document | [gyrosign.co.jp](https://gyrosign.co.jp) | ⏱️ (timeout)
 | 248 | e-saifu | Document | [e-saifu.co.jp](https://www.e-saifu.co.jp) | ⏱️ (timeout)
 | 249 | TalentBoard | タレントマネジメント | [talentboard.jp](https://talentboard.jp) | ⏱️ (timeout)
 | 250 | HR Tech | タレントマネジメント | [hr-tech.co.jp](https://hr-tech.co.jp) | ⏱️ (timeout)
@@ -285,18 +281,12 @@
 | 281 | SAP Concur | 経費精算 | [concur.co.jp](https://www.concur.co.jp) | ✅ (200)
 | 282 | Dynamics 365 | ERP | [microsoft.com/ja-jp/dynamics365](https://www.microsoft.com/ja-jp/dynamics365) | ⏱️ (timeout)
 | 283 | Freshworks | CRM | [freshworks.com/ja](https://www.freshworks.com/ja) | ✅ (200)
-| 284 | RingCentral | Communication | [ringcentral.com/ja](https://www.ringcentral.com/ja) | ❌ (404)
-| 285 | Twilio | Communication | [twilio.com/ja](https://www.twilio.com/ja) | ✅ (200)
-| 286 | SendGrid | Email | [sendgrid.com/ja](https://www.sendgrid.com/ja) | ❌ (404)
-| 287 | Xero Japan | 会計 | [xero.com/jp](https://www.xero.com/jp) | ❌ (404)
-| 288 | QuickBooks Online | 会計 | [quickbooks.ja.intuit.com](https://quickbooks.ja.intuit.com) | ⏱️ (timeout)
+| 284 | RingCentral | Communication | [ringcentral.com/ja](https://www.ringcentral.com/ja) | ❌ (404) | 285 | Twilio | Communication | [twilio.com/ja](https://www.twilio.com/ja) | ✅ (200)
+| 286 | SendGrid | Email | [sendgrid.com/ja](https://www.sendgrid.com/ja) | ❌ (404) | 287 | Xero Japan | 会計 | [xero.com/jp](https://www.xero.com/jp) | ❌ (404) | 288 | QuickBooks Online | 会計 | [quickbooks.ja.intuit.com](https://quickbooks.ja.intuit.com) | ⏱️ (timeout)
 | 289 | SAS | Analytics | [sas.com/ja_jp](https://www.sas.com/ja_jp) | ✅ (200)
-| 290 | Splunk | Analytics | [splunk.com/ja-jp](https://www.splunk.com/ja-jp) | ❌ (404)
-| 291 | Freshservice | IT Service | [freshservice.com/ja](https://www.freshservice.com/ja) | ✅ (200)
+| 290 | Splunk | Analytics | [splunk.com/ja-jp](https://www.splunk.com/ja-jp) | ❌ (404) | 291 | Freshservice | IT Service | [freshservice.com/ja](https://www.freshservice.com/ja) | ✅ (200)
 | 292 | Jira Service Management | カスタマーサポート | [atlassian.com/ja/software/jira/service-management](https://www.atlassian.com/ja/software/jira/service-management) | ✅ (200)
-| 293 | Mattermost | コラボレーション | [mattermost.com/ja](https://www.mattermost.com/ja) | ❌ (404)
-| 294 | Rocket.Chat | コラボレーション | [rocket.chat/ja](https://www.rocket.chat/ja) | ❌ (404)
-| 295 | Cybozu Garoon | コラボレーション | [cybozu.com/jp/product/garoon](https://cybozu.com/jp/product/garoon) | ✅ (200)
+| 293 | Mattermost | コラボレーション | [mattermost.com/ja](https://www.mattermost.com/ja) | ❌ (404) | 294 | Rocket.Chat | コラボレーション | [rocket.chat/ja](https://www.rocket.chat/ja) | ❌ (404) | 295 | Cybozu Garoon | コラボレーション | [cybozu.com/jp/product/garoon](https://cybozu.com/jp/product/garoon) | ✅ (200)
 | 296 | LAPRAS | 採用管理 | [lapras.com](https://lapras.com) | ✅ (200)
 | 297 | People Cloud | タレントマネジメント | [people-cloud.jp](https://people-cloud.jp) | ✅ (200)
 | 298 | Howdy | 人材管理 | [howdy.co.jp](https://howdy.co.jp) | ✅ (200)
@@ -391,7 +381,7 @@
 | 387 | BigCommerce | EC | [bigcommerce.com](https://www.bigcommerce.com) | ✅ (200) |
 | 388 | WooCommerce | EC | [woocommerce.com](https://www.woocommerce.com) | ✅ (200) |
 | 389 | Magento | EC | [magento.com](https://www.magento.com) | ❌ (301) |
-| 390 | Shopware | EC | [shopware.com](https://www.shopware.com) | ❌ (301) |
+| 390 | Shopware | EC | [shopware.com](https://www.shopware.com) | ✅ (200) |
 | 391 | PrestaShop | EC | [prestashop.com](https://www.prestashop.com) | ✅ (200) |
 | 392 | Drupal Commerce | EC | [drupalcommerce.com](https://www.drupalcommerce.com) | ✅ (200) |
 | 393 | OpenCart | EC | [opencart.com](https://www.opencart.com) | ⚠️ (403) |
