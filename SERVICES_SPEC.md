@@ -278,11 +278,29 @@
 | 274 | Notion Japan | コラボレーション | [notion.so/ja](https://notion.so/ja) |
 | 275 | Figma Japan | Design | [figma.com/ja](https://figma.com/ja) |
 | 276 | Atlassian Japan | Project Management | [atlassian.com/ja](https://atlassian.com/ja) |
+| 277 | Medley | 医療 | [medley.jp](https://www.medley.jp) |
+| 278 | Carenet | 医療 | [carenet.com](https://www.carenet.com) |
+| 279 | Glide | 医療 | [glinc.co.jp](https://www.glinc.co.jp) |
+| 280 | Fujitsu Healthcare Cloud | 医療 | [fujitsu.com/jp](https://www.fujitsu.com/jp) |
+| 281 | SAP Concur | 経費精算 | [concur.co.jp](https://www.concur.co.jp) |
+| 282 | Dynamics 365 | ERP | [microsoft.com/ja-jp/dynamics365](https://www.microsoft.com/ja-jp/dynamics365) |
+| 283 | Freshworks | CRM | [freshworks.com/ja](https://www.freshworks.com/ja) |
+| 284 | RingCentral | Communication | [ringcentral.com/ja](https://www.ringcentral.com/ja) |
+| 285 | Twilio | Communication | [twilio.com/ja](https://www.twilio.com/ja) |
+| 286 | SendGrid | Email | [sendgrid.com/ja](https://www.sendgrid.com/ja) |
+| 287 | Xero Japan | 会計 | [xero.com/jp](https://www.xero.com/jp) |
+| 288 | QuickBooks Online | 会計 | [quickbooks.ja.intuit.com](https://quickbooks.ja.intuit.com) |
+| 289 | SAS | Analytics | [sas.com/ja_jp](https://www.sas.com/ja_jp) |
+| 290 | Splunk | Analytics | [splunk.com/ja-jp](https://www.splunk.com/ja-jp) |
+| 291 | Freshservice | IT Service | [freshservice.com/ja](https://www.freshservice.com/ja) |
+| 292 | Jira Service Management | カスタマーサポート | [atlassian.com/ja/software/jira/service-management](https://www.atlassian.com/ja/software/jira/service-management) |
+| 293 | Mattermost | コラボレーション | [mattermost.com/ja](https://www.mattermost.com/ja) |
+| 294 | Rocket.Chat | コラボレーション | [rocket.chat/ja](https://www.rocket.chat/ja) |
 
 
 ---
 
-**Total**: 276 services
+**Total**: 294 services
 
 ---
 **Last updated**: 2026-02-25
