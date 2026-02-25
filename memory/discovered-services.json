@@ -1,269 +1,193 @@
 {
-  "2026-02-25#1": {
-    "timestamp": "2026-02-25 09:31:42",
-    "heartbeat_number": 1,
-    "count": 20,
-    "source": "Japan SaaS 100개 로테이션",
+  "timestamp": "2026-02-25 10:31:16",
+  "target_minimum": 10,
+  "new_services": 15,
+  "services": [
+    {
+      "name": "eat POS",
+      "industry": "POS",
+      "homepage": "https://www.eat-sys.jp",
+      "status": "pending"
+    },
+    {
+      "name": "Hacobell",
+      "industry": "POS",
+      "homepage": "https://www.hacobell.jp",
+      "status": "pending"
+    },
+    {
+      "name": "Happy Cloud",
+      "industry": "POS",
+      "homepage": "https://www.happycloud.jp",
+      "status": "pending"
+    },
+    {
+      "name": "AirRegister",
+      "industry": "POS",
+      "homepage": "https://airregi.jp",
+      "status": "pending"
+    },
+    {
+      "name": "StoreApps",
+      "industry": "POS",
+      "homepage": "https://unite.co.jp",
+      "status": "pending"
+    },
+    {
+      "name": "REACH",
+      "industry": "POS",
+      "homepage": "https://reac.jp",
+      "status": "pending"
+    },
+    {
+      "name": "Smaregi",
+      "industry": "POS",
+      "homepage": "https://www.smaregi.jp",
+      "status": "pending"
+    },
+    {
+      "name": "Urushi",
+      "industry": "POS",
+      "homepage": "https://urushi.jp",
+      "status": "pending"
+    },
+    {
+      "name": "U-System",
+      "industry": "POS",
+      "homepage": "https://www.u-sys.co.jp",
+      "status": "pending"
+    },
+    {
+      "name": "Tablize",
+      "industry": "POS",
+      "homepage": "https://tablize.jp",
+      "status": "pending"
+    },
+    {
+      "name": "SmartDB",
+      "industry": "Database",
+      "homepage": "https://www.smartdb.jp",
+      "status": "pending"
+    },
+    {
+      "name": "kintone",
+      "industry": "CRM",
+      "homepage": "https://kintone.cybozu.com",
+      "status": "pending"
+    },
+    {
+      "name": "cybozu",
+      "industry": "CRM",
+      "homepage": "https://cybozu.com",
+      "status": "pending"
+    },
+    {
+      "name": "Cacoo",
+      "industry": "Diagram",
+      "homepage": "https://cacoo.com",
+      "status": "pending"
+    },
+    {
+      "name": "Backlog",
+      "industry": "Project Management",
+      "homepage": "https://backlog.com",
+      "status": "pending"
+    }
+  ],
+  "2026-02-25-new": {
+    "timestamp": "2026-02-25 10:31:27",
+    "new_services": 15,
+    "source": "Heartbeat New Service Addition",
     "services": [
       {
-        "name": "Chatwork",
-        "industry": "커뮤니케이션",
-        "category": "communication",
-        "homepage": "https://go.chatwork.com",
-        "api_url": "https://go.chatwork.com/api",
-        "doc_url": "https://go.chatwork.com/docs",
-        "auth_type": "Unknown",
-        "skill_name": "chatwork",
-        "status": "대기",
-        "dev_progress": 0,
-        "test_progress": 0
+        "name": "eat POS",
+        "industry": "POS",
+        "homepage": "https://www.eat-sys.jp",
+        "status": "pending"
       },
       {
-        "name": "Slack",
-        "industry": "커뮤니케이션",
-        "category": "communication",
-        "homepage": "https://slack.com",
-        "api_url": "https://slack.com/api",
-        "doc_url": "https://slack.com/docs",
-        "auth_type": "Unknown",
-        "skill_name": "slack",
-        "status": "대기",
-        "dev_progress": 0,
-        "test_progress": 0
+        "name": "Hacobell",
+        "industry": "POS",
+        "homepage": "https://www.hacobell.jp",
+        "status": "pending"
       },
       {
-        "name": "Microsoft Teams",
-        "industry": "커뮤니케이션",
-        "category": "communication",
-        "homepage": "https://www.microsoft.com/ja-jp/microsoft-teams",
-        "api_url": "https://www.microsoft.com/ja-jp/microsoft-teams/api",
-        "doc_url": "https://www.microsoft.com/ja-jp/microsoft-teams/docs",
-        "auth_type": "Unknown",
-        "skill_name": "microsoft-teams",
-        "status": "대기",
-        "dev_progress": 0,
-        "test_progress": 0
+        "name": "Happy Cloud",
+        "industry": "POS",
+        "homepage": "https://www.happycloud.jp",
+        "status": "pending"
       },
       {
-        "name": "LINE WORKS",
-        "industry": "커뮤니케이션",
-        "category": "communication",
-        "homepage": "https://line.worksmobile.co.jp",
-        "api_url": "https://line.worksmobile.co.jp/api",
-        "doc_url": "https://line.worksmobile.co.jp/docs",
-        "auth_type": "Unknown",
-        "skill_name": "line-works",
-        "status": "대기",
-        "dev_progress": 0,
-        "test_progress": 0
+        "name": "AirRegister",
+        "industry": "POS",
+        "homepage": "https://airregi.jp",
+        "status": "pending"
       },
       {
-        "name": "Cisco Webex",
-        "industry": "커뮤니케이션",
-        "category": "communication",
-        "homepage": "https://www.webex.com/jp",
-        "api_url": "https://www.webex.com/jp/api",
-        "doc_url": "https://www.webex.com/jp/docs",
-        "auth_type": "Unknown",
-        "skill_name": "cisco-webex",
-        "status": "대기",
-        "dev_progress": 0,
-        "test_progress": 0
+        "name": "StoreApps",
+        "industry": "POS",
+        "homepage": "https://unite.co.jp",
+        "status": "pending"
       },
       {
-        "name": "Rakuten Ichiba",
-        "industry": "EC",
-        "category": "ecommerce",
-        "homepage": "https://www.rakuten.co.jp",
-        "api_url": "https://www.rakuten.co.jp/api",
-        "doc_url": "https://www.rakuten.co.jp/docs",
-        "auth_type": "Unknown",
-        "skill_name": "rakuten-ichiba",
-        "status": "대기",
-        "dev_progress": 0,
-        "test_progress": 0
+        "name": "REACH",
+        "industry": "POS",
+        "homepage": "https://reac.jp",
+        "status": "pending"
       },
       {
-        "name": "Shopify Japan",
-        "industry": "EC",
-        "category": "ecommerce",
-        "homepage": "https://www.shopify.com/ja",
-        "api_url": "https://www.shopify.com/ja/api",
-        "doc_url": "https://www.shopify.com/ja/docs",
-        "auth_type": "Unknown",
-        "skill_name": "shopify-japan",
-        "status": "대기",
-        "dev_progress": 0,
-        "test_progress": 0
+        "name": "Smaregi",
+        "industry": "POS",
+        "homepage": "https://www.smaregi.jp",
+        "status": "pending"
       },
       {
-        "name": "BASE",
-        "industry": "EC",
-        "category": "ecommerce",
-        "homepage": "https://thebase.in",
-        "api_url": "https://thebase.in/api",
-        "doc_url": "https://thebase.in/docs",
-        "auth_type": "Unknown",
-        "skill_name": "base",
-        "status": "대기",
-        "dev_progress": 0,
-        "test_progress": 0
+        "name": "Urushi",
+        "industry": "POS",
+        "homepage": "https://urushi.jp",
+        "status": "pending"
       },
       {
-        "name": "Stores.jp",
-        "industry": "EC",
-        "category": "ecommerce",
-        "homepage": "https://stores.jp",
-        "api_url": "https://stores.jp/api",
-        "doc_url": "https://stores.jp/docs",
-        "auth_type": "Unknown",
-        "skill_name": "stores.jp",
-        "status": "대기",
-        "dev_progress": 0,
-        "test_progress": 0
+        "name": "U-System",
+        "industry": "POS",
+        "homepage": "https://www.u-sys.co.jp",
+        "status": "pending"
       },
       {
-        "name": "MakeShop",
-        "industry": "EC",
-        "category": "ecommerce",
-        "homepage": "https://www.makeshop.jp",
-        "api_url": "https://www.makeshop.jp/api",
-        "doc_url": "https://www.makeshop.jp/docs",
-        "auth_type": "Unknown",
-        "skill_name": "makeshop",
-        "status": "대기",
-        "dev_progress": 0,
-        "test_progress": 0
+        "name": "Tablize",
+        "industry": "POS",
+        "homepage": "https://tablize.jp",
+        "status": "pending"
       },
       {
-        "name": "CartStar",
-        "industry": "EC",
-        "category": "ecommerce",
-        "homepage": "https://cartstar.jp",
-        "api_url": "https://cartstar.jp/api",
-        "doc_url": "https://cartstar.jp/docs",
-        "auth_type": "Unknown",
-        "skill_name": "cartstar",
-        "status": "대기",
-        "dev_progress": 0,
-        "test_progress": 0
+        "name": "SmartDB",
+        "industry": "Database",
+        "homepage": "https://www.smartdb.jp",
+        "status": "pending"
       },
       {
-        "name": "GMO Payment",
-        "industry": "결제",
-        "category": "payment",
-        "homepage": "https://www.gmo-pg.jp",
-        "api_url": "https://www.gmo-pg.jp/api",
-        "doc_url": "https://www.gmo-pg.jp/docs",
-        "auth_type": "Unknown",
-        "skill_name": "gmo-payment",
-        "status": "대기",
-        "dev_progress": 0,
-        "test_progress": 0
+        "name": "nend",
+        "industry": "Marketing",
+        "homepage": "https://nend.net",
+        "status": "pending"
       },
       {
-        "name": "SB Payment",
-        "industry": "결제",
-        "category": "payment",
-        "homepage": "https://www.softbankpayment.co.jp",
-        "api_url": "https://www.softbankpayment.co.jp/api",
-        "doc_url": "https://www.softbankpayment.co.jp/docs",
-        "auth_type": "Unknown",
-        "skill_name": "sb-payment",
-        "status": "대기",
-        "dev_progress": 0,
-        "test_progress": 0
+        "name": "FANSHIP",
+        "industry": "Marketing",
+        "homepage": "https://fanship.jp",
+        "status": "pending"
       },
       {
-        "name": "Stripe Japan",
-        "industry": "결제",
-        "category": "payment",
-        "homepage": "https://stripe.com/ja",
-        "api_url": "https://stripe.com/ja/api",
-        "doc_url": "https://stripe.com/ja/docs",
-        "auth_type": "Unknown",
-        "skill_name": "stripe-japan",
-        "status": "대기",
-        "dev_progress": 0,
-        "test_progress": 0
+        "name": "Note",
+        "industry": "Content",
+        "homepage": "https://note.com",
+        "status": "pending"
       },
       {
-        "name": "Square Japan",
-        "industry": "결제",
-        "category": "payment",
-        "homepage": "https://squareup.com/ja/jp",
-        "api_url": "https://squareup.com/ja/jp/api",
-        "doc_url": "https://squareup.com/ja/jp/docs",
-        "auth_type": "Unknown",
-        "skill_name": "square-japan",
-        "status": "대기",
-        "dev_progress": 0,
-        "test_progress": 0
-      },
-      {
-        "name": "PayPay",
-        "industry": "결제",
-        "category": "payment",
-        "homepage": "https://paypay.ne.jp",
-        "api_url": "https://paypay.ne.jp/api",
-        "doc_url": "https://paypay.ne.jp/docs",
-        "auth_type": "Unknown",
-        "skill_name": "paypay",
-        "status": "대기",
-        "dev_progress": 0,
-        "test_progress": 0
-      },
-      {
-        "name": "Re:amaze",
-        "industry": "고객지원",
-        "category": "support",
-        "homepage": "https://www.reamaze.com",
-        "api_url": "https://www.reamaze.com/api",
-        "doc_url": "https://www.reamaze.com/docs",
-        "auth_type": "Unknown",
-        "skill_name": "re:amaze",
-        "status": "대기",
-        "dev_progress": 0,
-        "test_progress": 0
-      },
-      {
-        "name": "Zendesk Japan",
-        "industry": "고객지원",
-        "category": "support",
-        "homepage": "https://www.zendesk.jp",
-        "api_url": "https://www.zendesk.jp/api",
-        "doc_url": "https://www.zendesk.jp/docs",
-        "auth_type": "Unknown",
-        "skill_name": "zendesk-japan",
-        "status": "대기",
-        "dev_progress": 0,
-        "test_progress": 0
-      },
-      {
-        "name": "Freshdesk Japan",
-        "industry": "고객지원",
-        "category": "support",
-        "homepage": "https://freshdesk.com/ja",
-        "api_url": "https://freshdesk.com/ja/api",
-        "doc_url": "https://freshdesk.com/ja/docs",
-        "auth_type": "Unknown",
-        "skill_name": "freshdesk-japan",
-        "status": "대기",
-        "dev_progress": 0,
-        "test_progress": 0
-      },
-      {
-        "name": "Help Scout",
-        "industry": "고객지원",
-        "category": "support",
-        "homepage": "https://www.helpscout.com",
-        "api_url": "https://www.helpscout.com/api",
-        "doc_url": "https://www.helpscout.com/docs",
-        "auth_type": "Unknown",
-        "skill_name": "help-scout",
-        "status": "대기",
-        "dev_progress": 0,
-        "test_progress": 0
+        "name": "Cacoo",
+        "industry": "Diagram",
+        "homepage": "https://cacoo.com",
+        "status": "pending"
       }
     ]
   }

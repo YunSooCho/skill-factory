@@ -296,3 +296,26 @@
 |--------|---------|------|------|
 | eat POS | [https://www.eat-sys.jp](https://www.eat-sys.jp) | 📋 대기 | 0% |
 
+
+
+## 🔄 하트비트 업데이트 (2026-02-25 10:31:27) - 새로운 서비스 추가
+
+📊 **총 15개 새로운 서비스 추가**
+
+| # | 서비스 | 업종 | 홈페이지 | 상태 |
+|---|--------|------|---------|------|
+| 1 | eat POS | POS | [https://www.eat-sys.jp](https://www.eat-sys.jp) | 📋 대기 |
+| 2 | Hacobell | POS | [https://www.hacobell.jp](https://www.hacobell.jp) | 📋 대기 |
+| 3 | Happy Cloud | POS | [https://www.happycloud.jp](https://www.happycloud.jp) | 📋 대기 |
+| 4 | AirRegister | POS | [https://airregi.jp](https://airregi.jp) | 📋 대기 |
+| 5 | StoreApps | POS | [https://unite.co.jp](https://unite.co.jp) | 📋 대기 |
+| 6 | REACH | POS | [https://reac.jp](https://reac.jp) | 📋 대기 |
+| 7 | Smaregi | POS | [https://www.smaregi.jp](https://www.smaregi.jp) | 📋 대기 |
+| 8 | Urushi | POS | [https://urushi.jp](https://urushi.jp) | 📋 대기 |
+| 9 | U-System | POS | [https://www.u-sys.co.jp](https://www.u-sys.co.jp) | 📋 대기 |
+| 10 | Tablize | POS | [https://tablize.jp](https://tablize.jp) | 📋 대기 |
+| 11 | SmartDB | Database | [https://www.smartdb.jp](https://www.smartdb.jp) | 📋 대기 |
+| 12 | nend | Marketing | [https://nend.net](https://nend.net) | 📋 대기 |
+| 13 | FANSHIP | Marketing | [https://fanship.jp](https://fanship.jp) | 📋 대기 |
+| 14 | Note | Content | [https://note.com](https://note.com) | 📋 대기 |
+| 15 | Cacoo | Diagram | [https://cacoo.com](https://cacoo.com) | 📋 대기 |

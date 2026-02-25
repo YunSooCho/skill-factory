@@ -6,6 +6,7 @@
 매번 최소 10개의 새로운 SaaS 서비스를 발견하고, generate_service_specs.py에 추가합니다.
 """
 
+import json
 import re
 from datetime import datetime
 from pathlib import Path

@@ -66,3 +66,13 @@
 - Microsoft Teams (커뮤니케이션)
 - LINE WORKS (커뮤니케이션)
 - Cisco Webex (커뮤니케이션)
+
+## 하트비트: 2026-02-25 10:31:27
+
+### 새로운 서비스 추가 (15개)
+
+- eat POS (POS)
+- Hacobell (POS)
+- Happy Cloud (POS)
+- AirRegister (POS)
+- StoreApps (POS)
