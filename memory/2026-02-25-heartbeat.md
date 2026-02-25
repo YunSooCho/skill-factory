@@ -36,3 +36,13 @@
 - Microsoft Teams (커뮤니케이션)
 - LINE WORKS (커뮤니케이션)
 - Cisco Webex (커뮤니케이션)
+
+## 하트비트: 2026-02-25 09:30:11 (#1)
+
+### 로테이션 서비스 (20개)
+
+- Chatwork (커뮤니케이션)
+- Slack (커뮤니케이션)
+- Microsoft Teams (커뮤니케이션)
+- LINE WORKS (커뮤니케이션)
+- Cisco Webex (커뮤니케이션)
