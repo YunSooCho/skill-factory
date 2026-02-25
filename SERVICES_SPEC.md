@@ -449,11 +449,35 @@
 | 445 | Axure | Design | [axure.com](https://www.axure.com) | ✅ (200) |
 | 446 | Marvel | Design | [marvelapp.com](https://www.marvelapp.com) | ✅ (200) |
 | 447 | Proto.io | Design | [proto.io](https://www.proto.io) | ✅ (200) |
+| 448 | Balsamiq | Design | [balsamiq.com](https://www.balsamiq.com) | ✅ (200) |
+| 449 | Mockplus | Design | [mockplus.com](https://www.mockplus.com) | ✅ (200) |
+| 450 | Moqups | Design | [moqups.com](https://www.moqups.com) | ✅ (200) |
+| 451 | Adobe IO | Design | [adobe.io](https://www.adobe.io) | ✅ (200) |
+| 452 | Framer | Design | [framer.com](https://www.framer.com) | ✅ (200) |
+| 453 | Webflow | Design | [webflow.com](https://www.webflow.com) | ✅ (200) |
+| 454 | Stripe Japan | 決済 | [stripe.com/jp](https://stripe.com/jp) | ✅ (200) |
+| 455 | NETS | 決済 | [nets.eu](https://www.nets.eu) | ✅ (200) |
+| 456 | Adyen | 決済 | [adyen.com](https://www.adyen.com) | ✅ (200) |
+| 457 | Braintree | 決済 | [braintreepayments.com](https://www.braintreepayments.com) | ✅ (200) |
+| 458 | Klarna | 決済 | [klarna.com](https://www.klarna.com) | ✅ (200) |
+| 459 | Checkout.com | 決済 | [checkout.com](https://www.checkout.com) | ✅ (200) |
+| 460 | BitPay | 決済 | [bitpay.com](https://www.bitpay.com) | ✅ (200) |
+| 461 | Clover | POS | [clover.com](https://www.clover.com) | ✅ (200) |
+| 462 | Toast | POS | [pos.toasttab.com](https://pos.toasttab.com) | ✅ (200) |
+| 463 | Lightspeed | POS | [lightspeedhq.com](https://www.lightspeedhq.com) | ✅ (200) |
+| 464 | ShopKeep | POS | [shopkeep.com](https://www.shopkeep.com) | ✅ (200) |
+| 465 | Vend | POS | [vendhq.com](https://www.vendhq.com) | ✅ (200) |
+| 466 | Revel Systems | POS | [revelsystems.com](https://www.revelsystems.com) | ✅ (200) |
+| 467 | Quinyx | 勤怠管理 | [quinyx.com](https://www.quinyx.com) | ✅ (200) |
+| 468 | Deputy | 勤怠管理 | [deputy.com](https://www.deputy.com) | ✅ (200) |
+| 469 | Buddy Punch | 勤怠管理 | [buddypunch.com](https://www.buddypunch.com) | ✅ (200) |
+| 470 | When I Work | 勤怠管理 | [wheniwork.com](https://www.wheniwork.com) | ✅ (200) |
+| 471 | Shiftboard | 勤怠管理 | [shiftboard.com](https://www.shiftboard.com) | ✅ (200) |
 
 
 ---
 
-**Total**: 447 services (all with URL検証カラム)
+**Total**: 471 services (all with URL検証カラム)
 
 ---
-**Last updated**: 2026-02-25 21:30 (Asia/Tokyo)
+**Last updated**: 2026-02-25 21:45 (Asia/Tokyo)
