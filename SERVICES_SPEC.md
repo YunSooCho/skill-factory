@@ -12,8 +12,9 @@
 | 8 | MUSE | 医療 | [muse-cloud.com](https://www.muse-cloud.com) |
 | 9 | Clinic Cloud | 医療 | [clinic-cloud.com](https://www.clinic-cloud.com) |
 | 10 | Note | Content | [note.com](https://note.com) |
-| 11 | kintone | CRM | [kintone.cybozu.com](https://kintone.cybozu.com) |
-| 12 | cybozu | CRM | [www.cybozu.com](https://www.cybozu.com/) |
+| 11 | SmartDB | Database | [smartdb.jp](https://smartdb.jp) |
+| 12 | kintone | CRM | [cybozu.com/jp/product/kintone](https://www.cybozu.com/jp/product/kintone) |
+| 13 | cybozu | CRM | [www.cybozu.com](https://www.cybozu.com/) |
 | 13 | FANSHIP | Marketing | [www.fanship.jp](https://www.fanship.jp/) |
 | 14 | Cacoo | Diagram | [nulab.com/cacoo](https://nulab.com/cacoo/) |
 | 15 | Backlog | Project Management | [nulab.com/backlog](https://nulab.com/backlog/) |
@@ -33,8 +34,8 @@
 
 ---
 
-**Total**: 28 services (after removing 11 invalid URLs)
+**Total**: 29 services (after search-based validation)
 
 ---
 
-**Last updated**: 2026-02-25 | **URL validation**: completed
+**Last updated**: 2026-02-25 | **URL validation**: search-based completed
