@@ -41,6 +41,18 @@
 | 36 | STRIPE | 決済 | [stripe.com/jp](https://stripe.com/jp) |
 | 37 | Trello | Project Management | [trello.com](https://trello.com) |
 | 38 | Notion | コラボレーション | [notion.so](https://www.notion.so) |
+| 39 | PayPay | 決済 | [paypay.ne.jp](https://paypay.ne.jp) |
+| 40 | Au PAY | 決済 | [wallet.auone.jp](https://wallet.auone.jp) |
+| 41 | Mercari Pay | 決済 | [jp.mercari.com](https://jp.mercari.com) |
+| 42 | Medical Note | 医療 | [medicalnote.jp](https://medicalnote.jp) |
+| 43 | MF Accounting | 会計 | [accounting.moneyforward.com](https://accounting.moneyforward.com) |
+| 44 | Shopify | EC | [shopify.com/jp](https://shopify.com/jp) |
+| 45 | Wix | EC | [wix.com](https://wix.com) |
+| 46 | Asana | Project Management | [asana.com](https://asana.com) |
+| 47 | Monday.com | Project Management | [monday.com](https://monday.com) |
+| 48 | HubSpot | CRM | [hubspot.com](https://hubspot.com) |
+| 49 | Microsoft Office 365 | コラボレーション | [office.com/ja-jp](https://office.com/ja-jp) |
+| 50 | Dropbox | コラボレーション | [dropbox.com/ja](https://dropbox.com/ja) |
 
 ---
 
