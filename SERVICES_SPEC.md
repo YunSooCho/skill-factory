@@ -187,11 +187,27 @@
 | 182 | ニフクラ | Cloud | [pfs.nifcloud.com](https://pfs.nifcloud.com) |
 | 183 | メルペイ | 決済 | [mpay.jp](https://mpay.jp) |
 | 184 | 弥生会計 | 会計 | [www.yayoi-kk.co.jp](https://www.yayoi-kk.co.jp) |
+| 185 | Kando | カスタマーサクセス | [kando.io](https://kando.io) |
+| 186 | Reps | カスタマーサクセス | [reps.co.jp](https://reps.co.jp) |
+| 187 | LegalForce | 法務 | [legalforce.co.jp](https://legalforce.co.jp) |
+| 188 | SocialDog | Social Media | [social-dog.net](https://social-dog.net) |
+| 189 | Scrapbox | Document | [scrapbox.io](https://scrapbox.io) |
+| 190 | V-Cube | Communication | [v-cube.com](https://v-cube.com) |
+| 191 | MotionBoard | Analytics | [motionboard.jp](https://motionboard.jp) |
+| 192 | Autify | QA/Testing | [autify.com](https://autify.com) |
+| 193 | Joyz | 人材管理 | [joyz.jp](https://joyz.jp) |
+| 194 | Belong | 人材管理 | [belong.jp](https://belong.jp) |
+| 195 | Pleasanter | Database | [pleasanter.org](https://pleasanter.org) |
+| 196 | HRBrain | 人材管理 | [hrbrain.co.jp](https://hrbrain.co.jp) |
+| 197 | Kaonavi | タレントマネジメント | [kaonavi.jp](https://kaonavi.jp) |
+| 198 | Talentbox | タレントマネジメント | [talentbox.co.jp](https://talentbox.co.jp) |
+| 199 | StaffStart | 人材管理 | [staff-start.com](https://staff-start.com) |
+| 200 | Autobiz | RPA | [autobiz.jp](https://autobiz.jp) |
 
 
 ---
 
-**Total**: 184 services
+**Total**: 200 services
 
 ---
 **Last updated**: 2026-02-25
