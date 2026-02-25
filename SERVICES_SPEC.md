@@ -1169,11 +1169,70 @@
 | 1167 | Ghost | Content | [https://ghost.org](https://ghost.org) | ✅ (200) |
 | 1168 | Fyle | 経費精算 | [https://www.fyle.in](https://www.fyle.in) | ✅ (200) |
 | 1169 | QuickBooks Online | 会計 | [https://quickbooks.intuit.com](https://quickbooks.intuit.com) | ✅ (200) |
+| 1170 | Vimeo | Communication | [vimeo.com](https://vimeo.com) | ✅ (200) |
+| 1171 | Livestorm | Communication | [livestorm.co](https://livestorm.co) | ✅ (200) |
+| 1172 | ClickMeeting | Communication | [clickmeeting.com](https://clickmeeting.com) | ✅ (200) |
+| 1173 | Discord | Communication | [discord.com](https://discord.com) | ✅ (200) |
+| 1174 | WooCommerce | EC | [woocommerce.com](https://woocommerce.com) | ✅ (200) |
+| 1175 | PrestaShop | EC | [prestashop.com](https://prestashop.com) | ✅ (200) |
+| 1176 | Shopware | EC | [shopware.com](https://shopware.com) | ✅ (302) |
+| 1177 | Auth0 | Security | [auth0.com](https://auth0.com) | ✅ (200) |
+| 1178 | CircleCI | DevOps | [circleci.com](https://circleci.com) | ✅ (200) |
+| 1179 | GitLab CI | DevOps | [about.gitlab.com/stages-devops/cicd](https://about.gitlab.com/stages-devops/cicd) | ✅ (200) |
+| 1180 | GitHub Actions | DevOps | [github.com/features/actions](https://github.com/features/actions) | ✅ (200) |
+| 1181 | Bitbucket Pipelines | DevOps | [bitbucket.org/product/features/pipelines](https://bitbucket.org/product/features/pipelines) | ✅ (200) |
+| 1182 | Semaphore CI | DevOps | [semaphoreci.com](https://semaphoreci.com) | ✅ (200) |
+| 1183 | Travis CI | DevOps | [travis-ci.com](https://travis-ci.com) | ✅ (301) |
+| 1184 | Buildkite | DevOps | [buildkite.com](https://buildkite.com) | ✅ (200) |
+| 1185 | Drone.io | DevOps | [drone.io](https://drone.io) | ✅ (301) |
+| 1186 | Buddy | DevOps | [buddy.works](https://buddy.works) | ✅ (200) |
+| 1187 | Concourse CI | DevOps | [concourse-ci.org](https://concourse-ci.org) | ✅ (200) |
+| 1188 | Jenkins | DevOps | [jenkins.io](https://jenkins.io) | ✅ (301) |
+| 1189 | Spinnaker | DevOps | [spinnaker.io](https://spinnaker.io) | ✅ (200) |
+| 1190 | Argo CD | DevOps | [argo-cd.readthedocs.io](https://argo-cd.readthedocs.io) | ✅ (302) |
+| 1191 | Flux | DevOps | [fluxcd.io](https://fluxcd.io) | ✅ (200) |
+| 1192 | Octopus Deploy | DevOps | [octopus.com](https://octopus.com) | ✅ (200) |
+| 1193 | TeamCity | DevOps | [jetbrains.com/teamcity](https://jetbrains.com/teamcity) | ✅ (200) |
+| 1194 | AbemaTV | Communication | [abema.tv](https://abema.tv) | ✅ (200) |
+| 1195 | 17LIVE | Communication | [17.live](https://17.live) | ✅ (200) |
+| 1196 | SHOWROOM | Communication | [showroom-live.com](https://www.showroom-live.com) | ✅ (200) |
+| 1197 | Pococha | Communication | [pococha.jp](https://pococha.jp) | ✅ (200) |
+| 1198 | MilyMily | Communication | [milimili.tv](https://milimili.tv) | ✅ (200) |
+| 1199 | OPENREC | Communication | [openrec.tv](https://www.openrec.tv) | ✅ (200) |
+| 1200 | TwitCasting | Communication | [twitcasting.tv](https://twitcasting.tv) | ✅ (200) |
+| 1201 | BIGO LIVE | Communication | [bigo.tv](https://www.bigo.tv) | ✅ (200) |
+| 1202 | TikTok Live | Communication | [tiktok.com](https://www.tiktok.com) | ⚠️ (403) |
+| 1203 | YouTube Live | Communication | [youtube.com/live](https://www.youtube.com/live) | ✅ (200) |
+| 1204 | Twitch | Communication | [twitch.tv](https://www.twitch.tv) | ✅ (200) |
+| 1205 | Facebook Live | Communication | [facebook.com/live](https://www.facebook.com/live) | ✅ (200) |
+| 1206 | Instagram Live | Communication | [instagram.com](https://www.instagram.com) | ✅ (200) |
+| 1207 | LinkedIn Live | Communication | [linkedin.com](https://www.linkedin.com) | ✅ (200) |
+| 1208 | Twitter Spaces | Communication | [twitter.com/spaces](https://twitter.com/spaces) | ⚠️ (403) |
+| 1209 | Periscope | Communication | [pscp.tv](https://pscp.tv) | ⏱️ (timeout) |
+| 1210 | Microsoft Stream | Communication | [microsoftstream.com](https://www.microsoftstream.com) | ✅ (307) |
+| 1211 | Adobe Premiere | Design/Video | [adobe.com/products/premiere](https://www.adobe.com/products/premiere) | ✅ (200) |
+| 1212 | Final Cut Pro | Design/Video | [apple.com/final-cut-pro](https://www.apple.com/final-cut-pro) | ✅ (200) |
+| 1213 | DaVinci Resolve | Design/Video | [blackmagicdesign.com](https://www.blackmagicdesign.com) | ✅ (200) |
+| 1214 | Camtasia | Design/Video | [techsmith.com](https://www.techsmith.com) | ✅ (200) |
+| 1215 | ScreenFlow | Design/Video | [telestream.net](https://www.telestream.net) | ✅ (200) |
+| 1216 | Vidyard | Communication | [vidyard.com](https://www.vidyard.com) | ✅ (200) |
+| 1218 | Wistia | Communication | [wistia.com](https://wistia.com) | ✅ (200) |
+| 1219 | Brightcove | Communication | [brightcove.com](https://www.brightcove.com) | ✅ (200) |
+| 1220 | Vimeo Business | Communication | [vimeo.com](https://vimeo.com/business) | ✅ (200) |
+| 1221 | JW Player | Communication | [jwplayer.com](https://www.jwplayer.com) | ✅ (200) |
+| 1222 | Kaltura | Communication | [kaltura.com](https://kaltura.com) | ✅ (200) |
+| 1223 | Dailymotion | Communication | [dailymotion.com](https://www.dailymotion.com) | ✅ (200) |
+| 1224 | Vevo | Communication | [vevo.com](https://www.vevo.com) | ✅ (200) |
+| 1225 | Metacafe | Communication | [metacafe.com](https://www.metacafe.com) | ✅ (200) |
+| 1226 | Bilibili | Communication | [bilibili.com](https://www.bilibili.com) | ✅ (200) |
+| 1227 | Youku | Communication | [youku.com](https://www.youku.com) | ✅ (301) |
+| 1228 | iQIYI | Communication | [iqiyi.com](https://www.iqiyi.com) | ✅ (200) |
+| 1229 | Tencent Video | Communication | [v.qq.com](https://v.qq.com) | ✅ (200) |
 
 ---
 
-**Total**: 1169 services (all with URL検証カラム)
+**Total**: 1229 services (all with URL検証カラム)
 
 ---
 
-**Last updated**: 2026-02-26 00:45 (Asia/Tokyo)
+**Last updated**: 2026-02-26 03:20 (Asia/Tokyo)
