@@ -1,0 +1,35 @@
+    def git_push(self):
+        """
+        Git commit & push
+        """
+        print("🔄 Git commit & push 시작...")
+        
+        try:
+            os.chdir(self.base_dir)
+            
+            # Git add
+            ret = os.system("git add -A")
+            if ret != 0:
+                print("⚠️ Git add 실패")
+                return False
+            
+            # Git commit
+            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            com_msg = f'chore: 스킬 팩토리 하트비트 업데이트 ({timestamp})'
+            ret = os.system(f'git commit -m "{com_msg}"')
+            if ret != 0:
+                print("⚠️ Git commit 실패 (변경사항 없음)")
+                return False
+            
+            # Git push
+            ret = os.system("git push -f origin main")
+            if ret != 0:
+                print("⚠️ Git push 실패")
+                return False
+            
+            print("✅ Git push 완료!")
+            return True
+            
+        except Exception as e:
+            print(f"⚠️ Git push 실패: {e}")
+            return False
