@@ -258,11 +258,31 @@
 | 254 | NISSHAクラウドPOS | POS | [nissha.co.jp](https://www.nissha.co.jp) |
 | 255 | カメカメPOS | POS | [kamekame.biz](https://kamekame.biz) |
 | 256 | セブンPOS | POS | [sevenpos.jp](https://sevenpos.jp) |
+| 257 | SmartSign | Document | [smartsign.jp](https://smartsign.jp) |
+| 258 | BizReach | 採用管理 | [bizreach.jp](https://bizreach.jp) |
+| 259 | LINE WORKS | コラボレーション | [line.works](https://line.works) |
+| 260 | Talknote | コラボレーション | [talknote.com](https://talknote.com) |
+| 261 | SmartNews | Marketing | [smartnews.com](https://smartnews.com) |
+| 262 | Gunosy | Content | [gunosy.com](https://gunosy.com) |
+| 263 | KDDI Cloud | Cloud | [cloud.kddi.com](https://cloud.kddi.com) |
+| 264 | OCN Cloud | Cloud | [cloud.ocn.ne.jp](https://cloud.ocn.ne.jp) |
+| 265 | Biglobe Cloud | Cloud | [cloud.biglobe.ne.jp](https://cloud.biglobe.ne.jp) |
+| 266 | So-net Cloud | Cloud | [cloud.sonet.ne.jp](https://cloud.sonet.ne.jp) |
+| 267 | CyberOffice | コラボレーション | [cyberoffice.jp](https://cyberoffice.jp) |
+| 268 | RMO | 人材管理 | [rmo.co.jp](https://rmo.co.jp) |
+| 269 | Skrue | Document | [skrue.jp](https://skrue.jp) |
+| 270 | ContractHub | Document | [contract-hub.com](https://contract-hub.com) |
+| 271 | Backblaze | Storage | [backblaze.com](https://backblaze.com) |
+| 272 | AIアシスタント | AI | [ai-assistant.jp](https://ai-assistant.jp) |
+| 273 | ChatGPT Japan | AI | [chatgpt-japan.com](https://chatgpt-japan.com) |
+| 274 | Notion Japan | コラボレーション | [notion.so/ja](https://notion.so/ja) |
+| 275 | Figma Japan | Design | [figma.com/ja](https://figma.com/ja) |
+| 276 | Atlassian Japan | Project Management | [atlassian.com/ja](https://atlassian.com/ja) |
 
 
 ---
 
-**Total**: 256 services
+**Total**: 276 services
 
 ---
 **Last updated**: 2026-02-25
