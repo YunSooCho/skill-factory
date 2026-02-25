@@ -31,6 +31,16 @@
 | 26 | freee | 会計 | [freee.co.jp](https://www.freee.co.jp) |
 | 27 | Money Forward | 会計 | [moneyforward.com](https://www.moneyforward.com) |
 | 28 | Zoho Books | 会計 | [zoho.com/jp/books](https://www.zoho.com/jp/books) |
+| 29 | Sansan | 名片管理 | [sansan.com](https://sansan.com) |
+| 30 | Chatwork | コラボレーション | [go.chatwork.com](https://go.chatwork.com) |
+| 31 | SmartHR | 人材管理 | [smarthr.co.jp](https://smarthr.co.jp) |
+| 32 | Jobcan | 勤怠管理 | [jobcan.jp](https://jobcan.jp) |
+| 33 | Rakuten PAY | 決済 | [payment.rakuten.co.jp](https://payment.rakuten.co.jp) |
+| 34 | Paidy | 決済 | [paidy.com](https://paidy.com) |
+| 35 | LINE Pay | 決済 | [pay.line.me](https://pay.line.me) |
+| 36 | STRIPE | 決済 | [stripe.com/jp](https://stripe.com/jp) |
+| 37 | Trello | Project Management | [trello.com](https://trello.com) |
+| 38 | Notion | コラボレーション | [notion.so](https://www.notion.so) |
 
 ---
 
