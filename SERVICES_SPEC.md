@@ -386,11 +386,74 @@
 | 382 | OCN | Cloud | [ocn.ne.jp](https://www.ocn.ne.jp) | ⚠️ (timeout) |
 | 383 | Biglobe | Cloud | [biglobe.ne.jp](https://www.biglobe.ne.jp) | ⚠️ (timeout) |
 | 384 | So-net | Cloud | [sonet.ne.jp](https://www.sonet.ne.jp) | ⚠️ (timeout) |
+| 385 | Squarespace | EC | [squarespace.com](https://www.squarespace.com) | ✅ (200) |
+| 386 | Weebly | EC | [weebly.com](https://weebly.com) | ✅ (200) |
+| 387 | BigCommerce | EC | [bigcommerce.com](https://www.bigcommerce.com) | ✅ (200) |
+| 388 | WooCommerce | EC | [woocommerce.com](https://www.woocommerce.com) | ✅ (200) |
+| 389 | Magento | EC | [magento.com](https://www.magento.com) | ❌ (301) |
+| 390 | Shopware | EC | [shopware.com](https://www.shopware.com) | ❌ (301) |
+| 391 | PrestaShop | EC | [prestashop.com](https://www.prestashop.com) | ✅ (200) |
+| 392 | Drupal Commerce | EC | [drupalcommerce.com](https://www.drupalcommerce.com) | ✅ (200) |
+| 393 | OpenCart | EC | [opencart.com](https://www.opencart.com) | ⚠️ (403) |
+| 394 | Salesforce Commerce | EC | [salesforcecommerce.com](https://www.salesforcecommerce.com) | ❌ (405) |
+| 395 | SharePoint | Collaboration | [sharepoint.com](https://www.sharepoint.com) | ✅ (200) |
+| 396 | Confluence Cloud | Collaboration | [atlassian.com/confluence](https://www.atlassian.com/confluence) | ✅ (200) |
+| 397 | Jira Cloud | Project Management | [atlassian.com/jira](https://www.atlassian.com/jira) | ✅ (200) |
+| 398 | Monday.com Cloud | Project Management | [monday.com](https://www.monday.com) | ✅ (200) |
+| 399 | Smartsheet Cloud | Project Management | [smartsheet.com](https://www.smartsheet.com) | ✅ (200) |
+| 400 | Basecamp Cloud | Project Management | [basecamp.com](https://www.basecamp.com) | ✅ (200) |
+| 401 | ClickUp Cloud | Project Management | [clickup.com](https://www.clickup.com) | ✅ (200) |
+| 402 | Wrike | Project Management | [wrike.com](https://www.wrike.com) | ✅ (200) |
+| 403 | Monday.com Enterprise | Project Management | [monday.com/enterprise](https://www.monday.com/enterprise) | ✅ (200) |
+| 404 | Teamwork | Project Management | [teamwork.com](https://www.teamwork.com) | ✅ (200) |
+| 405 | LiveChat | カスタマーサポート | [livechatinc.com](https://www.livechatinc.com) | ✅ (200) |
+| 406 | Crisp | カスタマーサポート | [crisp.chat](https://crisp.chat) | ✅ (200) |
+| 407 | Tawk.to | カスタマーサポート | [tawk.to](https://www.tawk.to) | ✅ (200) |
+| 408 | LivePerson | カスタマーサポート | [liveperson.com](https://www.liveperson.com) | ✅ (200) |
+| 409 | Kayako | カスタマーサポート | [kayako.com](https://www.kayako.com) | ✅ (200) |
+| 410 | Sendinblue | Email | [sendinblue.com](https://www.sendinblue.com) | ✅ (200) |
+| 411 | ActiveCampaign | Email/CRM | [activecampaign.com](https://www.activecampaign.com) | ✅ (200) |
+| 412 | AWS SES | Email | [aws.amazon.com/ses](https://aws.amazon.com/ses) | ✅ (200) |
+| 413 | SparkPost | Email | [sparkpost.com](https://www.sparkpost.com) | ✅ (200) |
+| 414 | Elastic Email | Email | [elasticemail.com](https://www.elasticemail.com) | ✅ (200) |
+| 415 | Zoho CRM | CRM | [zoho.com](https://www.zoho.com) | ✅ (200) |
+| 416 | Nutshell | CRM | [nutshell.com](https://www.nutshell.com) | ✅ (200) |
+| 417 | Capsule CRM | CRM | [capsulecrm.com](https://www.capsulecrm.com) | ✅ (200) |
+| 418 | Monday CRM | CRM | [monday.com/crm](https://www.monday.com/crm) | ✅ (200) |
+| 419 | MongoDB | Database | [mongodb.com](https://www.mongodb.com) | ✅ (200) |
+| 420 | PostgreSQL | Database | [postgresql.org](https://www.postgresql.org) | ✅ (200) |
+| 421 | MySQL | Database | [mysql.com](https://www.mysql.com) | ✅ (200) |
+| 422 | Redis | Database | [redis.io](https://www.redis.io) | ✅ (200) |
+| 423 | Cassandra | Database | [cassandra.apache.org](https://cassandra.apache.org) | ✅ (200) |
+| 424 | Airtable | Database | [airtable.com](https://www.airtable.com) | ✅ (200) |
+| 425 | Cohere | AI | [cohere.ai](https://www.cohere.ai) | ✅ (200) |
+| 426 | Anthropic | AI | [anthropic.com](https://www.anthropic.com) | ✅ (200) |
+| 427 | OpenAI | AI | [openai.com](https://www.openai.com) | ⚠️ (403) |
+| 428 | LiquidPlanner | Project Management | [liquidplanner.com](https://www.liquidplanner.com) | ✅ (200) |
+| 429 | Clarizen | Project Management | [clarizen.com](https://www.clarizen.com) | ✅ (200) |
+| 430 | Mavenlink | Project Management | [mavenlink.com](https://www.mavenlink.com) | ✅ (200) |
+| 431 | Proggio | Project Management | [proggio.com](https://www.proggio.com) | ✅ (200) |
+| 432 | Asana Premium | Project Management | [asana.com](https://www.asana.com) | ✅ (200) |
+| 433 | iCloud | Storage | [icloud.com](https://www.icloud.com) | ✅ (200) |
+| 434 | Sync | Storage | [sync.com](https://www.sync.com) | ✅ (200) |
+| 435 | MediaFire | Storage | [mediafire.com](https://www.mediafire.com) | ✅ (200) |
+| 436 | Proton Drive | Storage | [proton.me/drive](https://www.proton.me/drive) | ✅ (200) |
+| 437 | IFTTT | コラボレーション | [ifttt.com](https://www.ifttt.com) | ✅ (200) |
+| 438 | Zapier | コラボレーション | [zapier.com](https://www.zapier.com) | ✅ (200) |
+| 439 | Make | コラボレーション | [make.com](https://www.make.com) | ✅ (200) |
+| 440 | Figma | Design | [figma.com](https://www.figma.com) | ✅ (200) |
+| 441 | Sketch | Design | [sketch.com](https://www.sketch.com) | ✅ (200) |
+| 442 | Adobe XD | Design | [adobe.com/products/xd](https://www.adobe.com/products/xd) | ✅ (200) |
+| 443 | InVision | Design | [invision.com](https://www.invision.com) | ✅ (200) |
+| 444 | UXPin | Design | [uxpin.com](https://www.uxpin.com) | ✅ (200) |
+| 445 | Axure | Design | [axure.com](https://www.axure.com) | ✅ (200) |
+| 446 | Marvel | Design | [marvelapp.com](https://www.marvelapp.com) | ✅ (200) |
+| 447 | Proto.io | Design | [proto.io](https://www.proto.io) | ✅ (200) |
 
 
 ---
 
-**Total**: 384 services (all with URL検証カラム)
+**Total**: 447 services (all with URL検証カラム)
 
 ---
-**Last updated**: 2026-02-25 20:40 (Asia/Tokyo)
+**Last updated**: 2026-02-25 21:30 (Asia/Tokyo)
