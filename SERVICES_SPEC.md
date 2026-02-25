@@ -1473,7 +1473,7 @@
 | 1473 | Reeder | RSS/Content | [https://www.reederapp.com](https://www.reederapp.com) | ✅ (200) |
 | 1474 | NewsBlur | RSS/Content | [https://www.newsblur.com](https://www.newsblur.com) | ✅ (200) |
 | 1475 | BazQux | RSS/Content | [https://www.bazqux.com](https://www.bazqux.com) | ✅ (200) |
-| 1476 | The Old Reader | RSS/Content | [https://www.theoldreader.com](https://www.theoldreader.com) |
+| 1476 | The Old Reader | RSS/Content | [https://www.theoldreader.com](https://www.theoldreader.com) | ✅ (200) |
 | 1477 | Readably | RSS/Content | [https://www.readably.io](https://www.readably.io) | ✅ (200) |
 | 1478 | Readflow | RSS/Content | [https://www.readflow.app](https://www.readflow.app) | ✅ (200) |
 | 1479 | RSS Guard | RSS/Content | [https://github.com/martinrotter/rssguard](https://github.com/martinrotter/rssguard) | ✅ (200) |
