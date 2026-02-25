@@ -473,11 +473,36 @@
 | 469 | Buddy Punch | 勤怠管理 | [buddypunch.com](https://www.buddypunch.com) | ✅ (200) |
 | 470 | When I Work | 勤怠管理 | [wheniwork.com](https://www.wheniwork.com) | ✅ (200) |
 | 471 | Shiftboard | 勤怠管理 | [shiftboard.com](https://www.shiftboard.com) | ✅ (200) |
+| 472 | UpToDate | 医療 | [uptodate.com](https://www.uptodate.com) | ✅ (200) |
+| 473 | Medscape | 医療 | [medscape.com](https://www.medscape.com) | ✅ (200) |
+| 474 | McKesson | 医療 | [mckesson.com](https://www.mckesson.com) | ✅ (200) |
+| 475 | eClinicalWorks | 医療 | [eclinicalworks.com](https://www.eclinicalworks.com) | ✅ (200) |
+| 476 | Athenahealth | 医療 | [athenahealth.com](https://www.athenahealth.com) | ✅ (200) |
+| 477 | Allscripts | 医療 | [allscripts.com](https://www.allscripts.com) | ✅ (200) |
+| 478 | Box | Storage | [box.com](https://www.box.com) | ✅ (200) |
+| 479 | Egnyte | Storage | [egnyte.com](https://www.egnyte.com) | ✅ (200) |
+| 480 | Dropbox Business | Storage | [dropbox.com/business](https://www.dropbox.com/business) | ✅ (200) |
+| 481 | Citrix ShareFile | Storage | [sharefile.com](https://www.sharefile.com) | ✅ (200) |
+| 482 | Amazon S3 | Storage | [aws.amazon.com/s3](https://aws.amazon.com/s3) | ✅ (200) |
+| 483 | Google Workspace | Communication | [workspace.google.com](https://workspace.google.com) | ✅ (200) |
+| 484 | Microsoft 365 | Communication | [microsoft.com/microsoft-365](https://www.microsoft.com/microsoft-365) | ✅ (200) |
+| 485 | Dialpad | Communication | [dialpad.com](https://www.dialpad.com) | ✅ (200) |
+| 486 | 8x8 | Communication | [8x8.com](https://www.8x8.com) | ✅ (200) |
+| 487 | RingCentral MVP | Communication | [ringcentral.com](https://www.ringcentral.com) | ✅ (200) |
+| 488 | Nextiva | Communication | [nextiva.com](https://www.nextiva.com) | ✅ (200) |
+| 489 | Vonage | Communication | [vonage.com](https://www.vonage.com) | ✅ (200) |
+| 490 | ProofHub | Collaboration | [proofhub.com](https://www.proofhub.com) | ✅ (200) |
+| 491 | Assembla | Collaboration | [assembla.com](https://www.assembla.com) | ✅ (200) |
+| 492 | Procore | Collaboration | [procore.com](https://www.procore.com) | ✅ (200) |
+| 493 | Planview | Collaboration | [planview.com](https://www.planview.com) | ✅ (200) |
+| 494 | Slack for Teams | Collaboration | [slack.com](https://www.slack.com) | ✅ (200) |
+| 495 | Microsoft Teams | Collaboration | [teams.microsoft.com](https://www.teams.microsoft.com) | ✅ (200) |
+| 496 | Flock | Collaboration | [flock.com](https://www.flock.com) | ✅ (200) |
 
 
 ---
 
-**Total**: 471 services (all with URL検証カラム)
+**Total**: 496 services (all with URL検証カラム)
 
 ---
-**Last updated**: 2026-02-25 21:45 (Asia/Tokyo)
+**Last updated**: 2026-02-25 22:00 (Asia/Tokyo)
