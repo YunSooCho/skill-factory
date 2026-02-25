@@ -159,10 +159,24 @@
 | 155 | U-Can | 教育 | [u-can.co.jp](https://www.u-can.co.jp) |
 | 156 | ASAHI Net | Cloud | [asahi-net.jp](https://asahi-net.jp) |
 | 157 | Kii | Cloud | [kii.com](https://kii.com) |
+| 158 | Eight (Eito) | 名片管理 | [eight.app](https://eight.app) |
+| 159 | Treasure Data | Analytics | [treasuredata.co.jp](https://treasuredata.co.jp) |
+| 160 | Trocco.io | Database | [trocco.io](https://trocco.io) |
+| 161 | Explora | Analytics | [explora.jp](https://explora.jp) |
+| 162 | jinjer勤怠 | 勤怠管理 | [jinjer.co.jp](https://jinjer.co.jp) |
+| 163 | re-ga | Analytics | [re-ga.jp](https://re-ga.jp) |
+| 164 | Hiver | カスタマーサポート | [hiverhq.com](https://hiverhq.com) |
+| 165 | ECbeing | EC | [ecbeing.net](https://www.ecbeing.net) |
+| 166 | FutureShop | EC | [future-shop.jp](https://www.future-shop.jp) |
+| 167 | Edy | 決済 | [edy.co.jp](https://www.edy.co.jp) |
+| 168 | Muumuu Domain | Cloud | [muumuu-domain.com](https://muumuu-domain.com) |
+| 169 | Interlink | Cloud | [interlink.or.jp](https://www.interlink.or.jp) |
+| 170 | CPI Ace | Cloud | [cpi.ad.jp](https://www.cpi.ad.jp) |
+| 171 | tsukaeru Cloud | Cloud | [tsukaeru.net](https://tsukaeru.net) |
 
 ---
 
-**Total**: 157 services
+**Total**: 171 services
 
 ---
 
