@@ -1,312 +1,312 @@
 # Services Specification
 
-| # | サービス | カテゴリー | ホームページ |
-|---|----------|----------|-------------|
-| 1 | AirRegister | POS | [airregi.jp](https://airregi.jp) |
-| 2 | StoreApps | POS | [unite.co.jp](https://unite.co.jp) |
-| 3 | REACH | POS | [www.reac.jp](https://www.reac.jp/) |
-| 4 | Smaregi | POS | [smaregi.jp](https://smaregi.jp) |
-| 5 | Urushi | POS | [www.urushi.jp](https://www.urushi.jp/) |
-| 6 | U-System | POS | [usystem.jp](https://usystem.jp/) |
-| 7 | eMedical | 医療 | [emedical.co.jp](https://www.emedical.co.jp) |
-| 8 | MUSE | 医療 | [muse-cloud.com](https://www.muse-cloud.com) |
-| 9 | Clinic Cloud | 医療 | [clinic-cloud.com](https://www.clinic-cloud.com) |
-| 10 | Note | Content | [note.com](https://note.com) |
-| 11 | SmartDB | Database | [smartdb.jp](https://smartdb.jp) |
-| 12 | kintone | CRM | [cybozu.com/jp/product/kintone](https://www.cybozu.com/jp/product/kintone) |
-| 13 | cybozu | CRM | [www.cybozu.com](https://www.cybozu.com/) |
-| 14 | FANSHIP | Marketing | [www.fanship.jp](https://www.fanship.jp/) |
-| 15 | Cacoo | Diagram | [nulab.com/cacoo](https://nulab.com/cacoo/) |
-| 16 | Backlog | Project Management | [nulab.com/backlog](https://nulab.com/backlog/) |
-| 17 | shop-pro | EC | [shop-pro.jp](https://shop-pro.jp) |
-| 18 | makeshop | EC | [makeshop.jp](https://www.makeshop.jp) |
-| 19 | paypal-japan | 決済 | [paypal.com/jp/home](https://www.paypal.com/jp/home) |
-| 20 | sb-payment | 決済 | [sbpayment.jp](https://www.sbpayment.jp) |
-| 21 | manaba | 教育 | [manaba.jp](https://www.manaba.jp) |
-| 22 | Schoo | 教育 | [schoo.jp](https://www.schoo.jp) |
-| 23 | Studyplus | 教育 | [studyplus.jp](https://www.studyplus.jp) |
-| 24 | SAP ERP | 製造 | [sap.com/jp](https://www.sap.com/jp) |
-| 25 | Oracle NetSuite | 製造 | [oracle.com/jp/netsuite](https://www.oracle.com/jp/netsuite) |
-| 26 | Smart Factory | 製造 | [smart-factory.jp](https://www.smart-factory.jp) |
-| 27 | freee | 会計 | [freee.co.jp](https://www.freee.co.jp) |
-| 28 | Money Forward | 会計 | [moneyforward.com](https://www.moneyforward.com) |
-| 29 | Zoho Books | 会計 | [zoho.com/jp/books](https://www.zoho.com/jp/books) |
-| 30 | Sansan | 名片管理 | [sansan.com](https://sansan.com) |
-| 31 | Chatwork | コラボレーション | [go.chatwork.com](https://go.chatwork.com) |
-| 32 | SmartHR | 人材管理 | [smarthr.co.jp](https://smarthr.co.jp) |
-| 33 | Jobcan | 勤怠管理 | [jobcan.jp](https://jobcan.jp) |
-| 34 | Rakuten PAY | 決済 | [payment.rakuten.co.jp](https://payment.rakuten.co.jp) |
-| 35 | Paidy | 決済 | [paidy.com](https://paidy.com) |
-| 36 | STRIPE | 決済 | [stripe.com/jp](https://stripe.com/jp) |
-| 37 | Trello | Project Management | [trello.com](https://trello.com) |
-| 38 | Notion | コラボレーション | [notion.so](https://www.notion.so) |
-| 39 | PayPay | 決済 | [paypay.ne.jp](https://paypay.ne.jp) |
-| 40 | Au PAY | 決済 | [wallet.auone.jp](https://wallet.auone.jp) |
-| 41 | Mercari Pay | 決済 | [jp.mercari.com](https://jp.mercari.com) |
-| 42 | Medical Note | 医療 | [medicalnote.jp](https://medicalnote.jp) |
-| 43 | MF Accounting | 会計 | [accounting.moneyforward.com](https://accounting.moneyforward.com) |
-| 44 | Shopify | EC | [shopify.com/jp](https://shopify.com/jp) |
-| 45 | Wix | EC | [wix.com](https://wix.com) |
-| 46 | Asana | Project Management | [asana.com](https://asana.com) |
-| 47 | Monday.com | Project Management | [monday.com](https://monday.com) |
-| 48 | HubSpot | CRM | [hubspot.com](https://hubspot.com) |
-| 49 | Microsoft Office 365 | コラボレーション | [office.com/ja-jp](https://office.com/ja-jp) |
-| 50 | Dropbox | コラボレーション | [dropbox.com/ja](https://dropbox.com/ja) |
-| 51 | HRBase | 人材管理 | [hrbase.co.jp](https://hrbase.co.jp) |
-| 52 | King of Time | 勤怠管理 | [kingoftime.jp](https://kingoftime.jp) |
-| 53 | TeamSpirit | 人材管理 | [www.teamspirit.co.jp](https://www.teamspirit.co.jp) |
-| 54 | Wantedly | 人材管理 | [www.wantedly.com](https://www.wantedly.com) |
-| 55 | Plaid | CRM | [plaid.co.jp](https://plaid.co.jp) |
-| 56 | Salesforce | CRM | [salesforce.com/jp](https://salesforce.com/jp) |
-| 57 | EC-CUBE | EC | [ec-cube.net](https://ec-cube.net) |
-| 58 | Creive | Marketing | [creive.me](https://creive.me) |
-| 59 | Zendesk | カスタマーサポート | [zendesk.com/ja](https://zendesk.com/ja) |
-| 60 | KARTE | Marketing | [karte.io](https://karte.io) |
-| 61 | UserLocal | Analytics | [userlocal.jp](https://userlocal.jp) |
-| 62 | Canva | Design | [canva.com](https://canva.com) |
-| 63 | Adobe | Design | [adobe.com/jp](https://adobe.com/jp) |
-| 64 | Autodesk | Design | [autodesk.co.jp](https://autodesk.co.jp) |
-| 65 | Zoom | Communication | [zoom.us](https://zoom.us) |
-| 66 | Box | Storage | [box.com](https://box.com) |
-| 67 | Gengo | Translation | [gengo.com](https://gengo.com) |
-| 68 | Crowdin | Translation | [crowdin.com](https://crowdin.com) |
-| 69 | GitHub | Git | [github.com](https://github.com) |
-| 70 | GitLab | Git | [gitlab.com](https://gitlab.com) |
-| 71 | AWS | Cloud | [aws.amazon.com/jp](https://aws.amazon.com/jp) |
-| 72 | Google Cloud | Cloud | [cloud.google.com](https://cloud.google.com) |
-| 73 | Mailchimp | Marketing | [mailchimp.com](https://mailchimp.com) |
-| 74 | Confluence | Documentation | [atlassian.com/ja](https://atlassian.com/ja) |
-| 75 | Airリザーブ | 予約管理 | [airregi.jp/air-reserve](https://airregi.jp/air-reserve) |
-| 76 | hacomono | 予約管理 | [hacomono.jp](https://hacomono.jp) |
-| 77 | ChoiceRESERVE | 予約管理 | [reservelink.co.jp](https://reservelink.co.jp) |
-| 78 | STORES 予約 | 予約管理 | [stores.jp/reservation](https://stores.jp/reservation) |
-| 79 | Riza-en | 予約管理 | [riza-en.jp](https://riza-en.jp) |
-| 80 | RESERVA | 予約管理 | [reserva.be](https://reserva.be) |
-| 81 | SuperSaaS | 予約管理 | [supersaas.jp](https://supersaas.jp) |
-| 82 | tripla Book | 予約管理 | [tripla.io](https://tripla.io) |
-| 83 | リザービア | 予約管理 | [reservevia.com](https://reservevia.com) |
-| 84 | Square 予約 | 予約管理 | [squareup.com/jp/appointments](https://squareup.com/jp/appointments) |
-| 85 | Direct In S4 | 予約管理 | [dyn.co.jp](https://dyn.co.jp) |
-| 86 | Kalonade | 予約管理 | [kalonade.jp](https://kalonade.jp) |
-| 87 | MOSH | 予約管理 | [mosh.jp](https://mosh.jp) |
-| 88 | EIPro | 予約管理 | [eipo.jp](https://eipo.jp) |
-| 89 | トレタ予約台帳 | 予約管理 | [toreta.in](https://toreta.in) |
-| 90 | BRoomHubs | 予約管理 | [broomhubs.com](https://broomhubs.com) |
-| 91 | SmartRooms | 予約管理 | [uchida.co.jp](https://www.uchida.co.jp) |
-| 92 | タビチャットエンジン | 予約管理 | [tabichat.jp](https://tabichat.jp) |
-| 93 | リピッテ酒店 | 予約管理 | [rep-colle.jp](https://rep-colle.jp) |
-| 94 | TableCheck | 予約管理 | [tablecheck.com](https://tablecheck.com) |
-| 95 | LINE Biz ID | Communication | [linebiz.com/jp](https://linebiz.com/jp) |
-| 96 | Slack | Communication | [slack.com/ja](https://slack.com/ja) |
-| 97 | Salesforce Marketing Cloud | Marketing | [salesforce.com/jp/products/marketing](https://salesforce.com/jp/products/marketing) |
-| 98 | Braze | Marketing | [braze.com/jp](https://braze.com/jp) |
-| 99 | Adobe Experience Cloud | Marketing | [adobe.com/jp/marketing](https://adobe.com/jp/marketing) |
-| 100 | GA4 | Analytics | [googleanalytics.com](https://googleanalytics.com) |
-| 101 | Mixpanel | Analytics | [mixpanel.com](https://mixpanel.com) |
-| 102 | Amplitude | Analytics | [amplitude.com](https://amplitude.com) |
-| 103 | Figma | Design | [figma.com](https://figma.com) |
-| 104 | Sketch | Design | [sketch.com](https://sketch.com) |
-| 105 | Adobe XD | Design | [adobe.com/jp/products/xd](https://adobe.com/jp/products/xd) |
-| 106 | Jira | Project Management | [atlassian.com/ja/software/jira](https://atlassian.com/ja/software/jira) |
-| 107 | Basecamp | Project Management | [basecamp.com](https://basecamp.com) |
-| 108 | ClickUp | Project Management | [clickup.com](https://clickup.com) |
-| 109 | Smartsheet | Project Management | [smartsheet.com](https://smartsheet.com) |
-| 110 | Intercom | カスタマーサポート | [intercom.com](https://intercom.com) |
-| 111 | Freshdesk | カスタマーサポート | [freshworks.com](https://freshworks.com) |
-| 112 | Help Scout | カスタマーサポート | [helpscout.com](https://helpscout.com) |
-| 113 | Drift | カスタマーサポート | [drift.com](https://drift.com) |
-| 114 | GitKraken | Git | [gitkraken.com](https://gitkraken.com) |
-| 115 | Bitbucket | Git | [bitbucket.org](https://bitbucket.org) |
-| 116 | Sourcegraph | Git | [sourcegraph.com](https://sourcegraph.com) |
-| 117 | Microsoft Azure | Cloud | [azure.microsoft.com/ja-jp](https://azure.microsoft.com/ja-jp) |
-| 118 | Oracle Cloud | Cloud | [oracle.com/jp/cloud](https://www.oracle.com/jp/cloud) |
-| 119 | DigitalOcean | Cloud | [digitalocean.com](https://digitalocean.com) |
-| 120 | Google Drive | Storage | [drive.google.com](https://drive.google.com) |
-| 121 | OneDrive | Storage | [onedrive.com](https://onedrive.com) |
-| 122 | pCloud | Storage | [pcloud.com](https://pcloud.com) |
-| 123 | SugarSync | Storage | [sugarsync.com](https://sugarsync.com) |
-| 124 | Loom | Communication | [loom.com](https://loom.com) |
-| 125 | Microsoft Teams | Communication | [teams.microsoft.com](https://teams.microsoft.com) |
-| 126 | Webex | Communication | [webex.com](https://webex.com) |
-| 127 | Figma | Documentation | [figma.com](https://figma.com) |
-| 128 | Miro | Diagram | [miro.com](https://miro.com) |
-| 129 | Jooto | Project Management | [jooto.com](https://www.jooto.com) |
-| 130 | Whimsical | Diagram | [whimsical.com](https://whimsical.com) |
-| 131 | FC2ショッピングカート | EC | [cart.fc2.com](https://cart.fc2.com) |
-| 132 | Casy | Education | [casy.io](https://www.casy.io) |
-| 133 | MedPeer | 医療 | [medpeer.jp](https://medpeer.jp) |
-| 134 | kibe.la | Documentation | [kibe.la](https://kibe.la) |
-| 135 | esa.io | Documentation | [esa.io](https://esa.io) |
-| 136 | Qiita | Content | [qiita.com](https://qiita.com) |
-| 137 | Zenn | Content | [zenn.dev](https://zenn.dev) |
-| 138 | Creately | Diagram | [creately.com](https://creately.com) |
-| 139 | draw.io | Diagram | [draw.io](https://www.draw.io) |
-| 140 | CodeCamp | Education | [codecamp.jp](https://codecamp.jp) |
-| 141 | TechAcademy | Education | [techacademy.jp](https://techacademy.jp) |
-| 142 | Ringbell | Communication | [ringbell.jp](https://ringbell.jp) |
-| 143 | SmartDraw | Diagram | [smartdraw.com](https://www.smartdraw.com) |
-| 144 | Gurobi | Analytics | [gurobi.com](https://www.gurobi.com) |
-| 145 | NewsDigest | Content | [newsdigest.jp](https://newsdigest.jp) |
-| 146 | GMO PG | 決済 | [gmo-pg.com](https://www.gmo-pg.com) |
-| 147 | IIJ | Cloud | [iij.ad.jp](https://www.iij.ad.jp) |
-| 148 | Onamae.com | Cloud | [onamae.com](https://www.onamae.com) |
-| 149 | Muumuu Domain | Cloud | [muumuu-domain.com](https://muumuu-domain.com) |
-| 150 | Sakura Cloud | Cloud | [cloud.sakura.ad.jp](https://cloud.sakura.ad.jp) |
-| 151 | KAGOYA | Cloud | [kagoya.jp](https://www.kagoya.jp) |
-| 152 | TIS | Cloud | [tis.co.jp](https://www.tis.co.jp) |
-| 153 | Hakuhodo DY ONE | Marketing | [hakuhodody-one.co.jp](https://www.hakuhodody-one.co.jp) |
-| 154 | Type（タイプ） | 人材管理 | [type.jp](https://type.jp) |
-| 155 | U-Can | 教育 | [u-can.co.jp](https://www.u-can.co.jp) |
-| 156 | ASAHI Net | Cloud | [asahi-net.jp](https://asahi-net.jp) |
-| 157 | Kii | Cloud | [kii.com](https://kii.com) |
-| 158 | Eight (Eito) | 名片管理 | [eight.app](https://eight.app) |
-| 159 | Treasure Data | Analytics | [treasuredata.co.jp](https://treasuredata.co.jp) |
-| 160 | Trocco.io | Database | [trocco.io](https://trocco.io) |
-| 161 | Explora | Analytics | [explora.jp](https://explora.jp) |
-| 162 | jinjer勤怠 | 勤怠管理 | [jinjer.co.jp](https://jinjer.co.jp) |
-| 163 | re-ga | Analytics | [re-ga.jp](https://re-ga.jp) |
-| 164 | Hiver | カスタマーサポート | [hiverhq.com](https://hiverhq.com) |
-| 165 | ECbeing | EC | [ecbeing.net](https://www.ecbeing.net) |
-| 166 | FutureShop | EC | [future-shop.jp](https://www.future-shop.jp) |
-| 167 | Edy | 決済 | [edy.co.jp](https://www.edy.co.jp) |
-| 168 | Muumuu Domain | Cloud | [muumuu-domain.com](https://muumuu-domain.com) |
-| 169 | Interlink | Cloud | [interlink.or.jp](https://www.interlink.or.jp) |
-| 170 | CPI Ace | Cloud | [cpi.ad.jp](https://www.cpi.ad.jp) |
-| 171 | tsukaeru Cloud | Cloud | [tsukaeru.net](https://tsukaeru.net) |
-| 172 | Airシフト | 勤怠管理 | [airshift.jp](https://airshift.jp) |
-| 173 | Amazon Pay | 決済 | [pay.amazon.co.jp](https://pay.amazon.co.jp/jp) |
-| 174 | BASE | EC | [thebase.in](https://thebase.in) |
-| 175 | Coconala | 人材管理 | [coconala.com](https://coconala.com) |
-| 176 | CrowdWorks | 人材管理 | [crowdworks.jp](https://crowdworks.jp) |
-| 177 | LINE Pay | 決済 | [pay.line.me](https://pay.line.me) |
-| 178 | Lancers | 人材管理 | [www.lancers.jp](https://www.lancers.jp) |
-| 179 | au PAY Market | EC | [paypay.ne.jp](https://paypay.ne.jp) |
-| 180 | クラウドサイン | Document | [cloudsign.jp](https://cloudsign.jp) |
-| 181 | ソラコム | Cloud | [soracom.jp](https://soracom.jp) |
-| 182 | ニフクラ | Cloud | [pfs.nifcloud.com](https://pfs.nifcloud.com) |
-| 183 | メルペイ | 決済 | [mpay.jp](https://mpay.jp) |
-| 184 | 弥生会計 | 会計 | [www.yayoi-kk.co.jp](https://www.yayoi-kk.co.jp) |
-| 185 | Kando | カスタマーサクセス | [kando.io](https://kando.io) |
-| 186 | Reps | カスタマーサクセス | [reps.co.jp](https://reps.co.jp) |
-| 187 | LegalForce | 法務 | [legalforce.co.jp](https://legalforce.co.jp) |
-| 188 | SocialDog | Social Media | [social-dog.net](https://social-dog.net) |
-| 189 | Scrapbox | Document | [scrapbox.io](https://scrapbox.io) |
-| 190 | V-Cube | Communication | [v-cube.com](https://v-cube.com) |
-| 191 | MotionBoard | Analytics | [motionboard.jp](https://motionboard.jp) |
-| 192 | Autify | QA/Testing | [autify.com](https://autify.com) |
-| 193 | Joyz | 人材管理 | [joyz.jp](https://joyz.jp) |
-| 194 | Belong | 人材管理 | [belong.jp](https://belong.jp) |
-| 195 | Pleasanter | Database | [pleasanter.org](https://pleasanter.org) |
-| 196 | HRBrain | 人材管理 | [hrbrain.co.jp](https://hrbrain.co.jp) |
-| 197 | Kaonavi | タレントマネジメント | [kaonavi.jp](https://kaonavi.jp) |
-| 198 | Talentbox | タレントマネジメント | [talentbox.co.jp](https://talentbox.co.jp) |
-| 199 | StaffStart | 人材管理 | [staff-start.com](https://staff-start.com) |
-| 200 | Autobiz | RPA | [autobiz.jp](https://autobiz.jp) |
-| 201 | HRMOS | 人材管理 | [hrmos.co](https://hrmos.co) |
-| 202 | タレントパレット | 人材管理 | [pa-consul.co.jp](https://www.pa-consul.co.jp) |
-| 203 | クエステトラ | Project Management | [questetra.com](https://questetra.com) |
-| 204 | 楽々勤怠 | 勤怠管理 | [rakurakukintai.jp](https://www.rakurakukintai.jp) |
-| 205 | One人事 | 人材管理 | [onehr.jp](https://onehr.jp) |
-| 206 | オフィスステーション | 人材管理 | [officestation.jp](https://www.officestation.jp) |
-| 207 | クラウドハウス労務 | 人材管理 | [cloud-house.com](https://jp.cloud-house.com) |
-| 208 | Factory-ONE | 製造 | [ex-smart.co.jp](https://www.ex-smart.co.jp/factoryone/) |
-| 209 | UM SaaS Cloud | 製造 | [umsaascloud.jp](https://www.umsaascloud.jp) |
-| 210 | o9ソリューションズ | 製造 | [o9solutions.com](https://o9solutions.com) |
-| 211 | sonar ATS | 採用管理 | [sonar-ats.jp](https://sonar-ats.jp) |
-| 212 | invox | 会計 | [invox.jp](https://www.invox.jp) |
-| 213 | バクラク | 経費精算 | [bakuraku.jp](https://bakuraku.jp) |
-| 214 | 会計王 | 会計 | [sorimachi.co.jp](https://sorimachi.co.jp) |
-| 215 | ROBOT PAYMENT | 決済 | [robotpayment.co.jp](https://www.robotpayment.co.jp) |
-| 216 | TripleW | QA/Testing | [triplew.co.jp](https://triplew.co.jp) |
-| 217 | MagicPod | QA/Testing | [magicpod.com](https://www.magicpod.com) |
-| 218 | Phosphor | QA/Testing | [phosphor.jp](https://www.phosphor.jp) |
-| 219 | Quip | Documentation | [quip.com](https://quip.com) |
-| 220 | Coda | Documentation | [coda.io](https://coda.io) |
-| 221 | Nuclino | Documentation | [nuclino.com](https://nuclino.com) |
-| 222 | XWiki | Documentation | [xwiki.org](https://www.xwiki.org) |
-| 223 | MediaWiki | Documentation | [mediawiki.org](https://www.mediawiki.org) |
-| 224 | Heroku | Cloud | [heroku.com](https://www.heroku.com) |
-| 225 | Vercel | Cloud | [vercel.com](https://www.vercel.com) |
-| 226 | Netlify | Cloud | [netlify.com](https://www.netlify.com) |
-| 227 | Alibaba Cloud | Cloud | [alibabacloud.com](https://www.alibabacloud.com) |
-| 228 | スマートPOS | POS | [smart-pos.jp](https://www.smart-pos.jp) |
-| 229 | POSible Cloud | POS | [posible.nttdata.com](https://posible.nttdata.com) |
-| 230 | 楽天スマートPOS | POS | [pos.rakuten.co.jp](https://pos.rakuten.co.jp) |
-| 231 | GMOクラウドPOS | POS | [gmo-keiei.jp](https://www.gmo-keiei.jp) |
-| 232 | UiPath Japan | RPA | [uipath.com/ja](https://www.uipath.com/ja) |
-| 233 | WinActor | RPA | [winactor.jp](https://winactor.jp) |
-| 234 | BizRobo! | RPA | [bizrobo.jp](https://bizrobo.jp) |
-| 235 | LegalOn | 法務 | [legalon.co.jp](https://legalon.co.jp) |
-| 236 | Amino | 法務 | [amino.sh](https://amino.sh) |
-| 237 | 経費革命 | 経費精算 | [keihikakumei.jp](https://keihikakumei.jp) |
-| 238 | Expensify Japan | 経費精算 | [expensify.com](https://www.expensify.com) |
-| 239 | Seek Cloud | 採用管理 | [seek-seeker.jp](https://seek-seeker.jp) |
-| 240 | Learning Securities | タレントマネジメント | [learnings.co.jp](https://learnings.co.jp) |
-| 241 | SMAX Media | Social Media | [smaxmedia.co.jp](https://smaxmedia.co.jp) |
-| 242 | Lancers Social | Social Media | [lancers.jp](https://www.lancers.jp) |
-| 243 | Mineta | Translation | [mineta.jp](https://mineta.jp) |
-| 244 | T-4 Translation | Translation | [t4inc.jp](https://www.t4inc.jp) |
-| 245 | SignTime | Document | [signtime.jp](https://signtime.jp) |
-| 246 | DocuSign Japan | Document | [docusign.com/ja](https://www.docusign.com/ja) |
-| 247 | GyroSign | Document | [gyrosign.co.jp](https://gyrosign.co.jp) |
-| 248 | e-saifu | Document | [e-saifu.co.jp](https://www.e-saifu.co.jp) |
-| 249 | TalentBoard | タレントマネジメント | [talentboard.jp](https://talentboard.jp) |
-| 250 | HR Tech | タレントマネジメント | [hr-tech.co.jp](https://hr-tech.co.jp) |
-| 251 | Selenium Cloud | QA/Testing | [selenium.dev](https://www.selenium.dev) |
-| 252 | TestBench | QA/Testing | [testbench.jp](https://testbench.jp) |
-| 253 | リブレ | POS | [librepos.co.jp](https://librepos.co.jp) |
-| 254 | NISSHAクラウドPOS | POS | [nissha.co.jp](https://www.nissha.co.jp) |
-| 255 | カメカメPOS | POS | [kamekame.biz](https://kamekame.biz) |
-| 256 | セブンPOS | POS | [sevenpos.jp](https://sevenpos.jp) |
-| 257 | SmartSign | Document | [smartsign.jp](https://smartsign.jp) |
-| 258 | BizReach | 採用管理 | [bizreach.jp](https://bizreach.jp) |
-| 259 | LINE WORKS | コラボレーション | [line.works](https://line.works) |
-| 260 | Talknote | コラボレーション | [talknote.com](https://talknote.com) |
-| 261 | SmartNews | Marketing | [smartnews.com](https://smartnews.com) |
-| 262 | Gunosy | Content | [gunosy.com](https://gunosy.com) |
-| 263 | KDDI Cloud | Cloud | [cloud.kddi.com](https://cloud.kddi.com) |
-| 264 | OCN Cloud | Cloud | [cloud.ocn.ne.jp](https://cloud.ocn.ne.jp) |
-| 265 | Biglobe Cloud | Cloud | [cloud.biglobe.ne.jp](https://cloud.biglobe.ne.jp) |
-| 266 | So-net Cloud | Cloud | [cloud.sonet.ne.jp](https://cloud.sonet.ne.jp) |
-| 267 | CyberOffice | コラボレーション | [cyberoffice.jp](https://cyberoffice.jp) |
-| 268 | RMO | 人材管理 | [rmo.co.jp](https://rmo.co.jp) |
-| 269 | Skrue | Document | [skrue.jp](https://skrue.jp) |
-| 270 | ContractHub | Document | [contract-hub.com](https://contract-hub.com) |
-| 271 | Backblaze | Storage | [backblaze.com](https://backblaze.com) |
-| 272 | AIアシスタント | AI | [ai-assistant.jp](https://ai-assistant.jp) |
-| 273 | ChatGPT Japan | AI | [chatgpt-japan.com](https://chatgpt-japan.com) |
-| 274 | Notion Japan | コラボレーション | [notion.so/ja](https://notion.so/ja) |
-| 275 | Figma Japan | Design | [figma.com/ja](https://figma.com/ja) |
-| 276 | Atlassian Japan | Project Management | [atlassian.com/ja](https://atlassian.com/ja) |
-| 277 | Medley | 医療 | [medley.jp](https://www.medley.jp) |
-| 278 | Carenet | 医療 | [carenet.com](https://www.carenet.com) |
-| 279 | Glide | 医療 | [glinc.co.jp](https://www.glinc.co.jp) |
-| 280 | Fujitsu Healthcare Cloud | 医療 | [fujitsu.com/jp](https://www.fujitsu.com/jp) |
-| 281 | SAP Concur | 経費精算 | [concur.co.jp](https://www.concur.co.jp) |
-| 282 | Dynamics 365 | ERP | [microsoft.com/ja-jp/dynamics365](https://www.microsoft.com/ja-jp/dynamics365) |
-| 283 | Freshworks | CRM | [freshworks.com/ja](https://www.freshworks.com/ja) |
-| 284 | RingCentral | Communication | [ringcentral.com/ja](https://www.ringcentral.com/ja) |
-| 285 | Twilio | Communication | [twilio.com/ja](https://www.twilio.com/ja) |
-| 286 | SendGrid | Email | [sendgrid.com/ja](https://www.sendgrid.com/ja) |
-| 287 | Xero Japan | 会計 | [xero.com/jp](https://www.xero.com/jp) |
-| 288 | QuickBooks Online | 会計 | [quickbooks.ja.intuit.com](https://quickbooks.ja.intuit.com) |
-| 289 | SAS | Analytics | [sas.com/ja_jp](https://www.sas.com/ja_jp) |
-| 290 | Splunk | Analytics | [splunk.com/ja-jp](https://www.splunk.com/ja-jp) |
-| 291 | Freshservice | IT Service | [freshservice.com/ja](https://www.freshservice.com/ja) |
-| 292 | Jira Service Management | カスタマーサポート | [atlassian.com/ja/software/jira/service-management](https://www.atlassian.com/ja/software/jira/service-management) |
-| 293 | Mattermost | コラボレーション | [mattermost.com/ja](https://www.mattermost.com/ja) |
-| 294 | Rocket.Chat | コラボレーション | [rocket.chat/ja](https://www.rocket.chat/ja) |
-| 295 | Cybozu Garoon | コラボレーション | [cybozu.com/jp/product/garoon](https://cybozu.com/jp/product/garoon) |
-| 296 | LAPRAS | 採用管理 | [lapras.com](https://lapras.com) |
-| 297 | People Cloud | タレントマネジメント | [people-cloud.jp](https://people-cloud.jp) |
-| 298 | Howdy | 人材管理 | [howdy.co.jp](https://howdy.co.jp) |
-| 299 | Safie | IoT/Cloud | [safie.jp](https://safie.jp) |
-| 300 | Spacemarket | オフィス | [spacemarket.com](https://spacemarket.com) |
-| 301 | RaaS | 採用管理 | [raas.co.jp](https://raas.co.jp) |
-| 302 | Mieruca | カスタマーサクセス | [mieruca.com](https://mieruca.com) |
-| 303 | BrainPad | Analytics | [brainpad.co.jp](https://brainpad.co.jp) |
-| 304 | DataSign | AI/Marketing | [datasign.co.jp](https://datasign.co.jp) |
-| 305 | Loco | Marketing | [loco-guide.jp](https://loco-guide.jp) |
+| # | サービス | カテゴリー | ホームページ | URL検証 |
+|---|----------|----------|-------------|----------|
+| 1 | AirRegister | POS | [airregi.jp](https://airregi.jp) | ⚠️ (403) |
+| 2 | StoreApps | POS | [unite.co.jp](https://unite.co.jp) | ✅ (200) |
+| 3 | REACH | POS | [www.reac.jp](https://www.reac.jp/) | ✅ (200) |
+| 4 | Smaregi | POS | [smaregi.jp](https://smaregi.jp) | ✅ (200) |
+| 5 | Urushi | POS | [www.urushi.jp](https://www.urushi.jp/) | ✅ (200) |
+| 6 | U-System | POS | [usystem.jp](https://usystem.jp/) | ✅ (200) |
+| 7 | eMedical | 医療 | [emedical.co.jp](https://www.emedical.co.jp) | ⏱️ (timeout) |
+| 8 | MUSE | 医療 | [muse-cloud.com](https://www.muse-cloud.com) | ⏱️ (timeout) |
+| 9 | Clinic Cloud | 医療 | [clinic-cloud.com](https://www.clinic-cloud.com) | ✅ (200) |
+| 10 | Note | Content | [note.com](https://note.com) | ✅ (200) |
+| 11 | SmartDB | Database | [smartdb.jp](https://smartdb.jp) | ✅ (200) |
+| 12 | kintone | CRM | [cybozu.com/jp/product/kintone](https://www.cybozu.com/jp/product/kintone) | ❌ (404)
+| 13 | cybozu | CRM | [www.cybozu.com](https://www.cybozu.com/) | ✅ (200)
+| 14 | FANSHIP | Marketing | [www.fanship.jp](https://www.fanship.jp/) | ✅ (200)
+| 15 | Cacoo | Diagram | [nulab.com/cacoo](https://nulab.com/cacoo/) | ✅ (200)
+| 16 | Backlog | Project Management | [nulab.com/backlog](https://nulab.com/backlog/) | ✅ (200)
+| 17 | shop-pro | EC | [shop-pro.jp](https://shop-pro.jp) | ✅ (200)
+| 18 | makeshop | EC | [makeshop.jp](https://www.makeshop.jp) | ✅ (200)
+| 19 | paypal-japan | 決済 | [paypal.com/jp/home](https://www.paypal.com/jp/home) | ✅ (200)
+| 20 | sb-payment | 決済 | [sbpayment.jp](https://www.sbpayment.jp) | ✅ (200)
+| 21 | manaba | 教育 | [manaba.jp](https://www.manaba.jp) | ⏱️ (timeout)
+| 22 | Schoo | 教育 | [schoo.jp](https://www.schoo.jp) | ✅ (200)
+| 23 | Studyplus | 教育 | [studyplus.jp](https://www.studyplus.jp) | ✅ (200)
+| 24 | SAP ERP | 製造 | [sap.com/jp](https://www.sap.com/jp) | ❌ (404)
+| 25 | Oracle NetSuite | 製造 | [oracle.com/jp/netsuite](https://www.oracle.com/jp/netsuite) | ⚠️ (403)
+| 26 | Smart Factory | 製造 | [smart-factory.jp](https://www.smart-factory.jp) | ⏱️ (timeout)
+| 27 | freee | 会計 | [freee.co.jp](https://www.freee.co.jp) | ✅ (200)
+| 28 | Money Forward | 会計 | [moneyforward.com](https://www.moneyforward.com) | ✅ (200)
+| 29 | Zoho Books | 会計 | [zoho.com/jp/books](https://www.zoho.com/jp/books) | ✅ (200)
+| 30 | Sansan | 名片管理 | [sansan.com](https://sansan.com) | ✅ (200)
+| 31 | Chatwork | コラボレーション | [go.chatwork.com](https://go.chatwork.com) | ✅ (200)
+| 32 | SmartHR | 人材管理 | [smarthr.co.jp](https://smarthr.co.jp) | ✅ (200)
+| 33 | Jobcan | 勤怠管理 | [jobcan.jp](https://jobcan.jp) | ✅ (200)
+| 34 | Rakuten PAY | 決済 | [payment.rakuten.co.jp](https://payment.rakuten.co.jp) | ✅ (200)
+| 35 | Paidy | 決済 | [paidy.com](https://paidy.com) | ✅ (200)
+| 36 | STRIPE | 決済 | [stripe.com/jp](https://stripe.com/jp) | ✅ (200)
+| 37 | Trello | Project Management | [trello.com](https://trello.com) | ✅ (200)
+| 38 | Notion | コラボレーション | [notion.so](https://www.notion.so) | ✅ (200)
+| 39 | PayPay | 決済 | [paypay.ne.jp](https://paypay.ne.jp) | ✅ (200)
+| 40 | Au PAY | 決済 | [wallet.auone.jp](https://wallet.auone.jp) | ✅ (200)
+| 41 | Mercari Pay | 決済 | [jp.mercari.com](https://jp.mercari.com) | ✅ (200)
+| 42 | Medical Note | 医療 | [medicalnote.jp](https://medicalnote.jp) | ✅ (200)
+| 43 | MF Accounting | 会計 | [accounting.moneyforward.com](https://accounting.moneyforward.com) | ✅ (200)
+| 44 | Shopify | EC | [shopify.com/jp](https://shopify.com/jp) | ✅ (200)
+| 45 | Wix | EC | [wix.com](https://wix.com) | ✅ (200)
+| 46 | Asana | Project Management | [asana.com](https://asana.com) | ✅ (200)
+| 47 | Monday.com | Project Management | [monday.com](https://monday.com) | ✅ (200)
+| 48 | HubSpot | CRM | [hubspot.com](https://hubspot.com) | ✅ (200)
+| 49 | Microsoft Office 365 | コラボレーション | [office.com/ja-jp](https://office.com/ja-jp) | ⚠️ (403)
+| 50 | Dropbox | コラボレーション | [dropbox.com/ja](https://dropbox.com/ja) | ✅ (200)
+| 51 | HRBase | 人材管理 | [hrbase.co.jp](https://hrbase.co.jp) | ✅ (200)
+| 52 | King of Time | 勤怠管理 | [kingoftime.jp](https://kingoftime.jp) | ✅ (200)
+| 53 | TeamSpirit | 人材管理 | [www.teamspirit.co.jp](https://www.teamspirit.co.jp) | ✅ (200)
+| 54 | Wantedly | 人材管理 | [www.wantedly.com](https://www.wantedly.com) | ✅ (200)
+| 55 | Plaid | CRM | [plaid.co.jp](https://plaid.co.jp) | ✅ (200)
+| 56 | Salesforce | CRM | [salesforce.com/jp](https://salesforce.com/jp) | ✅ (200)
+| 57 | EC-CUBE | EC | [ec-cube.net](https://ec-cube.net) | ⚠️ (403)
+| 58 | Creive | Marketing | [creive.me](https://creive.me) | ✅ (200)
+| 59 | Zendesk | カスタマーサポート | [zendesk.com/ja](https://zendesk.com/ja) | ⚠️ (403)
+| 60 | KARTE | Marketing | [karte.io](https://karte.io) | ✅ (200)
+| 61 | UserLocal | Analytics | [userlocal.jp](https://userlocal.jp) | ✅ (200)
+| 62 | Canva | Design | [canva.com](https://canva.com) | ⚠️ (403)
+| 63 | Adobe | Design | [adobe.com/jp](https://adobe.com/jp) | ✅ (200)
+| 64 | Autodesk | Design | [autodesk.co.jp](https://autodesk.co.jp) | ⚠️ (403)
+| 65 | Zoom | Communication | [zoom.us](https://zoom.us) | ✅ (200)
+| 66 | Box | Storage | [box.com](https://box.com) | ✅ (200)
+| 67 | Gengo | Translation | [gengo.com](https://gengo.com) | ❌ (502)
+| 68 | Crowdin | Translation | [crowdin.com](https://crowdin.com) | ✅ (200)
+| 69 | GitHub | Git | [github.com](https://github.com) | ✅ (200)
+| 70 | GitLab | Git | [gitlab.com](https://gitlab.com) | ✅ (200)
+| 71 | AWS | Cloud | [aws.amazon.com/jp](https://aws.amazon.com/jp) | ✅ (200)
+| 72 | Google Cloud | Cloud | [cloud.google.com](https://cloud.google.com) | ✅ (200)
+| 73 | Mailchimp | Marketing | [mailchimp.com](https://mailchimp.com) | ✅ (200)
+| 74 | Confluence | Documentation | [atlassian.com/ja](https://atlassian.com/ja) | ✅ (200)
+| 75 | Airリザーブ | 予約管理 | [airregi.jp/air-reserve](https://airregi.jp/air-reserve) | ❌ (404)
+| 76 | hacomono | 予約管理 | [hacomono.jp](https://hacomono.jp) | ⏱️ (timeout)
+| 77 | ChoiceRESERVE | 予約管理 | [reservelink.co.jp](https://reservelink.co.jp) | ✅ (200)
+| 78 | STORES 予約 | 予約管理 | [stores.jp/reservation](https://stores.jp/reservation) | ❌ (404)
+| 79 | Riza-en | 予約管理 | [riza-en.jp](https://riza-en.jp) | ✅ (200)
+| 80 | RESERVA | 予約管理 | [reserva.be](https://reserva.be) | ⚠️ (403)
+| 81 | SuperSaaS | 予約管理 | [supersaas.jp](https://supersaas.jp) | ✅ (200)
+| 82 | tripla Book | 予約管理 | [tripla.io](https://tripla.io) | ✅ (200)
+| 83 | リザービア | 予約管理 | [reservevia.com](https://reservevia.com) | ⏱️ (timeout)
+| 84 | Square 予約 | 予約管理 | [squareup.com/jp/appointments](https://squareup.com/jp/appointments) | ✅ (200)
+| 85 | Direct In S4 | 予約管理 | [dyn.co.jp](https://dyn.co.jp) | ✅ (200)
+| 86 | Kalonade | 予約管理 | [kalonade.jp](https://kalonade.jp) | ⏱️ (timeout)
+| 87 | MOSH | 予約管理 | [mosh.jp](https://mosh.jp) | ✅ (200)
+| 88 | EIPro | 予約管理 | [eipo.jp](https://eipo.jp) | ✅ (200)
+| 89 | トレタ予約台帳 | 予約管理 | [toreta.in](https://toreta.in) | ✅ (200)
+| 90 | BRoomHubs | 予約管理 | [broomhubs.com](https://broomhubs.com) | ✅ (200)
+| 91 | SmartRooms | 予約管理 | [uchida.co.jp](https://www.uchida.co.jp) | ✅ (200)
+| 92 | タビチャットエンジン | 予約管理 | [tabichat.jp](https://tabichat.jp) | ✅ (200)
+| 93 | リピッテ酒店 | 予約管理 | [rep-colle.jp](https://rep-colle.jp) | ⏱️ (timeout)
+| 94 | TableCheck | 予約管理 | [tablecheck.com](https://tablecheck.com) | ✅ (200)
+| 95 | LINE Biz ID | Communication | [linebiz.com/jp](https://linebiz.com/jp) | ✅ (200)
+| 96 | Slack | Communication | [slack.com/ja](https://slack.com/ja) | ❌ (404)
+| 97 | Salesforce Marketing Cloud | Marketing | [salesforce.com/jp/products/marketing](https://salesforce.com/jp/products/marketing) | ✅ (200)
+| 98 | Braze | Marketing | [braze.com/jp](https://braze.com/jp) | ❌ (404)
+| 99 | Adobe Experience Cloud | Marketing | [adobe.com/jp/marketing](https://adobe.com/jp/marketing) | ✅ (200)
+| 100 | GA4 | Analytics | [googleanalytics.com](https://googleanalytics.com) | ✅ (200)
+| 101 | Mixpanel | Analytics | [mixpanel.com](https://mixpanel.com) | ✅ (200)
+| 102 | Amplitude | Analytics | [amplitude.com](https://amplitude.com) | ✅ (200)
+| 103 | Figma | Design | [figma.com](https://figma.com) | ✅ (200)
+| 104 | Sketch | Design | [sketch.com](https://sketch.com) | ✅ (200)
+| 105 | Adobe XD | Design | [adobe.com/jp/products/xd](https://adobe.com/jp/products/xd) | ✅ (200)
+| 106 | Jira | Project Management | [atlassian.com/ja/software/jira](https://atlassian.com/ja/software/jira) | ✅ (200)
+| 107 | Basecamp | Project Management | [basecamp.com](https://basecamp.com) | ✅ (200)
+| 108 | ClickUp | Project Management | [clickup.com](https://clickup.com) | ✅ (200)
+| 109 | Smartsheet | Project Management | [smartsheet.com](https://smartsheet.com) | ✅ (200)
+| 110 | Intercom | カスタマーサポート | [intercom.com](https://intercom.com) | ✅ (200)
+| 111 | Freshdesk | カスタマーサポート | [freshworks.com](https://freshworks.com) | ✅ (200)
+| 112 | Help Scout | カスタマーサポート | [helpscout.com](https://helpscout.com) | ✅ (200)
+| 113 | Drift | カスタマーサポート | [drift.com](https://drift.com) | ✅ (200)
+| 114 | GitKraken | Git | [gitkraken.com](https://gitkraken.com) | ✅ (200)
+| 115 | Bitbucket | Git | [bitbucket.org](https://bitbucket.org) | ✅ (200)
+| 116 | Sourcegraph | Git | [sourcegraph.com](https://sourcegraph.com) | ✅ (200)
+| 117 | Microsoft Azure | Cloud | [azure.microsoft.com/ja-jp](https://azure.microsoft.com/ja-jp) | ⏱️ (timeout)
+| 118 | Oracle Cloud | Cloud | [oracle.com/jp/cloud](https://www.oracle.com/jp/cloud) | ✅ (200)
+| 119 | DigitalOcean | Cloud | [digitalocean.com](https://digitalocean.com) | ✅ (200)
+| 120 | Google Drive | Storage | [drive.google.com](https://drive.google.com) | ✅ (200)
+| 121 | OneDrive | Storage | [onedrive.com](https://onedrive.com) | ✅ (200)
+| 122 | pCloud | Storage | [pcloud.com](https://pcloud.com) | ✅ (200)
+| 123 | SugarSync | Storage | [sugarsync.com](https://sugarsync.com) | ✅ (200)
+| 124 | Loom | Communication | [loom.com](https://loom.com) | ✅ (200)
+| 125 | Microsoft Teams | Communication | [teams.microsoft.com](https://teams.microsoft.com) | ✅ (200)
+| 126 | Webex | Communication | [webex.com](https://webex.com) | ✅ (200)
+| 127 | Figma | Documentation | [figma.com](https://figma.com) | ✅ (200)
+| 128 | Miro | Diagram | [miro.com](https://miro.com) | ✅ (200)
+| 129 | Jooto | Project Management | [jooto.com](https://www.jooto.com) | ✅ (200)
+| 130 | Whimsical | Diagram | [whimsical.com](https://whimsical.com) | ✅ (200)
+| 131 | FC2ショッピングカート | EC | [cart.fc2.com](https://cart.fc2.com) | ✅ (200)
+| 132 | Casy | Education | [casy.io](https://www.casy.io) | ✅ (200)
+| 133 | MedPeer | 医療 | [medpeer.jp](https://medpeer.jp) | ✅ (200)
+| 134 | kibe.la | Documentation | [kibe.la](https://kibe.la) | ✅ (200)
+| 135 | esa.io | Documentation | [esa.io](https://esa.io) | ✅ (200)
+| 136 | Qiita | Content | [qiita.com](https://qiita.com) | ✅ (200)
+| 137 | Zenn | Content | [zenn.dev](https://zenn.dev) | ✅ (200)
+| 138 | Creately | Diagram | [creately.com](https://creately.com) | ✅ (200)
+| 139 | draw.io | Diagram | [draw.io](https://www.draw.io) | ✅ (200)
+| 140 | CodeCamp | Education | [codecamp.jp](https://codecamp.jp) | ✅ (200)
+| 141 | TechAcademy | Education | [techacademy.jp](https://techacademy.jp) | ✅ (200)
+| 142 | Ringbell | Communication | [ringbell.jp](https://ringbell.jp) | ✅ (200)
+| 143 | SmartDraw | Diagram | [smartdraw.com](https://www.smartdraw.com) | ✅ (200)
+| 144 | Gurobi | Analytics | [gurobi.com](https://www.gurobi.com) | ✅ (200)
+| 145 | NewsDigest | Content | [newsdigest.jp](https://newsdigest.jp) | ✅ (200)
+| 146 | GMO PG | 決済 | [gmo-pg.com](https://www.gmo-pg.com) | ✅ (200)
+| 147 | IIJ | Cloud | [iij.ad.jp](https://www.iij.ad.jp) | ✅ (200)
+| 148 | Onamae.com | Cloud | [onamae.com](https://www.onamae.com) | ✅ (200)
+| 149 | Muumuu Domain | Cloud | [muumuu-domain.com](https://muumuu-domain.com) | ✅ (200)
+| 150 | Sakura Cloud | Cloud | [cloud.sakura.ad.jp](https://cloud.sakura.ad.jp) | ✅ (200)
+| 151 | KAGOYA | Cloud | [kagoya.jp](https://www.kagoya.jp) | ✅ (200)
+| 152 | TIS | Cloud | [tis.co.jp](https://www.tis.co.jp) | ✅ (200)
+| 153 | Hakuhodo DY ONE | Marketing | [hakuhodody-one.co.jp](https://www.hakuhodody-one.co.jp) | ✅ (200)
+| 154 | Type（タイプ） | 人材管理 | [type.jp](https://type.jp) | ✅ (200)
+| 155 | U-Can | 教育 | [u-can.co.jp](https://www.u-can.co.jp) | ✅ (200)
+| 156 | ASAHI Net | Cloud | [asahi-net.jp](https://asahi-net.jp) | ✅ (200)
+| 157 | Kii | Cloud | [kii.com](https://kii.com) | ✅ (200)
+| 158 | Eight (Eito) | 名片管理 | [eight.app](https://eight.app) | ⚠️ (403)
+| 159 | Treasure Data | Analytics | [treasuredata.co.jp](https://treasuredata.co.jp) | ✅ (200)
+| 160 | Trocco.io | Database | [trocco.io](https://trocco.io) | ✅ (200)
+| 161 | Explora | Analytics | [explora.jp](https://explora.jp) | ✅ (200)
+| 162 | jinjer勤怠 | 勤怠管理 | [jinjer.co.jp](https://jinjer.co.jp) | ✅ (200)
+| 163 | re-ga | Analytics | [re-ga.jp](https://re-ga.jp) | ⏱️ (timeout)
+| 164 | Hiver | カスタマーサポート | [hiverhq.com](https://hiverhq.com) | ✅ (200)
+| 165 | ECbeing | EC | [ecbeing.net](https://www.ecbeing.net) | ✅ (200)
+| 166 | FutureShop | EC | [future-shop.jp](https://www.future-shop.jp) | ✅ (200)
+| 167 | Edy | 決済 | [edy.co.jp](https://www.edy.co.jp) | ✅ (200)
+| 168 | Muumuu Domain | Cloud | [muumuu-domain.com](https://muumuu-domain.com) | ✅ (200)
+| 169 | Interlink | Cloud | [interlink.or.jp](https://www.interlink.or.jp) | ✅ (200)
+| 170 | CPI Ace | Cloud | [cpi.ad.jp](https://www.cpi.ad.jp) | ✅ (200)
+| 171 | tsukaeru Cloud | Cloud | [tsukaeru.net](https://tsukaeru.net) | ✅ (200)
+| 172 | Airシフト | 勤怠管理 | [airshift.jp](https://airshift.jp) | ✅ (200)
+| 173 | Amazon Pay | 決済 | [pay.amazon.co.jp](https://pay.amazon.co.jp/jp) | ✅ (200)
+| 174 | BASE | EC | [thebase.in](https://thebase.in) | ✅ (200)
+| 175 | Coconala | 人材管理 | [coconala.com](https://coconala.com) | ✅ (200)
+| 176 | CrowdWorks | 人材管理 | [crowdworks.jp](https://crowdworks.jp) | ✅ (200)
+| 177 | LINE Pay | 決済 | [pay.line.me](https://pay.line.me) | ✅ (200)
+| 178 | Lancers | 人材管理 | [www.lancers.jp](https://www.lancers.jp) | ✅ (200)
+| 179 | au PAY Market | EC | [paypay.ne.jp](https://paypay.ne.jp) | ✅ (200)
+| 180 | クラウドサイン | Document | [cloudsign.jp](https://cloudsign.jp) | ✅ (200)
+| 181 | ソラコム | Cloud | [soracom.jp](https://soracom.jp) | ✅ (200)
+| 182 | ニフクラ | Cloud | [pfs.nifcloud.com](https://pfs.nifcloud.com) | ✅ (200)
+| 183 | メルペイ | 決済 | [mpay.jp](https://mpay.jp) | ✅ (200)
+| 184 | 弥生会計 | 会計 | [www.yayoi-kk.co.jp](https://www.yayoi-kk.co.jp) | ✅ (200)
+| 185 | Kando | カスタマーサクセス | [kando.io](https://kando.io) | ✅ (200)
+| 186 | Reps | カスタマーサクセス | [reps.co.jp](https://reps.co.jp) | ✅ (200)
+| 187 | LegalForce | 法務 | [legalforce.co.jp](https://legalforce.co.jp) | ✅ (200)
+| 188 | SocialDog | Social Media | [social-dog.net](https://social-dog.net) | ✅ (200)
+| 189 | Scrapbox | Document | [scrapbox.io](https://scrapbox.io) | ✅ (200)
+| 190 | V-Cube | Communication | [v-cube.com](https://v-cube.com) | ⚠️ (403)
+| 191 | MotionBoard | Analytics | [motionboard.jp](https://motionboard.jp) | ✅ (200)
+| 192 | Autify | QA/Testing | [autify.com](https://autify.com) | ✅ (200)
+| 193 | Joyz | 人材管理 | [joyz.jp](https://joyz.jp) | ✅ (200)
+| 194 | Belong | 人材管理 | [belong.jp](https://belong.jp) | ✅ (200)
+| 195 | Pleasanter | Database | [pleasanter.org](https://pleasanter.org) | ✅ (200)
+| 196 | HRBrain | 人材管理 | [hrbrain.co.jp](https://hrbrain.co.jp) | ✅ (200)
+| 197 | Kaonavi | タレントマネジメント | [kaonavi.jp](https://kaonavi.jp) | ✅ (200)
+| 198 | Talentbox | タレントマネジメント | [talentbox.co.jp](https://talentbox.co.jp) | ✅ (200)
+| 199 | StaffStart | 人材管理 | [staff-start.com](https://staff-start.com) | ✅ (200)
+| 200 | Autobiz | RPA | [autobiz.jp](https://autobiz.jp) | ✅ (200)
+| 201 | HRMOS | 人材管理 | [hrmos.co](https://hrmos.co) | ✅ (200)
+| 202 | タレントパレット | 人材管理 | [pa-consul.co.jp](https://www.pa-consul.co.jp) | ✅ (200)
+| 203 | クエステトラ | Project Management | [questetra.com](https://questetra.com) | ✅ (200)
+| 204 | 楽々勤怠 | 勤怠管理 | [rakurakukintai.jp](https://www.rakurakukintai.jp) | ✅ (200)
+| 205 | One人事 | 人材管理 | [onehr.jp](https://onehr.jp) | ✅ (200)
+| 206 | オフィスステーション | 人材管理 | [officestation.jp](https://www.officestation.jp) | ✅ (200)
+| 207 | クラウドハウス労務 | 人材管理 | [cloud-house.com](https://jp.cloud-house.com) | ✅ (200)
+| 208 | Factory-ONE | 製造 | [ex-smart.co.jp](https://www.ex-smart.co.jp/factoryone/) | ⏱️ (timeout)
+| 209 | UM SaaS Cloud | 製造 | [umsaascloud.jp](https://www.umsaascloud.jp) | ✅ (200)
+| 210 | o9ソリューションズ | 製造 | [o9solutions.com](https://o9solutions.com) | ✅ (200)
+| 211 | sonar ATS | 採用管理 | [sonar-ats.jp](https://sonar-ats.jp) | ✅ (200)
+| 212 | invox | 会計 | [invox.jp](https://www.invox.jp) | ✅ (200)
+| 213 | バクラク | 経費精算 | [bakuraku.jp](https://bakuraku.jp) | ✅ (200)
+| 214 | 会計王 | 会計 | [sorimachi.co.jp](https://sorimachi.co.jp) | ✅ (200)
+| 215 | ROBOT PAYMENT | 決済 | [robotpayment.co.jp](https://www.robotpayment.co.jp) | ✅ (200)
+| 216 | TripleW | QA/Testing | [triplew.co.jp](https://triplew.co.jp) | ✅ (200)
+| 217 | MagicPod | QA/Testing | [magicpod.com](https://www.magicpod.com) | ✅ (200)
+| 218 | Phosphor | QA/Testing | [phosphor.jp](https://www.phosphor.jp) | ✅ (200)
+| 219 | Quip | Documentation | [quip.com](https://quip.com) | ⚠️ (403)
+| 220 | Coda | Documentation | [coda.io](https://coda.io) | ✅ (200)
+| 221 | Nuclino | Documentation | [nuclino.com](https://nuclino.com) | ✅ (200)
+| 222 | XWiki | Documentation | [xwiki.org](https://www.xwiki.org) | ✅ (200)
+| 223 | MediaWiki | Documentation | [mediawiki.org](https://www.mediawiki.org) | ✅ (200)
+| 224 | Heroku | Cloud | [heroku.com](https://www.heroku.com) | ✅ (200)
+| 225 | Vercel | Cloud | [vercel.com](https://www.vercel.com) | ✅ (200)
+| 226 | Netlify | Cloud | [netlify.com](https://www.netlify.com) | ✅ (200)
+| 227 | Alibaba Cloud | Cloud | [alibabacloud.com](https://www.alibabacloud.com) | ✅ (200)
+| 228 | スマートPOS | POS | [smart-pos.jp](https://www.smart-pos.jp) | ⏱️ (timeout)
+| 229 | POSible Cloud | POS | [posible.nttdata.com](https://posible.nttdata.com) | ⏱️ (timeout)
+| 230 | 楽天スマートPOS | POS | [pos.rakuten.co.jp](https://pos.rakuten.co.jp) | ⏱️ (timeout)
+| 231 | GMOクラウドPOS | POS | [gmo-keiei.jp](https://www.gmo-keiei.jp) | ⏱️ (timeout)
+| 232 | UiPath Japan | RPA | [uipath.com/ja](https://www.uipath.com/ja) | ✅ (200)
+| 233 | WinActor | RPA | [winactor.jp](https://winactor.jp) | ✅ (200)
+| 234 | BizRobo! | RPA | [bizrobo.jp](https://bizrobo.jp) | ⏱️ (timeout)
+| 235 | LegalOn | 法務 | [legalon.co.jp](https://legalon.co.jp) | ⏱️ (timeout)
+| 236 | Amino | 法務 | [amino.sh](https://amino.sh) | ⏱️ (timeout)
+| 237 | 経費革命 | 経費精算 | [keihikakumei.jp](https://keihikakumei.jp) | ⏱️ (timeout)
+| 238 | Expensify Japan | 経費精算 | [expensify.com](https://www.expensify.com) | ✅ (200)
+| 239 | Seek Cloud | 採用管理 | [seek-seeker.jp](https://seek-seeker.jp) | ⏱️ (timeout)
+| 240 | Learning Securities | タレントマネジメント | [learnings.co.jp](https://learnings.co.jp) | ✅ (200)
+| 241 | SMAX Media | Social Media | [smaxmedia.co.jp](https://smaxmedia.co.jp) | ⏱️ (timeout)
+| 242 | Lancers Social | Social Media | [lancers.jp](https://www.lancers.jp) | ✅ (200)
+| 243 | Mineta | Translation | [mineta.jp](https://mineta.jp) | ⏱️ (timeout)
+| 244 | T-4 Translation | Translation | [t4inc.jp](https://www.t4inc.jp) | ⏱️ (timeout)
+| 245 | SignTime | Document | [signtime.jp](https://signtime.jp) | ✅ (200)
+| 246 | DocuSign Japan | Document | [docusign.com/ja](https://www.docusign.com/ja) | ❌ (404)
+| 247 | GyroSign | Document | [gyrosign.co.jp](https://gyrosign.co.jp) | ⏱️ (timeout)
+| 248 | e-saifu | Document | [e-saifu.co.jp](https://www.e-saifu.co.jp) | ⏱️ (timeout)
+| 249 | TalentBoard | タレントマネジメント | [talentboard.jp](https://talentboard.jp) | ⏱️ (timeout)
+| 250 | HR Tech | タレントマネジメント | [hr-tech.co.jp](https://hr-tech.co.jp) | ⏱️ (timeout)
+| 251 | Selenium Cloud | QA/Testing | [selenium.dev](https://www.selenium.dev) | ✅ (200)
+| 252 | TestBench | QA/Testing | [testbench.jp](https://testbench.jp) | ⏱️ (timeout)
+| 253 | リブレ | POS | [librepos.co.jp](https://librepos.co.jp) | ⏱️ (timeout)
+| 254 | NISSHAクラウドPOS | POS | [nissha.co.jp](https://www.nissha.co.jp) | ⏱️ (timeout)
+| 255 | カメカメPOS | POS | [kamekame.biz](https://kamekame.biz) | ✅ (200)
+| 256 | セブンPOS | POS | [sevenpos.jp](https://sevenpos.jp) | ⏱️ (timeout)
+| 257 | SmartSign | Document | [smartsign.jp](https://smartsign.jp) | ⏱️ (timeout)
+| 258 | BizReach | 採用管理 | [bizreach.jp](https://bizreach.jp) | ✅ (200)
+| 259 | LINE WORKS | コラボレーション | [line.works](https://line.works) | ⏱️ (timeout)
+| 260 | Talknote | コラボレーション | [talknote.com](https://talknote.com) | ✅ (200)
+| 261 | SmartNews | Marketing | [smartnews.com](https://smartnews.com) | ✅ (200)
+| 262 | Gunosy | Content | [gunosy.com](https://gunosy.com) | ✅ (200)
+| 263 | KDDI Cloud | Cloud | [cloud.kddi.com](https://cloud.kddi.com) | ⏱️ (timeout)
+| 264 | OCN Cloud | Cloud | [cloud.ocn.ne.jp](https://cloud.ocn.ne.jp) | ⏱️ (timeout)
+| 265 | Biglobe Cloud | Cloud | [cloud.biglobe.ne.jp](https://cloud.biglobe.ne.jp) | ⏱️ (timeout)
+| 266 | So-net Cloud | Cloud | [cloud.sonet.ne.jp](https://cloud.sonet.ne.jp) | ⏱️ (timeout)
+| 267 | CyberOffice | コラボレーション | [cyberoffice.jp](https://cyberoffice.jp) | ⏱️ (timeout)
+| 268 | RMO | 人材管理 | [rmo.co.jp](https://rmo.co.jp) | ⏱️ (timeout)
+| 269 | Skrue | Document | [skrue.jp](https://skrue.jp) | ⏱️ (timeout)
+| 270 | ContractHub | Document | [contract-hub.com](https://contract-hub.com) | ⏱️ (timeout)
+| 271 | Backblaze | Storage | [backblaze.com](https://backblaze.com) | ✅ (200)
+| 272 | AIアシスタント | AI | [ai-assistant.jp](https://ai-assistant.jp) | ✅ (200)
+| 273 | ChatGPT Japan | AI | [chatgpt-japan.com](https://chatgpt-japan.com) | ⚠️ (403)
+| 274 | Notion Japan | コラボレーション | [notion.so/ja](https://notion.so/ja) | ✅ (200)
+| 275 | Figma Japan | Design | [figma.com/ja](https://figma.com/ja) | ✅ (200)
+| 276 | Atlassian Japan | Project Management | [atlassian.com/ja](https://atlassian.com/ja) | ✅ (200)
+| 277 | Medley | 医療 | [medley.jp](https://www.medley.jp) | ✅ (200)
+| 278 | Carenet | 医療 | [carenet.com](https://www.carenet.com) | ✅ (200)
+| 279 | Glide | 医療 | [glinc.co.jp](https://www.glinc.co.jp) | ⏱️ (timeout)
+| 280 | Fujitsu Healthcare Cloud | 医療 | [fujitsu.com/jp](https://www.fujitsu.com/jp) | ✅ (200)
+| 281 | SAP Concur | 経費精算 | [concur.co.jp](https://www.concur.co.jp) | ✅ (200)
+| 282 | Dynamics 365 | ERP | [microsoft.com/ja-jp/dynamics365](https://www.microsoft.com/ja-jp/dynamics365) | ⏱️ (timeout)
+| 283 | Freshworks | CRM | [freshworks.com/ja](https://www.freshworks.com/ja) | ✅ (200)
+| 284 | RingCentral | Communication | [ringcentral.com/ja](https://www.ringcentral.com/ja) | ❌ (404)
+| 285 | Twilio | Communication | [twilio.com/ja](https://www.twilio.com/ja) | ✅ (200)
+| 286 | SendGrid | Email | [sendgrid.com/ja](https://www.sendgrid.com/ja) | ❌ (404)
+| 287 | Xero Japan | 会計 | [xero.com/jp](https://www.xero.com/jp) | ❌ (404)
+| 288 | QuickBooks Online | 会計 | [quickbooks.ja.intuit.com](https://quickbooks.ja.intuit.com) | ⏱️ (timeout)
+| 289 | SAS | Analytics | [sas.com/ja_jp](https://www.sas.com/ja_jp) | ✅ (200)
+| 290 | Splunk | Analytics | [splunk.com/ja-jp](https://www.splunk.com/ja-jp) | ❌ (404)
+| 291 | Freshservice | IT Service | [freshservice.com/ja](https://www.freshservice.com/ja) | ✅ (200)
+| 292 | Jira Service Management | カスタマーサポート | [atlassian.com/ja/software/jira/service-management](https://www.atlassian.com/ja/software/jira/service-management) | ✅ (200)
+| 293 | Mattermost | コラボレーション | [mattermost.com/ja](https://www.mattermost.com/ja) | ❌ (404)
+| 294 | Rocket.Chat | コラボレーション | [rocket.chat/ja](https://www.rocket.chat/ja) | ❌ (404)
+| 295 | Cybozu Garoon | コラボレーション | [cybozu.com/jp/product/garoon](https://cybozu.com/jp/product/garoon) | ✅ (200)
+| 296 | LAPRAS | 採用管理 | [lapras.com](https://lapras.com) | ✅ (200)
+| 297 | People Cloud | タレントマネジメント | [people-cloud.jp](https://people-cloud.jp) | ✅ (200)
+| 298 | Howdy | 人材管理 | [howdy.co.jp](https://howdy.co.jp) | ✅ (200)
+| 299 | Safie | IoT/Cloud | [safie.jp](https://safie.jp) | ✅ (200)
+| 300 | Spacemarket | オフィス | [spacemarket.com](https://spacemarket.com) | ✅ (200)
+| 301 | RaaS | 採用管理 | [raas.co.jp](https://raas.co.jp) | ⏱️ (timeout)
+| 302 | Mieruca | カスタマーサクセス | [mieruca.com](https://mieruca.com) | ⏱️ (timeout)
+| 303 | BrainPad | Analytics | [brainpad.co.jp](https://brainpad.co.jp) | ✅ (200)
+| 304 | DataSign | AI/Marketing | [datasign.co.jp](https://datasign.co.jp) | ⏱️ (timeout)
+| 305 | Loco | Marketing | [loco-guide.jp](https://loco-guide.jp) | ⏱️ (timeout)
 
 
 ---
@@ -314,4 +314,4 @@
 **Total**: 305 services
 
 ---
-**Last updated**: 2026-02-25
+**Last updated**: 2026-02-25 18:30 (Asia/Tokyo)
