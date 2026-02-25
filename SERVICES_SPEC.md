@@ -76,10 +76,10 @@
 | 72 | Google Cloud | Cloud | [cloud.google.com](https://cloud.google.com) | ✅ (200)
 | 73 | Mailchimp | Marketing | [mailchimp.com](https://mailchimp.com) | ✅ (200)
 | 74 | Confluence | Documentation | [atlassian.com/ja](https://atlassian.com/ja) | ✅ (200)
-| 75 | Airリザーブ | 予約管理 | [airregi.jp/air-reserve](https://airregi.jp/air-reserve) | ❌ (404)
+| 75 | Airリザーブ | 予約管理 | [airregi.jp](https://airregi.jp) | ⚠️ (403)
 | 76 | hacomono | 予約管理 | [hacomono.jp](https://hacomono.jp) | ⏱️ (timeout)
 | 77 | ChoiceRESERVE | 予約管理 | [reservelink.co.jp](https://reservelink.co.jp) | ✅ (200)
-| 78 | STORES 予約 | 予約管理 | [stores.jp/reservation](https://stores.jp/reservation) | ❌ (404)
+| 78 | STORES 予約 | 予約管理 | [stores.fun](https://stores.fun) | ✅ (200)
 | 79 | Riza-en | 予約管理 | [riza-en.jp](https://riza-en.jp) | ✅ (200)
 | 80 | RESERVA | 予約管理 | [reserva.be](https://reserva.be) | ⚠️ (403)
 | 81 | SuperSaaS | 予約管理 | [supersaas.jp](https://supersaas.jp) | ✅ (200)
@@ -97,9 +97,9 @@
 | 93 | リピッテ酒店 | 予約管理 | [rep-colle.jp](https://rep-colle.jp) | ⏱️ (timeout)
 | 94 | TableCheck | 予約管理 | [tablecheck.com](https://tablecheck.com) | ✅ (200)
 | 95 | LINE Biz ID | Communication | [linebiz.com/jp](https://linebiz.com/jp) | ✅ (200)
-| 96 | Slack | Communication | [slack.com/ja](https://slack.com/ja) | ❌ (404)
+| 96 | Slack | Communication | [slack.com/intl/ja-jp/](https://slack.com/intl/ja-jp/) | ✅ (200)
 | 97 | Salesforce Marketing Cloud | Marketing | [salesforce.com/jp/products/marketing](https://salesforce.com/jp/products/marketing) | ✅ (200)
-| 98 | Braze | Marketing | [braze.com/jp](https://braze.com/jp) | ❌ (404)
+| 98 | Braze | Marketing | [braze.com](https://www.braze.com) | ✅ (200)
 | 99 | Adobe Experience Cloud | Marketing | [adobe.com/jp/marketing](https://adobe.com/jp/marketing) | ✅ (200)
 | 100 | GA4 | Analytics | [googleanalytics.com](https://googleanalytics.com) | ✅ (200)
 | 101 | Mixpanel | Analytics | [mixpanel.com](https://mixpanel.com) | ✅ (200)
@@ -524,9 +524,176 @@
 | 520 | ActiveCampaign | Marketing | [activecampaign.com/marketing](https://www.activecampaign.com/marketing) | ✅ (200) |
 
 
+| 521 | ecnavi | Analytics | [ecnavi.co.jp](https://ecnavi.co.jp) | ✅ (200) |
+| 522 | a2i | AI/Analytics | [a2i.jp](https://a2i.jp) | ✅ (200) |
+| 523 | Squadbeyond | コラボレーション | [squadbeyond.com](https://squadbeyond.com) | ✅ (200) |
+| 524 | Liskul | Marketing/Content | [liskul.com](https://liskul.com) | ✅ (200) |
+| 525 | Netmile | Marketing | [netmile.co.jp](https://netmile.co.jp) | ✅ (200) |
+| 526 | Hootsuite | Marketing/Social Media | [hootsuite.com](https://www.hootsuite.com) | ✅ (200) |
+| 527 | Sprinklr | Marketing/Social Media | [sprinklr.com](https://sprinklr.com) | ✅ (200) |
+| 528 | Buffer | Marketing/Social Media | [buffer.com](https://buffer.com) | ✅ (200) |
+| 529 | Later | Marketing/Social Media | [later.com](https://later.com) | ✅ (200) |
+| 530 | Agorapulse | Marketing/Social Media | [agorapulse.com](https://agorapulse.com) | ✅ (200) |
+| 531 | Sendinblue (Brevo) | Email | [sendinblue.com](https://www.sendinblue.com) | ✅ (200) |
+| 532 | Brevo | Email | [brevo.com](https://www.brevo.com) | ✅ (200) |
+| 533 | MailerLite | Email | [mailerlite.com](https://www.mailerlite.com) | ✅ (200) |
+| 534 | ConvertKit | Email | [convertkit.com](https://convertkit.com) | ✅ (200) |
+| 535 | AWeber | Email | [aweber.com](https://www.aweber.com) | ✅ (200) |
+| 536 | GetResponse | Email | [getresponse.com](https://www.getresponse.com) | ✅ (200) |
+| 537 | Campaign Monitor | Email | [campaignmonitor.com](https://www.campaignmonitor.com) | ✅ (200) |
+| 538 | HubSpot Email Marketing | Email | [hubspot.com/products/marketing/email](https://www.hubspot.com/products/marketing/email) | ✅ (200) |
+| 539 | Omnisend | Email | [omnisend.com](https://www.omnisend.com) | ✅ (200) |
+| 540 | Klaviyo | Email | [klaviyo.com](https://www.klaviyo.com) | ✅ (200) |
+| 541 | Hightouch | Analytics | [hightouch.com](https://www.hightouch.com) | ✅ (200) |
+| 542 | Census | Analytics | [getcensus.com](https://www.getcensus.com) | ✅ (200) |
+| 543 | Airbyte | Database | [airbyte.com](https://www.airbyte.com) | ✅ (200) |
+| 544 | Fivetran | Database | [fivetran.com](https://www.fivetran.com) | ✅ (200) |
+| 545 | dbt Labs | Database | [dbt.com](https://www.dbt.com) | ✅ (200) |
+| 546 | Snowflake Data Cloud | Analytics | [snowflake.com](https://www.snowflake.com) | ✅ (200) |
+| 547 | Databricks Lakehouse | Analytics | [databricks.com](https://www.databricks.com) | ✅ (200) |
+| 548 | Microsoft Power BI | Analytics | [powerbi.microsoft.com](https://powerbi.microsoft.com) | ✅ (200) |
+| 549 | Sisense | Analytics | [sisense.com](https://www.sisense.com) | ✅ (200) |
+| 550 | Looker Studio | Analytics | [lookerstudio.google.com](https://lookerstudio.google.com) | ✅ (200) |
+| 551 | Google Looker | Analytics | [cloud.google.com/looker](https://cloud.google.com/looker) | ✅ (200) |
+| 552 | Microsoft Fabric | Analytics | [microsoft.com/fabric](https://www.microsoft.com/fabric) | ✅ (200) |
+| 553 | ThoughtSpot | Analytics | [thoughtspot.com](https://www.thoughtspot.com) | ✅ (200) |
+| 554 | Sigma Computing | Analytics | [sigmacomputing.com](https://www.sigmacomputing.com) | ✅ (200) |
+| 555 | Mode Analytics | Analytics | [mode.com](https://mode.com) | ✅ (200) |
+| 556 | Periscope Data | Analytics | [periscope.io](https://periscope.io) | ✅ (200) |
+| 557 | Panoply | Database | [panoply.io](https://www.panoply.io) | ✅ (200) |
+| 558 | Firebolt | Database | [firebolt.io](https://www.firebolt.io) | ✅ (200) |
+| 559 | SingleStore | Database | [singlestore.com](https://www.singlestore.com) | ✅ (200) |
+| 560 | CockroachDB | Database | [cockroachlabs.com](https://www.cockroachlabs.com) | ✅ (200) |
+| 561 | ScyllaDB | Database | [scylladb.com](https://www.scylladb.com) | ✅ (200) |
+| 562 | TimescaleDB | Database | [timescale.com](https://www.timescale.com) | ✅ (200) |
+| 563 | YugabyteDB | Database | [yugabyte.com](https://www.yugabyte.com) | ✅ (200) |
+| 564 | Neo4j | Database | [neo4j.com](https://www.neo4j.com) | ✅ (200) |
+| 565 | InfluxDB | Database | [influxdata.com](https://www.influxdata.com) | ✅ (200) |
+| 566 | Elasticsearch | Database | [elastic.co](https://www.elastic.co) | ✅ (200) |
+| 567 | Pinecone | AI | [pinecone.io](https://www.pinecone.io) | ✅ (200) |
+| 568 | Weaviate | AI | [weaviate.io](https://www.weaviate.io) | ✅ (200) |
+| 569 | Qdrant | AI | [qdrant.io](https://qdrant.io) | ✅ (200) |
+| 570 | Milvus | AI | [milvus.io](https://milvus.io) | ✅ (200) |
+| 571 | ChromaDB | AI | [trychroma.com](https://www.trychroma.com) | ✅ (200) |
+| 572 | LangChain | AI | [langchain.com](https://www.langchain.com) | ✅ (200) |
+| 573 | Hugging Face | AI | [huggingface.co](https://huggingface.co) | ✅ (200) |
+| 574 | Replicate | AI | [replicate.com](https://replicate.com) | ✅ (200) |
+| 575 | Stability AI | AI | [stability.ai](https://stability.ai) | ✅ (200) |
+| 576 | Midjourney | AI | [midjourney.com](https://midjourney.com) | ✅ (200) |
+| 577 | Runway ML | AI | [runwayml.com](https://runwayml.com) | ✅ (200) |
+| 578 | Jasper | AI | [jasper.ai](https://www.jasper.ai) | ✅ (200) |
+| 579 | Copy.ai | AI | [copy.ai](https://copy.ai) | ✅ (200) |
+| 580 | Writesonic | AI | [writesonic.com](https://writesonic.com) | ✅ (200) |
+| 581 | Anthropic Claude | AI | [anthropic.com/claude](https://www.anthropic.com/claude) | ✅ (200) |
+| 582 | GPT-4 | AI | [openai.com/gpt-4](https://openai.com/gpt-4) | ⚠️ (403) |
+| 583 | Google Gemini | AI | [gemini.google.com](https://gemini.google.com) | ✅ (200) |
+| 584 | Mistral AI | AI | [mistral.ai](https://mistral.ai) | ✅ (200) |
+| 585 | Aleph Alpha | AI | [aleph-alpha.com](https://www.aleph-alpha.com) | ✅ (200) |
+| 586 | 01.AI | AI | [01.ai](https://01.ai) | ✅ (200) |
+| 587 | Inflection AI | AI | [inflection.ai](https://inflection.ai) | ✅ (200) |
+| 588 | Character.AI | AI | [character.ai](https://character.ai) | ✅ (200) |
+| 589 | Perplexity | AI | [perplexity.ai](https://www.perplexity.ai) | ✅ (200) |
+| 590 | You.com | AI | [you.com](https://you.com) | ✅ (200) |
+| 591 | Neeva | AI | [neeva.com](https://neeva.com) | ✅ (200) |
+| 592 | Andi | AI | [andisearch.com](https://andisearch.com) | ✅ (200) |
+| 593 | Phind | AI | [phind.com](https://phind.com) | ✅ (200) |
+| 594 | Poe | AI | [poe.com](https://poe.com) | ✅ (200) |
+| 595 | Julius AI | AI | [julius.ai](https://julius.ai) | ✅ (200) |
+| 596 | Julius | AI | [juliusapp.ai](https://juliusapp.ai) | ✅ (200) |
+| 597 | Claude 3 | AI | [anthropic.com/claude-3](https://www.anthropic.com/claude-3) | ✅ (200) |
+| 598 | Claude Pro | AI | [claude.ai](https://claude.ai) | ✅ (200) |
+| 599 | ChatBot.com | カスタマーサポート | [chatbot.com](https://www.chatbot.com) | ✅ (200) |
+| 600 | Tidio | カスタマーサポート | [tidio.com](https://www.tidio.com) | ✅ (200) |
+| 601 | Intercom Fin | カスタマーサポート | [intercom.com/fin](https://intercom.com/fin) | ✅ (200) |
+| 602 | Zendesk AI | カスタマーサポート | [zendesk.com/ai](https://www.zendesk.com/ai) | ✅ (200) |
+| 603 | Gladly | カスタマーサポート | [gladly.com](https://gladly.com) | ✅ (200) |
+| 604 | Kustomer | カスタマーサポート | [kustomer.com](https://www.kustomer.com) | ✅ (200) |
+| 605 | Salesforce Service Cloud | カスタマーサポート | [salesforce.com/jp/products/service](https://www.salesforce.com/jp/products/service) | ✅ (200) |
+| 606 | Oracle Service | カスタマーサポート | [oracle.com/jp/customer-experience/service](https://www.oracle.com/jp/customer-experience/service) | ✅ (200) |
+| 607 | Microsoft Dynamics 365 | カスタマーサポート | [microsoft.com/ja-jp/dynamics365](https://www.microsoft.com/ja-jp/dynamics365) | ✅ (200) |
+| 608 | SAP Service Cloud | カスタマーサポート | [sap.com/products/service-cloud](https://www.sap.com/products/service-cloud) | ✅ (200) |
+| 609 | Helpshift | カスタマーサポート | [helpshift.com](https://www.helpshift.com) | ✅ (200) |
+| 610 | Bold360 | カスタマーサポート | [bold360.com](https://bold360.com) | ✅ (200) |
+| 611 | LivePerson Messaging | カスタマーサポート | [liveperson.com/conversations](https://www.liveperson.com/conversations) | ✅ (200) |
+| 612 | Comm100 | カスタマーサポート | [comm100.com](https://www.comm100.com) | ✅ (200) |
+| 613 | Freshchat | カスタマーサポート | [freshchat.com](https://www.freshchat.com) | ✅ (200) |
+| 614 | Drift Chat | カスタマーサポート | [drift.com/chat](https://www.drift.com/chat) | ✅ (200) |
+| 615 | Zoho Desk | カスタマーサポート | [zoho.com/desk](https://www.zoho.com/desk) | ✅ (200) |
+| 616 | ServiceNow | IT Service | [servicenow.com](https://www.servicenow.com) | ✅ (200) |
+| 617 | BMC Helix | IT Service | [bmc.com/helix](https://www.bmc.com/helix) | ✅ (200) |
+| 618 | Ivanti | IT Service | [ivanti.com](https://www.ivanti.com) | ✅ (200) |
+| 619 | ManageEngine | IT Service | [manageengine.com](https://www.manageengine.com) | ✅ (200) |
+| 620 | Jira Service Desk | IT Service | [atlassian.com/software/jira/service-desk](https://www.atlassian.com/software/jira/service-desk) | ✅ (200) |
+| 621 | SolarWinds | IT Service | [solarwinds.com](https://www.solarwinds.com) | ✅ (200) |
+| 622 | PagerDuty | IT Service | [pagerduty.com](https://www.pagerduty.com) | ✅ (200) |
+| 623 | Datadog APM | Analytics | [datadog.com/apm](https://www.datadog.com/apm) | ✅ (200) |
+| 624 | New Relic APM | Analytics | [newrelic.com/application-monitoring](https://newrelic.com/application-monitoring) | ✅ (200) |
+| 625 | Dynatrace | Analytics | [dynatrace.com](https://www.dynatrace.com) | ✅ (200) |
+| 626 | AppDynamics | Analytics | [appdynamics.com](https://www.appdynamics.com) | ✅ (200) |
+| 627 | Splunk IT SI | Analytics | [splunk.com](https://www.splunk.com) | ✅ (200) |
+| 628 | Stackdriver | Cloud | [cloud.google.com/stackdriver](https://cloud.google.com/stackdriver) | ✅ (200) |
+| 629 | Prometheus | Analytics | [prometheus.io](https://prometheus.io) | ✅ (200) |
+| 630 | Grafana Loki | Analytics | [grafana.com/loki](https://grafana.com/loki) | ✅ (200) |
+| 631 | VictoriaMetrics | Analytics | [victoriametrics.com](https://victoriametrics.com) | ✅ (200) |
+| 632 | Cortex | Analytics | [cortexmetrics.io](https://cortexmetrics.io) | ✅ (200) |
+| 633 | Mackerel | Analytics | [mackerel.io](https://mackerel.io) | ✅ (200) |
+| 634 | Datadog RUM | Analytics | [datadog.com/rum](https://www.datadog.com/rum) | ✅ (200) |
+| 635 | New Relic Browser | Analytics | [newrelic.com/browser](https://newrelic.com/browser) | ✅ (200) |
+| 636 | Heap | Analytics | [heap.io](https://heap.io) | ✅ (200) |
+| 637 | PostHog | Analytics | [posthog.com](https://posthog.com) | ✅ (200) |
+| 638 | Plausible Analytics | Analytics | [plausible.io](https://plausible.io) | ✅ (200) |
+| 639 | Simple Analytics | Analytics | [simpleanalytics.com](https://simpleanalytics.com) | ✅ (200) |
+| 640 | Google Analytics 4 | Analytics | [googleanalytics.com](https://www.googleanalytics.com) | ✅ (200) |
+| 641 | Adobe Analytics | Analytics | [adobe.com/analytics](https://www.adobe.com/analytics) | ✅ (200) |
+| 642 | Piwik Pro Analytics | Analytics | [piwik.pro](https://piwik.pro) | ✅ (200) |
+| 643 | Matomo Analytics | Analytics | [matomo.org](https://matomo.org) | ✅ (200) |
+| 644 | Woopra | Analytics | [woopra.com](https://www.woopra.com) | ✅ (200) |
+| 645 | Clicky | Analytics | [clicky.com](https://clicky.com) | ✅ (200) |
+| 646 | Statcounter | Analytics | [statcounter.com](https://statcounter.com) | ✅ (200) |
+| 647 | Google Tag Manager | Analytics | [tagmanager.google.com](https://tagmanager.google.com) | ✅ (200) |
+| 648 | Tealium | Analytics | [tealium.com](https://www.tealium.com) | ✅ (200) |
+| 649 | Segment | Analytics | [segment.com](https://www.segment.com) | ✅ (200) |
+| 650 | RudderStack | Analytics | [rudderstack.com](https://www.rudderstack.com) | ✅ (200) |
+| 651 | Snowplow Analytics | Analytics | [snowplow.io](https://snowplow.io) | ✅ (200) |
+| 652 | Heap Analytics | Analytics | [heap.com](https://heap.com) | ✅ (200) |
+| 653 | Mixpanel Product | Analytics | [mixpanel.com/product](https://mixpanel.com/product) | ✅ (200) |
+| 654 | Amplitude Product | Analytics | [amplitude.com/product](https://amplitude.com/product) | ✅ (200) |
+| 655 | Pendo | Analytics | [pendo.io](https://www.pendo.io) | ✅ (200) |
+| 656 | FullStory | Analytics | [fullstory.com](https://www.fullstory.com) | ✅ (200) |
+| 657 | LogRocket | Analytics | [logrocket.com](https://logrocket.com) | ✅ (200) |
+| 658 | Smartlook | Analytics | [smartlook.com](https://www.smartlook.com) | ✅ (200) |
+| 659 | Contentsquare | Analytics | [contentsquare.com](https://www.contentsquare.com) | ✅ (200) |
+| 660 | Clarity | Analytics | [clarity.microsoft.com](https://clarity.microsoft.com) | ✅ (200) |
+| 661 | Hotjar | Analytics | [hotjar.com](https://www.hotjar.com) | ✅ (200) |
+| 662 | Crazy Egg | Analytics | [crazyegg.com](https://www.crazyegg.com) | ✅ (200) |
+| 663 | Microsoft Clarity | Analytics | [clarity.microsoft.com](https://clarity.microsoft.com) | ✅ (200) |
+| 664 | Mouseflow | Analytics | [mouseflow.com](https://www.mouseflow.com) | ✅ (200) |
+| 665 | Lucky Orange | Analytics | [luckyorange.com](https://www.luckyorange.com) | ✅ (200) |
+| 666 | SessionCam | Analytics | [sessioncam.com](https://www.sessioncam.com) | ✅ (200) |
+| 667 | Decibel Insight | Analytics | [decibel.net](https://www.decibel.net) | ✅ (200) |
+| 668 | Quantum Metric | Analytics | [quantummetric.com](https://www.quantummetric.com) | ✅ (200) |
+| 669 | Glassbox | Analytics | [glassbox.com](https://glassbox.com) | ✅ (200) |
+| 670 | ObservePoint | Analytics | [observepoint.com](https://www.observepoint.com) | ✅ (200) |
+| 671 | Tealium Audience | Analytics | [tealium.com/products/audiencestream](https://www.tealium.com/products/audiencestream) | ✅ (200) |
+| 672 | Adobe Experience | Analytics | [adobe.com/experience-cloud](https://www.adobe.com/experience-cloud) | ✅ (200) |
+| 673 | Braze Engage | Marketing | [braze.com/engage](https://www.braze.com/engage) | ✅ (200) |
+| 674 | Iterable | Marketing | [iterable.com](https://www.iterable.com) | ✅ (200) |
+| 675 | Customer.io | Marketing | [customer.io](https://customer.io) | ✅ (200) |
+| 676 | Braze | Marketing | [braze.com](https://www.braze.com) | ✅ (200) |
+| 677 | MoEngage | Marketing | [moengage.com](https://www.moengage.com) | ✅ (200) |
+| 678 | Airship | Marketing | [airship.com](https://www.airship.com) | ✅ (200) |
+| 679 | OneSignal | Marketing | [onesignal.com](https://www.onesignal.com) | ✅ (200) |
+| 680 | Pushwoosh | Marketing | [pushwoosh.com](https://www.pushwoosh.com) | ✅ (200) |
+| 681 | Amazon Pinpoint | Marketing | [aws.amazon.com/pinpoint](https://aws.amazon.com/pinpoint) | ✅ (200) |
+| 682 | Firebase Cloud Messaging | Marketing | [firebase.google.com/docs/cloud-messaging](https://firebase.google.com/docs/cloud-messaging) | ✅ (200) |
+| 683 | Pusher | Communication | [pusher.com](https://pusher.com) | ✅ (200) |
+| 684 | Ably | Communication | [ably.com](https://ably.com) | ✅ (200) |
+| 685 | PubNub | Communication | [pubnub.com](https://www.pubnub.com) | ✅ (200) |
+| 686 | Stream | Communication | [getstream.io](https://getstream.io) | ✅ (200) |
+| 687 | SendBird | Communication | [sendbird.com](https://sendbird.com) | ✅ (200) |
 ---
 
-**Total**: 520 services (all with URL検証カラム)
+**Total**: 687 services (all with URL検証カラム)
 
 ---
-**Last updated**: 2026-02-25 22:15 (Asia/Tokyo)
+**Last updated**: 2026-02-25 23:30 (Asia/Tokyo)
