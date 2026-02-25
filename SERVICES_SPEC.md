@@ -332,11 +332,65 @@
 | 328 | Sakura AI | AI | [sakura-ai.jp](https://sakura-ai.jp) | ✅ (200) |
 | 329 | NVIDIA AI | AI | [nvidia.com/ja-jp/ai](https://www.nvidia.com/ja-jp/ai) | ✅ (200) |
 | 330 | Nexway AI | AI | [nexway.com](https://nexway.com) | ✅ (200) |
+| 331 | Unipos | 人材管理 | [unipos.me](https://unipos.me) | ✅ (200) |
+| 332 | DIGGLE | 人材管理 | [diggle.jp](https://diggle.jp) | ✅ (200) |
+| 333 | Square | POS | [squareup.com](https://squareup.com) | ✅ (200) |
+| 334 | f-revo | POS | [f-revo.com](https://f-revo.com) | ✅ (200) |
+| 335 | Datalabs | Analytics | [datalabs.jp](https://datalabs.jp) | ✅ (200) |
+| 336 | Metabase | Analytics | [metabase.com](https://metabase.com) | ✅ (200) |
+| 337 | Redash | Analytics | [redash.io](https://redash.io) | ✅ (200) |
+| 338 | Superset | Analytics | [superset.apache.org](https://superset.apache.org) | ✅ (200) |
+| 339 | Grafana | Analytics | [grafana.com](https://grafana.com) | ✅ (200) |
+| 340 | New Relic | Analytics | [newrelic.com](https://newrelic.com) | ✅ (200) |
+| 341 | Datadog | Analytics | [datadoghq.com](https://datadoghq.com) | ✅ (200) |
+| 342 | Udemy | Education | [udemy.com](https://udemy.com) | ✅ (200) |
+| 343 | Coursera | Education | [coursera.org](https://coursera.org) | ✅ (200) |
+| 344 | edX | Education | [edx.org](https://edx.org) | ✅ (200) |
+| 345 | Wasabi | Storage | [wasabi.com](https://wasabi.com) | ✅ (200) |
+| 346 | Transifex | Translation | [transifex.com](https://transifex.com) | ✅ (200) |
+| 347 | POEditor | Translation | [poeditor.com](https://poeditor.com) | ✅ (200) |
+| 348 | J-Coin | 決済 | [j-coin.jp](https://j-coin.jp) | ✅ (200) |
+| 349 | Visa Japan | 決済 | [visa.co.jp](https://visa.co.jp) | ✅ (200) |
+| 350 | au.com | Payment | [au.com](https://au.com) | ✅ (200) |
+| 351 | Livedoor | Content | [livedoor.com](https://livedoor.com) | ✅ (200) |
+| 352 | LINE | Communication | [line.me](https://line.me) | ✅ (200) |
+| 353 | Cyma | 会計 | [cyma.co.jp](https://cyma.co.jp) | ✅ (200) |
+| 354 | IBM | Cloud | [ibm.com](https://ibm.com) | ✅ (200) |
+| 355 | Red Hat | Cloud | [redhat.com](https://redhat.com) | ✅ (200) |
+| 356 | VMware | Cloud | [vmware.com](https://vmware.com) | ✅ (200) |
+| 357 | Citrix | Cloud | [citrix.com](https://citrix.com) | ⚠️ (403) |
+| 358 | SAP | 製造 | [sap.com](https://www.sap.com) | ✅ (200) |
+| 359 | Oracle | 製造 | [oracle.com](https://www.oracle.com) | ✅ (200) |
+| 360 | Adobe Creative Cloud | Design | [adobe.com](https://www.adobe.com) | ✅ (200) |
+| 361 | Microsoft | コラボレーション | [microsoft.com](https://www.microsoft.com) | ✅ (200) |
+| 362 | Apple | Design | [apple.com](https://www.apple.com) | ✅ (200) |
+| 363 | Google Cloud | Cloud | [cloud.google.com](https://cloud.google.com) | ✅ (200) |
+| 364 | Facebook | Social Media | [facebook.com](https://www.facebook.com) | ✅ (200) |
+| 365 | Twitter | Social Media | [twitter.com](https://twitter.com) | ⚠️ (403) |
+| 366 | Instagram | Social Media | [instagram.com](https://www.instagram.com) | ✅ (200) |
+| 367 | LinkedIn | Social Media | [linkedin.com](https://www.linkedin.com) | ✅ (200) |
+| 368 | YouTube | Content | [youtube.com](https://www.youtube.com) | ✅ (200) |
+| 369 | Amazon Web Services | Cloud | [amazon.com](https://www.amazon.com) | ⚠️ (503) |
+| 370 | Tableau | Analytics | [tableau.com](https://www.tableau.com) | ✅ (200) |
+| 371 | Looker | Analytics | [looker.com](https://looker.com) | ✅ (200) |
+| 372 | Qlik | Analytics | [qlik.com](https://qlik.com) | ✅ (200) |
+| 373 | Domo | Analytics | [domo.com](https://domo.com) | ✅ (200) |
+| 374 | Snowflake | Analytics | [snowflake.com](https://snowflake.com) | ✅ (200) |
+| 375 | Databricks | Analytics | [databricks.com](https://databricks.com) | ✅ (200) |
+| 376 | Baidu | AI/Analytics | [baidu.com](https://www.baidu.com) | ✅ (200) |
+| 377 | Alibaba Cloud | Cloud | [alibaba.com](https://www.alibaba.com) | ✅ (200) |
+| 378 | Kango-roo | 医療 | [kango-roo.com](https://kango-roo.com) | ✅ (200) |
+| 379 | M3 | 医療 | [m3.com](https://m3.com) | ✅ (200) |
+| 380 | NuRoo | Communication | [nuro.com](https://nuro.com) | ✅ (200) |
+| 381 | KDDI | Cloud/Payment | [kddi.com](https://www.kddi.com) | ✅ (200) |
+| 382 | OCN | Cloud | [ocn.ne.jp](https://www.ocn.ne.jp) | ⚠️ (timeout) |
+| 383 | Biglobe | Cloud | [biglobe.ne.jp](https://www.biglobe.ne.jp) | ⚠️ (timeout) |
+| 384 | So-net | Cloud | [sonet.ne.jp](https://www.sonet.ne.jp) | ⚠️ (timeout) |
 
 
 ---
 
-**Total**: 330 services
+**Total**: 384 services (all with URL検証カラム)
 
 ---
-**Last updated**: 2026-02-25 19:00 (Asia/Tokyo)
+**Last updated**: 2026-02-25 20:40 (Asia/Tokyo)
