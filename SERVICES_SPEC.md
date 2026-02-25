@@ -1346,40 +1346,40 @@
 | 1345 | ReadKit | RSS/Content | [readkitapp.com](https://readkitapp.com) | ✅ (200) |
 | 1346 | SmartInbox | Email | [smartinbox.jp](https://smartinbox.jp) | ✅ (200) |
 
-| 1289 | Ubiregi | POS | [ubiregi.jp](https://ubiregi.jp) | ✅ (200) |
-| 1290 | EPOS | POS | [epos.co.jp](https://epos.co.jp) | ✅ (200) |
-| 1291 | Clover | POS | [clover.co.jp](https://clover.co.jp) | ✅ (200) |
-| 1292 | Lightspeed | POS | [lightspeedhq.com](https://www.lightspeedhq.com) | ✅ (200) |
-| 1293 | Toast | POS | [toasttab.com](https://toasttab.com) | ✅ (200) |
-| 1294 | Vend | POS | [vendhq.com](https://www.vendhq.com) | ✅ (200) |
-| 1295 | Heartland | POS | [heartland.us](https://www.heartland.us) | ✅ (200) |
-| 1296 | Square Dashboard | POS | [squareup.com](https://squareup.com/dashboard) | ✅ (200) |
-| 1297 | ShopKeep | POS | [shopkeep.com](https://www.shopkeep.com) | ✅ (200) |
-| 1298 | Revel | POS | [revelsystems.com](https://revelsystems.com) | ✅ (200) |
+| 1347 | Ubiregi | POS | [ubiregi.jp](https://ubiregi.jp) | ✅ (200) |
+| 1348 | EPOS | POS | [epos.co.jp](https://epos.co.jp) | ✅ (200) |
+| 1349 | Clover | POS | [clover.co.jp](https://clover.co.jp) | ✅ (200) |
+| 1350 | Lightspeed | POS | [lightspeedhq.com](https://www.lightspeedhq.com) | ✅ (200) |
+| 1351 | Toast | POS | [toasttab.com](https://toasttab.com) | ✅ (200) |
+| 1352 | Vend | POS | [vendhq.com](https://www.vendhq.com) | ✅ (200) |
+| 1353 | Heartland | POS | [heartland.us](https://www.heartland.us) | ✅ (200) |
+| 1354 | Square Dashboard | POS | [squareup.com](https://squareup.com/dashboard) | ✅ (200) |
+| 1355 | ShopKeep | POS | [shopkeep.com](https://www.shopkeep.com) | ✅ (200) |
+| 1356 | Revel | POS | [revelsystems.com](https://revelsystems.com) | ✅ (200) |
 
-| 1299 | BigCommerce | EC | [bigcommerce.com](https://www.bigcommerce.com) | ✅ (200) |
-| 1300 | Magento | EC | [magento.com](https://magento.com) | ⚠️ (403) |
-| 1301 | Squarespace | EC | [squarespace.com](https://squarespace.com) | ✅ (200) |
-| 1302 | Wix Stores | EC | [wix.com](https://wix.com/stores) | ✅ (200) |
-| 1303 | Volusion | EC | [volusion.com](https://www.volusion.com) | ✅ (200) |
-| 1304 | 3dcart | EC | [3dcart.com](https://www.3dcart.com) | ✅ (200) |
-| 1305 | CoreCommerce | EC | [corecommerce.com](https://www.corecommerce.com) | ✅ (200) |
+| 1357 | BigCommerce | EC | [bigcommerce.com](https://www.bigcommerce.com) | ✅ (200) |
+| 1358 | Magento | EC | [magento.com](https://magento.com) | ⚠️ (403) |
+| 1359 | Squarespace | EC | [squarespace.com](https://squarespace.com) | ✅ (200) |
+| 1360 | Wix Stores | EC | [wix.com](https://wix.com/stores) | ✅ (200) |
+| 1361 | Volusion | EC | [volusion.com](https://www.volusion.com) | ✅ (200) |
+| 1362 | 3dcart | EC | [3dcart.com](https://www.3dcart.com) | ✅ (200) |
+| 1363 | CoreCommerce | EC | [corecommerce.com](https://www.corecommerce.com) | ✅ (200) |
 
-| 1306 | BambooHR | 人材管理 | [bamboohr.com](https://www.bamboohr.com) | ✅ (200) |
-| 1307 | Namely | 人材管理 | [namely.com](https://www.namely.com) | ✅ (200) |
-| 1308 | HiBob | 人材管理 | [hibob.com](https://hibob.com) | ✅ (200) |
-| 1309 | Zenefits | 人材管理 | [zenefits.com](https://www.zenefits.com) | ✅ (200) |
-| 1310 | GoCo | 人材管理 | [goco.io](https://goco.io) | ✅ (200) |
-| 1311 | Lattice | 人材管理 | [lattice.com](https://lattice.com) | ✅ (200) |
-| 1312 | Culture Amp | 人材管理 | [cultureamp.com](https://www.cultureamp.com) | ✅ (200) |
-| 1313 | 15Five | 人材管理 | [15five.com](https://www.15five.com) | ✅ (200) |
-| 1314 | Peakon | 人材管理 | [peakon.com](https://www.peakon.com) | ⚠️ (403) |
-| 1315 | Reflektive | 人材管理 | [reflektive.com](https://www.reflektive.com) | ✅ (200) |
-| 1316 | Betterworks | 人材管理 | [betterworks.com](https://www.betterworks.com) | ✅ (200) |
-| 1317 | Workvivo | 人材管理 | [workvivo.com](https://www.workvivo.com) | ✅ (200) |
-| 1318 | Enboarder | 人材管理 | [enboarder.com](https://www.enboarder.com) | ✅ (200) |
-| 1319 | Lever | 人材管理 | [lever.co](https://www.lever.co) | ✅ (200) |
-| 1320 | Greenhouse | 人材管理 | [greenhouse.io](https://www.greenhouse.io) | ✅ (200) |
+| 1364 | BambooHR | 人材管理 | [bamboohr.com](https://www.bamboohr.com) | ✅ (200) |
+| 1365 | Namely | 人材管理 | [namely.com](https://www.namely.com) | ✅ (200) |
+| 1366 | HiBob | 人材管理 | [hibob.com](https://hibob.com) | ✅ (200) |
+| 1367 | Zenefits | 人材管理 | [zenefits.com](https://www.zenefits.com) | ✅ (200) |
+| 1368 | GoCo | 人材管理 | [goco.io](https://goco.io) | ✅ (200) |
+| 1369 | Lattice | 人材管理 | [lattice.com](https://lattice.com) | ✅ (200) |
+| 1370 | Culture Amp | 人材管理 | [cultureamp.com](https://www.cultureamp.com) | ✅ (200) |
+| 1371 | 15Five | 人材管理 | [15five.com](https://www.15five.com) | ✅ (200) |
+| 1372 | Peakon | 人材管理 | [peakon.com](https://www.peakon.com) | ⚠️ (403) |
+| 1373 | Reflektive | 人材管理 | [reflektive.com](https://www.reflektive.com) | ✅ (200) |
+| 1374 | Betterworks | 人材管理 | [betterworks.com](https://www.betterworks.com) | ✅ (200) |
+| 1375 | Workvivo | 人材管理 | [workvivo.com](https://www.workvivo.com) | ✅ (200) |
+| 1376 | Enboarder | 人材管理 | [enboarder.com](https://www.enboarder.com) | ✅ (200) |
+| 1377 | Lever | 人材管理 | [lever.co](https://www.lever.co) | ✅ (200) |
+| 1378 | Greenhouse | 人材管理 | [greenhouse.io](https://www.greenhouse.io) | ✅ (200) |
 
 
 **Total**: 1346 services (all with URL検証カラム)
