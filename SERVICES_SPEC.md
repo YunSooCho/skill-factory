@@ -13,7 +13,7 @@
 | 9 | Clinic Cloud | 医療 | [clinic-cloud.com](https://www.clinic-cloud.com) | ✅ (200) |
 | 10 | Note | Content | [note.com](https://note.com) | ✅ (200) |
 | 11 | SmartDB | Database | [smartdb.jp](https://smartdb.jp) | ✅ (200) |
-| 12 | kintone | CRM | [cybozu.com/jp/product/kintone](https://www.cybozu.com/jp/product/kintone) | ❌ (404)
+| 12 | kintone | CRM | [cybozu.com/kintone](https://www.cybozu.com/kintone) | ✅ (200)
 | 13 | cybozu | CRM | [www.cybozu.com](https://www.cybozu.com/) | ✅ (200)
 | 14 | FANSHIP | Marketing | [www.fanship.jp](https://www.fanship.jp/) | ✅ (200)
 | 15 | Cacoo | Diagram | [nulab.com/cacoo](https://nulab.com/cacoo/) | ✅ (200)
@@ -22,7 +22,7 @@
 | 18 | makeshop | EC | [makeshop.jp](https://www.makeshop.jp) | ✅ (200)
 | 19 | paypal-japan | 決済 | [paypal.com/jp/home](https://www.paypal.com/jp/home) | ✅ (200)
 | 20 | sb-payment | 決済 | [sbpayment.jp](https://www.sbpayment.jp) | ✅ (200)
-| 21 | manaba | 教育 | [manaba.jp](https://www.manaba.jp) | ⏱️ (timeout)
+| 21 | manaba | 教育 | [manaba.jp](https://www.manaba.jp) | ✅ (200)
 | 22 | Schoo | 教育 | [schoo.jp](https://www.schoo.jp) | ✅ (200)
 | 23 | Studyplus | 教育 | [studyplus.jp](https://www.studyplus.jp) | ✅ (200)
 | 24 | SAP ERP | 製造 | [sap.com/jp](https://www.sap.com/jp) | ❌ (404)
