@@ -129,10 +129,25 @@
 | 125 | Microsoft Teams | Communication | [teams.microsoft.com](https://teams.microsoft.com) |
 | 126 | Webex | Communication | [webex.com](https://webex.com) |
 | 127 | Figma | Documentation | [figma.com](https://figma.com) |
+| 128 | Miro | Diagram | [miro.com](https://miro.com) |
+| 129 | Jooto | Project Management | [jooto.com](https://www.jooto.com) |
+| 130 | Whimsical | Diagram | [whimsical.com](https://whimsical.com) |
+| 131 | FC2ショッピングカート | EC | [cart.fc2.com](https://cart.fc2.com) |
+| 132 | Casy | Education | [casy.io](https://www.casy.io) |
+| 133 | MedPeer | 医療 | [medpeer.jp](https://medpeer.jp) |
+| 134 | kibe.la | Documentation | [kibe.la](https://kibe.la) |
+| 135 | esa.io | Documentation | [esa.io](https://esa.io) |
+| 136 | Qiita | Content | [qiita.com](https://qiita.com) |
+| 137 | Zenn | Content | [zenn.dev](https://zenn.dev) |
+| 138 | Creately | Diagram | [creately.com](https://creately.com) |
+| 139 | draw.io | Diagram | [draw.io](https://www.draw.io) |
+| 140 | CodeCamp | Education | [codecamp.jp](https://codecamp.jp) |
+| 141 | TechAcademy | Education | [techacademy.jp](https://techacademy.jp) |
+| 142 | Ringbell | Communication | [ringbell.jp](https://ringbell.jp) |
 
 ---
 
-**Total**: 127 services
+**Total**: 142 services
 
 ---
 
