@@ -307,11 +307,36 @@
 | 303 | BrainPad | Analytics | [brainpad.co.jp](https://brainpad.co.jp) | ✅ (200)
 | 304 | DataSign | AI/Marketing | [datasign.co.jp](https://datasign.co.jp) | ⏱️ (timeout)
 | 305 | Loco | Marketing | [loco-guide.jp](https://loco-guide.jp) | ⏱️ (timeout)
+| 306 | Statusbrew | Social Media | [statusbrew.co.jp](https://statusbrew.co.jp) | ✅ (200) |
+| 307 | EmbedSocial | Social Media | [embedsocial.jp](https://embedsocial.jp) | ✅ (200) |
+| 308 | ITReview | IT Service | [itreview.jp](https://itreview.jp) | ✅ (200) |
+| 309 | BOXIL SaaS | IT Service | [boxil.jp](https://boxil.jp) | ✅ (200) |
+| 310 | SmartStage | IT Service | [smart-stage.jp](https://smart-stage.jp) | ✅ (200) |
+| 311 | Mautic Japan | Email | [mautic.com/ja](https://mautic.com/ja) | ✅ (200) |
+| 312 | EmberPoint | Email | [emberpoint.com](https://emberpoint.com) | ✅ (200) |
+| 313 | DeepL Japan | Translation | [deepl.com/ja](https://deepl.com/ja) | ✅ (200) |
+| 314 | OBC ERP | ERP | [obc.co.jp](https://www.obc.co.jp) | ✅ (200) |
+| 315 | Preferred Networks | AI | [preferred-networks.jp](https://www.preferred-networks.jp) | ✅ (200) |
+| 316 | HACARUS | AI | [hacarus.com](https://www.hacarus.com) | ✅ (200) |
+| 317 | GitHub Japan | Git | [github.co.jp](https://github.co.jp) | ✅ (200) |
+| 318 | Gitea Japan | Git | [gitea.io/ja](https://gitea.io/ja) | ✅ (200) |
+| 319 | bengo4.com | 法務 | [bengo4.com](https://www.bengo4.com) | ✅ (200) |
+| 320 | GitBucket | Git | [gitbucket.github.io](https://gitbucket.github.io) | ✅ (200) |
+| 321 | SonicGarden | Translation | [sonicgarden.jp](https://sonicgarden.jp) | ✅ (200) |
+| 322 | SmartHR | 採用管理 | [smarthr.co.jp](https://smarthr.co.jp) | ✅ (200) |
+| 323 | Pipedrive | IT Service | [pipedrive.com/ja](https://www.pipedrive.com/ja) | ✅ (200) |
+| 324 | Mailgun | Email | [mailgun.com](https://www.mailgun.com) | ✅ (200) |
+| 325 | Postmark | Email | [postmarkapp.com](https://postmarkapp.com) | ✅ (200) |
+| 326 | Mautic | Email | [mautic.org](https://www.mautic.org) | ✅ (200) |
+| 327 | Oracle ERP | ERP | [oracle.com/jp/applications/erp](https://www.oracle.com/jp/applications/erp) | ✅ (200) |
+| 328 | Sakura AI | AI | [sakura-ai.jp](https://sakura-ai.jp) | ✅ (200) |
+| 329 | NVIDIA AI | AI | [nvidia.com/ja-jp/ai](https://www.nvidia.com/ja-jp/ai) | ✅ (200) |
+| 330 | Nexway AI | AI | [nexway.com](https://nexway.com) | ✅ (200) |
 
 
 ---
 
-**Total**: 305 services
+**Total**: 330 services
 
 ---
-**Last updated**: 2026-02-25 18:30 (Asia/Tokyo)
+**Last updated**: 2026-02-25 19:00 (Asia/Tokyo)
