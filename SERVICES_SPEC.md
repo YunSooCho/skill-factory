@@ -1382,11 +1382,11 @@
 | 1378 | Greenhouse | 人材管理 | [greenhouse.io](https://www.greenhouse.io) | ✅ (200) |
 
 
-**Total**: 1346 services (all with URL検証カラム)
+**Total**: 1378 services (all with URL検証カラム)
 
 ---
 
-**Last updated**: 2026-02-26 06:32 (Asia/Tokyo)
+**Last updated**: 2026-02-26 07:00 (Asia/Tokyo)
 **Updates in this revision** (Skill Factory Service Discovery):
 - ADDED 32 new services with URL検証カラム (all validated ✅ or ⚠️):
   - POS: Ubiregi, EPOS, Clover, Lightspeed, Toast, Vend, Heartland, Square, ShopKeep, Revel (10 services)
