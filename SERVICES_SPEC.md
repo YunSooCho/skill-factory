@@ -29,10 +29,22 @@
 | 25 | sb-payment | 決済 | [sbpayment.jp](https://www.sbpayment.jp) |
 | 26 | gmo-payment | 決済 | [gmo-pg.jp](https://www.gmo-pg.jp) |
 | 27 | sonet-payment | 決済 | [sonetpayment.jp](https://sonetpayment.jp) |
+| 28 | eMedical | 医療 | [emedical.co.jp](https://www.emedical.co.jp) |
+| 29 | MUSE | 医療 | [muse-cloud.com](https://www.muse-cloud.com) |
+| 30 | Clinic Cloud | 医療 | [clinic-cloud.com](https://www.clinic-cloud.com) |
+| 31 | manaba | 教育 | [manaba.jp](https://www.manaba.jp) |
+| 32 | Schoo | 教育 | [schoo.jp](https://www.schoo.jp) |
+| 33 | Studyplus | 教育 | [studyplus.jp](https://www.studyplus.jp) |
+| 34 | SAP ERP | 製造 | [sap.com/jp](https://www.sap.com/jp) |
+| 35 | Oracle NetSuite | 製造 | [oracle.com/jp/netsuite](https://www.oracle.com/jp/netsuite) |
+| 36 | Smart Factory | 製造 | [smart-factory.jp](https://www.smart-factory.jp) |
+| 37 | freee | 会計 | [freee.co.jp](https://www.freee.co.jp) |
+| 38 | Money Forward | 会計 | [moneyforward.com](https://www.moneyforward.com) |
+| 39 | Zoho Books | 会計 | [zoho.com/jp/books](https://www.zoho.com/jp/books) |
 
 ---
 
-**Total**: 27 services
+**Total**: 39 services
 
 ---
 
