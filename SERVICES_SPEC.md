@@ -1120,11 +1120,60 @@
 | 1118 | DocuWare | 法務 | [docuware.com](https://www.docuware.com) | ✅ (200) |
 | 1119 | Nitro | 法務 | [gonitro.com](https://www.gonitro.com) | ✅ (200) |
 | 1120 | PandaDoc Japan | 法務 | [pandadoc.com/ja](https://www.pandadoc.com/ja) | ✅ (200) |
+| 1121 | マネーフォワード | 会計 | [https://corp.moneyforward.com](https://corp.moneyforward.com) | ✅ (200) |
+| 1122 | TKC | 会計 | [https://www.tkc.co.jp](https://www.tkc.co.jp) | ✅ (200) |
+| 1123 | Ameba | Content | [https://ameba.jp](https://ameba.jp) | ✅ (200) |
+| 1124 | はてなブログ | Content | [https://hatenablog.com](https://hatenablog.com) | ✅ (200) |
+| 1125 | FC2ブログ | Content | [https://blog.fc2.com](https://blog.fc2.com) | ✅ (200) |
+| 1126 | livedoorブログ | Content | [https://blog.livedoor.com](https://blog.livedoor.com) | ✅ (200) |
+| 1127 | Seesaaブログ | Content | [https://blog.seesaa.jp](https://blog.seesaa.jp) | ✅ (200) |
+| 1128 | Jugem | Content | [https://jugem.jp](https://jugem.jp) | ✅ (200) |
+| 1129 | Sendible | SocialMedia | [https://sendible.com](https://sendible.com) | ✅ (200) |
+| 1130 | Mention | SocialMedia | [https://mention.com](https://mention.com) | ✅ (200) |
+| 1131 | CoSchedule | SocialMedia | [https://coschedule.com](https://coschedule.com) | ✅ (200) |
+| 1132 | Tailwind | SocialMedia | [https://tailwindapp.com](https://tailwindapp.com) | ✅ (200) |
+| 1133 | OmniGraffle | Diagram | [https://www.omnigroup.com/omnigraffle](https://www.omnigroup.com/omnigraffle) | ✅ (200) |
+| 1134 | MindManager | Diagram | [https://www.mindmanager.com](https://www.mindmanager.com) | ✅ (200) |
+| 1135 | yEd | Diagram | [https://www.yworks.com/products/yed](https://www.yworks.com/products/yed) | ✅ (200) |
+| 1136 | ConceptDraw DIAGRAM | Diagram | [https://www.conceptdraw.com/products/drawing-tool](https://www.conceptdraw.com/products/drawing-tool) | ✅ (200) |
+| 1137 | ProcessOn | Diagram | [https://www.processon.com](https://www.processon.com) | ✅ (200) |
+| 1138 | Graphviz | Diagram | [https://graphviz.org](https://graphviz.org) | ✅ (200) |
+| 1139 | Qualtrics XM | カスタマーサクセス | [https://www.qualtrics.com](https://www.qualtrics.com) | ✅ (200) |
+| 1140 | Medallia | カスタマーサクセス | [https://www.medallia.com](https://www.medallia.com) | ✅ (200) |
+| 1141 | InMoment | カスタマーサクセス | [https://www.inmoment.com](https://www.inmoment.com) | ✅ (200) |
+| 1142 | CustomerGauge | カスタマーサクセス | [https://www.customergauge.com](https://www.customergauge.com) | ✅ (200) |
+| 1143 | AskNicely | カスタマーサクセス | [https://asknicely.com](https://asknicely.com) | ✅ (200) |
+| 1144 | Wootric | カスタマーサクセス | [https://www.wootric.com](https://www.wootric.com) | ✅ (200) |
+| 1145 | Remix | 経費精算 | [https://remix.co.jp](https://remix.co.jp) | ✅ (200) |
+| 1146 | Concur Travel | 経費精算 | [https://www.concur.co.jp](https://www.concur.co.jp) | ✅ (200) |
+| 1147 | TravelPerk | 経費精算 | [https://travelperk.com](https://travelperk.com) | ✅ (200) |
+| 1148 | Rydoo | 経費精算 | [https://rydoo.com](https://rydoo.com) | ✅ (200) |
+| 1149 | ReadTheDocs | Documentation | [https://readthedocs.io](https://readthedocs.io) | ✅ (200) |
+| 1150 | Docusaurus | Documentation | [https://docusaurus.io](https://docusaurus.io) | ✅ (200) |
+| 1151 | Cisco Webex Teams | コラボレーション | [https://www.webex.com](https://www.webex.com) | ✅ (200) |
+| 1152 | Zoho Projects | コラボレーション | [https://www.zoho.com/projects](https://www.zoho.com/projects) | ✅ (200) |
+| 1153 | Basecamp | コラボレーション | [https://basecamp.com](https://basecamp.com) | ✅ (200) |
+| 1154 | SAP Concur Accounting | 会計 | [https://www.concur.co.jp](https://www.concur.co.jp) | ✅ (200) |
+| 1155 | Stride | カスタマーサクセス | [https://strideinc.com](https://strideinc.com) | ✅ (200) |
+| 1156 | PlantUML | Diagram | [https://plantuml.com](https://plantuml.com) | ✅ (200) |
+| 1157 | Mermaid | Diagram | [https://mermaid.js.org](https://mermaid.js.org) | ✅ (200) |
+| 1158 | PlantText | Diagram | [https://www.planttext.com](https://www.planttext.com) | ✅ (200) |
+| 1159 | Sprinklr | SocialMedia | [https://sprinklr.com](https://sprinklr.com) | ✅ (200) |
+| 1160 | SocialPilot | SocialMedia | [https://socialpilot.co](https://socialpilot.co) | ✅ (200) |
+| 1161 | Agorapulse | SocialMedia | [https://agorapulse.com](https://agorapulse.com) | ✅ (200) |
+| 1162 | Statusbrew | SocialMedia | [https://statusbrew.co.jp](https://statusbrew.co.jp) | ✅ (200) |
+| 1163 | MkDocs | Documentation | [https://www.mkdocs.org](https://www.mkdocs.org) | ✅ (200) |
+| 1164 | SparkPage | カスタマーサクセス | [https://sparkpage.io](https://sparkpage.io) | ✅ (200) |
+| 1165 | Excalidraw | Diagram | [https://excalidraw.com](https://excalidraw.com) | ✅ (200) |
+| 1166 | WordPress | Content | [https://wordpress.com](https://wordpress.com) | ✅ (200) |
+| 1167 | Ghost | Content | [https://ghost.org](https://ghost.org) | ✅ (200) |
+| 1168 | Fyle | 経費精算 | [https://www.fyle.in](https://www.fyle.in) | ✅ (200) |
+| 1169 | QuickBooks Online | 会計 | [https://quickbooks.intuit.com](https://quickbooks.intuit.com) | ✅ (200) |
 
 ---
 
-**Total**: 1120 services (all with URL検証カラム)
+**Total**: 1169 services (all with URL検証カラム)
 
 ---
 
-**Last updated**: 2026-02-26 00:00 (Asia/Tokyo)
+**Last updated**: 2026-02-26 00:45 (Asia/Tokyo)
