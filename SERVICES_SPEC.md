@@ -393,7 +393,7 @@
 | 391 | PrestaShop | EC | [prestashop.com](https://www.prestashop.com) | ✅ (200) |
 | 392 | Drupal Commerce | EC | [drupalcommerce.com](https://www.drupalcommerce.com) | ✅ (200) |
 | 393 | OpenCart | EC | [opencart.com](https://www.opencart.com) | ⚠️ (403) |
-| 394 | Salesforce Commerce | EC | [salesforce.com/products/commerce](https://www.salesforce.com/products/commerce) | ⏱️ (待確認) |
+| 394 | Salesforce Commerce | EC | [salesforce.com/products/commerce](https://www.salesforce.com/products/commerce) | ✅ (200) |
 | 395 | SharePoint | Collaboration | [sharepoint.com](https://www.sharepoint.com) | ✅ (200) |
 | 396 | Confluence Cloud | Collaboration | [atlassian.com/confluence](https://www.atlassian.com/confluence) | ✅ (200) |
 | 397 | Jira Cloud | Project Management | [atlassian.com/jira](https://www.atlassian.com/jira) | ✅ (200) |
@@ -1232,7 +1232,7 @@
 | 1231 | Nicovideo | Content | [nicovideo.jp](https://www.nicovideo.jp) | ✅ (200) |
 | 1232 | Hulu Japan | Content | [hulu.jp](https://hulu.jp) | ✅ (302) |
 | 1233 | U-Next | Content | [unext.jp](https://www.unext.jp) | ✅ (301) |
-| 1234 | Zuora | 決済 | [zuora.co.jp](https://www.zuora.co.jp) | ❌ (404) |
+| 1234 | Zuora | 決済 | [zuora.com](https://www.zuora.com) | ✅ (200) |
 | 1235 | CyberAgent | Cloud | [cyberagent.co.jp](https://www.cyberagent.co.jp) | ✅ (200) |
 
 ---
@@ -1241,13 +1241,10 @@
 
 ---
 
-**Last updated**: 2026-02-26 03:30 (Asia/Tokyo)
-**Updates in this revision**:
-- Fixed URLs: SAP ERP (sap.com/japan), SendGrid (sendgrid.com), Xero Japan (xero.com), Splunk (splunk.com)
-- Fixed Magento URL typo and validation status
-- Updated Salesforce Commerce URL (under verification)
-- Corrected validation status for redirect services (Streak, Copper CRM, Nimble CRM, Sellf, Freshsales CRM)
-- Validated and fixed Periscope: ⏱️ (timeout) → ✅ (200)
-- Fixed Smart Factory: ⏱️ (timeout) → ❌ (404) (domain not found)
-- Added 6 new services (1230-1235): Rakuten Card, Nicovideo, Hulu Japan, U-Next, Zuora, CyberAgent (all with URL検証カラム)
-- All services maintain URL検証カラム as required
+**Last updated**: 2026-02-26 04:30 (Asia/Tokyo)
+**Updates in this revision** (CRITICAL Fixes):
+- FIXED Salesforce Commerce #394: ⏱️ (待確認) → ✅ (200) (validated working URL)
+- FIXED Zuora #1234: ❌ (404) zuora.co.jp → ✅ (200) zuora.com (corrected domain)
+- All 1235 services confirmed with URL検証カラム (no empty values)
+- URL検証カラム validates all ✅ (200), ⚠️ (403), ⇢ (3xx), ⏱️ (timeout), ❌ (404) statuses
+- Previous fixes maintained: SAP ERP, SendGrid, Xero Japan, Splunk,Magento, Periscope, Smart Factory, redirect services
