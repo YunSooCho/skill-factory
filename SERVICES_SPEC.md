@@ -174,10 +174,24 @@
 | 170 | CPI Ace | Cloud | [cpi.ad.jp](https://www.cpi.ad.jp) |
 | 171 | tsukaeru Cloud | Cloud | [tsukaeru.net](https://tsukaeru.net) |
 
+| 172 | Airシフト | 勤怠管理 | [airshift.jp](https://airshift.jp) |
+| 173 | Amazon Pay | 決済 | [pay.amazon.co.jp](https://pay.amazon.co.jp/jp) |
+| 174 | BASE | EC | [thebase.in](https://thebase.in) |
+| 175 | Coconala | 人材管理 | [coconala.com](https://coconala.com) |
+| 176 | CrowdWorks | 人材管理 | [crowdworks.jp](https://crowdworks.jp) |
+| 177 | LINE Pay | 決済 | [pay.line.me](https://pay.line.me) |
+| 178 | Lancers | 人材管理 | [www.lancers.jp](https://www.lancers.jp) |
+| 179 | au PAY Market | EC | [paypay.ne.jp](https://paypay.ne.jp) |
+| 180 | クラウドサイン | Document | [cloudsign.jp](https://cloudsign.jp) |
+| 181 | ソラコム | Cloud | [soracom.jp](https://soracom.jp) |
+| 182 | ニフクラ | Cloud | [pfs.nifcloud.com](https://pfs.nifcloud.com) |
+| 183 | メルペイ | 決済 | [mpay.jp](https://mpay.jp) |
+| 184 | 弥生会計 | 会計 | [www.yayoi-kk.co.jp](https://www.yayoi-kk.co.jp) |
+
+
 ---
 
-**Total**: 171 services
+**Total**: 184 services
 
 ---
-
 **Last updated**: 2026-02-25
