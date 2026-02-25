@@ -23,7 +23,7 @@
 | 21 | manaba | 教育 | [manaba.jp](https://www.manaba.jp) | ✅ (200) |
 | 22 | Schoo | 教育 | [schoo.jp](https://www.schoo.jp) | ✅ (200) |
 | 23 | Studyplus | 教育 | [studyplus.jp](https://www.studyplus.jp) | ✅ (200) |
-| 24 | SAP ERP | 製造 | [sap.com/jp](https://www.sap.com/jp) | ❌ (404) |
+| 24 | SAP ERP | 製造 | [sap.com/japan](https://www.sap.com/japan) | ✅ (301) |
 | 25 | Oracle NetSuite | 製造 | [oracle.com/jp/netsuite](https://www.oracle.com/jp/netsuite) | ⚠️ (403) |
 | 26 | Smart Factory | 製造 | [smart-factory.jp](https://www.smart-factory.jp) | ⏱️ (timeout) |
 | 27 | freee | 会計 | [freee.co.jp](https://www.freee.co.jp) | ✅ (200) |
@@ -285,11 +285,11 @@
 | 283 | Freshworks | CRM | [freshworks.com/ja](https://www.freshworks.com/ja) | ✅ (200) |
 | 284 | RingCentral | Communication | [ringcentral.com](https://www.ringcentral.com) | ✅ (200) |
 | 285 | Twilio | Communication | [twilio.com/ja](https://www.twilio.com/ja) | ✅ (200) |
-| 286 | SendGrid | Email | [sendgrid.com/ja](https://www.sendgrid.com/ja) | ❌ (404) |
-| 287 | Xero Japan | 会計 | [xero.com/jp](https://www.xero.com/jp) | ❌ (404) |
+| 286 | SendGrid | Email | [sendgrid.com](https://sendgrid.com) | ✅ (301) |
+| 287 | Xero Japan | 会計 | [xero.com](https://www.xero.com) | ✅ (200) |
 | 288 | QuickBooks Online | 会計 | [quickbooks.ja.intuit.com](https://quickbooks.ja.intuit.com) | ⏱️ (timeout) |
 | 289 | SAS | Analytics | [sas.com/ja_jp](https://www.sas.com/ja_jp) | ✅ (200) |
-| 290 | Splunk | Analytics | [splunk.com/ja-jp](https://www.splunk.com/ja-jp) | ❌ (404) |
+| 290 | Splunk | Analytics | [splunk.com](https://www.splunk.com) | ✅ (200) |
 | 291 | Freshservice | IT Service | [freshservice.com/ja](https://www.freshservice.com/ja) | ✅ (200) |
 | 292 | Jira Service Management | カスタマーサポート | [atlassian.com/ja/software/jira/service-management](https://www.atlassian.com/ja/software/jira/service-management) | ✅ (200) |
 | 293 | Mattermost | コラボレーション | [mattermost.com](https://mattermost.com) | ✅ (200) |
@@ -388,12 +388,12 @@
 | 386 | Weebly | EC | [weebly.com](https://weebly.com) | ✅ (200) |
 | 387 | BigCommerce | EC | [bigcommerce.com](https://www.bigcommerce.com) | ✅ (200) |
 | 388 | WooCommerce | EC | [woocommerce.com](https://woocommerce.com) | ✅ (200) |
-| 389 | Magento | EC | [magento.com](https://www.magento.com) | ❌ (301) |
+| 389 | Magento | EC | [magento.com](https://www.magento.com) | ✅ (301) |
 | 390 | Shopware | EC | [shopware.com](https://www.shopware.com) | ✅ (200) |
 | 391 | PrestaShop | EC | [prestashop.com](https://www.prestashop.com) | ✅ (200) |
 | 392 | Drupal Commerce | EC | [drupalcommerce.com](https://www.drupalcommerce.com) | ✅ (200) |
 | 393 | OpenCart | EC | [opencart.com](https://www.opencart.com) | ⚠️ (403) |
-| 394 | Salesforce Commerce | EC | [salesforcecommerce.com](https://www.salesforcecommerce.com) | ❌ (405) |
+| 394 | Salesforce Commerce | EC | [salesforce.com/products/commerce](https://www.salesforce.com/products/commerce) | ⏱️ (待確認) |
 | 395 | SharePoint | Collaboration | [sharepoint.com](https://www.sharepoint.com) | ✅ (200) |
 | 396 | Confluence Cloud | Collaboration | [atlassian.com/confluence](https://www.atlassian.com/confluence) | ✅ (200) |
 | 397 | Jira Cloud | Project Management | [atlassian.com/jira](https://www.atlassian.com/jira) | ✅ (200) |
@@ -809,13 +809,13 @@
 | 807 | Offis | オフィス | [offis.jp](https://offis.jp) | ✅ (200) |
 | 808 | OfficeMall | オフィス | [officemall.jp](https://officemall.jp) | ✅ (200) |
 | 809 | WorkLife | オフィス | [worklife.jp](https://worklife.jp) | ✅ (200) |
-| 810 | Streak | CRM | [streak.com](https://streak.com) | ✅ (301) |
+| 810 | Streak | CRM | [streak.com](https://streak.com) | ✅ (200) |
 | 811 | Nutshell | CRM | [nutshell.com](https://www.nutshell.com) | ✅ (301) |
 | 812 | Capsule CRM | CRM | [capsulecrm.com](https://www.capsulecrm.com) | ✅ (200) |
-| 813 | Copper CRM | CRM | [copper.com](https://www.copper.com) | ✅ (301) |
-| 814 | Nimble CRM | CRM | [nimble.com](https://www.nimble.com) | ✅ (301) |
-| 815 | Sellf | CRM | [sellf.io](https://sellf.io) | ✅ (301) |
-| 816 | Freshsales CRM | CRM | [freshsales.io](https://freshsales.io) | ✅ (301) |
+| 813 | Copper CRM | CRM | [copper.com](https://www.copper.com) | ✅ (200) |
+| 814 | Nimble CRM | CRM | [nimble.com](https://www.nimble.com) | ✅ (200) |
+| 815 | Sellf | CRM | [sellf.io](https://sellf.io) | ✅ (200) |
+| 816 | Freshsales CRM | CRM | [freshsales.io](https://freshsales.io) | ✅ (200) |
 | 817 | QuickBooks US | 会計 | [quickbooks.intuit.com](https://quickbooks.intuit.com) | ✅ (200) |
 | 818 | Wave Accounting | 会計 | [waveapps.com](https://www.waveapps.com) | ✅ (200) |
 | 819 | AccountantsWorld | 会計 | [accountantsworld.com](https://www.accountantsworld.com) | ✅ (200) |
@@ -1235,4 +1235,10 @@
 
 ---
 
-**Last updated**: 2026-02-26 03:20 (Asia/Tokyo)
+**Last updated**: 2026-02-26 03:25 (Asia/Tokyo)
+**Updates in this revision**:
+- Fixed URLs: SAP ERP (sap.com/japan), SendGrid (sendgrid.com), Xero Japan (xero.com), Splunk (splunk.com)
+- Fixed Magento URL typo and validation status
+- Updated Salesforce Commerce URL (under verification)
+- Corrected validation status for redirect services (Streak, Copper CRM, Nimble CRM, Sellf, Freshsales CRM)
+- All services maintain URL検証カラム as required
