@@ -296,11 +296,22 @@
 | 292 | Jira Service Management | カスタマーサポート | [atlassian.com/ja/software/jira/service-management](https://www.atlassian.com/ja/software/jira/service-management) |
 | 293 | Mattermost | コラボレーション | [mattermost.com/ja](https://www.mattermost.com/ja) |
 | 294 | Rocket.Chat | コラボレーション | [rocket.chat/ja](https://www.rocket.chat/ja) |
+| 295 | Cybozu Garoon | コラボレーション | [cybozu.com/jp/product/garoon](https://cybozu.com/jp/product/garoon) |
+| 296 | LAPRAS | 採用管理 | [lapras.com](https://lapras.com) |
+| 297 | People Cloud | タレントマネジメント | [people-cloud.jp](https://people-cloud.jp) |
+| 298 | Howdy | 人材管理 | [howdy.co.jp](https://howdy.co.jp) |
+| 299 | Safie | IoT/Cloud | [safie.jp](https://safie.jp) |
+| 300 | Spacemarket | オフィス | [spacemarket.com](https://spacemarket.com) |
+| 301 | RaaS | 採用管理 | [raas.co.jp](https://raas.co.jp) |
+| 302 | Mieruca | カスタマーサクセス | [mieruca.com](https://mieruca.com) |
+| 303 | BrainPad | Analytics | [brainpad.co.jp](https://brainpad.co.jp) |
+| 304 | DataSign | AI/Marketing | [datasign.co.jp](https://datasign.co.jp) |
+| 305 | Loco | Marketing | [loco-guide.jp](https://loco-guide.jp) |
 
 
 ---
 
-**Total**: 294 services
+**Total**: 305 services
 
 ---
 **Last updated**: 2026-02-25
