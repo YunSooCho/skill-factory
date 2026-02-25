@@ -76,11 +76,64 @@
 | 72 | Google Cloud | Cloud | [cloud.google.com](https://cloud.google.com) |
 | 73 | Mailchimp | Marketing | [mailchimp.com](https://mailchimp.com) |
 | 74 | Confluence | Documentation | [atlassian.com/ja](https://atlassian.com/ja) |
+| 75 | Airリザーブ | 予約管理 | [airregi.jp/air-reserve](https://airregi.jp/air-reserve) |
+| 76 | hacomono | 予約管理 | [hacomono.jp](https://hacomono.jp) |
+| 77 | ChoiceRESERVE | 予約管理 | [reservelink.co.jp](https://reservelink.co.jp) |
+| 78 | STORES 予約 | 予約管理 | [stores.jp/reservation](https://stores.jp/reservation) |
+| 79 | Riza-en | 予約管理 | [riza-en.jp](https://riza-en.jp) |
+| 80 | RESERVA | 予約管理 | [reserva.be](https://reserva.be) |
+| 81 | SuperSaaS | 予約管理 | [supersaas.jp](https://supersaas.jp) |
+| 82 | tripla Book | 予約管理 | [tripla.io](https://tripla.io) |
+| 83 | リザービア | 予約管理 | [reservevia.com](https://reservevia.com) |
+| 84 | Square 予約 | 予約管理 | [squareup.com/jp/appointments](https://squareup.com/jp/appointments) |
+| 85 | Direct In S4 | 予約管理 | [dyn.co.jp](https://dyn.co.jp) |
+| 86 | Kalonade | 予約管理 | [kalonade.jp](https://kalonade.jp) |
+| 87 | MOSH | 予約管理 | [mosh.jp](https://mosh.jp) |
+| 88 | EIPro | 予約管理 | [eipo.jp](https://eipo.jp) |
+| 89 | トレタ予約台帳 | 予約管理 | [toreta.in](https://toreta.in) |
+| 90 | BRoomHubs | 予約管理 | [broomhubs.com](https://broomhubs.com) |
+| 91 | SmartRooms | 予約管理 | [uchida.co.jp](https://www.uchida.co.jp) |
+| 92 | タビチャットエンジン | 予約管理 | [tabichat.jp](https://tabichat.jp) |
+| 93 | リピッテ酒店 | 予約管理 | [rep-colle.jp](https://rep-colle.jp) |
+| 94 | TableCheck | 予約管理 | [tablecheck.com](https://tablecheck.com) |
+| 95 | LINE Biz ID | Communication | [linebiz.com/jp](https://linebiz.com/jp) |
+| 96 | Slack | Communication | [slack.com/ja](https://slack.com/ja) |
+| 97 | Salesforce Marketing Cloud | Marketing | [salesforce.com/jp/products/marketing](https://salesforce.com/jp/products/marketing) |
+| 98 | Braze | Marketing | [braze.com/jp](https://braze.com/jp) |
+| 99 | Adobe Experience Cloud | Marketing | [adobe.com/jp/marketing](https://adobe.com/jp/marketing) |
+| 100 | GA4 | Analytics | [googleanalytics.com](https://googleanalytics.com) |
+| 101 | Mixpanel | Analytics | [mixpanel.com](https://mixpanel.com) |
+| 102 | Amplitude | Analytics | [amplitude.com](https://amplitude.com) |
+| 103 | Figma | Design | [figma.com](https://figma.com) |
+| 104 | Sketch | Design | [sketch.com](https://sketch.com) |
+| 105 | Adobe XD | Design | [adobe.com/jp/products/xd](https://adobe.com/jp/products/xd) |
+| 106 | Jira | Project Management | [atlassian.com/ja/software/jira](https://atlassian.com/ja/software/jira) |
+| 107 | Basecamp | Project Management | [basecamp.com](https://basecamp.com) |
+| 108 | ClickUp | Project Management | [clickup.com](https://clickup.com) |
+| 109 | Smartsheet | Project Management | [smartsheet.com](https://smartsheet.com) |
+| 110 | Intercom | カスタマーサポート | [intercom.com](https://intercom.com) |
+| 111 | Freshdesk | カスタマーサポート | [freshworks.com](https://freshworks.com) |
+| 112 | Help Scout | カスタマーサポート | [helpscout.com](https://helpscout.com) |
+| 113 | Drift | カスタマーサポート | [drift.com](https://drift.com) |
+| 114 | GitKraken | Git | [gitkraken.com](https://gitkraken.com) |
+| 115 | Bitbucket | Git | [bitbucket.org](https://bitbucket.org) |
+| 116 | Sourcegraph | Git | [sourcegraph.com](https://sourcegraph.com) |
+| 117 | Microsoft Azure | Cloud | [azure.microsoft.com/ja-jp](https://azure.microsoft.com/ja-jp) |
+| 118 | Oracle Cloud | Cloud | [oracle.com/jp/cloud](https://www.oracle.com/jp/cloud) |
+| 119 | DigitalOcean | Cloud | [digitalocean.com](https://digitalocean.com) |
+| 120 | Google Drive | Storage | [drive.google.com](https://drive.google.com) |
+| 121 | OneDrive | Storage | [onedrive.com](https://onedrive.com) |
+| 122 | pCloud | Storage | [pcloud.com](https://pcloud.com) |
+| 123 | SugarSync | Storage | [sugarsync.com](https://sugarsync.com) |
+| 124 | Loom | Communication | [loom.com](https://loom.com) |
+| 125 | Microsoft Teams | Communication | [teams.microsoft.com](https://teams.microsoft.com) |
+| 126 | Webex | Communication | [webex.com](https://webex.com) |
+| 127 | Figma | Documentation | [figma.com](https://figma.com) |
 
 ---
 
-**Total**: 74 services (after discovery and validation)
+**Total**: 127 services
 
 ---
 
-**Last updated**: 2026-02-25 | **URL validation**: 25 new services added via discovery + curl validation
+**Last updated**: 2026-02-25
