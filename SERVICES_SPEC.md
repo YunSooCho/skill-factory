@@ -144,10 +144,25 @@
 | 140 | CodeCamp | Education | [codecamp.jp](https://codecamp.jp) |
 | 141 | TechAcademy | Education | [techacademy.jp](https://techacademy.jp) |
 | 142 | Ringbell | Communication | [ringbell.jp](https://ringbell.jp) |
+| 143 | SmartDraw | Diagram | [smartdraw.com](https://www.smartdraw.com) |
+| 144 | Gurobi | Analytics | [gurobi.com](https://www.gurobi.com) |
+| 145 | NewsDigest | Content | [newsdigest.jp](https://newsdigest.jp) |
+| 146 | GMO PG | 決済 | [gmo-pg.com](https://www.gmo-pg.com) |
+| 147 | IIJ | Cloud | [iij.ad.jp](https://www.iij.ad.jp) |
+| 148 | Onamae.com | Cloud | [onamae.com](https://www.onamae.com) |
+| 149 | Muumuu Domain | Cloud | [muumuu-domain.com](https://muumuu-domain.com) |
+| 150 | Sakura Cloud | Cloud | [cloud.sakura.ad.jp](https://cloud.sakura.ad.jp) |
+| 151 | KAGOYA | Cloud | [kagoya.jp](https://www.kagoya.jp) |
+| 152 | TIS | Cloud | [tis.co.jp](https://www.tis.co.jp) |
+| 153 | Hakuhodo DY ONE | Marketing | [hakuhodody-one.co.jp](https://www.hakuhodody-one.co.jp) |
+| 154 | Type（タイプ） | 人材管理 | [type.jp](https://type.jp) |
+| 155 | U-Can | 教育 | [u-can.co.jp](https://www.u-can.co.jp) |
+| 156 | ASAHI Net | Cloud | [asahi-net.jp](https://asahi-net.jp) |
+| 157 | Kii | Cloud | [kii.com](https://kii.com) |
 
 ---
 
-**Total**: 142 services
+**Total**: 157 services
 
 ---
 
