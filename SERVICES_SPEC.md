@@ -1234,10 +1234,108 @@
 | 1233 | U-Next | Content | [unext.jp](https://www.unext.jp) | ✅ (301) |
 | 1234 | Zuora | 決済 | [zuora.com](https://www.zuora.com) | ✅ (200) |
 | 1235 | CyberAgent | Cloud | [cyberagent.co.jp](https://www.cyberagent.co.jp) | ✅ (200) |
+| 1236 | Trend Micro Cloud One | Security | [trendmicro.com](https://www.trendmicro.com) | ✅ (301) |
+| 1237 | McAfee Enterprise | Security | [mcafee.com](https://www.mcafee.com) | ⏱️ (timeout) |
+| 1238 | Palo Alto Networks | Security | [paloaltonetworks.com](https://www.paloaltonetworks.com) | ✅ (200) |
+| 1239 | CrowdStrike | Security | [crowdstrike.com](https://www.crowdstrike.com) | ✅ (301) |
+| 1240 | SentinelOne | Security | [sentinelone.com](https://www.sentinelone.com) | ✅ (200) |
+| 1241 | CyberArk | Security | [cyberark.com](https://www.cyberark.com) | ✅ (200) |
+| 1242 | Zscaler | Security | [zscaler.com](https://www.zscaler.com) | ✅ (200) |
+| 1243 | Trellix | Security | [trellix.com](https://www.trellix.com) | ✅ (200) |
+| 1244 | Check Point | Security | [checkpoint.com](https://www.checkpoint.com) | ✅ (200) |
+| 1245 | Fortinet | Security | [fortinet.com](https://www.fortinet.com) | ✅ (200) |
+| 1246 | Sophos | Security | [sophos.com](https://www.sophos.com) | ✅ (302) |
+| 1247 | Bitdefender | Security | [bitdefender.com](https://www.bitdefender.com) | ✅ (307) |
+| 1248 | Kaspersky Enterprise | Security | [kaspersky.com](https://www.kaspersky.com) | ✅ (200) |
+| 1249 | Qualys | Security | [qualys.com](https://www.qualys.com) | ✅ (200) |
+| 1250 | Rapid7 | Security | [rapid7.com](https://www.rapid7.com) | ✅ (200) |
+| 1251 | Tenable | Security | [tenable.com](https://www.tenable.com) | ✅ (200) |
+| 1252 | Darktrace | Security | [darktrace.com](https://www.darktrace.com) | ✅ (200) |
+| 1253 | Armis | Security | [armis.com](https://www.armis.com) | ⚠️ (403) |
+| 1254 | Orca Security | Security | [orcasecurity.com](https://www.orcasecurity.com) | ⏱️ (timeout) |
+| 1255 | Adobe Photoshop | Design/Video | [adobe.com/products/photoshop](https://www.adobe.com/products/photoshop) | ✅ (301) |
+| 1256 | Adobe Illustrator | Design/Video | [adobe.com/products/illustrator](https://www.adobe.com/products/illustrator) | ✅ (301) |
+| 1257 | CorelDRAW | Design/Video | [coreldraw.com](https://www.coreldraw.com) | ✅ (302) |
+| 1258 | Vegas Studio | Design/Video | [vegastudio.net](https://www.vegastudio.net) | ⚠️ (405) |
+| 1259 | Veed.io | Design/Video | [veed.io](https://www.veed.io) | ✅ (200) |
+| 1260 | Descript | Design/Video | [descript.com](https://www.descript.com) | ✅ (200) |
+| 1261 | Storyblocks | Design/Video | [storyblocks.com](https://www.storyblocks.com) | ✅ (200) |
+| 1262 | Epidemic Sound | Design/Video | [epidemicsound.com](https://www.epidemicsound.com) | ✅ (200) |
+| 1263 | Soundstripe | Design/Video | [soundstripe.com](https://www.soundstripe.com) | ✅ (103) |
+| 1264 | Artlist | Design/Video | [artlist.io](https://www.artlist.io) | ✅ (301) |
+| 1265 | Shotkit | Design/Video | [shotkit.com](https://www.shotkit.com) | ✅ (301) |
+| 1266 | SLR Lounge | Design/Video | [slrlounge.com](https://www.slrlounge.com) | ✅ (200) |
+| 1267 | Phlearn | Design/Video | [phlearn.com](https://www.phlearn.com) | ✅ (301) |
+| 1268 | CreativeLive | Design/Video | [creativelive.com](https://www.creativelive.com) | ⏱️ (timeout) |
+| 1269 | DaVinci Resolve | Design/Video | [blackmagicdesign.com](https://www.blackmagicdesign.com/products/davinciresolve) | ✅ (200) |
+| 1270 | Lightroom | Design/Video | [adobe.com/products/photoshop-lightroom](https://www.adobe.com/products/photoshop-lightroom) | ✅ (301) |
+| 1271 | Autodesk Maya | Design/Video | [autodesk.com/products/maya](https://www.autodesk.com/products/maya) | ✅ (301) |
+| 1272 | Blender | Design/Video | [blender.org](https://www.blender.org) | ✅ (200) |
+| 1273 | GIMP | Design/Video | [gimp.org](https://www.gimp.org) | ✅ (200) |
+| 1274 | Inkscape | Design/Video | [inkscape.org](https://inkscape.org) | ✅ (200) |
+| 1275 | Krita | Design/Video | [krita.org](https://krita.org) | ✅ (200) |
+| 1276 | Affinity Designer | Design/Video | [affinity.serif.com](https://www.affinity.serif.com/designer) | ✅ (200) |
+| 1277 | Affinity Photo | Design/Video | [affinity.serif.com](https://www.affinity.serif.com/photo) | ✅ (200) |
+| 1278 | Luminar Neo | Design/Video | [skylum.com](https://skylum.com) | ✅ (200) |
+| 1279 | Capture One | Design/Video | [captureone.com](https://www.captureone.com) | ✅ (200) |
+| 1280 | Sprout Social | Social Media | [sproutsocial.com](https://sproutsocial.com) | ✅ (200) |
+| 1281 | Iconosquare | Social Media | [iconosquare.com](https://iconosquare.com) | ✅ (301) |
+| 1282 | Social Insider | Social Media | [socialinsider.io](https://socialinsider.io) | ⏱️ (timeout) |
+| 1283 | Epoq | Social Media | [epoq.io](https://epoq.io) | ⏱️ (timeout) |
+| 1284 | Social Champ | Social Media | [socialchamp.io](https://socialchamp.io) | ⏱️ (timeout) |
+| 1285 | Sprout Video | Social Media | [sproutvideo.com](https://sproutvideo.com) | ⏱️ (timeout) |
+| 1286 | Unit4 | ERP | [unit4.com](https://www.unit4.com) | ⚠️ (403) |
+| 1287 | Epicor Kinetic | ERP | [epicor.com](https://www.epicor.com) | ⏱️ (timeout) |
+| 1288 | Rootstock Cloud | ERP | [rootstock.com](https://www.rootstock.com) | ✅ (200) |
+| 1289 | Katana Manufacturing | ERP | [katana.com](https://www.katana.com) | ⚠️ (405) |
+| 1290 | Sage X3 | ERP | [sage.com](https://www.sage.com/enterprise-erp/sage-x3) | ✅ (200) |
+| 1291 | Aptean | ERP | [aptean.com](https://www.aptean.com) | ✅ (200) |
+| 1292 | Microsoft Dynamics 365 | ERP | [microsoft.com](https://www.microsoft.com/dynamics-365) | ✅ (200) |
+| 1293 | Oracle Fusion Cloud | ERP | [oracle.com/jp/applications/erp](https://www.oracle.com/jp/applications/erp) | ✅ (200) |
+| 1294 | NetSuite | ERP | [oracle.com/jp/netsuite](https://www.oracle.com/jp/netsuite) | ✅ (200) |
+| 1295 | IFS | ERP | [ifs.com](https://www.ifs.com) | ✅ (200) |
+| 1296 | Acumatica | ERP | [acumatica.com](https://www.acumatica.com) | ✅ (200) |
+| 1297 | Semrush | Social Media | [semrush.com](https://www.semrush.com) | ✅ (200) |
+| 1298 | Ahrefs | Social Media | [ahrefs.com](https://ahrefs.com) | ✅ (200) |
+| 1299 | Sprinklr Enterprise | Social Media | [sprinklr.com](https://www.sprinklr.com) | ✅ (200) |
+| 1300 | Hootsuite Enterprise | Social Media | [hootsuite.com](https://www.hootsuite.com) | ✅ (200) |
+| 1301 | CircleCI Enterprise | DevOps | [circleci.com](https://circleci.com) | ✅ (200) |
+| 1302 | Semaphore CI Enterprise | DevOps | [semaphoreci.com](https://semaphoreci.com) | ✅ (301) |
+| 1303 | Buildkite Enterprise | DevOps | [buildkite.com](https://buildkite.com) | ✅ (200) |
+| 1304 | Buddy Enterprise | DevOps | [buddy.works](https://buddy.works) | ✅ (200) |
+| 1305 | Spinnaker | DevOps | [spinnaker.io](https://spinnaker.io) | ✅ (200) |
+| 1306 | Argo CD | DevOps | [argoproj.github.io](https://argoproj.github.io/argo-cd) | ✅ (200) |
+| 1307 | Flux CD | DevOps | [fluxcd.io](https://fluxcd.io) | ✅ (200) |
+| 1308 | Codefresh | DevOps | [codefresh.io](https://codefresh.io) | ✅ (200) |
+| 1309 | Harness | DevOps | [harness.io](https://harness.io) | ✅ (200) |
+| 1310 | JFrog Artifactory | DevOps | [jfrog.com/artifactory](https://www.jfrog.com/artifactory) | ✅ (200) |
+| 1311 | GitLab Ultimate | DevOps | [about.gitlab.com/stages-devops/cicd](https://about.gitlab.com/stages-devops/cicd) | ✅ (200) |
+| 1312 | GitHub Enterprise | DevOps | [github.com/enterprise](https://github.com/enterprise) | ✅ (200) |
+| 1313 | Azure DevOps | DevOps | [azure.microsoft.com/devops](https://azure.microsoft.com/devops) | ✅ (200) |
+| 1314 | HashiCorp Terraform | DevOps | [terraform.io](https://www.terraform.io) | ✅ (200) |
+| 1315 | HashiCorp Vault | Security | [vaultproject.io](https://www.vaultproject.io) | ✅ (200) |
+| 1316 | HashiCorp Consul | DevOps | [consul.io](https://www.consul.io) | ✅ (200) |
+| 1317 | Ansible Automation | DevOps | [ansible.com/ansible](https://www.ansible.com/ansible/tower) | ✅ (200) |
+| 1318 | Puppet Enterprise | DevOps | [puppet.com/products/puppet-enterprise](https://www.puppet.com/products/puppet-enterprise) | ✅ (200) |
+| 1319 | Chef Automate | DevOps | [chef.io/products/chef-automate](https://www.chef.io/products/chef-automate) | ✅ (200) |
+| 1320 | SaltStack Enterprise | DevOps | [saltstack.com/products/enterprise](https://www.saltstack.com/products/enterprise) | ✅ (200) |
 
 ---
 
-**Total**: 1235 services (all with URL検証カラム)
+**Total**: 1320 services (all with URL検証カラム)
+
+---
+
+**Last updated**: 2026-02-26 05:00 (Asia/Tokyo)
+**Updates in this revision**:
+- ADDED 85 new services with URL検証カラム validation (IDs 1236-1320)
+- Security: +19 services (now 20+ with Trend Micro, CrowdStrike, SentinelOne, etc.)
+- Design/Video: +25 services (now 30+ with Adobe, CorelDRAW, Veed.io, etc.)
+- Social Media: +8 services (now 24+ with Sprout Social, Iconosquare, Semrush, etc.)
+- ERP: +10 services (now 26+ with Unit4, Epicor, Sage X3, etc.)
+- DevOps: +19 services (now 34+ with CircleCI, Semaphore CI, Buildkite, etc.)
+- All services validated: ✅ (200), ✅ (3xx redirects), ⚠️ (403/405), ⏱️ (timeout)
+- Previous fixes maintained: Salesforce Commerce, Zuora, SAP ERP, SendGrid, redirect services
 
 ---
 
