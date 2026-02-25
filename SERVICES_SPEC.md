@@ -203,11 +203,26 @@
 | 198 | Talentbox | タレントマネジメント | [talentbox.co.jp](https://talentbox.co.jp) |
 | 199 | StaffStart | 人材管理 | [staff-start.com](https://staff-start.com) |
 | 200 | Autobiz | RPA | [autobiz.jp](https://autobiz.jp) |
+| 201 | HRMOS | 人材管理 | [hrmos.co](https://hrmos.co) |
+| 202 | タレントパレット | 人材管理 | [pa-consul.co.jp](https://www.pa-consul.co.jp) |
+| 203 | クエステトラ | Project Management | [questetra.com](https://questetra.com) |
+| 204 | 楽々勤怠 | 勤怠管理 | [rakurakukintai.jp](https://www.rakurakukintai.jp) |
+| 205 | One人事 | 人材管理 | [onehr.jp](https://onehr.jp) |
+| 206 | オフィスステーション | 人材管理 | [officestation.jp](https://www.officestation.jp) |
+| 207 | クラウドハウス労務 | 人材管理 | [cloud-house.com](https://jp.cloud-house.com) |
+| 208 | Factory-ONE | 製造 | [ex-smart.co.jp](https://www.ex-smart.co.jp/factoryone/) |
+| 209 | UM SaaS Cloud | 製造 | [umsaascloud.jp](https://www.umsaascloud.jp) |
+| 210 | o9ソリューションズ | 製造 | [o9solutions.com](https://o9solutions.com) |
+| 211 | sonar ATS | 採用管理 | [sonar-ats.jp](https://sonar-ats.jp) |
+| 212 | invox | 会計 | [invox.jp](https://www.invox.jp) |
+| 213 | バクラク | 経費精算 | [bakuraku.jp](https://bakuraku.jp) |
+| 214 | 会計王 | 会計 | [sorimachi.co.jp](https://sorimachi.co.jp) |
+| 215 | ROBOT PAYMENT | 決済 | [robotpayment.co.jp](https://www.robotpayment.co.jp) |
 
 
 ---
 
-**Total**: 200 services
+**Total**: 215 services
 
 ---
 **Last updated**: 2026-02-25
