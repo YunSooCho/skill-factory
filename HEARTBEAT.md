@@ -1,37 +1,35 @@
-# Skill Factory Heartbeat - Auto Service Discovery
+# Skill Factory Heartbeat - AI-led Service Discovery
 
 ## 🧞 작업 (30분마다 자동 실행)
 
-### 1. 서비스 발견 & 스펙 생성
-```bash
-cd /path/to/skill-factory
-python3 scripts/auto_discover.py
-```
+### 1. AI 분석: 서비스 목록 검토
+- `SERVICES_SPEC.md` 읽기
+- 부족한 분야 식별
+- 새로운 아이디어 도출
 
-### 2. Git 자동화
-```bash
-cd /path/to/skill-factory
-python3 scripts/git_helper.py commit --message "feat: Auto-service-discovery" --push
-```
+### 2. AI 서비스 발견
+- 부족한 분야 기반으로 새로운 서비스 검색
+- 웹 검색으로 서비스 발견
+- 최소 10개 새로운 서비스 선정
+
+### 3. 서비스 등록
+- `SERVICES_SPEC.md` 업데이트 (하나의 통합 테이블)
+- 새로운 서비스 목록에 추가
+
+### 4. Git 자동화 (선택)
+- `git add SERVICES_SPEC.md`
+- `git commit -m "feat: AI-led service discovery"`
+- `git push`
 
 ## 📁 업데이트 대상
 
-- `SERVICES_SPEC.md` - 전체 서비스 목록
-- `services/*.md` - 서비스별 스펙 파일
-- `memory/discovered-services.json` - 발견된 서비스 DB
-- `memory/heartbeat-log.md` - 하트비트 기록
+- `SERVICES_SPEC.md` - 전체 서비스 목록 (단일 테이블)
 
 ## 🎯 목표
 
 - 30분마다 최소 10개 새로운 서비스 추가
 - 누적 1000개 서비스 스펙 완성
-- Git 자동 commit & push
-- 중단 없는 자동화 실행
-
-## 🔒 보안
-
-- memory/ 폴더는 .gitignore로 git 제외됨 (내부 DB만 커밋)
-- 민감한 정보는 git에 저장되지 않음
+- AI가 주도적으로 서비스 발견
 
 ---
 
@@ -39,5 +37,15 @@ python3 scripts/git_helper.py commit --message "feat: Auto-service-discovery" --
 
 하트비트가 실행될 때:
 1. `cd /Users/clks001/.openclaw/workspace/github/skill-factory`
-2. `python3 scripts/auto_discover.py` - 자동 서비스 발견 & 스펙 생성
-3. `python3 scripts/git_helper.py commit --message "feat: Auto-service-discovery $(date)" --push` - Git 자동화
+2. AI 분석:
+   - `cat SERVICES_SPEC.md` - 현재 서비스 목록 read
+   - 부족한 분야/카테고리 식별
+   - 새로운 분야나 빈 공간 도출
+3. AI 발견:
+   - 부족한 분야를 기반으로 웹 검색
+   - 각 분야에서 최소 10개 새로운 서비스 발견
+4. AI 등록:
+   - `SERVICES_SPEC.md` 업데이트 (단일 테이블에 추가)
+   - 포맷: `| # | サービス | カテゴリー | ホームページ |` 유지
+5. Git 자동화 (선택):
+   - `git add SERVICES_SPEC.md && git commit -m "feat: AI-led service discovery" && git push`
