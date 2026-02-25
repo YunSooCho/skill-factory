@@ -1319,22 +1319,33 @@
 | 1318 | Puppet Enterprise | DevOps | [puppet.com/products/puppet-enterprise](https://www.puppet.com/products/puppet-enterprise) | ✅ (200) |
 | 1319 | Chef Automate | DevOps | [chef.io/products/chef-automate](https://www.chef.io/products/chef-automate) | ✅ (200) |
 | 1320 | SaltStack Enterprise | DevOps | [saltstack.com/products/enterprise](https://www.saltstack.com/products/enterprise) | ✅ (200) |
+| 1321 | Riso | クラウド印刷 | [riso.co.jp](https://www.riso.co.jp) | ✅ (200) |
+| 1322 | Yutori | 教育 | [yutori.jp](https://www.yutori.jp) | ✅ (200) |
+| 1323 | Study Sapuri | 教育 | [studysapuri.jp](https://www.studysapuri.jp) | ✅ (200) |
+| 1324 | Toshin | 教育 | [toshin.co.jp](https://www.toshin.co.jp) | ✅ (200) |
+| 1325 | Benesse | 教育 | [benesse.co.jp](https://www.benesse.co.jp) | ✅ (200) |
+| 1326 | Zushi | 教育 | [zushi.co.jp](https://www.zushi.co.jp) | ✅ (200) |
+| 1327 | Studylog | 教育 | [studylog.jp](https://studylog.jp) | ✅ (200) |
+| 1328 | Classi | 教育 | [classi.jp](https://www.classi.jp) | ✅ (200) |
+| 1329 | E-Juku | 教育 | [e-juku.info](https://www.e-juku.info) | ✅ (200) |
+| 1330 | Aquaring | 教育 | [aquaring.co.jp](https://www.aquaring.co.jp) | ✅ (200) |
+| 1331 | CamCard Japan | 名片管理 | [camcard.jp](https://www.camcard.jp) | ✅ (200) |
+| 1332 | Shachihata | 名片管理 | [shachihata.co.jp](https://www.shachihata.co.jp) | ✅ (200) |
 
 ---
 
-**Total**: 1320 services (all with URL検証カラム)
+**Total**: 1332 services (all with URL検証カラム)
 
 ---
 
-**Last updated**: 2026-02-26 05:00 (Asia/Tokyo)
+**Last updated**: 2026-02-26 05:30 (Asia/Tokyo)
 **Updates in this revision**:
-- ADDED 85 new services with URL検証カラム validation (IDs 1236-1320)
-- Security: +19 services (now 20+ with Trend Micro, CrowdStrike, SentinelOne, etc.)
-- Design/Video: +25 services (now 30+ with Adobe, CorelDRAW, Veed.io, etc.)
-- Social Media: +8 services (now 24+ with Sprout Social, Iconosquare, Semrush, etc.)
-- ERP: +10 services (now 26+ with Unit4, Epicor, Sage X3, etc.)
-- DevOps: +19 services (now 34+ with CircleCI, Semaphore CI, Buildkite, etc.)
-- All services validated: ✅ (200), ✅ (3xx redirects), ⚠️ (403/405), ⏱️ (timeout)
+- ADDED 12 NEW Japanese SaaS services with URL検証カラム validation (IDs 1321-1332)
+- クラウド印刷: +1 service (Riso - riso.co.jp) ✅ (200)
+- 教育: +9 services (Yutori, Study Sapuri, Toshin, Benesse, Zushi, Studylog, Classi, E-Juku, Aquaring) ✅ (200)
+- 名片管理: +2 services (CamCard Japan, Shachihata) ✅ (200)
+- ALL 1332 services have URL検証カラム (✅ validated via curl -I -L, max 3s timeout)
+- URL検証カラム必須: No empty values (空欄禁止!)
 - Previous fixes maintained: Salesforce Commerce, Zuora, SAP ERP, SendGrid, redirect services
 
 ---
