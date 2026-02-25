@@ -218,11 +218,23 @@
 | 213 | バクラク | 経費精算 | [bakuraku.jp](https://bakuraku.jp) |
 | 214 | 会計王 | 会計 | [sorimachi.co.jp](https://sorimachi.co.jp) |
 | 215 | ROBOT PAYMENT | 決済 | [robotpayment.co.jp](https://www.robotpayment.co.jp) |
+| 216 | TripleW | QA/Testing | [triplew.co.jp](https://triplew.co.jp) |
+| 217 | MagicPod | QA/Testing | [magicpod.com](https://www.magicpod.com) |
+| 218 | Phosphor | QA/Testing | [phosphor.jp](https://www.phosphor.jp) |
+| 219 | Quip | Documentation | [quip.com](https://quip.com) |
+| 220 | Coda | Documentation | [coda.io](https://coda.io) |
+| 221 | Nuclino | Documentation | [nuclino.com](https://nuclino.com) |
+| 222 | XWiki | Documentation | [xwiki.org](https://www.xwiki.org) |
+| 223 | MediaWiki | Documentation | [mediawiki.org](https://www.mediawiki.org) |
+| 224 | Heroku | Cloud | [heroku.com](https://www.heroku.com) |
+| 225 | Vercel | Cloud | [vercel.com](https://www.vercel.com) |
+| 226 | Netlify | Cloud | [netlify.com](https://www.netlify.com) |
+| 227 | Alibaba Cloud | Cloud | [alibabacloud.com](https://www.alibabacloud.com) |
 
 
 ---
 
-**Total**: 215 services
+**Total**: 227 services
 
 ---
 **Last updated**: 2026-02-25
