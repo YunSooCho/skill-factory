@@ -2,50 +2,39 @@
 
 | # | サービス | カテゴリー | ホームページ |
 |---|----------|----------|-------------|
-| 1 | eat POS | POS | [eat-sys.jp](https://www.eat-sys.jp) |
-| 2 | Hacobell | POS | [hacobell.jp](https://www.hacobell.jp) |
-| 3 | Happy Cloud | POS | [happycloud.jp](https://www.happycloud.jp) |
-| 4 | AirRegister | POS | [airregi.jp](https://airregi.jp) |
-| 5 | StoreApps | POS | [unite.co.jp](https://unite.co.jp) |
-| 6 | REACH | POS | [reac.jp](https://reac.jp) |
-| 7 | Smaregi | POS | [smaregi.jp](https://www.smaregi.jp) |
-| 8 | Urushi | POS | [urushi.jp](https://urushi.jp) |
-| 9 | U-System | POS | [u-sys.co.jp](https://www.u-sys.co.jp) |
-| 10 | Tablize | POS | [tablize.jp](https://tablize.jp) |
-| 11 | espos | POS | [espos.jp](https://espos.jp) |
-| 12 | a-cashier | POS | [a-cashier.jp](https://a-cashier.jp) |
-| 13 | SmartDB | Database | [smartdb.jp](https://www.smartdb.jp) |
-| 14 | kintone | CRM | [kintone.cybozu.com](https://kintone.cybozu.com) |
-| 15 | cybozu | CRM | [cybozu.com](https://cybozu.com) |
-| 16 | nend | Marketing | [nend.net](https://nend.net) |
-| 17 | FANSHIP | Marketing | [fanship.jp](https://fanship.jp) |
-| 18 | Note | Content | [note.com](https://note.com) |
-| 19 | Cacoo | Diagram | [cacoo.com](https://cacoo.com) |
-| 20 | Backlog | Project Management | [backlog.com](https://backlog.com) |
-| 21 | shop-pro | EC | [shop-pro.jp](https://shop-pro.jp) |
-| 22 | makeshop | EC | [makeshop.jp](https://www.makeshop.jp) |
-| 23 | ec-cube | EC | [ec-cube.net](https://www.ec-cube.net) |
-| 24 | paypal-japan | 決済 | [paypal.com/jp](https://www.paypal.com/jp) |
-| 25 | sb-payment | 決済 | [sbpayment.jp](https://www.sbpayment.jp) |
-| 26 | gmo-payment | 決済 | [gmo-pg.jp](https://www.gmo-pg.jp) |
-| 27 | sonet-payment | 決済 | [sonetpayment.jp](https://sonetpayment.jp) |
-| 28 | eMedical | 医療 | [emedical.co.jp](https://www.emedical.co.jp) |
-| 29 | MUSE | 医療 | [muse-cloud.com](https://www.muse-cloud.com) |
-| 30 | Clinic Cloud | 医療 | [clinic-cloud.com](https://www.clinic-cloud.com) |
-| 31 | manaba | 教育 | [manaba.jp](https://www.manaba.jp) |
-| 32 | Schoo | 教育 | [schoo.jp](https://www.schoo.jp) |
-| 33 | Studyplus | 教育 | [studyplus.jp](https://www.studyplus.jp) |
-| 34 | SAP ERP | 製造 | [sap.com/jp](https://www.sap.com/jp) |
-| 35 | Oracle NetSuite | 製造 | [oracle.com/jp/netsuite](https://www.oracle.com/jp/netsuite) |
-| 36 | Smart Factory | 製造 | [smart-factory.jp](https://www.smart-factory.jp) |
-| 37 | freee | 会計 | [freee.co.jp](https://www.freee.co.jp) |
-| 38 | Money Forward | 会計 | [moneyforward.com](https://www.moneyforward.com) |
-| 39 | Zoho Books | 会計 | [zoho.com/jp/books](https://www.zoho.com/jp/books) |
+| 1 | AirRegister | POS | [airregi.jp](https://airregi.jp) |
+| 2 | StoreApps | POS | [unite.co.jp](https://unite.co.jp) |
+| 3 | REACH | POS | [www.reac.jp](https://www.reac.jp/) |
+| 4 | Smaregi | POS | [smaregi.jp](https://smaregi.jp) |
+| 5 | Urushi | POS | [www.urushi.jp](https://www.urushi.jp/) |
+| 6 | U-System | POS | [usystem.jp](https://usystem.jp/) |
+| 7 | eMedical | 医療 | [emedical.co.jp](https://www.emedical.co.jp) |
+| 8 | MUSE | 医療 | [muse-cloud.com](https://www.muse-cloud.com) |
+| 9 | Clinic Cloud | 医療 | [clinic-cloud.com](https://www.clinic-cloud.com) |
+| 10 | Note | Content | [note.com](https://note.com) |
+| 11 | kintone | CRM | [kintone.cybozu.com](https://kintone.cybozu.com) |
+| 12 | cybozu | CRM | [www.cybozu.com](https://www.cybozu.com/) |
+| 13 | FANSHIP | Marketing | [www.fanship.jp](https://www.fanship.jp/) |
+| 14 | Cacoo | Diagram | [nulab.com/cacoo](https://nulab.com/cacoo/) |
+| 15 | Backlog | Project Management | [nulab.com/backlog](https://nulab.com/backlog/) |
+| 16 | shop-pro | EC | [shop-pro.jp](https://shop-pro.jp) |
+| 17 | makeshop | EC | [makeshop.jp](https://www.makeshop.jp) |
+| 18 | paypal-japan | 決済 | [paypal.com/jp/home](https://www.paypal.com/jp/home) |
+| 19 | sb-payment | 決済 | [sbpayment.jp](https://www.sbpayment.jp) |
+| 20 | manaba | 教育 | [manaba.jp](https://www.manaba.jp) |
+| 21 | Schoo | 教育 | [schoo.jp](https://www.schoo.jp) |
+| 22 | Studyplus | 教育 | [studyplus.jp](https://www.studyplus.jp) |
+| 23 | SAP ERP | 製造 | [sap.com/jp](https://www.sap.com/jp) |
+| 24 | Oracle NetSuite | 製造 | [oracle.com/jp/netsuite](https://www.oracle.com/jp/netsuite) |
+| 25 | Smart Factory | 製造 | [smart-factory.jp](https://www.smart-factory.jp) |
+| 26 | freee | 会計 | [freee.co.jp](https://www.freee.co.jp) |
+| 27 | Money Forward | 会計 | [moneyforward.com](https://www.moneyforward.com) |
+| 28 | Zoho Books | 会計 | [zoho.com/jp/books](https://www.zoho.com/jp/books) |
 
 ---
 
-**Total**: 39 services
+**Total**: 28 services (after removing 11 invalid URLs)
 
 ---
 
-**Last updated**: 2026-02-25
+**Last updated**: 2026-02-25 | **URL validation**: completed
