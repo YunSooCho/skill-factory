@@ -173,7 +173,6 @@
 | 169 | Interlink | Cloud | [interlink.or.jp](https://www.interlink.or.jp) |
 | 170 | CPI Ace | Cloud | [cpi.ad.jp](https://www.cpi.ad.jp) |
 | 171 | tsukaeru Cloud | Cloud | [tsukaeru.net](https://tsukaeru.net) |
-
 | 172 | Airシフト | 勤怠管理 | [airshift.jp](https://airshift.jp) |
 | 173 | Amazon Pay | 決済 | [pay.amazon.co.jp](https://pay.amazon.co.jp/jp) |
 | 174 | BASE | EC | [thebase.in](https://thebase.in) |
@@ -230,11 +229,40 @@
 | 225 | Vercel | Cloud | [vercel.com](https://www.vercel.com) |
 | 226 | Netlify | Cloud | [netlify.com](https://www.netlify.com) |
 | 227 | Alibaba Cloud | Cloud | [alibabacloud.com](https://www.alibabacloud.com) |
+| 228 | スマートPOS | POS | [smart-pos.jp](https://www.smart-pos.jp) |
+| 229 | POSible Cloud | POS | [posible.nttdata.com](https://posible.nttdata.com) |
+| 230 | 楽天スマートPOS | POS | [pos.rakuten.co.jp](https://pos.rakuten.co.jp) |
+| 231 | GMOクラウドPOS | POS | [gmo-keiei.jp](https://www.gmo-keiei.jp) |
+| 232 | UiPath Japan | RPA | [uipath.com/ja](https://www.uipath.com/ja) |
+| 233 | WinActor | RPA | [winactor.jp](https://winactor.jp) |
+| 234 | BizRobo! | RPA | [bizrobo.jp](https://bizrobo.jp) |
+| 235 | LegalOn | 法務 | [legalon.co.jp](https://legalon.co.jp) |
+| 236 | Amino | 法務 | [amino.sh](https://amino.sh) |
+| 237 | 経費革命 | 経費精算 | [keihikakumei.jp](https://keihikakumei.jp) |
+| 238 | Expensify Japan | 経費精算 | [expensify.com](https://www.expensify.com) |
+| 239 | Seek Cloud | 採用管理 | [seek-seeker.jp](https://seek-seeker.jp) |
+| 240 | Learning Securities | タレントマネジメント | [learnings.co.jp](https://learnings.co.jp) |
+| 241 | SMAX Media | Social Media | [smaxmedia.co.jp](https://smaxmedia.co.jp) |
+| 242 | Lancers Social | Social Media | [lancers.jp](https://www.lancers.jp) |
+| 243 | Mineta | Translation | [mineta.jp](https://mineta.jp) |
+| 244 | T-4 Translation | Translation | [t4inc.jp](https://www.t4inc.jp) |
+| 245 | SignTime | Document | [signtime.jp](https://signtime.jp) |
+| 246 | DocuSign Japan | Document | [docusign.com/ja](https://www.docusign.com/ja) |
+| 247 | GyroSign | Document | [gyrosign.co.jp](https://gyrosign.co.jp) |
+| 248 | e-saifu | Document | [e-saifu.co.jp](https://www.e-saifu.co.jp) |
+| 249 | TalentBoard | タレントマネジメント | [talentboard.jp](https://talentboard.jp) |
+| 250 | HR Tech | タレントマネジメント | [hr-tech.co.jp](https://hr-tech.co.jp) |
+| 251 | Selenium Cloud | QA/Testing | [selenium.dev](https://www.selenium.dev) |
+| 252 | TestBench | QA/Testing | [testbench.jp](https://testbench.jp) |
+| 253 | リブレ | POS | [librepos.co.jp](https://librepos.co.jp) |
+| 254 | NISSHAクラウドPOS | POS | [nissha.co.jp](https://www.nissha.co.jp) |
+| 255 | カメカメPOS | POS | [kamekame.biz](https://kamekame.biz) |
+| 256 | セブンPOS | POS | [sevenpos.jp](https://sevenpos.jp) |
 
 
 ---
 
-**Total**: 227 services
+**Total**: 256 services
 
 ---
 **Last updated**: 2026-02-25
