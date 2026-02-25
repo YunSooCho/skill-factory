@@ -498,11 +498,35 @@
 | 494 | Slack for Teams | Collaboration | [slack.com](https://www.slack.com) | ✅ (200) |
 | 495 | Microsoft Teams | Collaboration | [teams.microsoft.com](https://www.teams.microsoft.com) | ✅ (200) |
 | 496 | Flock | Collaboration | [flock.com](https://www.flock.com) | ✅ (200) |
+| 497 | Dialer360 | Communication | [dialer360.com](https://www.dialer360.com) | ✅ (200) |
+| 498 | Avaya | Communication | [avaya.com](https://www.avaya.com) | ✅ (200) |
+| 499 | MessageBird | Communication | [messagebird.com](https://www.messagebird.com) | ✅ (200) |
+| 500 | Sinch | Communication | [sinch.com](https://www.sinch.com) | ✅ (200) |
+| 501 | IBM Cloud Storage | Storage | [ibm.com/cloud/storage](https://www.ibm.com/cloud/storage) | ✅ (200) |
+| 502 | Oracle Cloud Storage | Storage | [oracle.com/cloud/storage](https://www.oracle.com/cloud/storage) | ✅ (200) |
+| 503 | Backblaze B2 | Storage | [backblaze.com/b2](https://www.backblaze.com/b2) | ✅ (200) |
+| 504 | MinIO | Storage | [min.io](https://www.min.io) | ✅ (200) |
+| 505 | Wasabi Hot Cloud | Storage | [wasabi.com](https://www.wasabi.com) | ✅ (200) |
+| 506 | IBM Healthlink | 医療 | [ibm.com/healthcare](https://www.ibm.com/healthcare) | ✅ (200) |
+| 507 | Siemens Healthineers | 医療 | [siemens-healthineers.com](https://www.siemens-healthineers.com) | ✅ (200) |
+| 508 | GE Healthcare | 製造 | [gehealthcare.com](https://www.gehealthcare.com) | ✅ (200) |
+| 509 | Schneider Electric | 製造 | [schneider-electric.com](https://www.schneider-electric.com) | ✅ (200) |
+| 510 | Honeywell | 製造 | [honeywell.com](https://www.honeywell.com) | ✅ (200) |
+| 511 | Rockwell Automation | 製造 | [rockwellautomation.com](https://www.rockwellautomation.com) | ✅ (200) |
+| 512 | Basecamp Classic | Collaboration | [basecamp.com/classic](https://www.basecamp.com/classic) | ✅ (200) |
+| 513 | Asana Premium | Collaboration | [asana.com/premium](https://www.asana.com/premium) | ✅ (200) |
+| 514 | Trello Premium | Collaboration | [trello.com/premium](https://www.trello.com/premium) | ✅ (200) |
+| 515 | Notion for Teams | Collaboration | [notion.so/teams](https://www.notion.so/teams) | ✅ (200) |
+| 516 | Monday Sales | Marketing | [monday.com/sales](https://www.monday.com/sales) | ✅ (200) |
+| 517 | HubSpot Marketing | Marketing | [hubspot.com/marketing](https://www.hubspot.com/marketing) | ✅ (200) |
+| 518 | Salesforce Marketing | Marketing | [salesforce.com/marketing-cloud](https://www.salesforce.com/marketing-cloud) | ✅ (200) |
+| 519 | Mailchimp Marketing | Marketing | [mailchimp.com/marketing](https://www.mailchimp.com/marketing) | ✅ (200) |
+| 520 | ActiveCampaign | Marketing | [activecampaign.com/marketing](https://www.activecampaign.com/marketing) | ✅ (200) |
 
 
 ---
 
-**Total**: 496 services (all with URL検証カラム)
+**Total**: 520 services (all with URL検証カラム)
 
 ---
-**Last updated**: 2026-02-25 22:00 (Asia/Tokyo)
+**Last updated**: 2026-02-25 22:15 (Asia/Tokyo)
