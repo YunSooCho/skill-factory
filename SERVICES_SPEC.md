@@ -215,3 +215,31 @@
 | 18 | Zendesk Japan | 고객지원 | [https://www.zendesk.jp](https://www.zendesk.jp) | 📋 대기 | 0% |
 | 19 | Freshdesk Japan | 고객지원 | [https://freshdesk.com/ja](https://freshdesk.com/ja) | 📋 대기 | 0% |
 | 20 | Help Scout | 고객지원 | [https://www.helpscout.com](https://www.helpscout.com) | 📋 대기 | 0% |
+
+
+## 🔄 하트비트 업데이트 (2026-02-25 09:31:11) - 로테이션 #1
+
+📊 **총 20개 서비스 발견 (인덱스: 20-40)**
+
+| # | 서비스 | 업종 | 홈페이지 | 상태 | 개발 |
+|---|--------|------|---------|------|------|
+| 1 | Chatwork | 커뮤니케이션 | [https://go.chatwork.com](https://go.chatwork.com) | 📋 대기 | 0% |
+| 2 | Slack | 커뮤니케이션 | [https://slack.com](https://slack.com) | 📋 대기 | 0% |
+| 3 | Microsoft Teams | 커뮤니케이션 | [https://www.microsoft.com/ja-jp/microsoft-teams](https://www.microsoft.com/ja-jp/microsoft-teams) | 📋 대기 | 0% |
+| 4 | LINE WORKS | 커뮤니케이션 | [https://line.worksmobile.co.jp](https://line.worksmobile.co.jp) | 📋 대기 | 0% |
+| 5 | Cisco Webex | 커뮤니케이션 | [https://www.webex.com/jp](https://www.webex.com/jp) | 📋 대기 | 0% |
+| 6 | Rakuten Ichiba | EC | [https://www.rakuten.co.jp](https://www.rakuten.co.jp) | 📋 대기 | 0% |
+| 7 | Shopify Japan | EC | [https://www.shopify.com/ja](https://www.shopify.com/ja) | 📋 대기 | 0% |
+| 8 | BASE | EC | [https://thebase.in](https://thebase.in) | 📋 대기 | 0% |
+| 9 | Stores.jp | EC | [https://stores.jp](https://stores.jp) | 📋 대기 | 0% |
+| 10 | MakeShop | EC | [https://www.makeshop.jp](https://www.makeshop.jp) | 📋 대기 | 0% |
+| 11 | CartStar | EC | [https://cartstar.jp](https://cartstar.jp) | 📋 대기 | 0% |
+| 12 | GMO Payment | 결제 | [https://www.gmo-pg.jp](https://www.gmo-pg.jp) | 📋 대기 | 0% |
+| 13 | SB Payment | 결제 | [https://www.softbankpayment.co.jp](https://www.softbankpayment.co.jp) | 📋 대기 | 0% |
+| 14 | Stripe Japan | 결제 | [https://stripe.com/ja](https://stripe.com/ja) | 📋 대기 | 0% |
+| 15 | Square Japan | 결제 | [https://squareup.com/ja/jp](https://squareup.com/ja/jp) | 📋 대기 | 0% |
+| 16 | PayPay | 결제 | [https://paypay.ne.jp](https://paypay.ne.jp) | 📋 대기 | 0% |
+| 17 | Re:amaze | 고객지원 | [https://www.reamaze.com](https://www.reamaze.com) | 📋 대기 | 0% |
+| 18 | Zendesk Japan | 고객지원 | [https://www.zendesk.jp](https://www.zendesk.jp) | 📋 대기 | 0% |
+| 19 | Freshdesk Japan | 고객지원 | [https://freshdesk.com/ja](https://freshdesk.com/ja) | 📋 대기 | 0% |
+| 20 | Help Scout | 고객지원 | [https://www.helpscout.com](https://www.helpscout.com) | 📋 대기 | 0% |
