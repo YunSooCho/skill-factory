@@ -271,3 +271,28 @@
 | 18 | Zendesk Japan | 고객지원 | [https://www.zendesk.jp](https://www.zendesk.jp) | 📋 대기 | 0% |
 | 19 | Freshdesk Japan | 고객지원 | [https://freshdesk.com/ja](https://freshdesk.com/ja) | 📋 대기 | 0% |
 | 20 | Help Scout | 고객지원 | [https://www.helpscout.com](https://www.helpscout.com) | 📋 대기 | 0% |
+
+
+## 🔄 하트비트 업데이트 (2026-02-25 10:25:29) - 업종별
+
+📊 **총 4개 서비스 발견**
+
+### 🏢 소매 & EC
+
+| 서비스 | 홈페이지 | 상태 | 개발 |
+|--------|---------|------|------|
+| GMO Payment | [https://www.gmo-pg.jp](https://www.gmo-pg.jp) | 🔨 개발중 | 30% |
+| Rakuten | [https://www.rakuten.co.jp](https://www.rakuten.co.jp) | 🔨 개발중 | 30% |
+
+### 🏢 기업/사무
+
+| 서비스 | 홈페이지 | 상태 | 개발 |
+|--------|---------|------|------|
+| freee | [https://www.freee.co.jp](https://www.freee.co.jp) | 📋 대기 | 0% |
+
+### 🏢 음식 & 레스토랑
+
+| 서비스 | 홈페이지 | 상태 | 개발 |
+|--------|---------|------|------|
+| eat POS | [https://www.eat-sys.jp](https://www.eat-sys.jp) | 📋 대기 | 0% |
+
