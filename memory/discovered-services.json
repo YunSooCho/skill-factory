@@ -92,6 +92,51 @@
       "industry": "Project Management",
       "homepage": "https://backlog.com",
       "status": "pending"
+    },
+    {
+      "name": "shop-pro",
+      "category": "EC",
+      "homepage": "https://shop-pro.jp"
+    },
+    {
+      "name": "makeshop",
+      "category": "EC",
+      "homepage": "https://www.makeshop.jp"
+    },
+    {
+      "name": "ec-cube",
+      "category": "EC",
+      "homepage": "https://www.ec-cube.net"
+    },
+    {
+      "name": "paypal-japan",
+      "category": "決済",
+      "homepage": "https://www.paypal.com/jp"
+    },
+    {
+      "name": "sb-payment",
+      "category": "決済",
+      "homepage": "https://www.sbpayment.jp"
+    },
+    {
+      "name": "gmo-payment",
+      "category": "決済",
+      "homepage": "https://www.gmo-pg.jp"
+    },
+    {
+      "name": "sonet-payment",
+      "category": "決済",
+      "homepage": "https://.sonetpayment.jp"
+    },
+    {
+      "name": "espos",
+      "category": "POS",
+      "homepage": "https://espos.jp"
+    },
+    {
+      "name": "a-cashier",
+      "category": "POS",
+      "homepage": "https://a-cashier.jp"
     }
   ],
   "2026-02-25-new": {
