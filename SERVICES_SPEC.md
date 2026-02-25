@@ -916,11 +916,74 @@
 | 914 | Scaleway | Cloud | [scaleway.com](https://www.scaleway.com) | ✅ (200) |
 | 915 | Linode | Cloud | [linode.com](https://www.linode.com) | ✅ (200) |
 | 916 | Vultr | Cloud | [vultr.com](https://www.vultr.com) | ✅ (200) |
+| 917 | Bizmates | 教育 | [bizmates.jp](https://www.bizmates.jp) | ✅ (200) |
+| 918 | LearnO | 教育 | [learn-o.com](https://www.learn-o.com) | ✅ (200) |
+| 919 | manebi | 教育 | [manebi.co.jp](https://manebi.co.jp) | ✅ (200) |
+| 920 | UMU | 教育 | [umu.co.jp](https://umu.co.jp) | ✅ (200) |
+| 921 | Digital Cruise LMS | 教育 | [digital-cruise.co.jp](https://www.digital-cruise.co.jp/lms/) | ✅ (200) |
+| 922 | Velmor LMS | 教育 | [alnetz.co.jp](https://alnetz.co.jp/service/velmor-lms/) | ✅ (200) |
+| 923 | PeopleX | 教育 | [peoplex.jp](https://peoplex.jp) | ✅ (200) |
+| 924 | Moodle LMS | 教育 | [e-learning.co.jp](https://www.e-learning.co.jp) | ✅ (200) |
+| 925 | Cornerstone Learning | タレントマネジメント | [cornerstoneondemand.com](https://www.cornerstoneondemand.com) | ✅ (200) |
+| 926 | Smart Boarding | 教育 | [smartboarding.jp](https://www.smartboarding.jp) | ✅ (200) |
+| 927 | Schoo for Business | 教育 | [business.schoo.jp](https://business.schoo.jp) | ✅ (200) |
+| 928 | CareERship | 教育 | [careership.co.jp](https://www.careership.co.jp) | ❌ (404) |
+| 929 | Teachme Biz | Document | [teachme.biz](https://www.teachme.biz) | ✅ (200) |
+| 930 | Net Learning | 教育 | [netlearning.co.jp](https://www.netlearning.co.jp) | ❌ (timeout) |
+| 931 | GitLab Self-Managed | Git | [gitlab.com](https://about.gitlab.com) | ✅ (200) |
+| 932 | Helix4G (Perforce) | Git | [perforce.com](https://www.perforce.com) | ✅ (200) |
+| 933 | Azure DevOps (Git) | Git | [dev.azure.com](https://dev.azure.com) | ✅ (200) |
+| 934 | Fossil | Git | [fossil-scm.org](https://www.fossil-scm.org) | ✅ (200) |
+| 935 | Subversion (SVN) | Git | [subversion.apache.org](https://subversion.apache.org) | ✅ (200) |
+| 936 | Bitbucket Data Center | Git | [atlassian.com](https://www.atlassian.com/software/bitbucket/enterprise/data-center) | ✅ (200) |
+| 937 | GitKraken | Git | [gitkraken.com](https://www.gitkraken.com) | ✅ (200) |
+| 938 | Sourcegraph | Git | [sourcegraph.com](https://about.sourcegraph.com) | ✅ (200) |
+| 939 | Nuclino | Document | [nuclino.com](https://www.nuclino.com) | ✅ (200) |
+| 940 | Notion JP | Document | [notion.so](https://www.notion.so/ja-jp) | ✅ (200) |
+| 941 | Quip | Document | [quip.com](https://quip.com) | ✅ (200) |
+| 942 | Slite | Document | [slite.com](https://slite.com) | ✅ (200) |
+| 943 | Coda | Document | [coda.io](https://coda.io) | ✅ (200) |
+| 944 | Workvivo | Document | [workvivo.com](https://www.workvivo.com) | ✅ (200) |
+| 945 | Samepage | Document | [samepage.io](https://samepage.io) | ✅ (200) |
+| 946 | DeepL | Translation | [deepl.com](https://www.deepl.com) | ✅ (200) |
+| 947 | Google Translate | Translation | [translate.google.com](https://translate.google.com) | ✅ (200) |
+| 948 | DeepL Pro | Translation | [deepl.com](https://www.deepl.com/pro) | ✅ (200) |
+| 949 | Chatwork Translate | Translation | [chatwork.com](https://go.chatwork.com) | ✅ (200) |
+| 950 | Linguee | Translation | [linguee.com](https://www.linguee.com) | ✅ (200) |
+| 951 | SDL Trados | Translation | [trados.com](https://www.trados.com) | ✅ (200) |
+| 952 | PagerDuty | IT Service | [pagerduty.com](https://www.pagerduty.com) | ✅ (200) |
+| 953 | ServiceNow | IT Service | [servicenow.com](https://www.servicenow.com) | ✅ (200) |
+| 954 | Datadog | IT Service | [datadoghq.com](https://www.datadoghq.com) | ✅ (200) |
+| 955 | New Relic | IT Service | [newrelic.com](https://newrelic.com) | ✅ (200) |
+| 956 | Splunk | IT Service | [splunk.com](https://www.splunk.com) | ✅ (200) |
+| 957 | SolarWinds | IT Service | [solarwinds.com](https://www.solarwinds.com) | ✅ (200) |
+| 958 | jinjer勤怠 | 勤怠管理 | [jinjer.jp](https://kintai.jinjer.jp) | ❌ (timeout) |
+| 959 | freee勤怠 | 勤怠管理 | [freee.co.jp](https://kintai.freee.co.jp) | ❌ (timeout) |
+| 960 | AKASHI | 勤怠管理 | [lunaworks.jp](https://lunaworks.jp) | ✅ (200) |
+| 961 | C CHANNEL | 勤怠管理 | [c-channel.kddi.com](https://c-channel.kddi.com) | ❌ (timeout) |
+| 962 | TeamSpirit | 勤怠管理 | [teamspirit.co.jp](https://www.teamspirit.co.jp) | ✅ (200) |
+| 963 | HRMoS | 勤怠管理 | [harmos.co.jp](https://www.harmos.co.jp) | ❌ (timeout) |
+| 964 | Sansan | 名片管理 | [sansan.com](https://www.sansan.com) | ✅ (200) |
+| 965 | Eight | 名片管理 | [8card.net](https://8card.net) | ✅ (200) |
+| 966 | CardMinder | 名片管理 | [pfu.fujitsu.com](https://pfu.fujitsu.com) | ✅ (200) |
+| 967 | 名片王 | 名片管理 | [king.jp](https://www.king.jp) | ✅ (200) |
+| 968 | Name Card Folder | 名片管理 | [king.jp](https://www.king.jp) | ✅ (200) |
+| 969 | SmartCard | 名片管理 | [smartcard.jp](https://www.smartcard.jp) | ✅ (200) |
+| 970 | Regus | オフィス | [regus.com](https://www.regus.com) | ✅ (200) |
+| 971 | WeWork | オフィス | [wework.com](https://www.wework.com) | ✅ (200) |
+| 972 | Spaces | オフィス | [spacesworks.com](https://www.spacesworks.com) | ✅ (200) |
+| 973 | Workstyle | オフィス | [workstyle.jp](https://www.workstyle.jp) | ❌ (timeout) |
+| 974 | KOTRA | オフィス | [kotra.or.jp](https://www.kotra.or.jp) | ✅ (200) |
+| 975 | Cross Office | オフィス | [crossoffice.jp](https://www.crossoffice.jp) | ✅ (200) |
+| 976 | Workday | タレントマネジメント | [workday.com](https://www.workday.com) | ✅ (200) |
+| 977 | SAP SuccessFactors | タレントマネジメント | [sap.com](https://www.sap.com) | ✅ (200) |
+| 978 | Oracle HCM | タレントマネジメント | [oracle.com](https://www.oracle.com) | ✅ (200) |
+| 979 | SumTotal | タレントマネジメント | [sumtotalsystems.com](https://www.sumtotalsystems.com) | ✅ (200) |
 
 ---
 
-**Total**: 916 services (all with URL検証カラム)
+**Total**: 979 services (all with URL検証カラム)
 
 ---
 
-**Last updated**: 2026-02-25 22:33 (Asia/Tokyo)
+**Last updated**: 2026-02-25 23:40 (Asia/Tokyo)
