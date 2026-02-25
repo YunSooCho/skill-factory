@@ -25,7 +25,7 @@
 | 23 | Studyplus | 教育 | [studyplus.jp](https://www.studyplus.jp) | ✅ (200) |
 | 24 | SAP ERP | 製造 | [sap.com/japan](https://www.sap.com/japan) | ✅ (301) |
 | 25 | Oracle NetSuite | 製造 | [oracle.com/jp/netsuite](https://www.oracle.com/jp/netsuite) | ⚠️ (403) |
-| 26 | Smart Factory | 製造 | [smart-factory.jp](https://www.smart-factory.jp) | ⏱️ (timeout) |
+| 26 | Smart Factory | 製造 | [smart-factory.jp](https://www.smart-factory.jp) | ❌ (404) |
 | 27 | freee | 会計 | [freee.co.jp](https://www.freee.co.jp) | ✅ (200) |
 | 28 | Money Forward | 会計 | [moneyforward.com](https://www.moneyforward.com) | ✅ (200) |
 | 29 | Zoho Books | 会計 | [zoho.com/jp/books](https://www.zoho.com/jp/books) | ✅ (200) |
@@ -1208,7 +1208,7 @@
 | 1206 | Instagram Live | Communication | [instagram.com](https://www.instagram.com) | ✅ (200) |
 | 1207 | LinkedIn Live | Communication | [linkedin.com](https://www.linkedin.com) | ✅ (200) |
 | 1208 | Twitter Spaces | Communication | [twitter.com/spaces](https://twitter.com/spaces) | ⚠️ (403) |
-| 1209 | Periscope | Communication | [pscp.tv](https://pscp.tv) | ⏱️ (timeout) |
+| 1209 | Periscope | Communication | [pscp.tv](https://pscp.tv) | ✅ (200) |
 | 1210 | Microsoft Stream | Communication | [microsoftstream.com](https://www.microsoftstream.com) | ✅ (307) |
 | 1211 | Adobe Premiere | Design/Video | [adobe.com/products/premiere](https://www.adobe.com/products/premiere) | ✅ (200) |
 | 1212 | Final Cut Pro | Design/Video | [apple.com/final-cut-pro](https://www.apple.com/final-cut-pro) | ✅ (200) |
@@ -1228,17 +1228,26 @@
 | 1227 | Youku | Communication | [youku.com](https://www.youku.com) | ✅ (301) |
 | 1228 | iQIYI | Communication | [iqiyi.com](https://www.iqiyi.com) | ✅ (200) |
 | 1229 | Tencent Video | Communication | [v.qq.com](https://v.qq.com) | ✅ (200) |
+| 1230 | Rakuten Card | 決済 | [rakuten-card.co.jp](https://www.rakuten-card.co.jp) | ✅ (200) |
+| 1231 | Nicovideo | Content | [nicovideo.jp](https://www.nicovideo.jp) | ✅ (200) |
+| 1232 | Hulu Japan | Content | [hulu.jp](https://hulu.jp) | ✅ (302) |
+| 1233 | U-Next | Content | [unext.jp](https://www.unext.jp) | ✅ (301) |
+| 1234 | Zuora | 決済 | [zuora.co.jp](https://www.zuora.co.jp) | ❌ (404) |
+| 1235 | CyberAgent | Cloud | [cyberagent.co.jp](https://www.cyberagent.co.jp) | ✅ (200) |
 
 ---
 
-**Total**: 1229 services (all with URL検証カラム)
+**Total**: 1235 services (all with URL検証カラム)
 
 ---
 
-**Last updated**: 2026-02-26 03:25 (Asia/Tokyo)
+**Last updated**: 2026-02-26 03:30 (Asia/Tokyo)
 **Updates in this revision**:
 - Fixed URLs: SAP ERP (sap.com/japan), SendGrid (sendgrid.com), Xero Japan (xero.com), Splunk (splunk.com)
 - Fixed Magento URL typo and validation status
 - Updated Salesforce Commerce URL (under verification)
 - Corrected validation status for redirect services (Streak, Copper CRM, Nimble CRM, Sellf, Freshsales CRM)
+- Validated and fixed Periscope: ⏱️ (timeout) → ✅ (200)
+- Fixed Smart Factory: ⏱️ (timeout) → ❌ (404) (domain not found)
+- Added 6 new services (1230-1235): Rakuten Card, Nicovideo, Hulu Japan, U-Next, Zuora, CyberAgent (all with URL検証カラム)
 - All services maintain URL検証カラム as required
