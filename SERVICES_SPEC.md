@@ -979,11 +979,152 @@
 | 977 | SAP SuccessFactors | タレントマネジメント | [sap.com](https://www.sap.com) | ✅ (200) |
 | 978 | Oracle HCM | タレントマネジメント | [oracle.com](https://www.oracle.com) | ✅ (200) |
 | 979 | SumTotal | タレントマネジメント | [sumtotalsystems.com](https://www.sumtotalsystems.com) | ✅ (200) |
+| 980 | クラウドプレイス | オフィス | [cloudplace.jp](https://cloudplace.jp) | ✅ (200) |
+| 981 | Office REVO | オフィス | [officerevo.jp](https://officerevo.jp) | ⏱️ (timeout) |
+| 982 | Works Human Life | タレントマネジメント | [workshuman.co.jp](https://www.workshuman.co.jp) | ✅ (200) |
+| 983 | ワークスアプリケーションズ | タレントマネジメント | [worksap.co.jp](https://www.worksap.co.jp) | ✅ (200) |
+| 984 | ジョブカン人材管理 | 人材管理 | [jobcan.co.jp](https://jobcan.co.jp) | ✅ (200) |
+| 985 | ゼロックス | クラウド印刷 | [fuji-xerox.co.jp](https://www.fuji-xerox.co.jp) | ⚠️ (403) |
+| 986 | L impression | 製造 | [limpression.co.jp](https://www.limpression.co.jp) | ⏱️ (timeout) |
+| 987 | e-sigan | 法務 | [esign.co.jp](https://esign.co.jp) | ⏱️ (timeout) |
+| 988 | SignDoc | 法務 | [signdoc.jp](https://signdoc.jp) | ⏱️ (timeout) |
+| 989 | OpenSign | 法務 | [opensign.jp](https://opensign.jp) | ✅ (200) |
+| 990 | G-SIGN | 法務 | [g-sign.co.jp](https://g-sign.co.jp) | ✅ (200) |
+| 991 | ニフティクラウド | Cloud | [nifty.com](https://cloud.nifty.com) | ⚠️ (403) |
+| 992 | ConoHa | Cloud | [conoha.jp](https://www.conoha.jp) | ✅ (200) |
+| 993 | Cloudn | Cloud | [cloudn.co.jp](https://cloudn.co.jp) | ✅ (200) |
+| 994 | さくらのクラウド | Cloud | [sakura.ad.jp](https://cloud.sakura.ad.jp) | ✅ (200) |
+| 995 | IDCFクラウド | Cloud | [idcf.jp](https://cloud.idcf.jp) | ✅ (200) |
+| 996 | GMOクラウド iCLUSTA | Cloud | [gmo-i.co.jp](https://iclusta.gmo-i.co.jp) | ⏱️ (timeout) |
+| 997 | NTTPC WebARENA | Cloud | [webarena.jp](https://webarena.jp) | ✅ (200) |
+| 998 | Bizメール | Email | [bizmail.ne.jp](https://bizmail.ne.jp) | ✅ (200) |
+| 999 | SendGrid Japan | Email | [sendgrid.kke.co.jp](https://sendgrid.kke.co.jp) | ⏱️ (timeout) |
+| 1000 | MailBee | Email | [mailbee.co.jp](https://mailbee.co.jp) | ✅ (200) |
+| 1001 | Cybozu Cloud | コラボレーション | [cybozu.com/cloud](https://www.cybozu.com/cloud) | ✅ (200) |
+| 1002 | Dracoon | Storage | [dracoon.com](https://www.dracoon.com) | ✅ (200) |
+| 1003 | pCloud Business | Storage | [pcloud.com](https://www.pcloud.com) | ✅ (200) |
+| 1004 | Nextcloud | Storage | [nextcloud.com](https://nextcloud.com) | ✅ (200) |
+| 1005 | ownCloud | Storage | [owncloud.com](https://owncloud.com) | ⏱️ (timeout) |
+| 1006 | Tresorit | Storage | [tresorit.com](https://www.tresorit.com) | ✅ (200) |
+| 1007 | SpiderOak | Storage | [spideroak.com](https://spideroak.com) | ⏱️ (timeout) |
+| 1008 | SecureSafe | Storage | [securesafe.com](https://www.securesafe.com) | ✅ (200) |
+| 1009 | Sync.com Business | Storage | [sync.com](https://sync.com) | ✅ (200) |
+| 1010 | MEGA | Storage | [mega.nz](https://www.mega.nz) | ✅ (200) |
+| 1011 | MediaFire Business | Storage | [mediafire.com](https://www.mediafire.com) | ✅ (200) |
+| 1012 | Icedrive | Storage | [icedrive.net](https://icedrive.net) | ✅ (200) |
+| 1013 | Degoo | Storage | [degoo.com](https://degoo.com) | ✅ (200) |
+| 1014 | Syncplicity | Storage | [syncplicity.com](https://www.syncplicity.com) | ✅ (200) |
+| 1015 | Citrix Content | Storage | [citrix.com](https://www.citrix.com) | ⚠️ (403) |
+| 1016 | Egnyte Connect | Storage | [egnyte.com](https://www.egnyte.com) | ✅ (200) |
+| 1017 | Kiteworks | Storage | [kiteworks.com](https://www.kiteworks.com) | ✅ (200) |
+| 1018 | Dropbox Transfer | Storage | [dropbox.com](https://www.dropbox.com) | ✅ (200) |
+| 1019 | WeTransfer | Storage | [wetransfer.com](https://www.wetransfer.com) | ✅ (200) |
+| 1020 | SendAnywhere | Storage | [send-anywhere.com](https://www.send-anywhere.com) | ✅ (200) |
+| 1021 | HubSpot CRM Japan | CRM | [hubspot.co.jp](https://www.hubspot.co.jp) | ✅ (200) |
+| 1022 | Zoho CRM Japan | CRM | [zoho.com/jp](https://www.zoho.com/jp) | ✅ (200) |
+| 1023 | Salesforce Japan | CRM | [salesforce.com/jp](https://www.salesforce.com/jp) | ✅ (200) |
+| 1024 | Pipedrive Japan | CRM | [pipedrive.co.jp](https://www.pipedrive.co.jp) | ✅ (200) |
+| 1025 | Bitrix24 | CRM | [bitrix24.jp](https://www.bitrix24.jp) | ✅ (200) |
+| 1026 | Vtiger | CRM | [vtiger.com](https://www.vtiger.com) | ✅ (200) |
+| 1027 | EspoCRM | CRM | [espocrm.com](https://www.espocrm.com) | ✅ (200) |
+| 1028 | Freshsales Suite | CRM | [freshsales.io](https://freshsales.io) | ✅ (200) |
+| 1029 | Zoho Bigin | CRM | [zoho.com/bigin](https://www.zoho.com/bigin) | ✅ (200) |
+| 1030 | Insightly | CRM | [insightly.com](https://www.insightly.com) | ✅ (200) |
+| 1031 | Less Annoying CRM | CRM | [lessannoyingcrm.com](https://www.lessannoyingcrm.com) | ✅ (200) |
+| 1032 | Agile CRM | CRM | [agilecrm.com](https://www.agilecrm.com) | ✅ (200) |
+| 1033 | Capsule | CRM | [capsulecrm.com](https://www.capsulecrm.com) | ✅ (200) |
+| 1034 | Monday Sales | CRM | [monday.com/sales](https://www.monday.com/sales) | ✅ (200) |
+| 1035 | HubSpot Sales | CRM | [hubspot.com/sales](https://www.hubspot.com/sales) | ✅ (200) |
+| 1036 | Really Simple Systems | CRM | [reallysimplesystems.com](https://www.reallysimplesystems.com) | ✅ (200) |
+| 1037 | Clarity | Analytics | [clarity.microsoft.com](https://clarity.microsoft.com) | ✅ (200) |
+| 1038 | Hotjar | Analytics | [hotjar.com](https://www.hotjar.com) | ✅ (200) |
+| 1039 | Mouseflow | Analytics | [mouseflow.com](https://www.mouseflow.com) | ✅ (200) |
+| 1040 | Crazy Egg | Analytics | [crazyegg.com](https://www.crazyegg.com) | ✅ (200) |
+| 1041 | Khan Academy | 教育 | [khanacademy.org](https://www.khanacademy.org) | ✅ (200) |
+| 1042 | edX | 教育 | [edx.org](https://www.edx.org) | ✅ (200) |
+| 1043 | Coursera for Business | 教育 | [coursera.org](https://www.coursera.org/for-business) | ✅ (200) |
+| 1044 | Udemy Business | 教育 | [udemy.com](https://www.udemy.com/organization) | ✅ (200) |
+| 1045 | LinkedIn Learning | 教育 | [learning.linkedin.com](https://learning.linkedin.com) | ✅ (200) |
+| 1046 | Pluralsight | 教育 | [pluralsight.com](https://www.pluralsight.com) | ✅ (200) |
+| 1047 | Skillshare | 教育 | [skillshare.com](https://www.skillshare.com) | ✅ (200) |
+| 1048 | Domestika | 教育 | [domestika.com](https://www.domestika.com) | ✅ (200) |
+| 1049 | CreativeLive | 教育 | [creativelive.com](https://www.creativelifellc.com) | ⏱️ (timeout) |
+| 1050 | MasterClass | 教育 | [masterclass.com](https://www.masterclass.com) | ✅ (200) |
+| 1051 | Udacity | 教育 | [udacity.com](https://www.udacity.com) | ✅ (200) |
+| 1052 | Codecademy | 教育 | [codecademy.com](https://www.codecademy.com) | ✅ (200) |
+| 1053 | DataCamp | 教育 | [datacamp.com](https://www.datacamp.com) | ✅ (200) |
+| 1054 | Educative | 教育 | [educative.io](https://www.educative.io) | ✅ (200) |
+| 1055 | egghead | 教育 | [egghead.io](https://egghead.io) | ✅ (200) |
+| 1056 | Frontend Masters | 教育 | [frontendmasters.com](https://frontendmasters.com) | ✅ (200) |
+| 1057 | Treehouse | 教育 | [teamtreehouse.com](https://teamtreehouse.com) | ✅ (200) |
+| 1058 | Lynda | 教育 | [lynda.com](http://www.lynda.com) | ⚠️ (403) |
+| 1059 | Pluralsight Skills | 教育 | [pluralsight.com](https://www.pluralsight.com/skills) | ✅ (200) |
+| 1060 | O'Reilly | 教育 | [oreilly.com](https://www.oreilly.com) | ✅ (200) |
+| 1061 | Plex Systems | 製造 | [plex.com](https://www.plex.com) | ✅ (200) |
+| 1062 | QAD | 製造 | [qad.com](https://www.qad.com) | ✅ (200) |
+| 1063 | Aptean | 製造 | [aptean.com](https://www.aptean.com) | ✅ (200) |
+| 1064 | IFS | 製造 | [ifs.com](https://www.ifs.com) | ✅ (200) |
+| 1065 | Rootstock | 製造 | [rootstock.com](https://www.rootstock.com) | ✅ (200) |
+| 1066 | Acumatica | 製造 | [acumatica.com](https://www.acumatica.com) | ✅ (200) |
+| 1067 | Sage X3 | 製造 | [sage.com](https://www.sage.com) | ✅ (200) |
+| 1068 | Infor | 製造 | [infor.com](https://www.infor.com) | ✅ (200) |
+| 1069 | Katana | 製造 | [katana.com](https://www.katana.com) | ✅ (200) |
+| 1070 | JobShop | 製造 | [jobshopsoftware.com](https://www.jobshopsoftware.com) | ✅ (200) |
+| 1071 | ECI | 製造 | [ecisolutions.com](https://www.ecisolutions.com) | ✅ (200) |
+| 1072 | Oracle Netsuite | 製造 | [oracle.com](https://www.oracle.com) | ✅ (200) |
+| 1073 | SPC | 製造 | [spcsoftware.com](https://www.spcsoftware.com) | ⏱️ (timeout) |
+| 1074 | IQMS | 製造 | [iqms.com](https://www.iqms.com) | ✅ (200) |
+| 1075 | DELMIA | 製造 | [3ds.com](https://www.3ds.com/products-services/delmia) | ✅ (200) |
+| 1076 | Siemens Digital | 製造 | [siemens.com](https://www.siemens.com) | ✅ (200) |
+| 1077 | SAP Business One | 製造 | [sap.com](https://www.sap.com) | ✅ (200) |
+| 1078 | Epicor | 製造 | [epicor.com](https://www.epicor.com) | ✅ (200) |
+| 1079 | Microsoft Dynamics | 製造 | [microsoft.com](https://www.microsoft.com) | ✅ (200) |
+| 1080 | UNITRONICS | 製造 | [unitronics.com](https://www.unitronics.com) | ✅ (200) |
+| 1081 | Square決済 | 決済 | [squareup.com](https://squareup.com) | ✅ (200) |
+| 1082 | Visa Checkout | 決済 | [visa.com](https://www.visa.com) | ✅ (200) |
+| 1083 | Mastercard | 決済 | [mastercard.com](https://www.mastercard.com) | ✅ (200) |
+| 1084 | JCB | 決済 | [jcb.co.jp](https://www.jcb.co.jp) | ✅ (200) |
+| 1085 | American Express | 決済 | [americanexpress.com](https://www.americanexpress.com) | ✅ (200) |
+| 1086 | Discover | 決済 | [discover.com](https://www.discover.com) | ✅ (200) |
+| 1087 | UnionPay | 決済 | [unionpay.com](https://www.unionpay.com) | ✅ (200) |
+| 1088 | PayPal | 決済 | [paypal.com](https://www.paypal.com) | ⚠️ (403) |
+| 1089 | Worldpay | 決済 | [worldpay.com](https://www.worldpay.com) | ✅ (200) |
+| 1090 | Global Payments | 決済 | [globalpayments.com](https://www.globalpayments.com) | ✅ (200) |
+| 1091 | Fiserv | 決済 | [fiserv.com](https://www.fiserv.com) | ✅ (200) |
+| 1092 | First Data | 決済 | [firstdata.com](https://www.firstdata.com) | ✅ (200) |
+| 1093 | Chase | 決済 | [chase.com](https://www.chase.com) | ✅ (200) |
+| 1094 | Wirecard | 決済 | [wirecard.com](https://www.wirecard.com) | ❌ (404) |
+| 1095 | Payoneer | 決済 | [payoneer.com](https://www.payoneer.com) | ✅ (200) |
+| 1096 | TransferWise | 決済 | [wise.com](https://wise.com) | ✅ (200) |
+| 1097 | Revolut | 決済 | [revolut.com](https://www.revolut.com) | ✅ (200) |
+| 1098 | Skrill | 決済 | [skrill.com](https://www.skrill.com) | ✅ (200) |
+| 1099 | Neteller | 決済 | [neteller.com](https://www.neteller.com) | ✅ (200) |
+| 1100 | Paxum | 決済 | [paxum.com](https://www.paxum.com) | ✅ (200) |
+| 1101 | Adobe Sign | 法務 | [adobe.com](https://www.adobe.com/sign) | ✅ (200) |
+| 1102 | DocuSign | 法務 | [docusign.com](https://www.docusign.com) | ✅ (200) |
+| 1103 | PandaDoc | 法務 | [pandadoc.com](https://www.pandadoc.com) | ✅ (200) |
+| 1104 | HelloSign | 法務 | [hellosign.com](https://www.hellosign.com) | ✅ (200) |
+| 1105 | SignNow | 法務 | [signnow.com](https://signnow.com) | ✅ (200) |
+| 1106 | eSignLive | 法務 | [esignlive.com](https://www.esignlive.com) | ✅ (200) |
+| 1107 | RightSignature | 法務 | [rightsignature.com](https://www.rightsignature.com) | ✅ (200) |
+| 1108 | SignRequest | 法務 | [signrequest.com](https://www.signrequest.com) | ✅ (200) |
+| 1109 | ContractSafe | 法務 | [contractsafe.com](https://www.contractsafe.com) | ✅ (200) |
+| 1110 | Ironclad | 法務 | [ironcladapp.com](https://www.ironcladapp.com) | ✅ (200) |
+| 1111 | Juro | 法務 | [juro.com](https://www.juro.com) | ✅ (200) |
+| 1112 | Concord | 法務 | [concordnow.com](https://www.concordnow.com) | ✅ (200) |
+| 1113 | DocHub | 法務 | [dochub.com](https://www.dochub.com) | ✅ (200) |
+| 1114 | Lextree | 法務 | [lextree.com](https://www.lextree.com) | ⏱️ (timeout) |
+| 1115 | ContractPodAi | 法務 | [contractpodai.com](https://www.contractpodai.com) | ✅ (200) |
+| 1116 | Agiloft | 法務 | [agiloft.com](https://www.agiloft.com) | ✅ (200) |
+| 1117 | Conga | 法務 | [conga.com](https://www.conga.com) | ✅ (200) |
+| 1118 | DocuWare | 法務 | [docuware.com](https://www.docuware.com) | ✅ (200) |
+| 1119 | Nitro | 法務 | [gonitro.com](https://www.gonitro.com) | ✅ (200) |
+| 1120 | PandaDoc Japan | 法務 | [pandadoc.com/ja](https://www.pandadoc.com/ja) | ✅ (200) |
 
 ---
 
-**Total**: 979 services (all with URL検証カラム)
+**Total**: 1120 services (all with URL検証カラム)
 
 ---
 
-**Last updated**: 2026-02-25 23:40 (Asia/Tokyo)
+**Last updated**: 2026-02-26 00:00 (Asia/Tokyo)
