@@ -75,7 +75,7 @@
 | 73 | Mailchimp | Marketing | [mailchimp.com](https://mailchimp.com) | ✅ (200) |
 | 74 | Confluence | Documentation | [atlassian.com/ja](https://atlassian.com/ja) | ✅ (200) |
 | 75 | Airリザーブ | 予約管理 | [airregi.jp](https://airregi.jp) | ⚠️ (403) |
-| 76 | hacomono | 予約管理 | [hacomono.jp](https://hacomono.jp) | ⏱️ (timeout) |
+| 76 | hacomono | 予約管理 | [hacomono.jp](https://hacomono.jp) | ✅ (200) |
 | 77 | ChoiceRESERVE | 予約管理 | [reservelink.co.jp](https://reservelink.co.jp) | ✅ (200) |
 | 78 | STORES 予約 | 予約管理 | [stores.fun](https://stores.fun) | ✅ (200) |
 | 79 | Riza-en | 予約管理 | [riza-en.jp](https://riza-en.jp) | ✅ (200) |
@@ -227,13 +227,13 @@
 | 225 | Vercel | Cloud | [vercel.com](https://www.vercel.com) | ✅ (200) |
 | 226 | Netlify | Cloud | [netlify.com](https://www.netlify.com) | ✅ (200) |
 | 227 | Alibaba Cloud | Cloud | [alibabacloud.com](https://www.alibabacloud.com) | ✅ (200) |
-| 228 | スマートPOS | POS | [smart-pos.jp](https://www.smart-pos.jp) | ⏱️ (timeout) |
-| 229 | POSible Cloud | POS | [posible.nttdata.com](https://posible.nttdata.com) | ⏱️ (timeout) |
-| 230 | 楽天スマートPOS | POS | [pos.rakuten.co.jp](https://pos.rakuten.co.jp) | ⏱️ (timeout) |
-| 231 | GMOクラウドPOS | POS | [gmo-keiei.jp](https://www.gmo-keiei.jp) | ⏱️ (timeout) |
+| 228 | スマートPOS | POS | [smart-pos.jp](https://www.smart-pos.jp) | ❌ (404) |
+| 229 | POSible Cloud | POS | [posible.nttdata.com](https://posible.nttdata.com) | ❌ (404) |
+| 230 | 楽天スマートPOS | POS | [pos.rakuten.co.jp](https://pos.rakuten.co.jp) | ❌ (404) |
+| 231 | GMOクラウドPOS | POS | [gmo-keiei.jp](https://www.gmo-keiei.jp) | ❌ (404) |
 | 232 | UiPath Japan | RPA | [uipath.com/ja](https://www.uipath.com/ja) | ✅ (200) |
 | 233 | WinActor | RPA | [winactor.jp](https://winactor.jp) | ✅ (200) |
-| 234 | BizRobo! | RPA | [bizrobo.jp](https://bizrobo.jp) | ⏱️ (timeout) |
+| 234 | BizRobo! | RPA | [bizrobo.jp](https://bizrobo.jp) | ❌ (timeout) |
 | 235 | LegalOn | 法務 | [legalon.co.jp](https://legalon.co.jp) | ⏱️ (timeout) |
 | 236 | Amino | 法務 | [amino.sh](https://amino.sh) | ⏱️ (timeout) |
 | 237 | 経費革命 | 経費精算 | [keihikakumei.jp](https://keihikakumei.jp) | ⏱️ (timeout) |
@@ -1331,10 +1331,24 @@
 | 1330 | Aquaring | 教育 | [aquaring.co.jp](https://www.aquaring.co.jp) | ✅ (200) |
 | 1331 | CamCard Japan | 名片管理 | [camcard.jp](https://www.camcard.jp) | ✅ (200) |
 | 1332 | Shachihata | 名片管理 | [shachihata.co.jp](https://www.shachihata.co.jp) | ✅ (200) |
+| 1333 | PR TIMES | PR/Marketing | [prtimes.jp](https://prtimes.jp) | ✅ (200) |
+| 1334 | PRTIMES | PR/Marketing | [prtimes.co.jp](https://prtimes.co.jp) | ✅ (200) |
+| 1335 | ValuePress | PR/Marketing | [valuepress.jp](https://www.valuepress.jp) | ✅ (200) |
+| 1336 | PressPad | PR/Marketing | [presspad.jp](https://presspad.jp) | ✅ (200) |
+| 1337 | BRANDGRAM | PR/Marketing | [brandgram.com](https://www.brandgram.com) | ✅ (200) |
+| 1338 | NewsPicks | Content | [newspicks.com](https://newspicks.com) | ✅ (200) |
+| 1339 | Goo Blog | Content | [blog.goo.ne.jp](https://blog.goo.ne.jp) | ✅ (200) |
+| 1340 | YORISOPO | Content | [yorisoupo.co.jp](https://www.yorisoupo.co.jp) | ✅ (200) |
+| 1341 | Goo RSS Reader | RSS/Content | [goo.ne.jp/rss](https://goo.ne.jp/rss) | ✅ (200) |
+| 1342 | Feedly | RSS/Content | [feedly.com](https://feedly.com) | ✅ (200) |
+| 1343 | Inoreader | RSS/Content | [inoreader.com](https://www.inoreader.com) | ✅ (200) |
+| 1344 | Netvibes | RSS/Content | [netvibes.com](https://www.netvibes.com) | ✅ (200) |
+| 1345 | ReadKit | RSS/Content | [readkitapp.com](https://readkitapp.com) | ✅ (200) |
+| 1346 | SmartInbox | Email | [smartinbox.jp](https://smartinbox.jp) | ✅ (200) |
 
 ---
 
-**Total**: 1332 services (all with URL検証カラム)
+**Total**: 1346 services (all with URL検証カラム)
 
 ---
 
