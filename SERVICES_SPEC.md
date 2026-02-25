@@ -292,8 +292,8 @@
 | 290 | Splunk | Analytics | [splunk.com/ja-jp](https://www.splunk.com/ja-jp) | ❌ (404) |
 | 291 | Freshservice | IT Service | [freshservice.com/ja](https://www.freshservice.com/ja) | ✅ (200) |
 | 292 | Jira Service Management | カスタマーサポート | [atlassian.com/ja/software/jira/service-management](https://www.atlassian.com/ja/software/jira/service-management) | ✅ (200) |
-| 293 | Mattermost | コラボレーション | [mattermost.com/ja](https://mattermost.com/ja) | ❌ (404) |
-| 294 | Rocket.Chat | コラボレーション | [rocket.chat/ja](https://www.rocket.chat/ja) | ❌ (404) |
+| 293 | Mattermost | コラボレーション | [mattermost.com](https://mattermost.com) | ✅ (200) |
+| 294 | Rocket.Chat | コラボレーション | [rocket.chat](https://www.rocket.chat) | ✅ (200) |
 | 295 | Cybozu Garoon | コラボレーション | [cybozu.com/jp/product/garoon](https://cybozu.com/jp/product/garoon) | ✅ (200) |
 | 296 | LAPRAS | 採用管理 | [lapras.com](https://lapras.com) | ✅ (200) |
 | 297 | People Cloud | タレントマネジメント | [people-cloud.jp](https://people-cloud.jp) | ✅ (200) |
@@ -929,7 +929,7 @@
 | 927 | Schoo for Business | 教育 | [business.schoo.jp](https://business.schoo.jp) | ✅ (200) |
 | 928 | CareERship | 教育 | [careership.co.jp](https://www.careership.co.jp) | ❌ (404) |
 | 929 | Teachme Biz | Document | [teachme.biz](https://www.teachme.biz) | ✅ (200) |
-| 930 | Net Learning | 教育 | [netlearning.co.jp](https://www.netlearning.co.jp) | ❌ (timeout) |
+| 930 | Net Learning | 教育 | [netlearning.co.jp](https://www.netlearning.co.jp) | ❌ (404) |
 | 931 | GitLab Self-Managed | Git | [gitlab.com](https://about.gitlab.com) | ✅ (200) |
 | 932 | Helix4G (Perforce) | Git | [perforce.com](https://www.perforce.com) | ✅ (200) |
 | 933 | Azure DevOps (Git) | Git | [dev.azure.com](https://dev.azure.com) | ✅ (200) |
@@ -1093,7 +1093,7 @@
 | 1091 | Fiserv | 決済 | [fiserv.com](https://www.fiserv.com) | ✅ (200) |
 | 1092 | First Data | 決済 | [firstdata.com](https://www.firstdata.com) | ✅ (200) |
 | 1093 | Chase | 決済 | [chase.com](https://www.chase.com) | ✅ (200) |
-| 1094 | Wirecard | 決済 | [wirecard.com](https://www.wirecard.com) | ❌ (404) |
+| 1094 | Wirecard | 決済 | [wirecard.com](https://www.wirecard.com) | ❌ (defunct) |
 | 1095 | Payoneer | 決済 | [payoneer.com](https://www.payoneer.com) | ✅ (200) |
 | 1096 | TransferWise | 決済 | [wise.com](https://wise.com) | ✅ (200) |
 | 1097 | Revolut | 決済 | [revolut.com](https://www.revolut.com) | ✅ (200) |
