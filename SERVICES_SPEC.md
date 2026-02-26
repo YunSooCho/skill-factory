@@ -6,41 +6,41 @@
 |#|サービス|カテゴリー|ホームページ|URL検証|yoom連携|
 |---|---------------|----------|-------------|----------|-----------|
 |272|AIアシスタント|AI|[ai-assistant.jp](https://ai-assistant.jp)|✅ (200)||[[◯](yoom-apps/aiアシスタント.md)]|
-|273|ChatGPT Japan|AI|[chatgpt-japan.com](https://chatgpt-japan.com)|⚠️ (403)|◯|[[◯](yoom-apps/chatgpt-japan.md)]|
+|273|ChatGPT Japan|AI|[chatgpt-japan.com](https://chatgpt-japan.com)|⚠️ (403)||[[◯](yoom-apps/chatgpt-japan.md)]|
 |315|Preferred Networks|AI|[preferred-networks.jp](https://www.preferred-networks.jp)|✅ (200)||[[◯](yoom-apps/preferred-networks.md)]|
 |316|HACARUS|AI|[hacarus.com](https://www.hacarus.com)|✅ (200)||[[◯](yoom-apps/hacarus.md)]|
 |328|Sakura AI|AI|[sakura-ai.jp](https://sakura-ai.jp)|✅ (200)||[[◯](yoom-apps/sakura-ai.md)]|
 |329|NVIDIA AI|AI|[nvidia.com/ja-jp/ai](https://www.nvidia.com/ja-jp/ai)|✅ (200)||[[◯](yoom-apps/nvidia-ai.md)]|
 |330|Nexway AI|AI|[nexway.com](https://nexway.com)|✅ (200)||[[◯](yoom-apps/nexway-ai.md)]|
-|425|Cohere|AI|[cohere.ai](https://www.cohere.ai)|✅ (200)|◯|[[◯](yoom-apps/cohere.md)]|
-|426|Anthropic|AI|[anthropic.com](https://www.anthropic.com)|✅ (200)|◯|[[◯](yoom-apps/anthropic.md)]|
-|427|OpenAI|AI|[openai.com](https://www.openai.com)|⚠️ (403)|◯|[[◯](yoom-apps/openai.md)]|
-|567|Pinecone|AI|[pinecone.io](https://pinecone.io)|✅ (200)|◯|[[◯](yoom-apps/pinecone.md)]|
+|425|Cohere|AI|[cohere.ai](https://www.cohere.ai)|✅ (200)||[[◯](yoom-apps/cohere.md)]|
+|426|Anthropic|AI|[anthropic.com](https://www.anthropic.com)|✅ (200)||[[◯](yoom-apps/anthropic.md)]|
+|427|OpenAI|AI|[openai.com](https://www.openai.com)|⚠️ (403)||[[◯](yoom-apps/openai.md)]|
+|567|Pinecone|AI|[pinecone.io](https://pinecone.io)|✅ (200)||[[◯](yoom-apps/pinecone.md)]|
 |568|Weaviate|AI|[weaviate.io](https://weaviate.io)|✅ (200)||[[◯](yoom-apps/weaviate.md)]|
-|569|Qdrant|AI|[qdrant.io](https://qdrant.io)|✅ (200)|◯|[[◯](yoom-apps/qdrant.md)]|
+|569|Qdrant|AI|[qdrant.io](https://qdrant.io)|✅ (200)||[[◯](yoom-apps/qdrant.md)]|
 |570|Milvus|AI|[milvus.io](https://milvus.io)|✅ (200)||[[◯](yoom-apps/milvus.md)]|
 |571|ChromaDB|AI|[trychroma.com](https://www.trychroma.com)|✅ (200)||[[◯](yoom-apps/chromadb.md)]|
 |572|LangChain|AI|[langchain.com](https://www.langchain.com)|✅ (200)||[[◯](yoom-apps/langchain.md)]|
-|573|Hugging Face|AI|[huggingface.co](https://huggingface.co)|✅ (200)|◯|[[◯](yoom-apps/hugging-face.md)]|
+|573|Hugging Face|AI|[huggingface.co](https://huggingface.co)|✅ (200)||[[◯](yoom-apps/hugging-face.md)]|
 |574|Replicate|AI|[replicate.com](https://replicate.com)|✅ (200)||[[◯](yoom-apps/replicate.md)]|
 |575|Stability AI|AI|[stability.ai](https://stability.ai)|✅ (200)||[[◯](yoom-apps/stability_ai.md)]|
 |576|Midjourney|AI|[midjourney.com](https://midjourney.com)|✅ (200)||[[◯](yoom-apps/midjourney.md)]|
-|577|Runway ML|AI|[runwayml.com](https://runwayml.com)|✅ (200)|◯|[[◯](yoom-apps/runway-ml.md)]|
+|577|Runway ML|AI|[runwayml.com](https://runwayml.com)|✅ (200)||[[◯](yoom-apps/runway-ml.md)]|
 |578|Jasper|AI|[jasper.ai](https://jasper.ai)|✅ (200)||[[◯](yoom-apps/jasper.md)]|
 |579|Copy.ai|AI|[copy.ai](https://copy.ai)|✅ (200)||[[◯](yoom-apps/copy.ai.md)]|
 |580|Writesonic|AI|[writesonic.com](https://writesonic.com)|✅ (200)||[[◯](yoom-apps/writesonic.md)]|
-|581|Anthropic Claude|AI|[anthropic.com/claude](https://www.anthropic.com/claude)|✅ (200)|◯|[[◯](yoom-apps/anthropic-claude.md)]|
+|581|Anthropic Claude|AI|[anthropic.com/claude](https://www.anthropic.com/claude)|✅ (200)||[[◯](yoom-apps/anthropic-claude.md)]|
 |582|GPT-4|AI|[openai.com/gpt-4](https://openai.com/gpt-4)|⚠️ (403)||[[◯](yoom-apps/gpt-4.md)]|
-|583|Google Gemini|AI|[gemini.google.com](https://gemini.google.com)|✅ (200)|◯|[[◯](yoom-apps/google-gemini.md)]|
-|584|Mistral AI|AI|[mistral.ai](https://mistral.ai)|✅ (200)|◯|[[◯](yoom-apps/mistral-ai.md)]|
+|583|Google Gemini|AI|[gemini.google.com](https://gemini.google.com)|✅ (200)||[[◯](yoom-apps/google-gemini.md)]|
+|584|Mistral AI|AI|[mistral.ai](https://mistral.ai)|✅ (200)||[[◯](yoom-apps/mistral-ai.md)]|
 |585|Aleph Alpha|AI|[aleph-alpha.com](https://www.aleph-alpha.com)|✅ (200)||[[◯](yoom-apps/aleph-alpha.md)]|
 |586|01.AI|AI|[01.ai](https://01.ai)|✅ (200)||[[◯](yoom-apps/01.ai.md)]|
 |587|Inflection AI|AI|[inflection.ai](https://inflection.ai)|✅ (200)||[[◯](yoom-apps/inflection-ai.md)]|
 |588|Character.AI|AI|[character.ai](https://character.ai)|✅ (200)||[[◯](yoom-apps/character.ai.md)]|
-|589|Perplexity|AI|[perplexity.ai](https://www.perplexity.ai)|✅ (200)|◯|[[◯](yoom-apps/perplexity.md)]|
+|589|Perplexity|AI|[perplexity.ai](https://www.perplexity.ai)|✅ (200)||[[◯](yoom-apps/perplexity.md)]|
 |590|You.com|AI|[you.com](https://you.com)|✅ (200)||[[◯](yoom-apps/you.com.md)]|
 |591|Neeva|AI|[neeva.com](https://neeva.com)|✅ (200)||[[◯](yoom-apps/neeva.md)]|
-|592|Andi|AI|[andisearch.com](https://andisearch.com)|✅ (200)|◯|[[◯](yoom-apps/andi.md)]|
+|592|Andi|AI|[andisearch.com](https://andisearch.com)|✅ (200)||[[◯](yoom-apps/andi.md)]|
 |593|Phind|AI|[phind.com](https://phind.com)|✅ (200)||[[◯](yoom-apps/phind.md)]|
 |594|Poe|AI|[poe.com](https://poe.com)|✅ (200)||[[◯](yoom-apps/poe.md)]|
 |595|Julius AI|AI|[julius.ai](https://julius.ai)|✅ (200)||[[◯](yoom-apps/julius-ai.md)]|
@@ -54,15 +54,15 @@
 |---|---------------|----------|-------------|----------|-----------|
 |376|Baidu|AI/Analytics|[baidu.com](https://www.baidu.com)|✅ (200)||[[◯](yoom-apps/baidu.md)]|
 |522|a2i|AI/Analytics|[a2i.jp](https://a2i.jp)|✅ (200)||[[◯](yoom-apps/a2i.md)]|
-|1507|Amazon SageMaker|AI/Analytics|[https://aws.amazon.com/sagemaker](https://aws.amazon.com/sagemaker)|✅ (200)|◯|[[◯](yoom-apps/amazon-sagemaker.md)]|
-|1508|Google Cloud AI Platform|AI/Analytics|[https://cloud.google.com/ai](https://cloud.google.com/ai)|✅ (200)|◯|[[◯](yoom-apps/google-cloud-ai-platform.md)]|
+|1507|Amazon SageMaker|AI/Analytics|[https://aws.amazon.com/sagemaker](https://aws.amazon.com/sagemaker)|✅ (200)||[[◯](yoom-apps/amazon-sagemaker.md)]|
+|1508|Google Cloud AI Platform|AI/Analytics|[https://cloud.google.com/ai](https://cloud.google.com/ai)|✅ (200)||[[◯](yoom-apps/google-cloud-ai-platfor.md)]|
 |1509|Azure Machine Learning|AI/Analytics|[https://azure.microsoft.com/machine-learning](https://azure.microsoft.com/machine-learning)|✅ (200)||[[◯](yoom-apps/azure-machine-learning.md)]|
 |1510|IBM Watson|AI/Analytics|[https://www.ibm.com/watson](https://www.ibm.com/watson)|✅ (200)||[[◯](yoom-apps/ibm-watson.md)]|
 |1511|DataRobot|AI/Analytics|[https://www.datarobot.com](https://www.datarobot.com)|✅ (200)||[[◯](yoom-apps/datarobot.md)]|
 |1512|H2O.ai|AI/Analytics|[https://www.h2o.ai](https://www.h2o.ai)|✅ (200)||[[◯](yoom-apps/h2o.ai.md)]|
 |1513|RapidMiner|AI/Analytics|[https://www.rapidminer.com](https://www.rapidminer.com)|✅ (200)||[[◯](yoom-apps/rapidminer.md)]|
 |1514|Alteryx|AI/Analytics|[https://www.alteryx.com](https://www.alteryx.com)|✅ (200)||[[◯](yoom-apps/alteryx.md)]|
-|1515|Salesforce Einstein|AI/Analytics|[https://www.salesforce.com/einstein](https://www.salesforce.com/einstein)|✅ (200)|◯|[[◯](yoom-apps/salesforce-einstein.md)]|
+|1515|Salesforce Einstein|AI/Analytics|[https://www.salesforce.com/einstein](https://www.salesforce.com/einstein)|✅ (200)||[[◯](yoom-apps/salesforce-einstein.md)]|
 |1516|Databricks MLflow|AI/Analytics|[https://mlflow.org](https://mlflow.org)|✅ (200)||[[◯](yoom-apps/databricks-mlflow.md)]|
 |1517|Kubeflow|AI/Analytics|[https://www.kubeflow.org](https://www.kubeflow.org)|✅ (200)||[[◯](yoom-apps/kubeflow.md)]|
 |1518|KNIME|AI/Analytics|[https://www.knime.com](https://www.knime.com)|✅ (200)||[[◯](yoom-apps/knime.md)]|
@@ -74,15 +74,15 @@
 |1524|Caffe|AI/Analytics|[https://www.caffe.berkeleyvision.org](https://www.caffe.berkeleyvision.org)|✅ (200)||[[◯](yoom-apps/caffe.md)]|
 |1525|Apache MXNet|AI/Analytics|[https://mxnet.apache.org](https://mxnet.apache.org)|✅ (200)||[[◯](yoom-apps/apache-mxnet.md)]|
 |1526|Chainer|AI/Analytics|[https://www.chainer.org](https://www.chainer.org)|✅ (200)||[[◯](yoom-apps/chainer.md)]|
-|1527|Deeplearning4j|AI/Analytics|[https://www.deeplearning4j.org](https://www.deeplearning4j.org)|✅ (200)|◯|[[◯](yoom-apps/deeplearning4j.md)]|
+|1527|Deeplearning4j|AI/Analytics|[https://www.deeplearning4j.org](https://www.deeplearning4j.org)|✅ (200)||[[◯](yoom-apps/deeplearning4j.md)]|
 |1528|ONNX|AI/Analytics|[https://www.onnx.ai](https://www.onnx.ai)|✅ (200)||[[◯](yoom-apps/onnx.md)]|
 |1529|OpenVINO|AI/Analytics|[https://www.intel.com/ai/onnx](https://www.intel.com/ai/onnx)|✅ (200)||[[◯](yoom-apps/openvino.md)]|
 |1530|TensorRT|AI/Analytics|[https://developer.nvidia.com/tensorrt](https://developer.nvidia.com/tensorrt)|✅ (200)||[[◯](yoom-apps/tensorrt.md)]|
 |1531|Core ML|AI/Analytics|[https://www.apple.com/machine-learning](https://www.apple.com/machine-learning)|✅ (200)||[[◯](yoom-apps/core-ml.md)]|
-|1532|Firebase ML|AI/Analytics|[https://www.firebase.google.com/ml](https://www.firebase.google.com/ml)|✅ (200)|◯|[[◯](yoom-apps/firebase-ml.md)]|
+|1532|Firebase ML|AI/Analytics|[https://www.firebase.google.com/ml](https://www.firebase.google.com/ml)|✅ (200)||[[◯](yoom-apps/firebase-ml.md)]|
 |1533|TensorFlow Lite|AI/Analytics|[https://www.tensorflow.org/lite](https://www.tensorflow.org/lite)|✅ (200)||[[◯](yoom-apps/tensorflow-lite.md)]|
 |1534|Edge Impulse|AI/Analytics|[https://www.edgeimpulse.com](https://www.edgeimpulse.com)|✅ (200)||[[◯](yoom-apps/edge-impulse.md)]|
-|1535|Lobe.ai|AI/Analytics|[https://www.lobe.ai](https://www.lobe.ai)|✅ (200)|◯|[[◯](yoom-apps/lobe.ai.md)]|
+|1535|Lobe.ai|AI/Analytics|[https://www.lobe.ai](https://www.lobe.ai)|✅ (200)||[[◯](yoom-apps/lobe.ai.md)]|
 |1536|Druid|AI/Analytics|[https://druid.apache.org](https://druid.apache.org)|✅ (200)||[[◯](yoom-apps/druid.md)]|
 |1537|ClickHouse|AI/Analytics|[https://www.clickhouse.com](https://www.clickhouse.com)|✅ (200)||[[◯](yoom-apps/clickhouse.md)]|
 |1538|Presto|AI/Analytics|[https://www.prestodb.io](https://www.prestodb.io)|✅ (200)||[[◯](yoom-apps/presto.md)]|
@@ -93,11 +93,11 @@
 |1543|Apache ORC|AI/Analytics|[https://www.orc.apache.org](https://www.orc.apache.org)|✅ (200)||[[◯](yoom-apps/apache-orc.md)]|
 |1544|Apache Avro|AI/Analytics|[https://www.avro.apache.org](https://www.avro.apache.org)|✅ (200)||[[◯](yoom-apps/apache-avro.md)]|
 |1545|Apache Iceberg|AI/Analytics|[https://www.iceberg.apache.org](https://www.iceberg.apache.org)|✅ (200)||[[◯](yoom-apps/apache-iceberg.md)]|
-|1546|Apache Hive|AI/Analytics|[https://www.hive.apache.org](https://www.hive.apache.org)|✅ (200)|◯|[[◯](yoom-apps/apache-hive.md)]|
+|1546|Apache Hive|AI/Analytics|[https://www.hive.apache.org](https://www.hive.apache.org)|✅ (200)||[[◯](yoom-apps/apache-hive.md)]|
 |1547|Apache Pig|AI/Analytics|[https://www.pig.apache.org](https://www.pig.apache.org)|✅ (200)||[[◯](yoom-apps/apache-pig.md)]|
 |1548|Impala|AI/Analytics|[https://www.impala.apache.org](https://www.impala.apache.org)|✅ (200)||[[◯](yoom-apps/impala.md)]|
-|1549|BigQuery ML|AI/Analytics|[https://www.cloud.google.com/bigquery-ml](https://www.cloud.google.com/bigquery-ml)|✅ (200)|◯|[[◯](yoom-apps/bigquery-ml.md)]|
-|1550|Redshift ML|AI/Analytics|[https://aws.amazon.com/redshift-ml](https://aws.amazon.com/redshift-ml)|✅ (200)|◯|[[◯](yoom-apps/redshift-ml.md)]|
+|1549|BigQuery ML|AI/Analytics|[https://www.cloud.google.com/bigquery-ml](https://www.cloud.google.com/bigquery-ml)|✅ (200)||[[◯](yoom-apps/bigquery-ml.md)]|
+|1550|Redshift ML|AI/Analytics|[https://aws.amazon.com/redshift-ml](https://aws.amazon.com/redshift-ml)|✅ (200)||[[◯](yoom-apps/redshift-ml.md)]|
 |1551|Snowflake Cortex|AI/Analytics|[https://www.snowflake.com/cortex](https://www.snowflake.com/cortex)|✅ (200)||[[◯](yoom-apps/snowflake-cortex.md)]|
 |1552|Grafana Pyroscope|AI/Analytics|[https://www.grafana.com/pyroscope](https://www.grafana.com/pyroscope)|✅ (200)||[[◯](yoom-apps/grafana-pyroscope.md)]|
 |1553|Grafana Tempo|AI/Analytics|[https://www.grafana.com/tempo](https://www.grafana.com/tempo)|✅ (200)||[[◯](yoom-apps/grafana-tempo.md)]|
@@ -119,19 +119,19 @@
 |---|---------------|----------|-------------|----------|-----------|
 |61|UserLocal|Analytics|[userlocal.jp](https://userlocal.jp)|✅ (200)||[[◯](yoom-apps/userlocal.md)]|
 |100|GA4|Analytics|[googleanalytics.com](https://googleanalytics.com)|✅ (200)||[[◯](yoom-apps/ga4.md)]|
-|101|Mixpanel|Analytics|[mixpanel.com](https://mixpanel.com)|✅ (200)|◯|[[◯](yoom-apps/mixpanel.md)]|
+|101|Mixpanel|Analytics|[mixpanel.com](https://mixpanel.com)|✅ (200)||[[◯](yoom-apps/mixpanel.md)]|
 |102|Amplitude|Analytics|[amplitude.com](https://amplitude.com)|✅ (200)||[[◯](yoom-apps/amplitude.md)]|
 |144|Gurobi|Analytics|[gurobi.com](https://www.gurobi.com)|✅ (200)||[[◯](yoom-apps/gurobi.md)]|
 |159|Treasure Data|Analytics|[treasuredata.co.jp](https://treasuredata.co.jp)|✅ (200)||[[◯](yoom-apps/treasure-data.md)]|
 |161|Explora|Analytics|[explora.jp](https://explora.jp)|✅ (200)||[[◯](yoom-apps/explora.md)]|
 |163|re-ga|Analytics|[re-ga.jp](https://re-ga.jp)|❌ (404)||[[◯](yoom-apps/re-ga.md)]|
-|191|MotionBoard|Analytics|[motionboard.jp](https://motionboard.jp)|✅ (200)|◯|[[◯](yoom-apps/motionboard.md)]|
-|289|SAS|Analytics|[sas.com/ja_jp](https://www.sas.com/ja_jp)|✅ (200)|◯|[[◯](yoom-apps/sas.md)]|
+|191|MotionBoard|Analytics|[motionboard.jp](https://motionboard.jp)|✅ (200)||[[◯](yoom-apps/motionboard.md)]|
+|289|SAS|Analytics|[sas.com/ja_jp](https://www.sas.com/ja_jp)|✅ (200)||[[◯](yoom-apps/sas.md)]|
 |290|Splunk|Analytics|[splunk.com](https://www.splunk.com)|✅ (200)||[[◯](yoom-apps/splunk.md)]|
 |303|BrainPad|Analytics|[brainpad.co.jp](https://brainpad.co.jp)|✅ (200)||[[◯](yoom-apps/brainpad.md)]|
 |335|Datalabs|Analytics|[datalabs.jp](https://datalabs.jp)|✅ (200)||[[◯](yoom-apps/datalabs.md)]|
-|336|Metabase|Analytics|[metabase.com](https://metabase.com)|✅ (200)|◯|[[◯](yoom-apps/metabase.md)]|
-|337|Redash|Analytics|[redash.io](https://redash.io)|✅ (200)|◯|[[◯](yoom-apps/redash.md)]|
+|336|Metabase|Analytics|[metabase.com](https://metabase.com)|✅ (200)||[[◯](yoom-apps/metabase.md)]|
+|337|Redash|Analytics|[redash.io](https://redash.io)|✅ (200)||[[◯](yoom-apps/redash.md)]|
 |338|Superset|Analytics|[superset.apache.org](https://superset.apache.org)|✅ (200)||[[◯](yoom-apps/superset.md)]|
 |339|Grafana|Analytics|[grafana.com](https://grafana.com)|✅ (200)||[[◯](yoom-apps/grafana.md)]|
 |340|New Relic|Analytics|[newrelic.com](https://newrelic.com)|✅ (200)||[[◯](yoom-apps/new-relic.md)]|
@@ -154,7 +154,7 @@
 |552|Microsoft Fabric|Analytics|[microsoft.com/fabric](https://microsoft.com/fabric)|✅ (200)||[[◯](yoom-apps/microsoft-fabric.md)]|
 |553|ThoughtSpot|Analytics|[thoughtspot.com](https://thoughtspot.com)|✅ (200)||[[◯](yoom-apps/thoughtspot.md)]|
 |554|Sigma Computing|Analytics|[sigmacomputing.com](https://sigmacomputing.com)|✅ (200)||[[◯](yoom-apps/sigma-computing.md)]|
-|555|Mode Analytics|Analytics|[mode.com](https://mode.com)|✅ (200)|◯|[[◯](yoom-apps/mode-analytics.md)]|
+|555|Mode Analytics|Analytics|[mode.com](https://mode.com)|✅ (200)||[[◯](yoom-apps/mode-analytics.md)]|
 |556|Periscope Data|Analytics|[periscope.io](https://periscope.io)|✅ (200)||[[◯](yoom-apps/periscope-data.md)]|
 |623|Datadog APM|Analytics|[datadog.com/apm](https://datadog.com/apm)|✅ (200)||[[◯](yoom-apps/datadog-apm.md)]|
 |624|New Relic APM|Analytics|[newrelic.com/application-monitoring](https://newrelic.com/application-monitoring)|✅ (200)||[[◯](yoom-apps/new-relic-apm.md)]|
@@ -164,34 +164,34 @@
 |629|Prometheus|Analytics|[prometheus.io](https://prometheus.io)|✅ (200)||[[◯](yoom-apps/prometheus.md)]|
 |630|Grafana Loki|Analytics|[grafana.com/loki](https://grafana.com/loki)|✅ (200)||[[◯](yoom-apps/grafana-loki.md)]|
 |631|VictoriaMetrics|Analytics|[victoriametrics.com](https://victoriametrics.com)|✅ (200)||[[◯](yoom-apps/victoriametrics.md)]|
-|632|Cortex|Analytics|[cortexmetrics.io](https://cortexmetrics.io)|✅ (200)|◯|[[◯](yoom-apps/cortex.md)]|
+|632|Cortex|Analytics|[cortexmetrics.io](https://cortexmetrics.io)|✅ (200)||[[◯](yoom-apps/cortex.md)]|
 |633|Mackerel|Analytics|[mackerel.io](https://mackerel.io)|✅ (200)||[[◯](yoom-apps/mackerel.md)]|
 |634|Datadog RUM|Analytics|[datadog.com/rum](https://datadog.com/rum)|✅ (200)||[[◯](yoom-apps/datadog-rum.md)]|
-|635|New Relic Browser|Analytics|[newrelic.com/browser](https://newrelic.com/browser)|✅ (200)|◯|[[◯](yoom-apps/new-relic-browser.md)]|
+|635|New Relic Browser|Analytics|[newrelic.com/browser](https://newrelic.com/browser)|✅ (200)||[[◯](yoom-apps/new-relic-browser.md)]|
 |636|Heap|Analytics|[heap.io](https://heap.io)|✅ (200)||[[◯](yoom-apps/heap.md)]|
-|637|PostHog|Analytics|[posthog.com](https://posthog.com)|✅ (200)|◯|[[◯](yoom-apps/posthog.md)]|
-|638|Plausible Analytics|Analytics|[plausible.io](https://plausible.io)|✅ (200)|◯|[[◯](yoom-apps/plausible-analytics.md)]|
-|639|Simple Analytics|Analytics|[simpleanalytics.com](https://simpleanalytics.com)|✅ (200)|◯|[[◯](yoom-apps/simple-analytics.md)]|
-|640|Google Analytics 4|Analytics|[googleanalytics.com](https://www.googleanalytics.com)|✅ (200)|◯|[[◯](yoom-apps/google-analytics-4.md)]|
-|641|Adobe Analytics|Analytics|[adobe.com/analytics](https://adobe.com/analytics)|✅ (200)|◯|[[◯](yoom-apps/adobe-analytics.md)]|
-|642|Piwik Pro Analytics|Analytics|[piwik.pro](https://piwik.pro)|✅ (200)|◯|[[◯](yoom-apps/piwik-pro-analytics.md)]|
-|643|Matomo Analytics|Analytics|[matomo.org](https://matomo.org)|✅ (200)|◯|[[◯](yoom-apps/matomo-analytics.md)]|
+|637|PostHog|Analytics|[posthog.com](https://posthog.com)|✅ (200)||[[◯](yoom-apps/posthog.md)]|
+|638|Plausible Analytics|Analytics|[plausible.io](https://plausible.io)|✅ (200)||[[◯](yoom-apps/plausible-analytics.md)]|
+|639|Simple Analytics|Analytics|[simpleanalytics.com](https://simpleanalytics.com)|✅ (200)||[[◯](yoom-apps/simple-analytics.md)]|
+|640|Google Analytics 4|Analytics|[googleanalytics.com](https://www.googleanalytics.com)|✅ (200)||[[◯](yoom-apps/google-analytics-4.md)]|
+|641|Adobe Analytics|Analytics|[adobe.com/analytics](https://adobe.com/analytics)|✅ (200)||[[◯](yoom-apps/adobe-analytics.md)]|
+|642|Piwik Pro Analytics|Analytics|[piwik.pro](https://piwik.pro)|✅ (200)||[[◯](yoom-apps/piwik-pro-analytics.md)]|
+|643|Matomo Analytics|Analytics|[matomo.org](https://matomo.org)|✅ (200)||[[◯](yoom-apps/matomo-analytics.md)]|
 |644|Woopra|Analytics|[woopra.com](https://woopra.com)|✅ (200)||[[◯](yoom-apps/woopra.md)]|
 |645|Clicky|Analytics|[clicky.com](https://clicky.com)|✅ (200)||[[◯](yoom-apps/clicky.md)]|
 |646|Statcounter|Analytics|[statcounter.com](https://statcounter.com)|✅ (200)||[[◯](yoom-apps/statcounter.md)]|
-|647|Google Tag Manager|Analytics|[tagmanager.google.com](https://tagmanager.google.com)|✅ (200)|◯|[[◯](yoom-apps/google-tag-manager.md)]|
+|647|Google Tag Manager|Analytics|[tagmanager.google.com](https://tagmanager.google.com)|✅ (200)||[[◯](yoom-apps/google-tag-manager.md)]|
 |648|Tealium|Analytics|[tealium.com](https://www.tealium.com)|✅ (200)||[[◯](yoom-apps/tealium.md)]|
 |649|Segment|Analytics|[segment.com](https://segment.com)|✅ (200)||[[◯](yoom-apps/segment.md)]|
 |650|RudderStack|Analytics|[rudderstack.com](https://rudderstack.com)|✅ (200)||[[◯](yoom-apps/rudderstack.md)]|
-|651|Snowplow Analytics|Analytics|[snowplow.io](https://snowplow.io)|✅ (200)|◯|[[◯](yoom-apps/snowplow-analytics.md)]|
-|652|Heap Analytics|Analytics|[heap.com](https://heap.com)|✅ (200)|◯|[[◯](yoom-apps/heap-analytics.md)]|
-|653|Mixpanel Product|Analytics|[mixpanel.com/product](https://mixpanel.com/product)|✅ (200)|◯|[[◯](yoom-apps/mixpanel-product.md)]|
+|651|Snowplow Analytics|Analytics|[snowplow.io](https://snowplow.io)|✅ (200)||[[◯](yoom-apps/snowplow-analytics.md)]|
+|652|Heap Analytics|Analytics|[heap.com](https://heap.com)|✅ (200)||[[◯](yoom-apps/heap-analytics.md)]|
+|653|Mixpanel Product|Analytics|[mixpanel.com/product](https://mixpanel.com/product)|✅ (200)||[[◯](yoom-apps/mixpanel-product.md)]|
 |654|Amplitude Product|Analytics|[amplitude.com/product](https://amplitude.com/product)|✅ (200)||[[◯](yoom-apps/amplitude-product.md)]|
 |655|Pendo|Analytics|[pendo.io](https://pendo.io)|✅ (200)||[[◯](yoom-apps/pendo.md)]|
 |656|FullStory|Analytics|[fullstory.com](https://fullstory.com)|✅ (200)||[[◯](yoom-apps/fullstory.md)]|
 |657|LogRocket|Analytics|[logrocket.com](https://logrocket.com)|✅ (200)||[[◯](yoom-apps/logrocket.md)]|
 |658|Smartlook|Analytics|[smartlook.com](https://smartlook.com)|✅ (200)||[[◯](yoom-apps/smartlook.md)]|
-|659|Contentsquare|Analytics|[contentsquare.com](https://contentsquare.com)|✅ (200)|◯|[[◯](yoom-apps/contentsquare.md)]|
+|659|Contentsquare|Analytics|[contentsquare.com](https://contentsquare.com)|✅ (200)||[[◯](yoom-apps/contentsquare.md)]|
 |660|Clarity|Analytics|[clarity.microsoft.com](https://clarity.microsoft.com)|✅ (200)||[[◯](yoom-apps/clarity.md)]|
 |661|Hotjar|Analytics|[hotjar.com](https://hotjar.com)|✅ (200)||[[◯](yoom-apps/hotjar.md)]|
 |662|Crazy Egg|Analytics|[crazyegg.com](https://crazyegg.com)|✅ (200)||[[◯](yoom-apps/crazy-egg.md)]|
@@ -201,7 +201,7 @@
 |666|SessionCam|Analytics|[sessioncam.com](https://sessioncam.com)|✅ (200)||[[◯](yoom-apps/sessioncam.md)]|
 |667|Decibel Insight|Analytics|[decibel.net](https://decibel.net)|✅ (200)||[[◯](yoom-apps/decibel-insight.md)]|
 |668|Quantum Metric|Analytics|[quantummetric.com](https://quantummetric.com)|✅ (200)||[[◯](yoom-apps/quantum-metric.md)]|
-|669|Glassbox|Analytics|[glassbox.com](https://glassbox.com)|✅ (200)|◯|[[◯](yoom-apps/glassbox.md)]|
+|669|Glassbox|Analytics|[glassbox.com](https://glassbox.com)|✅ (200)||[[◯](yoom-apps/glassbox.md)]|
 |670|ObservePoint|Analytics|[observepoint.com](https://observepoint.com)|✅ (200)||[[◯](yoom-apps/observepoint.md)]|
 |671|Tealium Audience|Analytics|[tealium.com/products/audiencestream](https://tealium.com/products/audiencestream)|✅ (200)||[[◯](yoom-apps/tealium-audience.md)]|
 |672|Adobe Experience|Analytics|[adobe.com/experience-cloud](https://adobe.com/experience-cloud)|✅ (200)||[[◯](yoom-apps/adobe-experience.md)]|
@@ -214,45 +214,45 @@
 
 |#|サービス|カテゴリー|ホームページ|URL検証|yoom連携|
 |---|---------------|----------|-------------|----------|-----------|
-|12|kintone|CRM|[cybozu.com/kintone](https://www.cybozu.com/kintone)|✅ (200)|◯|[[◯](yoom-apps/kintone.md)]|
-|13|cybozu|CRM|[www.cybozu.com](https://www.cybozu.com/)|✅ (200)|◯|[[◯](yoom-apps/cybozu.md)]|
-|48|HubSpot|CRM|[hubspot.com](https://hubspot.com)|✅ (200)|◯|[[◯](yoom-apps/hubspot.md)]|
+|12|kintone|CRM|[cybozu.com/kintone](https://www.cybozu.com/kintone)|✅ (200)||[[◯](yoom-apps/kintone.md)]|
+|13|cybozu|CRM|[www.cybozu.com](https://www.cybozu.com/)|✅ (200)||[[◯](yoom-apps/cybozu.md)]|
+|48|HubSpot|CRM|[hubspot.com](https://hubspot.com)|✅ (200)||[[◯](yoom-apps/hubspot.md)]|
 |55|Plaid|CRM|[plaid.co.jp](https://plaid.co.jp)|✅ (200)||[[◯](yoom-apps/plaid.md)]|
-|56|Salesforce|CRM|[salesforce.com/jp](https://salesforce.com/jp)|✅ (200)|◯|[[◯](yoom-apps/salesforce.md)]|
+|56|Salesforce|CRM|[salesforce.com/jp](https://salesforce.com/jp)|✅ (200)||[[◯](yoom-apps/salesforce.md)]|
 |283|Freshworks|CRM|[freshworks.com/ja](https://www.freshworks.com/ja)|✅ (200)||[[◯](yoom-apps/freshworks.md)]|
-|415|Zoho CRM|CRM|[zoho.com](https://www.zoho.com)|✅ (200)|◯|[[◯](yoom-apps/zoho-crm.md)]|
+|415|Zoho CRM|CRM|[zoho.com](https://www.zoho.com)|✅ (200)||[[◯](yoom-apps/zoho-cr.md)]|
 |416|Nutshell|CRM|[nutshell.com](https://www.nutshell.com)|✅ (200)||[[◯](yoom-apps/nutshell.md)]|
-|417|Capsule CRM|CRM|[capsulecrm.com](https://capsulecrm.com)|✅ (200)|◯|[[◯](yoom-apps/capsule-crm.md)]|
+|417|Capsule CRM|CRM|[capsulecrm.com](https://capsulecrm.com)|✅ (200)||[[◯](yoom-apps/capsule-cr.md)]|
 |418|Monday CRM|CRM|[monday.com/crm](https://www.monday.com/crm)|✅ (200)||[[◯](yoom-apps/monday-crm.md)]|
-|810|Streak|CRM|[streak.com](https://streak.com)|✅ (200)|◯|[[◯](yoom-apps/streak.md)]|
+|810|Streak|CRM|[streak.com](https://streak.com)|✅ (200)||[[◯](yoom-apps/streak.md)]|
 |811|Nutshell|CRM|[nutshell.com](https://www.nutshell.com)|✅ (301)||[[◯](yoom-apps/nutshell.md)]|
-|812|Capsule CRM|CRM|[capsulecrm.com](https://www.capsulecrm.com)|✅ (200)|◯|[[◯](yoom-apps/capsule-crm.md)]|
-|813|Copper CRM|CRM|[copper.com](https://www.copper.com)|✅ (200)|◯|[[◯](yoom-apps/copper-crm.md)]|
-|814|Nimble CRM|CRM|[nimble.com](https://www.nimble.com)|✅ (200)|◯|[[◯](yoom-apps/nimble-crm.md)]|
+|812|Capsule CRM|CRM|[capsulecrm.com](https://www.capsulecrm.com)|✅ (200)||[[◯](yoom-apps/capsule-cr.md)]|
+|813|Copper CRM|CRM|[copper.com](https://www.copper.com)|✅ (200)||[[◯](yoom-apps/copper-cr.md)]|
+|814|Nimble CRM|CRM|[nimble.com](https://www.nimble.com)|✅ (200)||[[◯](yoom-apps/nimble-cr.md)]|
 |815|Sellf|CRM|[sellf.io](https://sellf.io)|✅ (200)||[[◯](yoom-apps/sellf.md)]|
-|816|Freshsales CRM|CRM|[freshsales.io](https://freshsales.io)|✅ (200)|◯|[[◯](yoom-apps/freshsales-crm.md)]|
-|1021|HubSpot CRM Japan|CRM|[hubspot.co.jp](https://www.hubspot.co.jp)|✅ (200)|◯|[[◯](yoom-apps/hubspot-crm-japan.md)]|
+|816|Freshsales CRM|CRM|[freshsales.io](https://freshsales.io)|✅ (200)||[[◯](yoom-apps/freshsales-cr.md)]|
+|1021|HubSpot CRM Japan|CRM|[hubspot.co.jp](https://www.hubspot.co.jp)|✅ (200)||[[◯](yoom-apps/hubspot-crm-japan.md)]|
 |1022|Zoho CRM Japan|CRM|[zoho.com/jp](https://www.zoho.com/jp)|✅ (200)||[[◯](yoom-apps/zoho-crm-japan.md)]|
-|1023|Salesforce Japan|CRM|[salesforce.com/jp](https://www.salesforce.com/jp)|✅ (200)|◯|[[◯](yoom-apps/salesforce-japan.md)]|
-|1024|Pipedrive Japan|CRM|[pipedrive.co.jp](https://www.pipedrive.co.jp)|✅ (200)|◯|[[◯](yoom-apps/pipedrive-japan.md)]|
-|1025|Bitrix24|CRM|[bitrix24.jp](https://www.bitrix24.jp)|✅ (200)|◯|[[◯](yoom-apps/bitrix24.md)]|
+|1023|Salesforce Japan|CRM|[salesforce.com/jp](https://www.salesforce.com/jp)|✅ (200)||[[◯](yoom-apps/salesforce-japan.md)]|
+|1024|Pipedrive Japan|CRM|[pipedrive.co.jp](https://www.pipedrive.co.jp)|✅ (200)||[[◯](yoom-apps/pipedrive-japan.md)]|
+|1025|Bitrix24|CRM|[bitrix24.jp](https://www.bitrix24.jp)|✅ (200)||[[◯](yoom-apps/bitrix24.md)]|
 |1026|Vtiger|CRM|[vtiger.com](https://www.vtiger.com)|✅ (200)||[[◯](yoom-apps/vtiger.md)]|
 |1027|EspoCRM|CRM|[espocrm.com](https://www.espocrm.com)|✅ (200)||[[◯](yoom-apps/espo_crm.md)]|
-|1028|Freshsales Suite|CRM|[freshsales.io](https://freshsales.io)|✅ (200)|◯|[[◯](yoom-apps/freshsales-suite.md)]|
-|1029|Zoho Bigin|CRM|[zoho.com/bigin](https://www.zoho.com/bigin)|✅ (200)|◯|[[◯](yoom-apps/zoho-bigin.md)]|
-|1030|Insightly|CRM|[insightly.com](https://www.insightly.com)|✅ (200)|◯|[[◯](yoom-apps/insightly.md)]|
+|1028|Freshsales Suite|CRM|[freshsales.io](https://freshsales.io)|✅ (200)||[[◯](yoom-apps/freshsales-suite.md)]|
+|1029|Zoho Bigin|CRM|[zoho.com/bigin](https://www.zoho.com/bigin)|✅ (200)||[[◯](yoom-apps/zoho-bigin.md)]|
+|1030|Insightly|CRM|[insightly.com](https://www.insightly.com)|✅ (200)||[[◯](yoom-apps/insightly.md)]|
 |1031|Less Annoying CRM|CRM|[lessannoyingcrm.com](https://www.lessannoyingcrm.com)|✅ (200)||[[◯](yoom-apps/less-annoying-crm.md)]|
 |1032|Agile CRM|CRM|[agilecrm.com](https://www.agilecrm.com)|✅ (200)||[[◯](yoom-apps/agile-crm.md)]|
-|1033|Capsule|CRM|[capsulecrm.com](https://www.capsulecrm.com)|✅ (200)|◯|[[◯](yoom-apps/capsule.md)]|
+|1033|Capsule|CRM|[capsulecrm.com](https://www.capsulecrm.com)|✅ (200)||[[◯](yoom-apps/capsule.md)]|
 |1034|Monday Sales|CRM|[monday.com/sales](https://www.monday.com/sales)|✅ (200)||[[◯](yoom-apps/monday-sales.md)]|
-|1035|HubSpot Sales|CRM|[hubspot.com/sales](https://www.hubspot.com/sales)|✅ (200)|◯|[[◯](yoom-apps/hubspot-sales.md)]|
+|1035|HubSpot Sales|CRM|[hubspot.com/sales](https://www.hubspot.com/sales)|✅ (200)||[[◯](yoom-apps/hubspot-sales.md)]|
 |1036|Really Simple Systems|CRM|[reallysimplesystems.com](https://www.reallysimplesystems.com)|✅ (200)||[[◯](yoom-apps/really-simple-systems.md)]|
 
 ### Cloud
 
 |#|サービス|カテゴリー|ホームページ|URL検証|yoom連携|
 |---|---------------|----------|-------------|----------|-----------|
-|71|AWS|Cloud|[aws.amazon.com/jp](https://aws.amazon.com/jp)|✅ (200)|◯|[[◯](yoom-apps/aws.md)]|
+|71|AWS|Cloud|[aws.amazon.com/jp](https://aws.amazon.com/jp)|✅ (200)||[[◯](yoom-apps/aws.md)]|
 |72|Google Cloud|Cloud|[cloud.google.com](https://cloud.google.com)|✅ (200)||[[◯](yoom-apps/google-cloud.md)]|
 |117|Microsoft Azure|Cloud|[azure.microsoft.com/ja-jp](https://azure.microsoft.com/ja-jp)|✅ (200)||[[◯](yoom-apps/microsoft-azure.md)]|
 |118|Oracle Cloud|Cloud|[oracle.com/jp/cloud](https://www.oracle.com/jp/cloud)|✅ (200)||[[◯](yoom-apps/oracle-cloud.md)]|
@@ -262,7 +262,7 @@
 |149|Muumuu Domain|Cloud|[muumuu-domain.com](https://muumuu-domain.com)|✅ (200)||[[◯](yoom-apps/muumuu-domain.md)]|
 |150|Sakura Cloud|Cloud|[cloud.sakura.ad.jp](https://cloud.sakura.ad.jp)|✅ (200)||[[◯](yoom-apps/sakura-cloud.md)]|
 |151|KAGOYA|Cloud|[kagoya.jp](https://www.kagoya.jp)|✅ (200)||[[◯](yoom-apps/kagoya.md)]|
-|152|TIS|Cloud|[tis.co.jp](https://www.tis.co.jp)|✅ (200)|◯|[[◯](yoom-apps/tis.md)]|
+|152|TIS|Cloud|[tis.co.jp](https://www.tis.co.jp)|✅ (200)||[[◯](yoom-apps/tis.md)]|
 |156|ASAHI Net|Cloud|[asahi-net.jp](https://asahi-net.jp)|✅ (200)||[[◯](yoom-apps/asahi-net.md)]|
 |157|Kii|Cloud|[kii.com](https://kii.com)|✅ (200)||[[◯](yoom-apps/kii.md)]|
 |168|Muumuu Domain|Cloud|[muumuu-domain.com](https://muumuu-domain.com)|✅ (200)||[[◯](yoom-apps/muumuu-domain.md)]|
@@ -277,19 +277,19 @@
 |227|Alibaba Cloud|Cloud|[alibabacloud.com](https://www.alibabacloud.com)|✅ (200)||[[◯](yoom-apps/alibaba-cloud.md)]|
 |263|KDDI Cloud|Cloud|[cloud.kddi.com](https://cloud.kddi.com)|❌ (404)||[[◯](yoom-apps/kddi-cloud.md)]|
 |264|OCN Cloud|Cloud|[cloud.ocn.ne.jp](https://cloud.ocn.ne.jp)|❌ (404)||[[◯](yoom-apps/ocn-cloud.md)]|
-|265|Biglobe Cloud|Cloud|[cloud.biglobe.ne.jp](https://cloud.biglobe.ne.jp)|❌ (404)|◯|[[◯](yoom-apps/biglobe-cloud.md)]|
+|265|Biglobe Cloud|Cloud|[cloud.biglobe.ne.jp](https://cloud.biglobe.ne.jp)|❌ (404)||[[◯](yoom-apps/biglobe-cloud.md)]|
 |266|So-net Cloud|Cloud|[cloud.sonet.ne.jp](https://cloud.sonet.ne.jp)|❌ (404)||[[◯](yoom-apps/so-net-cloud.md)]|
 |354|IBM|Cloud|[ibm.com](https://ibm.com)|✅ (200)||[[◯](yoom-apps/ibm.md)]|
 |355|Red Hat|Cloud|[redhat.com](https://redhat.com)|✅ (200)||[[◯](yoom-apps/red-hat.md)]|
 |356|VMware|Cloud|[vmware.com](https://vmware.com)|✅ (200)||[[◯](yoom-apps/vmware.md)]|
 |357|Citrix|Cloud|[citrix.com](https://citrix.com)|⚠️ (403)||[[◯](yoom-apps/citrix.md)]|
 |363|Google Cloud|Cloud|[cloud.google.com](https://cloud.google.com)|✅ (200)||[[◯](yoom-apps/google-cloud.md)]|
-|369|Amazon Web Services|Cloud|[amazon.com](https://www.amazon.com)|⚠️ (503)|◯|[[◯](yoom-apps/amazon-web-services.md)]|
+|369|Amazon Web Services|Cloud|[amazon.com](https://www.amazon.com)|⚠️ (503)||[[◯](yoom-apps/amazon-web-services.md)]|
 |377|Alibaba Cloud|Cloud|[alibaba.com](https://www.alibaba.com)|✅ (200)||[[◯](yoom-apps/alibaba-cloud.md)]|
 |382|OCN|Cloud|[ocn.ne.jp](https://www.ocn.ne.jp)|⚠️ (timeout)||[[◯](yoom-apps/ocn.md)]|
-|383|Biglobe|Cloud|[biglobe.ne.jp](https://www.biglobe.ne.jp)|⚠️ (timeout)|◯|[[◯](yoom-apps/biglobe.md)]|
+|383|Biglobe|Cloud|[biglobe.ne.jp](https://www.biglobe.ne.jp)|⚠️ (timeout)||[[◯](yoom-apps/biglobe.md)]|
 |384|So-net|Cloud|[sonet.ne.jp](https://www.sonet.ne.jp)|⚠️ (timeout)||[[◯](yoom-apps/so-net.md)]|
-|628|Stackdriver|Cloud|[cloud.google.com/stackdriver](https://cloud.google.com/stackdriver)|✅ (200)|◯|[[◯](yoom-apps/stackdriver.md)]|
+|628|Stackdriver|Cloud|[cloud.google.com/stackdriver](https://cloud.google.com/stackdriver)|✅ (200)||[[◯](yoom-apps/stackdriver.md)]|
 |913|Kinsta|Cloud|[kinsta.com](https://www.kinsta.com)|✅ (200)||[[◯](yoom-apps/kinsta.md)]|
 |914|Scaleway|Cloud|[scaleway.com](https://www.scaleway.com)|✅ (200)||[[◯](yoom-apps/scaleway.md)]|
 |915|Linode|Cloud|[linode.com](https://www.linode.com)|✅ (200)||[[◯](yoom-apps/linode.md)]|
@@ -313,19 +313,19 @@
 
 |#|サービス|カテゴリー|ホームページ|URL検証|yoom連携|
 |---|---------------|----------|-------------|----------|-----------|
-|395|SharePoint|Collaboration|[sharepoint.com](https://www.sharepoint.com)|✅ (200)|◯|[[◯](yoom-apps/sharepoint.md)]|
-|396|Confluence Cloud|Collaboration|[atlassian.com/confluence](https://www.atlassian.com/confluence)|✅ (200)|◯|[[◯](yoom-apps/confluence-cloud.md)]|
+|395|SharePoint|Collaboration|[sharepoint.com](https://www.sharepoint.com)|✅ (200)||[[◯](yoom-apps/sharepoint.md)]|
+|396|Confluence Cloud|Collaboration|[atlassian.com/confluence](https://www.atlassian.com/confluence)|✅ (200)||[[◯](yoom-apps/confluence-cloud.md)]|
 |490|ProofHub|Collaboration|[proofhub.com](https://proofhub.com)|✅ (200)||[[◯](yoom-apps/proofhub.md)]|
 |491|Assembla|Collaboration|[assembla.com](https://assembla.com)|✅ (200)||[[◯](yoom-apps/assembla.md)]|
 |492|Procore|Collaboration|[procore.com](https://procore.com)|✅ (200)||[[◯](yoom-apps/procore.md)]|
 |493|Planview|Collaboration|[planview.com](https://planview.com)|✅ (200)||[[◯](yoom-apps/planview.md)]|
-|494|Slack for Teams|Collaboration|[slack.com](https://slack.com)|✅ (200)|◯|[[◯](yoom-apps/slack-for-teams.md)]|
-|495|Microsoft Teams|Collaboration|[teams.microsoft.com](https://teams.microsoft.com)|✅ (200)|◯|[[◯](yoom-apps/microsoft-teams.md)]|
+|494|Slack for Teams|Collaboration|[slack.com](https://slack.com)|✅ (200)||[[◯](yoom-apps/slack-for-teams.md)]|
+|495|Microsoft Teams|Collaboration|[teams.microsoft.com](https://teams.microsoft.com)|✅ (200)||[[◯](yoom-apps/microsoft-teams.md)]|
 |496|Flock|Collaboration|[flock.com](https://flock.com)|✅ (200)||[[◯](yoom-apps/flock.md)]|
-|512|Basecamp Classic|Collaboration|[basecamp.com/classic](https://www.basecamp.com/classic)|✅ (200)|◯|[[◯](yoom-apps/basecamp-classic.md)]|
+|512|Basecamp Classic|Collaboration|[basecamp.com/classic](https://www.basecamp.com/classic)|✅ (200)||[[◯](yoom-apps/basecamp-classic.md)]|
 |513|Asana Premium|Collaboration|[asana.com/premium](https://asana.com/premium)|✅ (200)||[[◯](yoom-apps/asana-premium.md)]|
-|514|Trello Premium|Collaboration|[trello.com/premium](https://trello.com/premium)|✅ (200)|◯|[[◯](yoom-apps/trello-premium.md)]|
-|515|Notion for Teams|Collaboration|[notion.so/teams](https://www.notion.so/teams)|✅ (200)|◯|[[◯](yoom-apps/notion-for-teams.md)]|
+|514|Trello Premium|Collaboration|[trello.com/premium](https://trello.com/premium)|✅ (200)||[[◯](yoom-apps/trello-premiu.md)]|
+|515|Notion for Teams|Collaboration|[notion.so/teams](https://www.notion.so/teams)|✅ (200)||[[◯](yoom-apps/notion-for-teams.md)]|
 |1398|Crowdcast|Collaboration|[https://www.crowdcast.io](https://www.crowdcast.io)|✅ (200)||[[◯](yoom-apps/crowdcast.md)]|
 |1399|Riverside.fm|Collaboration|[https://www.riverside.fm](https://www.riverside.fm)|✅ (200)||[[◯](yoom-apps/riverside.fm.md)]|
 |1400|StreamYard|Collaboration|[https://www.streamyard.com](https://www.streamyard.com)|✅ (200)||[[◯](yoom-apps/streamyard.md)]|
@@ -333,16 +333,16 @@
 |1402|Castr|Collaboration|[https://www.castr.io](https://www.castr.io)|✅ (200)||[[◯](yoom-apps/castr.md)]|
 |1403|Loom Enterprise|Collaboration|[https://www.loom.com](https://www.loom.com)|✅ (301)||[[◯](yoom-apps/loom-enterprise.md)]|
 |1404|Vidyard Enterprise|Collaboration|[https://www.vidyard.com](https://www.vidyard.com)|✅ (200)||[[◯](yoom-apps/vidyard-enterprise.md)]|
-|1405|Soapbox|Collaboration|[https://www.soapboxhq.com](https://www.soapboxhq.com)|❌ (404)|◯|[[◯](yoom-apps/soapbox.md)]|
+|1405|Soapbox|Collaboration|[https://www.soapboxhq.com](https://www.soapboxhq.com)|❌ (404)||[[◯](yoom-apps/soapbox.md)]|
 |1406|Hippo Video|Collaboration|[https://www.hippovideo.io](https://www.hippovideo.io)|✅ (200)||[[◯](yoom-apps/hippo-video.md)]|
 |1407|Wistia Plus|Collaboration|[https://www.wistia.com](https://www.wistia.com)|✅ (200)||[[◯](yoom-apps/wistia-plus.md)]|
 |1408|BombBomb|Collaboration|[https://www.bombbomb.com](https://www.bombbomb.com)|✅ (200)||[[◯](yoom-apps/bombbomb.md)]|
 |1409|Covideo|Collaboration|[https://www.covideo.com](https://www.covideo.com)|✅ (200)||[[◯](yoom-apps/covideo.md)]|
 |1410|Bonjoro|Collaboration|[https://www.bonjoro.com](https://www.bonjoro.com)|✅ (200)||[[◯](yoom-apps/bonjoro.md)]|
 |1411|Toky|Collaboration|[https://www.toky.co](https://www.toky.co)|✅ (200)||[[◯](yoom-apps/toky.md)]|
-|1412|CloudTalk|Collaboration|[https://www.cloudtalk.io](https://www.cloudtalk.io)|✅ (200)|◯|[[◯](yoom-apps/cloudtalk.md)]|
-|1413|JustCall|Collaboration|[https://www.justcall.io](https://www.justcall.io)|✅ (200)|◯|[[◯](yoom-apps/justcall.md)]|
-|1414|Aircall|Collaboration|[https://www.aircall.io](https://www.aircall.io)|✅ (200)|◯|[[◯](yoom-apps/aircall.md)]|
+|1412|CloudTalk|Collaboration|[https://www.cloudtalk.io](https://www.cloudtalk.io)|✅ (200)||[[◯](yoom-apps/cloudtalk.md)]|
+|1413|JustCall|Collaboration|[https://www.justcall.io](https://www.justcall.io)|✅ (200)||[[◯](yoom-apps/justcall.md)]|
+|1414|Aircall|Collaboration|[https://www.aircall.io](https://www.aircall.io)|✅ (200)||[[◯](yoom-apps/aircall.md)]|
 |1415|Ringover|Collaboration|[https://www.ringover.com](https://www.ringover.com)|✅ (200)||[[◯](yoom-apps/ringover.md)]|
 |1416|OpenPhone|Collaboration|[https://www.openphone.com](https://www.openphone.com)|✅ (200)||[[◯](yoom-apps/openphone.md)]|
 |1417|Dialpad Talk|Collaboration|[https://www.dialpad.com](https://www.dialpad.com)|✅ (200)||[[◯](yoom-apps/dialpad-talk.md)]|
@@ -353,22 +353,22 @@
 
 |#|サービス|カテゴリー|ホームページ|URL検証|yoom連携|
 |---|---------------|----------|-------------|----------|-----------|
-|65|Zoom|Communication|[zoom.us](https://zoom.us)|✅ (200)|◯|[[◯](yoom-apps/zoom.md)]|
-|95|LINE Biz ID|Communication|[linebiz.com/jp](https://linebiz.com/jp)|✅ (200)|◯|[[◯](yoom-apps/line-biz-id.md)]|
-|96|Slack|Communication|[slack.com/intl/ja-jp/](https://slack.com/intl/ja-jp/)|✅ (200)|◯|[[◯](yoom-apps/slack.md)]|
-|124|Loom|Communication|[loom.com](https://loom.com)|✅ (200)|◯|[[◯](yoom-apps/loom.md)]|
-|125|Microsoft Teams|Communication|[teams.microsoft.com](https://teams.microsoft.com)|✅ (200)|◯|[[◯](yoom-apps/microsoft-teams.md)]|
+|65|Zoom|Communication|[zoom.us](https://zoom.us)|✅ (200)||[[◯](yoom-apps/zoo.md)]|
+|95|LINE Biz ID|Communication|[linebiz.com/jp](https://linebiz.com/jp)|✅ (200)||[[◯](yoom-apps/line-biz-id.md)]|
+|96|Slack|Communication|[slack.com/intl/ja-jp/](https://slack.com/intl/ja-jp/)|✅ (200)||[[◯](yoom-apps/slack.md)]|
+|124|Loom|Communication|[loom.com](https://loom.com)|✅ (200)||[[◯](yoom-apps/loo.md)]|
+|125|Microsoft Teams|Communication|[teams.microsoft.com](https://teams.microsoft.com)|✅ (200)||[[◯](yoom-apps/microsoft-teams.md)]|
 |126|Webex|Communication|[webex.com](https://webex.com)|✅ (200)||[[◯](yoom-apps/webex.md)]|
 |142|Ringbell|Communication|[ringbell.jp](https://ringbell.jp)|✅ (200)||[[◯](yoom-apps/ringbell.md)]|
 |190|V-Cube|Communication|[v-cube.com](https://v-cube.com)|⚠️ (403)||[[◯](yoom-apps/v-cube.md)]|
 |284|RingCentral|Communication|[ringcentral.com](https://www.ringcentral.com)|✅ (200)||[[◯](yoom-apps/ringcentral.md)]|
-|285|Twilio|Communication|[twilio.com/ja](https://www.twilio.com/ja)|✅ (200)|◯|[[◯](yoom-apps/twilio.md)]|
-|352|LINE|Communication|[line.me](https://line.me)|✅ (200)|◯|[[◯](yoom-apps/line.md)]|
+|285|Twilio|Communication|[twilio.com/ja](https://www.twilio.com/ja)|✅ (200)||[[◯](yoom-apps/twilio.md)]|
+|352|LINE|Communication|[line.me](https://line.me)|✅ (200)||[[◯](yoom-apps/line.md)]|
 |380|NuRoo|Communication|[nuro.com](https://nuro.com)|✅ (200)||[[◯](yoom-apps/nuroo.md)]|
-|483|Google Workspace|Communication|[workspace.google.com](https://workspace.google.com)|✅ (200)|◯|[[◯](yoom-apps/google-workspace.md)]|
+|483|Google Workspace|Communication|[workspace.google.com](https://workspace.google.com)|✅ (200)||[[◯](yoom-apps/google-workspace.md)]|
 |484|Microsoft 365|Communication|[microsoft.com/microsoft-365](https://www.microsoft.com/microsoft-365)|✅ (200)||[[◯](yoom-apps/microsoft-365.md)]|
-|1593|Gmail|Communication|[https://mail.google.com](https://mail.google.com)|✅ (200)|◯|[[◯](yoom-apps/gmail.md)]|
-|1594|Outlook|Communication|[https://outlook.live.com](https://outlook.live.com)|✅ (200)|◯|[[◯](yoom-apps/outlook.md)]|
+|1593|Gmail|Communication|[https://mail.google.com](https://mail.google.com)|✅ (200)||[[◯](yoom-apps/gmail.md)]|
+|1594|Outlook|Communication|[https://outlook.live.com](https://outlook.live.com)|✅ (200)||[[◯](yoom-apps/outlook.md)]|
 |485|Dialpad|Communication|[dialpad.com](https://dialpad.com)|✅ (200)||[[◯](yoom-apps/dialpad.md)]|
 |486|8x8|Communication|[8x8.com](https://8x8.com)|✅ (200)||[[◯](yoom-apps/8x8.md)]|
 |487|RingCentral MVP|Communication|[ringcentral.com](https://ringcentral.com)|✅ (200)||[[◯](yoom-apps/ringcentral-mvp.md)]|
@@ -376,20 +376,20 @@
 |489|Vonage|Communication|[vonage.com](https://vonage.com)|✅ (200)||[[◯](yoom-apps/vonage.md)]|
 |497|Dialer360|Communication|[dialer360.com](https://dialer360.com)|✅ (200)||[[◯](yoom-apps/dialer360.md)]|
 |498|Avaya|Communication|[avaya.com](https://avaya.com)|✅ (200)||[[◯](yoom-apps/avaya.md)]|
-|499|MessageBird|Communication|[messagebird.com](https://messagebird.com)|✅ (200)|◯|[[◯](yoom-apps/messagebird.md)]|
+|499|MessageBird|Communication|[messagebird.com](https://messagebird.com)|✅ (200)||[[◯](yoom-apps/messagebird.md)]|
 |500|Sinch|Communication|[sinch.com](https://sinch.com)|✅ (200)||[[◯](yoom-apps/sinch.md)]|
 |683|Pusher|Communication|[pusher.com](https://pusher.com)|✅ (200)||[[◯](yoom-apps/pusher.md)]|
 |684|Ably|Communication|[ably.com](https://ably.com)|✅ (200)||[[◯](yoom-apps/ably.md)]|
 |685|PubNub|Communication|[pubnub.com](https://pubnub.com)|✅ (200)||[[◯](yoom-apps/pubnub.md)]|
 |686|Stream|Communication|[getstream.io](https://getstream.io)|✅ (200)||[[◯](yoom-apps/stream.md)]|
-|687|SendBird|Communication|[sendbird.com](https://sendbird.com)|✅ (200)|◯|[[◯](yoom-apps/sendbird.md)]|
+|687|SendBird|Communication|[sendbird.com](https://sendbird.com)|✅ (200)||[[◯](yoom-apps/sendbird.md)]|
 |838|Slido|Communication|[slido.com](https://www.slido.com)|✅ (200)||[[◯](yoom-apps/slido.md)]|
 |839|Poll Everywhere|Communication|[polleverywhere.com](https://www.polleverywhere.com)|✅ (200)||[[◯](yoom-apps/poll-everywhere.md)]|
 |840|Mentimeter|Communication|[mentimeter.com](https://www.mentimeter.com)|✅ (200)||[[◯](yoom-apps/mentimeter.md)]|
 |1170|Vimeo|Communication|[vimeo.com](https://vimeo.com)|✅ (200)||[[◯](yoom-apps/vimeo.md)]|
-|1171|Livestorm|Communication|[livestorm.co](https://livestorm.co)|✅ (200)|◯|[[◯](yoom-apps/livestorm.md)]|
-|1172|ClickMeeting|Communication|[clickmeeting.com](https://clickmeeting.com)|✅ (200)|◯|[[◯](yoom-apps/clickmeeting.md)]|
-|1173|Discord|Communication|[discord.com](https://discord.com)|✅ (200)|◯|[[◯](yoom-apps/discord.md)]|
+|1171|Livestorm|Communication|[livestorm.co](https://livestorm.co)|✅ (200)||[[◯](yoom-apps/livestor.md)]|
+|1172|ClickMeeting|Communication|[clickmeeting.com](https://clickmeeting.com)|✅ (200)||[[◯](yoom-apps/clickmeeting.md)]|
+|1173|Discord|Communication|[discord.com](https://discord.com)|✅ (200)||[[◯](yoom-apps/discord.md)]|
 |1194|AbemaTV|Communication|[abema.tv](https://abema.tv)|✅ (200)||[[◯](yoom-apps/abematv.md)]|
 |1195|17LIVE|Communication|[17.live](https://17.live)|✅ (200)||[[◯](yoom-apps/17live.md)]|
 |1196|SHOWROOM|Communication|[showroom-live.com](https://www.showroom-live.com)|✅ (200)||[[◯](yoom-apps/showroom.md)]|
@@ -399,8 +399,8 @@
 |1200|TwitCasting|Communication|[twitcasting.tv](https://twitcasting.tv)|✅ (200)||[[◯](yoom-apps/twitcasting.md)]|
 |1201|BIGO LIVE|Communication|[bigo.tv](https://www.bigo.tv)|✅ (200)||[[◯](yoom-apps/bigo-live.md)]|
 |1202|TikTok Live|Communication|[tiktok.com](https://www.tiktok.com)|⚠️ (403)||[[◯](yoom-apps/tiktok-live.md)]|
-|1203|YouTube Live|Communication|[youtube.com/live](https://www.youtube.com/live)|✅ (200)|◯|[[◯](yoom-apps/youtube-live.md)]|
-|1204|Twitch|Communication|[twitch.tv](https://www.twitch.tv)|✅ (200)|◯|[[◯](yoom-apps/twitch.md)]|
+|1203|YouTube Live|Communication|[youtube.com/live](https://www.youtube.com/live)|✅ (200)||[[◯](yoom-apps/youtube-live.md)]|
+|1204|Twitch|Communication|[twitch.tv](https://www.twitch.tv)|✅ (200)||[[◯](yoom-apps/twitch.md)]|
 |1205|Facebook Live|Communication|[facebook.com/live](https://www.facebook.com/live)|✅ (200)||[[◯](yoom-apps/facebook-live.md)]|
 |1206|Instagram Live|Communication|[instagram.com](https://www.instagram.com)|✅ (200)||[[◯](yoom-apps/instagram-live.md)]|
 |1207|LinkedIn Live|Communication|[linkedin.com](https://www.linkedin.com)|✅ (200)||[[◯](yoom-apps/linkedin-live.md)]|
@@ -409,7 +409,7 @@
 |1210|Microsoft Stream|Communication|[microsoftstream.com](https://www.microsoftstream.com)|✅ (307)||[[◯](yoom-apps/microsoft-stream.md)]|
 |1216|Vidyard|Communication|[vidyard.com](https://www.vidyard.com)|✅ (200)||[[◯](yoom-apps/vidyard.md)]|
 |1218|Wistia|Communication|[wistia.com](https://wistia.com)|✅ (200)||[[◯](yoom-apps/wistia.md)]|
-|1219|Brightcove|Communication|[brightcove.com](https://www.brightcove.com)|✅ (200)|◯|[[◯](yoom-apps/brightcove.md)]|
+|1219|Brightcove|Communication|[brightcove.com](https://www.brightcove.com)|✅ (200)||[[◯](yoom-apps/brightcove.md)]|
 |1220|Vimeo Business|Communication|[vimeo.com](https://vimeo.com/business)|✅ (200)||[[◯](yoom-apps/vimeo-business.md)]|
 |1221|JW Player|Communication|[jwplayer.com](https://www.jwplayer.com)|✅ (200)||[[◯](yoom-apps/jw-player.md)]|
 |1222|Kaltura|Communication|[kaltura.com](https://kaltura.com)|✅ (200)||[[◯](yoom-apps/kaltura.md)]|
@@ -425,26 +425,26 @@
 
 |#|サービス|カテゴリー|ホームページ|URL検証|yoom連携|
 |---|---------------|----------|-------------|----------|-----------|
-|10|Note|Content|[note.com](https://note.com)|✅ (200)|◯|[[◯](yoom-apps/note.md)]|
+|10|Note|Content|[note.com](https://note.com)|✅ (200)||[[◯](yoom-apps/note.md)]|
 |136|Qiita|Content|[qiita.com](https://qiita.com)|✅ (200)||[[◯](yoom-apps/qiita.md)]|
 |137|Zenn|Content|[zenn.dev](https://zenn.dev)|✅ (200)||[[◯](yoom-apps/zenn.md)]|
 |145|NewsDigest|Content|[newsdigest.jp](https://newsdigest.jp)|✅ (200)||[[◯](yoom-apps/newsdigest.md)]|
 |262|Gunosy|Content|[gunosy.com](https://gunosy.com)|✅ (200)||[[◯](yoom-apps/gunosy.md)]|
 |351|Livedoor|Content|[livedoor.com](https://livedoor.com)|✅ (200)||[[◯](yoom-apps/livedoor.md)]|
-|368|YouTube|Content|[youtube.com](https://www.youtube.com)|✅ (200)|◯|[[◯](yoom-apps/youtube.md)]|
+|368|YouTube|Content|[youtube.com](https://www.youtube.com)|✅ (200)||[[◯](yoom-apps/youtube.md)]|
 |892|Dev.to|Content|[dev.to](https://dev.to)|✅ (200)||[[◯](yoom-apps/dev.to.md)]|
 |893|Hashnode|Content|[hashnode.com](https://hashnode.com)|✅ (200)||[[◯](yoom-apps/hashnode.md)]|
 |894|Ghost|Content|[ghost.org](https://ghost.org)|✅ (200)||[[◯](yoom-apps/ghost.md)]|
-|895|WordPress|Content|[wordpress.com](https://www.wordpress.com)|✅ (301)|◯|[[◯](yoom-apps/wordpress.md)]|
-|896|Blogger|Content|[blogger.com](https://www.blogger.com)|✅ (302)|◯|[[◯](yoom-apps/blogger.md)]|
-|897|Tumblr|Content|[tumblr.com](https://tumblr.com)|✅ (301)|◯|[[◯](yoom-apps/tumblr.md)]|
+|895|WordPress|Content|[wordpress.com](https://www.wordpress.com)|✅ (301)||[[◯](yoom-apps/wordpress.md)]|
+|896|Blogger|Content|[blogger.com](https://www.blogger.com)|✅ (302)||[[◯](yoom-apps/blogger.md)]|
+|897|Tumblr|Content|[tumblr.com](https://tumblr.com)|✅ (301)||[[◯](yoom-apps/tumblr.md)]|
 |1123|Ameba|Content|[https://ameba.jp](https://ameba.jp)|✅ (200)||[[◯](yoom-apps/ameba.md)]|
 |1124|はてなブログ|Content|[https://hatenablog.com](https://hatenablog.com)|✅ (200)||[[◯](yoom-apps/はてなブログ.md)]|
 |1125|FC2ブログ|Content|[https://blog.fc2.com](https://blog.fc2.com)|✅ (200)||[[◯](yoom-apps/fc2ブログ.md)]|
 |1126|livedoorブログ|Content|[https://blog.livedoor.com](https://blog.livedoor.com)|✅ (200)||[[◯](yoom-apps/livedoorブログ.md)]|
 |1127|Seesaaブログ|Content|[https://blog.seesaa.jp](https://blog.seesaa.jp)|✅ (200)||[[◯](yoom-apps/seesaaブログ.md)]|
 |1128|Jugem|Content|[https://jugem.jp](https://jugem.jp)|✅ (200)||[[◯](yoom-apps/jugem.md)]|
-|1166|WordPress|Content|[https://wordpress.com](https://wordpress.com)|✅ (200)|◯|[[◯](yoom-apps/wordpress.md)]|
+|1166|WordPress|Content|[https://wordpress.com](https://wordpress.com)|✅ (200)||[[◯](yoom-apps/wordpress.md)]|
 |1167|Ghost|Content|[https://ghost.org](https://ghost.org)|✅ (200)||[[◯](yoom-apps/ghost.md)]|
 |1231|Nicovideo|Content|[nicovideo.jp](https://www.nicovideo.jp)|✅ (200)||[[◯](yoom-apps/nicovideo.md)]|
 |1232|Hulu Japan|Content|[hulu.jp](https://hulu.jp)|✅ (302)||[[◯](yoom-apps/hulu-japan.md)]|
@@ -465,7 +465,7 @@
 |421|MySQL|Database|[mysql.com](https://www.mysql.com)|✅ (200)||[[◯](yoom-apps/mysql.md)]|
 |422|Redis|Database|[redis.io](https://redis.io)|✅ (200)||[[◯](yoom-apps/redis.md)]|
 |423|Cassandra|Database|[cassandra.apache.org](https://cassandra.apache.org)|✅ (200)||[[◯](yoom-apps/cassandra.md)]|
-|424|Airtable|Database|[airtable.com](https://www.airtable.com)|✅ (200)|◯|[[◯](yoom-apps/airtable.md)]|
+|424|Airtable|Database|[airtable.com](https://www.airtable.com)|✅ (200)||[[◯](yoom-apps/airtable.md)]|
 |543|Airbyte|Database|[airbyte.com](https://airbyte.com)|✅ (200)||[[◯](yoom-apps/airbyte.md)]|
 |544|Fivetran|Database|[fivetran.com](https://fivetran.com)|✅ (200)||[[◯](yoom-apps/fivetran.md)]|
 |545|dbt Labs|Database|[dbt.com](https://dbt.com)|✅ (200)||[[◯](yoom-apps/dbt-labs.md)]|
@@ -478,22 +478,22 @@
 |563|YugabyteDB|Database|[yugabyte.com](https://yugabyte.com)|✅ (200)||[[◯](yoom-apps/yugabytedb.md)]|
 |564|Neo4j|Database|[neo4j.com](https://neo4j.com)|✅ (200)||[[◯](yoom-apps/neo4j.md)]|
 |565|InfluxDB|Database|[influxdata.com](https://influxdata.com)|✅ (200)||[[◯](yoom-apps/influxdb.md)]|
-|566|Elasticsearch|Database|[elastic.co](https://elastic.co)|✅ (200)|◯|[[◯](yoom-apps/elasticsearch.md)]|
+|566|Elasticsearch|Database|[elastic.co](https://elastic.co)|✅ (200)||[[◯](yoom-apps/elasticsearch.md)]|
 
 ### Design
 
 |#|サービス|カテゴリー|ホームページ|URL検証|yoom連携|
 |---|---------------|----------|-------------|----------|-----------|
-|62|Canva|Design|[canva.com](https://canva.com)|⚠️ (403)|◯|[[◯](yoom-apps/canva.md)]|
-|63|Adobe|Design|[adobe.com/jp](https://adobe.com/jp)|✅ (200)|◯|[[◯](yoom-apps/adobe.md)]|
+|62|Canva|Design|[canva.com](https://canva.com)|⚠️ (403)||[[◯](yoom-apps/canva.md)]|
+|63|Adobe|Design|[adobe.com/jp](https://adobe.com/jp)|✅ (200)||[[◯](yoom-apps/adobe.md)]|
 |64|Autodesk|Design|[autodesk.co.jp](https://autodesk.co.jp)|⚠️ (403)||[[◯](yoom-apps/autodesk.md)]|
-|103|Figma|Design|[figma.com](https://figma.com)|✅ (200)|◯|[[◯](yoom-apps/figma.md)]|
+|103|Figma|Design|[figma.com](https://figma.com)|✅ (200)||[[◯](yoom-apps/figma.md)]|
 |104|Sketch|Design|[sketch.com](https://sketch.com)|✅ (200)||[[◯](yoom-apps/sketch.md)]|
 |105|Adobe XD|Design|[adobe.com/jp/products/xd](https://adobe.com/jp/products/xd)|✅ (200)||[[◯](yoom-apps/adobe-xd.md)]|
-|275|Figma Japan|Design|[figma.com/ja](https://figma.com/ja)|✅ (200)|◯|[[◯](yoom-apps/figma-japan.md)]|
+|275|Figma Japan|Design|[figma.com/ja](https://figma.com/ja)|✅ (200)||[[◯](yoom-apps/figma-japan.md)]|
 |360|Adobe Creative Cloud|Design|[adobe.com](https://www.adobe.com)|✅ (200)||[[◯](yoom-apps/adobe-creative-cloud.md)]|
 |362|Apple|Design|[apple.com](https://www.apple.com)|✅ (200)||[[◯](yoom-apps/apple.md)]|
-|440|Figma|Design|[figma.com](https://www.figma.com)|✅ (200)|◯|[[◯](yoom-apps/figma.md)]|
+|440|Figma|Design|[figma.com](https://www.figma.com)|✅ (200)||[[◯](yoom-apps/figma.md)]|
 |441|Sketch|Design|[sketch.com](https://sketch.com)|✅ (200)||[[◯](yoom-apps/sketch.md)]|
 |442|Adobe XD|Design|[adobe.com/products/xd](https://adobe.com/products/xd)|✅ (200)||[[◯](yoom-apps/adobe-xd.md)]|
 |443|InVision|Design|[invision.com](https://www.invision.com)|✅ (200)||[[◯](yoom-apps/invision.md)]|
@@ -506,7 +506,7 @@
 |450|Moqups|Design|[moqups.com](https://moqups.com)|✅ (200)||[[◯](yoom-apps/moqups.md)]|
 |451|Adobe IO|Design|[adobe.io](https://adobe.io)|✅ (200)||[[◯](yoom-apps/adobe-io.md)]|
 |452|Framer|Design|[framer.com](https://framer.com)|✅ (200)||[[◯](yoom-apps/framer.md)]|
-|453|Webflow|Design|[webflow.com](https://www.webflow.com)|✅ (200)|◯|[[◯](yoom-apps/webflow.md)]|
+|453|Webflow|Design|[webflow.com](https://www.webflow.com)|✅ (200)||[[◯](yoom-apps/webflow.md)]|
 
 ### Design/Video
 
@@ -525,7 +525,7 @@
 |1260|Descript|Design/Video|[descript.com](https://www.descript.com)|✅ (200)||[[◯](yoom-apps/descript.md)]|
 |1261|Storyblocks|Design/Video|[storyblocks.com](https://www.storyblocks.com)|✅ (200)||[[◯](yoom-apps/storyblocks.md)]|
 |1262|Epidemic Sound|Design/Video|[epidemicsound.com](https://www.epidemicsound.com)|✅ (200)||[[◯](yoom-apps/epidemic-sound.md)]|
-|1263|Soundstripe|Design/Video|[soundstripe.com](https://www.soundstripe.com)|✅ (103)|◯|[[◯](yoom-apps/soundstripe.md)]|
+|1263|Soundstripe|Design/Video|[soundstripe.com](https://www.soundstripe.com)|✅ (103)||[[◯](yoom-apps/soundstripe.md)]|
 |1264|Artlist|Design/Video|[artlist.io](https://www.artlist.io)|✅ (301)||[[◯](yoom-apps/artlist.md)]|
 |1265|Shotkit|Design/Video|[shotkit.com](https://www.shotkit.com)|✅ (301)||[[◯](yoom-apps/shotkit.md)]|
 |1266|SLR Lounge|Design/Video|[slrlounge.com](https://www.slrlounge.com)|✅ (200)||[[◯](yoom-apps/slr-lounge.md)]|
@@ -548,9 +548,9 @@
 |#|サービス|カテゴリー|ホームページ|URL検証|yoom連携|
 |---|---------------|----------|-------------|----------|-----------|
 |1178|CircleCI|DevOps|[circleci.com](https://circleci.com)|✅ (200)||[[◯](yoom-apps/circleci.md)]|
-|1179|GitLab CI|DevOps|[about.gitlab.com/stages-devops/cicd](https://about.gitlab.com/stages-devops/cicd)|✅ (200)|◯|[[◯](yoom-apps/gitlab-ci.md)]|
-|1180|GitHub Actions|DevOps|[github.com/features/actions](https://github.com/features/actions)|✅ (200)|◯|[[◯](yoom-apps/github-actions.md)]|
-|1181|Bitbucket Pipelines|DevOps|[bitbucket.org/product/features/pipelines](https://bitbucket.org/product/features/pipelines)|✅ (200)|◯|[[◯](yoom-apps/bitbucket-pipelines.md)]|
+|1179|GitLab CI|DevOps|[about.gitlab.com/stages-devops/cicd](https://about.gitlab.com/stages-devops/cicd)|✅ (200)||[[◯](yoom-apps/gitlab-ci.md)]|
+|1180|GitHub Actions|DevOps|[github.com/features/actions](https://github.com/features/actions)|✅ (200)||[[◯](yoom-apps/github-actions.md)]|
+|1181|Bitbucket Pipelines|DevOps|[bitbucket.org/product/features/pipelines](https://bitbucket.org/product/features/pipelines)|✅ (200)||[[◯](yoom-apps/bitbucket-pipelines.md)]|
 |1182|Semaphore CI|DevOps|[semaphoreci.com](https://semaphoreci.com)|✅ (200)||[[◯](yoom-apps/semaphore-ci.md)]|
 |1183|Travis CI|DevOps|[travis-ci.com](https://travis-ci.com)|✅ (301)||[[◯](yoom-apps/travis-ci.md)]|
 |1184|Buildkite|DevOps|[buildkite.com](https://buildkite.com)|✅ (200)||[[◯](yoom-apps/buildkite.md)]|
@@ -571,12 +571,12 @@
 |1306|Argo CD|DevOps|[argoproj.github.io](https://argoproj.github.io/argo-cd)|✅ (200)||[[◯](yoom-apps/argo-cd.md)]|
 |1307|Flux CD|DevOps|[fluxcd.io](https://fluxcd.io)|✅ (200)||[[◯](yoom-apps/flux-cd.md)]|
 |1308|Codefresh|DevOps|[codefresh.io](https://codefresh.io)|✅ (200)||[[◯](yoom-apps/codefresh.md)]|
-|1309|Harness|DevOps|[harness.io](https://harness.io)|✅ (200)|◯|[[◯](yoom-apps/harness.md)]|
+|1309|Harness|DevOps|[harness.io](https://harness.io)|✅ (200)||[[◯](yoom-apps/harness.md)]|
 |1310|JFrog Artifactory|DevOps|[jfrog.com/artifactory](https://www.jfrog.com/artifactory)|✅ (200)||[[◯](yoom-apps/jfrog-artifactory.md)]|
-|1311|GitLab Ultimate|DevOps|[about.gitlab.com/stages-devops/cicd](https://about.gitlab.com/stages-devops/cicd)|✅ (200)|◯|[[◯](yoom-apps/gitlab-ultimate.md)]|
-|1312|GitHub Enterprise|DevOps|[github.com/enterprise](https://github.com/enterprise)|✅ (200)|◯|[[◯](yoom-apps/github-enterprise.md)]|
+|1311|GitLab Ultimate|DevOps|[about.gitlab.com/stages-devops/cicd](https://about.gitlab.com/stages-devops/cicd)|✅ (200)||[[◯](yoom-apps/gitlab-ultimate.md)]|
+|1312|GitHub Enterprise|DevOps|[github.com/enterprise](https://github.com/enterprise)|✅ (200)||[[◯](yoom-apps/github-enterprise.md)]|
 |1313|Azure DevOps|DevOps|[azure.microsoft.com/devops](https://azure.microsoft.com/devops)|✅ (200)||[[◯](yoom-apps/azure-devops.md)]|
-|1314|HashiCorp Terraform|DevOps|[terraform.io](https://www.terraform.io)|✅ (200)|◯|[[◯](yoom-apps/hashicorp-terraform.md)]|
+|1314|HashiCorp Terraform|DevOps|[terraform.io](https://www.terraform.io)|✅ (200)||[[◯](yoom-apps/hashicorp-terrafor.md)]|
 |1316|HashiCorp Consul|DevOps|[consul.io](https://www.consul.io)|✅ (200)||[[◯](yoom-apps/hashicorp-consul.md)]|
 |1317|Ansible Automation|DevOps|[ansible.com/ansible](https://www.ansible.com/ansible/tower)|✅ (200)||[[◯](yoom-apps/ansible-automation.md)]|
 |1318|Puppet Enterprise|DevOps|[puppet.com/products/puppet-enterprise](https://www.puppet.com/products/puppet-enterprise)|✅ (200)||[[◯](yoom-apps/puppet-enterprise.md)]|
@@ -588,7 +588,7 @@
 |#|サービス|カテゴリー|ホームページ|URL検証|yoom連携|
 |---|---------------|----------|-------------|----------|-----------|
 |15|Cacoo|Diagram|[nulab.com/cacoo](https://nulab.com/cacoo/)|✅ (200)||[[◯](yoom-apps/cacoo.md)]|
-|128|Miro|Diagram|[miro.com](https://miro.com)|✅ (200)|◯|[[◯](yoom-apps/miro.md)]|
+|128|Miro|Diagram|[miro.com](https://miro.com)|✅ (200)||[[◯](yoom-apps/miro.md)]|
 |130|Whimsical|Diagram|[whimsical.com](https://whimsical.com)|✅ (200)||[[◯](yoom-apps/whimsical.md)]|
 |138|Creately|Diagram|[creately.com](https://creately.com)|✅ (200)||[[◯](yoom-apps/creately.md)]|
 |139|draw.io|Diagram|[draw.io](https://www.draw.io)|✅ (200)||[[◯](yoom-apps/draw.io.md)]|
@@ -600,7 +600,7 @@
 |870|YWorks|Diagram|[yworks.com](https://www.yworks.com)|✅ (200)||[[◯](yoom-apps/yworks.md)]|
 |871|Concept Draw|Diagram|[conceptdraw.com](https://www.conceptdraw.com)|✅ (200)||[[◯](yoom-apps/concept-draw.md)]|
 |1133|OmniGraffle|Diagram|[https://www.omnigroup.com/omnigraffle](https://www.omnigroup.com/omnigraffle)|✅ (200)||[[◯](yoom-apps/omnigraffle.md)]|
-|1134|MindManager|Diagram|[https://www.mindmanager.com](https://www.mindmanager.com)|✅ (200)|◯|[[◯](yoom-apps/mindmanager.md)]|
+|1134|MindManager|Diagram|[https://www.mindmanager.com](https://www.mindmanager.com)|✅ (200)||[[◯](yoom-apps/mindmanager.md)]|
 |1135|yEd|Diagram|[https://www.yworks.com/products/yed](https://www.yworks.com/products/yed)|✅ (200)||[[◯](yoom-apps/yed.md)]|
 |1136|ConceptDraw DIAGRAM|Diagram|[https://www.conceptdraw.com/products/drawing-tool](https://www.conceptdraw.com/products/drawing-tool)|✅ (200)||[[◯](yoom-apps/conceptdraw-diagram.md)]|
 |1137|ProcessOn|Diagram|[https://www.processon.com](https://www.processon.com)|✅ (200)||[[◯](yoom-apps/processon.md)]|
@@ -615,26 +615,26 @@
 |#|サービス|カテゴリー|ホームページ|URL検証|yoom連携|
 |---|---------------|----------|-------------|----------|-----------|
 |180|クラウドサイン|Document|[cloudsign.jp](https://cloudsign.jp)|✅ (200)||[[◯](yoom-apps/クラウドサイン.md)]|
-|189|Scrapbox|Document|[scrapbox.io](https://scrapbox.io)|✅ (200)|◯|[[◯](yoom-apps/scrapbox.md)]|
-|245|SignTime|Document|[signtime.jp](https://signtime.jp)|✅ (200)|◯|[[◯](yoom-apps/signtime.md)]|
-|246|DocuSign Japan|Document|[docusign.com](https://www.docusign.com)|✅ (200)|◯|[[◯](yoom-apps/docusign-japan.md)]|
+|189|Scrapbox|Document|[scrapbox.io](https://scrapbox.io)|✅ (200)||[[◯](yoom-apps/scrapbox.md)]|
+|245|SignTime|Document|[signtime.jp](https://signtime.jp)|✅ (200)||[[◯](yoom-apps/signtime.md)]|
+|246|DocuSign Japan|Document|[docusign.com](https://www.docusign.com)|✅ (200)||[[◯](yoom-apps/docusign-japan.md)]|
 |247|GyroSign|Document|[gyrosign.co.jp](https://gyrosign.co.jp)|❌ (404)||[[◯](yoom-apps/gyrosign.md)]|
 |248|e-saifu|Document|[e-saifu.co.jp](https://www.e-saifu.co.jp)|❌ (404)||[[◯](yoom-apps/e-saifu.md)]|
 |257|SmartSign|Document|[smartsign.jp](https://smartsign.jp)|❌ (404)||[[◯](yoom-apps/smartsign.md)]|
 |269|Skrue|Document|[skrue.jp](https://skrue.jp)|❌ (404)||[[◯](yoom-apps/skrue.md)]|
 |270|ContractHub|Document|[contract-hub.com](https://contract-hub.com)|❌ (404)||[[◯](yoom-apps/contracthub.md)]|
-|827|PandaDoc|Document|[pandadoc.com](https://www.pandadoc.com)|✅ (200)|◯|[[◯](yoom-apps/pandadoc.md)]|
+|827|PandaDoc|Document|[pandadoc.com](https://www.pandadoc.com)|✅ (200)||[[◯](yoom-apps/pandadoc.md)]|
 |828|SignRequest|Document|[signrequest.com](https://www.signrequest.com)|✅ (302)||[[◯](yoom-apps/signrequest.md)]|
 |829|RightSignature|Document|[rightsignature.com](https://www.rightsignature.com)|✅ (200)||[[◯](yoom-apps/rightsignature.md)]|
 |830|SignEasy|Document|[signeasy.com](https://www.signeasy.com)|✅ (301)||[[◯](yoom-apps/signeasy.md)]|
 |929|Teachme Biz|Document|[teachme.biz](https://www.teachme.biz)|✅ (200)||[[◯](yoom-apps/teachme-biz.md)]|
-|1595|Google Docs|Document|[https://docs.google.com](https://docs.google.com)|✅ (200)|◯|[[◯](yoom-apps/google-docs.md)]|
-|1596|Microsoft Excel [[Y](https://lp.yoom.fun/apps/excel)]|Document|[https://www.microsoft.com/excel](https://www.microsoft.com/excel)|✅ (200)|◯|[[◯](yoom-apps/microsoft-excel-[[y](https://lp.yoom.fun/apps/excel)].md)]|
+|1595|Google Docs|Document|[https://docs.google.com](https://docs.google.com)|✅ (200)||[[◯](yoom-apps/google-docs.md)]|
+|1596|Microsoft Excel [[Y](https://lp.yoom.fun/apps/excel)]|Document|[https://www.microsoft.com/excel](https://www.microsoft.com/excel)|✅ (200)||[[◯](yoom-apps/microsoft-excel-[[y](https://lp.yoom.fun/apps/excel)]].md)]|
 |939|Nuclino|Document|[nuclino.com](https://www.nuclino.com)|✅ (200)||[[◯](yoom-apps/nuclino.md)]|
-|940|Notion JP|Document|[notion.so](https://www.notion.so/ja-jp)|✅ (200)|◯|[[◯](yoom-apps/notion-jp.md)]|
-|941|Quip|Document|[quip.com](https://quip.com)|✅ (200)|◯|[[◯](yoom-apps/quip.md)]|
+|940|Notion JP|Document|[notion.so](https://www.notion.so/ja-jp)|✅ (200)||[[◯](yoom-apps/notion-jp.md)]|
+|941|Quip|Document|[quip.com](https://quip.com)|✅ (200)||[[◯](yoom-apps/quip.md)]|
 |942|Slite|Document|[slite.com](https://slite.com)|✅ (200)||[[◯](yoom-apps/slite.md)]|
-|943|Coda|Document|[coda.io](https://coda.io)|✅ (200)|◯|[[◯](yoom-apps/coda.md)]|
+|943|Coda|Document|[coda.io](https://coda.io)|✅ (200)||[[◯](yoom-apps/coda.md)]|
 |944|Workvivo|Document|[workvivo.com](https://www.workvivo.com)|✅ (200)||[[◯](yoom-apps/workvivo.md)]|
 |945|Samepage|Document|[samepage.io](https://samepage.io)|✅ (200)||[[◯](yoom-apps/samepage.md)]|
 
@@ -642,26 +642,26 @@
 
 |#|サービス|カテゴリー|ホームページ|URL検証|yoom連携|
 |---|---------------|----------|-------------|----------|-----------|
-|74|Confluence|Documentation|[atlassian.com/ja](https://atlassian.com/ja)|✅ (200)|◯|[[◯](yoom-apps/confluence.md)]|
-|127|Figma|Documentation|[figma.com](https://figma.com)|✅ (200)|◯|[[◯](yoom-apps/figma.md)]|
+|74|Confluence|Documentation|[atlassian.com/ja](https://atlassian.com/ja)|✅ (200)||[[◯](yoom-apps/confluence.md)]|
+|127|Figma|Documentation|[figma.com](https://figma.com)|✅ (200)||[[◯](yoom-apps/figma.md)]|
 |134|kibe.la|Documentation|[kibe.la](https://kibe.la)|✅ (200)||[[◯](yoom-apps/kibe.la.md)]|
 |135|esa.io|Documentation|[esa.io](https://esa.io)|✅ (200)||[[◯](yoom-apps/esa.io.md)]|
-|219|Quip|Documentation|[quip.com](https://quip.com)|⚠️ (403)|◯|[[◯](yoom-apps/quip.md)]|
-|220|Coda|Documentation|[coda.io](https://coda.io)|✅ (200)|◯|[[◯](yoom-apps/coda.md)]|
+|219|Quip|Documentation|[quip.com](https://quip.com)|⚠️ (403)||[[◯](yoom-apps/quip.md)]|
+|220|Coda|Documentation|[coda.io](https://coda.io)|✅ (200)||[[◯](yoom-apps/coda.md)]|
 |221|Nuclino|Documentation|[nuclino.com](https://nuclino.com)|✅ (200)||[[◯](yoom-apps/nuclino.md)]|
 |222|XWiki|Documentation|[xwiki.org](https://www.xwiki.org)|✅ (200)||[[◯](yoom-apps/xwiki.md)]|
 |223|MediaWiki|Documentation|[mediawiki.org](https://www.mediawiki.org)|✅ (200)||[[◯](yoom-apps/mediawiki.md)]|
 |884|Swagger|Documentation|[swagger.io](https://www.swagger.io)|✅ (301)||[[◯](yoom-apps/swagger.md)]|
 |885|GitBook|Documentation|[gitbook.com](https://www.gitbook.com)|✅ (200)||[[◯](yoom-apps/gitbook.md)]|
-|886|ReadTheDocs|Documentation|[readthedocs.io](https://www.readthedocs.io)|✅ (302)|◯|[[◯](yoom-apps/readthedocs.md)]|
+|886|ReadTheDocs|Documentation|[readthedocs.io](https://www.readthedocs.io)|✅ (302)||[[◯](yoom-apps/readthedocs.md)]|
 |887|Docusaurus|Documentation|[docusaurus.io](https://www.docusaurus.io)|✅ (200)||[[◯](yoom-apps/docusaurus.md)]|
-|888|MkDocs|Documentation|[mkdocs.org](https://www.mkdocs.org)|✅ (200)|◯|[[◯](yoom-apps/mkdocs.md)]|
+|888|MkDocs|Documentation|[mkdocs.org](https://www.mkdocs.org)|✅ (200)||[[◯](yoom-apps/mkdocs.md)]|
 |889|Sphinx|Documentation|[sphinx-doc.org](https://www.sphinx-doc.org)|✅ (302)||[[◯](yoom-apps/sphinx.md)]|
 |890|Jekyll|Documentation|[jekyllrb.com](https://www.jekyllrb.com)|✅ (301)||[[◯](yoom-apps/jekyll.md)]|
 |891|Hugo|Documentation|[hugo.com](https://www.hugo.com)|✅ (302)||[[◯](yoom-apps/hugo.md)]|
-|1149|ReadTheDocs|Documentation|[https://readthedocs.io](https://readthedocs.io)|✅ (200)|◯|[[◯](yoom-apps/readthedocs.md)]|
+|1149|ReadTheDocs|Documentation|[https://readthedocs.io](https://readthedocs.io)|✅ (200)||[[◯](yoom-apps/readthedocs.md)]|
 |1150|Docusaurus|Documentation|[https://docusaurus.io](https://docusaurus.io)|✅ (200)||[[◯](yoom-apps/docusaurus.md)]|
-|1163|MkDocs|Documentation|[https://www.mkdocs.org](https://www.mkdocs.org)|✅ (200)|◯|[[◯](yoom-apps/mkdocs.md)]|
+|1163|MkDocs|Documentation|[https://www.mkdocs.org](https://www.mkdocs.org)|✅ (200)||[[◯](yoom-apps/mkdocs.md)]|
 
 ### EC
 
@@ -669,7 +669,7 @@
 |---|---------------|----------|-------------|----------|-----------|
 |17|shop-pro|EC|[shop-pro.jp](https://shop-pro.jp)|✅ (200)||[[◯](yoom-apps/shop-pro.md)]|
 |18|makeshop|EC|[makeshop.jp](https://www.makeshop.jp)|✅ (200)||[[◯](yoom-apps/makeshop.md)]|
-|44|Shopify|EC|[shopify.com/jp](https://shopify.com/jp)|✅ (200)|◯|[[◯](yoom-apps/shopify.md)]|
+|44|Shopify|EC|[shopify.com/jp](https://shopify.com/jp)|✅ (200)||[[◯](yoom-apps/shopify.md)]|
 |45|Wix|EC|[wix.com](https://wix.com)|✅ (200)|[[◯](yoom-apps/wix.md)]|
 |57|EC-CUBE|EC|[ec-cube.net](https://ec-cube.net)|⚠️ (403)||
 |131|FC2ショッピングカート|EC|[cart.fc2.com](https://cart.fc2.com)|✅ (200)||
