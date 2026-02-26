@@ -5,694 +5,694 @@
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 272 | AIアシスタント | AI | [ai-assistant.jp](https://ai-assistant.jp) | ✅ (200) |   |
-| 273 | ChatGPT Japan | AI | [chatgpt-japan.com](https://chatgpt-japan.com) | ⚠️ (403) | ◯ |
-| 315 | Preferred Networks | AI | [preferred-networks.jp](https://www.preferred-networks.jp) | ✅ (200) |   |
-| 316 | HACARUS | AI | [hacarus.com](https://www.hacarus.com) | ✅ (200) |   |
-| 328 | Sakura AI | AI | [sakura-ai.jp](https://sakura-ai.jp) | ✅ (200) |   |
-| 329 | NVIDIA AI | AI | [nvidia.com/ja-jp/ai](https://www.nvidia.com/ja-jp/ai) | ✅ (200) |   |
-| 330 | Nexway AI | AI | [nexway.com](https://nexway.com) | ✅ (200) |   |
-| 425 | Cohere | AI | [cohere.ai](https://www.cohere.ai) | ✅ (200) | ◯ |
-| 426 | Anthropic | AI | [anthropic.com](https://www.anthropic.com) | ✅ (200) | ◯ |
-| 427 | OpenAI | AI | [openai.com](https://www.openai.com) | ⚠️ (403) | ◯ |
-| 567 | Pinecone | AI | [pinecone.io](https://pinecone.io) | ✅ (200) | ◯ |
-| 568 | Weaviate | AI | [weaviate.io](https://weaviate.io) | ✅ (200) |   |
-| 569 | Qdrant | AI | [qdrant.io](https://qdrant.io) | ✅ (200) | ◯ |
-| 570 | Milvus | AI | [milvus.io](https://milvus.io) | ✅ (200) |   |
-| 571 | ChromaDB | AI | [trychroma.com](https://www.trychroma.com) | ✅ (200) |   |
-| 572 | LangChain | AI | [langchain.com](https://www.langchain.com) | ✅ (200) |   |
-| 573 | Hugging Face | AI | [huggingface.co](https://huggingface.co) | ✅ (200) | ◯ |
-| 574 | Replicate | AI | [replicate.com](https://replicate.com) | ✅ (200) |   |
-| 575 | Stability AI | AI | [stability.ai](https://stability.ai) | ✅ (200) |   |
-| 576 | Midjourney | AI | [midjourney.com](https://midjourney.com) | ✅ (200) |   |
-| 577 | Runway ML | AI | [runwayml.com](https://runwayml.com) | ✅ (200) | ◯ |
-| 578 | Jasper | AI | [jasper.ai](https://jasper.ai) | ✅ (200) |   |
-| 579 | Copy.ai | AI | [copy.ai](https://copy.ai) | ✅ (200) |   |
-| 580 | Writesonic | AI | [writesonic.com](https://writesonic.com) | ✅ (200) |   |
-| 581 | Anthropic Claude | AI | [anthropic.com/claude](https://www.anthropic.com/claude) | ✅ (200) | ◯ |
-| 582 | GPT-4 | AI | [openai.com/gpt-4](https://openai.com/gpt-4) | ⚠️ (403) |   |
-| 583 | Google Gemini | AI | [gemini.google.com](https://gemini.google.com) | ✅ (200) | ◯ |
-| 584 | Mistral AI | AI | [mistral.ai](https://mistral.ai) | ✅ (200) | ◯ |
-| 585 | Aleph Alpha | AI | [aleph-alpha.com](https://www.aleph-alpha.com) | ✅ (200) |   |
-| 586 | 01.AI | AI | [01.ai](https://01.ai) | ✅ (200) |   |
-| 587 | Inflection AI | AI | [inflection.ai](https://inflection.ai) | ✅ (200) |   |
-| 588 | Character.AI | AI | [character.ai](https://character.ai) | ✅ (200) |   |
-| 589 | Perplexity | AI | [perplexity.ai](https://www.perplexity.ai) | ✅ (200) | ◯ |
-| 590 | You.com | AI | [you.com](https://you.com) | ✅ (200) |   |
-| 591 | Neeva | AI | [neeva.com](https://neeva.com) | ✅ (200) |   |
-| 592 | Andi | AI | [andisearch.com](https://andisearch.com) | ✅ (200) | ◯ |
-| 593 | Phind | AI | [phind.com](https://phind.com) | ✅ (200) |   |
-| 594 | Poe | AI | [poe.com](https://poe.com) | ✅ (200) |   |
-| 595 | Julius AI | AI | [julius.ai](https://julius.ai) | ✅ (200) |   |
-| 596 | Julius | AI | [juliusapp.ai](https://juliusapp.ai) | ✅ (200) |   |
-| 597 | Claude 3 | AI | [anthropic.com/claude-3](https://www.anthropic.com/claude-3) | ✅ (200) |   |
-| 598 | Claude Pro | AI | [claude.ai](https://claude.ai) | ✅ (200) |   |
+| 272 | AIアシスタント | AI | [ai-assistant.jp](https://ai-assistant.jp) | ✅ (200) |   | ◯ |
+| 273 | ChatGPT Japan | AI | [chatgpt-japan.com](https://chatgpt-japan.com) | ⚠️ (403) | ◯ | ◯ |
+| 315 | Preferred Networks | AI | [preferred-networks.jp](https://www.preferred-networks.jp) | ✅ (200) |   | ◯ |
+| 316 | HACARUS | AI | [hacarus.com](https://www.hacarus.com) | ✅ (200) |   | ◯ |
+| 328 | Sakura AI | AI | [sakura-ai.jp](https://sakura-ai.jp) | ✅ (200) |   | ◯ |
+| 329 | NVIDIA AI | AI | [nvidia.com/ja-jp/ai](https://www.nvidia.com/ja-jp/ai) | ✅ (200) |   | ◯ |
+| 330 | Nexway AI | AI | [nexway.com](https://nexway.com) | ✅ (200) |   | ◯ |
+| 425 | Cohere [[Y](yoom-apps/cohere.md)] | AI | [cohere.ai](https://www.cohere.ai) | ✅ (200) | ◯ | ◯ |
+| 426 | Anthropic [[Y](yoom-apps/anthropic.md)] | AI | [anthropic.com](https://www.anthropic.com) | ✅ (200) | ◯ | ◯ |
+| 427 | OpenAI [[Y](yoom-apps/openai.md)] | AI | [openai.com](https://www.openai.com) | ⚠️ (403) | ◯ | ◯ |
+| 567 | Pinecone [[Y](yoom-apps/pinecone.md)] | AI | [pinecone.io](https://pinecone.io) | ✅ (200) | ◯ | ◯ |
+| 568 | Weaviate | AI | [weaviate.io](https://weaviate.io) | ✅ (200) |   | ◯ |
+| 569 | Qdrant [[Y](yoom-apps/qdrant.md)] | AI | [qdrant.io](https://qdrant.io) | ✅ (200) | ◯ | ◯ |
+| 570 | Milvus | AI | [milvus.io](https://milvus.io) | ✅ (200) |   | ◯ |
+| 571 | ChromaDB | AI | [trychroma.com](https://www.trychroma.com) | ✅ (200) |   | ◯ |
+| 572 | LangChain | AI | [langchain.com](https://www.langchain.com) | ✅ (200) |   | ◯ |
+| 573 | Hugging Face [[Y](yoom-apps/hugging-face.md)] | AI | [huggingface.co](https://huggingface.co) | ✅ (200) | ◯ | ◯ |
+| 574 | Replicate | AI | [replicate.com](https://replicate.com) | ✅ (200) |   | ◯ |
+| 575 | Stability AI [[Y](yoom-apps/stability_ai.md)] | AI | [stability.ai](https://stability.ai) | ✅ (200) |   | ◯ |
+| 576 | Midjourney | AI | [midjourney.com](https://midjourney.com) | ✅ (200) |   | ◯ |
+| 577 | Runway ML | AI | [runwayml.com](https://runwayml.com) | ✅ (200) | ◯ | ◯ |
+| 578 | Jasper | AI | [jasper.ai](https://jasper.ai) | ✅ (200) |   | ◯ |
+| 579 | Copy.ai | AI | [copy.ai](https://copy.ai) | ✅ (200) |   | ◯ |
+| 580 | Writesonic | AI | [writesonic.com](https://writesonic.com) | ✅ (200) |   | ◯ |
+| 581 | Anthropic Claude | AI | [anthropic.com/claude](https://www.anthropic.com/claude) | ✅ (200) | ◯ | ◯ |
+| 582 | GPT-4 | AI | [openai.com/gpt-4](https://openai.com/gpt-4) | ⚠️ (403) |   | ◯ |
+| 583 | Google Gemini | AI | [gemini.google.com](https://gemini.google.com) | ✅ (200) | ◯ | ◯ |
+| 584 | Mistral AI [[Y](yoom-apps/mistral-ai.md)] | AI | [mistral.ai](https://mistral.ai) | ✅ (200) | ◯ | ◯ |
+| 585 | Aleph Alpha | AI | [aleph-alpha.com](https://www.aleph-alpha.com) | ✅ (200) |   | ◯ |
+| 586 | 01.AI | AI | [01.ai](https://01.ai) | ✅ (200) |   | ◯ |
+| 587 | Inflection AI | AI | [inflection.ai](https://inflection.ai) | ✅ (200) |   | ◯ |
+| 588 | Character.AI | AI | [character.ai](https://character.ai) | ✅ (200) |   | ◯ |
+| 589 | Perplexity [[Y](yoom-apps/perplexity.md)] | AI | [perplexity.ai](https://www.perplexity.ai) | ✅ (200) | ◯ | ◯ |
+| 590 | You.com | AI | [you.com](https://you.com) | ✅ (200) |   | ◯ |
+| 591 | Neeva | AI | [neeva.com](https://neeva.com) | ✅ (200) |   | ◯ |
+| 592 | Andi | AI | [andisearch.com](https://andisearch.com) | ✅ (200) | ◯ | ◯ |
+| 593 | Phind | AI | [phind.com](https://phind.com) | ✅ (200) |   | ◯ |
+| 594 | Poe | AI | [poe.com](https://poe.com) | ✅ (200) |   | ◯ |
+| 595 | Julius AI | AI | [julius.ai](https://julius.ai) | ✅ (200) |   | ◯ |
+| 596 | Julius | AI | [juliusapp.ai](https://juliusapp.ai) | ✅ (200) |   | ◯ |
+| 597 | Claude 3 | AI | [anthropic.com/claude-3](https://www.anthropic.com/claude-3) | ✅ (200) |   | ◯ |
+| 598 | Claude Pro | AI | [claude.ai](https://claude.ai) | ✅ (200) |   | ◯ |
 
 ### AI/Analytics
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 376 | Baidu | AI/Analytics | [baidu.com](https://www.baidu.com) | ✅ (200) |   |
-| 522 | a2i | AI/Analytics | [a2i.jp](https://a2i.jp) | ✅ (200) |   |
-| 1507 | Amazon SageMaker | AI/Analytics | [https://aws.amazon.com/sagemaker](https://aws.amazon.com/sagemaker) | ✅ (200) | ◯ |
-| 1508 | Google Cloud AI Platform | AI/Analytics | [https://cloud.google.com/ai](https://cloud.google.com/ai) | ✅ (200) | ◯ |
-| 1509 | Azure Machine Learning | AI/Analytics | [https://azure.microsoft.com/machine-learning](https://azure.microsoft.com/machine-learning) | ✅ (200) |   |
-| 1510 | IBM Watson | AI/Analytics | [https://www.ibm.com/watson](https://www.ibm.com/watson) | ✅ (200) |   |
-| 1511 | DataRobot | AI/Analytics | [https://www.datarobot.com](https://www.datarobot.com) | ✅ (200) |   |
-| 1512 | H2O.ai | AI/Analytics | [https://www.h2o.ai](https://www.h2o.ai) | ✅ (200) |   |
-| 1513 | RapidMiner | AI/Analytics | [https://www.rapidminer.com](https://www.rapidminer.com) | ✅ (200) |   |
-| 1514 | Alteryx | AI/Analytics | [https://www.alteryx.com](https://www.alteryx.com) | ✅ (200) |   |
-| 1515 | Salesforce Einstein | AI/Analytics | [https://www.salesforce.com/einstein](https://www.salesforce.com/einstein) | ✅ (200) | ◯ |
-| 1516 | Databricks MLflow | AI/Analytics | [https://mlflow.org](https://mlflow.org) | ✅ (200) |   |
-| 1517 | Kubeflow | AI/Analytics | [https://www.kubeflow.org](https://www.kubeflow.org) | ✅ (200) |   |
-| 1518 | KNIME | AI/Analytics | [https://www.knime.com](https://www.knime.com) | ✅ (200) |   |
-| 1519 | Weka | AI/Analytics | [https://www.cs.waikato.ac.nz/ml/weka](https://www.cs.waikato.ac.nz/ml/weka) | ✅ (200) |   |
-| 1520 | TensorFlow | AI/Analytics | [https://www.tensorflow.org](https://www.tensorflow.org) | ✅ (200) |   |
-| 1521 | PyTorch | AI/Analytics | [https://pytorch.org](https://pytorch.org) | ✅ (200) |   |
-| 1522 | Keras | AI/Analytics | [https://www.keras.io](https://www.keras.io) | ✅ (200) |   |
-| 1523 | Theano | AI/Analytics | [https://deeplearning.net/software/theano](https://deeplearning.net/software/theano) | ❌ (404) |   |
-| 1524 | Caffe | AI/Analytics | [https://www.caffe.berkeleyvision.org](https://www.caffe.berkeleyvision.org) | ✅ (200) |   |
-| 1525 | Apache MXNet | AI/Analytics | [https://mxnet.apache.org](https://mxnet.apache.org) | ✅ (200) |   |
-| 1526 | Chainer | AI/Analytics | [https://www.chainer.org](https://www.chainer.org) | ✅ (200) |   |
-| 1527 | Deeplearning4j | AI/Analytics | [https://www.deeplearning4j.org](https://www.deeplearning4j.org) | ✅ (200) | ◯ |
-| 1528 | ONNX | AI/Analytics | [https://www.onnx.ai](https://www.onnx.ai) | ✅ (200) |   |
-| 1529 | OpenVINO | AI/Analytics | [https://www.intel.com/ai/onnx](https://www.intel.com/ai/onnx) | ✅ (200) |   |
-| 1530 | TensorRT | AI/Analytics | [https://developer.nvidia.com/tensorrt](https://developer.nvidia.com/tensorrt) | ✅ (200) |   |
-| 1531 | Core ML | AI/Analytics | [https://www.apple.com/machine-learning](https://www.apple.com/machine-learning) | ✅ (200) |   |
-| 1532 | Firebase ML | AI/Analytics | [https://www.firebase.google.com/ml](https://www.firebase.google.com/ml) | ✅ (200) | ◯ |
-| 1533 | TensorFlow Lite | AI/Analytics | [https://www.tensorflow.org/lite](https://www.tensorflow.org/lite) | ✅ (200) |   |
-| 1534 | Edge Impulse | AI/Analytics | [https://www.edgeimpulse.com](https://www.edgeimpulse.com) | ✅ (200) |   |
-| 1535 | Lobe.ai | AI/Analytics | [https://www.lobe.ai](https://www.lobe.ai) | ✅ (200) | ◯ |
-| 1536 | Druid | AI/Analytics | [https://druid.apache.org](https://druid.apache.org) | ✅ (200) |   |
-| 1537 | ClickHouse | AI/Analytics | [https://www.clickhouse.com](https://www.clickhouse.com) | ✅ (200) |   |
-| 1538 | Presto | AI/Analytics | [https://www.prestodb.io](https://www.prestodb.io) | ✅ (200) |   |
-| 1539 | Apache Pinot | AI/Analytics | [https://www.pinot.apache.org](https://www.pinot.apache.org) | ✅ (200) |   |
-| 1540 | Apache Kudu | AI/Analytics | [https://www.kudu.apache.org](https://www.kudu.apache.org) | ✅ (200) |   |
-| 1541 | Apache Arrow | AI/Analytics | [https://www.arrow.apache.org](https://www.arrow.apache.org) | ✅ (200) |   |
-| 1542 | Apache Parquet | AI/Analytics | [https://www.parquet.apache.org](https://www.parquet.apache.org) | ✅ (200) |   |
-| 1543 | Apache ORC | AI/Analytics | [https://www.orc.apache.org](https://www.orc.apache.org) | ✅ (200) |   |
-| 1544 | Apache Avro | AI/Analytics | [https://www.avro.apache.org](https://www.avro.apache.org) | ✅ (200) |   |
-| 1545 | Apache Iceberg | AI/Analytics | [https://www.iceberg.apache.org](https://www.iceberg.apache.org) | ✅ (200) |   |
-| 1546 | Apache Hive | AI/Analytics | [https://www.hive.apache.org](https://www.hive.apache.org) | ✅ (200) | ◯ |
-| 1547 | Apache Pig | AI/Analytics | [https://www.pig.apache.org](https://www.pig.apache.org) | ✅ (200) |   |
-| 1548 | Impala | AI/Analytics | [https://www.impala.apache.org](https://www.impala.apache.org) | ✅ (200) |   |
-| 1549 | BigQuery ML | AI/Analytics | [https://www.cloud.google.com/bigquery-ml](https://www.cloud.google.com/bigquery-ml) | ✅ (200) | ◯ |
-| 1550 | Redshift ML | AI/Analytics | [https://aws.amazon.com/redshift-ml](https://aws.amazon.com/redshift-ml) | ✅ (200) | ◯ |
-| 1551 | Snowflake Cortex | AI/Analytics | [https://www.snowflake.com/cortex](https://www.snowflake.com/cortex) | ✅ (200) |   |
-| 1552 | Grafana Pyroscope | AI/Analytics | [https://www.grafana.com/pyroscope](https://www.grafana.com/pyroscope) | ✅ (200) |   |
-| 1553 | Grafana Tempo | AI/Analytics | [https://www.grafana.com/tempo](https://www.grafana.com/tempo) | ✅ (200) |   |
-| 1554 | Jaeger | AI/Analytics | [https://www.jaegertracing.io](https://www.jaegertracing.io) | ✅ (200) |   |
-| 1555 | Zipkin | AI/Analytics | [https://www.zipkin.io](https://www.zipkin.io) | ✅ (200) |   |
-| 1556 | OpenTelemetry | AI/Analytics | [https://www.opentelemetry.io](https://www.opentelemetry.io) | ✅ (200) |   |
-| 1557 | Thanos | AI/Analytics | [https://www.thanos.io](https://www.thanos.io) | ✅ (200) |   |
-| 1558 | Cortex Metrics | AI/Analytics | [https://www.cortexmetrics.io](https://www.cortexmetrics.io) | ✅ (200) |   |
+| 376 | Baidu | AI/Analytics | [baidu.com](https://www.baidu.com) | ✅ (200) |   | ◯ |
+| 522 | a2i | AI/Analytics | [a2i.jp](https://a2i.jp) | ✅ (200) |   | ◯ |
+| 1507 | Amazon SageMaker | AI/Analytics | [https://aws.amazon.com/sagemaker](https://aws.amazon.com/sagemaker) | ✅ (200) | ◯ | ◯ |
+| 1508 | Google Cloud AI Platform | AI/Analytics | [https://cloud.google.com/ai](https://cloud.google.com/ai) | ✅ (200) | ◯ | ◯ |
+| 1509 | Azure Machine Learning | AI/Analytics | [https://azure.microsoft.com/machine-learning](https://azure.microsoft.com/machine-learning) | ✅ (200) |   | ◯ |
+| 1510 | IBM Watson | AI/Analytics | [https://www.ibm.com/watson](https://www.ibm.com/watson) | ✅ (200) |   | ◯ |
+| 1511 | DataRobot | AI/Analytics | [https://www.datarobot.com](https://www.datarobot.com) | ✅ (200) |   | ◯ |
+| 1512 | H2O.ai | AI/Analytics | [https://www.h2o.ai](https://www.h2o.ai) | ✅ (200) |   | ◯ |
+| 1513 | RapidMiner | AI/Analytics | [https://www.rapidminer.com](https://www.rapidminer.com) | ✅ (200) |   | ◯ |
+| 1514 | Alteryx | AI/Analytics | [https://www.alteryx.com](https://www.alteryx.com) | ✅ (200) |   | ◯ |
+| 1515 | Salesforce Einstein | AI/Analytics | [https://www.salesforce.com/einstein](https://www.salesforce.com/einstein) | ✅ (200) | ◯ | ◯ |
+| 1516 | Databricks MLflow | AI/Analytics | [https://mlflow.org](https://mlflow.org) | ✅ (200) |   | ◯ |
+| 1517 | Kubeflow | AI/Analytics | [https://www.kubeflow.org](https://www.kubeflow.org) | ✅ (200) |   | ◯ |
+| 1518 | KNIME | AI/Analytics | [https://www.knime.com](https://www.knime.com) | ✅ (200) |   | ◯ |
+| 1519 | Weka | AI/Analytics | [https://www.cs.waikato.ac.nz/ml/weka](https://www.cs.waikato.ac.nz/ml/weka) | ✅ (200) |   | ◯ |
+| 1520 | TensorFlow | AI/Analytics | [https://www.tensorflow.org](https://www.tensorflow.org) | ✅ (200) |   | ◯ |
+| 1521 | PyTorch | AI/Analytics | [https://pytorch.org](https://pytorch.org) | ✅ (200) |   | ◯ |
+| 1522 | Keras | AI/Analytics | [https://www.keras.io](https://www.keras.io) | ✅ (200) |   | ◯ |
+| 1523 | Theano | AI/Analytics | [https://deeplearning.net/software/theano](https://deeplearning.net/software/theano) | ❌ (404) |   | ◯ |
+| 1524 | Caffe | AI/Analytics | [https://www.caffe.berkeleyvision.org](https://www.caffe.berkeleyvision.org) | ✅ (200) |   | ◯ |
+| 1525 | Apache MXNet | AI/Analytics | [https://mxnet.apache.org](https://mxnet.apache.org) | ✅ (200) |   | ◯ |
+| 1526 | Chainer | AI/Analytics | [https://www.chainer.org](https://www.chainer.org) | ✅ (200) |   | ◯ |
+| 1527 | Deeplearning4j | AI/Analytics | [https://www.deeplearning4j.org](https://www.deeplearning4j.org) | ✅ (200) | ◯ | ◯ |
+| 1528 | ONNX | AI/Analytics | [https://www.onnx.ai](https://www.onnx.ai) | ✅ (200) |   | ◯ |
+| 1529 | OpenVINO | AI/Analytics | [https://www.intel.com/ai/onnx](https://www.intel.com/ai/onnx) | ✅ (200) |   | ◯ |
+| 1530 | TensorRT | AI/Analytics | [https://developer.nvidia.com/tensorrt](https://developer.nvidia.com/tensorrt) | ✅ (200) |   | ◯ |
+| 1531 | Core ML | AI/Analytics | [https://www.apple.com/machine-learning](https://www.apple.com/machine-learning) | ✅ (200) |   | ◯ |
+| 1532 | Firebase ML | AI/Analytics | [https://www.firebase.google.com/ml](https://www.firebase.google.com/ml) | ✅ (200) | ◯ | ◯ |
+| 1533 | TensorFlow Lite | AI/Analytics | [https://www.tensorflow.org/lite](https://www.tensorflow.org/lite) | ✅ (200) |   | ◯ |
+| 1534 | Edge Impulse | AI/Analytics | [https://www.edgeimpulse.com](https://www.edgeimpulse.com) | ✅ (200) |   | ◯ |
+| 1535 | Lobe.ai | AI/Analytics | [https://www.lobe.ai](https://www.lobe.ai) | ✅ (200) | ◯ | ◯ |
+| 1536 | Druid | AI/Analytics | [https://druid.apache.org](https://druid.apache.org) | ✅ (200) |   | ◯ |
+| 1537 | ClickHouse | AI/Analytics | [https://www.clickhouse.com](https://www.clickhouse.com) | ✅ (200) |   | ◯ |
+| 1538 | Presto | AI/Analytics | [https://www.prestodb.io](https://www.prestodb.io) | ✅ (200) |   | ◯ |
+| 1539 | Apache Pinot | AI/Analytics | [https://www.pinot.apache.org](https://www.pinot.apache.org) | ✅ (200) |   | ◯ |
+| 1540 | Apache Kudu | AI/Analytics | [https://www.kudu.apache.org](https://www.kudu.apache.org) | ✅ (200) |   | ◯ |
+| 1541 | Apache Arrow | AI/Analytics | [https://www.arrow.apache.org](https://www.arrow.apache.org) | ✅ (200) |   | ◯ |
+| 1542 | Apache Parquet | AI/Analytics | [https://www.parquet.apache.org](https://www.parquet.apache.org) | ✅ (200) |   | ◯ |
+| 1543 | Apache ORC | AI/Analytics | [https://www.orc.apache.org](https://www.orc.apache.org) | ✅ (200) |   | ◯ |
+| 1544 | Apache Avro | AI/Analytics | [https://www.avro.apache.org](https://www.avro.apache.org) | ✅ (200) |   | ◯ |
+| 1545 | Apache Iceberg | AI/Analytics | [https://www.iceberg.apache.org](https://www.iceberg.apache.org) | ✅ (200) |   | ◯ |
+| 1546 | Apache Hive | AI/Analytics | [https://www.hive.apache.org](https://www.hive.apache.org) | ✅ (200) | ◯ | ◯ |
+| 1547 | Apache Pig | AI/Analytics | [https://www.pig.apache.org](https://www.pig.apache.org) | ✅ (200) |   | ◯ |
+| 1548 | Impala | AI/Analytics | [https://www.impala.apache.org](https://www.impala.apache.org) | ✅ (200) |   | ◯ |
+| 1549 | BigQuery ML | AI/Analytics | [https://www.cloud.google.com/bigquery-ml](https://www.cloud.google.com/bigquery-ml) | ✅ (200) | ◯ | ◯ |
+| 1550 | Redshift ML | AI/Analytics | [https://aws.amazon.com/redshift-ml](https://aws.amazon.com/redshift-ml) | ✅ (200) | ◯ | ◯ |
+| 1551 | Snowflake Cortex | AI/Analytics | [https://www.snowflake.com/cortex](https://www.snowflake.com/cortex) | ✅ (200) |   | ◯ |
+| 1552 | Grafana Pyroscope | AI/Analytics | [https://www.grafana.com/pyroscope](https://www.grafana.com/pyroscope) | ✅ (200) |   | ◯ |
+| 1553 | Grafana Tempo | AI/Analytics | [https://www.grafana.com/tempo](https://www.grafana.com/tempo) | ✅ (200) |   | ◯ |
+| 1554 | Jaeger | AI/Analytics | [https://www.jaegertracing.io](https://www.jaegertracing.io) | ✅ (200) |   | ◯ |
+| 1555 | Zipkin | AI/Analytics | [https://www.zipkin.io](https://www.zipkin.io) | ✅ (200) |   | ◯ |
+| 1556 | OpenTelemetry | AI/Analytics | [https://www.opentelemetry.io](https://www.opentelemetry.io) | ✅ (200) |   | ◯ |
+| 1557 | Thanos | AI/Analytics | [https://www.thanos.io](https://www.thanos.io) | ✅ (200) |   | ◯ |
+| 1558 | Cortex Metrics | AI/Analytics | [https://www.cortexmetrics.io](https://www.cortexmetrics.io) | ✅ (200) |   | ◯ |
 
 ### AI/Marketing
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 304 | DataSign | AI/Marketing | [datasign.co.jp](https://datasign.co.jp) | ❌ (404) |   |
+| 304 | DataSign | AI/Marketing | [datasign.co.jp](https://datasign.co.jp) | ❌ (404) |   | ◯ |
 
 ### Analytics
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 61 | UserLocal | Analytics | [userlocal.jp](https://userlocal.jp) | ✅ (200) |   |
-| 100 | GA4 | Analytics | [googleanalytics.com](https://googleanalytics.com) | ✅ (200) |   |
-| 101 | Mixpanel | Analytics | [mixpanel.com](https://mixpanel.com) | ✅ (200) | ◯ |
-| 102 | Amplitude | Analytics | [amplitude.com](https://amplitude.com) | ✅ (200) |   |
-| 144 | Gurobi | Analytics | [gurobi.com](https://www.gurobi.com) | ✅ (200) |   |
-| 159 | Treasure Data | Analytics | [treasuredata.co.jp](https://treasuredata.co.jp) | ✅ (200) |   |
-| 161 | Explora | Analytics | [explora.jp](https://explora.jp) | ✅ (200) |   |
-| 163 | re-ga | Analytics | [re-ga.jp](https://re-ga.jp) | ❌ (404) |   |
-| 191 | MotionBoard | Analytics | [motionboard.jp](https://motionboard.jp) | ✅ (200) | ◯ |
-| 289 | SAS | Analytics | [sas.com/ja_jp](https://www.sas.com/ja_jp) | ✅ (200) | ◯ |
-| 290 | Splunk | Analytics | [splunk.com](https://www.splunk.com) | ✅ (200) |   |
-| 303 | BrainPad | Analytics | [brainpad.co.jp](https://brainpad.co.jp) | ✅ (200) |   |
-| 335 | Datalabs | Analytics | [datalabs.jp](https://datalabs.jp) | ✅ (200) |   |
-| 336 | Metabase | Analytics | [metabase.com](https://metabase.com) | ✅ (200) | ◯ |
-| 337 | Redash | Analytics | [redash.io](https://redash.io) | ✅ (200) | ◯ |
-| 338 | Superset | Analytics | [superset.apache.org](https://superset.apache.org) | ✅ (200) |   |
-| 339 | Grafana | Analytics | [grafana.com](https://grafana.com) | ✅ (200) |   |
-| 340 | New Relic | Analytics | [newrelic.com](https://newrelic.com) | ✅ (200) |   |
-| 341 | Datadog | Analytics | [datadoghq.com](https://datadoghq.com) | ✅ (200) |   |
-| 370 | Tableau | Analytics | [tableau.com](https://www.tableau.com) | ✅ (200) |   |
-| 371 | Looker | Analytics | [looker.com](https://looker.com) | ✅ (200) |   |
-| 372 | Qlik | Analytics | [qlik.com](https://qlik.com) | ✅ (200) |   |
-| 373 | Domo | Analytics | [domo.com](https://domo.com) | ✅ (200) |   |
-| 374 | Snowflake | Analytics | [snowflake.com](https://snowflake.com) | ✅ (200) |   |
-| 375 | Databricks | Analytics | [databricks.com](https://databricks.com) | ✅ (200) |   |
-| 521 | ecnavi | Analytics | [ecnavi.co.jp](https://ecnavi.co.jp) | ✅ (200) |   |
-| 541 | Hightouch | Analytics | [hightouch.com](https://hightouch.com) | ✅ (200) |   |
-| 542 | Census | Analytics | [getcensus.com](https://get.census.com) | ✅ (200) |   |
-| 546 | Snowflake Data Cloud | Analytics | [snowflake.com](https://snowflake.com) | ✅ (200) |   |
-| 547 | Databricks Lakehouse | Analytics | [databricks.com](https://databricks.com) | ✅ (200) |   |
-| 548 | Microsoft Power BI | Analytics | [powerbi.microsoft.com](https://powerbi.microsoft.com) | ✅ (200) |   |
-| 549 | Sisense | Analytics | [sisense.com](https://sisense.com) | ✅ (200) |   |
-| 550 | Looker Studio | Analytics | [lookerstudio.google.com](https://lookerstudio.google.com) | ✅ (200) |   |
-| 551 | Google Looker | Analytics | [cloud.google.com/looker](https://cloud.google.com/looker) | ✅ (200) |   |
-| 552 | Microsoft Fabric | Analytics | [microsoft.com/fabric](https://microsoft.com/fabric) | ✅ (200) |   |
-| 553 | ThoughtSpot | Analytics | [thoughtspot.com](https://thoughtspot.com) | ✅ (200) |   |
-| 554 | Sigma Computing | Analytics | [sigmacomputing.com](https://sigmacomputing.com) | ✅ (200) |   |
-| 555 | Mode Analytics | Analytics | [mode.com](https://mode.com) | ✅ (200) | ◯ |
-| 556 | Periscope Data | Analytics | [periscope.io](https://periscope.io) | ✅ (200) |   |
-| 623 | Datadog APM | Analytics | [datadog.com/apm](https://datadog.com/apm) | ✅ (200) |   |
-| 624 | New Relic APM | Analytics | [newrelic.com/application-monitoring](https://newrelic.com/application-monitoring) | ✅ (200) |   |
-| 625 | Dynatrace | Analytics | [dynatrace.com](https://dynatrace.com) | ✅ (200) |   |
-| 626 | AppDynamics | Analytics | [appdynamics.com](https://appdynamics.com) | ✅ (200) |   |
-| 627 | Splunk IT SI | Analytics | [splunk.com](https://splunk.com) | ✅ (200) |   |
-| 629 | Prometheus | Analytics | [prometheus.io](https://prometheus.io) | ✅ (200) |   |
-| 630 | Grafana Loki | Analytics | [grafana.com/loki](https://grafana.com/loki) | ✅ (200) |   |
-| 631 | VictoriaMetrics | Analytics | [victoriametrics.com](https://victoriametrics.com) | ✅ (200) |   |
-| 632 | Cortex | Analytics | [cortexmetrics.io](https://cortexmetrics.io) | ✅ (200) | ◯ |
-| 633 | Mackerel | Analytics | [mackerel.io](https://mackerel.io) | ✅ (200) |   |
-| 634 | Datadog RUM | Analytics | [datadog.com/rum](https://datadog.com/rum) | ✅ (200) |   |
-| 635 | New Relic Browser | Analytics | [newrelic.com/browser](https://newrelic.com/browser) | ✅ (200) | ◯ |
-| 636 | Heap | Analytics | [heap.io](https://heap.io) | ✅ (200) |   |
-| 637 | PostHog | Analytics | [posthog.com](https://posthog.com) | ✅ (200) | ◯ |
-| 638 | Plausible Analytics | Analytics | [plausible.io](https://plausible.io) | ✅ (200) | ◯ |
-| 639 | Simple Analytics | Analytics | [simpleanalytics.com](https://simpleanalytics.com) | ✅ (200) | ◯ |
-| 640 | Google Analytics 4 | Analytics | [googleanalytics.com](https://www.googleanalytics.com) | ✅ (200) | ◯ |
-| 641 | Adobe Analytics | Analytics | [adobe.com/analytics](https://adobe.com/analytics) | ✅ (200) | ◯ |
-| 642 | Piwik Pro Analytics | Analytics | [piwik.pro](https://piwik.pro) | ✅ (200) | ◯ |
-| 643 | Matomo Analytics | Analytics | [matomo.org](https://matomo.org) | ✅ (200) | ◯ |
-| 644 | Woopra | Analytics | [woopra.com](https://woopra.com) | ✅ (200) |   |
-| 645 | Clicky | Analytics | [clicky.com](https://clicky.com) | ✅ (200) |   |
-| 646 | Statcounter | Analytics | [statcounter.com](https://statcounter.com) | ✅ (200) |   |
-| 647 | Google Tag Manager | Analytics | [tagmanager.google.com](https://tagmanager.google.com) | ✅ (200) | ◯ |
-| 648 | Tealium | Analytics | [tealium.com](https://www.tealium.com) | ✅ (200) |   |
-| 649 | Segment | Analytics | [segment.com](https://segment.com) | ✅ (200) |   |
-| 650 | RudderStack | Analytics | [rudderstack.com](https://rudderstack.com) | ✅ (200) |   |
-| 651 | Snowplow Analytics | Analytics | [snowplow.io](https://snowplow.io) | ✅ (200) | ◯ |
-| 652 | Heap Analytics | Analytics | [heap.com](https://heap.com) | ✅ (200) | ◯ |
-| 653 | Mixpanel Product | Analytics | [mixpanel.com/product](https://mixpanel.com/product) | ✅ (200) | ◯ |
-| 654 | Amplitude Product | Analytics | [amplitude.com/product](https://amplitude.com/product) | ✅ (200) |   |
-| 655 | Pendo | Analytics | [pendo.io](https://pendo.io) | ✅ (200) |   |
-| 656 | FullStory | Analytics | [fullstory.com](https://fullstory.com) | ✅ (200) |   |
-| 657 | LogRocket | Analytics | [logrocket.com](https://logrocket.com) | ✅ (200) |   |
-| 658 | Smartlook | Analytics | [smartlook.com](https://smartlook.com) | ✅ (200) |   |
-| 659 | Contentsquare | Analytics | [contentsquare.com](https://contentsquare.com) | ✅ (200) | ◯ |
-| 660 | Clarity | Analytics | [clarity.microsoft.com](https://clarity.microsoft.com) | ✅ (200) |   |
-| 661 | Hotjar | Analytics | [hotjar.com](https://hotjar.com) | ✅ (200) |   |
-| 662 | Crazy Egg | Analytics | [crazyegg.com](https://crazyegg.com) | ✅ (200) |   |
-| 663 | Microsoft Clarity | Analytics | [clarity.microsoft.com](https://clarity.microsoft.com) | ✅ (200) |   |
-| 664 | Mouseflow | Analytics | [mouseflow.com](https://mouseflow.com) | ✅ (200) |   |
-| 665 | Lucky Orange | Analytics | [luckyorange.com](https://luckyorange.com) | ✅ (200) |   |
-| 666 | SessionCam | Analytics | [sessioncam.com](https://sessioncam.com) | ✅ (200) |   |
-| 667 | Decibel Insight | Analytics | [decibel.net](https://decibel.net) | ✅ (200) |   |
-| 668 | Quantum Metric | Analytics | [quantummetric.com](https://quantummetric.com) | ✅ (200) |   |
-| 669 | Glassbox | Analytics | [glassbox.com](https://glassbox.com) | ✅ (200) | ◯ |
-| 670 | ObservePoint | Analytics | [observepoint.com](https://observepoint.com) | ✅ (200) |   |
-| 671 | Tealium Audience | Analytics | [tealium.com/products/audiencestream](https://tealium.com/products/audiencestream) | ✅ (200) |   |
-| 672 | Adobe Experience | Analytics | [adobe.com/experience-cloud](https://adobe.com/experience-cloud) | ✅ (200) |   |
-| 1037 | Clarity | Analytics | [clarity.microsoft.com](https://clarity.microsoft.com) | ✅ (200) |   |
-| 1038 | Hotjar | Analytics | [hotjar.com](https://www.hotjar.com) | ✅ (200) |   |
-| 1039 | Mouseflow | Analytics | [mouseflow.com](https://www.mouseflow.com) | ✅ (200) |   |
-| 1040 | Crazy Egg | Analytics | [crazyegg.com](https://www.crazyegg.com) | ✅ (200) |   |
+| 61 | UserLocal | Analytics | [userlocal.jp](https://userlocal.jp) | ✅ (200) |   | ◯ |
+| 100 | GA4 | Analytics | [googleanalytics.com](https://googleanalytics.com) | ✅ (200) |   | ◯ |
+| 101 | Mixpanel [[Y](yoom-apps/mixpanel.md)] | Analytics | [mixpanel.com](https://mixpanel.com) | ✅ (200) | ◯ | ◯ |
+| 102 | Amplitude | Analytics | [amplitude.com](https://amplitude.com) | ✅ (200) |   | ◯ |
+| 144 | Gurobi | Analytics | [gurobi.com](https://www.gurobi.com) | ✅ (200) |   | ◯ |
+| 159 | Treasure Data | Analytics | [treasuredata.co.jp](https://treasuredata.co.jp) | ✅ (200) |   | ◯ |
+| 161 | Explora | Analytics | [explora.jp](https://explora.jp) | ✅ (200) |   | ◯ |
+| 163 | re-ga | Analytics | [re-ga.jp](https://re-ga.jp) | ❌ (404) |   | ◯ |
+| 191 | MotionBoard | Analytics | [motionboard.jp](https://motionboard.jp) | ✅ (200) | ◯ | ◯ |
+| 289 | SAS | Analytics | [sas.com/ja_jp](https://www.sas.com/ja_jp) | ✅ (200) | ◯ | ◯ |
+| 290 | Splunk | Analytics | [splunk.com](https://www.splunk.com) | ✅ (200) |   | ◯ |
+| 303 | BrainPad | Analytics | [brainpad.co.jp](https://brainpad.co.jp) | ✅ (200) |   | ◯ |
+| 335 | Datalabs | Analytics | [datalabs.jp](https://datalabs.jp) | ✅ (200) |   | ◯ |
+| 336 | Metabase | Analytics | [metabase.com](https://metabase.com) | ✅ (200) | ◯ | ◯ |
+| 337 | Redash | Analytics | [redash.io](https://redash.io) | ✅ (200) | ◯ | ◯ |
+| 338 | Superset | Analytics | [superset.apache.org](https://superset.apache.org) | ✅ (200) |   | ◯ |
+| 339 | Grafana | Analytics | [grafana.com](https://grafana.com) | ✅ (200) |   | ◯ |
+| 340 | New Relic | Analytics | [newrelic.com](https://newrelic.com) | ✅ (200) |   | ◯ |
+| 341 | Datadog | Analytics | [datadoghq.com](https://datadoghq.com) | ✅ (200) |   | ◯ |
+| 370 | Tableau | Analytics | [tableau.com](https://www.tableau.com) | ✅ (200) |   | ◯ |
+| 371 | Looker | Analytics | [looker.com](https://looker.com) | ✅ (200) |   | ◯ |
+| 372 | Qlik | Analytics | [qlik.com](https://qlik.com) | ✅ (200) |   | ◯ |
+| 373 | Domo | Analytics | [domo.com](https://domo.com) | ✅ (200) |   | ◯ |
+| 374 | Snowflake | Analytics | [snowflake.com](https://snowflake.com) | ✅ (200) |   | ◯ |
+| 375 | Databricks | Analytics | [databricks.com](https://databricks.com) | ✅ (200) |   | ◯ |
+| 521 | ecnavi | Analytics | [ecnavi.co.jp](https://ecnavi.co.jp) | ✅ (200) |   | ◯ |
+| 541 | Hightouch | Analytics | [hightouch.com](https://hightouch.com) | ✅ (200) |   | ◯ |
+| 542 | Census | Analytics | [getcensus.com](https://get.census.com) | ✅ (200) |   | ◯ |
+| 546 | Snowflake Data Cloud | Analytics | [snowflake.com](https://snowflake.com) | ✅ (200) |   | ◯ |
+| 547 | Databricks Lakehouse | Analytics | [databricks.com](https://databricks.com) | ✅ (200) |   | ◯ |
+| 548 | Microsoft Power BI | Analytics | [powerbi.microsoft.com](https://powerbi.microsoft.com) | ✅ (200) |   | ◯ |
+| 549 | Sisense | Analytics | [sisense.com](https://sisense.com) | ✅ (200) |   | ◯ |
+| 550 | Looker Studio | Analytics | [lookerstudio.google.com](https://lookerstudio.google.com) | ✅ (200) |   | ◯ |
+| 551 | Google Looker | Analytics | [cloud.google.com/looker](https://cloud.google.com/looker) | ✅ (200) |   | ◯ |
+| 552 | Microsoft Fabric | Analytics | [microsoft.com/fabric](https://microsoft.com/fabric) | ✅ (200) |   | ◯ |
+| 553 | ThoughtSpot | Analytics | [thoughtspot.com](https://thoughtspot.com) | ✅ (200) |   | ◯ |
+| 554 | Sigma Computing | Analytics | [sigmacomputing.com](https://sigmacomputing.com) | ✅ (200) |   | ◯ |
+| 555 | Mode Analytics | Analytics | [mode.com](https://mode.com) | ✅ (200) | ◯ | ◯ |
+| 556 | Periscope Data | Analytics | [periscope.io](https://periscope.io) | ✅ (200) |   | ◯ |
+| 623 | Datadog APM | Analytics | [datadog.com/apm](https://datadog.com/apm) | ✅ (200) |   | ◯ |
+| 624 | New Relic APM | Analytics | [newrelic.com/application-monitoring](https://newrelic.com/application-monitoring) | ✅ (200) |   | ◯ |
+| 625 | Dynatrace | Analytics | [dynatrace.com](https://dynatrace.com) | ✅ (200) |   | ◯ |
+| 626 | AppDynamics | Analytics | [appdynamics.com](https://appdynamics.com) | ✅ (200) |   | ◯ |
+| 627 | Splunk IT SI | Analytics | [splunk.com](https://splunk.com) | ✅ (200) |   | ◯ |
+| 629 | Prometheus | Analytics | [prometheus.io](https://prometheus.io) | ✅ (200) |   | ◯ |
+| 630 | Grafana Loki | Analytics | [grafana.com/loki](https://grafana.com/loki) | ✅ (200) |   | ◯ |
+| 631 | VictoriaMetrics | Analytics | [victoriametrics.com](https://victoriametrics.com) | ✅ (200) |   | ◯ |
+| 632 | Cortex | Analytics | [cortexmetrics.io](https://cortexmetrics.io) | ✅ (200) | ◯ | ◯ |
+| 633 | Mackerel | Analytics | [mackerel.io](https://mackerel.io) | ✅ (200) |   | ◯ |
+| 634 | Datadog RUM | Analytics | [datadog.com/rum](https://datadog.com/rum) | ✅ (200) |   | ◯ |
+| 635 | New Relic Browser | Analytics | [newrelic.com/browser](https://newrelic.com/browser) | ✅ (200) | ◯ | ◯ |
+| 636 | Heap | Analytics | [heap.io](https://heap.io) | ✅ (200) |   | ◯ |
+| 637 | PostHog [[Y](yoom-apps/posthog.md)] | Analytics | [posthog.com](https://posthog.com) | ✅ (200) | ◯ | ◯ |
+| 638 | Plausible Analytics | Analytics | [plausible.io](https://plausible.io) | ✅ (200) | ◯ | ◯ |
+| 639 | Simple Analytics | Analytics | [simpleanalytics.com](https://simpleanalytics.com) | ✅ (200) | ◯ | ◯ |
+| 640 | Google Analytics 4 | Analytics | [googleanalytics.com](https://www.googleanalytics.com) | ✅ (200) | ◯ | ◯ |
+| 641 | Adobe Analytics | Analytics | [adobe.com/analytics](https://adobe.com/analytics) | ✅ (200) | ◯ | ◯ |
+| 642 | Piwik Pro Analytics | Analytics | [piwik.pro](https://piwik.pro) | ✅ (200) | ◯ | ◯ |
+| 643 | Matomo Analytics | Analytics | [matomo.org](https://matomo.org) | ✅ (200) | ◯ | ◯ |
+| 644 | Woopra | Analytics | [woopra.com](https://woopra.com) | ✅ (200) |   | ◯ |
+| 645 | Clicky | Analytics | [clicky.com](https://clicky.com) | ✅ (200) |   | ◯ |
+| 646 | Statcounter | Analytics | [statcounter.com](https://statcounter.com) | ✅ (200) |   | ◯ |
+| 647 | Google Tag Manager | Analytics | [tagmanager.google.com](https://tagmanager.google.com) | ✅ (200) | ◯ | ◯ |
+| 648 | Tealium | Analytics | [tealium.com](https://www.tealium.com) | ✅ (200) |   | ◯ |
+| 649 | Segment | Analytics | [segment.com](https://segment.com) | ✅ (200) |   | ◯ |
+| 650 | RudderStack | Analytics | [rudderstack.com](https://rudderstack.com) | ✅ (200) |   | ◯ |
+| 651 | Snowplow Analytics | Analytics | [snowplow.io](https://snowplow.io) | ✅ (200) | ◯ | ◯ |
+| 652 | Heap Analytics | Analytics | [heap.com](https://heap.com) | ✅ (200) | ◯ | ◯ |
+| 653 | Mixpanel Product | Analytics | [mixpanel.com/product](https://mixpanel.com/product) | ✅ (200) | ◯ | ◯ |
+| 654 | Amplitude Product | Analytics | [amplitude.com/product](https://amplitude.com/product) | ✅ (200) |   | ◯ |
+| 655 | Pendo | Analytics | [pendo.io](https://pendo.io) | ✅ (200) |   | ◯ |
+| 656 | FullStory | Analytics | [fullstory.com](https://fullstory.com) | ✅ (200) |   | ◯ |
+| 657 | LogRocket | Analytics | [logrocket.com](https://logrocket.com) | ✅ (200) |   | ◯ |
+| 658 | Smartlook | Analytics | [smartlook.com](https://smartlook.com) | ✅ (200) |   | ◯ |
+| 659 | Contentsquare | Analytics | [contentsquare.com](https://contentsquare.com) | ✅ (200) | ◯ | ◯ |
+| 660 | Clarity | Analytics | [clarity.microsoft.com](https://clarity.microsoft.com) | ✅ (200) |   | ◯ |
+| 661 | Hotjar | Analytics | [hotjar.com](https://hotjar.com) | ✅ (200) |   | ◯ |
+| 662 | Crazy Egg | Analytics | [crazyegg.com](https://crazyegg.com) | ✅ (200) |   | ◯ |
+| 663 | Microsoft Clarity | Analytics | [clarity.microsoft.com](https://clarity.microsoft.com) | ✅ (200) |   | ◯ |
+| 664 | Mouseflow | Analytics | [mouseflow.com](https://mouseflow.com) | ✅ (200) |   | ◯ |
+| 665 | Lucky Orange | Analytics | [luckyorange.com](https://luckyorange.com) | ✅ (200) |   | ◯ |
+| 666 | SessionCam | Analytics | [sessioncam.com](https://sessioncam.com) | ✅ (200) |   | ◯ |
+| 667 | Decibel Insight | Analytics | [decibel.net](https://decibel.net) | ✅ (200) |   | ◯ |
+| 668 | Quantum Metric | Analytics | [quantummetric.com](https://quantummetric.com) | ✅ (200) |   | ◯ |
+| 669 | Glassbox | Analytics | [glassbox.com](https://glassbox.com) | ✅ (200) | ◯ | ◯ |
+| 670 | ObservePoint | Analytics | [observepoint.com](https://observepoint.com) | ✅ (200) |   | ◯ |
+| 671 | Tealium Audience | Analytics | [tealium.com/products/audiencestream](https://tealium.com/products/audiencestream) | ✅ (200) |   | ◯ |
+| 672 | Adobe Experience | Analytics | [adobe.com/experience-cloud](https://adobe.com/experience-cloud) | ✅ (200) |   | ◯ |
+| 1037 | Clarity | Analytics | [clarity.microsoft.com](https://clarity.microsoft.com) | ✅ (200) |   | ◯ |
+| 1038 | Hotjar | Analytics | [hotjar.com](https://www.hotjar.com) | ✅ (200) |   | ◯ |
+| 1039 | Mouseflow | Analytics | [mouseflow.com](https://www.mouseflow.com) | ✅ (200) |   | ◯ |
+| 1040 | Crazy Egg | Analytics | [crazyegg.com](https://www.crazyegg.com) | ✅ (200) |   | ◯ |
 
 ### CRM
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 12 | kintone | CRM | [cybozu.com/kintone](https://www.cybozu.com/kintone) | ✅ (200) | ◯ |
-| 13 | cybozu | CRM | [www.cybozu.com](https://www.cybozu.com/) | ✅ (200) | ◯ |
-| 48 | HubSpot | CRM | [hubspot.com](https://hubspot.com) | ✅ (200) | ◯ |
-| 55 | Plaid | CRM | [plaid.co.jp](https://plaid.co.jp) | ✅ (200) |   |
-| 56 | Salesforce | CRM | [salesforce.com/jp](https://salesforce.com/jp) | ✅ (200) | ◯ |
-| 283 | Freshworks | CRM | [freshworks.com/ja](https://www.freshworks.com/ja) | ✅ (200) |   |
-| 415 | Zoho CRM | CRM | [zoho.com](https://www.zoho.com) | ✅ (200) | ◯ |
-| 416 | Nutshell | CRM | [nutshell.com](https://www.nutshell.com) | ✅ (200) |   |
-| 417 | Capsule CRM | CRM | [capsulecrm.com](https://capsulecrm.com) | ✅ (200) | ◯ |
-| 418 | Monday CRM | CRM | [monday.com/crm](https://www.monday.com/crm) | ✅ (200) |   |
-| 810 | Streak | CRM | [streak.com](https://streak.com) | ✅ (200) | ◯ |
-| 811 | Nutshell | CRM | [nutshell.com](https://www.nutshell.com) | ✅ (301) |   |
-| 812 | Capsule CRM | CRM | [capsulecrm.com](https://www.capsulecrm.com) | ✅ (200) | ◯ |
-| 813 | Copper CRM | CRM | [copper.com](https://www.copper.com) | ✅ (200) | ◯ |
-| 814 | Nimble CRM | CRM | [nimble.com](https://www.nimble.com) | ✅ (200) | ◯ |
-| 815 | Sellf | CRM | [sellf.io](https://sellf.io) | ✅ (200) |   |
-| 816 | Freshsales CRM | CRM | [freshsales.io](https://freshsales.io) | ✅ (200) | ◯ |
-| 1021 | HubSpot CRM Japan | CRM | [hubspot.co.jp](https://www.hubspot.co.jp) | ✅ (200) | ◯ |
-| 1022 | Zoho CRM Japan | CRM | [zoho.com/jp](https://www.zoho.com/jp) | ✅ (200) |   |
-| 1023 | Salesforce Japan | CRM | [salesforce.com/jp](https://www.salesforce.com/jp) | ✅ (200) | ◯ |
-| 1024 | Pipedrive Japan | CRM | [pipedrive.co.jp](https://www.pipedrive.co.jp) | ✅ (200) | ◯ |
-| 1025 | Bitrix24 | CRM | [bitrix24.jp](https://www.bitrix24.jp) | ✅ (200) | ◯ |
-| 1026 | Vtiger | CRM | [vtiger.com](https://www.vtiger.com) | ✅ (200) |   |
-| 1027 | EspoCRM | CRM | [espocrm.com](https://www.espocrm.com) | ✅ (200) |   |
-| 1028 | Freshsales Suite | CRM | [freshsales.io](https://freshsales.io) | ✅ (200) | ◯ |
-| 1029 | Zoho Bigin | CRM | [zoho.com/bigin](https://www.zoho.com/bigin) | ✅ (200) | ◯ |
-| 1030 | Insightly | CRM | [insightly.com](https://www.insightly.com) | ✅ (200) | ◯ |
-| 1031 | Less Annoying CRM | CRM | [lessannoyingcrm.com](https://www.lessannoyingcrm.com) | ✅ (200) |   |
-| 1032 | Agile CRM | CRM | [agilecrm.com](https://www.agilecrm.com) | ✅ (200) |   |
-| 1033 | Capsule | CRM | [capsulecrm.com](https://www.capsulecrm.com) | ✅ (200) | ◯ |
-| 1034 | Monday Sales | CRM | [monday.com/sales](https://www.monday.com/sales) | ✅ (200) |   |
-| 1035 | HubSpot Sales | CRM | [hubspot.com/sales](https://www.hubspot.com/sales) | ✅ (200) | ◯ |
-| 1036 | Really Simple Systems | CRM | [reallysimplesystems.com](https://www.reallysimplesystems.com) | ✅ (200) |   |
+| 12 | kintone [[Y](yoom-apps/kintone.md)] | CRM | [cybozu.com/kintone](https://www.cybozu.com/kintone) | ✅ (200) | ◯ | ◯ |
+| 13 | cybozu [[Y](yoom-apps/cybozu.md)] | CRM | [www.cybozu.com](https://www.cybozu.com/) | ✅ (200) | ◯ | ◯ |
+| 48 | HubSpot [[Y](yoom-apps/hubspot.md)] | CRM | [hubspot.com](https://hubspot.com) | ✅ (200) | ◯ | ◯ |
+| 55 | Plaid | CRM | [plaid.co.jp](https://plaid.co.jp) | ✅ (200) |   | ◯ |
+| 56 | Salesforce [[Y](yoom-apps/salesforce.md)] | CRM | [salesforce.com/jp](https://salesforce.com/jp) | ✅ (200) | ◯ | ◯ |
+| 283 | Freshworks | CRM | [freshworks.com/ja](https://www.freshworks.com/ja) | ✅ (200) |   | ◯ |
+| 415 | Zoho CRM | CRM | [zoho.com](https://www.zoho.com) | ✅ (200) | ◯ | ◯ |
+| 416 | Nutshell | CRM | [nutshell.com](https://www.nutshell.com) | ✅ (200) |   | ◯ |
+| 417 | Capsule CRM [[Y](yoom-apps/capsule-crm.md)] | CRM | [capsulecrm.com](https://capsulecrm.com) | ✅ (200) | ◯ | ◯ |
+| 418 | Monday CRM | CRM | [monday.com/crm](https://www.monday.com/crm) | ✅ (200) |   | ◯ |
+| 810 | Streak [[Y](yoom-apps/streak.md)] | CRM | [streak.com](https://streak.com) | ✅ (200) | ◯ | ◯ |
+| 811 | Nutshell | CRM | [nutshell.com](https://www.nutshell.com) | ✅ (301) |   | ◯ |
+| 812 | Capsule CRM [[Y](yoom-apps/capsule-crm.md)] | CRM | [capsulecrm.com](https://www.capsulecrm.com) | ✅ (200) | ◯ | ◯ |
+| 813 | Copper CRM | CRM | [copper.com](https://www.copper.com) | ✅ (200) | ◯ | ◯ |
+| 814 | Nimble CRM | CRM | [nimble.com](https://www.nimble.com) | ✅ (200) | ◯ | ◯ |
+| 815 | Sellf | CRM | [sellf.io](https://sellf.io) | ✅ (200) |   | ◯ |
+| 816 | Freshsales CRM | CRM | [freshsales.io](https://freshsales.io) | ✅ (200) | ◯ | ◯ |
+| 1021 | HubSpot CRM Japan | CRM | [hubspot.co.jp](https://www.hubspot.co.jp) | ✅ (200) | ◯ | ◯ |
+| 1022 | Zoho CRM Japan | CRM | [zoho.com/jp](https://www.zoho.com/jp) | ✅ (200) |   | ◯ |
+| 1023 | Salesforce Japan | CRM | [salesforce.com/jp](https://www.salesforce.com/jp) | ✅ (200) | ◯ | ◯ |
+| 1024 | Pipedrive Japan | CRM | [pipedrive.co.jp](https://www.pipedrive.co.jp) | ✅ (200) | ◯ | ◯ |
+| 1025 | Bitrix24 | CRM | [bitrix24.jp](https://www.bitrix24.jp) | ✅ (200) | ◯ | ◯ |
+| 1026 | Vtiger | CRM | [vtiger.com](https://www.vtiger.com) | ✅ (200) |   | ◯ |
+| 1027 | EspoCRM [[Y](yoom-apps/espo_crm.md)] | CRM | [espocrm.com](https://www.espocrm.com) | ✅ (200) |   | ◯ |
+| 1028 | Freshsales Suite | CRM | [freshsales.io](https://freshsales.io) | ✅ (200) | ◯ | ◯ |
+| 1029 | Zoho Bigin [[Y](yoom-apps/zoho-bigin.md)] | CRM | [zoho.com/bigin](https://www.zoho.com/bigin) | ✅ (200) | ◯ | ◯ |
+| 1030 | Insightly | CRM | [insightly.com](https://www.insightly.com) | ✅ (200) | ◯ | ◯ |
+| 1031 | Less Annoying CRM | CRM | [lessannoyingcrm.com](https://www.lessannoyingcrm.com) | ✅ (200) |   | ◯ |
+| 1032 | Agile CRM | CRM | [agilecrm.com](https://www.agilecrm.com) | ✅ (200) |   | ◯ |
+| 1033 | Capsule | CRM | [capsulecrm.com](https://www.capsulecrm.com) | ✅ (200) | ◯ | ◯ |
+| 1034 | Monday Sales | CRM | [monday.com/sales](https://www.monday.com/sales) | ✅ (200) |   | ◯ |
+| 1035 | HubSpot Sales | CRM | [hubspot.com/sales](https://www.hubspot.com/sales) | ✅ (200) | ◯ | ◯ |
+| 1036 | Really Simple Systems | CRM | [reallysimplesystems.com](https://www.reallysimplesystems.com) | ✅ (200) |   | ◯ |
 
 ### Cloud
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 71 | AWS | Cloud | [aws.amazon.com/jp](https://aws.amazon.com/jp) | ✅ (200) | ◯ |
-| 72 | Google Cloud | Cloud | [cloud.google.com](https://cloud.google.com) | ✅ (200) |   |
-| 117 | Microsoft Azure | Cloud | [azure.microsoft.com/ja-jp](https://azure.microsoft.com/ja-jp) | ✅ (200) |   |
-| 118 | Oracle Cloud | Cloud | [oracle.com/jp/cloud](https://www.oracle.com/jp/cloud) | ✅ (200) |   |
-| 119 | DigitalOcean | Cloud | [digitalocean.com](https://digitalocean.com) | ✅ (200) |   |
-| 147 | IIJ | Cloud | [iij.ad.jp](https://www.iij.ad.jp) | ✅ (200) |   |
-| 148 | Onamae.com | Cloud | [onamae.com](https://www.onamae.com) | ✅ (200) |   |
-| 149 | Muumuu Domain | Cloud | [muumuu-domain.com](https://muumuu-domain.com) | ✅ (200) |   |
-| 150 | Sakura Cloud | Cloud | [cloud.sakura.ad.jp](https://cloud.sakura.ad.jp) | ✅ (200) |   |
-| 151 | KAGOYA | Cloud | [kagoya.jp](https://www.kagoya.jp) | ✅ (200) |   |
-| 152 | TIS | Cloud | [tis.co.jp](https://www.tis.co.jp) | ✅ (200) | ◯ |
-| 156 | ASAHI Net | Cloud | [asahi-net.jp](https://asahi-net.jp) | ✅ (200) |   |
-| 157 | Kii | Cloud | [kii.com](https://kii.com) | ✅ (200) |   |
-| 168 | Muumuu Domain | Cloud | [muumuu-domain.com](https://muumuu-domain.com) | ✅ (200) |   |
-| 169 | Interlink | Cloud | [interlink.or.jp](https://www.interlink.or.jp) | ✅ (200) |   |
-| 170 | CPI Ace | Cloud | [cpi.ad.jp](https://www.cpi.ad.jp) | ✅ (200) |   |
-| 171 | tsukaeru Cloud | Cloud | [tsukaeru.net](https://tsukaeru.net) | ✅ (200) |   |
-| 181 | ソラコム | Cloud | [soracom.jp](https://soracom.jp) | ✅ (200) |   |
-| 182 | ニフクラ | Cloud | [pfs.nifcloud.com](https://pfs.nifcloud.com) | ✅ (200) |   |
-| 224 | Heroku | Cloud | [heroku.com](https://www.heroku.com) | ✅ (200) |   |
-| 225 | Vercel | Cloud | [vercel.com](https://www.vercel.com) | ✅ (200) |   |
-| 226 | Netlify | Cloud | [netlify.com](https://www.netlify.com) | ✅ (200) |   |
-| 227 | Alibaba Cloud | Cloud | [alibabacloud.com](https://www.alibabacloud.com) | ✅ (200) |   |
-| 263 | KDDI Cloud | Cloud | [cloud.kddi.com](https://cloud.kddi.com) | ❌ (404) |   |
-| 264 | OCN Cloud | Cloud | [cloud.ocn.ne.jp](https://cloud.ocn.ne.jp) | ❌ (404) |   |
-| 265 | Biglobe Cloud | Cloud | [cloud.biglobe.ne.jp](https://cloud.biglobe.ne.jp) | ❌ (404) | ◯ |
-| 266 | So-net Cloud | Cloud | [cloud.sonet.ne.jp](https://cloud.sonet.ne.jp) | ❌ (404) |   |
-| 354 | IBM | Cloud | [ibm.com](https://ibm.com) | ✅ (200) |   |
-| 355 | Red Hat | Cloud | [redhat.com](https://redhat.com) | ✅ (200) |   |
-| 356 | VMware | Cloud | [vmware.com](https://vmware.com) | ✅ (200) |   |
-| 357 | Citrix | Cloud | [citrix.com](https://citrix.com) | ⚠️ (403) |   |
-| 363 | Google Cloud | Cloud | [cloud.google.com](https://cloud.google.com) | ✅ (200) |   |
-| 369 | Amazon Web Services | Cloud | [amazon.com](https://www.amazon.com) | ⚠️ (503) | ◯ |
-| 377 | Alibaba Cloud | Cloud | [alibaba.com](https://www.alibaba.com) | ✅ (200) |   |
-| 382 | OCN | Cloud | [ocn.ne.jp](https://www.ocn.ne.jp) | ⚠️ (timeout) |   |
-| 383 | Biglobe | Cloud | [biglobe.ne.jp](https://www.biglobe.ne.jp) | ⚠️ (timeout) | ◯ |
-| 384 | So-net | Cloud | [sonet.ne.jp](https://www.sonet.ne.jp) | ⚠️ (timeout) |   |
-| 628 | Stackdriver | Cloud | [cloud.google.com/stackdriver](https://cloud.google.com/stackdriver) | ✅ (200) | ◯ |
-| 913 | Kinsta | Cloud | [kinsta.com](https://www.kinsta.com) | ✅ (200) |   |
-| 914 | Scaleway | Cloud | [scaleway.com](https://www.scaleway.com) | ✅ (200) |   |
-| 915 | Linode | Cloud | [linode.com](https://www.linode.com) | ✅ (200) |   |
-| 916 | Vultr | Cloud | [vultr.com](https://www.vultr.com) | ✅ (200) |   |
-| 991 | ニフティクラウド | Cloud | [nifty.com](https://cloud.nifty.com) | ⚠️ (403) |   |
-| 992 | ConoHa | Cloud | [conoha.jp](https://www.conoha.jp) | ✅ (200) |   |
-| 993 | Cloudn | Cloud | [cloudn.co.jp](https://cloudn.co.jp) | ✅ (200) |   |
-| 994 | さくらのクラウド | Cloud | [sakura.ad.jp](https://cloud.sakura.ad.jp) | ✅ (200) |   |
-| 995 | IDCFクラウド | Cloud | [idcf.jp](https://cloud.idcf.jp) | ✅ (200) |   |
-| 996 | GMOクラウド iCLUSTA | Cloud | [gmo-i.co.jp](https://iclusta.gmo-i.co.jp) | ❌ (404) |   |
-| 997 | NTTPC WebARENA | Cloud | [webarena.jp](https://webarena.jp) | ✅ (200) |   |
-| 1235 | CyberAgent | Cloud | [cyberagent.co.jp](https://www.cyberagent.co.jp) | ✅ (200) |   |
+| 71 | AWS | Cloud | [aws.amazon.com/jp](https://aws.amazon.com/jp) | ✅ (200) | ◯ | ◯ |
+| 72 | Google Cloud | Cloud | [cloud.google.com](https://cloud.google.com) | ✅ (200) |   | ◯ |
+| 117 | Microsoft Azure | Cloud | [azure.microsoft.com/ja-jp](https://azure.microsoft.com/ja-jp) | ✅ (200) |   | ◯ |
+| 118 | Oracle Cloud | Cloud | [oracle.com/jp/cloud](https://www.oracle.com/jp/cloud) | ✅ (200) |   | ◯ |
+| 119 | DigitalOcean | Cloud | [digitalocean.com](https://digitalocean.com) | ✅ (200) |   | ◯ |
+| 147 | IIJ | Cloud | [iij.ad.jp](https://www.iij.ad.jp) | ✅ (200) |   | ◯ |
+| 148 | Onamae.com | Cloud | [onamae.com](https://www.onamae.com) | ✅ (200) |   | ◯ |
+| 149 | Muumuu Domain | Cloud | [muumuu-domain.com](https://muumuu-domain.com) | ✅ (200) |   | ◯ |
+| 150 | Sakura Cloud | Cloud | [cloud.sakura.ad.jp](https://cloud.sakura.ad.jp) | ✅ (200) |   | ◯ |
+| 151 | KAGOYA | Cloud | [kagoya.jp](https://www.kagoya.jp) | ✅ (200) |   | ◯ |
+| 152 | TIS | Cloud | [tis.co.jp](https://www.tis.co.jp) | ✅ (200) | ◯ | ◯ |
+| 156 | ASAHI Net | Cloud | [asahi-net.jp](https://asahi-net.jp) | ✅ (200) |   | ◯ |
+| 157 | Kii | Cloud | [kii.com](https://kii.com) | ✅ (200) |   | ◯ |
+| 168 | Muumuu Domain | Cloud | [muumuu-domain.com](https://muumuu-domain.com) | ✅ (200) |   | ◯ |
+| 169 | Interlink | Cloud | [interlink.or.jp](https://www.interlink.or.jp) | ✅ (200) |   | ◯ |
+| 170 | CPI Ace | Cloud | [cpi.ad.jp](https://www.cpi.ad.jp) | ✅ (200) |   | ◯ |
+| 171 | tsukaeru Cloud | Cloud | [tsukaeru.net](https://tsukaeru.net) | ✅ (200) |   | ◯ |
+| 181 | ソラコム | Cloud | [soracom.jp](https://soracom.jp) | ✅ (200) |   | ◯ |
+| 182 | ニフクラ | Cloud | [pfs.nifcloud.com](https://pfs.nifcloud.com) | ✅ (200) |   | ◯ |
+| 224 | Heroku | Cloud | [heroku.com](https://www.heroku.com) | ✅ (200) |   | ◯ |
+| 225 | Vercel | Cloud | [vercel.com](https://www.vercel.com) | ✅ (200) |   | ◯ |
+| 226 | Netlify | Cloud | [netlify.com](https://www.netlify.com) | ✅ (200) |   | ◯ |
+| 227 | Alibaba Cloud | Cloud | [alibabacloud.com](https://www.alibabacloud.com) | ✅ (200) |   | ◯ |
+| 263 | KDDI Cloud | Cloud | [cloud.kddi.com](https://cloud.kddi.com) | ❌ (404) |   | ◯ |
+| 264 | OCN Cloud | Cloud | [cloud.ocn.ne.jp](https://cloud.ocn.ne.jp) | ❌ (404) |   | ◯ |
+| 265 | Biglobe Cloud | Cloud | [cloud.biglobe.ne.jp](https://cloud.biglobe.ne.jp) | ❌ (404) | ◯ | ◯ |
+| 266 | So-net Cloud | Cloud | [cloud.sonet.ne.jp](https://cloud.sonet.ne.jp) | ❌ (404) |   | ◯ |
+| 354 | IBM | Cloud | [ibm.com](https://ibm.com) | ✅ (200) |   | ◯ |
+| 355 | Red Hat | Cloud | [redhat.com](https://redhat.com) | ✅ (200) |   | ◯ |
+| 356 | VMware | Cloud | [vmware.com](https://vmware.com) | ✅ (200) |   | ◯ |
+| 357 | Citrix | Cloud | [citrix.com](https://citrix.com) | ⚠️ (403) |   | ◯ |
+| 363 | Google Cloud | Cloud | [cloud.google.com](https://cloud.google.com) | ✅ (200) |   | ◯ |
+| 369 | Amazon Web Services | Cloud | [amazon.com](https://www.amazon.com) | ⚠️ (503) | ◯ | ◯ |
+| 377 | Alibaba Cloud | Cloud | [alibaba.com](https://www.alibaba.com) | ✅ (200) |   | ◯ |
+| 382 | OCN | Cloud | [ocn.ne.jp](https://www.ocn.ne.jp) | ⚠️ (timeout) |   | ◯ |
+| 383 | Biglobe | Cloud | [biglobe.ne.jp](https://www.biglobe.ne.jp) | ⚠️ (timeout) | ◯ | ◯ |
+| 384 | So-net | Cloud | [sonet.ne.jp](https://www.sonet.ne.jp) | ⚠️ (timeout) |   | ◯ |
+| 628 | Stackdriver | Cloud | [cloud.google.com/stackdriver](https://cloud.google.com/stackdriver) | ✅ (200) | ◯ | ◯ |
+| 913 | Kinsta | Cloud | [kinsta.com](https://www.kinsta.com) | ✅ (200) |   | ◯ |
+| 914 | Scaleway | Cloud | [scaleway.com](https://www.scaleway.com) | ✅ (200) |   | ◯ |
+| 915 | Linode | Cloud | [linode.com](https://www.linode.com) | ✅ (200) |   | ◯ |
+| 916 | Vultr | Cloud | [vultr.com](https://www.vultr.com) | ✅ (200) |   | ◯ |
+| 991 | ニフティクラウド | Cloud | [nifty.com](https://cloud.nifty.com) | ⚠️ (403) |   | ◯ |
+| 992 | ConoHa | Cloud | [conoha.jp](https://www.conoha.jp) | ✅ (200) |   | ◯ |
+| 993 | Cloudn | Cloud | [cloudn.co.jp](https://cloudn.co.jp) | ✅ (200) |   | ◯ |
+| 994 | さくらのクラウド | Cloud | [sakura.ad.jp](https://cloud.sakura.ad.jp) | ✅ (200) |   | ◯ |
+| 995 | IDCFクラウド | Cloud | [idcf.jp](https://cloud.idcf.jp) | ✅ (200) |   | ◯ |
+| 996 | GMOクラウド iCLUSTA | Cloud | [gmo-i.co.jp](https://iclusta.gmo-i.co.jp) | ❌ (404) |   | ◯ |
+| 997 | NTTPC WebARENA | Cloud | [webarena.jp](https://webarena.jp) | ✅ (200) |   | ◯ |
+| 1235 | CyberAgent | Cloud | [cyberagent.co.jp](https://www.cyberagent.co.jp) | ✅ (200) |   | ◯ |
 
 ### Cloud/Payment
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 381 | KDDI | Cloud/Payment | [kddi.com](https://www.kddi.com) | ✅ (200) |   |
+| 381 | KDDI | Cloud/Payment | [kddi.com](https://www.kddi.com) | ✅ (200) |   | ◯ |
 
 ### Collaboration
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 395 | SharePoint | Collaboration | [sharepoint.com](https://www.sharepoint.com) | ✅ (200) | ◯ |
-| 396 | Confluence Cloud | Collaboration | [atlassian.com/confluence](https://www.atlassian.com/confluence) | ✅ (200) | ◯ |
-| 490 | ProofHub | Collaboration | [proofhub.com](https://proofhub.com) | ✅ (200) |   |
-| 491 | Assembla | Collaboration | [assembla.com](https://assembla.com) | ✅ (200) |   |
-| 492 | Procore | Collaboration | [procore.com](https://procore.com) | ✅ (200) |   |
-| 493 | Planview | Collaboration | [planview.com](https://planview.com) | ✅ (200) |   |
-| 494 | Slack for Teams | Collaboration | [slack.com](https://slack.com) | ✅ (200) | ◯ |
-| 495 | Microsoft Teams | Collaboration | [teams.microsoft.com](https://teams.microsoft.com) | ✅ (200) | ◯ |
-| 496 | Flock | Collaboration | [flock.com](https://flock.com) | ✅ (200) |   |
-| 512 | Basecamp Classic | Collaboration | [basecamp.com/classic](https://www.basecamp.com/classic) | ✅ (200) | ◯ |
-| 513 | Asana Premium | Collaboration | [asana.com/premium](https://asana.com/premium) | ✅ (200) |   |
-| 514 | Trello Premium | Collaboration | [trello.com/premium](https://trello.com/premium) | ✅ (200) | ◯ |
-| 515 | Notion for Teams | Collaboration | [notion.so/teams](https://www.notion.so/teams) | ✅ (200) | ◯ |
-| 1398 | Crowdcast | Collaboration | [https://www.crowdcast.io](https://www.crowdcast.io) | ✅ (200) |   |
-| 1399 | Riverside.fm | Collaboration | [https://www.riverside.fm](https://www.riverside.fm) | ✅ (200) |   |
-| 1400 | StreamYard | Collaboration | [https://www.streamyard.com](https://www.streamyard.com) | ✅ (200) |   |
-| 1401 | Restream | Collaboration | [https://www.restream.io](https://www.restream.io) | ✅ (200) |   |
-| 1402 | Castr | Collaboration | [https://www.castr.io](https://www.castr.io) | ✅ (200) |   |
-| 1403 | Loom Enterprise | Collaboration | [https://www.loom.com](https://www.loom.com) | ✅ (301) |   |
-| 1404 | Vidyard Enterprise | Collaboration | [https://www.vidyard.com](https://www.vidyard.com) | ✅ (200) |   |
-| 1405 | Soapbox | Collaboration | [https://www.soapboxhq.com](https://www.soapboxhq.com) | ❌ (404) | ◯ |
-| 1406 | Hippo Video | Collaboration | [https://www.hippovideo.io](https://www.hippovideo.io) | ✅ (200) |   |
-| 1407 | Wistia Plus | Collaboration | [https://www.wistia.com](https://www.wistia.com) | ✅ (200) |   |
-| 1408 | BombBomb | Collaboration | [https://www.bombbomb.com](https://www.bombbomb.com) | ✅ (200) |   |
-| 1409 | Covideo | Collaboration | [https://www.covideo.com](https://www.covideo.com) | ✅ (200) |   |
-| 1410 | Bonjoro | Collaboration | [https://www.bonjoro.com](https://www.bonjoro.com) | ✅ (200) |   |
-| 1411 | Toky | Collaboration | [https://www.toky.co](https://www.toky.co) | ✅ (200) |   |
-| 1412 | CloudTalk | Collaboration | [https://www.cloudtalk.io](https://www.cloudtalk.io) | ✅ (200) | ◯ |
-| 1413 | JustCall | Collaboration | [https://www.justcall.io](https://www.justcall.io) | ✅ (200) | ◯ |
-| 1414 | Aircall | Collaboration | [https://www.aircall.io](https://www.aircall.io) | ✅ (200) | ◯ |
-| 1415 | Ringover | Collaboration | [https://www.ringover.com](https://www.ringover.com) | ✅ (200) |   |
-| 1416 | OpenPhone | Collaboration | [https://www.openphone.com](https://www.openphone.com) | ✅ (200) |   |
-| 1417 | Dialpad Talk | Collaboration | [https://www.dialpad.com](https://www.dialpad.com) | ✅ (200) |   |
-| 1418 | 8x8 X | Collaboration | [https://www.8x8.com](https://www.8x8.com) | ✅ (200) |   |
-| 1419 | Krisp | Collaboration | [https://www.krisp.ai](https://www.krisp.ai) | ✅ (200) |   |
+| 395 | SharePoint [[Y](yoom-apps/sharepoint.md)] | Collaboration | [sharepoint.com](https://www.sharepoint.com) | ✅ (200) | ◯ | ◯ |
+| 396 | Confluence Cloud | Collaboration | [atlassian.com/confluence](https://www.atlassian.com/confluence) | ✅ (200) | ◯ | ◯ |
+| 490 | ProofHub | Collaboration | [proofhub.com](https://proofhub.com) | ✅ (200) |   | ◯ |
+| 491 | Assembla | Collaboration | [assembla.com](https://assembla.com) | ✅ (200) |   | ◯ |
+| 492 | Procore | Collaboration | [procore.com](https://procore.com) | ✅ (200) |   | ◯ |
+| 493 | Planview | Collaboration | [planview.com](https://planview.com) | ✅ (200) |   | ◯ |
+| 494 | Slack for Teams | Collaboration | [slack.com](https://slack.com) | ✅ (200) | ◯ | ◯ |
+| 495 | Microsoft Teams | Collaboration | [teams.microsoft.com](https://teams.microsoft.com) | ✅ (200) | ◯ | ◯ |
+| 496 | Flock | Collaboration | [flock.com](https://flock.com) | ✅ (200) |   | ◯ |
+| 512 | Basecamp Classic | Collaboration | [basecamp.com/classic](https://www.basecamp.com/classic) | ✅ (200) | ◯ | ◯ |
+| 513 | Asana Premium | Collaboration | [asana.com/premium](https://asana.com/premium) | ✅ (200) |   | ◯ |
+| 514 | Trello Premium | Collaboration | [trello.com/premium](https://trello.com/premium) | ✅ (200) | ◯ | ◯ |
+| 515 | Notion for Teams | Collaboration | [notion.so/teams](https://www.notion.so/teams) | ✅ (200) | ◯ | ◯ |
+| 1398 | Crowdcast | Collaboration | [https://www.crowdcast.io](https://www.crowdcast.io) | ✅ (200) |   | ◯ |
+| 1399 | Riverside.fm | Collaboration | [https://www.riverside.fm](https://www.riverside.fm) | ✅ (200) |   | ◯ |
+| 1400 | StreamYard | Collaboration | [https://www.streamyard.com](https://www.streamyard.com) | ✅ (200) |   | ◯ |
+| 1401 | Restream | Collaboration | [https://www.restream.io](https://www.restream.io) | ✅ (200) |   | ◯ |
+| 1402 | Castr | Collaboration | [https://www.castr.io](https://www.castr.io) | ✅ (200) |   | ◯ |
+| 1403 | Loom Enterprise | Collaboration | [https://www.loom.com](https://www.loom.com) | ✅ (301) |   | ◯ |
+| 1404 | Vidyard Enterprise | Collaboration | [https://www.vidyard.com](https://www.vidyard.com) | ✅ (200) |   | ◯ |
+| 1405 | Soapbox | Collaboration | [https://www.soapboxhq.com](https://www.soapboxhq.com) | ❌ (404) | ◯ | ◯ |
+| 1406 | Hippo Video | Collaboration | [https://www.hippovideo.io](https://www.hippovideo.io) | ✅ (200) |   | ◯ |
+| 1407 | Wistia Plus | Collaboration | [https://www.wistia.com](https://www.wistia.com) | ✅ (200) |   | ◯ |
+| 1408 | BombBomb | Collaboration | [https://www.bombbomb.com](https://www.bombbomb.com) | ✅ (200) |   | ◯ |
+| 1409 | Covideo | Collaboration | [https://www.covideo.com](https://www.covideo.com) | ✅ (200) |   | ◯ |
+| 1410 | Bonjoro | Collaboration | [https://www.bonjoro.com](https://www.bonjoro.com) | ✅ (200) |   | ◯ |
+| 1411 | Toky | Collaboration | [https://www.toky.co](https://www.toky.co) | ✅ (200) |   | ◯ |
+| 1412 | CloudTalk [[Y](yoom-apps/cloudtalk.md)] | Collaboration | [https://www.cloudtalk.io](https://www.cloudtalk.io) | ✅ (200) | ◯ | ◯ |
+| 1413 | JustCall [[Y](yoom-apps/justcall.md)] | Collaboration | [https://www.justcall.io](https://www.justcall.io) | ✅ (200) | ◯ | ◯ |
+| 1414 | Aircall [[Y](yoom-apps/aircall.md)] | Collaboration | [https://www.aircall.io](https://www.aircall.io) | ✅ (200) | ◯ | ◯ |
+| 1415 | Ringover | Collaboration | [https://www.ringover.com](https://www.ringover.com) | ✅ (200) |   | ◯ |
+| 1416 | OpenPhone | Collaboration | [https://www.openphone.com](https://www.openphone.com) | ✅ (200) |   | ◯ |
+| 1417 | Dialpad Talk | Collaboration | [https://www.dialpad.com](https://www.dialpad.com) | ✅ (200) |   | ◯ |
+| 1418 | 8x8 X | Collaboration | [https://www.8x8.com](https://www.8x8.com) | ✅ (200) |   | ◯ |
+| 1419 | Krisp | Collaboration | [https://www.krisp.ai](https://www.krisp.ai) | ✅ (200) |   | ◯ |
 
 ### Communication
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 65 | Zoom | Communication | [zoom.us](https://zoom.us) | ✅ (200) | ◯ |
-| 95 | LINE Biz ID | Communication | [linebiz.com/jp](https://linebiz.com/jp) | ✅ (200) | ◯ |
-| 96 | Slack | Communication | [slack.com/intl/ja-jp/](https://slack.com/intl/ja-jp/) | ✅ (200) | ◯ |
-| 124 | Loom | Communication | [loom.com](https://loom.com) | ✅ (200) | ◯ |
-| 125 | Microsoft Teams | Communication | [teams.microsoft.com](https://teams.microsoft.com) | ✅ (200) | ◯ |
-| 126 | Webex | Communication | [webex.com](https://webex.com) | ✅ (200) |   |
-| 142 | Ringbell | Communication | [ringbell.jp](https://ringbell.jp) | ✅ (200) |   |
-| 190 | V-Cube | Communication | [v-cube.com](https://v-cube.com) | ⚠️ (403) |   |
-| 284 | RingCentral | Communication | [ringcentral.com](https://www.ringcentral.com) | ✅ (200) |   |
-| 285 | Twilio | Communication | [twilio.com/ja](https://www.twilio.com/ja) | ✅ (200) | ◯ |
-| 352 | LINE | Communication | [line.me](https://line.me) | ✅ (200) | ◯ |
-| 380 | NuRoo | Communication | [nuro.com](https://nuro.com) | ✅ (200) |   |
-| 483 | Google Workspace | Communication | [workspace.google.com](https://workspace.google.com) | ✅ (200) | ◯ |
-| 484 | Microsoft 365 | Communication | [microsoft.com/microsoft-365](https://www.microsoft.com/microsoft-365) | ✅ (200) |   |
-| 1593 | Gmail | Communication | [https://mail.google.com](https://mail.google.com) | ✅ (200) | ◯ |
-| 1594 | Outlook | Communication | [https://outlook.live.com](https://outlook.live.com) | ✅ (200) | ◯ |
-| 485 | Dialpad | Communication | [dialpad.com](https://dialpad.com) | ✅ (200) |   |
-| 486 | 8x8 | Communication | [8x8.com](https://8x8.com) | ✅ (200) |   |
-| 487 | RingCentral MVP | Communication | [ringcentral.com](https://ringcentral.com) | ✅ (200) |   |
-| 488 | Nextiva | Communication | [nextiva.com](https://nextiva.com) | ✅ (200) |   |
-| 489 | Vonage | Communication | [vonage.com](https://vonage.com) | ✅ (200) |   |
-| 497 | Dialer360 | Communication | [dialer360.com](https://dialer360.com) | ✅ (200) |   |
-| 498 | Avaya | Communication | [avaya.com](https://avaya.com) | ✅ (200) |   |
-| 499 | MessageBird | Communication | [messagebird.com](https://messagebird.com) | ✅ (200) | ◯ |
-| 500 | Sinch | Communication | [sinch.com](https://sinch.com) | ✅ (200) |   |
-| 683 | Pusher | Communication | [pusher.com](https://pusher.com) | ✅ (200) |   |
-| 684 | Ably | Communication | [ably.com](https://ably.com) | ✅ (200) |   |
-| 685 | PubNub | Communication | [pubnub.com](https://pubnub.com) | ✅ (200) |   |
-| 686 | Stream | Communication | [getstream.io](https://getstream.io) | ✅ (200) |   |
-| 687 | SendBird | Communication | [sendbird.com](https://sendbird.com) | ✅ (200) | ◯ |
-| 838 | Slido | Communication | [slido.com](https://www.slido.com) | ✅ (200) |   |
-| 839 | Poll Everywhere | Communication | [polleverywhere.com](https://www.polleverywhere.com) | ✅ (200) |   |
-| 840 | Mentimeter | Communication | [mentimeter.com](https://www.mentimeter.com) | ✅ (200) |   |
-| 1170 | Vimeo | Communication | [vimeo.com](https://vimeo.com) | ✅ (200) |   |
-| 1171 | Livestorm | Communication | [livestorm.co](https://livestorm.co) | ✅ (200) | ◯ |
-| 1172 | ClickMeeting | Communication | [clickmeeting.com](https://clickmeeting.com) | ✅ (200) | ◯ |
-| 1173 | Discord | Communication | [discord.com](https://discord.com) | ✅ (200) | ◯ |
-| 1194 | AbemaTV | Communication | [abema.tv](https://abema.tv) | ✅ (200) |   |
-| 1195 | 17LIVE | Communication | [17.live](https://17.live) | ✅ (200) |   |
-| 1196 | SHOWROOM | Communication | [showroom-live.com](https://www.showroom-live.com) | ✅ (200) |   |
-| 1197 | Pococha | Communication | [pococha.jp](https://pococha.jp) | ✅ (200) |   |
-| 1198 | MilyMily | Communication | [milimili.tv](https://milimili.tv) | ✅ (200) |   |
-| 1199 | OPENREC | Communication | [openrec.tv](https://www.openrec.tv) | ✅ (200) |   |
-| 1200 | TwitCasting | Communication | [twitcasting.tv](https://twitcasting.tv) | ✅ (200) |   |
-| 1201 | BIGO LIVE | Communication | [bigo.tv](https://www.bigo.tv) | ✅ (200) |   |
-| 1202 | TikTok Live | Communication | [tiktok.com](https://www.tiktok.com) | ⚠️ (403) |   |
-| 1203 | YouTube Live | Communication | [youtube.com/live](https://www.youtube.com/live) | ✅ (200) | ◯ |
-| 1204 | Twitch | Communication | [twitch.tv](https://www.twitch.tv) | ✅ (200) | ◯ |
-| 1205 | Facebook Live | Communication | [facebook.com/live](https://www.facebook.com/live) | ✅ (200) |   |
-| 1206 | Instagram Live | Communication | [instagram.com](https://www.instagram.com) | ✅ (200) |   |
-| 1207 | LinkedIn Live | Communication | [linkedin.com](https://www.linkedin.com) | ✅ (200) |   |
-| 1208 | Twitter Spaces | Communication | [twitter.com/spaces](https://twitter.com/spaces) | ⚠️ (403) |   |
-| 1209 | Periscope | Communication | [pscp.tv](https://pscp.tv) | ✅ (200) |   |
-| 1210 | Microsoft Stream | Communication | [microsoftstream.com](https://www.microsoftstream.com) | ✅ (307) |   |
-| 1216 | Vidyard | Communication | [vidyard.com](https://www.vidyard.com) | ✅ (200) |   |
-| 1218 | Wistia | Communication | [wistia.com](https://wistia.com) | ✅ (200) |   |
-| 1219 | Brightcove | Communication | [brightcove.com](https://www.brightcove.com) | ✅ (200) | ◯ |
-| 1220 | Vimeo Business | Communication | [vimeo.com](https://vimeo.com/business) | ✅ (200) |   |
-| 1221 | JW Player | Communication | [jwplayer.com](https://www.jwplayer.com) | ✅ (200) |   |
-| 1222 | Kaltura | Communication | [kaltura.com](https://kaltura.com) | ✅ (200) |   |
-| 1223 | Dailymotion | Communication | [dailymotion.com](https://www.dailymotion.com) | ✅ (200) |   |
-| 1224 | Vevo | Communication | [vevo.com](https://www.vevo.com) | ✅ (200) |   |
-| 1225 | Metacafe | Communication | [metacafe.com](https://www.metacafe.com) | ✅ (200) |   |
-| 1226 | Bilibili | Communication | [bilibili.com](https://www.bilibili.com) | ✅ (200) |   |
-| 1227 | Youku | Communication | [youku.com](https://www.youku.com) | ✅ (301) |   |
-| 1228 | iQIYI | Communication | [iqiyi.com](https://www.iqiyi.com) | ✅ (200) |   |
-| 1229 | Tencent Video | Communication | [v.qq.com](https://v.qq.com) | ✅ (200) |   |
+| 65 | Zoom [[Y](yoom-apps/zoom.md)] | Communication | [zoom.us](https://zoom.us) | ✅ (200) | ◯ | ◯ |
+| 95 | LINE Biz ID | Communication | [linebiz.com/jp](https://linebiz.com/jp) | ✅ (200) | ◯ | ◯ |
+| 96 | Slack [[Y](yoom-apps/slack.md)] | Communication | [slack.com/intl/ja-jp/](https://slack.com/intl/ja-jp/) | ✅ (200) | ◯ | ◯ |
+| 124 | Loom | Communication | [loom.com](https://loom.com) | ✅ (200) | ◯ | ◯ |
+| 125 | Microsoft Teams | Communication | [teams.microsoft.com](https://teams.microsoft.com) | ✅ (200) | ◯ | ◯ |
+| 126 | Webex | Communication | [webex.com](https://webex.com) | ✅ (200) |   | ◯ |
+| 142 | Ringbell | Communication | [ringbell.jp](https://ringbell.jp) | ✅ (200) |   | ◯ |
+| 190 | V-Cube | Communication | [v-cube.com](https://v-cube.com) | ⚠️ (403) |   | ◯ |
+| 284 | RingCentral | Communication | [ringcentral.com](https://www.ringcentral.com) | ✅ (200) |   | ◯ |
+| 285 | Twilio [[Y](yoom-apps/twilio.md)] | Communication | [twilio.com/ja](https://www.twilio.com/ja) | ✅ (200) | ◯ | ◯ |
+| 352 | LINE [[Y](yoom-apps/line.md)] | Communication | [line.me](https://line.me) | ✅ (200) | ◯ | ◯ |
+| 380 | NuRoo | Communication | [nuro.com](https://nuro.com) | ✅ (200) |   | ◯ |
+| 483 | Google Workspace [[Y](yoom-apps/google-workspace.md)] | Communication | [workspace.google.com](https://workspace.google.com) | ✅ (200) | ◯ | ◯ |
+| 484 | Microsoft 365 | Communication | [microsoft.com/microsoft-365](https://www.microsoft.com/microsoft-365) | ✅ (200) |   | ◯ |
+| 1593 | Gmail [[Y](yoom-apps/gmail.md)] | Communication | [https://mail.google.com](https://mail.google.com) | ✅ (200) | ◯ | ◯ |
+| 1594 | Outlook [[Y](yoom-apps/outlook.md)] | Communication | [https://outlook.live.com](https://outlook.live.com) | ✅ (200) | ◯ | ◯ |
+| 485 | Dialpad | Communication | [dialpad.com](https://dialpad.com) | ✅ (200) |   | ◯ |
+| 486 | 8x8 | Communication | [8x8.com](https://8x8.com) | ✅ (200) |   | ◯ |
+| 487 | RingCentral MVP | Communication | [ringcentral.com](https://ringcentral.com) | ✅ (200) |   | ◯ |
+| 488 | Nextiva | Communication | [nextiva.com](https://nextiva.com) | ✅ (200) |   | ◯ |
+| 489 | Vonage | Communication | [vonage.com](https://vonage.com) | ✅ (200) |   | ◯ |
+| 497 | Dialer360 | Communication | [dialer360.com](https://dialer360.com) | ✅ (200) |   | ◯ |
+| 498 | Avaya | Communication | [avaya.com](https://avaya.com) | ✅ (200) |   | ◯ |
+| 499 | MessageBird | Communication | [messagebird.com](https://messagebird.com) | ✅ (200) | ◯ | ◯ |
+| 500 | Sinch | Communication | [sinch.com](https://sinch.com) | ✅ (200) |   | ◯ |
+| 683 | Pusher | Communication | [pusher.com](https://pusher.com) | ✅ (200) |   | ◯ |
+| 684 | Ably | Communication | [ably.com](https://ably.com) | ✅ (200) |   | ◯ |
+| 685 | PubNub | Communication | [pubnub.com](https://pubnub.com) | ✅ (200) |   | ◯ |
+| 686 | Stream | Communication | [getstream.io](https://getstream.io) | ✅ (200) |   | ◯ |
+| 687 | SendBird | Communication | [sendbird.com](https://sendbird.com) | ✅ (200) | ◯ | ◯ |
+| 838 | Slido | Communication | [slido.com](https://www.slido.com) | ✅ (200) |   | ◯ |
+| 839 | Poll Everywhere | Communication | [polleverywhere.com](https://www.polleverywhere.com) | ✅ (200) |   | ◯ |
+| 840 | Mentimeter | Communication | [mentimeter.com](https://www.mentimeter.com) | ✅ (200) |   | ◯ |
+| 1170 | Vimeo | Communication | [vimeo.com](https://vimeo.com) | ✅ (200) |   | ◯ |
+| 1171 | Livestorm [[Y](yoom-apps/livestorm.md)] | Communication | [livestorm.co](https://livestorm.co) | ✅ (200) | ◯ | ◯ |
+| 1172 | ClickMeeting [[Y](yoom-apps/clickmeeting.md)] | Communication | [clickmeeting.com](https://clickmeeting.com) | ✅ (200) | ◯ | ◯ |
+| 1173 | Discord | Communication | [discord.com](https://discord.com) | ✅ (200) | ◯ | ◯ |
+| 1194 | AbemaTV | Communication | [abema.tv](https://abema.tv) | ✅ (200) |   | ◯ |
+| 1195 | 17LIVE | Communication | [17.live](https://17.live) | ✅ (200) |   | ◯ |
+| 1196 | SHOWROOM | Communication | [showroom-live.com](https://www.showroom-live.com) | ✅ (200) |   | ◯ |
+| 1197 | Pococha | Communication | [pococha.jp](https://pococha.jp) | ✅ (200) |   | ◯ |
+| 1198 | MilyMily | Communication | [milimili.tv](https://milimili.tv) | ✅ (200) |   | ◯ |
+| 1199 | OPENREC | Communication | [openrec.tv](https://www.openrec.tv) | ✅ (200) |   | ◯ |
+| 1200 | TwitCasting | Communication | [twitcasting.tv](https://twitcasting.tv) | ✅ (200) |   | ◯ |
+| 1201 | BIGO LIVE | Communication | [bigo.tv](https://www.bigo.tv) | ✅ (200) |   | ◯ |
+| 1202 | TikTok Live | Communication | [tiktok.com](https://www.tiktok.com) | ⚠️ (403) |   | ◯ |
+| 1203 | YouTube Live | Communication | [youtube.com/live](https://www.youtube.com/live) | ✅ (200) | ◯ | ◯ |
+| 1204 | Twitch [[Y](yoom-apps/twitch.md)] | Communication | [twitch.tv](https://www.twitch.tv) | ✅ (200) | ◯ | ◯ |
+| 1205 | Facebook Live | Communication | [facebook.com/live](https://www.facebook.com/live) | ✅ (200) |   | ◯ |
+| 1206 | Instagram Live | Communication | [instagram.com](https://www.instagram.com) | ✅ (200) |   | ◯ |
+| 1207 | LinkedIn Live | Communication | [linkedin.com](https://www.linkedin.com) | ✅ (200) |   | ◯ |
+| 1208 | Twitter Spaces | Communication | [twitter.com/spaces](https://twitter.com/spaces) | ⚠️ (403) |   | ◯ |
+| 1209 | Periscope | Communication | [pscp.tv](https://pscp.tv) | ✅ (200) |   | ◯ |
+| 1210 | Microsoft Stream | Communication | [microsoftstream.com](https://www.microsoftstream.com) | ✅ (307) |   | ◯ |
+| 1216 | Vidyard | Communication | [vidyard.com](https://www.vidyard.com) | ✅ (200) |   | ◯ |
+| 1218 | Wistia | Communication | [wistia.com](https://wistia.com) | ✅ (200) |   | ◯ |
+| 1219 | Brightcove [[Y](yoom-apps/brightcove.md)] | Communication | [brightcove.com](https://www.brightcove.com) | ✅ (200) | ◯ | ◯ |
+| 1220 | Vimeo Business | Communication | [vimeo.com](https://vimeo.com/business) | ✅ (200) |   | ◯ |
+| 1221 | JW Player | Communication | [jwplayer.com](https://www.jwplayer.com) | ✅ (200) |   | ◯ |
+| 1222 | Kaltura | Communication | [kaltura.com](https://kaltura.com) | ✅ (200) |   | ◯ |
+| 1223 | Dailymotion | Communication | [dailymotion.com](https://www.dailymotion.com) | ✅ (200) |   | ◯ |
+| 1224 | Vevo | Communication | [vevo.com](https://www.vevo.com) | ✅ (200) |   | ◯ |
+| 1225 | Metacafe | Communication | [metacafe.com](https://www.metacafe.com) | ✅ (200) |   | ◯ |
+| 1226 | Bilibili | Communication | [bilibili.com](https://www.bilibili.com) | ✅ (200) |   | ◯ |
+| 1227 | Youku | Communication | [youku.com](https://www.youku.com) | ✅ (301) |   | ◯ |
+| 1228 | iQIYI | Communication | [iqiyi.com](https://www.iqiyi.com) | ✅ (200) |   | ◯ |
+| 1229 | Tencent Video | Communication | [v.qq.com](https://v.qq.com) | ✅ (200) |   | ◯ |
 
 ### Content
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 10 | Note | Content | [note.com](https://note.com) | ✅ (200) | ◯ |
-| 136 | Qiita | Content | [qiita.com](https://qiita.com) | ✅ (200) |   |
-| 137 | Zenn | Content | [zenn.dev](https://zenn.dev) | ✅ (200) |   |
-| 145 | NewsDigest | Content | [newsdigest.jp](https://newsdigest.jp) | ✅ (200) |   |
-| 262 | Gunosy | Content | [gunosy.com](https://gunosy.com) | ✅ (200) |   |
-| 351 | Livedoor | Content | [livedoor.com](https://livedoor.com) | ✅ (200) |   |
-| 368 | YouTube | Content | [youtube.com](https://www.youtube.com) | ✅ (200) | ◯ |
-| 892 | Dev.to | Content | [dev.to](https://dev.to) | ✅ (200) |   |
-| 893 | Hashnode | Content | [hashnode.com](https://hashnode.com) | ✅ (200) |   |
-| 894 | Ghost | Content | [ghost.org](https://ghost.org) | ✅ (200) |   |
-| 895 | WordPress | Content | [wordpress.com](https://www.wordpress.com) | ✅ (301) | ◯ |
-| 896 | Blogger | Content | [blogger.com](https://www.blogger.com) | ✅ (302) | ◯ |
-| 897 | Tumblr | Content | [tumblr.com](https://tumblr.com) | ✅ (301) | ◯ |
-| 1123 | Ameba | Content | [https://ameba.jp](https://ameba.jp) | ✅ (200) |   |
-| 1124 | はてなブログ | Content | [https://hatenablog.com](https://hatenablog.com) | ✅ (200) |   |
-| 1125 | FC2ブログ | Content | [https://blog.fc2.com](https://blog.fc2.com) | ✅ (200) |   |
-| 1126 | livedoorブログ | Content | [https://blog.livedoor.com](https://blog.livedoor.com) | ✅ (200) |   |
-| 1127 | Seesaaブログ | Content | [https://blog.seesaa.jp](https://blog.seesaa.jp) | ✅ (200) |   |
-| 1128 | Jugem | Content | [https://jugem.jp](https://jugem.jp) | ✅ (200) |   |
-| 1166 | WordPress | Content | [https://wordpress.com](https://wordpress.com) | ✅ (200) | ◯ |
-| 1167 | Ghost | Content | [https://ghost.org](https://ghost.org) | ✅ (200) |   |
-| 1231 | Nicovideo | Content | [nicovideo.jp](https://www.nicovideo.jp) | ✅ (200) |   |
-| 1232 | Hulu Japan | Content | [hulu.jp](https://hulu.jp) | ✅ (302) |   |
-| 1233 | U-Next | Content | [unext.jp](https://www.unext.jp) | ✅ (301) |   |
-| 1338 | NewsPicks | Content | [newspicks.com](https://newspicks.com) | ✅ (200) |   |
-| 1339 | Goo Blog | Content | [blog.goo.ne.jp](https://blog.goo.ne.jp) | ✅ (200) |   |
-| 1340 | YORISOPO | Content | [yorisoupo.co.jp](https://www.yorisoupo.co.jp) | ✅ (200) |   |
+| 10 | Note | Content | [note.com](https://note.com) | ✅ (200) | ◯ | ◯ |
+| 136 | Qiita | Content | [qiita.com](https://qiita.com) | ✅ (200) |   | ◯ |
+| 137 | Zenn | Content | [zenn.dev](https://zenn.dev) | ✅ (200) |   | ◯ |
+| 145 | NewsDigest | Content | [newsdigest.jp](https://newsdigest.jp) | ✅ (200) |   | ◯ |
+| 262 | Gunosy | Content | [gunosy.com](https://gunosy.com) | ✅ (200) |   | ◯ |
+| 351 | Livedoor | Content | [livedoor.com](https://livedoor.com) | ✅ (200) |   | ◯ |
+| 368 | YouTube [[Y](yoom-apps/youtube.md)] | Content | [youtube.com](https://www.youtube.com) | ✅ (200) | ◯ | ◯ |
+| 892 | Dev.to | Content | [dev.to](https://dev.to) | ✅ (200) |   | ◯ |
+| 893 | Hashnode | Content | [hashnode.com](https://hashnode.com) | ✅ (200) |   | ◯ |
+| 894 | Ghost | Content | [ghost.org](https://ghost.org) | ✅ (200) |   | ◯ |
+| 895 | WordPress [[Y](yoom-apps/wordpress.md)] | Content | [wordpress.com](https://www.wordpress.com) | ✅ (301) | ◯ | ◯ |
+| 896 | Blogger [[Y](yoom-apps/blogger.md)] | Content | [blogger.com](https://www.blogger.com) | ✅ (302) | ◯ | ◯ |
+| 897 | Tumblr [[Y](yoom-apps/tumblr.md)] | Content | [tumblr.com](https://tumblr.com) | ✅ (301) | ◯ | ◯ |
+| 1123 | Ameba | Content | [https://ameba.jp](https://ameba.jp) | ✅ (200) |   | ◯ |
+| 1124 | はてなブログ | Content | [https://hatenablog.com](https://hatenablog.com) | ✅ (200) |   | ◯ |
+| 1125 | FC2ブログ | Content | [https://blog.fc2.com](https://blog.fc2.com) | ✅ (200) |   | ◯ |
+| 1126 | livedoorブログ | Content | [https://blog.livedoor.com](https://blog.livedoor.com) | ✅ (200) |   | ◯ |
+| 1127 | Seesaaブログ | Content | [https://blog.seesaa.jp](https://blog.seesaa.jp) | ✅ (200) |   | ◯ |
+| 1128 | Jugem | Content | [https://jugem.jp](https://jugem.jp) | ✅ (200) |   | ◯ |
+| 1166 | WordPress [[Y](yoom-apps/wordpress.md)] | Content | [https://wordpress.com](https://wordpress.com) | ✅ (200) | ◯ | ◯ |
+| 1167 | Ghost | Content | [https://ghost.org](https://ghost.org) | ✅ (200) |   | ◯ |
+| 1231 | Nicovideo | Content | [nicovideo.jp](https://www.nicovideo.jp) | ✅ (200) |   | ◯ |
+| 1232 | Hulu Japan | Content | [hulu.jp](https://hulu.jp) | ✅ (302) |   | ◯ |
+| 1233 | U-Next | Content | [unext.jp](https://www.unext.jp) | ✅ (301) |   | ◯ |
+| 1338 | NewsPicks | Content | [newspicks.com](https://newspicks.com) | ✅ (200) |   | ◯ |
+| 1339 | Goo Blog | Content | [blog.goo.ne.jp](https://blog.goo.ne.jp) | ✅ (200) |   | ◯ |
+| 1340 | YORISOPO | Content | [yorisoupo.co.jp](https://www.yorisoupo.co.jp) | ✅ (200) |   | ◯ |
 
 ### Database
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 11 | SmartDB | Database | [smartdb.jp](https://smartdb.jp) | ✅ (200) |   |
-| 160 | Trocco.io | Database | [trocco.io](https://trocco.io) | ✅ (200) |   |
-| 195 | Pleasanter | Database | [pleasanter.org](https://pleasanter.org) | ✅ (200) |   |
-| 419 | MongoDB | Database | [mongodb.com](https://www.mongodb.com) | ✅ (200) |   |
-| 420 | PostgreSQL | Database | [postgresql.org](https://postgresql.org) | ✅ (200) |   |
-| 421 | MySQL | Database | [mysql.com](https://www.mysql.com) | ✅ (200) |   |
-| 422 | Redis | Database | [redis.io](https://redis.io) | ✅ (200) |   |
-| 423 | Cassandra | Database | [cassandra.apache.org](https://cassandra.apache.org) | ✅ (200) |   |
-| 424 | Airtable | Database | [airtable.com](https://www.airtable.com) | ✅ (200) | ◯ |
-| 543 | Airbyte | Database | [airbyte.com](https://airbyte.com) | ✅ (200) |   |
-| 544 | Fivetran | Database | [fivetran.com](https://fivetran.com) | ✅ (200) |   |
-| 545 | dbt Labs | Database | [dbt.com](https://dbt.com) | ✅ (200) |   |
-| 557 | Panoply | Database | [panoply.io](https://www.panoply.io) | ✅ (200) |   |
-| 558 | Firebolt | Database | [firebolt.io](https://firebolt.io) | ✅ (200) |   |
-| 559 | SingleStore | Database | [singlestore.com](https://singlestore.com) | ✅ (200) |   |
-| 560 | CockroachDB | Database | [cockroachlabs.com](https://cockroachlabs.com) | ✅ (200) |   |
-| 561 | ScyllaDB | Database | [scylladb.com](https://scylladb.com) | ✅ (200) |   |
-| 562 | TimescaleDB | Database | [timescale.com](https://timescale.com) | ✅ (200) |   |
-| 563 | YugabyteDB | Database | [yugabyte.com](https://yugabyte.com) | ✅ (200) |   |
-| 564 | Neo4j | Database | [neo4j.com](https://neo4j.com) | ✅ (200) |   |
-| 565 | InfluxDB | Database | [influxdata.com](https://influxdata.com) | ✅ (200) |   |
-| 566 | Elasticsearch | Database | [elastic.co](https://elastic.co) | ✅ (200) | ◯ |
+| 11 | SmartDB | Database | [smartdb.jp](https://smartdb.jp) | ✅ (200) |   | ◯ |
+| 160 | Trocco.io | Database | [trocco.io](https://trocco.io) | ✅ (200) |   | ◯ |
+| 195 | Pleasanter | Database | [pleasanter.org](https://pleasanter.org) | ✅ (200) |   | ◯ |
+| 419 | MongoDB | Database | [mongodb.com](https://www.mongodb.com) | ✅ (200) |   | ◯ |
+| 420 | PostgreSQL | Database | [postgresql.org](https://postgresql.org) | ✅ (200) |   | ◯ |
+| 421 | MySQL | Database | [mysql.com](https://www.mysql.com) | ✅ (200) |   | ◯ |
+| 422 | Redis | Database | [redis.io](https://redis.io) | ✅ (200) |   | ◯ |
+| 423 | Cassandra | Database | [cassandra.apache.org](https://cassandra.apache.org) | ✅ (200) |   | ◯ |
+| 424 | Airtable | Database | [airtable.com](https://www.airtable.com) | ✅ (200) | ◯ | ◯ |
+| 543 | Airbyte | Database | [airbyte.com](https://airbyte.com) | ✅ (200) |   | ◯ |
+| 544 | Fivetran | Database | [fivetran.com](https://fivetran.com) | ✅ (200) |   | ◯ |
+| 545 | dbt Labs | Database | [dbt.com](https://dbt.com) | ✅ (200) |   | ◯ |
+| 557 | Panoply | Database | [panoply.io](https://www.panoply.io) | ✅ (200) |   | ◯ |
+| 558 | Firebolt | Database | [firebolt.io](https://firebolt.io) | ✅ (200) |   | ◯ |
+| 559 | SingleStore | Database | [singlestore.com](https://singlestore.com) | ✅ (200) |   | ◯ |
+| 560 | CockroachDB | Database | [cockroachlabs.com](https://cockroachlabs.com) | ✅ (200) |   | ◯ |
+| 561 | ScyllaDB | Database | [scylladb.com](https://scylladb.com) | ✅ (200) |   | ◯ |
+| 562 | TimescaleDB | Database | [timescale.com](https://timescale.com) | ✅ (200) |   | ◯ |
+| 563 | YugabyteDB | Database | [yugabyte.com](https://yugabyte.com) | ✅ (200) |   | ◯ |
+| 564 | Neo4j | Database | [neo4j.com](https://neo4j.com) | ✅ (200) |   | ◯ |
+| 565 | InfluxDB | Database | [influxdata.com](https://influxdata.com) | ✅ (200) |   | ◯ |
+| 566 | Elasticsearch | Database | [elastic.co](https://elastic.co) | ✅ (200) | ◯ | ◯ |
 
 ### Design
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 62 | Canva | Design | [canva.com](https://canva.com) | ⚠️ (403) | ◯ |
-| 63 | Adobe | Design | [adobe.com/jp](https://adobe.com/jp) | ✅ (200) | ◯ |
-| 64 | Autodesk | Design | [autodesk.co.jp](https://autodesk.co.jp) | ⚠️ (403) |   |
-| 103 | Figma | Design | [figma.com](https://figma.com) | ✅ (200) | ◯ |
-| 104 | Sketch | Design | [sketch.com](https://sketch.com) | ✅ (200) |   |
-| 105 | Adobe XD | Design | [adobe.com/jp/products/xd](https://adobe.com/jp/products/xd) | ✅ (200) |   |
-| 275 | Figma Japan | Design | [figma.com/ja](https://figma.com/ja) | ✅ (200) | ◯ |
-| 360 | Adobe Creative Cloud | Design | [adobe.com](https://www.adobe.com) | ✅ (200) |   |
-| 362 | Apple | Design | [apple.com](https://www.apple.com) | ✅ (200) |   |
-| 440 | Figma | Design | [figma.com](https://www.figma.com) | ✅ (200) | ◯ |
-| 441 | Sketch | Design | [sketch.com](https://sketch.com) | ✅ (200) |   |
-| 442 | Adobe XD | Design | [adobe.com/products/xd](https://adobe.com/products/xd) | ✅ (200) |   |
-| 443 | InVision | Design | [invision.com](https://www.invision.com) | ✅ (200) |   |
-| 444 | UXPin | Design | [uxpin.com](https://uxpin.com) | ✅ (200) |   |
-| 445 | Axure | Design | [axure.com](https://axure.com) | ✅ (200) |   |
-| 446 | Marvel | Design | [marvelapp.com](https://www.marvelapp.com) | ✅ (200) |   |
-| 447 | Proto.io | Design | [proto.io](https://proto.io) | ✅ (200) |   |
-| 448 | Balsamiq | Design | [balsamiq.com](https://www.balsamiq.com) | ✅ (200) |   |
-| 449 | Mockplus | Design | [mockplus.com](https://mockplus.com) | ✅ (200) |   |
-| 450 | Moqups | Design | [moqups.com](https://moqups.com) | ✅ (200) |   |
-| 451 | Adobe IO | Design | [adobe.io](https://adobe.io) | ✅ (200) |   |
-| 452 | Framer | Design | [framer.com](https://framer.com) | ✅ (200) |   |
-| 453 | Webflow | Design | [webflow.com](https://www.webflow.com) | ✅ (200) | ◯ |
+| 62 | Canva [[Y](yoom-apps/canva.md)] | Design | [canva.com](https://canva.com) | ⚠️ (403) | ◯ | ◯ |
+| 63 | Adobe | Design | [adobe.com/jp](https://adobe.com/jp) | ✅ (200) | ◯ | ◯ |
+| 64 | Autodesk | Design | [autodesk.co.jp](https://autodesk.co.jp) | ⚠️ (403) |   | ◯ |
+| 103 | Figma [[Y](yoom-apps/figma.md)] | Design | [figma.com](https://figma.com) | ✅ (200) | ◯ | ◯ |
+| 104 | Sketch | Design | [sketch.com](https://sketch.com) | ✅ (200) |   | ◯ |
+| 105 | Adobe XD | Design | [adobe.com/jp/products/xd](https://adobe.com/jp/products/xd) | ✅ (200) |   | ◯ |
+| 275 | Figma Japan | Design | [figma.com/ja](https://figma.com/ja) | ✅ (200) | ◯ | ◯ |
+| 360 | Adobe Creative Cloud | Design | [adobe.com](https://www.adobe.com) | ✅ (200) |   | ◯ |
+| 362 | Apple | Design | [apple.com](https://www.apple.com) | ✅ (200) |   | ◯ |
+| 440 | Figma [[Y](yoom-apps/figma.md)] | Design | [figma.com](https://www.figma.com) | ✅ (200) | ◯ | ◯ |
+| 441 | Sketch | Design | [sketch.com](https://sketch.com) | ✅ (200) |   | ◯ |
+| 442 | Adobe XD | Design | [adobe.com/products/xd](https://adobe.com/products/xd) | ✅ (200) |   | ◯ |
+| 443 | InVision | Design | [invision.com](https://www.invision.com) | ✅ (200) |   | ◯ |
+| 444 | UXPin | Design | [uxpin.com](https://uxpin.com) | ✅ (200) |   | ◯ |
+| 445 | Axure | Design | [axure.com](https://axure.com) | ✅ (200) |   | ◯ |
+| 446 | Marvel | Design | [marvelapp.com](https://www.marvelapp.com) | ✅ (200) |   | ◯ |
+| 447 | Proto.io | Design | [proto.io](https://proto.io) | ✅ (200) |   | ◯ |
+| 448 | Balsamiq | Design | [balsamiq.com](https://www.balsamiq.com) | ✅ (200) |   | ◯ |
+| 449 | Mockplus | Design | [mockplus.com](https://mockplus.com) | ✅ (200) |   | ◯ |
+| 450 | Moqups | Design | [moqups.com](https://moqups.com) | ✅ (200) |   | ◯ |
+| 451 | Adobe IO | Design | [adobe.io](https://adobe.io) | ✅ (200) |   | ◯ |
+| 452 | Framer | Design | [framer.com](https://framer.com) | ✅ (200) |   | ◯ |
+| 453 | Webflow [[Y](yoom-apps/webflow.md)] | Design | [webflow.com](https://www.webflow.com) | ✅ (200) | ◯ | ◯ |
 
 ### Design/Video
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 1211 | Adobe Premiere | Design/Video | [adobe.com/products/premiere](https://www.adobe.com/products/premiere) | ✅ (200) |   |
-| 1212 | Final Cut Pro | Design/Video | [apple.com/final-cut-pro](https://www.apple.com/final-cut-pro) | ✅ (200) |   |
-| 1213 | DaVinci Resolve | Design/Video | [blackmagicdesign.com](https://www.blackmagicdesign.com) | ✅ (200) |   |
-| 1214 | Camtasia | Design/Video | [techsmith.com](https://www.techsmith.com) | ✅ (200) |   |
-| 1215 | ScreenFlow | Design/Video | [telestream.net](https://www.telestream.net) | ✅ (200) |   |
-| 1255 | Adobe Photoshop | Design/Video | [adobe.com/products/photoshop](https://www.adobe.com/products/photoshop) | ✅ (301) |   |
-| 1256 | Adobe Illustrator | Design/Video | [adobe.com/products/illustrator](https://www.adobe.com/products/illustrator) | ✅ (301) |   |
-| 1257 | CorelDRAW | Design/Video | [coreldraw.com](https://www.coreldraw.com) | ✅ (302) |   |
-| 1258 | Vegas Studio | Design/Video | [vegastudio.net](https://www.vegastudio.net) | ⚠️ (405) |   |
-| 1259 | Veed.io | Design/Video | [veed.io](https://www.veed.io) | ✅ (200) |   |
-| 1260 | Descript | Design/Video | [descript.com](https://www.descript.com) | ✅ (200) |   |
-| 1261 | Storyblocks | Design/Video | [storyblocks.com](https://www.storyblocks.com) | ✅ (200) |   |
-| 1262 | Epidemic Sound | Design/Video | [epidemicsound.com](https://www.epidemicsound.com) | ✅ (200) |   |
-| 1263 | Soundstripe | Design/Video | [soundstripe.com](https://www.soundstripe.com) | ✅ (103) | ◯ |
-| 1264 | Artlist | Design/Video | [artlist.io](https://www.artlist.io) | ✅ (301) |   |
-| 1265 | Shotkit | Design/Video | [shotkit.com](https://www.shotkit.com) | ✅ (301) |   |
-| 1266 | SLR Lounge | Design/Video | [slrlounge.com](https://www.slrlounge.com) | ✅ (200) |   |
-| 1267 | Phlearn | Design/Video | [phlearn.com](https://www.phlearn.com) | ✅ (301) |   |
-| 1268 | CreativeLive | Design/Video | [creativelive.com](https://www.creativelive.com) | ❌ (404) |   |
-| 1269 | DaVinci Resolve | Design/Video | [blackmagicdesign.com](https://www.blackmagicdesign.com/products/davinciresolve) | ✅ (200) |   |
-| 1270 | Lightroom | Design/Video | [adobe.com/products/photoshop-lightroom](https://www.adobe.com/products/photoshop-lightroom) | ✅ (301) |   |
-| 1271 | Autodesk Maya | Design/Video | [autodesk.com/products/maya](https://www.autodesk.com/products/maya) | ✅ (301) |   |
-| 1272 | Blender | Design/Video | [blender.org](https://www.blender.org) | ✅ (200) |   |
-| 1273 | GIMP | Design/Video | [gimp.org](https://www.gimp.org) | ✅ (200) |   |
-| 1274 | Inkscape | Design/Video | [inkscape.org](https://inkscape.org) | ✅ (200) |   |
-| 1275 | Krita | Design/Video | [krita.org](https://krita.org) | ✅ (200) |   |
-| 1276 | Affinity Designer | Design/Video | [affinity.serif.com](https://www.affinity.serif.com/designer) | ✅ (200) |   |
-| 1277 | Affinity Photo | Design/Video | [affinity.serif.com](https://www.affinity.serif.com/photo) | ✅ (200) |   |
-| 1278 | Luminar Neo | Design/Video | [skylum.com](https://skylum.com) | ✅ (200) |   |
-| 1279 | Capture One | Design/Video | [captureone.com](https://www.captureone.com) | ✅ (200) |   |
+| 1211 | Adobe Premiere | Design/Video | [adobe.com/products/premiere](https://www.adobe.com/products/premiere) | ✅ (200) |   | ◯ |
+| 1212 | Final Cut Pro | Design/Video | [apple.com/final-cut-pro](https://www.apple.com/final-cut-pro) | ✅ (200) |   | ◯ |
+| 1213 | DaVinci Resolve | Design/Video | [blackmagicdesign.com](https://www.blackmagicdesign.com) | ✅ (200) |   | ◯ |
+| 1214 | Camtasia | Design/Video | [techsmith.com](https://www.techsmith.com) | ✅ (200) |   | ◯ |
+| 1215 | ScreenFlow | Design/Video | [telestream.net](https://www.telestream.net) | ✅ (200) |   | ◯ |
+| 1255 | Adobe Photoshop | Design/Video | [adobe.com/products/photoshop](https://www.adobe.com/products/photoshop) | ✅ (301) |   | ◯ |
+| 1256 | Adobe Illustrator | Design/Video | [adobe.com/products/illustrator](https://www.adobe.com/products/illustrator) | ✅ (301) |   | ◯ |
+| 1257 | CorelDRAW | Design/Video | [coreldraw.com](https://www.coreldraw.com) | ✅ (302) |   | ◯ |
+| 1258 | Vegas Studio | Design/Video | [vegastudio.net](https://www.vegastudio.net) | ⚠️ (405) |   | ◯ |
+| 1259 | Veed.io | Design/Video | [veed.io](https://www.veed.io) | ✅ (200) |   | ◯ |
+| 1260 | Descript | Design/Video | [descript.com](https://www.descript.com) | ✅ (200) |   | ◯ |
+| 1261 | Storyblocks | Design/Video | [storyblocks.com](https://www.storyblocks.com) | ✅ (200) |   | ◯ |
+| 1262 | Epidemic Sound | Design/Video | [epidemicsound.com](https://www.epidemicsound.com) | ✅ (200) |   | ◯ |
+| 1263 | Soundstripe | Design/Video | [soundstripe.com](https://www.soundstripe.com) | ✅ (103) | ◯ | ◯ |
+| 1264 | Artlist | Design/Video | [artlist.io](https://www.artlist.io) | ✅ (301) |   | ◯ |
+| 1265 | Shotkit | Design/Video | [shotkit.com](https://www.shotkit.com) | ✅ (301) |   | ◯ |
+| 1266 | SLR Lounge | Design/Video | [slrlounge.com](https://www.slrlounge.com) | ✅ (200) |   | ◯ |
+| 1267 | Phlearn | Design/Video | [phlearn.com](https://www.phlearn.com) | ✅ (301) |   | ◯ |
+| 1268 | CreativeLive | Design/Video | [creativelive.com](https://www.creativelive.com) | ❌ (404) |   | ◯ |
+| 1269 | DaVinci Resolve | Design/Video | [blackmagicdesign.com](https://www.blackmagicdesign.com/products/davinciresolve) | ✅ (200) |   | ◯ |
+| 1270 | Lightroom | Design/Video | [adobe.com/products/photoshop-lightroom](https://www.adobe.com/products/photoshop-lightroom) | ✅ (301) |   | ◯ |
+| 1271 | Autodesk Maya | Design/Video | [autodesk.com/products/maya](https://www.autodesk.com/products/maya) | ✅ (301) |   | ◯ |
+| 1272 | Blender | Design/Video | [blender.org](https://www.blender.org) | ✅ (200) |   | ◯ |
+| 1273 | GIMP | Design/Video | [gimp.org](https://www.gimp.org) | ✅ (200) |   | ◯ |
+| 1274 | Inkscape | Design/Video | [inkscape.org](https://inkscape.org) | ✅ (200) |   | ◯ |
+| 1275 | Krita | Design/Video | [krita.org](https://krita.org) | ✅ (200) |   | ◯ |
+| 1276 | Affinity Designer | Design/Video | [affinity.serif.com](https://www.affinity.serif.com/designer) | ✅ (200) |   | ◯ |
+| 1277 | Affinity Photo | Design/Video | [affinity.serif.com](https://www.affinity.serif.com/photo) | ✅ (200) |   | ◯ |
+| 1278 | Luminar Neo | Design/Video | [skylum.com](https://skylum.com) | ✅ (200) |   | ◯ |
+| 1279 | Capture One | Design/Video | [captureone.com](https://www.captureone.com) | ✅ (200) |   | ◯ |
 
 ### DevOps
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 1178 | CircleCI | DevOps | [circleci.com](https://circleci.com) | ✅ (200) |   |
-| 1179 | GitLab CI | DevOps | [about.gitlab.com/stages-devops/cicd](https://about.gitlab.com/stages-devops/cicd) | ✅ (200) | ◯ |
-| 1180 | GitHub Actions | DevOps | [github.com/features/actions](https://github.com/features/actions) | ✅ (200) | ◯ |
-| 1181 | Bitbucket Pipelines | DevOps | [bitbucket.org/product/features/pipelines](https://bitbucket.org/product/features/pipelines) | ✅ (200) | ◯ |
-| 1182 | Semaphore CI | DevOps | [semaphoreci.com](https://semaphoreci.com) | ✅ (200) |   |
-| 1183 | Travis CI | DevOps | [travis-ci.com](https://travis-ci.com) | ✅ (301) |   |
-| 1184 | Buildkite | DevOps | [buildkite.com](https://buildkite.com) | ✅ (200) |   |
-| 1185 | Drone.io | DevOps | [drone.io](https://drone.io) | ✅ (301) |   |
-| 1186 | Buddy | DevOps | [buddy.works](https://buddy.works) | ✅ (200) |   |
-| 1187 | Concourse CI | DevOps | [concourse-ci.org](https://concourse-ci.org) | ✅ (200) |   |
-| 1188 | Jenkins | DevOps | [jenkins.io](https://jenkins.io) | ✅ (301) |   |
-| 1189 | Spinnaker | DevOps | [spinnaker.io](https://spinnaker.io) | ✅ (200) |   |
-| 1190 | Argo CD | DevOps | [argo-cd.readthedocs.io](https://argo-cd.readthedocs.io) | ✅ (302) |   |
-| 1191 | Flux | DevOps | [fluxcd.io](https://fluxcd.io) | ✅ (200) |   |
-| 1192 | Octopus Deploy | DevOps | [octopus.com](https://octopus.com) | ✅ (200) |   |
-| 1193 | TeamCity | DevOps | [jetbrains.com/teamcity](https://jetbrains.com/teamcity) | ✅ (200) |   |
-| 1301 | CircleCI Enterprise | DevOps | [circleci.com](https://circleci.com) | ✅ (200) |   |
-| 1302 | Semaphore CI Enterprise | DevOps | [semaphoreci.com](https://semaphoreci.com) | ✅ (301) |   |
-| 1303 | Buildkite Enterprise | DevOps | [buildkite.com](https://buildkite.com) | ✅ (200) |   |
-| 1304 | Buddy Enterprise | DevOps | [buddy.works](https://buddy.works) | ✅ (200) |   |
-| 1305 | Spinnaker | DevOps | [spinnaker.io](https://spinnaker.io) | ✅ (200) |   |
-| 1306 | Argo CD | DevOps | [argoproj.github.io](https://argoproj.github.io/argo-cd) | ✅ (200) |   |
-| 1307 | Flux CD | DevOps | [fluxcd.io](https://fluxcd.io) | ✅ (200) |   |
-| 1308 | Codefresh | DevOps | [codefresh.io](https://codefresh.io) | ✅ (200) |   |
-| 1309 | Harness | DevOps | [harness.io](https://harness.io) | ✅ (200) | ◯ |
-| 1310 | JFrog Artifactory | DevOps | [jfrog.com/artifactory](https://www.jfrog.com/artifactory) | ✅ (200) |   |
-| 1311 | GitLab Ultimate | DevOps | [about.gitlab.com/stages-devops/cicd](https://about.gitlab.com/stages-devops/cicd) | ✅ (200) | ◯ |
-| 1312 | GitHub Enterprise | DevOps | [github.com/enterprise](https://github.com/enterprise) | ✅ (200) | ◯ |
-| 1313 | Azure DevOps | DevOps | [azure.microsoft.com/devops](https://azure.microsoft.com/devops) | ✅ (200) |   |
-| 1314 | HashiCorp Terraform | DevOps | [terraform.io](https://www.terraform.io) | ✅ (200) | ◯ |
-| 1316 | HashiCorp Consul | DevOps | [consul.io](https://www.consul.io) | ✅ (200) |   |
-| 1317 | Ansible Automation | DevOps | [ansible.com/ansible](https://www.ansible.com/ansible/tower) | ✅ (200) |   |
-| 1318 | Puppet Enterprise | DevOps | [puppet.com/products/puppet-enterprise](https://www.puppet.com/products/puppet-enterprise) | ✅ (200) |   |
-| 1319 | Chef Automate | DevOps | [chef.io/products/chef-automate](https://www.chef.io/products/chef-automate) | ✅ (200) |   |
-| 1320 | SaltStack Enterprise | DevOps | [saltstack.com/products/enterprise](https://www.saltstack.com/products/enterprise) | ✅ (200) |   |
+| 1178 | CircleCI | DevOps | [circleci.com](https://circleci.com) | ✅ (200) |   | ◯ |
+| 1179 | GitLab CI | DevOps | [about.gitlab.com/stages-devops/cicd](https://about.gitlab.com/stages-devops/cicd) | ✅ (200) | ◯ | ◯ |
+| 1180 | GitHub Actions | DevOps | [github.com/features/actions](https://github.com/features/actions) | ✅ (200) | ◯ | ◯ |
+| 1181 | Bitbucket Pipelines | DevOps | [bitbucket.org/product/features/pipelines](https://bitbucket.org/product/features/pipelines) | ✅ (200) | ◯ | ◯ |
+| 1182 | Semaphore CI | DevOps | [semaphoreci.com](https://semaphoreci.com) | ✅ (200) |   | ◯ |
+| 1183 | Travis CI | DevOps | [travis-ci.com](https://travis-ci.com) | ✅ (301) |   | ◯ |
+| 1184 | Buildkite | DevOps | [buildkite.com](https://buildkite.com) | ✅ (200) |   | ◯ |
+| 1185 | Drone.io | DevOps | [drone.io](https://drone.io) | ✅ (301) |   | ◯ |
+| 1186 | Buddy | DevOps | [buddy.works](https://buddy.works) | ✅ (200) |   | ◯ |
+| 1187 | Concourse CI | DevOps | [concourse-ci.org](https://concourse-ci.org) | ✅ (200) |   | ◯ |
+| 1188 | Jenkins | DevOps | [jenkins.io](https://jenkins.io) | ✅ (301) |   | ◯ |
+| 1189 | Spinnaker | DevOps | [spinnaker.io](https://spinnaker.io) | ✅ (200) |   | ◯ |
+| 1190 | Argo CD | DevOps | [argo-cd.readthedocs.io](https://argo-cd.readthedocs.io) | ✅ (302) |   | ◯ |
+| 1191 | Flux | DevOps | [fluxcd.io](https://fluxcd.io) | ✅ (200) |   | ◯ |
+| 1192 | Octopus Deploy | DevOps | [octopus.com](https://octopus.com) | ✅ (200) |   | ◯ |
+| 1193 | TeamCity | DevOps | [jetbrains.com/teamcity](https://jetbrains.com/teamcity) | ✅ (200) |   | ◯ |
+| 1301 | CircleCI Enterprise | DevOps | [circleci.com](https://circleci.com) | ✅ (200) |   | ◯ |
+| 1302 | Semaphore CI Enterprise | DevOps | [semaphoreci.com](https://semaphoreci.com) | ✅ (301) |   | ◯ |
+| 1303 | Buildkite Enterprise | DevOps | [buildkite.com](https://buildkite.com) | ✅ (200) |   | ◯ |
+| 1304 | Buddy Enterprise | DevOps | [buddy.works](https://buddy.works) | ✅ (200) |   | ◯ |
+| 1305 | Spinnaker | DevOps | [spinnaker.io](https://spinnaker.io) | ✅ (200) |   | ◯ |
+| 1306 | Argo CD | DevOps | [argoproj.github.io](https://argoproj.github.io/argo-cd) | ✅ (200) |   | ◯ |
+| 1307 | Flux CD | DevOps | [fluxcd.io](https://fluxcd.io) | ✅ (200) |   | ◯ |
+| 1308 | Codefresh | DevOps | [codefresh.io](https://codefresh.io) | ✅ (200) |   | ◯ |
+| 1309 | Harness [[Y](yoom-apps/harness.md)] | DevOps | [harness.io](https://harness.io) | ✅ (200) | ◯ | ◯ |
+| 1310 | JFrog Artifactory | DevOps | [jfrog.com/artifactory](https://www.jfrog.com/artifactory) | ✅ (200) |   | ◯ |
+| 1311 | GitLab Ultimate | DevOps | [about.gitlab.com/stages-devops/cicd](https://about.gitlab.com/stages-devops/cicd) | ✅ (200) | ◯ | ◯ |
+| 1312 | GitHub Enterprise | DevOps | [github.com/enterprise](https://github.com/enterprise) | ✅ (200) | ◯ | ◯ |
+| 1313 | Azure DevOps | DevOps | [azure.microsoft.com/devops](https://azure.microsoft.com/devops) | ✅ (200) |   | ◯ |
+| 1314 | HashiCorp Terraform | DevOps | [terraform.io](https://www.terraform.io) | ✅ (200) | ◯ | ◯ |
+| 1316 | HashiCorp Consul | DevOps | [consul.io](https://www.consul.io) | ✅ (200) |   | ◯ |
+| 1317 | Ansible Automation | DevOps | [ansible.com/ansible](https://www.ansible.com/ansible/tower) | ✅ (200) |   | ◯ |
+| 1318 | Puppet Enterprise | DevOps | [puppet.com/products/puppet-enterprise](https://www.puppet.com/products/puppet-enterprise) | ✅ (200) |   | ◯ |
+| 1319 | Chef Automate | DevOps | [chef.io/products/chef-automate](https://www.chef.io/products/chef-automate) | ✅ (200) |   | ◯ |
+| 1320 | SaltStack Enterprise | DevOps | [saltstack.com/products/enterprise](https://www.saltstack.com/products/enterprise) | ✅ (200) |   | ◯ |
 
 ### Diagram
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 15 | Cacoo | Diagram | [nulab.com/cacoo](https://nulab.com/cacoo/) | ✅ (200) |   |
-| 128 | Miro | Diagram | [miro.com](https://miro.com) | ✅ (200) | ◯ |
-| 130 | Whimsical | Diagram | [whimsical.com](https://whimsical.com) | ✅ (200) |   |
-| 138 | Creately | Diagram | [creately.com](https://creately.com) | ✅ (200) |   |
-| 139 | draw.io | Diagram | [draw.io](https://www.draw.io) | ✅ (200) |   |
-| 143 | SmartDraw | Diagram | [smartdraw.com](https://www.smartdraw.com) | ✅ (200) |   |
-| 866 | Gliffy | Diagram | [gliffy.com](https://www.gliffy.com) | ✅ (200) |   |
-| 867 | Lucidchart | Diagram | [lucidchart.com](https://www.lucidchart.com) | ✅ (301) |   |
-| 868 | Diagrams.net | Diagram | [app.diagrams.net](https://app.diagrams.net) | ✅ (200) |   |
-| 869 | Visual Paradigm | Diagram | [visual-paradigm.com](https://www.visual-paradigm.com) | ✅ (200) |   |
-| 870 | YWorks | Diagram | [yworks.com](https://www.yworks.com) | ✅ (200) |   |
-| 871 | Concept Draw | Diagram | [conceptdraw.com](https://www.conceptdraw.com) | ✅ (200) |   |
-| 1133 | OmniGraffle | Diagram | [https://www.omnigroup.com/omnigraffle](https://www.omnigroup.com/omnigraffle) | ✅ (200) |   |
-| 1134 | MindManager | Diagram | [https://www.mindmanager.com](https://www.mindmanager.com) | ✅ (200) | ◯ |
-| 1135 | yEd | Diagram | [https://www.yworks.com/products/yed](https://www.yworks.com/products/yed) | ✅ (200) |   |
-| 1136 | ConceptDraw DIAGRAM | Diagram | [https://www.conceptdraw.com/products/drawing-tool](https://www.conceptdraw.com/products/drawing-tool) | ✅ (200) |   |
-| 1137 | ProcessOn | Diagram | [https://www.processon.com](https://www.processon.com) | ✅ (200) |   |
-| 1138 | Graphviz | Diagram | [https://graphviz.org](https://graphviz.org) | ✅ (200) |   |
-| 1156 | PlantUML | Diagram | [https://plantuml.com](https://plantuml.com) | ✅ (200) |   |
-| 1157 | Mermaid | Diagram | [https://mermaid.js.org](https://mermaid.js.org) | ✅ (200) |   |
-| 1158 | PlantText | Diagram | [https://www.planttext.com](https://www.planttext.com) | ✅ (200) |   |
-| 1165 | Excalidraw | Diagram | [https://excalidraw.com](https://excalidraw.com) | ✅ (200) |   |
+| 15 | Cacoo | Diagram | [nulab.com/cacoo](https://nulab.com/cacoo/) | ✅ (200) |   | ◯ |
+| 128 | Miro [[Y](yoom-apps/miro.md)] | Diagram | [miro.com](https://miro.com) | ✅ (200) | ◯ | ◯ |
+| 130 | Whimsical | Diagram | [whimsical.com](https://whimsical.com) | ✅ (200) |   | ◯ |
+| 138 | Creately | Diagram | [creately.com](https://creately.com) | ✅ (200) |   | ◯ |
+| 139 | draw.io | Diagram | [draw.io](https://www.draw.io) | ✅ (200) |   | ◯ |
+| 143 | SmartDraw | Diagram | [smartdraw.com](https://www.smartdraw.com) | ✅ (200) |   | ◯ |
+| 866 | Gliffy | Diagram | [gliffy.com](https://www.gliffy.com) | ✅ (200) |   | ◯ |
+| 867 | Lucidchart | Diagram | [lucidchart.com](https://www.lucidchart.com) | ✅ (301) |   | ◯ |
+| 868 | Diagrams.net | Diagram | [app.diagrams.net](https://app.diagrams.net) | ✅ (200) |   | ◯ |
+| 869 | Visual Paradigm | Diagram | [visual-paradigm.com](https://www.visual-paradigm.com) | ✅ (200) |   | ◯ |
+| 870 | YWorks | Diagram | [yworks.com](https://www.yworks.com) | ✅ (200) |   | ◯ |
+| 871 | Concept Draw | Diagram | [conceptdraw.com](https://www.conceptdraw.com) | ✅ (200) |   | ◯ |
+| 1133 | OmniGraffle | Diagram | [https://www.omnigroup.com/omnigraffle](https://www.omnigroup.com/omnigraffle) | ✅ (200) |   | ◯ |
+| 1134 | MindManager | Diagram | [https://www.mindmanager.com](https://www.mindmanager.com) | ✅ (200) | ◯ | ◯ |
+| 1135 | yEd | Diagram | [https://www.yworks.com/products/yed](https://www.yworks.com/products/yed) | ✅ (200) |   | ◯ |
+| 1136 | ConceptDraw DIAGRAM | Diagram | [https://www.conceptdraw.com/products/drawing-tool](https://www.conceptdraw.com/products/drawing-tool) | ✅ (200) |   | ◯ |
+| 1137 | ProcessOn | Diagram | [https://www.processon.com](https://www.processon.com) | ✅ (200) |   | ◯ |
+| 1138 | Graphviz | Diagram | [https://graphviz.org](https://graphviz.org) | ✅ (200) |   | ◯ |
+| 1156 | PlantUML | Diagram | [https://plantuml.com](https://plantuml.com) | ✅ (200) |   | ◯ |
+| 1157 | Mermaid | Diagram | [https://mermaid.js.org](https://mermaid.js.org) | ✅ (200) |   | ◯ |
+| 1158 | PlantText | Diagram | [https://www.planttext.com](https://www.planttext.com) | ✅ (200) |   | ◯ |
+| 1165 | Excalidraw | Diagram | [https://excalidraw.com](https://excalidraw.com) | ✅ (200) |   | ◯ |
 
 ### Document
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 180 | クラウドサイン | Document | [cloudsign.jp](https://cloudsign.jp) | ✅ (200) |   |
-| 189 | Scrapbox | Document | [scrapbox.io](https://scrapbox.io) | ✅ (200) | ◯ |
-| 245 | SignTime | Document | [signtime.jp](https://signtime.jp) | ✅ (200) | ◯ |
-| 246 | DocuSign Japan | Document | [docusign.com](https://www.docusign.com) | ✅ (200) | ◯ |
-| 247 | GyroSign | Document | [gyrosign.co.jp](https://gyrosign.co.jp) | ❌ (404) |   |
-| 248 | e-saifu | Document | [e-saifu.co.jp](https://www.e-saifu.co.jp) | ❌ (404) |   |
-| 257 | SmartSign | Document | [smartsign.jp](https://smartsign.jp) | ❌ (404) |   |
-| 269 | Skrue | Document | [skrue.jp](https://skrue.jp) | ❌ (404) |   |
-| 270 | ContractHub | Document | [contract-hub.com](https://contract-hub.com) | ❌ (404) |   |
-| 827 | PandaDoc | Document | [pandadoc.com](https://www.pandadoc.com) | ✅ (200) | ◯ |
-| 828 | SignRequest | Document | [signrequest.com](https://www.signrequest.com) | ✅ (302) |   |
-| 829 | RightSignature | Document | [rightsignature.com](https://www.rightsignature.com) | ✅ (200) |   |
-| 830 | SignEasy | Document | [signeasy.com](https://www.signeasy.com) | ✅ (301) |   |
-| 929 | Teachme Biz | Document | [teachme.biz](https://www.teachme.biz) | ✅ (200) |   |
-| 1595 | Google Docs | Document | [https://docs.google.com](https://docs.google.com) | ✅ (200) | ◯ |
-| 1596 | Microsoft Excel | Document | [https://www.microsoft.com/excel](https://www.microsoft.com/excel) | ✅ (200) | ◯ |
-| 939 | Nuclino | Document | [nuclino.com](https://www.nuclino.com) | ✅ (200) |   |
-| 940 | Notion JP | Document | [notion.so](https://www.notion.so/ja-jp) | ✅ (200) | ◯ |
-| 941 | Quip | Document | [quip.com](https://quip.com) | ✅ (200) | ◯ |
-| 942 | Slite | Document | [slite.com](https://slite.com) | ✅ (200) |   |
-| 943 | Coda | Document | [coda.io](https://coda.io) | ✅ (200) | ◯ |
-| 944 | Workvivo | Document | [workvivo.com](https://www.workvivo.com) | ✅ (200) |   |
-| 945 | Samepage | Document | [samepage.io](https://samepage.io) | ✅ (200) |   |
+| 180 | クラウドサイン | Document | [cloudsign.jp](https://cloudsign.jp) | ✅ (200) |   | ◯ |
+| 189 | Scrapbox | Document | [scrapbox.io](https://scrapbox.io) | ✅ (200) | ◯ | ◯ |
+| 245 | SignTime [[Y](yoom-apps/signtime.md)] | Document | [signtime.jp](https://signtime.jp) | ✅ (200) | ◯ | ◯ |
+| 246 | DocuSign Japan | Document | [docusign.com](https://www.docusign.com) | ✅ (200) | ◯ | ◯ |
+| 247 | GyroSign | Document | [gyrosign.co.jp](https://gyrosign.co.jp) | ❌ (404) |   | ◯ |
+| 248 | e-saifu | Document | [e-saifu.co.jp](https://www.e-saifu.co.jp) | ❌ (404) |   | ◯ |
+| 257 | SmartSign | Document | [smartsign.jp](https://smartsign.jp) | ❌ (404) |   | ◯ |
+| 269 | Skrue | Document | [skrue.jp](https://skrue.jp) | ❌ (404) |   | ◯ |
+| 270 | ContractHub | Document | [contract-hub.com](https://contract-hub.com) | ❌ (404) |   | ◯ |
+| 827 | PandaDoc [[Y](yoom-apps/pandadoc.md)] | Document | [pandadoc.com](https://www.pandadoc.com) | ✅ (200) | ◯ | ◯ |
+| 828 | SignRequest | Document | [signrequest.com](https://www.signrequest.com) | ✅ (302) |   | ◯ |
+| 829 | RightSignature | Document | [rightsignature.com](https://www.rightsignature.com) | ✅ (200) |   | ◯ |
+| 830 | SignEasy | Document | [signeasy.com](https://www.signeasy.com) | ✅ (301) |   | ◯ |
+| 929 | Teachme Biz | Document | [teachme.biz](https://www.teachme.biz) | ✅ (200) |   | ◯ |
+| 1595 | Google Docs [[Y](yoom-apps/google-docs.md)] | Document | [https://docs.google.com](https://docs.google.com) | ✅ (200) | ◯ | ◯ |
+| 1596 | Microsoft Excel [[Y](https://lp.yoom.fun/apps/excel)] | Document | [https://www.microsoft.com/excel](https://www.microsoft.com/excel) | ✅ (200) | ◯ | ◯ |
+| 939 | Nuclino | Document | [nuclino.com](https://www.nuclino.com) | ✅ (200) |   | ◯ |
+| 940 | Notion JP | Document | [notion.so](https://www.notion.so/ja-jp) | ✅ (200) | ◯ | ◯ |
+| 941 | Quip | Document | [quip.com](https://quip.com) | ✅ (200) | ◯ | ◯ |
+| 942 | Slite | Document | [slite.com](https://slite.com) | ✅ (200) |   | ◯ |
+| 943 | Coda [[Y](yoom-apps/coda.md)] | Document | [coda.io](https://coda.io) | ✅ (200) | ◯ | ◯ |
+| 944 | Workvivo | Document | [workvivo.com](https://www.workvivo.com) | ✅ (200) |   | ◯ |
+| 945 | Samepage | Document | [samepage.io](https://samepage.io) | ✅ (200) |   | ◯ |
 
 ### Documentation
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 74 | Confluence | Documentation | [atlassian.com/ja](https://atlassian.com/ja) | ✅ (200) | ◯ |
-| 127 | Figma | Documentation | [figma.com](https://figma.com) | ✅ (200) | ◯ |
-| 134 | kibe.la | Documentation | [kibe.la](https://kibe.la) | ✅ (200) |   |
-| 135 | esa.io | Documentation | [esa.io](https://esa.io) | ✅ (200) |   |
-| 219 | Quip | Documentation | [quip.com](https://quip.com) | ⚠️ (403) | ◯ |
-| 220 | Coda | Documentation | [coda.io](https://coda.io) | ✅ (200) | ◯ |
-| 221 | Nuclino | Documentation | [nuclino.com](https://nuclino.com) | ✅ (200) |   |
-| 222 | XWiki | Documentation | [xwiki.org](https://www.xwiki.org) | ✅ (200) |   |
-| 223 | MediaWiki | Documentation | [mediawiki.org](https://www.mediawiki.org) | ✅ (200) |   |
-| 884 | Swagger | Documentation | [swagger.io](https://www.swagger.io) | ✅ (301) |   |
-| 885 | GitBook | Documentation | [gitbook.com](https://www.gitbook.com) | ✅ (200) |   |
-| 886 | ReadTheDocs | Documentation | [readthedocs.io](https://www.readthedocs.io) | ✅ (302) | ◯ |
-| 887 | Docusaurus | Documentation | [docusaurus.io](https://www.docusaurus.io) | ✅ (200) |   |
-| 888 | MkDocs | Documentation | [mkdocs.org](https://www.mkdocs.org) | ✅ (200) | ◯ |
-| 889 | Sphinx | Documentation | [sphinx-doc.org](https://www.sphinx-doc.org) | ✅ (302) |   |
-| 890 | Jekyll | Documentation | [jekyllrb.com](https://www.jekyllrb.com) | ✅ (301) |   |
-| 891 | Hugo | Documentation | [hugo.com](https://www.hugo.com) | ✅ (302) |   |
-| 1149 | ReadTheDocs | Documentation | [https://readthedocs.io](https://readthedocs.io) | ✅ (200) | ◯ |
-| 1150 | Docusaurus | Documentation | [https://docusaurus.io](https://docusaurus.io) | ✅ (200) |   |
-| 1163 | MkDocs | Documentation | [https://www.mkdocs.org](https://www.mkdocs.org) | ✅ (200) | ◯ |
+| 74 | Confluence [[Y](yoom-apps/confluence.md)] | Documentation | [atlassian.com/ja](https://atlassian.com/ja) | ✅ (200) | ◯ | ◯ |
+| 127 | Figma [[Y](yoom-apps/figma.md)] | Documentation | [figma.com](https://figma.com) | ✅ (200) | ◯ | ◯ |
+| 134 | kibe.la | Documentation | [kibe.la](https://kibe.la) | ✅ (200) |   | ◯ |
+| 135 | esa.io | Documentation | [esa.io](https://esa.io) | ✅ (200) |   | ◯ |
+| 219 | Quip | Documentation | [quip.com](https://quip.com) | ⚠️ (403) | ◯ | ◯ |
+| 220 | Coda [[Y](yoom-apps/coda.md)] | Documentation | [coda.io](https://coda.io) | ✅ (200) | ◯ | ◯ |
+| 221 | Nuclino | Documentation | [nuclino.com](https://nuclino.com) | ✅ (200) |   | ◯ |
+| 222 | XWiki | Documentation | [xwiki.org](https://www.xwiki.org) | ✅ (200) |   | ◯ |
+| 223 | MediaWiki | Documentation | [mediawiki.org](https://www.mediawiki.org) | ✅ (200) |   | ◯ |
+| 884 | Swagger | Documentation | [swagger.io](https://www.swagger.io) | ✅ (301) |   | ◯ |
+| 885 | GitBook | Documentation | [gitbook.com](https://www.gitbook.com) | ✅ (200) |   | ◯ |
+| 886 | ReadTheDocs | Documentation | [readthedocs.io](https://www.readthedocs.io) | ✅ (302) | ◯ | ◯ |
+| 887 | Docusaurus | Documentation | [docusaurus.io](https://www.docusaurus.io) | ✅ (200) |   | ◯ |
+| 888 | MkDocs | Documentation | [mkdocs.org](https://www.mkdocs.org) | ✅ (200) | ◯ | ◯ |
+| 889 | Sphinx | Documentation | [sphinx-doc.org](https://www.sphinx-doc.org) | ✅ (302) |   | ◯ |
+| 890 | Jekyll | Documentation | [jekyllrb.com](https://www.jekyllrb.com) | ✅ (301) |   | ◯ |
+| 891 | Hugo | Documentation | [hugo.com](https://www.hugo.com) | ✅ (302) |   | ◯ |
+| 1149 | ReadTheDocs | Documentation | [https://readthedocs.io](https://readthedocs.io) | ✅ (200) | ◯ | ◯ |
+| 1150 | Docusaurus | Documentation | [https://docusaurus.io](https://docusaurus.io) | ✅ (200) |   | ◯ |
+| 1163 | MkDocs | Documentation | [https://www.mkdocs.org](https://www.mkdocs.org) | ✅ (200) | ◯ | ◯ |
 
 ### EC
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 17 | shop-pro | EC | [shop-pro.jp](https://shop-pro.jp) | ✅ (200) |   |
-| 18 | makeshop | EC | [makeshop.jp](https://www.makeshop.jp) | ✅ (200) |   |
-| 44 | Shopify | EC | [shopify.com/jp](https://shopify.com/jp) | ✅ (200) | ◯ |
-| 45 | Wix | EC | [wix.com](https://wix.com) | ✅ (200) | ◯ |
+| 17 | shop-pro | EC | [shop-pro.jp](https://shop-pro.jp) | ✅ (200) |   | ◯ |
+| 18 | makeshop | EC | [makeshop.jp](https://www.makeshop.jp) | ✅ (200) |   | ◯ |
+| 44 | Shopify [[Y](yoom-apps/shopify.md)] | EC | [shopify.com/jp](https://shopify.com/jp) | ✅ (200) | ◯ | ◯ |
+| 45 | Wix [[Y](yoom-apps/wix.md)] | EC | [wix.com](https://wix.com) | ✅ (200) | ◯ |
 | 57 | EC-CUBE | EC | [ec-cube.net](https://ec-cube.net) | ⚠️ (403) |   |
 | 131 | FC2ショッピングカート | EC | [cart.fc2.com](https://cart.fc2.com) | ✅ (200) |   |
 | 165 | ECbeing | EC | [ecbeing.net](https://www.ecbeing.net) | ✅ (200) |   |
 | 166 | FutureShop | EC | [future-shop.jp](https://www.future-shop.jp) | ✅ (200) |   |
-| 174 | BASE | EC | [thebase.in](https://thebase.in) | ✅ (200) | ◯ |
+| 174 | BASE [[Y](yoom-apps/base.md)] | EC | [thebase.in](https://thebase.in) | ✅ (200) | ◯ |
 | 179 | au PAY Market | EC | [paypay.ne.jp](https://paypay.ne.jp) | ✅ (200) |   |
-| 385 | Squarespace | EC | [squarespace.com](https://www.squarespace.com) | ✅ (200) | ◯ |
+| 385 | Squarespace [[Y](yoom-apps/squarespace.md)] | EC | [squarespace.com](https://www.squarespace.com) | ✅ (200) | ◯ |
 | 386 | Weebly | EC | [weebly.com](https://weebly.com) | ✅ (200) |   |
 | 387 | BigCommerce | EC | [bigcommerce.com](https://www.bigcommerce.com) | ✅ (200) |   |
-| 388 | WooCommerce | EC | [woocommerce.com](https://woocommerce.com) | ✅ (200) | ◯ |
+| 388 | WooCommerce [[Y](yoom-apps/woocommerce.md)] | EC | [woocommerce.com](https://woocommerce.com) | ✅ (200) | ◯ |
 | 389 | Magento | EC | [magento.com](https://www.magento.com) | ✅ (301) |   |
 | 390 | Shopware | EC | [shopware.com](https://www.shopware.com) | ✅ (200) |   |
 | 391 | PrestaShop | EC | [prestashop.com](https://www.prestashop.com) | ✅ (200) |   |
 | 392 | Drupal Commerce | EC | [drupalcommerce.com](https://www.drupalcommerce.com) | ✅ (200) |   |
 | 393 | OpenCart | EC | [opencart.com](https://www.opencart.com) | ⚠️ (403) |   |
 | 394 | Salesforce Commerce | EC | [salesforce.com/products/commerce](https://www.salesforce.com/products/commerce) | ✅ (200) | ◯ |
-| 1174 | WooCommerce | EC | [woocommerce.com](https://woocommerce.com) | ✅ (200) | ◯ |
+| 1174 | WooCommerce [[Y](yoom-apps/woocommerce.md)] | EC | [woocommerce.com](https://woocommerce.com) | ✅ (200) | ◯ |
 | 1175 | PrestaShop | EC | [prestashop.com](https://prestashop.com) | ✅ (200) |   |
 | 1176 | Shopware | EC | [shopware.com](https://shopware.com) | ✅ (302) |   |
 | 1357 | BigCommerce | EC | [bigcommerce.com](https://www.bigcommerce.com) | ✅ (200) |   |
 | 1358 | Magento | EC | [magento.com](https://magento.com) | ⚠️ (403) |   |
-| 1359 | Squarespace | EC | [squarespace.com](https://squarespace.com) | ✅ (200) | ◯ |
+| 1359 | Squarespace [[Y](yoom-apps/squarespace.md)] | EC | [squarespace.com](https://squarespace.com) | ✅ (200) | ◯ |
 | 1360 | Wix Stores | EC | [wix.com](https://wix.com/stores) | ✅ (200) | ◯ |
 | 1361 | Volusion | EC | [volusion.com](https://www.volusion.com) | ✅ (200) |   |
 | 1362 | 3dcart | EC | [3dcart.com](https://www.3dcart.com) | ✅ (200) |   |
@@ -753,7 +753,7 @@
 | 1389 | Canvas LMS | Education | [https://www.instructure.com](https://www.instructure.com) | ✅ (200) | ◯ |
 | 1390 | Blackboard | Education | [https://www.blackboard.com](https://www.blackboard.com) | ✅ (200) | ◯ |
 | 1391 | Thinkific | Education | [https://www.thinkific.com](https://www.thinkific.com) | ⚠️ (403) |   |
-| 1392 | Teachable | Education | [https://www.teachable.com](https://www.teachable.com) | ✅ (200) | ◯ |
+| 1392 | Teachable [[Y](yoom-apps/teachable.md)] | Education | [https://www.teachable.com](https://www.teachable.com) | ✅ (200) | ◯ |
 | 1393 | Podia | Education | [https://www.podia.com](https://www.podia.com) | ✅ (301) |   |
 | 1394 | Kajabi | Education | [https://www.kajabi.com](https://www.kajabi.com) | ✅ (200) |   |
 | 1395 | Ruzuku | Education | [https://www.ruzuku.com](https://www.ruzuku.com) | ✅ (301) |   |
@@ -764,26 +764,26 @@
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 286 | SendGrid | Email | [sendgrid.com](https://sendgrid.com) | ✅ (301) | ◯ |
+| 286 | SendGrid [[Y](yoom-apps/sendgrid.md)] | Email | [sendgrid.com](https://sendgrid.com) | ✅ (301) | ◯ |
 | 311 | Mautic Japan | Email | [mautic.com/ja](https://mautic.com/ja) | ✅ (200) | ◯ |
 | 312 | EmberPoint | Email | [emberpoint.com](https://emberpoint.com) | ✅ (200) |   |
 | 324 | Mailgun | Email | [mailgun.com](https://www.mailgun.com) | ✅ (200) |   |
-| 325 | Postmark | Email | [postmarkapp.com](https://postmarkapp.com) | ✅ (200) | ◯ |
-| 326 | Mautic | Email | [mautic.org](https://www.mautic.org) | ✅ (200) | ◯ |
+| 325 | Postmark [[Y](yoom-apps/postmark.md)] | Email | [postmarkapp.com](https://postmarkapp.com) | ✅ (200) | ◯ |
+| 326 | Mautic [[Y](yoom-apps/mautic.md)] | Email | [mautic.org](https://www.mautic.org) | ✅ (200) | ◯ |
 | 410 | Sendinblue | Email | [sendinblue.com](https://www.sendinblue.com) | ✅ (200) |   |
 | 412 | AWS SES | Email | [aws.amazon.com/ses](https://aws.amazon.com/ses) | ✅ (200) |   |
-| 413 | SparkPost | Email | [sparkpost.com](https://sparkpost.com) | ✅ (200) | ◯ |
-| 414 | Elastic Email | Email | [elasticemail.com](https://www.elasticemail.com) | ✅ (200) |   |
+| 413 | SparkPost [[Y](yoom-apps/sparkpost.md)] | Email | [sparkpost.com](https://sparkpost.com) | ✅ (200) | ◯ |
+| 414 | Elastic Email [[Y](yoom-apps/elastic_email.md)] | Email | [elasticemail.com](https://www.elasticemail.com) | ✅ (200) |   |
 | 531 | Sendinblue (Brevo) | Email | [sendinblue.com](https://www.sendinblue.com) | ✅ (200) | ◯ |
-| 532 | Brevo | Email | [brevo.com](https://www.brevo.com) | ✅ (200) | ◯ |
-| 533 | MailerLite | Email | [mailerlite.com](https://www.mailerlite.com) | ✅ (200) | ◯ |
-| 534 | ConvertKit | Email | [convertkit.com](https://convertkit.com) | ✅ (200) | ◯ |
-| 535 | AWeber | Email | [aweber.com](https://www.aweber.com) | ✅ (200) | ◯ |
+| 532 | Brevo [[Y](yoom-apps/brevo.md)] | Email | [brevo.com](https://www.brevo.com) | ✅ (200) | ◯ |
+| 533 | MailerLite [[Y](yoom-apps/mailerlite.md)] | Email | [mailerlite.com](https://www.mailerlite.com) | ✅ (200) | ◯ |
+| 534 | ConvertKit [[Y](yoom-apps/convertkit.md)] | Email | [convertkit.com](https://convertkit.com) | ✅ (200) | ◯ |
+| 535 | AWeber [[Y](yoom-apps/aweber.md)] | Email | [aweber.com](https://www.aweber.com) | ✅ (200) | ◯ |
 | 536 | GetResponse | Email | [getresponse.com](https://www.getresponse.com) | ✅ (200) | ◯ |
 | 537 | Campaign Monitor | Email | [campaignmonitor.com](https://campaignmonitor.com) | ✅ (200) |   |
 | 538 | HubSpot Email Marketing | Email | [hubspot.com/products/marketing/email](https://hubspot.com/products/marketing/email) | ✅ (200) | ◯ |
-| 539 | Omnisend | Email | [omnisend.com](https://omnisend.com) | ✅ (200) | ◯ |
-| 540 | Klaviyo | Email | [klaviyo.com](https://klaviyo.com) | ✅ (200) | ◯ |
+| 539 | Omnisend [[Y](yoom-apps/omnisend.md)] | Email | [omnisend.com](https://omnisend.com) | ✅ (200) | ◯ |
+| 540 | Klaviyo [[Y](yoom-apps/klaviyo.md)] | Email | [klaviyo.com](https://klaviyo.com) | ✅ (200) | ◯ |
 | 998 | Bizメール | Email | [bizmail.ne.jp](https://bizmail.ne.jp) | ✅ (200) |   |
 | 999 | SendGrid Japan | Email | [sendgrid.kke.co.jp](https://sendgrid.kke.co.jp) | ❌ (404) | ◯ |
 | 1000 | MailBee | Email | [mailbee.co.jp](https://mailbee.co.jp) | ✅ (200) |   |
@@ -793,14 +793,14 @@
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 411 | ActiveCampaign | Email/CRM | [activecampaign.com](https://www.activecampaign.com) | ✅ (200) | ◯ |
+| 411 | ActiveCampaign [[Y](yoom-apps/activecampaign.md)] | Email/CRM | [activecampaign.com](https://www.activecampaign.com) | ✅ (200) | ◯ |
 
 ### Git
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 69 | GitHub | Git | [github.com](https://github.com) | ✅ (200) | ◯ |
-| 70 | GitLab | Git | [gitlab.com](https://gitlab.com) | ✅ (200) | ◯ |
+| 69 | GitHub [[Y](yoom-apps/github.md)] | Git | [github.com](https://github.com) | ✅ (200) | ◯ |
+| 70 | GitLab [[Y](yoom-apps/gitlab.md)] | Git | [gitlab.com](https://gitlab.com) | ✅ (200) | ◯ |
 | 114 | GitKraken | Git | [gitkraken.com](https://gitkraken.com) | ✅ (200) |   |
 | 115 | Bitbucket | Git | [bitbucket.org](https://bitbucket.org) | ✅ (200) |   |
 | 116 | Sourcegraph | Git | [sourcegraph.com](https://sourcegraph.com) | ✅ (200) |   |
@@ -825,22 +825,22 @@
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 291 | Freshservice | IT Service | [freshservice.com/ja](https://www.freshservice.com/ja) | ✅ (200) | ◯ |
-| 308 | ITReview | IT Service | [itreview.jp](https://itreview.jp) | ✅ (200) | ◯ |
+| 291 | Freshservice [[Y](yoom-apps/freshservice.md)] | IT Service | [freshservice.com/ja](https://www.freshservice.com/ja) | ✅ (200) | ◯ |
+| 308 | ITReview [[Y](yoom-apps/itreview.md)] | IT Service | [itreview.jp](https://itreview.jp) | ✅ (200) | ◯ |
 | 309 | BOXIL SaaS | IT Service | [boxil.jp](https://boxil.jp) | ✅ (200) | ◯ |
 | 310 | SmartStage | IT Service | [smart-stage.jp](https://smart-stage.jp) | ✅ (200) |   |
-| 323 | Pipedrive | IT Service | [pipedrive.com/ja](https://www.pipedrive.com/ja) | ✅ (200) | ◯ |
+| 323 | Pipedrive [[Y](yoom-apps/pipedrive.md)] | IT Service | [pipedrive.com/ja](https://www.pipedrive.com/ja) | ✅ (200) | ◯ |
 | 616 | ServiceNow | IT Service | [servicenow.com](https://servicenow.com) | ✅ (200) |   |
 | 617 | BMC Helix | IT Service | [bmc.com/helix](https://bmc.com/helix) | ✅ (200) |   |
 | 618 | Ivanti | IT Service | [ivanti.com](https://ivanti.com) | ✅ (200) |   |
 | 619 | ManageEngine | IT Service | [manageengine.com](https://www.manageengine.com) | ✅ (200) | ◯ |
 | 620 | Jira Service Desk | IT Service | [atlassian.com/software/jira/service-desk](https://atlassian.com/software/jira/service-desk) | ✅ (200) | ◯ |
 | 621 | SolarWinds | IT Service | [solarwinds.com](https://solarwinds.com) | ✅ (200) |   |
-| 622 | PagerDuty | IT Service | [pagerduty.com](https://pagerduty.com) | ✅ (200) | ◯ |
+| 622 | PagerDuty [[Y](yoom-apps/pagerduty.md)] | IT Service | [pagerduty.com](https://pagerduty.com) | ✅ (200) | ◯ |
 | 907 | BMC Helix | IT Service | [bmc.com](https://www.bmc.com) | ✅ (200) |   |
 | 908 | VictorOps | IT Service | [victorops.com](https://www.victorops.com) | ✅ (200) |   |
-| 909 | Opsgenie | IT Service | [opsgenie.com](https://www.opsgenie.com) | ✅ (200) | ◯ |
-| 952 | PagerDuty | IT Service | [pagerduty.com](https://www.pagerduty.com) | ✅ (200) | ◯ |
+| 909 | Opsgenie [[Y](yoom-apps/opsgenie.md)] | IT Service | [opsgenie.com](https://www.opsgenie.com) | ✅ (200) | ◯ |
+| 952 | PagerDuty [[Y](yoom-apps/pagerduty.md)] | IT Service | [pagerduty.com](https://www.pagerduty.com) | ✅ (200) | ◯ |
 | 953 | ServiceNow | IT Service | [servicenow.com](https://www.servicenow.com) | ✅ (200) |   |
 | 954 | Datadog | IT Service | [datadoghq.com](https://www.datadoghq.com) | ✅ (200) |   |
 | 955 | New Relic | IT Service | [newrelic.com](https://newrelic.com) | ✅ (200) |   |
@@ -860,7 +860,7 @@
 | 14 | FANSHIP | Marketing | [www.fanship.jp](https://www.fanship.jp/) | ✅ (200) |   |
 | 58 | Creive | Marketing | [creive.me](https://creive.me) | ✅ (200) |   |
 | 60 | KARTE | Marketing | [karte.io](https://karte.io) | ✅ (200) |   |
-| 73 | Mailchimp | Marketing | [mailchimp.com](https://mailchimp.com) | ✅ (200) | ◯ |
+| 73 | Mailchimp [[Y](yoom-apps/mailchimp.md)] | Marketing | [mailchimp.com](https://mailchimp.com) | ✅ (200) | ◯ |
 | 97 | Salesforce Marketing Cloud | Marketing | [salesforce.com/jp/products/marketing](https://salesforce.com/jp/products/marketing) | ✅ (200) | ◯ |
 | 98 | Braze | Marketing | [braze.com](https://www.braze.com) | ✅ (200) |   |
 | 99 | Adobe Experience Cloud | Marketing | [adobe.com/jp/marketing](https://adobe.com/jp/marketing) | ✅ (200) |   |
@@ -871,7 +871,7 @@
 | 517 | HubSpot Marketing | Marketing | [hubspot.com/marketing](https://hubspot.com/marketing) | ✅ (200) | ◯ |
 | 518 | Salesforce Marketing | Marketing | [salesforce.com/marketing-cloud](https://salesforce.com/marketing-cloud) | ✅ (200) | ◯ |
 | 519 | Mailchimp Marketing | Marketing | [mailchimp.com/marketing](https://mailchimp.com/marketing) | ✅ (200) | ◯ |
-| 520 | ActiveCampaign | Marketing | [activecampaign.com/marketing](https://activecampaign.com/marketing) | ✅ (200) | ◯ |
+| 520 | ActiveCampaign [[Y](yoom-apps/activecampaign.md)] | Marketing | [activecampaign.com/marketing](https://activecampaign.com/marketing) | ✅ (200) | ◯ |
 | 525 | Netmile | Marketing | [netmile.co.jp](https://netmile.co.jp) | ✅ (200) |   |
 | 673 | Braze Engage | Marketing | [braze.com/engage](https://braze.com/engage) | ✅ (200) |   |
 | 674 | Iterable | Marketing | [iterable.com](https://iterable.com) | ✅ (200) |   |
@@ -879,7 +879,7 @@
 | 676 | Braze | Marketing | [braze.com](https://www.braze.com) | ✅ (200) |   |
 | 677 | MoEngage | Marketing | [moengage.com](https://moengage.com) | ✅ (200) |   |
 | 678 | Airship | Marketing | [airship.com](https://airship.com) | ✅ (200) |   |
-| 679 | OneSignal | Marketing | [onesignal.com](https://onesignal.com) | ✅ (200) | ◯ |
+| 679 | OneSignal [[Y](yoom-apps/one-signal.md)] | Marketing | [onesignal.com](https://onesignal.com) | ✅ (200) | ◯ |
 | 680 | Pushwoosh | Marketing | [pushwoosh.com](https://pushwoosh.com) | ✅ (200) |   |
 | 681 | Amazon Pinpoint | Marketing | [aws.amazon.com/pinpoint](https://aws.amazon.com/pinpoint) | ✅ (200) | ◯ |
 | 682 | Firebase Cloud Messaging | Marketing | [firebase.google.com/docs/cloud-messaging](https://firebase.google.com/docs/cloud-messaging) | ✅ (200) | ◯ |
@@ -928,7 +928,7 @@
 | 254 | NISSHAクラウドPOS | POS | [nissha.co.jp](https://www.nissha.co.jp) | ❌ (404) |   |
 | 255 | カメカメPOS | POS | [kamekame.biz](https://kamekame.biz) | ✅ (200) |   |
 | 256 | セブンPOS | POS | [sevenpos.jp](https://sevenpos.jp) | ❌ (404) |   |
-| 333 | Square | POS | [squareup.com](https://squareup.com) | ✅ (200) | ◯ |
+| 333 | Square [[Y](yoom-apps/square.md)] | POS | [squareup.com](https://squareup.com) | ✅ (200) | ◯ |
 | 334 | f-revo | POS | [f-revo.com](https://f-revo.com) | ✅ (200) |   |
 | 461 | Clover | POS | [clover.com](https://clover.com) | ✅ (200) |   |
 | 462 | Toast | POS | [pos.toasttab.com](https://pos.toasttab.com) | ✅ (200) |   |
@@ -974,15 +974,15 @@
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 16 | Backlog | Project Management | [nulab.com/backlog](https://nulab.com/backlog/) | ✅ (200) | ◯ |
-| 37 | Trello | Project Management | [trello.com](https://trello.com) | ✅ (200) | ◯ |
+| 16 | Backlog [[Y](yoom-apps/backlog.md)] | Project Management | [nulab.com/backlog](https://nulab.com/backlog/) | ✅ (200) | ◯ |
+| 37 | Trello [[Y](yoom-apps/trello.md)] | Project Management | [trello.com](https://trello.com) | ✅ (200) | ◯ |
 | 46 | Asana | Project Management | [asana.com](https://asana.com) | ✅ (200) | ◯ |
 | 47 | Monday.com | Project Management | [monday.com](https://monday.com) | ✅ (200) |   |
-| 106 | Jira | Project Management | [atlassian.com/ja/software/jira](https://atlassian.com/ja/software/jira) | ✅ (200) | ◯ |
+| 106 | Jira [[Y](yoom-apps/jira.md)] | Project Management | [atlassian.com/ja/software/jira](https://atlassian.com/ja/software/jira) | ✅ (200) | ◯ |
 | 107 | Basecamp | Project Management | [basecamp.com](https://basecamp.com) | ✅ (200) | ◯ |
-| 108 | ClickUp | Project Management | [clickup.com](https://clickup.com) | ✅ (200) | ◯ |
-| 109 | Smartsheet | Project Management | [smartsheet.com](https://smartsheet.com) | ✅ (200) | ◯ |
-| 129 | Jooto | Project Management | [jooto.com](https://www.jooto.com) | ✅ (200) | ◯ |
+| 108 | ClickUp [[Y](yoom-apps/clickup.md)] | Project Management | [clickup.com](https://clickup.com) | ✅ (200) | ◯ |
+| 109 | Smartsheet [[Y](yoom-apps/smartsheet.md)] | Project Management | [smartsheet.com](https://smartsheet.com) | ✅ (200) | ◯ |
+| 129 | Jooto [[Y](yoom-apps/jooto.md)] | Project Management | [jooto.com](https://www.jooto.com) | ✅ (200) | ◯ |
 | 203 | クエステトラ | Project Management | [questetra.com](https://questetra.com) | ✅ (200) |   |
 | 276 | Atlassian Japan | Project Management | [atlassian.com/ja](https://atlassian.com/ja) | ✅ (200) |   |
 | 397 | Jira Cloud | Project Management | [atlassian.com/jira](https://www.atlassian.com/jira) | ✅ (200) | ◯ |
@@ -990,9 +990,9 @@
 | 399 | Smartsheet Cloud | Project Management | [smartsheet.com](https://www.smartsheet.com) | ✅ (200) | ◯ |
 | 400 | Basecamp Cloud | Project Management | [basecamp.com](https://www.basecamp.com) | ✅ (200) | ◯ |
 | 401 | ClickUp Cloud | Project Management | [clickup.com](https://www.clickup.com) | ✅ (200) | ◯ |
-| 402 | Wrike | Project Management | [wrike.com](https://www.wrike.com) | ✅ (200) | ◯ |
+| 402 | Wrike [[Y](yoom-apps/wrike.md)] | Project Management | [wrike.com](https://www.wrike.com) | ✅ (200) | ◯ |
 | 403 | Monday.com Enterprise | Project Management | [monday.com/enterprise](https://www.monday.com/enterprise) | ✅ (200) |   |
-| 404 | Teamwork | Project Management | [teamwork.com](https://teamwork.com) | ✅ (200) | ◯ |
+| 404 | Teamwork [[Y](yoom-apps/teamwork.md)] | Project Management | [teamwork.com](https://teamwork.com) | ✅ (200) | ◯ |
 | 428 | LiquidPlanner | Project Management | [liquidplanner.com](https://liquidplanner.com) | ✅ (200) |   |
 | 429 | Clarizen | Project Management | [clarizen.com](https://clarizen.com) | ✅ (200) |   |
 | 430 | Mavenlink | Project Management | [mavenlink.com](https://mavenlink.com) | ✅ (200) |   |
@@ -1057,7 +1057,7 @@
 |---|---------------|----------|-------------|----------|-----------|
 | 1341 | Goo RSS Reader | RSS/Content | [goo.ne.jp/rss](https://goo.ne.jp/rss) | ✅ (200) |   |
 | 1342 | Feedly | RSS/Content | [feedly.com](https://feedly.com) | ✅ (200) |   |
-| 1343 | Inoreader | RSS/Content | [inoreader.com](https://www.inoreader.com) | ✅ (200) | ◯ |
+| 1343 | Inoreader [[Y](yoom-apps/inoreader.md)] | RSS/Content | [inoreader.com](https://www.inoreader.com) | ✅ (200) | ◯ |
 | 1344 | Netvibes | RSS/Content | [netvibes.com](https://www.netvibes.com) | ✅ (200) |   |
 | 1345 | ReadKit | RSS/Content | [readkitapp.com](https://readkitapp.com) | ✅ (200) |   |
 | 1463 | Inoreader Pro | RSS/Content | [https://www.inoreader.com](https://www.inoreader.com) | ✅ (200) | ◯ |
@@ -1185,9 +1185,9 @@
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 66 | Box | Storage | [box.com](https://box.com) | ✅ (200) | ◯ |
-| 120 | Google Drive | Storage | [drive.google.com](https://drive.google.com) | ✅ (200) | ◯ |
-| 121 | OneDrive | Storage | [onedrive.com](https://onedrive.com) | ✅ (200) | ◯ |
+| 66 | Box [[Y](yoom-apps/box.md)] | Storage | [box.com](https://box.com) | ✅ (200) | ◯ |
+| 120 | Google Drive [[Y](yoom-apps/google-drive.md)] | Storage | [drive.google.com](https://drive.google.com) | ✅ (200) | ◯ |
+| 121 | OneDrive [[Y](yoom-apps/onedrive.md)] | Storage | [onedrive.com](https://onedrive.com) | ✅ (200) | ◯ |
 | 122 | pCloud | Storage | [pcloud.com](https://pcloud.com) | ✅ (200) |   |
 | 123 | SugarSync | Storage | [sugarsync.com](https://sugarsync.com) | ✅ (200) |   |
 | 271 | Backblaze | Storage | [backblaze.com](https://backblaze.com) | ✅ (200) |   |
@@ -1196,7 +1196,7 @@
 | 434 | Sync | Storage | [sync.com](https://sync.com) | ✅ (200) |   |
 | 435 | MediaFire | Storage | [mediafire.com](https://mediafire.com) | ✅ (200) |   |
 | 436 | Proton Drive | Storage | [proton.me/drive](https://www.proton.me/drive) | ✅ (200) | ◯ |
-| 478 | Box | Storage | [box.com](https://box.com) | ✅ (200) | ◯ |
+| 478 | Box [[Y](yoom-apps/box.md)] | Storage | [box.com](https://box.com) | ✅ (200) | ◯ |
 | 479 | Egnyte | Storage | [egnyte.com](https://egnyte.com) | ✅ (200) |   |
 | 480 | Dropbox Business | Storage | [dropbox.com/business](https://www.dropbox.com/business) | ✅ (200) | ◯ |
 | 481 | Citrix ShareFile | Storage | [sharefile.com](https://sharefile.com) | ✅ (200) |   |
@@ -1231,7 +1231,7 @@
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
 | 67 | Gengo | Translation | [gengo.com](https://gengo.com) | ✅ (200) |   |
-| 68 | Crowdin | Translation | [crowdin.com](https://crowdin.com) | ✅ (200) | ◯ |
+| 68 | Crowdin [[Y](yoom-apps/crowdin.md)] | Translation | [crowdin.com](https://crowdin.com) | ✅ (200) | ◯ |
 | 243 | Mineta | Translation | [mineta.jp](https://mineta.jp) | ❌ (404) |   |
 | 244 | T-4 Translation | Translation | [t4inc.jp](https://www.t4inc.jp) | ❌ (404) |   |
 | 313 | DeepL Japan | Translation | [deepl.com/ja](https://deepl.com/ja) | ✅ (200) | ◯ |
@@ -1245,7 +1245,7 @@
 | 883 | Yandex Translate | Translation | [yandex.com/translate](https://www.yandex.com/translate) | ✅ (302) |   |
 | 911 | Bing Translator | Translation | [bing.com/translator](https://www.bing.com/translator) | ✅ (200) |   |
 | 912 | Reverso Translation | Translation | [reverso.net](https://www.reverso.net) | ⚠️ (403) |   |
-| 946 | DeepL | Translation | [deepl.com](https://www.deepl.com) | ✅ (200) | ◯ |
+| 946 | DeepL [[Y](yoom-apps/deepl.md)] | Translation | [deepl.com](https://www.deepl.com) | ✅ (200) | ◯ |
 | 947 | Google Translate | Translation | [translate.google.com](https://translate.google.com) | ✅ (200) |   |
 | 948 | DeepL Pro | Translation | [deepl.com](https://www.deepl.com/pro) | ✅ (200) | ◯ |
 | 949 | Chatwork Translate | Translation | [chatwork.com](https://go.chatwork.com) | ✅ (200) | ◯ |
@@ -1307,10 +1307,10 @@
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 59 | Zendesk | カスタマーサポート | [zendesk.com/ja](https://zendesk.com/ja) | ⚠️ (403) | ◯ |
-| 110 | Intercom | カスタマーサポート | [intercom.com](https://intercom.com) | ✅ (200) | ◯ |
-| 111 | Freshdesk | カスタマーサポート | [freshworks.com](https://freshworks.com) | ✅ (200) | ◯ |
-| 112 | Help Scout | カスタマーサポート | [helpscout.com](https://helpscout.com) | ✅ (200) | ◯ |
+| 59 | Zendesk [[Y](yoom-apps/zendesk.md)] | カスタマーサポート | [zendesk.com/ja](https://zendesk.com/ja) | ⚠️ (403) | ◯ |
+| 110 | Intercom [[Y](yoom-apps/intercom.md)] | カスタマーサポート | [intercom.com](https://intercom.com) | ✅ (200) | ◯ |
+| 111 | Freshdesk [[Y](yoom-apps/freshdesk.md)] | カスタマーサポート | [freshworks.com](https://freshworks.com) | ✅ (200) | ◯ |
+| 112 | Help Scout [[Y](yoom-apps/help-scout.md)] | カスタマーサポート | [helpscout.com](https://helpscout.com) | ✅ (200) | ◯ |
 | 113 | Drift | カスタマーサポート | [drift.com](https://drift.com) | ✅ (200) |   |
 | 164 | Hiver | カスタマーサポート | [hiverhq.com](https://hiverhq.com) | ✅ (200) | ◯ |
 | 292 | Jira Service Management | カスタマーサポート | [atlassian.com/ja/software/jira/service-management](https://www.atlassian.com/ja/software/jira/service-management) | ✅ (200) | ◯ |
@@ -1333,9 +1333,9 @@
 | 610 | Bold360 | カスタマーサポート | [bold360.com](https://bold360.com) | ✅ (200) |   |
 | 611 | LivePerson Messaging | カスタマーサポート | [liveperson.com/conversations](https://liveperson.com/conversations) | ✅ (200) |   |
 | 612 | Comm100 | カスタマーサポート | [comm100.com](https://comm100.com) | ✅ (200) |   |
-| 613 | Freshchat | カスタマーサポート | [freshchat.com](https://freshchat.com) | ✅ (200) | ◯ |
+| 613 | Freshchat [[Y](yoom-apps/freshchat.md)] | カスタマーサポート | [freshchat.com](https://freshchat.com) | ✅ (200) | ◯ |
 | 614 | Drift Chat | カスタマーサポート | [drift.com/chat](https://drift.com/chat) | ✅ (200) | ◯ |
-| 615 | Zoho Desk | カスタマーサポート | [zoho.com/desk](https://zoho.com/desk) | ✅ (200) |   |
+| 615 | Zoho Desk [[Y](yoom-apps/zoho_desk.md)] | カスタマーサポート | [zoho.com/desk](https://zoho.com/desk) | ✅ (200) |   |
 
 ### クラウド印刷
 
@@ -1355,7 +1355,7 @@
 | 1491 | Toshiba Cloud Print | クラウド印刷 | [https://www.toshiba.jp](https://www.toshiba.jp) | ✅ (200) |   |
 | 1492 | Vistaprint Japan | クラウド印刷 | [https://www.vistaprint.jp](https://www.vistaprint.jp) | ✅ (200) |   |
 | 1493 | Printful | クラウド印刷 | [https://www.printful.com](https://www.printful.com) | ✅ (200) |   |
-| 1494 | Printify | クラウド印刷 | [https://www.printify.com](https://www.printify.com) | ✅ (200) | ◯ |
+| 1494 | Printify [[Y](yoom-apps/printify.md)] | クラウド印刷 | [https://www.printify.com](https://www.printify.com) | ✅ (200) | ◯ |
 | 1495 | Gooten | クラウド印刷 | [https://www.gooten.com](https://www.gooten.com) | ✅ (200) |   |
 | 1496 | Scalable Press | クラウド印刷 | [https://www.scalablepress.com](https://www.scalablepress.com) | ✅ (200) |   |
 | 1497 | Printrove | クラウド印刷 | [https://www.printrove.com](https://www.printrove.com) | ✅ (200) |   |
@@ -1373,12 +1373,12 @@
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 31 | Chatwork | コラボレーション | [go.chatwork.com](https://go.chatwork.com) | ✅ (200) | ◯ |
-| 38 | Notion | コラボレーション | [notion.so](https://www.notion.so) | ✅ (200) | ◯ |
+| 31 | Chatwork [[Y](yoom-apps/chatwork.md)] | コラボレーション | [go.chatwork.com](https://go.chatwork.com) | ✅ (200) | ◯ |
+| 38 | Notion [[Y](yoom-apps/notion.md)] | コラボレーション | [notion.so](https://www.notion.so) | ✅ (200) | ◯ |
 | 49 | Microsoft Office 365 | コラボレーション | [office.com/ja-jp](https://office.com/ja-jp) | ⚠️ (403) |   |
-| 50 | Dropbox | コラボレーション | [dropbox.com/ja](https://dropbox.com/ja) | ✅ (200) | ◯ |
+| 50 | Dropbox [[Y](yoom-apps/dropbox.md)] | コラボレーション | [dropbox.com/ja](https://dropbox.com/ja) | ✅ (200) | ◯ |
 | 259 | LINE WORKS | コラボレーション | [line.works](https://line.works) | ❌ (404) | ◯ |
-| 260 | Talknote | コラボレーション | [talknote.com](https://talknote.com) | ✅ (200) | ◯ |
+| 260 | Talknote [[Y](yoom-apps/talknote.md)] | コラボレーション | [talknote.com](https://talknote.com) | ✅ (200) | ◯ |
 | 267 | CyberOffice | コラボレーション | [cyberoffice.jp](https://cyberoffice.jp) | ❌ (404) |   |
 | 274 | Notion Japan | コラボレーション | [notion.so/ja](https://notion.so/ja) | ✅ (200) | ◯ |
 | 293 | Mattermost | コラボレーション | [mattermost.com](https://mattermost.com) | ✅ (200) |   |
@@ -1398,7 +1398,7 @@
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 197 | Kaonavi | タレントマネジメント | [kaonavi.jp](https://kaonavi.jp) | ✅ (200) | ◯ |
+| 197 | Kaonavi [[Y](yoom-apps/kaonavi.md)] | タレントマネジメント | [kaonavi.jp](https://kaonavi.jp) | ✅ (200) | ◯ |
 | 198 | Talentbox | タレントマネジメント | [talentbox.co.jp](https://talentbox.co.jp) | ✅ (200) | ◯ |
 | 240 | Learning Securities | タレントマネジメント | [learnings.co.jp](https://learnings.co.jp) | ✅ (200) |   |
 | 249 | TalentBoard | タレントマネジメント | [talentboard.jp](https://talentboard.jp) | ❌ (404) | ◯ |
@@ -1433,7 +1433,7 @@
 | 78 | STORES 予約 | 予約管理 | [stores.fun](https://stores.fun) | ✅ (200) |   |
 | 79 | Riza-en | 予約管理 | [riza-en.jp](https://riza-en.jp) | ✅ (200) |   |
 | 80 | RESERVA | 予約管理 | [reserva.be](https://reserva.be) | ⚠️ (403) |   |
-| 81 | SuperSaaS | 予約管理 | [supersaas.jp](https://supersaas.jp) | ✅ (200) | ◯ |
+| 81 | SuperSaaS [[Y](yoom-apps/supersaas.md)] | 予約管理 | [supersaas.jp](https://supersaas.jp) | ✅ (200) | ◯ |
 | 82 | tripla Book | 予約管理 | [tripla.io](https://tripla.io) | ✅ (200) |   |
 | 83 | リザービア | 予約管理 | [reservevia.com](https://reservevia.com) | ❌ (404) |   |
 | 84 | Square 予約 | 予約管理 | [squareup.com/jp/appointments](https://squareup.com/jp/appointments) | ✅ (200) | ◯ |
@@ -1452,9 +1452,9 @@
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 32 | SmartHR | 人材管理 | [smarthr.co.jp](https://smarthr.co.jp) | ✅ (200) | ◯ |
+| 32 | SmartHR [[Y](yoom-apps/smart-hr.md)] | 人材管理 | [smarthr.co.jp](https://smarthr.co.jp) | ✅ (200) | ◯ |
 | 51 | HRBase | 人材管理 | [hrbase.co.jp](https://hrbase.co.jp) | ✅ (200) | ◯ |
-| 53 | TeamSpirit | 人材管理 | [www.teamspirit.co.jp](https://www.teamspirit.co.jp) | ✅ (200) | ◯ |
+| 53 | TeamSpirit [[Y](yoom-apps/teamspirit.md)] | 人材管理 | [www.teamspirit.co.jp](https://www.teamspirit.co.jp) | ✅ (200) | ◯ |
 | 54 | Wantedly | 人材管理 | [www.wantedly.com](https://www.wantedly.com) | ✅ (200) |   |
 | 154 | Type（タイプ） | 人材管理 | [type.jp](https://type.jp) | ✅ (200) |   |
 | 175 | Coconala | 人材管理 | [coconala.com](https://coconala.com) | ✅ (200) |   |
@@ -1462,9 +1462,9 @@
 | 178 | Lancers | 人材管理 | [www.lancers.jp](https://www.lancers.jp) | ✅ (200) |   |
 | 193 | Joyz | 人材管理 | [joyz.jp](https://joyz.jp) | ✅ (200) |   |
 | 194 | Belong | 人材管理 | [belong.jp](https://belong.jp) | ✅ (200) |   |
-| 196 | HRBrain | 人材管理 | [hrbrain.co.jp](https://hrbrain.co.jp) | ✅ (200) | ◯ |
+| 196 | HRBrain [[Y](yoom-apps/hrbrain.md)] | 人材管理 | [hrbrain.co.jp](https://hrbrain.co.jp) | ✅ (200) | ◯ |
 | 199 | StaffStart | 人材管理 | [staff-start.com](https://staff-start.com) | ✅ (200) |   |
-| 201 | HRMOS | 人材管理 | [hrmos.co](https://hrmos.co) | ✅ (200) | ◯ |
+| 201 | HRMOS [[Y](yoom-apps/hrmos.md)] | 人材管理 | [hrmos.co](https://hrmos.co) | ✅ (200) | ◯ |
 | 202 | タレントパレット | 人材管理 | [pa-consul.co.jp](https://www.pa-consul.co.jp) | ✅ (200) |   |
 | 205 | One人事 | 人材管理 | [onehr.jp](https://onehr.jp) | ✅ (200) |   |
 | 206 | オフィスステーション | 人材管理 | [officestation.jp](https://www.officestation.jp) | ✅ (200) |   |
@@ -1474,7 +1474,7 @@
 | 331 | Unipos | 人材管理 | [unipos.me](https://unipos.me) | ✅ (200) |   |
 | 332 | DIGGLE | 人材管理 | [diggle.jp](https://diggle.jp) | ✅ (200) |   |
 | 984 | ジョブカン人材管理 | 人材管理 | [jobcan.co.jp](https://jobcan.co.jp) | ✅ (200) |   |
-| 1364 | BambooHR | 人材管理 | [bamboohr.com](https://www.bamboohr.com) | ✅ (200) | ◯ |
+| 1364 | BambooHR [[Y](yoom-apps/bamboohr.md)] | 人材管理 | [bamboohr.com](https://www.bamboohr.com) | ✅ (200) | ◯ |
 | 1365 | Namely | 人材管理 | [namely.com](https://www.namely.com) | ✅ (200) |   |
 | 1366 | HiBob | 人材管理 | [hibob.com](https://hibob.com) | ✅ (200) |   |
 | 1367 | Zenefits | 人材管理 | [zenefits.com](https://www.zenefits.com) | ✅ (200) |   |
@@ -1490,12 +1490,12 @@
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 27 | freee | 会計 | [freee.co.jp](https://www.freee.co.jp) | ✅ (200) | ◯ |
-| 28 | Money Forward | 会計 | [moneyforward.com](https://www.moneyforward.com) | ✅ (200) | ◯ |
-| 29 | Zoho Books | 会計 | [zoho.com/jp/books](https://www.zoho.com/jp/books) | ✅ (200) | ◯ |
+| 27 | freee [[Y](yoom-apps/freee.md)] | 会計 | [freee.co.jp](https://www.freee.co.jp) | ✅ (200) | ◯ |
+| 28 | Money Forward [[Y](yoom-apps/moneyforward.md)] | 会計 | [moneyforward.com](https://www.moneyforward.com) | ✅ (200) | ◯ |
+| 29 | Zoho Books [[Y](yoom-apps/zoho-books.md)] | 会計 | [zoho.com/jp/books](https://www.zoho.com/jp/books) | ✅ (200) | ◯ |
 | 43 | MF Accounting | 会計 | [accounting.moneyforward.com](https://accounting.moneyforward.com) | ✅ (200) |   |
 | 184 | 弥生会計 | 会計 | [www.yayoi-kk.co.jp](https://www.yayoi-kk.co.jp) | ✅ (200) |   |
-| 212 | invox | 会計 | [invox.jp](https://www.invox.jp) | ✅ (200) | ◯ |
+| 212 | invox [[Y](yoom-apps/invox.md)] | 会計 | [invox.jp](https://www.invox.jp) | ✅ (200) | ◯ |
 | 214 | 会計王 | 会計 | [sorimachi.co.jp](https://sorimachi.co.jp) | ✅ (200) |   |
 | 287 | Xero Japan | 会計 | [xero.com](https://www.xero.com) | ✅ (200) | ◯ |
 | 288 | QuickBooks Online | 会計 | [quickbooks.ja.intuit.com](https://quickbooks.ja.intuit.com) | ❌ (404) | ◯ |
@@ -1516,7 +1516,7 @@
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
 | 33 | Jobcan | 勤怠管理 | [jobcan.jp](https://jobcan.jp) | ✅ (200) | ◯ |
-| 52 | King of Time | 勤怠管理 | [kingoftime.jp](https://kingoftime.jp) | ✅ (200) | ◯ |
+| 52 | King of Time [[Y](yoom-apps/king-of-time.md)] | 勤怠管理 | [kingoftime.jp](https://kingoftime.jp) | ✅ (200) | ◯ |
 | 162 | jinjer勤怠 | 勤怠管理 | [jinjer.co.jp](https://jinjer.co.jp) | ✅ (200) |   |
 | 172 | Airシフト | 勤怠管理 | [airshift.jp](https://airshift.jp) | ✅ (200) |   |
 | 204 | 楽々勤怠 | 勤怠管理 | [rakurakukintai.jp](https://www.rakurakukintai.jp) | ✅ (200) |   |
@@ -1525,16 +1525,16 @@
 | 469 | Buddy Punch | 勤怠管理 | [buddypunch.com](https://www.buddypunch.com) | ✅ (200) |   |
 | 470 | When I Work | 勤怠管理 | [wheniwork.com](https://www.wheniwork.com) | ✅ (200) |   |
 | 471 | Shiftboard | 勤怠管理 | [shiftboard.com](https://shiftboard.com) | ✅ (200) | ◯ |
-| 823 | Clockify | 勤怠管理 | [clockify.me](https://clockify.me) | ✅ (200) | ◯ |
-| 824 | Toggl | 勤怠管理 | [toggl.com](https://www.toggl.com) | ✅ (302) | ◯ |
-| 825 | Harvest | 勤怠管理 | [harvestapp.com](https://harvestapp.com) | ✅ (302) | ◯ |
+| 823 | Clockify [[Y](yoom-apps/clockify.md)] | 勤怠管理 | [clockify.me](https://clockify.me) | ✅ (200) | ◯ |
+| 824 | Toggl [[Y](yoom-apps/toggl.md)] | 勤怠管理 | [toggl.com](https://www.toggl.com) | ✅ (302) | ◯ |
+| 825 | Harvest [[Y](yoom-apps/harvest.md)] | 勤怠管理 | [harvestapp.com](https://harvestapp.com) | ✅ (302) | ◯ |
 | 826 | RescueTime | 勤怠管理 | [rescuetime.com](https://rescuetime.com) | ✅ (301) |   |
 | 958 | jinjer勤怠 | 勤怠管理 | [jinjer.jp](https://kintai.jinjer.jp) | ❌ (404) |   |
 | 959 | freee勤怠 | 勤怠管理 | [freee.co.jp](https://kintai.freee.co.jp) | ❌ (404) | ◯ |
-| 960 | AKASHI | 勤怠管理 | [lunaworks.jp](https://lunaworks.jp) | ✅ (301) | ◯ |
+| 960 | AKASHI [[Y](yoom-apps/akashi.md)] | 勤怠管理 | [lunaworks.jp](https://lunaworks.jp) | ✅ (301) | ◯ |
 | 961 | C CHANNEL | 勤怠管理 | [c-channel.kddi.com](https://c-channel.kddi.com) | ❌ (404) |   |
-| 962 | TeamSpirit | 勤怠管理 | [teamspirit.co.jp](https://www.teamspirit.co.jp) | ✅ (200) | ◯ |
-| 963 | HRMoS | 勤怠管理 | [harmos.co.jp](https://www.harmos.co.jp) | ❌ (404) | ◯ |
+| 962 | TeamSpirit [[Y](yoom-apps/teamspirit.md)] | 勤怠管理 | [teamspirit.co.jp](https://www.teamspirit.co.jp) | ✅ (200) | ◯ |
+| 963 | HRMoS [[Y](yoom-apps/hrmos.md)] | 勤怠管理 | [harmos.co.jp](https://www.harmos.co.jp) | ❌ (404) | ◯ |
 
 ### 医療
 
@@ -1547,7 +1547,7 @@
 | 133 | MedPeer | 医療 | [medpeer.jp](https://medpeer.jp) | ✅ (200) |   |
 | 277 | Medley | 医療 | [medley.jp](https://www.medley.jp) | ✅ (200) |   |
 | 278 | Carenet | 医療 | [carenet.com](https://www.carenet.com) | ✅ (200) |   |
-| 279 | Glide | 医療 | [glinc.co.jp](https://www.glinc.co.jp) | ❌ (404) | ◯ |
+| 279 | Glide [[Y](yoom-apps/glide.md)] | 医療 | [glinc.co.jp](https://www.glinc.co.jp) | ❌ (404) | ◯ |
 | 280 | Fujitsu Healthcare Cloud | 医療 | [fujitsu.com/jp](https://www.fujitsu.com/jp) | ✅ (200) |   |
 | 378 | Kango-roo | 医療 | [kango-roo.com](https://kango-roo.com) | ✅ (200) |   |
 | 379 | M3 | 医療 | [m3.com](https://m3.com) | ✅ (200) |   |
@@ -1568,7 +1568,7 @@
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|---------------|----------|-------------|----------|-----------|
-| 30 | Sansan | 名片管理 | [sansan.com](https://sansan.com) | ✅ (200) | ◯ |
+| 30 | Sansan [[Y](yoom-apps/sansan.md)] | 名片管理 | [sansan.com](https://sansan.com) | ✅ (200) | ◯ |
 | 158 | Eight (Eito) | 名片管理 | [eight.app](https://eight.app) | ⚠️ (403) |   |
 | 792 | Eight | 名片管理 | [eight.app](https://eight.app) | ✅ (200) |   |
 | 793 | CardHub | 名片管理 | [cardhub.jp](https://cardhub.jp) | ✅ (200) |   |
@@ -1581,7 +1581,7 @@
 | 899 | ScanBizCards | 名片管理 | [scanbizcards.com](https://www.scanbizcards.com) | ✅ (200) |   |
 | 900 | Evernote Scannable | 名片管理 | [evernote.com](https://www.evernote.com) | ✅ (200) |   |
 | 901 | BizCard | 名片管理 | [bizcard.com](https://www.bizcard.com) | ✅ (200) |   |
-| 964 | Sansan | 名片管理 | [sansan.com](https://www.sansan.com) | ✅ (200) | ◯ |
+| 964 | Sansan [[Y](yoom-apps/sansan.md)] | 名片管理 | [sansan.com](https://www.sansan.com) | ✅ (200) | ◯ |
 | 965 | Eight | 名片管理 | [8card.net](https://8card.net) | ✅ (200) |   |
 | 966 | CardMinder | 名片管理 | [pfu.fujitsu.com](https://pfu.fujitsu.com) | ✅ (200) |   |
 | 967 | 名片王 | 名片管理 | [king.jp](https://www.king.jp) | ✅ (200) |   |
@@ -1599,7 +1599,7 @@
 | 258 | BizReach | 採用管理 | [bizreach.jp](https://bizreach.jp) | ✅ (200) |   |
 | 296 | LAPRAS | 採用管理 | [lapras.com](https://lapras.com) | ✅ (200) |   |
 | 301 | RaaS | 採用管理 | [raas.co.jp](https://raas.co.jp) | ❌ (404) |   |
-| 322 | SmartHR | 採用管理 | [smarthr.co.jp](https://smarthr.co.jp) | ✅ (200) | ◯ |
+| 322 | SmartHR [[Y](yoom-apps/smart-hr.md)] | 採用管理 | [smarthr.co.jp](https://smarthr.co.jp) | ✅ (200) | ◯ |
 | 688 | Green | 採用管理 | [www.green-japan.com](https://www.green-japan.com) | ✅ (200) |   |
 | 689 | EN Japan | 採用管理 | [www.en-japan.com](https://www.en-japan.com) | ✅ (200) |   |
 | 690 | MyNavi | 採用管理 | [mynavi.jp](https://mynavi.jp) | ✅ (200) |   |
@@ -1695,7 +1695,7 @@
 | 20 | sb-payment | 決済 | [sbpayment.jp](https://www.sbpayment.jp) | ✅ (200) |   |
 | 34 | Rakuten PAY | 決済 | [payment.rakuten.co.jp](https://payment.rakuten.co.jp) | ✅ (200) |   |
 | 35 | Paidy | 決済 | [paidy.com](https://paidy.com) | ✅ (200) | ◯ |
-| 36 | STRIPE | 決済 | [stripe.com/jp](https://stripe.com/jp) | ✅ (200) | ◯ |
+| 36 | STRIPE [[Y](yoom-apps/stripe.md)] | 決済 | [stripe.com/jp](https://stripe.com/jp) | ✅ (200) | ◯ |
 | 39 | PayPay | 決済 | [paypay.ne.jp](https://paypay.ne.jp) | ✅ (200) |   |
 | 40 | Au PAY | 決済 | [wallet.auone.jp](https://wallet.auone.jp) | ✅ (200) |   |
 | 41 | Mercari Pay | 決済 | [jp.mercari.com](https://jp.mercari.com) | ✅ (200) |   |
@@ -1765,9 +1765,9 @@
 | 988 | SignDoc | 法務 | [signdoc.jp](https://signdoc.jp) | ❌ (404) |   |
 | 989 | OpenSign | 法務 | [opensign.jp](https://opensign.jp) | ✅ (200) |   |
 | 990 | G-SIGN | 法務 | [g-sign.co.jp](https://g-sign.co.jp) | ✅ (200) |   |
-| 1101 | Adobe Sign | 法務 | [adobe.com](https://www.adobe.com/sign) | ✅ (200) | ◯ |
-| 1102 | DocuSign | 法務 | [docusign.com](https://www.docusign.com) | ✅ (200) | ◯ |
-| 1103 | PandaDoc | 法務 | [pandadoc.com](https://www.pandadoc.com) | ✅ (200) | ◯ |
+| 1101 | Adobe Sign [[Y](yoom-apps/adobe-sign.md)] | 法務 | [adobe.com](https://www.adobe.com/sign) | ✅ (200) | ◯ |
+| 1102 | DocuSign [[Y](yoom-apps/docusign.md)] | 法務 | [docusign.com](https://www.docusign.com) | ✅ (200) | ◯ |
+| 1103 | PandaDoc [[Y](yoom-apps/pandadoc.md)] | 法務 | [pandadoc.com](https://www.pandadoc.com) | ✅ (200) | ◯ |
 | 1104 | HelloSign | 法務 | [hellosign.com](https://www.hellosign.com) | ✅ (200) |   |
 | 1105 | SignNow | 法務 | [signnow.com](https://signnow.com) | ✅ (200) |   |
 | 1106 | eSignLive | 法務 | [esignlive.com](https://www.esignlive.com) | ✅ (200) | ◯ |
