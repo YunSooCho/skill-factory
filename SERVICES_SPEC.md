@@ -367,6 +367,8 @@
 | 380 | NuRoo | Communication | [nuro.com](https://nuro.com) | ✅ (200) | |  |
 | 483 | Google Workspace | Communication | [workspace.google.com](https://workspace.google.com) | ✅ (200) | ◯ |  |
 | 484 | Microsoft 365 | Communication | [microsoft.com/microsoft-365](https://www.microsoft.com/microsoft-365) | ✅ (200) | |  |
+| 1593 | Gmail | Communication | [https://mail.google.com](https://mail.google.com) | ✅ (200) | ◯ |
+| 1594 | Outlook | Communication | [https://outlook.live.com](https://outlook.live.com) | ✅ (200) | ◯ |
 | 485 | Dialpad | Communication | [dialpad.com](https://dialpad.com) | ✅ (200) | |  |
 | 486 | 8x8 | Communication | [8x8.com](https://8x8.com) | ✅ (200) | |  |
 | 487 | RingCentral MVP | Communication | [ringcentral.com](https://ringcentral.com) | ✅ (200) | |  |
@@ -626,6 +628,8 @@
 | 829 | RightSignature | Document | [rightsignature.com](https://www.rightsignature.com) | ✅ (200) | |  |
 | 830 | SignEasy | Document | [signeasy.com](https://www.signeasy.com) | ✅ (301) | |  |
 | 929 | Teachme Biz | Document | [teachme.biz](https://www.teachme.biz) | ✅ (200) | |  |
+| 1595 | Google Docs | Document | [https://docs.google.com](https://docs.google.com) | ✅ (200) | ◯ |
+| 1596 | Microsoft Excel | Document | [https://www.microsoft.com/excel](https://www.microsoft.com/excel) | ✅ (200) | ◯ |
 | 939 | Nuclino | Document | [nuclino.com](https://www.nuclino.com) | ✅ (200) | |  |
 | 940 | Notion JP | Document | [notion.so](https://www.notion.so/ja-jp) | ✅ (200) | |  |
 | 941 | Quip | Document | [quip.com](https://quip.com) | ✅ (200) | |  |
