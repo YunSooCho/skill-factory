@@ -1,27 +1,100 @@
 {
   "total_estimated": 700,
   "completed": 10,
-  "last_updated": "2026-02-26T10:16:00+09:00",
+  "last_updated": "2026-02-26T10:30:00+09:00",
+  "extraction_method": "correct_method - API Actions (플로 봇 오토메이션) + Triggers (프로 봇 트리거)",
   "batches": [
     {
       "id": 1,
-      "name": "test_batch",
+      "name": "test_batch_v2_corrected",
       "status": "completed",
+      "note": "Re-extracted with correct HTML parsing flowbot-action-item and flowbot-trigger-item",
       "apps": [
-        { "slug": "gmail", "name": "Gmail", "status": "done", "md_file": "apps/gmail.md" },
-        { "slug": "zoom", "name": "Zoom", "status": "done", "md_file": "apps/zoom.md" },
-        { "slug": "notion", "name": "Notion", "status": "done", "md_file": "apps/notion.md" },
-        { "slug": "openai", "name": "OpenAI", "status": "done", "md_file": "apps/openai.md" },
-        { "slug": "chatgpt", "name": "ChatGPT", "status": "done", "md_file": "apps/chatgpt.md" },
-        { "slug": "excel", "name": "Microsoft Excel", "status": "done", "md_file": "apps/microsoft-excel.md" },
-        { "slug": "google-workspace", "name": "Google Workspace", "status": "done", "md_file": "apps/google-workspace.md" },
-        { "slug": "google-docs", "name": "Google ドキュメント", "status": "done", "md_file": "apps/google-docs.md" },
-        { "slug": "slack", "name": "Slack", "status": "done", "md_file": "apps/slack.md" },
-        { "slug": "outlook", "name": "Outlook", "status": "done", "md_file": "apps/outlook.md" }
+        {
+          "slug": "gmail",
+          "name": "Gmail",
+          "api_actions_count": 5,
+          "triggers_count": 3,
+          "status": "done",
+          "md_file": "apps/gmail.md"
+        },
+        {
+          "slug": "zoom",
+          "name": "Zoom",
+          "api_actions_count": 31,
+          "triggers_count": 16,
+          "status": "done",
+          "md_file": "apps/zoom.md"
+        },
+        {
+          "slug": "notion",
+          "name": "Notion",
+          "api_actions_count": 31,
+          "triggers_count": 14,
+          "status": "done",
+          "md_file": "apps/notion.md"
+        },
+        {
+          "slug": "openai",
+          "name": "OpenAI",
+          "api_actions_count": 20,
+          "triggers_count": 0,
+          "status": "done",
+          "md_file": "apps/openai.md"
+        },
+        {
+          "slug": "chatgpt",
+          "name": "ChatGPT",
+          "api_actions_count": 10,
+          "triggers_count": 1,
+          "status": "done",
+          "md_file": "apps/chatgpt.md"
+        },
+        {
+          "slug": "slack",
+          "name": "Slack",
+          "api_actions_count": 21,
+          "triggers_count": 12,
+          "status": "done",
+          "md_file": "apps/slack.md"
+        },
+        {
+          "slug": "outlook",
+          "name": "Outlook",
+          "api_actions_count": 18,
+          "triggers_count": 6,
+          "status": "done",
+          "md_file": "apps/outlook.md"
+        },
+        {
+          "slug": "google-workspace",
+          "name": "Google Workspace",
+          "api_actions_count": 13,
+          "triggers_count": 2,
+          "status": "done",
+          "md_file": "apps/google-workspace.md"
+        },
+        {
+          "slug": "google-docs",
+          "name": "Google ドキュメント",
+          "api_actions_count": 5,
+          "triggers_count": 0,
+          "status": "done",
+          "md_file": "apps/google-docs.md"
+        },
+        {
+          "slug": "excel",
+          "name": "Microsoft Excel",
+          "api_actions_count": 33,
+          "triggers_count": 0,
+          "status": "done",
+          "md_file": "apps/microsoft-excel.md"
+        }
       ]
     }
   ],
+  "html_structure": "flowbot-action-item (API Actions) and flowbot-trigger-item (Triggers) with span id='llisttext'",
   "url_pattern": "https://lp.yoom.fun/apps/{slug}",
-  "known_slugs_404": ["google-spreadsheet", "google-document"],
-  "notes": "URL slug은 앱마다 다름. google-docs는 OK, google-document는 404. 전체 수집시 /apps 페이지에서 href 크롤링 필요."
+  "total_api_actions_found": 187,
+  "total_triggers_found": 54
 }
