@@ -48,7 +48,6 @@
 | 597 | Claude 3 | AI | [anthropic.com/claude-3](https://www.anthropic.com/claude-3) | ✅ (200) |
 | 598 | Claude Pro | AI | [claude.ai](https://claude.ai) | ✅ (200) |
 
-
 ### AI/Analytics
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -108,13 +107,11 @@
 | 1557 | Thanos | AI/Analytics | [https://www.thanos.io](https://www.thanos.io) | ✅ (200) |
 | 1558 | Cortex Metrics | AI/Analytics | [https://www.cortexmetrics.io](https://www.cortexmetrics.io) | ✅ (200) |
 
-
 ### AI/Marketing
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
 |---|----------|----------|-------------|----------|
 | 304 | DataSign | AI/Marketing | [datasign.co.jp](https://datasign.co.jp) | ❌ (404) |
-
 
 ### Analytics
 
@@ -213,7 +210,6 @@
 | 1039 | Mouseflow | Analytics | [mouseflow.com](https://www.mouseflow.com) | ✅ (200) |
 | 1040 | Crazy Egg | Analytics | [crazyegg.com](https://www.crazyegg.com) | ✅ (200) |
 
-
 ### CRM
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -251,7 +247,6 @@
 | 1034 | Monday Sales | CRM | [monday.com/sales](https://www.monday.com/sales) | ✅ (200) |
 | 1035 | HubSpot Sales | CRM | [hubspot.com/sales](https://www.hubspot.com/sales) | ✅ (200) |
 | 1036 | Really Simple Systems | CRM | [reallysimplesystems.com](https://www.reallysimplesystems.com) | ✅ (200) |
-
 
 ### Cloud
 
@@ -308,13 +303,11 @@
 | 997 | NTTPC WebARENA | Cloud | [webarena.jp](https://webarena.jp) | ✅ (200) |
 | 1235 | CyberAgent | Cloud | [cyberagent.co.jp](https://www.cyberagent.co.jp) | ✅ (200) |
 
-
 ### Cloud/Payment
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
 |---|----------|----------|-------------|----------|
 | 381 | KDDI | Cloud/Payment | [kddi.com](https://www.kddi.com) | ✅ (200) |
-
 
 ### Collaboration
 
@@ -355,7 +348,6 @@
 | 1417 | Dialpad Talk | Collaboration | [https://www.dialpad.com](https://www.dialpad.com) | ✅ (200) |
 | 1418 | 8x8 X | Collaboration | [https://www.8x8.com](https://www.8x8.com) | ✅ (200) |
 | 1419 | Krisp | Collaboration | [https://www.krisp.ai](https://www.krisp.ai) | ✅ (200) |
-
 
 ### Communication
 
@@ -427,7 +419,6 @@
 | 1228 | iQIYI | Communication | [iqiyi.com](https://www.iqiyi.com) | ✅ (200) |
 | 1229 | Tencent Video | Communication | [v.qq.com](https://v.qq.com) | ✅ (200) |
 
-
 ### Content
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -460,7 +451,6 @@
 | 1339 | Goo Blog | Content | [blog.goo.ne.jp](https://blog.goo.ne.jp) | ✅ (200) |
 | 1340 | YORISOPO | Content | [yorisoupo.co.jp](https://www.yorisoupo.co.jp) | ✅ (200) |
 
-
 ### Database
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -487,7 +477,6 @@
 | 564 | Neo4j | Database | [neo4j.com](https://neo4j.com) | ✅ (200) |
 | 565 | InfluxDB | Database | [influxdata.com](https://influxdata.com) | ✅ (200) |
 | 566 | Elasticsearch | Database | [elastic.co](https://elastic.co) | ✅ (200) |
-
 
 ### Design
 
@@ -516,7 +505,6 @@
 | 451 | Adobe IO | Design | [adobe.io](https://adobe.io) | ✅ (200) |
 | 452 | Framer | Design | [framer.com](https://framer.com) | ✅ (200) |
 | 453 | Webflow | Design | [webflow.com](https://www.webflow.com) | ✅ (200) |
-
 
 ### Design/Video
 
@@ -552,7 +540,6 @@
 | 1277 | Affinity Photo | Design/Video | [affinity.serif.com](https://www.affinity.serif.com/photo) | ✅ (200) |
 | 1278 | Luminar Neo | Design/Video | [skylum.com](https://skylum.com) | ✅ (200) |
 | 1279 | Capture One | Design/Video | [captureone.com](https://www.captureone.com) | ✅ (200) |
-
 
 ### DevOps
 
@@ -594,7 +581,6 @@
 | 1319 | Chef Automate | DevOps | [chef.io/products/chef-automate](https://www.chef.io/products/chef-automate) | ✅ (200) |
 | 1320 | SaltStack Enterprise | DevOps | [saltstack.com/products/enterprise](https://www.saltstack.com/products/enterprise) | ✅ (200) |
 
-
 ### Diagram
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -622,7 +608,6 @@
 | 1158 | PlantText | Diagram | [https://www.planttext.com](https://www.planttext.com) | ✅ (200) |
 | 1165 | Excalidraw | Diagram | [https://excalidraw.com](https://excalidraw.com) | ✅ (200) |
 
-
 ### Document
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -649,7 +634,6 @@
 | 944 | Workvivo | Document | [workvivo.com](https://www.workvivo.com) | ✅ (200) |
 | 945 | Samepage | Document | [samepage.io](https://samepage.io) | ✅ (200) |
 
-
 ### Documentation
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -674,7 +658,6 @@
 | 1149 | ReadTheDocs | Documentation | [https://readthedocs.io](https://readthedocs.io) | ✅ (200) |
 | 1150 | Docusaurus | Documentation | [https://docusaurus.io](https://docusaurus.io) | ✅ (200) |
 | 1163 | MkDocs | Documentation | [https://www.mkdocs.org](https://www.mkdocs.org) | ✅ (200) |
-
 
 ### EC
 
@@ -711,7 +694,6 @@
 | 1362 | 3dcart | EC | [3dcart.com](https://www.3dcart.com) | ✅ (200) |
 | 1363 | CoreCommerce | EC | [corecommerce.com](https://www.corecommerce.com) | ✅ (200) |
 
-
 ### ERP
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -744,7 +726,6 @@
 | 1295 | IFS | ERP | [ifs.com](https://www.ifs.com) | ✅ (200) |
 | 1296 | Acumatica | ERP | [acumatica.com](https://www.acumatica.com) | ✅ (200) |
 
-
 ### Education
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -775,7 +756,6 @@
 | 1396 | Mighty Networks | Education | [https://www.mightynetworks.com](https://www.mightynetworks.com) | ✅ (200) |
 | 1397 | Sutra | Education | [https://www.sutra.co](https://www.sutra.co) | ✅ (200) |
 
-
 ### Email
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -805,13 +785,11 @@
 | 1000 | MailBee | Email | [mailbee.co.jp](https://mailbee.co.jp) | ✅ (200) |
 | 1346 | SmartInbox | Email | [smartinbox.jp](https://smartinbox.jp) | ✅ (200) |
 
-
 ### Email/CRM
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
 |---|----------|----------|-------------|----------|
 | 411 | ActiveCampaign | Email/CRM | [activecampaign.com](https://www.activecampaign.com) | ✅ (200) |
-
 
 ### Git
 
@@ -839,7 +817,6 @@
 | 937 | GitKraken | Git | [gitkraken.com](https://www.gitkraken.com) | ✅ (200) |
 | 938 | Sourcegraph | Git | [sourcegraph.com](https://about.sourcegraph.com) | ✅ (200) |
 
-
 ### IT Service
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -866,13 +843,11 @@
 | 956 | Splunk | IT Service | [splunk.com](https://www.splunk.com) | ✅ (200) |
 | 957 | SolarWinds | IT Service | [solarwinds.com](https://www.solarwinds.com) | ✅ (200) |
 
-
 ### IoT/Cloud
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
 |---|----------|----------|-------------|----------|
 | 299 | Safie | IoT/Cloud | [safie.jp](https://safie.jp) | ✅ (200) |
-
 
 ### Marketing
 
@@ -905,13 +880,11 @@
 | 681 | Amazon Pinpoint | Marketing | [aws.amazon.com/pinpoint](https://aws.amazon.com/pinpoint) | ✅ (200) |
 | 682 | Firebase Cloud Messaging | Marketing | [firebase.google.com/docs/cloud-messaging](https://firebase.google.com/docs/cloud-messaging) | ✅ (200) |
 
-
 ### Marketing/Content
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
 |---|----------|----------|-------------|----------|
 | 524 | Liskul | Marketing/Content | [liskul.com](https://liskul.com) | ✅ (200) |
-
 
 ### Marketing/Social
 
@@ -923,7 +896,6 @@
 | 1454 | Zai | Marketing/Social | [https://www.zai.co.jp](https://www.zai.co.jp) | ✅ (200) |
 | 1455 | Uzabase | Marketing/Social | [https://www.uzabase.com](https://www.uzabase.com) | ✅ (200) |
 
-
 ### Marketing/Social Media
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -933,7 +905,6 @@
 | 528 | Buffer | Marketing/Social Media | [buffer.com](https://buffer.com) | ✅ (200) |
 | 529 | Later | Marketing/Social Media | [later.com](https://later.com) | ✅ (200) |
 | 530 | Agorapulse | Marketing/Social Media | [agorapulse.com](https://agorapulse.com) | ✅ (200) |
-
 
 ### POS
 
@@ -972,7 +943,6 @@
 | 1355 | ShopKeep | POS | [shopkeep.com](https://www.shopkeep.com) | ✅ (200) |
 | 1356 | Revel | POS | [revelsystems.com](https://revelsystems.com) | ✅ (200) |
 
-
 ### PR/Marketing
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -990,13 +960,11 @@
 | 1461 | PRNavi | PR/Marketing | [https://www.prnavi.or.jp](https://www.prnavi.or.jp) | ✅ (200) |
 | 1462 | PressPort Japan | PR/Marketing | [https://www.pressport.jp](https://www.pressport.jp) | ✅ (200) |
 
-
 ### Payment
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
 |---|----------|----------|-------------|----------|
 | 350 | au.com | Payment | [au.com](https://au.com) | ✅ (200) |
-
 
 ### Project Management
 
@@ -1027,7 +995,6 @@
 | 431 | Proggio | Project Management | [proggio.com](https://www.proggio.com) | ✅ (200) |
 | 432 | Asana Premium | Project Management | [asana.com](https://www.asana.com) | ✅ (200) |
 
-
 ### QA/Testing
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -1055,7 +1022,6 @@
 | 730 | Testim | QA/Testing | [testim.io](https://testim.io) | ✅ (200) |
 | 731 | ZAPTEST | QA/Testing | [zaptest.com](https://zaptest.com) | ✅ (200) |
 
-
 ### RPA
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -1080,7 +1046,6 @@
 | 849 | n8n | RPA | [n8n.io](https://www.n8n.io) | ✅ (301) |
 | 850 | Integromat (Make) | RPA | [integromat.com](https://www.integromat.com) | ✅ (301) |
 | 851 | Power Automate | RPA | [powerautomate.com](https://www.powerautomate.com) | ✅ (301) |
-
 
 ### RSS/Content
 
@@ -1111,7 +1076,6 @@
 | 1480 | QuiteRSS | RSS/Content | [https://www.quiterss.org](https://www.quiterss.org) | ✅ (200) |
 | 1481 | Liferea | RSS/Content | [https://www.liferea.sourceforge.net](https://www.liferea.sourceforge.net) | ✅ (200) |
 
-
 ### Security
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -1137,7 +1101,6 @@
 | 1253 | Armis | Security | [armis.com](https://www.armis.com) | ⚠️ (403) |
 | 1254 | Orca Security | Security | [orcasecurity.com](https://www.orcasecurity.com) | ❌ (404) |
 | 1315 | HashiCorp Vault | Security | [vaultproject.io](https://www.vaultproject.io) | ✅ (200) |
-
 
 ### Social Media
 
@@ -1169,7 +1132,6 @@
 | 1298 | Ahrefs | Social Media | [ahrefs.com](https://ahrefs.com) | ✅ (200) |
 | 1299 | Sprinklr Enterprise | Social Media | [sprinklr.com](https://www.sprinklr.com) | ✅ (200) |
 | 1300 | Hootsuite Enterprise | Social Media | [hootsuite.com](https://www.hootsuite.com) | ✅ (200) |
-
 
 ### SocialMedia
 
@@ -1214,7 +1176,6 @@
 | 1448 | NinjaCat | SocialMedia | [https://www.ninjacat.io](https://www.ninjacat.io) | ✅ (200) |
 | 1449 | Adverity | SocialMedia | [https://www.adverity.com](https://www.adverity.com) | ✅ (200) |
 | 1450 | Funnel | SocialMedia | [https://www.funnel.io](https://www.funnel.io) | ✅ (200) |
-
 
 ### Storage
 
@@ -1261,7 +1222,6 @@
 | 1019 | WeTransfer | Storage | [wetransfer.com](https://www.wetransfer.com) | ✅ (200) |
 | 1020 | SendAnywhere | Storage | [send-anywhere.com](https://www.send-anywhere.com) | ✅ (200) |
 
-
 ### Translation
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -1287,7 +1247,6 @@
 | 949 | Chatwork Translate | Translation | [chatwork.com](https://go.chatwork.com) | ✅ (200) |
 | 950 | Linguee | Translation | [linguee.com](https://www.linguee.com) | ✅ (200) |
 | 951 | SDL Trados | Translation | [trados.com](https://www.trados.com) | ✅ (200) |
-
 
 ### オフィス
 
@@ -1315,7 +1274,6 @@
 | 980 | クラウドプレイス | オフィス | [cloudplace.jp](https://cloudplace.jp) | ✅ (200) |
 | 981 | Office REVO | オフィス | [officerevo.jp](https://officerevo.jp) | ❌ (404) |
 
-
 ### カスタマーサクセス
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -1340,7 +1298,6 @@
 | 1144 | Wootric | カスタマーサクセス | [https://www.wootric.com](https://www.wootric.com) | ✅ (200) |
 | 1155 | Stride | カスタマーサクセス | [https://strideinc.com](https://strideinc.com) | ✅ (200) |
 | 1164 | SparkPage | カスタマーサクセス | [https://sparkpage.io](https://sparkpage.io) | ✅ (200) |
-
 
 ### カスタマーサポート
 
@@ -1376,14 +1333,6 @@
 | 614 | Drift Chat | カスタマーサポート | [drift.com/chat](https://drift.com/chat) | ✅ (200) |
 | 615 | Zoho Desk | カスタマーサポート | [zoho.com/desk](https://zoho.com/desk) | ✅ (200) |
 
-
-### カテゴリー
-
-| # | サービス | カテゴリー | ホームページ | URL検証 |
-|---|----------|----------|-------------|----------|
-| # | サービス | カテゴリー | ホームページ | URL検証 |
-
-
 ### クラウド印刷
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -1416,7 +1365,6 @@
 | 1505 | Teespring | クラウド印刷 | [https://www.teespring.com](https://www.teespring.com) | ✅ (200) |
 | 1506 | Spreadshirt | クラウド印刷 | [https://www.spreadshirt.com](https://www.spreadshirt.com) | ✅ (200) |
 
-
 ### コラボレーション
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -1441,7 +1389,6 @@
 | 1151 | Cisco Webex Teams | コラボレーション | [https://www.webex.com](https://www.webex.com) | ✅ (200) |
 | 1152 | Zoho Projects | コラボレーション | [https://www.zoho.com/projects](https://www.zoho.com/projects) | ✅ (200) |
 | 1153 | Basecamp | コラボレーション | [https://basecamp.com](https://basecamp.com) | ✅ (200) |
-
 
 ### タレントマネジメント
 
@@ -1472,7 +1419,6 @@
 | 982 | Works Human Life | タレントマネジメント | [workshuman.co.jp](https://www.workshuman.co.jp) | ✅ (200) |
 | 983 | ワークスアプリケーションズ | タレントマネジメント | [worksap.co.jp](https://www.worksap.co.jp) | ✅ (200) |
 
-
 ### 予約管理
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -1497,7 +1443,6 @@
 | 92 | タビチャットエンジン | 予約管理 | [tabichat.jp](https://tabichat.jp) | ✅ (200) |
 | 93 | リピッテ酒店 | 予約管理 | [rep-colle.jp](https://rep-colle.jp) | ❌ (404) |
 | 94 | TableCheck | 予約管理 | [tablecheck.com](https://tablecheck.com) | ✅ (200) |
-
 
 ### 人材管理
 
@@ -1537,7 +1482,6 @@
 | 1373 | Reflektive | 人材管理 | [reflektive.com](https://www.reflektive.com) | ✅ (200) |
 | 1374 | Betterworks | 人材管理 | [betterworks.com](https://www.betterworks.com) | ✅ (200) |
 
-
 ### 会計
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -1563,7 +1507,6 @@
 | 1154 | SAP Concur Accounting | 会計 | [https://www.concur.co.jp](https://www.concur.co.jp) | ✅ (200) |
 | 1169 | QuickBooks Online | 会計 | [https://quickbooks.intuit.com](https://quickbooks.intuit.com) | ✅ (200) |
 
-
 ### 勤怠管理
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -1588,7 +1531,6 @@
 | 961 | C CHANNEL | 勤怠管理 | [c-channel.kddi.com](https://c-channel.kddi.com) | ❌ (404) |
 | 962 | TeamSpirit | 勤怠管理 | [teamspirit.co.jp](https://www.teamspirit.co.jp) | ✅ (200) |
 | 963 | HRMoS | 勤怠管理 | [harmos.co.jp](https://www.harmos.co.jp) | ❌ (404) |
-
 
 ### 医療
 
@@ -1618,7 +1560,6 @@
 | 833 | Nextech Healthcare | 医療 | [nextech.com](https://www.nextech.com) | ✅ (200) |
 | 834 | Epic Systems | 医療 | [epic.com](https://www.epic.com) | ✅ (200) |
 
-
 ### 名片管理
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -1644,7 +1585,6 @@
 | 969 | SmartCard | 名片管理 | [smartcard.jp](https://www.smartcard.jp) | ✅ (200) |
 | 1331 | CamCard Japan | 名片管理 | [camcard.jp](https://www.camcard.jp) | ✅ (200) |
 | 1332 | Shachihata | 名片管理 | [shachihata.co.jp](https://www.shachihata.co.jp) | ✅ (200) |
-
 
 ### 採用管理
 
@@ -1673,7 +1613,6 @@
 | 702 | Adways | 採用管理 | [adways.net](https://www.adways.net) | ✅ (200) |
 | 703 | Career Market | 採用管理 | [careermarket.jp](https://careermarket.jp) | ✅ (200) |
 | 704 | Recruit Career | 採用管理 | [recruitcareer.jp](https://recruitcareer.jp) | ✅ (200) |
-
 
 ### 教育
 
@@ -1744,7 +1683,6 @@
 | 1329 | E-Juku | 教育 | [e-juku.info](https://www.e-juku.info) | ✅ (200) |
 | 1330 | Aquaring | 教育 | [aquaring.co.jp](https://www.aquaring.co.jp) | ✅ (200) |
 
-
 ### 決済
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -1795,7 +1733,6 @@
 | 1230 | Rakuten Card | 決済 | [rakuten-card.co.jp](https://www.rakuten-card.co.jp) | ✅ (200) |
 | 1234 | Zuora | 決済 | [zuora.com](https://www.zuora.com) | ✅ (200) |
 
-
 ### 法務
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -1845,7 +1782,6 @@
 | 1119 | Nitro | 法務 | [gonitro.com](https://www.gonitro.com) | ✅ (200) |
 | 1120 | PandaDoc Japan | 法務 | [pandadoc.com/ja](https://www.pandadoc.com/ja) | ✅ (200) |
 
-
 ### 経費精算
 
 | # | サービス | カテゴリー | ホームページ | URL検証 |
@@ -1870,7 +1806,6 @@
 | 1147 | TravelPerk | 経費精算 | [https://travelperk.com](https://travelperk.com) | ✅ (200) |
 | 1148 | Rydoo | 経費精算 | [https://rydoo.com](https://rydoo.com) | ✅ (200) |
 | 1168 | Fyle | 経費精算 | [https://www.fyle.in](https://www.fyle.in) | ✅ (200) |
-
 
 ### 製造
 
@@ -1913,4 +1848,3 @@
 | 1078 | Epicor | 製造 | [epicor.com](https://www.epicor.com) | ✅ (200) |
 | 1079 | Microsoft Dynamics | 製造 | [microsoft.com](https://www.microsoft.com) | ✅ (200) |
 | 1080 | UNITRONICS | 製造 | [unitronics.com](https://www.unitronics.com) | ✅ (200) |
-
