@@ -4,7 +4,7 @@
 ### AI
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 272 | AIアシスタント | AI | [ai-assistant.jp](https://ai-assistant.jp) | ✅ (200) | |
 | 273 | ChatGPT Japan | AI | [chatgpt-japan.com](https://chatgpt-japan.com) | ⚠️ (403) | ◯ |
 | 315 | Preferred Networks | AI | [preferred-networks.jp](https://www.preferred-networks.jp) | ✅ (200) | |
@@ -51,7 +51,7 @@
 ### AI/Analytics
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 376 | Baidu | AI/Analytics | [baidu.com](https://www.baidu.com) | ✅ (200) | |
 | 522 | a2i | AI/Analytics | [a2i.jp](https://a2i.jp) | ✅ (200) | |
 | 1507 | Amazon SageMaker | AI/Analytics | [https://aws.amazon.com/sagemaker](https://aws.amazon.com/sagemaker) | ✅ (200) | |
@@ -110,13 +110,13 @@
 ### AI/Marketing
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 304 | DataSign | AI/Marketing | [datasign.co.jp](https://datasign.co.jp) | ❌ (404) | |
 
 ### Analytics
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 61 | UserLocal | Analytics | [userlocal.jp](https://userlocal.jp) | ✅ (200) | |
 | 100 | GA4 | Analytics | [googleanalytics.com](https://googleanalytics.com) | ✅ (200) | |
 | 101 | Mixpanel | Analytics | [mixpanel.com](https://mixpanel.com) | ✅ (200) | ◯ |
@@ -213,7 +213,7 @@
 ### CRM
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 12 | kintone | CRM | [cybozu.com/kintone](https://www.cybozu.com/kintone) | ✅ (200) | ◯ |
 | 13 | cybozu | CRM | [www.cybozu.com](https://www.cybozu.com/) | ✅ (200) | ◯ |
 | 48 | HubSpot | CRM | [hubspot.com](https://hubspot.com) | ✅ (200) | ◯ |
@@ -251,7 +251,7 @@
 ### Cloud
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 71 | AWS | Cloud | [aws.amazon.com/jp](https://aws.amazon.com/jp) | ✅ (200) | |
 | 72 | Google Cloud | Cloud | [cloud.google.com](https://cloud.google.com) | ✅ (200) | |
 | 117 | Microsoft Azure | Cloud | [azure.microsoft.com/ja-jp](https://azure.microsoft.com/ja-jp) | ✅ (200) | |
@@ -306,13 +306,13 @@
 ### Cloud/Payment
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 381 | KDDI | Cloud/Payment | [kddi.com](https://www.kddi.com) | ✅ (200) | |
 
 ### Collaboration
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 395 | SharePoint | Collaboration | [sharepoint.com](https://www.sharepoint.com) | ✅ (200) | ◯ |
 | 396 | Confluence Cloud | Collaboration | [atlassian.com/confluence](https://www.atlassian.com/confluence) | ✅ (200) | |
 | 490 | ProofHub | Collaboration | [proofhub.com](https://proofhub.com) | ✅ (200) | |
@@ -352,7 +352,7 @@
 ### Communication
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 65 | Zoom | Communication | [zoom.us](https://zoom.us) | ✅ (200) | ◯ |
 | 95 | LINE Biz ID | Communication | [linebiz.com/jp](https://linebiz.com/jp) | ✅ (200) | |
 | 96 | Slack | Communication | [slack.com/intl/ja-jp/](https://slack.com/intl/ja-jp/) | ✅ (200) | ◯ |
@@ -424,7 +424,7 @@
 ### Content
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 10 | Note | Content | [note.com](https://note.com) | ✅ (200) | |
 | 136 | Qiita | Content | [qiita.com](https://qiita.com) | ✅ (200) | |
 | 137 | Zenn | Content | [zenn.dev](https://zenn.dev) | ✅ (200) | |
@@ -456,7 +456,7 @@
 ### Database
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 11 | SmartDB | Database | [smartdb.jp](https://smartdb.jp) | ✅ (200) | |
 | 160 | Trocco.io | Database | [trocco.io](https://trocco.io) | ✅ (200) | |
 | 195 | Pleasanter | Database | [pleasanter.org](https://pleasanter.org) | ✅ (200) | |
@@ -483,7 +483,7 @@
 ### Design
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 62 | Canva | Design | [canva.com](https://canva.com) | ⚠️ (403) | ◯ |
 | 63 | Adobe | Design | [adobe.com/jp](https://adobe.com/jp) | ✅ (200) | |
 | 64 | Autodesk | Design | [autodesk.co.jp](https://autodesk.co.jp) | ⚠️ (403) | |
@@ -511,7 +511,7 @@
 ### Design/Video
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 1211 | Adobe Premiere | Design/Video | [adobe.com/products/premiere](https://www.adobe.com/products/premiere) | ✅ (200) | |
 | 1212 | Final Cut Pro | Design/Video | [apple.com/final-cut-pro](https://www.apple.com/final-cut-pro) | ✅ (200) | |
 | 1213 | DaVinci Resolve | Design/Video | [blackmagicdesign.com](https://www.blackmagicdesign.com) | ✅ (200) | |
@@ -546,7 +546,7 @@
 ### DevOps
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 1178 | CircleCI | DevOps | [circleci.com](https://circleci.com) | ✅ (200) | |
 | 1179 | GitLab CI | DevOps | [about.gitlab.com/stages-devops/cicd](https://about.gitlab.com/stages-devops/cicd) | ✅ (200) | |
 | 1180 | GitHub Actions | DevOps | [github.com/features/actions](https://github.com/features/actions) | ✅ (200) | |
@@ -586,7 +586,7 @@
 ### Diagram
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 15 | Cacoo | Diagram | [nulab.com/cacoo](https://nulab.com/cacoo/) | ✅ (200) | |
 | 128 | Miro | Diagram | [miro.com](https://miro.com) | ✅ (200) | ◯ |
 | 130 | Whimsical | Diagram | [whimsical.com](https://whimsical.com) | ✅ (200) | |
@@ -613,7 +613,7 @@
 ### Document
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 180 | クラウドサイン | Document | [cloudsign.jp](https://cloudsign.jp) | ✅ (200) | |
 | 189 | Scrapbox | Document | [scrapbox.io](https://scrapbox.io) | ✅ (200) | |
 | 245 | SignTime | Document | [signtime.jp](https://signtime.jp) | ✅ (200) | ◯ |
@@ -641,7 +641,7 @@
 ### Documentation
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 74 | Confluence | Documentation | [atlassian.com/ja](https://atlassian.com/ja) | ✅ (200) | ◯ |
 | 127 | Figma | Documentation | [figma.com](https://figma.com) | ✅ (200) | ◯ |
 | 134 | kibe.la | Documentation | [kibe.la](https://kibe.la) | ✅ (200) | |
@@ -666,7 +666,7 @@
 ### EC
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 17 | shop-pro | EC | [shop-pro.jp](https://shop-pro.jp) | ✅ (200) | |
 | 18 | makeshop | EC | [makeshop.jp](https://www.makeshop.jp) | ✅ (200) | |
 | 44 | Shopify | EC | [shopify.com/jp](https://shopify.com/jp) | ✅ (200) | ◯ |
@@ -701,7 +701,7 @@
 ### ERP
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 282 | Dynamics 365 | ERP | [microsoft.com/ja-jp/dynamics365](https://www.microsoft.com/ja-jp/dynamics365) | ❌ (404) | |
 | 314 | OBC ERP | ERP | [obc.co.jp](https://www.obc.co.jp) | ✅ (200) | |
 | 327 | Oracle ERP | ERP | [oracle.com/jp/applications/erp](https://www.oracle.com/jp/applications/erp) | ✅ (200) | |
@@ -733,7 +733,7 @@
 ### Education
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 132 | Casy | Education | [casy.io](https://www.casy.io) | ✅ (200) | |
 | 140 | CodeCamp | Education | [codecamp.jp](https://codecamp.jp) | ✅ (200) | |
 | 141 | TechAcademy | Education | [techacademy.jp](https://techacademy.jp) | ✅ (200) | |
@@ -763,7 +763,7 @@
 ### Email
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 286 | SendGrid | Email | [sendgrid.com](https://sendgrid.com) | ✅ (301) | ◯ |
 | 311 | Mautic Japan | Email | [mautic.com/ja](https://mautic.com/ja) | ✅ (200) | |
 | 312 | EmberPoint | Email | [emberpoint.com](https://emberpoint.com) | ✅ (200) | |
@@ -792,13 +792,13 @@
 ### Email/CRM
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 411 | ActiveCampaign | Email/CRM | [activecampaign.com](https://www.activecampaign.com) | ✅ (200) | ◯ |
 
 ### Git
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 69 | GitHub | Git | [github.com](https://github.com) | ✅ (200) | ◯ |
 | 70 | GitLab | Git | [gitlab.com](https://gitlab.com) | ✅ (200) | ◯ |
 | 114 | GitKraken | Git | [gitkraken.com](https://gitkraken.com) | ✅ (200) | |
@@ -824,7 +824,7 @@
 ### IT Service
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 291 | Freshservice | IT Service | [freshservice.com/ja](https://www.freshservice.com/ja) | ✅ (200) | ◯ |
 | 308 | ITReview | IT Service | [itreview.jp](https://itreview.jp) | ✅ (200) | ◯ |
 | 309 | BOXIL SaaS | IT Service | [boxil.jp](https://boxil.jp) | ✅ (200) | |
@@ -850,13 +850,13 @@
 ### IoT/Cloud
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 299 | Safie | IoT/Cloud | [safie.jp](https://safie.jp) | ✅ (200) | |
 
 ### Marketing
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 14 | FANSHIP | Marketing | [www.fanship.jp](https://www.fanship.jp/) | ✅ (200) | |
 | 58 | Creive | Marketing | [creive.me](https://creive.me) | ✅ (200) | |
 | 60 | KARTE | Marketing | [karte.io](https://karte.io) | ✅ (200) | |
@@ -887,13 +887,13 @@
 ### Marketing/Content
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 524 | Liskul | Marketing/Content | [liskul.com](https://liskul.com) | ✅ (200) | |
 
 ### Marketing/Social
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 1451 | Supermetrics | Marketing/Social | [https://www.supermetrics.com](https://www.supermetrics.com) | ✅ (200) | |
 | 1452 | Improvado | Marketing/Social | [https://www.improvado.io](https://www.improvado.io) | ✅ (200) | |
 | 1453 | Datadeck | Marketing/Social | [https://www.datadeck.com](https://www.datadeck.com) | ✅ (200) | |
@@ -903,7 +903,7 @@
 ### Marketing/Social Media
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 526 | Hootsuite | Marketing/Social Media | [hootsuite.com](https://www.hootsuite.com) | ✅ (200) | |
 | 527 | Sprinklr | Marketing/Social Media | [sprinklr.com](https://sprinklr.com) | ✅ (200) | |
 | 528 | Buffer | Marketing/Social Media | [buffer.com](https://buffer.com) | ✅ (200) | |
@@ -913,7 +913,7 @@
 ### POS
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 1 | AirRegister | POS | [airregi.jp](https://airregi.jp) | ⚠️ (403) | |
 | 2 | StoreApps | POS | [unite.co.jp](https://unite.co.jp) | ✅ (200) | |
 | 3 | REACH | POS | [www.reac.jp](https://www.reac.jp/) | ✅ (200) | |
@@ -950,7 +950,7 @@
 ### PR/Marketing
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 1333 | PR TIMES | PR/Marketing | [prtimes.jp](https://prtimes.jp) | ✅ (200) | |
 | 1334 | PRTIMES | PR/Marketing | [prtimes.co.jp](https://prtimes.co.jp) | ✅ (200) | |
 | 1335 | ValuePress | PR/Marketing | [valuepress.jp](https://www.valuepress.jp) | ✅ (200) | |
@@ -967,13 +967,13 @@
 ### Payment
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 350 | au.com | Payment | [au.com](https://au.com) | ✅ (200) | |
 
 ### Project Management
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 16 | Backlog | Project Management | [nulab.com/backlog](https://nulab.com/backlog/) | ✅ (200) | ◯ |
 | 37 | Trello | Project Management | [trello.com](https://trello.com) | ✅ (200) | ◯ |
 | 46 | Asana | Project Management | [asana.com](https://asana.com) | ✅ (200) | |
@@ -1002,7 +1002,7 @@
 ### QA/Testing
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 192 | Autify | QA/Testing | [autify.com](https://autify.com) | ✅ (200) | |
 | 216 | TripleW | QA/Testing | [triplew.co.jp](https://triplew.co.jp) | ✅ (200) | |
 | 217 | MagicPod | QA/Testing | [magicpod.com](https://www.magicpod.com) | ✅ (200) | |
@@ -1029,7 +1029,7 @@
 ### RPA
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 200 | Autobiz | RPA | [autobiz.jp](https://autobiz.jp) | ✅ (200) | |
 | 232 | UiPath Japan | RPA | [uipath.com/ja](https://www.uipath.com/ja) | ✅ (200) | |
 | 233 | WinActor | RPA | [winactor.jp](https://winactor.jp) | ✅ (200) | |
@@ -1054,7 +1054,7 @@
 ### RSS/Content
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 1341 | Goo RSS Reader | RSS/Content | [goo.ne.jp/rss](https://goo.ne.jp/rss) | ✅ (200) | |
 | 1342 | Feedly | RSS/Content | [feedly.com](https://feedly.com) | ✅ (200) | |
 | 1343 | Inoreader | RSS/Content | [inoreader.com](https://www.inoreader.com) | ✅ (200) | ◯ |
@@ -1083,7 +1083,7 @@
 ### Security
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 1177 | Auth0 | Security | [auth0.com](https://auth0.com) | ✅ (200) | |
 | 1236 | Trend Micro Cloud One | Security | [trendmicro.com](https://www.trendmicro.com) | ✅ (301) | |
 | 1237 | McAfee Enterprise | Security | [mcafee.com](https://www.mcafee.com) | ❌ (404) | |
@@ -1109,7 +1109,7 @@
 ### Social Media
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 188 | SocialDog | Social Media | [social-dog.net](https://social-dog.net) | ✅ (200) | |
 | 241 | SMAX Media | Social Media | [smaxmedia.co.jp](https://smaxmedia.co.jp) | ❌ (404) | |
 | 242 | Lancers Social | Social Media | [lancers.jp](https://www.lancers.jp) | ✅ (200) | |
@@ -1140,7 +1140,7 @@
 ### SocialMedia
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 1129 | Sendible | SocialMedia | [https://sendible.com](https://sendible.com) | ✅ (200) | |
 | 1130 | Mention | SocialMedia | [https://mention.com](https://mention.com) | ✅ (200) | |
 | 1131 | CoSchedule | SocialMedia | [https://coschedule.com](https://coschedule.com) | ✅ (200) | |
@@ -1184,7 +1184,7 @@
 ### Storage
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 66 | Box | Storage | [box.com](https://box.com) | ✅ (200) | ◯ |
 | 120 | Google Drive | Storage | [drive.google.com](https://drive.google.com) | ✅ (200) | ◯ |
 | 121 | OneDrive | Storage | [onedrive.com](https://onedrive.com) | ✅ (200) | ◯ |
@@ -1229,7 +1229,7 @@
 ### Translation
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 67 | Gengo | Translation | [gengo.com](https://gengo.com) | ✅ (200) | |
 | 68 | Crowdin | Translation | [crowdin.com](https://crowdin.com) | ✅ (200) | ◯ |
 | 243 | Mineta | Translation | [mineta.jp](https://mineta.jp) | ❌ (404) | |
@@ -1255,7 +1255,7 @@
 ### オフィス
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 300 | Spacemarket | オフィス | [spacemarket.com](https://spacemarket.com) | ✅ (200) | |
 | 799 | WeWork Japan | オフィス | [wework.com](https://wework.com) | ✅ (200) | |
 | 800 | Regus Japan | オフィス | [regus.com](https://regus.com) | ✅ (200) | |
@@ -1281,7 +1281,7 @@
 ### カスタマーサクセス
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 185 | Kando | カスタマーサクセス | [kando.io](https://kando.io) | ✅ (200) | |
 | 186 | Reps | カスタマーサクセス | [reps.co.jp](https://reps.co.jp) | ✅ (200) | |
 | 302 | Mieruca | カスタマーサクセス | [mieruca.com](https://mieruca.com) | ❌ (404) | |
@@ -1306,7 +1306,7 @@
 ### カスタマーサポート
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 59 | Zendesk | カスタマーサポート | [zendesk.com/ja](https://zendesk.com/ja) | ⚠️ (403) | ◯ |
 | 110 | Intercom | カスタマーサポート | [intercom.com](https://intercom.com) | ✅ (200) | ◯ |
 | 111 | Freshdesk | カスタマーサポート | [freshworks.com](https://freshworks.com) | ✅ (200) | ◯ |
@@ -1340,7 +1340,7 @@
 ### クラウド印刷
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 985 | ゼロックス | クラウド印刷 | [fuji-xerox.co.jp](https://www.fuji-xerox.co.jp) | ⚠️ (403) | |
 | 1321 | Riso | クラウド印刷 | [riso.co.jp](https://www.riso.co.jp) | ✅ (200) | |
 | 1482 | Ricoh Cloud Print | クラウド印刷 | [https://www.ricoh.co.jp](https://www.ricoh.co.jp) | ✅ (200) | |
@@ -1372,7 +1372,7 @@
 ### コラボレーション
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 31 | Chatwork | コラボレーション | [go.chatwork.com](https://go.chatwork.com) | ✅ (200) | ◯ |
 | 38 | Notion | コラボレーション | [notion.so](https://www.notion.so) | ✅ (200) | ◯ |
 | 49 | Microsoft Office 365 | コラボレーション | [office.com/ja-jp](https://office.com/ja-jp) | ⚠️ (403) | |
@@ -1397,7 +1397,7 @@
 ### タレントマネジメント
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 197 | Kaonavi | タレントマネジメント | [kaonavi.jp](https://kaonavi.jp) | ✅ (200) | ◯ |
 | 198 | Talentbox | タレントマネジメント | [talentbox.co.jp](https://talentbox.co.jp) | ✅ (200) | |
 | 240 | Learning Securities | タレントマネジメント | [learnings.co.jp](https://learnings.co.jp) | ✅ (200) | |
@@ -1426,7 +1426,7 @@
 ### 予約管理
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 75 | Airリザーブ | 予約管理 | [airregi.jp](https://airregi.jp) | ⚠️ (403) | |
 | 76 | hacomono | 予約管理 | [hacomono.jp](https://hacomono.jp) | ✅ (200) | |
 | 77 | ChoiceRESERVE | 予約管理 | [reservelink.co.jp](https://reservelink.co.jp) | ✅ (200) | |
@@ -1451,7 +1451,7 @@
 ### 人材管理
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 32 | SmartHR | 人材管理 | [smarthr.co.jp](https://smarthr.co.jp) | ✅ (200) | |
 | 51 | HRBase | 人材管理 | [hrbase.co.jp](https://hrbase.co.jp) | ✅ (200) | |
 | 53 | TeamSpirit | 人材管理 | [www.teamspirit.co.jp](https://www.teamspirit.co.jp) | ✅ (200) | ◯ |
@@ -1489,7 +1489,7 @@
 ### 会計
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 27 | freee | 会計 | [freee.co.jp](https://www.freee.co.jp) | ✅ (200) | ◯ |
 | 28 | Money Forward | 会計 | [moneyforward.com](https://www.moneyforward.com) | ✅ (200) | |
 | 29 | Zoho Books | 会計 | [zoho.com/jp/books](https://www.zoho.com/jp/books) | ✅ (200) | ◯ |
@@ -1514,7 +1514,7 @@
 ### 勤怠管理
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 33 | Jobcan | 勤怠管理 | [jobcan.jp](https://jobcan.jp) | ✅ (200) | |
 | 52 | King of Time | 勤怠管理 | [kingoftime.jp](https://kingoftime.jp) | ✅ (200) | ◯ |
 | 162 | jinjer勤怠 | 勤怠管理 | [jinjer.co.jp](https://jinjer.co.jp) | ✅ (200) | |
@@ -1539,7 +1539,7 @@
 ### 医療
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 7 | eMedical | 医療 | [emedical.co.jp](https://www.emedical.co.jp) | ❌ (404) | |
 | 8 | MUSE | 医療 | [muse-cloud.com](https://www.muse-cloud.com) | ❌ (404) | |
 | 9 | Clinic Cloud | 医療 | [clinic-cloud.com](https://www.clinic-cloud.com) | ✅ (200) | |
@@ -1567,7 +1567,7 @@
 ### 名片管理
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 30 | Sansan | 名片管理 | [sansan.com](https://sansan.com) | ✅ (200) | ◯ |
 | 158 | Eight (Eito) | 名片管理 | [eight.app](https://eight.app) | ⚠️ (403) | |
 | 792 | Eight | 名片管理 | [eight.app](https://eight.app) | ✅ (200) | |
@@ -1593,7 +1593,7 @@
 ### 採用管理
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 211 | sonar ATS | 採用管理 | [sonar-ats.jp](https://sonar-ats.jp) | ✅ (200) | |
 | 239 | Seek Cloud | 採用管理 | [seek-seeker.jp](https://seek-seeker.jp) | ❌ (404) | |
 | 258 | BizReach | 採用管理 | [bizreach.jp](https://bizreach.jp) | ✅ (200) | |
@@ -1621,7 +1621,7 @@
 ### 教育
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 21 | manaba | 教育 | [manaba.jp](https://www.manaba.jp) | ✅ (200) | |
 | 22 | Schoo | 教育 | [schoo.jp](https://www.schoo.jp) | ✅ (200) | |
 | 23 | Studyplus | 教育 | [studyplus.jp](https://www.studyplus.jp) | ✅ (200) | |
@@ -1690,7 +1690,7 @@
 ### 決済
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 19 | paypal-japan | 決済 | [paypal.com/jp/home](https://www.paypal.com/jp/home) | ✅ (200) | |
 | 20 | sb-payment | 決済 | [sbpayment.jp](https://www.sbpayment.jp) | ✅ (200) | |
 | 34 | Rakuten PAY | 決済 | [payment.rakuten.co.jp](https://payment.rakuten.co.jp) | ✅ (200) | |
@@ -1740,7 +1740,7 @@
 ### 法務
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 187 | LegalForce | 法務 | [legalforce.co.jp](https://legalforce.co.jp) | ✅ (200) | |
 | 235 | LegalOn | 法務 | [legalon.co.jp](https://legalon.co.jp) | ❌ (404) | |
 | 236 | Amino | 法務 | [amino.sh](https://amino.sh) | ❌ (404) | |
@@ -1789,7 +1789,7 @@
 ### 経費精算
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 213 | バクラク | 経費精算 | [bakuraku.jp](https://bakuraku.jp) | ✅ (200) | |
 | 237 | 経費革命 | 経費精算 | [keihikakumei.jp](https://keihikakumei.jp) | ❌ (404) | |
 | 238 | Expensify Japan | 経費精算 | [expensify.com](https://www.expensify.com) | ✅ (200) | |
@@ -1814,7 +1814,7 @@
 ### 製造
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
-|---|----------|----------|-------------|----------|
+|---|---------------|----------|-------------|----------|-----------|
 | 24 | SAP ERP | 製造 | [sap.com/japan](https://www.sap.com/japan) | ✅ (301) | |
 | 25 | Oracle NetSuite | 製造 | [oracle.com/jp/netsuite](https://www.oracle.com/jp/netsuite) | ⚠️ (403) | |
 | 26 | Smart Factory | 製造 | [smart-factory.jp](https://www.smart-factory.jp) | ❌ (404) | |
