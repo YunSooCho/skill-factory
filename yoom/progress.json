@@ -1,20 +1,22 @@
 {
   "total_estimated": 700,
   "completed": 10,
-  "last_updated": "2026-02-26T10:30:00+09:00",
-  "extraction_method": "correct_method - API Actions (플로 봇 오토메이션) + Triggers (프로 봇 트리거)",
+  "last_updated": "2026-02-26T10:40:00+09:00",
+  "extraction_method": "correct_method_v2_with_templates",
+  "description": "API Actions (플로 봇 오토메이션) + Triggers (프로 봇 트리거) + Templates (플로 봇 템플릿) 추출 완료",
   "batches": [
     {
       "id": 1,
-      "name": "test_batch_v2_corrected",
+      "name": "test_batch_final",
       "status": "completed",
-      "note": "Re-extracted with correct HTML parsing flowbot-action-item and flowbot-trigger-item",
+      "note": "완전한 데이터 추출: API Actions + Triggers + Templates",
       "apps": [
         {
           "slug": "gmail",
           "name": "Gmail",
           "api_actions_count": 5,
           "triggers_count": 3,
+          "templates_count": 6,
           "status": "done",
           "md_file": "apps/gmail.md"
         },
@@ -23,6 +25,7 @@
           "name": "Zoom",
           "api_actions_count": 31,
           "triggers_count": 16,
+          "templates_count": 6,
           "status": "done",
           "md_file": "apps/zoom.md"
         },
@@ -31,6 +34,7 @@
           "name": "Notion",
           "api_actions_count": 31,
           "triggers_count": 14,
+          "templates_count": 6,
           "status": "done",
           "md_file": "apps/notion.md"
         },
@@ -39,6 +43,7 @@
           "name": "OpenAI",
           "api_actions_count": 20,
           "triggers_count": 0,
+          "templates_count": 6,
           "status": "done",
           "md_file": "apps/openai.md"
         },
@@ -47,6 +52,7 @@
           "name": "ChatGPT",
           "api_actions_count": 10,
           "triggers_count": 1,
+          "templates_count": 6,
           "status": "done",
           "md_file": "apps/chatgpt.md"
         },
@@ -55,6 +61,7 @@
           "name": "Slack",
           "api_actions_count": 21,
           "triggers_count": 12,
+          "templates_count": 6,
           "status": "done",
           "md_file": "apps/slack.md"
         },
@@ -63,6 +70,7 @@
           "name": "Outlook",
           "api_actions_count": 18,
           "triggers_count": 6,
+          "templates_count": 6,
           "status": "done",
           "md_file": "apps/outlook.md"
         },
@@ -71,6 +79,7 @@
           "name": "Google Workspace",
           "api_actions_count": 13,
           "triggers_count": 2,
+          "templates_count": 6,
           "status": "done",
           "md_file": "apps/google-workspace.md"
         },
@@ -79,6 +88,7 @@
           "name": "Google ドキュメント",
           "api_actions_count": 5,
           "triggers_count": 0,
+          "templates_count": 6,
           "status": "done",
           "md_file": "apps/google-docs.md"
         },
@@ -87,14 +97,23 @@
           "name": "Microsoft Excel",
           "api_actions_count": 33,
           "triggers_count": 0,
+          "templates_count": 6,
           "status": "done",
           "md_file": "apps/microsoft-excel.md"
         }
       ]
     }
   ],
-  "html_structure": "flowbot-action-item (API Actions) and flowbot-trigger-item (Triggers) with span id='llisttext'",
+  "html_structure": {
+    "api_actions": "flowbot-action-item with span id='llisttext'",
+    "triggers": "flowbot-trigger-item with span id='llisttext'",
+    "templates": "fb-templates/{id} link with template-integration-title-break and template-integration-description-break"
+  },
   "url_pattern": "https://lp.yoom.fun/apps/{slug}",
-  "total_api_actions_found": 187,
-  "total_triggers_found": 54
+  "totals": {
+    "api_actions": 187,
+    "triggers": 54,
+    "templates": 60,
+    "total_items": 301
+  }
 }
