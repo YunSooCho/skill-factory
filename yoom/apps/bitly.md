@@ -1,0 +1,43 @@
+# Bitly - Yoom 連携
+
+## 📧 基本情報
+- **サービス名:** Bitly
+- **URL:** https://lp.yoom.fun/apps/bitly
+- **カテゴリー:** 業務一般
+
+---
+
+## 🔄 フローボットオペレーション (APIアクション) - 7個
+
+### APIアクション一覧:
+1. **Bitlinkを展開する**
+2. **リンクを短縮する**
+3. **Bitlinkのクリックサマリーを取得**
+4. **Bitlinkのクリック数を取得**
+5. **Bitlinkを作成**
+6. **Bitlinkを検索**
+7. **Bitlinkを削除**
+
+---
+
+## 🎯 フローボットトリガー - 0개
+
+### トリガー一覧:
+
+---
+
+## 📋 テンプレート - 6개
+
+### テンプレート一覧:
+1. **[テンプレート](https://lp.yoom.fun/fb-templates/179436)**
+2. **[テンプレート](https://lp.yoom.fun/fb-templates/179436)**
+3. **[テンプレート](https://lp.yoom.fun/fb-templates/319027)**
+4. **[テンプレート](https://lp.yoom.fun/fb-templates/319027)**
+5. **[テンプレート](https://lp.yoom.fun/fb-templates/179684)**
+6. **[テンプレート](https://lp.yoom.fun/fb-templates/179684)**
+
+---
+
+## ✅ Skill Factory マッチング
+- **サービス:** BitlyがSkill Factoryスペックに含まれるか確認中
+- **Yoom連携:** ○ (Yoomアプリ連携完了)

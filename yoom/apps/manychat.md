@@ -1,0 +1,39 @@
+# Manychat - Yoom 連携
+
+## 📧 基本情報
+- **サービス名:** Manychat
+- **URL:** https://lp.yoom.fun/apps/manychat
+- **カテゴリー:** 業務一般
+
+---
+
+## 🔄 フローボットオペレーション (APIアクション) - 8個
+
+### APIアクション一覧:
+1. **Remove Tag from Subscriber**
+2. **Send Flow to Subscriber**
+3. **Create Subscriber**
+4. **Search Subscriber by Full Name**
+5. **Update Subscriber**
+6. **Add Tag to Subscriber**
+7. **Set Custom Fields for Subscriber**
+8. **Get Subscriber**
+
+---
+
+## 🎯 フローボットトリガー - 1개
+
+### トリガー一覧:
+1. **Received External Request**
+
+---
+
+## 📋 テンプレート - 0개
+
+### テンプレート一覧:
+
+---
+
+## ✅ Skill Factory マッチング
+- **サービス:** ManychatがSkill Factoryスペックに含まれるか確認中
+- **Yoom連携:** ○ (Yoomアプリ連携完了)

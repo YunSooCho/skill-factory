@@ -1,0 +1,32 @@
+# Bakuraku Denshichobohozon - Yoom 連携
+
+## 📧 基本情報
+- **サービス名:** Bakuraku Denshichobohozon
+- **URL:** https://lp.yoom.fun/apps/bakuraku-denshichobohozon
+- **カテゴリー:** 業務一般
+
+---
+
+## 🔄 フローボットオペレーション (APIアクション) - 2個
+
+### APIアクション一覧:
+1. **特定の書類情報を更新**
+2. **ファイルをアップロード**
+
+---
+
+## 🎯 フローボットトリガー - 0개
+
+### トリガー一覧:
+
+---
+
+## 📋 テンプレート - 0개
+
+### テンプレート一覧:
+
+---
+
+## ✅ Skill Factory マッチング
+- **サービス:** Bakuraku DenshichobohozonがSkill Factoryスペックに含まれるか確認中
+- **Yoom連携:** ○ (Yoomアプリ連携完了)
