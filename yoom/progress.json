@@ -1,0 +1,27 @@
+{
+  "total_estimated": 700,
+  "completed": 10,
+  "last_updated": "2026-02-26T10:16:00+09:00",
+  "batches": [
+    {
+      "id": 1,
+      "name": "test_batch",
+      "status": "completed",
+      "apps": [
+        { "slug": "gmail", "name": "Gmail", "status": "done", "md_file": "apps/gmail.md" },
+        { "slug": "zoom", "name": "Zoom", "status": "done", "md_file": "apps/zoom.md" },
+        { "slug": "notion", "name": "Notion", "status": "done", "md_file": "apps/notion.md" },
+        { "slug": "openai", "name": "OpenAI", "status": "done", "md_file": "apps/openai.md" },
+        { "slug": "chatgpt", "name": "ChatGPT", "status": "done", "md_file": "apps/chatgpt.md" },
+        { "slug": "excel", "name": "Microsoft Excel", "status": "done", "md_file": "apps/microsoft-excel.md" },
+        { "slug": "google-workspace", "name": "Google Workspace", "status": "done", "md_file": "apps/google-workspace.md" },
+        { "slug": "google-docs", "name": "Google ドキュメント", "status": "done", "md_file": "apps/google-docs.md" },
+        { "slug": "slack", "name": "Slack", "status": "done", "md_file": "apps/slack.md" },
+        { "slug": "outlook", "name": "Outlook", "status": "done", "md_file": "apps/outlook.md" }
+      ]
+    }
+  ],
+  "url_pattern": "https://lp.yoom.fun/apps/{slug}",
+  "known_slugs_404": ["google-spreadsheet", "google-document"],
+  "notes": "URL slug은 앱마다 다름. google-docs는 OK, google-document는 404. 전체 수집시 /apps 페이지에서 href 크롤링 필요."
+}
