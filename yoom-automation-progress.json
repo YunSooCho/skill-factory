@@ -1580,58 +1580,61 @@
       },
       "triggers": {},
       "implemented_at": "2026-02-27T16:02:03.3NZ"
+    },
+    "beamer.md": {
+      "service_name": "Beamer",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "Create Post": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능 (최대 1,000 요청)",
+          "code_file": "github/skill-factory/repo/beamer/beamer_client.py",
+          "method": "BeamerAPIClient.create_post(post_data)"
+        }
+      },
+      "triggers": {},
+      "required_tasks": [
+        {
+          "task": "Beamer API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/Beamer 및 공식 API 문서 확인",
+          "status": "pending"
+        },
+        {
+          "task": "Beamer OAuth 앱 등록",
+          "priority": "high",
+          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "status": "pending"
+        },
+        {
+          "task": "Client ID 및 Client Secret 획득",
+          "priority": "high",
+          "description": "OAuth 앱에서 인증 정보 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "1개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T22:22:11.601724",
+      "implemented_at": "2026-02-28T08:45:00.000000"
     }
   },
   "pending": {
     "01_마케팅_Marketing": {
-      "beamer.md": {
-        "service_name": "Beamer",
-        "category": "マーケティング",
-        "integration_type": "oauth",
-        "integration_confidence": "high",
-        "integration_reasoning": "SaaS/OAuth 표준",
-        "api_actions": {
-          "Create Post": {
-            "status": "completed",
-            "testable": true,
-            "test_method": " Requires OAuth credentials. Test with real Beamer account and OAuth app setup. Example: poetry install && python beamer_api.py 'Test Title' 'Test Content' 'Test Author'"
-          }
-        },
-        "triggers": {},
-        "required_tasks": [
-          {
-            "task": "Beamer API 문서 검토",
-            "priority": "high",
-            "description": "https://lp.yoom.fun/apps/Beamer 및 공식 API 문서 확인",
-            "status": "pending"
-          },
-          {
-            "task": "Beamer OAuth 앱 등록",
-            "priority": "high",
-            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
-            "status": "pending"
-          },
-          {
-            "task": "Client ID 및 Client Secret 획득",
-            "priority": "high",
-            "description": "OAuth 앱에서 인증 정보 획득",
-            "status": "pending"
-          },
-          {
-            "task": "테스트 계정 또는 샌드박스 환경 구축",
-            "priority": "medium",
-            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
-            "status": "pending"
-          },
-          {
-            "task": "1개 API 액션 단위 테스트 작성",
-            "priority": "low",
-            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
-            "status": "pending"
-          }
-        ],
-        "analyzed_at": "2026-02-27T22:22:11.601724"
-      },
       "beehiiv.md": {
         "service_name": "Beehiiv",
         "category": "マーケティング",
