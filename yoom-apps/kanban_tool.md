@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Kanban_tool
 - **URL:** https://lp.yoom.fun/apps/kanban_tool
-- **カテゴリー:** 業務一般
+- **カテゴリー:** プロジェクト管理
 
 ---
 

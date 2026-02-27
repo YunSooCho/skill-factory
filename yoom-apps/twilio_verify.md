@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Twilio_verify
 - **URL:** https://lp.yoom.fun/apps/twilio_verify
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

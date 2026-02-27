@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Geniee Sfa
 - **URL:** https://lp.yoom.fun/apps/geniee-sfa
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

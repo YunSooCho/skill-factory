@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Google Drive
 - **URL:** https://lp.yoom.fun/apps/google-drive
-- **カテゴリー:** 業務一般
+- **カテゴリー:** ファイル管理
 
 ---
 

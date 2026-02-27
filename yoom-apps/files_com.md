@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Files_com
 - **URL:** https://lp.yoom.fun/apps/files_com
-- **カテゴリー:** 業務一般
+- **カテゴリー:** ファイル管理
 
 ---
 

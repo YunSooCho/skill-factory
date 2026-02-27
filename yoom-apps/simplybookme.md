@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Simplybookme
 - **URL:** https://lp.yoom.fun/apps/simplybookme
-- **カテゴリー:** 業務一般
+- **カテゴリー:** カレンダー
 
 ---
 

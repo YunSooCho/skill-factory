@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Opsgenie
 - **URL:** https://lp.yoom.fun/apps/opsgenie
-- **カテゴリー:** 業務一般
+- **カテゴリー:** ワークフロー
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Snack_prompt
 - **URL:** https://lp.yoom.fun/apps/snack_prompt
-- **カテゴリー:** 業務一般
+- **カテゴリー:** オートメーション
 
 ---
 

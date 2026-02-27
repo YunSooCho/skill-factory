@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Location_io
 - **URL:** https://lp.yoom.fun/apps/location_io
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Vectorizer_ai
 - **URL:** https://lp.yoom.fun/apps/vectorizer_ai
-- **カテゴリー:** 業務一般
+- **カテゴリー:** オートメーション
 
 ---
 

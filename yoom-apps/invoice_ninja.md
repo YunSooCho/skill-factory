@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Invoice_ninja
 - **URL:** https://lp.yoom.fun/apps/invoice_ninja
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 会計・経理
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Greptile
 - **URL:** https://lp.yoom.fun/apps/greptile
-- **カテゴリー:** 業務一般
+- **カテゴリー:** オートメーション
 
 ---
 

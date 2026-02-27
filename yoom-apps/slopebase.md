@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Slopebase
 - **URL:** https://lp.yoom.fun/apps/slopebase
-- **カテゴリー:** 業務一般
+- **カテゴリー:** Webデータベース
 
 ---
 

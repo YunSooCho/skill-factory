@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Leonardo Ai
 - **URL:** https://lp.yoom.fun/apps/leonardo-ai
-- **カテゴリー:** 業務一般
+- **カテゴリー:** Webサイト制作
 
 ---
 

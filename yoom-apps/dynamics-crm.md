@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Dynamics Crm
 - **URL:** https://lp.yoom.fun/apps/dynamics-crm
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

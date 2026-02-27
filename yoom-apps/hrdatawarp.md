@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Hrdatawarp
 - **URL:** https://lp.yoom.fun/apps/hrdatawarp
-- **カテゴリー:** 業務一般
+- **カテゴリー:** オートメーション
 
 ---
 

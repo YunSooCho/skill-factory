@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Google Chat
 - **URL:** https://lp.yoom.fun/apps/google-chat
-- **カテゴリー:** 業務一般
+- **カテゴリー:** チャットツール
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Ticket_tailor
 - **URL:** https://lp.yoom.fun/apps/ticket_tailor
-- **カテゴリー:** 業務一般
+- **カテゴリー:** EC・POSシステム
 
 ---
 

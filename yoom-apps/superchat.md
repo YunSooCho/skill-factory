@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Superchat
 - **URL:** https://lp.yoom.fun/apps/superchat
-- **カテゴリー:** 業務一般
+- **カテゴリー:** カスタマーサポート
 
 ---
 

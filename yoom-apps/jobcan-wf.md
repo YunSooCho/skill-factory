@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Jobcan Wf
 - **URL:** https://lp.yoom.fun/apps/jobcan-wf
-- **カテゴリー:** 業務一般
+- **カテゴリー:** ワークフロー
 
 ---
 

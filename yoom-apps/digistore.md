@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Digistore
 - **URL:** https://lp.yoom.fun/apps/digistore
-- **カテゴリー:** 業務一般
+- **カテゴリー:** EC・POSシステム
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Promptitude_io
 - **URL:** https://lp.yoom.fun/apps/promptitude_io
-- **カテゴリー:** 業務一般
+- **カテゴリー:** オートメーション
 
 ---
 

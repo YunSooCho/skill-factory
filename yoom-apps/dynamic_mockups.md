@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Dynamic_mockups
 - **URL:** https://lp.yoom.fun/apps/dynamic_mockups
-- **カテゴリー:** 業務一般
+- **カテゴリー:** EC・POSシステム
 
 ---
 

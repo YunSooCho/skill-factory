@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Pca_cloud_kyuyo_hyper
 - **URL:** https://lp.yoom.fun/apps/pca_cloud_kyuyo_hyper
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 人事・労務
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Klippa_dochorizon
 - **URL:** https://lp.yoom.fun/apps/klippa_docHorizon
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 会計・経理
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Product_fruits
 - **URL:** https://lp.yoom.fun/apps/product_fruits
-- **カテゴリー:** 業務一般
+- **カテゴリー:** カスタマーサポート
 
 ---
 

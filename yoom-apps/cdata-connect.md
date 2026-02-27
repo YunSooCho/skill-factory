@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Cdata Connect
 - **URL:** https://lp.yoom.fun/apps/cdata-connect
-- **カテゴリー:** 業務一般
+- **カテゴリー:** オートメーション
 
 ---
 

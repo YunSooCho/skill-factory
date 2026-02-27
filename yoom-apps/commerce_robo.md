@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Commerce_robo
 - **URL:** https://lp.yoom.fun/apps/commerce_robo
-- **カテゴリー:** 業務一般
+- **カテゴリー:** EC・POSシステム
 
 ---
 

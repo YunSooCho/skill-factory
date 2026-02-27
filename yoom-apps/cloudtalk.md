@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Cloudtalk
 - **URL:** https://lp.yoom.fun/apps/cloudtalk
-- **カテゴリー:** 業務一般
+- **カテゴリー:** カスタマーサポート
 
 ---
 

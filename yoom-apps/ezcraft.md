@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Ezcraft
 - **URL:** https://lp.yoom.fun/apps/ezcraft
-- **カテゴリー:** 業務一般
+- **カテゴリー:** Webデータベース
 
 ---
 

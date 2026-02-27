@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Moreapp_forms
 - **URL:** https://lp.yoom.fun/apps/moreapp_forms
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 入力フォーム
 
 ---
 

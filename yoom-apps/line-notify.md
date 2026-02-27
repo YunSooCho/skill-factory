@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Line Notify
 - **URL:** https://lp.yoom.fun/apps/line-notify
-- **カテゴリー:** 業務一般
+- **カテゴリー:** チャットツール
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Phone Appli People
 - **URL:** https://lp.yoom.fun/apps/phone-appli-people
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

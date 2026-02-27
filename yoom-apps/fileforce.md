@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Fileforce
 - **URL:** https://lp.yoom.fun/apps/fileforce
-- **カテゴリー:** 業務一般
+- **カテゴリー:** ファイル管理
 
 ---
 

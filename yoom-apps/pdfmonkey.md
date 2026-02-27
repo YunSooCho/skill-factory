@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Pdfmonkey
 - **URL:** https://lp.yoom.fun/apps/pdfmonkey
-- **カテゴリー:** 業務一般
+- **カテゴリー:** オートメーション
 
 ---
 

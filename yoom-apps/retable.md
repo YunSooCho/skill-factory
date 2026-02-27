@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Retable
 - **URL:** https://lp.yoom.fun/apps/retable
-- **カテゴリー:** 業務一般
+- **カテゴリー:** Webデータベース
 
 ---
 

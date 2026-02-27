@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Respond Io
 - **URL:** https://lp.yoom.fun/apps/respond-io
-- **カテゴリー:** 業務一般
+- **カテゴリー:** カスタマーサポート
 
 ---
 

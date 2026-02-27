@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** One Signal
 - **URL:** https://lp.yoom.fun/apps/one-signal
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

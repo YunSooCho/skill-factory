@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Intercom
 - **URL:** https://lp.yoom.fun/apps/intercom
-- **カテゴリー:** 業務一般
+- **カテゴリー:** カスタマーサポート
 
 ---
 

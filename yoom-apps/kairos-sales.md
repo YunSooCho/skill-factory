@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Kairos Sales
 - **URL:** https://lp.yoom.fun/apps/kairos-sales
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

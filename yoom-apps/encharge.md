@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Encharge
 - **URL:** https://lp.yoom.fun/apps/encharge
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

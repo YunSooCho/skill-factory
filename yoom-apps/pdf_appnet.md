@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Pdf_appnet
 - **URL:** https://lp.yoom.fun/apps/pdf_appnet
-- **カテゴリー:** 業務一般
+- **カテゴリー:** ファイル管理
 
 ---
 

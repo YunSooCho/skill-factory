@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Dynalist
 - **URL:** https://lp.yoom.fun/apps/dynalist
-- **カテゴリー:** 業務一般
+- **カテゴリー:** ナレッジベース
 
 ---
 

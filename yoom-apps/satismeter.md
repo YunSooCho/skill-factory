@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Satismeter
 - **URL:** https://lp.yoom.fun/apps/satismeter
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

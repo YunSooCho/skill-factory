@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Kaonavi
 - **URL:** https://lp.yoom.fun/apps/kaonavi
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 人事・労務
 
 ---
 

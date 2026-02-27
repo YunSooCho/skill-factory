@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Booqable
 - **URL:** https://lp.yoom.fun/apps/booqable
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 受発注・在庫管理
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Gmo Sign
 - **URL:** https://lp.yoom.fun/apps/gmo-sign
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 契約締結
 
 ---
 

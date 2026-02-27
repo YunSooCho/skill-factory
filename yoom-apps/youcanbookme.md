@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Youcanbookme
 - **URL:** https://lp.yoom.fun/apps/youcanbookme
-- **カテゴリー:** 業務一般
+- **カテゴリー:** カレンダー
 
 ---
 

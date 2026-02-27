@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Ganttpro
 - **URL:** https://lp.yoom.fun/apps/ganttpro
-- **カテゴリー:** 業務一般
+- **カテゴリー:** プロジェクト管理
 
 ---
 

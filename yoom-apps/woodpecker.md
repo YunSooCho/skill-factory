@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Woodpecker
 - **URL:** https://lp.yoom.fun/apps/woodpecker
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

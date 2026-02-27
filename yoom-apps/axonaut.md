@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Axonaut
 - **URL:** https://lp.yoom.fun/apps/axonaut
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

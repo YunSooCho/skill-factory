@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Bcart
 - **URL:** https://lp.yoom.fun/apps/bcart
-- **カテゴリー:** 業務一般
+- **カテゴリー:** EC・POSシステム
 
 ---
 

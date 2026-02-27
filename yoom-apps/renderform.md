@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Renderform
 - **URL:** https://lp.yoom.fun/apps/renderform
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Woocommerce
 - **URL:** https://lp.yoom.fun/apps/woocommerce
-- **カテゴリー:** 業務一般
+- **カテゴリー:** EC・POSシステム
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Resource_guru
 - **URL:** https://lp.yoom.fun/apps/resource_guru
-- **カテゴリー:** 業務一般
+- **カテゴリー:** プロジェクト管理
 
 ---
 

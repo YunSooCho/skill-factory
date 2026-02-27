@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Findymail
 - **URL:** https://lp.yoom.fun/apps/findymail
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

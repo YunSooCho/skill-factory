@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Freshdesk
 - **URL:** https://lp.yoom.fun/apps/freshdesk
-- **カテゴリー:** 業務一般
+- **カテゴリー:** カスタマーサポート
 
 ---
 

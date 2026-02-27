@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Xodo Sign
 - **URL:** https://lp.yoom.fun/apps/xodo-sign
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 契約締結
 
 ---
 

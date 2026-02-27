@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Dropbox
 - **URL:** https://lp.yoom.fun/apps/dropbox
-- **カテゴリー:** 業務一般
+- **カテゴリー:** ファイル管理
 
 ---
 

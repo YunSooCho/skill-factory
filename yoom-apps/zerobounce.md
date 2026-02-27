@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Zerobounce
 - **URL:** https://lp.yoom.fun/apps/zerobounce
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

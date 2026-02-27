@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Saleslens
 - **URL:** https://lp.yoom.fun/apps/saleslens
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Calendly
 - **URL:** https://lp.yoom.fun/apps/calendly
-- **カテゴリー:** 業務一般
+- **カテゴリー:** カレンダー
 
 ---
 

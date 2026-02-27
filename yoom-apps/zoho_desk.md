@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Zoho_desk
 - **URL:** https://lp.yoom.fun/apps/zoho_desk
-- **カテゴリー:** 業務一般
+- **カテゴリー:** カスタマーサポート
 
 ---
 

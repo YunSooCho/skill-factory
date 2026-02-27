@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Cloudflare
 - **URL:** https://lp.yoom.fun/apps/cloudflare
-- **カテゴリー:** 業務一般
+- **カテゴリー:** Webサイト制作
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Zoho Crm Oauth
 - **URL:** https://lp.yoom.fun/apps/zoho-crm-oauth
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

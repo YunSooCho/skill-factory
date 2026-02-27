@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Google Analytics
 - **URL:** https://lp.yoom.fun/apps/google-analytics
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

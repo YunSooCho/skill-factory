@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Sasuke Works
 - **URL:** https://lp.yoom.fun/apps/sasuke-works
-- **カテゴリー:** 業務一般
+- **カテゴリー:** Webデータベース
 
 ---
 

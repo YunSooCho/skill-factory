@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Sonderplan
 - **URL:** https://lp.yoom.fun/apps/sonderplan
-- **カテゴリー:** 業務一般
+- **カテゴリー:** プロジェクト管理
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Cloudconvert
 - **URL:** https://lp.yoom.fun/apps/cloudconvert
-- **カテゴリー:** 業務一般
+- **カテゴリー:** オートメーション
 
 ---
 

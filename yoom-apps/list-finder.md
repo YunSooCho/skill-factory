@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** List Finder
 - **URL:** https://lp.yoom.fun/apps/list-finder
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

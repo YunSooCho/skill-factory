@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Idoklad
 - **URL:** https://lp.yoom.fun/apps/idoklad
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 会計・経理
 
 ---
 

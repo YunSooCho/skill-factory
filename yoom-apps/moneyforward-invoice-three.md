@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Moneyforward Invoice Three
 - **URL:** https://lp.yoom.fun/apps/moneyforward-invoice-three
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 会計・経理
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Templated
 - **URL:** https://lp.yoom.fun/apps/templated
-- **カテゴリー:** 業務一般
+- **カテゴリー:** オートメーション
 
 ---
 

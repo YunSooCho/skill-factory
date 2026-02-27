@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Cloud_pay_neo
 - **URL:** https://lp.yoom.fun/apps/cloud_pay_neo
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 決済
 
 ---
 

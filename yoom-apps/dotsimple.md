@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Dotsimple
 - **URL:** https://lp.yoom.fun/apps/dotsimple
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

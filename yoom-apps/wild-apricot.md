@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Wild Apricot
 - **URL:** https://lp.yoom.fun/apps/wild-apricot
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

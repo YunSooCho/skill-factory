@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Mailchimp
 - **URL:** https://lp.yoom.fun/apps/mailchimp
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

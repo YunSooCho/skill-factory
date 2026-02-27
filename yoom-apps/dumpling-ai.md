@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Dumpling Ai
 - **URL:** https://lp.yoom.fun/apps/dumpling-ai
-- **カテゴリー:** 業務一般
+- **カテゴリー:** オートメーション
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Oopspam_anti_spam
 - **URL:** https://lp.yoom.fun/apps/oopspam_anti_spam
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

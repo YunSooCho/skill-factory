@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Espo_crm
 - **URL:** https://lp.yoom.fun/apps/espo_crm
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

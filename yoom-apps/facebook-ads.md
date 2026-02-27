@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Facebook Ads
 - **URL:** https://lp.yoom.fun/apps/facebook-ads
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

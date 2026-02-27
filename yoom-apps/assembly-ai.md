@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Assembly Ai
 - **URL:** https://lp.yoom.fun/apps/assembly-ai
-- **カテゴリー:** 業務一般
+- **カテゴリー:** オートメーション
 
 ---
 

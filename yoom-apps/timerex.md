@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Timerex
 - **URL:** https://lp.yoom.fun/apps/timerex
-- **カテゴリー:** 業務一般
+- **カテゴリー:** カレンダー
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Runrun_it
 - **URL:** https://lp.yoom.fun/apps/runrun_it
-- **カテゴリー:** 業務一般
+- **カテゴリー:** プロジェクト管理
 
 ---
 

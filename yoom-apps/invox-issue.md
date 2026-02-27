@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Invox Issue
 - **URL:** https://lp.yoom.fun/apps/invox-issue
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 会計・経理
 
 ---
 

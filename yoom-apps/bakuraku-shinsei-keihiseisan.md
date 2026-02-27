@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Bakuraku Shinsei Keihiseisan
 - **URL:** https://lp.yoom.fun/apps/bakuraku-shinsei-keihiseisan
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 会計・経理
 
 ---
 

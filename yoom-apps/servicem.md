@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Servicem
 - **URL:** https://lp.yoom.fun/apps/servicem
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

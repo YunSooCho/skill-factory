@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Mastodon
 - **URL:** https://lp.yoom.fun/apps/mastodon
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

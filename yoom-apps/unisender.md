@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Unisender
 - **URL:** https://lp.yoom.fun/apps/unisender
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

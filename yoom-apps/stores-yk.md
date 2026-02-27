@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Stores Yk
 - **URL:** https://lp.yoom.fun/apps/stores-yk
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

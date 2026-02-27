@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Fakturoid
 - **URL:** https://lp.yoom.fun/apps/fakturoid
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 会計・経理
 
 ---
 

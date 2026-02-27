@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Helpwise
 - **URL:** https://lp.yoom.fun/apps/helpwise
-- **カテゴリー:** 業務一般
+- **カテゴリー:** カスタマーサポート
 
 ---
 

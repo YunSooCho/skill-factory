@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Asana Oauth
 - **URL:** https://lp.yoom.fun/apps/asana-oauth
-- **カテゴリー:** 業務一般
+- **カテゴリー:** プロジェクト管理
 
 ---
 

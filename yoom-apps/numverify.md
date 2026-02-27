@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Numverify
 - **URL:** https://lp.yoom.fun/apps/numverify
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

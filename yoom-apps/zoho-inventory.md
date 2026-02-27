@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Zoho Inventory
 - **URL:** https://lp.yoom.fun/apps/zoho-inventory
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 受発注・在庫管理
 
 ---
 

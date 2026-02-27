@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Google Business Profile
 - **URL:** https://lp.yoom.fun/apps/google-business-profile
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

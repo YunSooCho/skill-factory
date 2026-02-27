@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Reply_io
 - **URL:** https://lp.yoom.fun/apps/reply_io
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

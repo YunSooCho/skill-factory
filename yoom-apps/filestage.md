@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Filestage
 - **URL:** https://lp.yoom.fun/apps/filestage
-- **カテゴリー:** 業務一般
+- **カテゴリー:** ファイル管理
 
 ---
 

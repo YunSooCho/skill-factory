@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Salesflare
 - **URL:** https://lp.yoom.fun/apps/salesflare
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

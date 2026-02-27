@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Convenia
 - **URL:** https://lp.yoom.fun/apps/convenia
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 人事・労務
 
 ---
 

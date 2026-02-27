@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Qdrant
 - **URL:** https://lp.yoom.fun/apps/qdrant
-- **カテゴリー:** 業務一般
+- **カテゴリー:** Webデータベース
 
 ---
 

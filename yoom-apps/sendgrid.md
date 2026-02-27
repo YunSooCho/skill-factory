@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Sendgrid
 - **URL:** https://lp.yoom.fun/apps/sendgrid
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

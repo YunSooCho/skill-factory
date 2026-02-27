@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Getform
 - **URL:** https://lp.yoom.fun/apps/getform
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 入力フォーム
 
 ---
 

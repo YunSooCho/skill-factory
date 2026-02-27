@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Openrouter
 - **URL:** https://lp.yoom.fun/apps/openrouter
-- **カテゴリー:** 業務一般
+- **カテゴリー:** オートメーション
 
 ---
 

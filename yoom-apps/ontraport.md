@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Ontraport
 - **URL:** https://lp.yoom.fun/apps/ontraport
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

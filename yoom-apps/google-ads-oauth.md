@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Google Ads Oauth
 - **URL:** https://lp.yoom.fun/apps/google-ads-oauth
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

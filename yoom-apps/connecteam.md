@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Connecteam
 - **URL:** https://lp.yoom.fun/apps/connecteam
-- **カテゴリー:** 業務一般
+- **カテゴリー:** プロジェクト管理
 
 ---
 

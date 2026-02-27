@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Adobe Sign
 - **URL:** https://lp.yoom.fun/apps/adobe-sign
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 契約締結
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Byteplant Phone Validator
 - **URL:** https://lp.yoom.fun/apps/byteplant-phone-validator
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

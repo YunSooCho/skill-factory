@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Mailersend
 - **URL:** https://lp.yoom.fun/apps/mailersend
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

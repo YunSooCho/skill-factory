@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** People_data_labs
 - **URL:** https://lp.yoom.fun/apps/people_data_labs
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

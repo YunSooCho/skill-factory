@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Kintone
 - **URL:** https://lp.yoom.fun/apps/kintone
-- **カテゴリー:** 業務一般
+- **カテゴリー:** Webデータベース
 
 ---
 

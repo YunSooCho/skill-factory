@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Mailercloud
 - **URL:** https://lp.yoom.fun/apps/mailercloud
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

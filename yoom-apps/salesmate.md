@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Salesmate
 - **URL:** https://lp.yoom.fun/apps/salesmate
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

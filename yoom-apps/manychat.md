@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Manychat
 - **URL:** https://lp.yoom.fun/apps/manychat
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

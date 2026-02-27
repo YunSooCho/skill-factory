@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Burst_sms
 - **URL:** https://lp.yoom.fun/apps/burst_sms
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

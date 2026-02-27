@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Dataforseo
 - **URL:** https://lp.yoom.fun/apps/dataforseo
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

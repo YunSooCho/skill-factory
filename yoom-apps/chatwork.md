@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Chatwork
 - **URL:** https://lp.yoom.fun/apps/chatwork
-- **カテゴリー:** 業務一般
+- **カテゴリー:** チャットツール
 
 ---
 

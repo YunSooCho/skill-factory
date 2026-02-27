@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Getprospect
 - **URL:** https://lp.yoom.fun/apps/getprospect
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

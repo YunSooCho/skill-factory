@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Pandadoc
 - **URL:** https://lp.yoom.fun/apps/pandadoc
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 契約締結
 
 ---
 

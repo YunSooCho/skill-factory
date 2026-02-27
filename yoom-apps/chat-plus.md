@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Chat Plus
 - **URL:** https://lp.yoom.fun/apps/chat-plus
-- **カテゴリー:** 業務一般
+- **カテゴリー:** カスタマーサポート
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Printify
 - **URL:** https://lp.yoom.fun/apps/printify
-- **カテゴリー:** 業務一般
+- **カテゴリー:** EC・POSシステム
 
 ---
 

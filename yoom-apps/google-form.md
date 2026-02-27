@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Google Form
 - **URL:** https://lp.yoom.fun/apps/google-form
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 入力フォーム
 
 ---
 

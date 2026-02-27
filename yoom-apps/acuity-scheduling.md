@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Acuity Scheduling
 - **URL:** https://lp.yoom.fun/apps/acuity-scheduling
-- **カテゴリー:** 業務一般
+- **カテゴリー:** カレンダー
 
 ---
 

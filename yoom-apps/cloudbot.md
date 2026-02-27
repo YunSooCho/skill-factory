@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Cloudbot
 - **URL:** https://lp.yoom.fun/apps/cloudbot
-- **カテゴリー:** 業務一般
+- **カテゴリー:** オートメーション
 
 ---
 

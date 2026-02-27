@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Pappers
 - **URL:** https://lp.yoom.fun/apps/pappers
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

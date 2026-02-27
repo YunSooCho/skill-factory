@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Lemon Squeezy
 - **URL:** https://lp.yoom.fun/apps/lemon-squeezy
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 決済
 
 ---
 

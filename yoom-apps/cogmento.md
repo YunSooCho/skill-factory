@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Cogmento
 - **URL:** https://lp.yoom.fun/apps/cogmento
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

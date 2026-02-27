@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Timelinesai
 - **URL:** https://lp.yoom.fun/apps/timelinesai
-- **カテゴリー:** 業務一般
+- **カテゴリー:** カスタマーサポート
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Delighted
 - **URL:** https://lp.yoom.fun/apps/delighted
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

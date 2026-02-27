@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Relation
 - **URL:** https://lp.yoom.fun/apps/relation
-- **カテゴリー:** 業務一般
+- **カテゴリー:** カスタマーサポート
 
 ---
 

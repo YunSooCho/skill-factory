@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Bakuraku Denshichobohozon
 - **URL:** https://lp.yoom.fun/apps/bakuraku-denshichobohozon
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 会計・経理
 
 ---
 

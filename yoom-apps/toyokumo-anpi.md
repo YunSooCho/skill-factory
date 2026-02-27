@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Toyokumo Anpi
 - **URL:** https://lp.yoom.fun/apps/toyokumo-anpi
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 人事・労務
 
 ---
 

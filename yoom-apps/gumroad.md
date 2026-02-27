@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Gumroad
 - **URL:** https://lp.yoom.fun/apps/gumroad
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 決済
 
 ---
 

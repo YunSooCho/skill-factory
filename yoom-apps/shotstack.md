@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Shotstack
 - **URL:** https://lp.yoom.fun/apps/shotstack
-- **カテゴリー:** 業務一般
+- **カテゴリー:** オートメーション
 
 ---
 

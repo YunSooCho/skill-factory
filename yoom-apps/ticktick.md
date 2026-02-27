@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Ticktick
 - **URL:** https://lp.yoom.fun/apps/ticktick
-- **カテゴリー:** 業務一般
+- **カテゴリー:** プロジェクト管理
 
 ---
 

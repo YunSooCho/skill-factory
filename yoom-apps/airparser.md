@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Airparser
 - **URL:** https://lp.yoom.fun/apps/airparser
-- **カテゴリー:** 業務一般
+- **カテゴリー:** オートメーション
 
 ---
 

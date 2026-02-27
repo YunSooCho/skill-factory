@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Help Scout
 - **URL:** https://lp.yoom.fun/apps/help-scout
-- **カテゴリー:** 業務一般
+- **カテゴリー:** カスタマーサポート
 
 ---
 

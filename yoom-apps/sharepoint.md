@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Sharepoint
 - **URL:** https://lp.yoom.fun/apps/sharepoint
-- **カテゴリー:** 業務一般
+- **カテゴリー:** ファイル管理
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Hotmart
 - **URL:** https://lp.yoom.fun/apps/hotmart
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 決済
 
 ---
 

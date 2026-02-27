@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Remove Bg
 - **URL:** https://lp.yoom.fun/apps/remove-bg
-- **カテゴリー:** 業務一般
+- **カテゴリー:** Webサイト制作
 
 ---
 

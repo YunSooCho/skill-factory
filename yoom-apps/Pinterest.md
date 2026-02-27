@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Pinterest
 - **URL:** https://lp.yoom.fun/apps/Pinterest
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

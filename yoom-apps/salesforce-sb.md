@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Salesforce Sb
 - **URL:** https://lp.yoom.fun/apps/salesforce-sb
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

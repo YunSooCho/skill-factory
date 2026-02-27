@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Zoho_recruit
 - **URL:** https://lp.yoom.fun/apps/zoho_recruit
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 人事・労務
 
 ---
 

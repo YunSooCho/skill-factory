@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Smart Hr
 - **URL:** https://lp.yoom.fun/apps/smart-hr
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 人事・労務
 
 ---
 

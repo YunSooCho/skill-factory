@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Whoisfreaks
 - **URL:** https://lp.yoom.fun/apps/whoisfreaks
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

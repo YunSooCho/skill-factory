@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Makeleaps
 - **URL:** https://lp.yoom.fun/apps/makeleaps
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 会計・経理
 
 ---
 

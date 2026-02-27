@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Pdf_maker
 - **URL:** https://lp.yoom.fun/apps/pdf_maker
-- **カテゴリー:** 業務一般
+- **カテゴリー:** オートメーション
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Pca Cloud Kyuyo
 - **URL:** https://lp.yoom.fun/apps/pca-cloud-kyuyo
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 人事・労務
 
 ---
 

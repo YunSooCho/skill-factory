@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Pca_cloud_accounting_hyper
 - **URL:** https://lp.yoom.fun/apps/pca_cloud_accounting_hyper
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 会計・経理
 
 ---
 

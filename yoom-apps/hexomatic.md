@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Hexomatic
 - **URL:** https://lp.yoom.fun/apps/hexomatic
-- **カテゴリー:** 業務一般
+- **カテゴリー:** オートメーション
 
 ---
 

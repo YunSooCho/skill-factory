@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Bubble
 - **URL:** https://lp.yoom.fun/apps/bubble
-- **カテゴリー:** 業務一般
+- **カテゴリー:** Webサイト制作
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Botpress
 - **URL:** https://lp.yoom.fun/apps/botpress
-- **カテゴリー:** 業務一般
+- **カテゴリー:** オートメーション
 
 ---
 

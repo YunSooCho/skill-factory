@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Zoho_creator
 - **URL:** https://lp.yoom.fun/apps/zoho_creator
-- **カテゴリー:** 業務一般
+- **カテゴリー:** Webデータベース
 
 ---
 

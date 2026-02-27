@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Formbricks
 - **URL:** https://lp.yoom.fun/apps/formbricks
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 入力フォーム
 
 ---
 

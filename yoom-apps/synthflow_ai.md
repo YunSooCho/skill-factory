@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Synthflow_ai
 - **URL:** https://lp.yoom.fun/apps/synthflow_ai
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

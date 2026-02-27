@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Big_mailer
 - **URL:** https://lp.yoom.fun/apps/big_mailer
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Pipedrive
 - **URL:** https://lp.yoom.fun/apps/pipedrive
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

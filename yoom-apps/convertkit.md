@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Convertkit
 - **URL:** https://lp.yoom.fun/apps/convertkit
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

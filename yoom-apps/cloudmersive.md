@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Cloudmersive
 - **URL:** https://lp.yoom.fun/apps/cloudmersive
-- **カテゴリー:** 業務一般
+- **カテゴリー:** オートメーション
 
 ---
 

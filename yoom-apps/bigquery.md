@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Bigquery
 - **URL:** https://lp.yoom.fun/apps/bigquery
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

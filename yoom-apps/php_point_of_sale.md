@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Php_point_of_sale
 - **URL:** https://lp.yoom.fun/apps/php_point_of_sale
-- **カテゴリー:** 業務一般
+- **カテゴリー:** EC・POSシステム
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Mailrelay
 - **URL:** https://lp.yoom.fun/apps/mailrelay
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Moneyforward_cloudinvoice
 - **URL:** https://lp.yoom.fun/apps/moneyforward_cloudinvoice
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 会計・経理
 
 ---
 

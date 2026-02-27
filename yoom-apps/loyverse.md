@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Loyverse
 - **URL:** https://lp.yoom.fun/apps/loyverse
-- **カテゴリー:** 業務一般
+- **カテゴリー:** EC・POSシステム
 
 ---
 

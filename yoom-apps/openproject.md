@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Openproject
 - **URL:** https://lp.yoom.fun/apps/openproject
-- **カテゴリー:** 業務一般
+- **カテゴリー:** プロジェクト管理
 
 ---
 

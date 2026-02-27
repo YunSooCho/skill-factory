@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Canbus
 - **URL:** https://lp.yoom.fun/apps/canbus
-- **カテゴリー:** 業務一般
+- **カテゴリー:** Webデータベース
 
 ---
 

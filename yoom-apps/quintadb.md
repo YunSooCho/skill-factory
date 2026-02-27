@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Quintadb
 - **URL:** https://lp.yoom.fun/apps/quintadb
-- **カテゴリー:** 業務一般
+- **カテゴリー:** Webデータベース
 
 ---
 

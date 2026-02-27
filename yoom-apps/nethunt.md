@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Nethunt
 - **URL:** https://lp.yoom.fun/apps/nethunt
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

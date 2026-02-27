@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Textmagic
 - **URL:** https://lp.yoom.fun/apps/textmagic
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

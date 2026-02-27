@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Retell Ai
 - **URL:** https://lp.yoom.fun/apps/retell-ai
-- **カテゴリー:** 業務一般
+- **カテゴリー:** オートメーション
 
 ---
 

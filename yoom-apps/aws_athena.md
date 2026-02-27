@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Aws_athena
 - **URL:** https://lp.yoom.fun/apps/aws_athena
-- **カテゴリー:** 業務一般
+- **カテゴリー:** Webデータベース
 
 ---
 

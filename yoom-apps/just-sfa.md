@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Just Sfa
 - **URL:** https://lp.yoom.fun/apps/just-sfa
-- **カテゴリー:** 業務一般
+- **カテゴリー:** Webデータベース
 
 ---
 

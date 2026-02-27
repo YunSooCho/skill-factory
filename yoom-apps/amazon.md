@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Amazon
 - **URL:** https://lp.yoom.fun/apps/amazon
-- **カテゴリー:** 業務一般
+- **カテゴリー:** EC・POSシステム
 
 ---
 

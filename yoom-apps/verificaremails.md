@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Verificaremails
 - **URL:** https://lp.yoom.fun/apps/verificaremails
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

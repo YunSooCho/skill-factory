@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Kickflow
 - **URL:** https://lp.yoom.fun/apps/kickflow
-- **カテゴリー:** 業務一般
+- **カテゴリー:** ワークフロー
 
 ---
 

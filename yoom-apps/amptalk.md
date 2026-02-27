@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Amptalk
 - **URL:** https://lp.yoom.fun/apps/amptalk
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

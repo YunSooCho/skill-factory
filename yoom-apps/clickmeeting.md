@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Clickmeeting
 - **URL:** https://lp.yoom.fun/apps/clickmeeting
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

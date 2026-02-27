@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Liveagent
 - **URL:** https://lp.yoom.fun/apps/liveagent
-- **カテゴリー:** 業務一般
+- **カテゴリー:** カスタマーサポート
 
 ---
 

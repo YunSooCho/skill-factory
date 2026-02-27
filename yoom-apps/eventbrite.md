@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Eventbrite
 - **URL:** https://lp.yoom.fun/apps/eventbrite
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

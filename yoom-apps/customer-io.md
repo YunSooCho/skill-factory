@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Customer Io
 - **URL:** https://lp.yoom.fun/apps/customer-io
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

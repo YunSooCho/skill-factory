@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Systeme Io
 - **URL:** https://lp.yoom.fun/apps/systeme-io
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

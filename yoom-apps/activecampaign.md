@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Activecampaign
 - **URL:** https://lp.yoom.fun/apps/activecampaign
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

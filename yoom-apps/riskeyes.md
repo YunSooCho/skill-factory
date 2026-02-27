@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Riskeyes
 - **URL:** https://lp.yoom.fun/apps/riskeyes
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

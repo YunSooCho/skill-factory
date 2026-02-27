@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** All Images Ai
 - **URL:** https://lp.yoom.fun/apps/all-images-ai
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

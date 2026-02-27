@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Clio_manage
 - **URL:** https://lp.yoom.fun/apps/clio_manage
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

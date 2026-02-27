@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Ipqualityscore
 - **URL:** https://lp.yoom.fun/apps/ipqualityscore
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

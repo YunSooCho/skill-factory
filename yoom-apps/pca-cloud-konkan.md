@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Pca Cloud Konkan
 - **URL:** https://lp.yoom.fun/apps/pca-cloud-konkan
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 受発注・在庫管理
 
 ---
 

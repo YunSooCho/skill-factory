@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Roborobo
 - **URL:** https://lp.yoom.fun/apps/roborobo
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

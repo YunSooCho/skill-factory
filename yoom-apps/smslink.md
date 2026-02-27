@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Smslink
 - **URL:** https://lp.yoom.fun/apps/smslink
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

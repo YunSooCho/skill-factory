@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Fullenrich
 - **URL:** https://lp.yoom.fun/apps/fullenrich
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

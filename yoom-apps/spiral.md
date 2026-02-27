@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Spiral
 - **URL:** https://lp.yoom.fun/apps/spiral
-- **カテゴリー:** 業務一般
+- **カテゴリー:** Webデータベース
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Gbiz Info
 - **URL:** https://lp.yoom.fun/apps/gbiz-info
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

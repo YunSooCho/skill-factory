@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Abyssale
 - **URL:** https://lp.yoom.fun/apps/abyssale
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Rd Station Crm
 - **URL:** https://lp.yoom.fun/apps/rd-station-crm
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

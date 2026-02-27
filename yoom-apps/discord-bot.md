@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Discord Bot
 - **URL:** https://lp.yoom.fun/apps/discord-bot
-- **カテゴリー:** 業務一般
+- **カテゴリー:** チャットツール
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Contentful
 - **URL:** https://lp.yoom.fun/apps/contentful
-- **カテゴリー:** 業務一般
+- **カテゴリー:** Webサイト制作
 
 ---
 

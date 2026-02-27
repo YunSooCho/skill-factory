@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Cleverreach
 - **URL:** https://lp.yoom.fun/apps/cleverreach
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

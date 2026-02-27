@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Formrun
 - **URL:** https://lp.yoom.fun/apps/formrun
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 入力フォーム
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Mediasms
 - **URL:** https://lp.yoom.fun/apps/mediasms
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

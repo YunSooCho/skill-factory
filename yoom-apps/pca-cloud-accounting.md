@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Pca Cloud Accounting
 - **URL:** https://lp.yoom.fun/apps/pca-cloud-accounting
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 会計・経理
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Omnisend
 - **URL:** https://lp.yoom.fun/apps/omnisend
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Freshchat
 - **URL:** https://lp.yoom.fun/apps/freshchat
-- **カテゴリー:** 業務一般
+- **カテゴリー:** カスタマーサポート
 
 ---
 

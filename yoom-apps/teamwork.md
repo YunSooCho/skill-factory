@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Teamwork
 - **URL:** https://lp.yoom.fun/apps/teamwork
-- **カテゴリー:** 業務一般
+- **カテゴリー:** プロジェクト管理
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Craftmypdf
 - **URL:** https://lp.yoom.fun/apps/craftmypdf
-- **カテゴリー:** 業務一般
+- **カテゴリー:** オートメーション
 
 ---
 

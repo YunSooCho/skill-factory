@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Contracts Clm
 - **URL:** https://lp.yoom.fun/apps/contracts-clm
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 契約締結
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Quipu Token
 - **URL:** https://lp.yoom.fun/apps/quipu-token
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 会計・経理
 
 ---
 

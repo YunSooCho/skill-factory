@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Aws_s_three
 - **URL:** https://lp.yoom.fun/apps/aws_s_three
-- **カテゴリー:** 業務一般
+- **カテゴリー:** ファイル管理
 
 ---
 

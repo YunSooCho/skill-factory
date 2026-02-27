@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Gender_api
 - **URL:** https://lp.yoom.fun/apps/gender_api
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

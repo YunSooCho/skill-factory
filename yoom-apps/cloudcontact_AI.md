@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Cloudcontact_ai
 - **URL:** https://lp.yoom.fun/apps/cloudcontact_AI
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

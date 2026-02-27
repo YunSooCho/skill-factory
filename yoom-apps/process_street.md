@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Process_street
 - **URL:** https://lp.yoom.fun/apps/process_street
-- **カテゴリー:** 業務一般
+- **カテゴリー:** ワークフロー
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Pagerduty
 - **URL:** https://lp.yoom.fun/apps/pagerduty
-- **カテゴリー:** 業務一般
+- **カテゴリー:** ワークフロー
 
 ---
 

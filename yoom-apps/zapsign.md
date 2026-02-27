@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Zapsign
 - **URL:** https://lp.yoom.fun/apps/zapsign
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 契約締結
 
 ---
 

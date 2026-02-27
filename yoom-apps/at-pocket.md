@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** At Pocket
 - **URL:** https://lp.yoom.fun/apps/at-pocket
-- **カテゴリー:** 業務一般
+- **カテゴリー:** Webデータベース
 
 ---
 

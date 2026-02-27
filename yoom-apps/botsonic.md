@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Botsonic
 - **URL:** https://lp.yoom.fun/apps/botsonic
-- **カテゴリー:** 業務一般
+- **カテゴリー:** オートメーション
 
 ---
 

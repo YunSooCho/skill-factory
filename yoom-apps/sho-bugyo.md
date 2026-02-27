@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Sho Bugyo
 - **URL:** https://lp.yoom.fun/apps/sho-bugyo
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

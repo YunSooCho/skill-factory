@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Talentio
 - **URL:** https://lp.yoom.fun/apps/talentio
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 人事・労務
 
 ---
 

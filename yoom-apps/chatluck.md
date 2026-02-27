@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Chatluck
 - **URL:** https://lp.yoom.fun/apps/chatluck
-- **カテゴリー:** 業務一般
+- **カテゴリー:** チャットツール
 
 ---
 

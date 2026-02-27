@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Frictio
 - **URL:** https://lp.yoom.fun/apps/frictio
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

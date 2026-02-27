@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Zoho_cliq
 - **URL:** https://lp.yoom.fun/apps/zoho_cliq
-- **カテゴリー:** 業務一般
+- **カテゴリー:** チャットツール
 
 ---
 

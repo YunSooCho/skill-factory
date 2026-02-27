@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Elastic_email
 - **URL:** https://lp.yoom.fun/apps/elastic_email
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

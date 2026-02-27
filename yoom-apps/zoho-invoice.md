@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Zoho Invoice
 - **URL:** https://lp.yoom.fun/apps/zoho-invoice
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 会計・経理
 
 ---
 

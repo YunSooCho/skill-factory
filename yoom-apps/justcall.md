@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Justcall
 - **URL:** https://lp.yoom.fun/apps/justcall
-- **カテゴリー:** 業務一般
+- **カテゴリー:** カスタマーサポート
 
 ---
 

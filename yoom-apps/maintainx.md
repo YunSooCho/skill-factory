@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Maintainx
 - **URL:** https://lp.yoom.fun/apps/maintainx
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 受発注・在庫管理
 
 ---
 

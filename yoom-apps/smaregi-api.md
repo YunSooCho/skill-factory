@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Smaregi Api
 - **URL:** https://lp.yoom.fun/apps/smaregi-api
-- **カテゴリー:** 業務一般
+- **カテゴリー:** EC・POSシステム
 
 ---
 

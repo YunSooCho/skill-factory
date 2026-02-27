@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Ecforce
 - **URL:** https://lp.yoom.fun/apps/ecforce
-- **カテゴリー:** 業務一般
+- **カテゴリー:** EC・POSシステム
 
 ---
 

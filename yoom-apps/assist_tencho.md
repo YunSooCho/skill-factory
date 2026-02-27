@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Assist_tencho
 - **URL:** https://lp.yoom.fun/apps/assist_tencho
-- **カテゴリー:** 業務一般
+- **カテゴリー:** EC・POSシステム
 
 ---
 

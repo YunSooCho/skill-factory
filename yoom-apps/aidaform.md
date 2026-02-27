@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Aidaform
 - **URL:** https://lp.yoom.fun/apps/aidaform
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 入力フォーム
 
 ---
 

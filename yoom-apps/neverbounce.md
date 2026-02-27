@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Neverbounce
 - **URL:** https://lp.yoom.fun/apps/neverbounce
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

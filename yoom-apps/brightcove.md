@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Brightcove
 - **URL:** https://lp.yoom.fun/apps/brightcove
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

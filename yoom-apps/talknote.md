@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Talknote
 - **URL:** https://lp.yoom.fun/apps/talknote
-- **カテゴリー:** 業務一般
+- **カテゴリー:** チャットツール
 
 ---
 

@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Google_search_console
 - **URL:** https://lp.yoom.fun/apps/google_search_console
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

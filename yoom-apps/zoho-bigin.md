@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Zoho Bigin
 - **URL:** https://lp.yoom.fun/apps/zoho-bigin
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

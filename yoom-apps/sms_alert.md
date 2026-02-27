@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Sms_alert
 - **URL:** https://lp.yoom.fun/apps/sms_alert
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

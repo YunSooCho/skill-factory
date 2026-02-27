@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Squarespace
 - **URL:** https://lp.yoom.fun/apps/squarespace
-- **カテゴリー:** 業務一般
+- **カテゴリー:** Webサイト制作
 
 ---
 

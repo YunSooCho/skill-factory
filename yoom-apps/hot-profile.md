@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Hot Profile
 - **URL:** https://lp.yoom.fun/apps/hot-profile
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

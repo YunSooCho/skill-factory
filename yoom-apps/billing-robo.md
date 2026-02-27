@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Billing Robo
 - **URL:** https://lp.yoom.fun/apps/billing-robo
-- **カテゴリー:** 業務一般
+- **カテゴリー:** 会計・経理
 
 ---
 

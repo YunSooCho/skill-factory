@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Capsule Crm
 - **URL:** https://lp.yoom.fun/apps/capsule-crm
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

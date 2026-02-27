@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Aitable
 - **URL:** https://lp.yoom.fun/apps/aitable
-- **カテゴリー:** 業務一般
+- **カテゴリー:** Webデータベース
 
 ---
 

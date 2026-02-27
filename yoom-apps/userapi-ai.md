@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Userapi Ai
 - **URL:** https://lp.yoom.fun/apps/userapi-ai
-- **カテゴリー:** 業務一般
+- **カテゴリー:** Webサイト制作
 
 ---
 

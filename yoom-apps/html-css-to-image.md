@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Html Css To Image
 - **URL:** https://lp.yoom.fun/apps/html-css-to-image
-- **カテゴリー:** 業務一般
+- **カテゴリー:** オートメーション
 
 ---
 

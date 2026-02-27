@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Riskanalyze
 - **URL:** https://lp.yoom.fun/apps/riskanalyze
-- **カテゴリー:** 業務一般
+- **カテゴリー:** セールス
 
 ---
 

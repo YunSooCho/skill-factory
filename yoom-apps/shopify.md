@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Shopify
 - **URL:** https://lp.yoom.fun/apps/shopify
-- **カテゴリー:** 業務一般
+- **カテゴリー:** EC・POSシステム
 
 ---
 

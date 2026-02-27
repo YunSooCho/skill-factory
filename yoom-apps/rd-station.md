@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Rd Station
 - **URL:** https://lp.yoom.fun/apps/rd-station
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 

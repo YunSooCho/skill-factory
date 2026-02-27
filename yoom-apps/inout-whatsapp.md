@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Inout Whatsapp
 - **URL:** https://lp.yoom.fun/apps/inout-whatsapp
-- **カテゴリー:** 業務一般
+- **カテゴリー:** チャットツール
 
 ---
 

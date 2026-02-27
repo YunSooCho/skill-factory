@@ -3,7 +3,7 @@
 ## 📧 基本情報
 - **サービス名:** Emailoctopus
 - **URL:** https://lp.yoom.fun/apps/emailoctopus
-- **カテゴリー:** 業務一般
+- **カテゴリー:** マーケティング
 
 ---
 
