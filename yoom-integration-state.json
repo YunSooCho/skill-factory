@@ -23776,6 +23776,18 @@
         "requests",
         "flask"
       ]
+    },
+    {
+      "file_key": "next-sfa",
+      "service_name": "Next Sfa",
+      "category": "セールス",
+      "completed_at": "2026-02-27T20:31:47.485294:00+09:00",
+      "integration_type": "api",
+      "testable": true,
+      "test_requirements": [
+        "requests",
+        "flask"
+      ]
     }
   ],
   "current_category_index": 0,
