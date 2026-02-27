@@ -23800,6 +23800,18 @@
         "requests",
         "flask"
       ]
+    },
+    {
+      "file_key": "salesforce",
+      "service_name": "Salesforce",
+      "category": "セールス",
+      "completed_at": "2026-02-27T20:32:22.870490:00+09:00",
+      "integration_type": "sdk",
+      "testable": true,
+      "test_requirements": [
+        "simple-salesforce",
+        "requests"
+      ]
     }
   ],
   "current_category_index": 0,
