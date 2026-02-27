@@ -23812,6 +23812,17 @@
         "simple-salesforce",
         "requests"
       ]
+    },
+    {
+      "file_key": "salesforce-sb",
+      "service_name": "Salesforce Sb",
+      "category": "セールス",
+      "completed_at": "2026-02-27T20:32:34.871605:00+09:00",
+      "integration_type": "sdk",
+      "testable": true,
+      "test_requirements": [
+        "simple-salesforce"
+      ]
     }
   ],
   "current_category_index": 0,
