@@ -2274,145 +2274,156 @@
         }
       },
       "implemented_at": "2026-02-28 08:48:08"
+    },
+    "beehiiv.md": {
+      "service_name": "Beehiiv",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "Add Tags to Subscription": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/beehiiv/beehiiv_client.py",
+          "method": "BeehiivAPIClient.add_tags_to_subscription(subscription_id, tags)"
+        },
+        "Create Subscription": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/beehiiv/beehiiv_client.py",
+          "method": "BeehiivAPIClient.create_subscription(request)"
+        },
+        "Retrieve Subscription by ID": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/beehiiv/beehiiv_client.py",
+          "method": "BeehiivAPIClient.get_subscription_by_id(subscription_id)"
+        },
+        "Update Subscription": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/beehiiv/beehiiv_client.py",
+          "method": "BeehiivAPIClient.update_subscription(subscription_id, request)"
+        },
+        "Retrieve a Single Post": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/beehiiv/beehiiv_client.py",
+          "method": "BeehiivAPIClient.get_post_by_id(post_id)"
+        },
+        "List Subscriber Ids": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/beehiiv/beehiiv_client.py",
+          "method": "BeehiivAPIClient.list_subscriber_ids(limit, offset)"
+        },
+        "Retrieve Segments": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/beehiiv/beehiiv_client.py",
+          "method": "BeehiivAPIClient.list_segments(limit, offset)"
+        },
+        "Delete Subscription": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/beehiiv/beehiiv_client.py",
+          "method": "BeehiivAPIClient.delete_subscription(subscription_id)"
+        },
+        "Search Posts by Publication": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/beehiiv/beehiiv_client.py",
+          "method": "BeehiivAPIClient.search_posts(query, status, limit)"
+        },
+        "Retrieve Subscription by Email": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/beehiiv/beehiiv_client.py",
+          "method": "BeehiivAPIClient.get_subscription_by_email(email)"
+        }
+      },
+      "triggers": {
+        "New Subscription Confirmations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint. Use BeehiivWebhooks class with Flask server"
+        },
+        "New Subscriptions": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint. Example: python beehiiv_api.py webhook 8080"
+        },
+        "User Unsubscribes": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint with handler registered"
+        },
+        "New Post Sent": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint. Test by sending post to subscribers"
+        },
+        "New Subscription Upgrades": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint. Test by upgrading subscription"
+        },
+        "New Survey Responses": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint with webhook handler"
+        },
+        "New Subscription Downgrades": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint. Test by downgrading subscription"
+        }
+      },
+      "required_tasks": [
+        {
+          "task": "Beehiiv API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/Beehiiv 및 공식 API 문서 확인",
+          "status": "pending"
+        },
+        {
+          "task": "Beehiiv OAuth 앱 등록",
+          "priority": "high",
+          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "status": "pending"
+        },
+        {
+          "task": "Client ID 및 Client Secret 획득",
+          "priority": "high",
+          "description": "OAuth 앱에서 인증 정보 획득",
+          "status": "pending"
+        },
+        {
+          "task": "7개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "10개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T22:22:12.980536",
+      "implemented_at": "2026-02-28T08:50:00.000000"
     }
   },
   "pending": {
     "01_마케팅_Marketing": {
-      "beehiiv.md": {
-        "service_name": "Beehiiv",
-        "category": "マーケティング",
-        "integration_type": "oauth",
-        "integration_confidence": "high",
-        "integration_reasoning": "SaaS/OAuth 표준",
-        "api_actions": {
-          "Add Tags to Subscription": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Test with API key and subscription ID. Example: python beehiiv_api.py create-subscription test@example.com"
-          },
-          "Create Subscription": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Test with API key and email. Example: python beehiiv_api.py create-subscription test@example.com"
-          },
-          "Retrieve Subscription by ID": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Test with API key and subscription ID"
-          },
-          "Update Subscription": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Test with API key, subscription ID and update data"
-          },
-          "Retrieve a Single Post": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Test with API key and post ID. Example: python beehiiv_api.py get-post <post_id>"
-          },
-          "List Subscriber Ids": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Test with API key. Example: python beehiiv_api.py list-subscribers"
-          },
-          "Retrieve Segments": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Test with API key"
-          },
-          "Delete Subscription": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Test with API key and subscription ID"
-          },
-          "Search Posts by Publication": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Test with API key. Example: python beehiiv_api.py posts"
-          },
-          "Retrieve Subscription by Email": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Test with API key and email"
-          }
-        },
-        "triggers": {
-          "New Subscription Confirmations": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires public webhook endpoint. Use BeehiivWebhooks class with Flask server"
-          },
-          "New Subscriptions": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires public webhook endpoint. Example: python beehiiv_api.py webhook 8080"
-          },
-          "User Unsubscribes": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires public webhook endpoint with handler registered"
-          },
-          "New Post Sent": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires public webhook endpoint. Test by sending post to subscribers"
-          },
-          "New Subscription Upgrades": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires public webhook endpoint. Test by upgrading subscription"
-          },
-          "New Survey Responses": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires public webhook endpoint with webhook handler"
-          },
-          "New Subscription Downgrades": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires public webhook endpoint. Test by downgrading subscription"
-          }
-        },
-        "required_tasks": [
-          {
-            "task": "Beehiiv API 문서 검토",
-            "priority": "high",
-            "description": "https://lp.yoom.fun/apps/Beehiiv 및 공식 API 문서 확인",
-            "status": "pending"
-          },
-          {
-            "task": "Beehiiv OAuth 앱 등록",
-            "priority": "high",
-            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
-            "status": "pending"
-          },
-          {
-            "task": "Client ID 및 Client Secret 획득",
-            "priority": "high",
-            "description": "OAuth 앱에서 인증 정보 획득",
-            "status": "pending"
-          },
-          {
-            "task": "7개 트리거용 Webhook 엔드포인트 설정",
-            "priority": "medium",
-            "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
-            "status": "pending"
-          },
-          {
-            "task": "테스트 계정 또는 샌드박스 환경 구축",
-            "priority": "medium",
-            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
-            "status": "pending"
-          },
-          {
-            "task": "10개 API 액션 단위 테스트 작성",
-            "priority": "low",
-            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
-            "status": "pending"
-          }
-        ],
-        "analyzed_at": "2026-02-27T22:22:12.980536"
-      },
       "benchmark-email.md": {
         "service_name": "Benchmark Email",
         "category": "マーケティング",

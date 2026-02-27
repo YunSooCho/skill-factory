@@ -1,5 +1,5 @@
 """
-Beehiiv API Client
+Beehiiv API - Newsletter Platform Client
 
 Supports:
 - Add Tags to Subscription
@@ -14,581 +14,788 @@ Supports:
 - Retrieve Subscription by Email
 """
 
-import requests
+import aiohttp
+import asyncio
+from datetime import datetime
 from typing import Optional, Dict, Any, List
-from dataclasses import dataclass
-import time
+from dataclasses import dataclass, field
 
 
 @dataclass
 class Subscription:
-    """Beehiiv subscription representation"""
-    id: Optional[str] = None
-    email: Optional[str] = None
-    status: Optional[str] = None
-    created: Optional[int] = None
-    subscription_tier: Optional[str] = None
-    premium_tiers: List[str] = None
-    custom_fields: List[Dict[str, Any]] = None
-    tags: List[str] = None
+    """Subscription object from Beehiiv API"""
+    id: str
+    email: str
+    status: str
+    created: int
+    subscription_tier: str
+    subscription_premium_tier_names: List[str] = field(default_factory=list)
     utm_source: Optional[str] = None
     utm_medium: Optional[str] = None
+    utm_channel: Optional[str] = None
     utm_campaign: Optional[str] = None
+    utm_term: Optional[str] = None
+    utm_content: Optional[str] = None
+    referring_site: Optional[str] = None
     referral_code: Optional[str] = None
-
-    def __post_init__(self):
-        if self.premium_tiers is None:
-            self.premium_tiers = []
-        if self.custom_fields is None:
-            self.custom_fields = []
-        if self.tags is None:
-            self.tags = []
+    custom_fields: List[Dict[str, Any]] = field(default_factory=list)
+    stripe_customer_id: Optional[str] = None
 
 
 @dataclass
 class Post:
-    """Beehiiv post representation"""
-    id: Optional[str] = None
-    title: Optional[str] = None
-    subtitle: Optional[str] = None
+    """Post object from Beehiiv API"""
+    id: str
+    title: str
+    subtitle: Optional[str]
+    status: str
+    published_date: Optional[int]
+    thumbnail_url: Optional[str]
+    slug: str = ""
     content: Optional[str] = None
-    status: Optional[str] = None
-    published: Optional[int] = None
-    created: Optional[int] = None
-    thumbnail_url: Optional[str] = None
+    engagement_score: Optional[int] = None
 
 
 @dataclass
 class Segment:
-    """Beehiiv segment representation"""
-    id: Optional[str] = None
-    name: Optional[str] = None
-    description: Optional[str] = None
-    subscriber_count: Optional[int] = None
+    """Segment object from Beehiiv API"""
+    id: str
+    name: str
+    description: Optional[str]
+    count: int
+    created: int
 
 
-class BeehiivClient:
+@dataclass
+class SubscriptionCreateRequest:
+    """Request for creating a subscription"""
+    email: str
+    reactivate_existing: bool = False
+    send_welcome_email: bool = False
+    utm_source: Optional[str] = None
+    utm_medium: Optional[str] = None
+    utm_campaign: Optional[str] = None
+    utm_term: Optional[str] = None
+    utm_content: Optional[str] = None
+    referring_site: Optional[str] = None
+    referral_code: Optional[str] = None
+    custom_fields: Optional[List[Dict[str, str]]] = None
+    double_opt_override: Optional[str] = None  # "on", "off", "not_set"
+    tier: Optional[str] = None  # "free", "premium"
+    premium_tiers: Optional[List[str]] = None
+    premium_tier_ids: Optional[List[str]] = None
+    stripe_customer_id: Optional[str] = None
+    automation_ids: Optional[List[str]] = None
+
+
+@dataclass
+class SubscriptionUpdateRequest:
+    """Request for updating a subscription"""
+    email: Optional[str] = None
+    tier: Optional[str] = None
+    premium_tiers: Optional[List[str]] = None
+    premium_tier_ids: Optional[List[str]] = None
+    custom_fields: Optional[List[Dict[str, str]]] = None
+    status: Optional[str] = None
+
+
+class BeehiivAPIClient:
     """
-    Beehiiv API client for newsletter and subscription management.
+    Beehiiv API client for newsletter platform management.
 
     API Documentation: https://developers.beehiiv.com
-    Authentication: API Key (Header: Authorization: Bearer {key})
-    Base URL: https://api.beehiiv.com/v2
+    Authentication: Bearer token via Authorization header
+
+    Rate Limits: See https://developers.beehiiv.com/welcome/rate-limiting
     """
 
     BASE_URL = "https://api.beehiiv.com/v2"
 
     def __init__(self, api_key: str, publication_id: str):
         """
-        Initialize Beehiiv client.
+        Initialize Beehiiv API client.
 
         Args:
-            api_key: Beehiiv API key
-            publication_id: Publication ID (format: pub_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)
+            api_key: Your Beehiiv API key (Bearer token)
+            publication_id: The publication ID (format: pub_xxxxxxxxxxxxxxxxx)
         """
         self.api_key = api_key
         self.publication_id = publication_id
-        self.session = requests.Session()
-        self.session.headers.update({
+        self.session = None
+
+    async def __aenter__(self):
+        self.session = aiohttp.ClientSession()
+        return self
+
+    async def __aexit__(self, exc_type, exc_val, exc_tb):
+        if self.session:
+            await self.session.close()
+
+    def _get_headers(self) -> Dict[str, str]:
+        """Get headers with Bearer token authentication"""
+        return {
             "Authorization": f"Bearer {self.api_key}",
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-        })
-        self.last_rate_limit_reset = 0
-        self.remaining_requests = 1000
+            "Content-Type": "application/json"
+        }
 
-    def _handle_rate_limits(self, response: requests.Response) -> None:
-        """Handle rate limiting from response headers"""
-        self.remaining_requests = int(response.headers.get("X-RateLimit-Remaining", self.remaining_requests))
-        limit = int(response.headers.get("X-RateLimit-Limit", 1000))
-
-        if self.remaining_requests < 10:
-            reset_time = int(response.headers.get("X-RateLimit-Reset", time.time()))
-            sleep_time = max(reset_time - time.time(), 1)
-            if sleep_time > 0:
-                time.sleep(sleep_time)
-
-    def _request(self, method: str, endpoint: str, **kwargs) -> Dict[str, Any]:
-        """
-        Make a request to Beehiiv API with error handling and retry logic.
-
-        Args:
-            method: HTTP method (GET, POST, PUT, DELETE)
-            endpoint: API endpoint
-            **kwargs: Additional arguments for requests
-
-        Returns:
-            Response data as dictionary
-
-        Raises:
-            Exception: If request fails after retries
-        """
-        max_retries = 3
-        base_url = kwargs.pop('base_url', self.BASE_URL)
-
-        for attempt in range(max_retries):
-            url = f"{base_url}{endpoint}"
-
-            try:
-                response = self.session.request(method, url, **kwargs)
-
-                self._handle_rate_limits(response)
-
-                if response.status_code in (200, 201, 204):
-                    if response.status_code == 204:
-                        return {}
-                    data = response.json()
-                    return data.get('data', data)
-                elif response.status_code == 429:
-                    # Rate limit exceeded, wait and retry
-                    retry_after = int(response.headers.get("Retry-After", 2))
-                    time.sleep(retry_after)
-                    continue
-                elif response.status_code == 401:
-                    raise Exception(f"Authentication failed: Invalid API key")
-                elif response.status_code == 404:
-                    raise Exception(f"Resource not found: {endpoint}")
-                elif response.status_code >= 500:
-                    # Server error, retry
-                    if attempt < max_retries - 1:
-                        time.sleep(2 ** attempt)
-                        continue
-                    else:
-                        raise Exception(f"Server error: {response.status_code}")
-                else:
-                    error_data = response.json() if response.content else {}
-                    raise Exception(f"API error {response.status_code}: {error_data}")
-
-            except requests.exceptions.RequestException as e:
-                if attempt < max_retries - 1:
-                    time.sleep(2 ** attempt)
-                    continue
-                else:
-                    raise Exception(f"Request failed: {str(e)}")
-
-        raise Exception("Request failed after maximum retries")
+    def _parse_subscription(self, data: Dict[str, Any]) -> Subscription:
+        """Parse subscription data from API response"""
+        return Subscription(
+            id=data.get("id", ""),
+            email=data.get("email", ""),
+            status=data.get("status", ""),
+            created=int(data.get("created", 0)),
+            subscription_tier=data.get("subscription_tier", "free"),
+            subscription_premium_tier_names=data.get("subscription_premium_tier_names", []),
+            utm_source=data.get("utm_source"),
+            utm_medium=data.get("utm_medium"),
+            utm_channel=data.get("utm_channel"),
+            utm_campaign=data.get("utm_campaign"),
+            utm_term=data.get("utm_term"),
+            utm_content=data.get("utm_content"),
+            referring_site=data.get("referring_site"),
+            referral_code=data.get("referral_code"),
+            custom_fields=data.get("custom_fields", []),
+            stripe_customer_id=data.get("stripe_customer_id")
+        )
 
     # ==================== Subscription Operations ====================
 
-    def create_subscription(
-        self,
-        email: str,
-        reactivate_existing: bool = False,
-        send_welcome_email: bool = False,
-        custom_fields: Optional[List[Dict[str, Any]]] = None,
-        utm_source: Optional[str] = None,
-        utm_medium: Optional[str] = None,
-        utm_campaign: Optional[str] = None,
-        utm_term: Optional[str] = None,
-        utm_content: Optional[str] = None,
-        referring_site: Optional[str] = None,
-        referral_code: Optional[str] = None,
-        tier: Optional[str] = None,
-        premium_tiers: Optional[List[str]] = None,
-        premium_tier_ids: Optional[List[str]] = None,
-        stripe_customer_id: Optional[str] = None,
-        double_opt_override: Optional[str] = None,
-        automation_ids: Optional[List[str]] = None
-    ) -> Subscription:
+    async def create_subscription(self, request: SubscriptionCreateRequest) -> Subscription:
         """
-        Create a new subscription for the publication.
+        Create a new subscription.
 
         Args:
-            email: Email address of the subscriber
-            reactivate_existing: Reactivate if previously unsubscribed
-            send_welcome_email: Send welcome email to new subscriber
-            custom_fields: List of custom fields [{"name": "field_name", "value": "field_value"}]
-            utm_source: UTM source parameter
-            utm_medium: UTM medium parameter
-            utm_campaign: UTM campaign parameter
-            utm_term: UTM term parameter
-            utm_content: UTM content parameter
-            referring_site: Referring website
-            referral_code: Referral code for credit
-            tier: Subscription tier ("free" or "premium")
-            premium_tiers: List of premium tier names
-            premium_tier_ids: List of premium tier IDs
-            stripe_customer_id: Stripe customer ID
-            double_opt_override: Override double opt-in ("on", "off", "not_set")
-            automation_ids: List of automation IDs to enroll subscriber
+            request: SubscriptionCreateRequest with subscription details
+
+        Returns:
+            Subscription object with created subscription data
+
+        Raises:
+            aiohttp.ClientError: If request fails
+            Exception: If API returns an error
+        """
+        url = f"{self.BASE_URL}/publications/{self.publication_id}/subscriptions"
+
+        body = {
+            "email": request.email,
+            "reactivate_existing": request.reactivate_existing,
+            "send_welcome_email": request.send_welcome_email
+        }
+
+        # Optional fields
+        if request.utm_source:
+            body["utm_source"] = request.utm_source
+        if request.utm_medium:
+            body["utm_medium"] = request.utm_medium
+        if request.utm_campaign:
+            body["utm_campaign"] = request.utm_campaign
+        if request.utm_term:
+            body["utm_term"] = request.utm_term
+        if request.utm_content:
+            body["utm_content"] = request.utm_content
+        if request.referring_site:
+            body["referring_site"] = request.referring_site
+        if request.referral_code:
+            body["referral_code"] = request.referral_code
+        if request.custom_fields:
+            body["custom_fields"] = request.custom_fields
+        if request.double_opt_override:
+            body["double_opt_override"] = request.double_opt_override
+        if request.tier:
+            body["tier"] = request.tier
+        if request.premium_tiers:
+            body["premium_tiers"] = request.premium_tiers
+        if request.premium_tier_ids:
+            body["premium_tier_ids"] = request.premium_tier_ids
+        if request.stripe_customer_id:
+            body["stripe_customer_id"] = request.stripe_customer_id
+        if request.automation_ids:
+            body["automation_ids"] = request.automation_ids
+
+        async with self.session.post(url, headers=self._get_headers(), json=body) as response:
+            data = await response.json()
+
+            if response.status == 200 or response.status == 201:
+                return self._parse_subscription(data.get("data", {}))
+            elif response.status == 400:
+                raise Exception(f"Bad Request: {data}")
+            elif response.status == 404:
+                raise Exception("Publication not found")
+            elif response.status == 429:
+                raise Exception("Rate limit exceeded")
+            elif response.status == 500:
+                raise Exception(f"Internal Server Error: {data}")
+            else:
+                raise Exception(f"API error (status {response.status}): {data}")
+
+    async def get_subscription_by_id(self, subscription_id: str) -> Subscription:
+        """
+        Retrieve a subscription by ID.
+
+        Args:
+            subscription_id: ID of the subscription
 
         Returns:
             Subscription object
 
         Raises:
-            Exception: If API request fails
+            aiohttp.ClientError: If request fails
+            Exception: If API returns an error
         """
-        if not email:
-            raise ValueError("Email is required")
+        url = f"{self.BASE_URL}/publications/{self.publication_id}/subscriptions/{subscription_id}"
 
-        payload: Dict[str, Any] = {
-            "email": email,
-            "reactivate_existing": reactivate_existing,
-            "send_welcome_email": send_welcome_email
-        }
+        async with self.session.get(url, headers=self._get_headers()) as response:
+            data = await response.json()
 
-        # Add optional fields
-        optional_params = {
-            "custom_fields": custom_fields,
-            "utm_source": utm_source,
-            "utm_medium": utm_medium,
-            "utm_campaign": utm_campaign,
-            "utm_term": utm_term,
-            "utm_content": utm_content,
-            "referring_site": referring_site,
-            "referral_code": referral_code,
-            "tier": tier,
-            "premium_tiers": premium_tiers,
-            "premium_tier_ids": premium_tier_ids,
-            "stripe_customer_id": stripe_customer_id,
-            "double_opt_override": double_opt_override,
-            "automation_ids": automation_ids
-        }
+            if response.status == 200:
+                return self._parse_subscription(data.get("data", {}))
+            elif response.status == 404:
+                raise Exception(f"Subscription not found: {subscription_id}")
+            else:
+                raise Exception(f"API error (status {response.status}): {data}")
 
-        for key, value in optional_params.items():
-            if value is not None:
-                payload[key] = value
-
-        data = self._request(
-            "POST",
-            f"/publications/{self.publication_id}/subscriptions",
-            json=payload
-        )
-
-        return self._parse_subscription(data)
-
-    def get_subscription_by_id(self, subscription_id: str) -> Subscription:
+    async def get_subscription_by_email(self, email: str) -> Subscription:
         """
-        Retrieve a subscription by its ID.
+        Retrieve a subscription by email.
 
         Args:
-            subscription_id: Subscription ID
+            email: Email address of the subscription
 
         Returns:
             Subscription object
-        """
-        data = self._request(
-            "GET",
-            f"/publications/{self.publication_id}/subscriptions/{subscription_id}"
-        )
 
-        return self._parse_subscription(data)
-
-    def get_subscription_by_email(self, email: str) -> Subscription:
+        Raises:
+            aiohttp.ClientError: If request fails
+            Exception: If API returns an error
         """
-        Retrieve a subscription by email address.
+        url = f"{self.BASE_URL}/publications/{self.publication_id}/subscriptions/get-by-email"
+        params = {"email": email}
+
+        async with self.session.get(url, headers=self._get_headers(), params=params) as response:
+            data = await response.json()
+
+            if response.status == 200:
+                return self._parse_subscription(data.get("data", {}))
+            elif response.status == 404:
+                raise Exception(f"Subscription not found: {email}")
+            else:
+                raise Exception(f"API error (status {response.status}): {data}")
+
+    async def list_subscriptions(
+        self,
+        limit: Optional[int] = None,
+        offset: Optional[int] = None,
+        status: Optional[str] = None
+    ) -> Dict[str, Any]:
+        """
+        List subscriptions for the publication.
 
         Args:
-            email: Email address
+            limit: Maximum number of results to return
+            offset: Number of results to skip
+            status: Filter by subscription status (e.g., "active", "subscribed")
 
         Returns:
-            Subscription object
+            Dictionary with 'data' list and 'results' total count
+
+        Raises:
+            aiohttp.ClientError: If request fails
+            Exception: If API returns an error
         """
-        if not email:
-            raise ValueError("Email is required")
+        url = f"{self.BASE_URL}/publications/{self.publication_id}/subscriptions"
+        params = {}
 
-        data = self._request(
-            "GET",
-            f"/publications/{self.publication_id}/subscriptions/email/{email}"
-        )
+        if limit:
+            params["limit"] = str(limit)
+        if offset:
+            params["offset"] = str(offset)
+        if status:
+            params["status"] = status
 
-        return self._parse_subscription(data)
+        async with self.session.get(url, headers=self._get_headers(), params=params) as response:
+            data = await response.json()
 
-    def update_subscription(
+            if response.status == 200:
+                subscriptions = [
+                    self._parse_subscription(sub_data)
+                    for sub_data in data.get("data", [])
+                ]
+                return {
+                    "data": subscriptions,
+                    "results": data.get("results", len(subscriptions))
+                }
+            else:
+                raise Exception(f"API error (status {response.status}): {data}")
+
+    async def list_subscriber_ids(
+        self,
+        limit: Optional[int] = None,
+        offset: Optional[int] = None
+    ) -> Dict[str, Any]:
+        """
+        List subscriber IDs (lightweight endpoint for getting IDs only).
+
+        Args:
+            limit: Maximum number of results to return
+            offset: Number of results to skip
+
+        Returns:
+            Dictionary with subscriber IDs and count
+
+        Raises:
+            aiohttp.ClientError: If request fails
+            Exception: If API returns an error
+        """
+        url = f"{self.BASE_URL}/publications/{self.publication_id}/subscriptions"
+        params = {}
+
+        if limit:
+            params["limit"] = str(limit)
+        if offset:
+            params["offset"] = str(offset)
+        # Only request minimal fields by not using expand parameters
+
+        async with self.session.get(url, headers=self._get_headers(), params=params) as response:
+            data = await response.json()
+
+            if response.status == 200:
+                ids = [sub.get("id") for sub in data.get("data", [])]
+                return {
+                    "data": ids,
+                    "results": data.get("results", len(ids))
+                }
+            else:
+                raise Exception(f"API error (status {response.status}): {data}")
+
+    async def update_subscription(
         self,
         subscription_id: str,
-        update_payload: Dict[str, Any]
+        request: SubscriptionUpdateRequest
     ) -> Subscription:
         """
         Update a subscription by ID.
 
         Args:
-            subscription_id: Subscription ID
-            update_payload: Dictionary of fields to update
-                Can include: tier, premium_tiers, premium_tier_ids, custom_fields, etc.
+            subscription_id: ID of the subscription to update
+            request: SubscriptionUpdateRequest with update details
 
         Returns:
             Updated Subscription object
+
+        Raises:
+            aiohttp.ClientError: If request fails
+            Exception: If API returns an error
         """
-        data = self._request(
-            "PUT",
-            f"/publications/{self.publication_id}/subscriptions/{subscription_id}",
-            json=update_payload
-        )
+        url = f"{self.BASE_URL}/publications/{self.publication_id}/subscriptions/{subscription_id}"
 
-        return self._parse_subscription(data)
+        body = {}
 
-    def delete_subscription(self, subscription_id: str) -> None:
+        # Add only provided fields
+        if request.email is not None:
+            body["email"] = request.email
+        if request.tier is not None:
+            body["tier"] = request.tier
+        if request.premium_tiers is not None:
+            body["premium_tiers"] = request.premium_tiers
+        if request.premium_tier_ids is not None:
+            body["premium_tier_ids"] = request.premium_tier_ids
+        if request.custom_fields is not None:
+            body["custom_fields"] = request.custom_fields
+        if request.status is not None:
+            body["status"] = request.status
+
+        async with self.session.put(url, headers=self._get_headers(), json=body) as response:
+            data = await response.json()
+
+            if response.status == 200:
+                return self._parse_subscription(data.get("data", {}))
+            elif response.status == 404:
+                raise Exception(f"Subscription not found: {subscription_id}")
+            else:
+                raise Exception(f"API error (status {response.status}): {data}")
+
+    async def update_subscription_by_email(
+        self,
+        email: str,
+        request: SubscriptionUpdateRequest
+    ) -> Subscription:
+        """
+        Update a subscription by email.
+
+        Args:
+            email: Email of the subscription to update
+            request: SubscriptionUpdateRequest with update details
+
+        Returns:
+            Updated Subscription object
+
+        Raises:
+            aiohttp.ClientError: If request fails
+            Exception: If API returns an error
+        """
+        url = f"{self.BASE_URL}/publications/{self.publication_id}/subscriptions/update-by-email"
+
+        body = {"email": email}
+
+        # Add update fields
+        if request.tier is not None:
+            body["tier"] = request.tier
+        if request.premium_tiers is not None:
+            body["premium_tiers"] = request.premium_tiers
+        if request.premium_tier_ids is not None:
+            body["premium_tier_ids"] = request.premium_tier_ids
+        if request.custom_fields is not None:
+            body["custom_fields"] = request.custom_fields
+        if request.status is not None:
+            body["status"] = request.status
+
+        async with self.session.put(url, headers=self._get_headers(), json=body) as response:
+            data = await response.json()
+
+            if response.status == 200:
+                return self._parse_subscription(data.get("data", {}))
+            elif response.status == 404:
+                raise Exception(f"Subscription not found: {email}")
+            else:
+                raise Exception(f"API error (status {response.status}): {data}")
+
+    async def delete_subscription(self, subscription_id: str) -> bool:
         """
         Delete a subscription.
 
         Args:
-            subscription_id: Subscription ID
-        """
-        self._request(
-            "DELETE",
-            f"/publications/{self.publication_id}/subscriptions/{subscription_id}"
-        )
+            subscription_id: ID of the subscription to delete
 
-    def add_tags_to_subscription(
+        Returns:
+            True if successful
+
+        Raises:
+            aiohttp.ClientError: If request fails
+            Exception: If API returns an error
+        """
+        url = f"{self.BASE_URL}/publications/{self.publication_id}/subscriptions/{subscription_id}"
+
+        async with self.session.delete(url, headers=self._get_headers()) as response:
+            if response.status == 204:
+                return True
+            elif response.status == 404:
+                raise Exception(f"Subscription not found: {subscription_id}")
+            else:
+                data = await response.text()
+                raise Exception(f"API error (status {response.status}): {data}")
+
+    async def add_tags_to_subscription(
         self,
         subscription_id: str,
         tags: List[str]
-    ) -> Subscription:
+    ) -> Dict[str, Any]:
         """
         Add tags to a subscription.
 
         Args:
-            subscription_id: Subscription ID
+            subscription_id: ID of the subscription
             tags: List of tag names to add
 
         Returns:
-            Updated Subscription object
+            Updated subscription data
+
+        Raises:
+            aiohttp.ClientError: If request fails
+            Exception: If API returns an error
+
+        Note:
+            This requires the Subscription Tags endpoint
         """
-        if not tags:
-            raise ValueError("At least one tag is required")
+        url = f"{self.BASE_URL}/publications/{self.publication_id}/subscription_tags"
 
-        # Get current subscription
-        current = self.get_subscription_by_id(subscription_id)
-        current_tags = current.tags or []
+        body = {
+            "subscription_id": subscription_id,
+            "tags": tags
+        }
 
-        # Merge tags without duplicates
-        merged_tags = list(set(current_tags + tags))
+        async with self.session.post(url, headers=self._get_headers(), json=body) as response:
+            data = await response.json()
 
-        # Update subscription with merged tags
-        return self.update_subscription(subscription_id, {"tags": merged_tags})
-
-    def list_subscriber_ids(
-        self,
-        limit: int = 100,
-        offset: int = 0,
-        status: Optional[str] = None
-    ) -> List[str]:
-        """
-        List all subscriber IDs for the publication.
-
-        Args:
-            limit: Number of results to return (max 1000)
-            offset: Number of results to skip
-            status: Filter by status ("active", "pending", etc.)
-
-        Returns:
-            List of subscription IDs
-        """
-        params = {"limit": min(limit, 1000), "offset": offset}
-
-        if status:
-            params["status"] = status
-
-        data = self._request(
-            "GET",
-            f"/publications/{self.publication_id}/subscriptions",
-            params=params
-        )
-
-        # Extract subscription IDs from data
-        if isinstance(data, list):
-            return [sub.get("id") for sub in data if sub.get("id")]
-        elif isinstance(data, dict) and "data" in data:
-            return [sub.get("id") for sub in data["data"] if sub.get("id")]
-
-        return []
+            if response.status == 200 or response.status == 201:
+                return data
+            elif response.status == 404:
+                raise Exception(f"Subscription or publication not found")
+            else:
+                raise Exception(f"API error (status {response.status}): {data}")
 
     # ==================== Post Operations ====================
 
-    def get_post(self, post_id: str) -> Post:
+    async def list_posts(
+        self,
+        limit: Optional[int] = None,
+        offset: Optional[int] = None,
+        status: Optional[str] = None
+    ) -> Dict[str, Any]:
+        """
+        List posts for the publication.
+
+        Args:
+            limit: Maximum number of results to return
+            offset: Number of results to skip
+            status: Filter by status (e.g., "confirmed", "draft", "scheduled")
+
+        Returns:
+            Dictionary with 'data' list and 'results' total count
+
+        Raises:
+            aiohttp.ClientError: If request fails
+            Exception: If API returns an error
+        """
+        url = f"{self.BASE_URL}/publications/{self.publication_id}/posts"
+        params = {}
+
+        if limit:
+            params["limit"] = str(limit)
+        if offset:
+            params["offset"] = str(offset)
+        if status:
+            params["status"] = status
+
+        async with self.session.get(url, headers=self._get_headers(), params=params) as response:
+            data = await response.json()
+
+            if response.status == 200:
+                return {
+                    "data": data.get("data", []),
+                    "results": data.get("results", 0)
+                }
+            else:
+                raise Exception(f"API error (status {response.status}): {data}")
+
+    async def get_post_by_id(self, post_id: str) -> Post:
         """
         Retrieve a single post by ID.
 
         Args:
-            post_id: Post ID
+            post_id: ID of the post
 
         Returns:
             Post object
+
+        Raises:
+            aiohttp.ClientError: If request fails
+            Exception: If API returns an error
         """
-        data = self._request(
-            "GET",
-            f"/publications/{self.publication_id}/posts/{post_id}"
-        )
+        url = f"{self.BASE_URL}/publications/{self.publication_id}/posts/{post_id}"
 
-        return self._parse_post(data)
+        async with self.session.get(url, headers=self._get_headers()) as response:
+            data = await response.json()
 
-    def search_posts(
+            if response.status == 200:
+                post_data = data.get("data", {})
+                return Post(
+                    id=post_data.get("id", ""),
+                    title=post_data.get("title", ""),
+                    subtitle=post_data.get("subtitle"),
+                    status=post_data.get("status", ""),
+                    published_date=post_data.get("published_date"),
+                    thumbnail_url=post_data.get("thumbnail_url"),
+                    slug=post_data.get("slug", ""),
+                    content=post_data.get("content"),
+                    engagement_score=post_data.get("engagement_score")
+                )
+            elif response.status == 404:
+                raise Exception(f"Post not found: {post_id}")
+            else:
+                raise Exception(f"API error (status {response.status}): {data}")
+
+    async def search_posts(
         self,
-        limit: int = 50,
-        offset: int = 0,
-        status: Optional[str] = None
-    ) -> List[Post]:
+        query: Optional[str] = None,
+        status: Optional[str] = None,
+        limit: Optional[int] = None
+    ) -> Dict[str, Any]:
         """
-        Search for posts in the publication.
+        Search posts by publication.
 
         Args:
-            limit: Number of results to return (max 100)
-            offset: Number of results to skip
-            status: Filter by status ("draft", "scheduled", "sent", etc.)
+            query: Search query string
+            status: Filter by status
+            limit: Maximum number of results
 
         Returns:
-            List of Post objects
-        """
-        params = {"limit": min(limit, 100), "offset": offset}
+            Dictionary with matching posts
 
+        Raises:
+            aiohttp.ClientError: If request fails
+            Exception: If API returns an error
+        """
+        url = f"{self.BASE_URL}/publications/{self.publication_id}/posts"
+        params = {}
+
+        if query:
+            params["query"] = query
         if status:
             params["status"] = status
+        if limit:
+            params["limit"] = str(limit)
 
-        data = self._request(
-            "GET",
-            f"/publications/{self.publication_id}/posts",
-            params=params
-        )
+        async with self.session.get(url, headers=self._get_headers(), params=params) as response:
+            data = await response.json()
 
-        posts = []
-        if isinstance(data, list):
-            for post_data in data:
-                posts.append(self._parse_post(post_data))
-        elif isinstance(data, dict) and "data" in data:
-            for post_data in data["data"]:
-                posts.append(self._parse_post(post_data))
-
-        return posts
+            if response.status == 200:
+                return {
+                    "data": data.get("data", []),
+                    "results": data.get("results", 0)
+                }
+            else:
+                raise Exception(f"API error (status {response.status}): {data}")
 
     # ==================== Segment Operations ====================
 
-    def get_segments(self) -> List[Segment]:
+    async def list_segments(
+        self,
+        limit: Optional[int] = None,
+        offset: Optional[int] = None
+    ) -> Dict[str, Any]:
         """
-        Retrieve all segments for the publication.
-
-        Returns:
-            List of Segment objects
-        """
-        data = self._request(
-            "GET",
-            f"/publications/{self.publication_id}/segments"
-        )
-
-        segments = []
-        if isinstance(data, list):
-            for segment_data in data:
-                segments.append(self._parse_segment(segment_data))
-        elif isinstance(data, dict) and "data" in data:
-            for segment_data in data["data"]:
-                segments.append(self._parse_segment(segment_data))
-
-        return segments
-
-    # ==================== Webhook Operations ====================
-
-    def verify_webhook(self, signature: str, payload: bytes, webhook_secret: str) -> bool:
-        """
-        Verify a webhook signature.
+        Retrieve segments for the publication.
 
         Args:
-            signature: Signature from X-Signature header
-            payload: Raw webhook payload bytes
-            webhook_secret: Your webhook secret
+            limit: Maximum number of results to return
+            offset: Number of results to skip
 
         Returns:
-            True if signature is valid
+            Dictionary with 'data' list of segments
+
+        Raises:
+            aiohttp.ClientError: If request fails
+            Exception: If API returns an error
         """
-        import hmac
-        import hashlib
+        url = f"{self.BASE_URL}/publications/{self.publication_id}/segments"
+        params = {}
 
-        expected_signature = hmac.new(
-            webhook_secret.encode(),
-            payload,
-            hashlib.sha256
-        ).hexdigest()
+        if limit:
+            params["limit"] = str(limit)
+        if offset:
+            params["offset"] = str(offset)
 
-        return hmac.compare_digest(signature, expected_signature)
+        async with self.session.get(url, headers=self._get_headers(), params=params) as response:
+            data = await response.json()
 
-    # ==================== Helper Methods ====================
-
-    def _parse_subscription(self, data: Dict[str, Any]) -> Subscription:
-        """Parse subscription data from API response"""
-        return Subscription(
-            id=data.get("id"),
-            email=data.get("email"),
-            status=data.get("status"),
-            created=data.get("created"),
-            subscription_tier=data.get("subscription_tier"),
-            premium_tiers=data.get("subscription_premium_tier_names", []),
-            custom_fields=data.get("custom_fields", []),
-            tags=data.get("tags", []),
-            utm_source=data.get("utm_source"),
-            utm_medium=data.get("utm_medium"),
-            utm_campaign=data.get("utm_campaign"),
-            referral_code=data.get("referral_code")
-        )
-
-    def _parse_post(self, data: Dict[str, Any]) -> Post:
-        """Parse post data from API response"""
-        return Post(
-            id=data.get("id"),
-            title=data.get("title"),
-            subtitle=data.get("subtitle"),
-            content=data.get("content"),
-            status=data.get("status"),
-            published=data.get("published"),
-            created=data.get("created"),
-            thumbnail_url=data.get("thumbnail_url")
-        )
-
-    def _parse_segment(self, data: Dict[str, Any]) -> Segment:
-        """Parse segment data from API response"""
-        return Segment(
-            id=data.get("id"),
-            name=data.get("name"),
-            description=data.get("description"),
-            subscriber_count=data.get("subscriber_count")
-        )
-
-    def close(self):
-        """Close the HTTP session"""
-        self.session.close()
+            if response.status == 200:
+                segments = []
+                for seg_data in data.get("data", []):
+                    segments.append(Segment(
+                        id=seg_data.get("id", ""),
+                        name=seg_data.get("name", ""),
+                        description=seg_data.get("description"),
+                        count=seg_data.get("count", 0),
+                        created=int(seg_data.get("created", 0))
+                    ))
+                return {
+                    "data": segments,
+                    "results": data.get("results", len(segments))
+                }
+            else:
+                raise Exception(f"API error (status {response.status}): {data}")
 
 
-def main():
-    """Example usage"""
-    api_key = "your_beehiiv_api_key"
-    publication_id = "pub_00000000-0000-0000-0000-000000000000"
+# ==================== Example Usage ====================
 
-    client = BeehiivClient(api_key=api_key, publication_id=publication_id)
+async def main():
+    """Example usage of Beehiiv API client"""
 
-    try:
-        # Create a subscription
-        subscription = client.create_subscription(
-            email="test@example.com",
+    # Replace with your actual credentials
+    api_key = "your_beehiiv_api_key_here"
+    publication_id = "pub_your_publication_id_here"
+
+    async with BeehiivAPIClient(api_key=api_key, publication_id=publication_id) as client:
+        # Create subscription
+        create_request = SubscriptionCreateRequest(
+            email="subscriber@example.com",
+            send_welcome_email=True,
+            utm_source="website",
+            utm_medium="organic",
             custom_fields=[
                 {"name": "First Name", "value": "John"},
                 {"name": "Last Name", "value": "Doe"}
-            ],
-            utm_source="website",
-            utm_medium="form",
-            send_welcome_email=True
+            ]
         )
-        print(f"Created subscription: {subscription.id} - {subscription.email}")
 
-        # Get subscription by ID
-        fetched = client.get_subscription_by_id(subscription.id)
-        print(f"Fetched subscription: {fetched.email} - Status: {fetched.status}")
+        try:
+            subscription = await client.create_subscription(create_request)
+            print(f"Created subscription: {subscription.id}")
+            print(f"Email: {subscription.email}")
+            print(f"Status: {subscription.status}")
+        except Exception as e:
+            print(f"Failed to create subscription: {e}")
 
-        # Add tags
-        tagged = client.add_tags_to_subscription(subscription.id, ["VIP", "Early Adopter"])
-        print(f"Tags after adding: {tagged.tags}")
+        # Get subscription by email
+        try:
+            sub = await client.get_subscription_by_email("subscriber@example.com")
+            print(f"Found subscription: {sub.id}")
+        except Exception as e:
+            print(f"Failed to get subscription: {e}")
+
+        # List subscriptions
+        try:
+            result = await client.list_subscriptions(limit=10)
+            print(f"Total subscriptions: {result['results']}")
+            for sub in result["data"][:3]:
+                print(f"  - {sub.email}: {sub.status}")
+        except Exception as e:
+            print(f"Failed to list subscriptions: {e}")
+
+        # List subscriber IDs (lightweight)
+        try:
+            result = await client.list_subscriber_ids(limit=10)
+            print(f"Subscriber IDs: {result['data']}")
+        except Exception as e:
+            print(f"Failed to list subscriber IDs: {e}")
+
+        # Update subscription
+        try:
+            update_request = SubscriptionUpdateRequest(tier="premium")
+            updated = await client.update_subscription(subscription.id, update_request)
+            print(f"Updated subscription tier: {updated.subscription_tier}")
+        except Exception as e:
+            print(f"Failed to update subscription: {e}")
+
+        # Add tags to subscription
+        try:
+            result = await client.add_tags_to_subscription(subscription.id, ["VIP", "Early Adopter"])
+            print(f"Added tags to subscription")
+        except Exception as e:
+            print(f"Failed to add tags: {e}")
+
+        # List posts
+        try:
+            result = await client.list_posts(limit=5)
+            print(f"Total posts: {result['results']}")
+        except Exception as e:
+            print(f"Failed to list posts: {e}")
 
         # Search posts
-        posts = client.search_posts(limit=10)
-        print(f"Found {len(posts)} posts")
+        try:
+            result = await client.search_posts(query="newsletter", status="confirmed", limit=10)
+            print(f"Found {result['results']} matching posts")
+        except Exception as e:
+            print(f"Failed to search posts: {e}")
 
-        # Get segments
-        segments = client.get_segments()
-        print(f"Found {len(segments)} segments")
+        # List segments
+        try:
+            result = await client.list_segments()
+            print(f"Total segments: {result['results']}")
+            for seg in result["data"]:
+                print(f"  - {seg.name}: {seg.count} subscribers")
+        except Exception as e:
+            print(f"Failed to list segments: {e}")
 
-    except Exception as e:
-        print(f"Error: {str(e)}")
-
-    finally:
-        client.close()
+        # Delete subscription
+        try:
+            success = await client.delete_subscription(subscription.id)
+            if success:
+                print("Subscription deleted successfully")
+        except Exception as e:
+            print(f"Failed to delete subscription: {e}")
 
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
