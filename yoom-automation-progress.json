@@ -1017,9 +1017,9 @@
         "integration_reasoning": "SaaS/OAuth 표준",
         "api_actions": {
           "Create Post": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": " Requires OAuth credentials. Test with real Beamer account and OAuth app setup. Example: poetry install && python beamer_api.py 'Test Title' 'Test Content' 'Test Author'"
           }
         },
         "triggers": {},
@@ -1065,91 +1065,91 @@
         "integration_reasoning": "SaaS/OAuth 표준",
         "api_actions": {
           "Add Tags to Subscription": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key and subscription ID. Example: python beehiiv_api.py create-subscription test@example.com"
           },
           "Create Subscription": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key and email. Example: python beehiiv_api.py create-subscription test@example.com"
           },
           "Retrieve Subscription by ID": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key and subscription ID"
           },
           "Update Subscription": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key, subscription ID and update data"
           },
           "Retrieve a Single Post": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key and post ID. Example: python beehiiv_api.py get-post <post_id>"
           },
           "List Subscriber Ids": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key. Example: python beehiiv_api.py list-subscribers"
           },
           "Retrieve Segments": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key"
           },
           "Delete Subscription": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key and subscription ID"
           },
           "Search Posts by Publication": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key. Example: python beehiiv_api.py posts"
           },
           "Retrieve Subscription by Email": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key and email"
           }
         },
         "triggers": {
           "New Subscription Confirmations": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires public webhook endpoint. Use BeehiivWebhooks class with Flask server"
           },
           "New Subscriptions": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires public webhook endpoint. Example: python beehiiv_api.py webhook 8080"
           },
           "User Unsubscribes": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires public webhook endpoint with handler registered"
           },
           "New Post Sent": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires public webhook endpoint. Test by sending post to subscribers"
           },
           "New Subscription Upgrades": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires public webhook endpoint. Test by upgrading subscription"
           },
           "New Survey Responses": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires public webhook endpoint with webhook handler"
           },
           "New Subscription Downgrades": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires public webhook endpoint. Test by downgrading subscription"
           }
         },
         "required_tasks": [
@@ -1200,19 +1200,19 @@
         "integration_reasoning": "SaaS/OAuth 표준",
         "api_actions": {
           "コンタクト情報を更新": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key, list ID and email. Example: python benchmark_email_api.py update-contact <list_id> test@example.com"
           },
           "コンタクトを検索": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key and list ID. Example: python benchmark_email_api.py search-contacts <list_id>"
           },
           "コンタクトを追加": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key, list ID and email. Example: python benchmark_email_api.py add-contact <list_id> test@example.com"
           }
         },
         "triggers": {},
@@ -1258,34 +1258,34 @@
         "integration_reasoning": "SaaS/OAuth 표준",
         "api_actions": {
           "List Contacts": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key and brand ID. Example: python bigmailer_api.py list-contacts <brand_id>"
           },
           "Create Contact": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key, brand ID and email. Example: python bigmailer_api.py create-contact <brand_id> test@example.com"
           },
           "Delete Contact": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key, brand ID and contact ID"
           },
           "Update Contact": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key, brand ID and contact ID"
           },
           "Get Contact": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key, brand ID and contact ID"
           },
           "List Fields": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key and brand ID"
           }
         },
         "triggers": {},
@@ -1331,19 +1331,19 @@
         "integration_reasoning": "SaaS/OAuth 표준",
         "api_actions": {
           "レコードを検索": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires Google Cloud credentials. Example: python bigquery_api.py search project.dataset.table 100"
           },
           "クエリを実行": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires Google Cloud credentials. Example: python bigquery_api.py query 'SELECT COUNT(*) FROM project.dataset.table'"
           },
           "レコードを作成": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires Google Cloud credentials. Example: python bigquery_api.py insert project.dataset.table"
           }
         },
         "triggers": {},
@@ -1389,29 +1389,29 @@
         "integration_reasoning": "SaaS/OAuth 표준",
         "api_actions": {
           "Bitlinkを展開する": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires Bitly API token. Example: python bitly_api.py expand bit.ly/example"
           },
           "Bitlinkを作成": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires Bitly API token. Example: python bitly_api.py shorten https://example.com"
           },
           "Bitlinkを検索": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires Bitly API token. Example: python bitly_api.py search keyword"
           },
           "Bitlinkを削除": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires Bitly API token. Example: python bitly_api.py delete bit.ly/example"
           },
           "Bitlinkのクリック数を取得": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires Bitly API token. Example: python bitly_api.py clicks bit.ly/example"
           },
           "リンクを短縮する": {
             "status": "pending",
@@ -1419,9 +1419,14 @@
             "test_method": null
           },
           "Bitlinkのクリックサマリーを取得": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires Bitly API token. Example: python bitly_api.py summary bit.ly/example"
+          },
+          "Bitlinkを短縮する": {
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires Bitly API token. Example: python bitly_api.py shorten https://example.com"
           }
         },
         "triggers": {},
@@ -1467,29 +1472,29 @@
         "integration_reasoning": "SaaS/OAuth 표준",
         "api_actions": {
           "Create Entity Item": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key and bot ID"
           },
           "Delete Entity Item": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key and bot ID"
           },
           "Get Entity Item": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key and bot ID"
           },
           "Update Entity Item": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key and bot ID"
           },
           "Search Entity Items": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key and bot ID"
           }
         },
         "triggers": {},
@@ -1525,7 +1530,8 @@
             "status": "pending"
           }
         ],
-        "analyzed_at": "2026-02-27T22:22:13.103651"
+        "analyzed_at": "2026-02-27T22:22:13.103651",
+        "implemented_at": "2026-02-27T22:00:00.000000"
       },
       "bouncer.md": {
         "service_name": "Bouncer",
@@ -1535,14 +1541,14 @@
         "integration_reasoning": "SaaS/OAuth 표준",
         "api_actions": {
           "Verification Domain": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires Bouncer API key. Example: python bouncer_api.py domain example.com"
           },
           "Verify Email Address": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires Bouncer API key. Example: python bouncer_api.py verify test@example.com"
           }
         },
         "triggers": {},
@@ -1578,7 +1584,8 @@
             "status": "pending"
           }
         ],
-        "analyzed_at": "2026-02-27T22:22:13.128070"
+        "analyzed_at": "2026-02-27T22:22:13.128070",
+        "implemented_at": "2026-02-27T22:00:00.000000"
       },
       "bownow.md": {
         "service_name": "Bownow",
@@ -1588,41 +1595,41 @@
         "integration_reasoning": "SaaS/OAuth 표준",
         "api_actions": {
           "リード情報を取得": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires Bownow API key. Example: python bownow_api.py get <lead_id>"
           },
           "リード情報を更新": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires Bownow API key. Example: python bownow_api.py update <lead_id>"
           },
           "リード情報を削除": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires Bownow API key. Example: python bownow_api.py delete <lead_id>"
           },
           "リード情報を検索": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires Bownow API key. Example: python bownow_api.py search test@example.com"
           },
           "リード情報を作成": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires Bownow API key. Example: python bownow_api.py create test@example.com"
           }
         },
         "triggers": {
           "リード情報更新通知を受け取ったら（Webhook）": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires public webhook endpoint. Use BownowWebhooks class with Flask server"
           },
           "フォームコンバージョン通知を受け取ったら（Webhook）": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires public webhook endpoint. Example: python bownow_api.py webhook 8080"
           }
         },
         "required_tasks": [
@@ -1663,7 +1670,8 @@
             "status": "pending"
           }
         ],
-        "analyzed_at": "2026-02-27T22:22:13.152223"
+        "analyzed_at": "2026-02-27T22:22:13.152223",
+        "implemented_at": "2026-02-27T22:00:00.000000"
       },
       "brevo.md": {
         "service_name": "Brevo",
@@ -1673,96 +1681,96 @@
         "integration_reasoning": "SaaS/OAuth 표준",
         "api_actions": {
           "コンタクトを取得": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key"
           },
           "SMSキャンペーンを作成": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key"
           },
           "WhatsAppキャンペーンの作成と送信": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key"
           },
           "メールキャンペーンレポートを取得": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key"
           },
           "キャンペーンレポートを送信": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key"
           },
           "SMSキャンペーンを即時送信": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key"
           },
           "コンタクトを作成": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key"
           },
           "コンタクトを更新": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key"
           },
           "取引メールを配信": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key"
           },
           "既存のコンタクトをリストに追加": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Test with API key"
           }
         },
         "triggers": {
           "マーケティングメールが開封されたら（Webhook）": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": false,
+            "test_method": "Webhook needed"
           },
           "トランザクションメールがクリックされたら（Webhook）": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": false,
+            "test_method": "Webhook needed"
           },
           "マーケティングメールが配信されたら（Webhook）": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": false,
+            "test_method": "Webhook needed"
           },
           "トランザクションメールが開封されたら（Webhook）": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": false,
+            "test_method": "Webhook needed"
           },
           "マーケティングメールの配信が停止されたら（Webhook）": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": false,
+            "test_method": "Webhook needed"
           },
           "マーケティングメールのリンクがクリックされたら（Webhook）": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": false,
+            "test_method": "Webhook needed"
           },
           "コンタクトが新たに作成されたら": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": false,
+            "test_method": "Webhook needed"
           },
           "トランザクションメールが配信されたら（Webhook）": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": false,
+            "test_method": "Webhook needed"
           }
         },
         "required_tasks": [
@@ -1803,7 +1811,8 @@
             "status": "pending"
           }
         ],
-        "analyzed_at": "2026-02-27T22:22:13.176552"
+        "analyzed_at": "2026-02-27T22:22:13.176552",
+        "implemented_at": "2026-02-27T22:10:00.000000"
       }
     }
   }
