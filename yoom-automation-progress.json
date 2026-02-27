@@ -1683,32 +1683,32 @@
           "コンタクトを取得": {
             "status": "completed",
             "testable": true,
-            "test_method": "Test with API key"
+            "test_method": "Requires Brevo API key"
           },
           "SMSキャンペーンを作成": {
             "status": "completed",
             "testable": true,
-            "test_method": "Test with API key"
+            "test_method": "Requires Brevo API key"
           },
           "WhatsAppキャンペーンの作成と送信": {
             "status": "completed",
             "testable": true,
-            "test_method": "Test with API key"
+            "test_method": "Requires Brevo API key"
           },
           "メールキャンペーンレポートを取得": {
             "status": "completed",
             "testable": true,
-            "test_method": "Test with API key"
+            "test_method": "Requires Brevo API key"
           },
           "キャンペーンレポートを送信": {
             "status": "completed",
             "testable": true,
-            "test_method": "Test with API key"
+            "test_method": "Requires Brevo API key"
           },
           "SMSキャンペーンを即時送信": {
             "status": "completed",
             "testable": true,
-            "test_method": "Test with API key"
+            "test_method": "Requires Brevo API key"
           },
           "コンタクトを作成": {
             "status": "completed",
@@ -1718,7 +1718,7 @@
           "コンタクトを更新": {
             "status": "completed",
             "testable": true,
-            "test_method": "Test with API key"
+            "test_method": "Requires Brevo API key"
           },
           "取引メールを配信": {
             "status": "completed",
@@ -1728,49 +1728,54 @@
           "既存のコンタクトをリストに追加": {
             "status": "completed",
             "testable": true,
-            "test_method": "Test with API key"
+            "test_method": "Requires Brevo API key"
+          },
+          "トランザクションメールを配信": {
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires Brevo API key"
           }
         },
         "triggers": {
           "マーケティングメールが開封されたら（Webhook）": {
             "status": "completed",
-            "testable": false,
-            "test_method": "Webhook needed"
+            "testable": true,
+            "test_method": "Requires public webhook endpoint"
           },
           "トランザクションメールがクリックされたら（Webhook）": {
             "status": "completed",
-            "testable": false,
-            "test_method": "Webhook needed"
+            "testable": true,
+            "test_method": "Requires public webhook endpoint"
           },
           "マーケティングメールが配信されたら（Webhook）": {
             "status": "completed",
-            "testable": false,
-            "test_method": "Webhook needed"
+            "testable": true,
+            "test_method": "Requires public webhook endpoint"
           },
           "トランザクションメールが開封されたら（Webhook）": {
             "status": "completed",
-            "testable": false,
-            "test_method": "Webhook needed"
+            "testable": true,
+            "test_method": "Requires public webhook endpoint"
           },
           "マーケティングメールの配信が停止されたら（Webhook）": {
             "status": "completed",
-            "testable": false,
-            "test_method": "Webhook needed"
+            "testable": true,
+            "test_method": "Requires public webhook endpoint"
           },
           "マーケティングメールのリンクがクリックされたら（Webhook）": {
             "status": "completed",
-            "testable": false,
-            "test_method": "Webhook needed"
+            "testable": true,
+            "test_method": "Requires public webhook endpoint"
           },
           "コンタクトが新たに作成されたら": {
             "status": "completed",
-            "testable": false,
-            "test_method": "Webhook needed"
+            "testable": true,
+            "test_method": "Requires public webhook endpoint"
           },
           "トランザクションメールが配信されたら（Webhook）": {
             "status": "completed",
-            "testable": false,
-            "test_method": "Webhook needed"
+            "testable": true,
+            "test_method": "Requires public webhook endpoint"
           }
         },
         "required_tasks": [
