@@ -1,0 +1,41 @@
+# Yoom Integration - Espo_crm
+
+Yoom 앱 서비스와 OpenClaw 연계 스킬
+
+## 서비스 정보
+- **서비스명**: Espo_crm
+- **카テゴリー**: セールス
+- **Yoom URL**: https://lp.yoom.fun/apps/espo_crm
+
+## 연계 정보
+- **연계 방식**: API
+- **인증 방식**: OAuth/API Key
+- **API 액ション**: 25個
+- **トリガー**: 0個
+
+## 設置
+
+```bash
+pip install aiohttp
+pip install requests
+```
+
+## 環境変数
+
+```bash
+YOOM_ESPO_CRM_BASE_URL=https://api.example.com
+YOOM_ESPO_CRM_API_KEY=your_api_key_here
+```
+
+## 使い方
+
+```python
+from integration import Espo_crmClient
+
+client = Espo_crmClient()
+# 操作実行
+```
+
+## テスト
+
+TEST_GUIDE.md 参照
