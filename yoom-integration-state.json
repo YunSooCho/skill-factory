@@ -23788,6 +23788,18 @@
         "requests",
         "flask"
       ]
+    },
+    {
+      "file_key": "pipedrive",
+      "service_name": "Pipedrive",
+      "category": "セールス",
+      "completed_at": "2026-02-27T20:32:01.624548:00+09:00",
+      "integration_type": "api",
+      "testable": true,
+      "test_requirements": [
+        "requests",
+        "flask"
+      ]
     }
   ],
   "current_category_index": 0,
