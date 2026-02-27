@@ -1,157 +1,974 @@
 {
   "currentCategory": "01_마케팅_Marketing",
-  "completed": {},
+  "completed": {
+    "abstract.md": {
+      "service_name": "Abstract",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "AbstractAPI.com: 각 서비스별 개별 API 키 필요",
+      "api_actions": {
+        "Live Exchange Rates": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/abstract/abstract_client.py",
+          "method": "AbstractAPIClient.live_exchange_rates(base)"
+        },
+        "Convert Exchange Rates": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/abstract/abstract_client.py",
+          "method": "AbstractAPIClient.convert_exchange_rates(amount, base, target)"
+        },
+        "Phone Number Validation": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/abstract/abstract_client.py",
+          "method": "AbstractAPIClient.phone_number_validation(phone, country)"
+        },
+        "Get Current Time": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/abstract/abstract_client.py",
+          "method": "AbstractAPIClient.get_current_time(location)"
+        },
+        "Convert Time": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/abstract/abstract_client.py",
+          "method": "AbstractAPIClient.convert_time(base_location, base_date, target_location)"
+        },
+        "IP Geolocation Information": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/abstract/abstract_client.py",
+          "method": "AbstractAPIClient.ip_geolocation(ip_address)"
+        },
+        "Email Validation": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/abstract/abstract_client.py",
+          "method": "AbstractAPIClient.email_validation(email)"
+        },
+        "Country Holidays": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/abstract/abstract_client.py",
+          "method": "AbstractAPIClient.get_country_holidays(country, year)"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-27T21:00:00.000000",
+      "required_tasks": [
+        {
+          "task": "Abstract API 문서 검토",
+          "priority": "high",
+          "description": "https://app.abstractapi.com/ 및 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "API 키 획득 (6개 서비스)",
+          "priority": "high",
+          "description": "Exchange Rates, Phone Validation, Timezone, IP Geolocation, Email Validation, Holidays",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 환경 구축",
+          "priority": "medium",
+          "description": "무료 플랜으로 테스트 가능",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T21:00:00.000000"
+    },
+    "Pinterest.md": {
+      "service_name": "Pinterest",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "Get Pin": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
+          "method": "PinterestAPI.get_pin(pin_id)"
+        },
+        "Create Pin": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
+          "method": "PinterestAPI.create_pin(title, link, board_id, ...)"
+        },
+        "Get Board": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
+          "method": "PinterestAPI.get_board(board_id)"
+        },
+        "Create Board": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
+          "method": "PinterestAPI.create_board(name, description, privacy)"
+        },
+        "List Pins": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
+          "method": "PinterestAPI.list_pins(board_id, page_size, bookmark)"
+        },
+        "Update Board": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
+          "method": "PinterestAPI.update_board(board_id, name, description, privacy)"
+        },
+        "List Boards": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
+          "method": "PinterestAPI.list_boards(page_size, bookmark)"
+        }
+      },
+      "triggers": {
+        "New Pin": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "PinterestAPI.register_webhook(callback_url, ['pins'])"
+        }
+      },
+      "implemented_at": "2026-02-27T20:50:00.000000",
+      "required_tasks": [
+        {
+          "task": "Pinterest API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/Pinterest 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Pinterest OAuth 앱 등록",
+          "priority": "high",
+          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "status": "pending"
+        },
+        {
+          "task": "Client ID 및 Client Secret 획득",
+          "priority": "high",
+          "description": "OAuth 앱에서 인증 정보 획득",
+          "status": "pending"
+        },
+        {
+          "task": "1개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "7개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T20:46:31.906731"
+    },
+    "abyssale.md": {
+      "service_name": "Abyssale",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "Generate Content": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 템플릿 ID로 테스트 가능",
+          "code_file": "github/skill-factory/repo/abyssale/abyssale_client.py",
+          "method": "AbyssaleClient.generate_content(template_id, format, elements)"
+        },
+        "Get File": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 생성된 콘텐츠 ID로 테스트 가능",
+          "code_file": "github/skill-factory/repo/abyssale/abyssale_client.py",
+          "method": "AbyssaleClient.get_file(generation_id)"
+        }
+      },
+      "triggers": {
+        "New Generation": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AbyssaleClient.verify_webhook_signature()"
+        }
+      },
+      "implemented_at": "2026-02-27T21:10:00.000000",
+      "required_tasks": [
+        {
+          "task": "Abyssale API 문서 검토",
+          "priority": "high",
+          "description": "https://api.abyssale.com/docs 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Abyssale API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "1개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T21:10:00.000000"
+    },
+    "activecampaign.md": {
+      "service_name": "Activecampaign",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "アカウントを更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 계정 ID로 테스트 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.update_account(account_id, data)"
+        },
+        "コンタクト情報を削除": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 컨택트 ID로 테스트 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.delete_contact(contact_id)"
+        },
+        "コンタクトをリストに登録": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 컨택트 ID와 리스트 ID로 테스트 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.add_contact_to_list(contact_id, list_id)"
+        },
+        "アカウントを削除": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 계정 ID로 테스트 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.delete_account(account_id)"
+        },
+        "コンタクトとアカウントを関連付ける": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 컨택트 ID와 계정 ID로 테스트 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.associate_contact_account(contact_id, account_id)"
+        },
+        "コンタクト情報を検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 이메일로 검색 테스트 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.search_contact(email)"
+        },
+        "コンタクト情報の一覧を取得または検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 페이징으로 리스트 조회 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.list_contacts(limit, offset)"
+        },
+        "取引を作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 딜 생성 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.create_deal(contact_id, value, currency, stage)"
+        },
+        "コンタクトを作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 컨택트 생성 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.create_contact(email, first_name, last_name, phone)"
+        },
+        "コンタクト情報を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 컨택트 ID로 조회 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.get_contact(contact_id)"
+        },
+        "オート메ーションにコンタクトを登録": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 컨택트와 오토메이션 ID로 테스트 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.add_contact_to_automation(contact_id, automation_id)"
+        },
+        "コンタクトをリストから解除": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 컨택트와 리스트 ID로 테스트 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.remove_contact_from_list(contact_id, list_id)"
+        },
+        "アカウントを作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 계정 생성 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.create_account(name, account_url)"
+        },
+        "ノートを追加": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 컨택트 ID와 노트 내용으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.add_note(contact_id, note)"
+        },
+        "コンタクトのスコアを取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 컨택트 ID로 스코어 조회 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.get_contact_score(contact_id)"
+        },
+        "アカウントを取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 계정 ID로 조회 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.get_account(account_id)"
+        }
+      },
+      "triggers": {
+        "取引が作成されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "ActiveCampaignClient.handle_webhook_event()"
+        },
+        "コンタクトが追加されたら（JSONではないデータがPaylaodで送られる）": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "ActiveCampaignClient.handle_webhook_event()"
+        },
+        "コンタクトが作成されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "ActiveCampaignClient.handle_webhook_event()"
+        },
+        "コンタクトのカスタムフィールド値が作成されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "ActiveCampaignClient.handle_webhook_event()"
+        }
+      },
+      "implemented_at": "2026-02-27T21:10:00.000000",
+      "required_tasks": [
+        {
+          "task": "Activecampaign API 문서 검토",
+          "priority": "high",
+          "description": "https://developers.activecampaign.com/ 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Activecampaign API URL 및 API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API URL과 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "4개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T21:10:00.000000"
+    },
+    "adroll.md": {
+      "service_name": "Adroll",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "List Segment": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 세그먼트 목록 조회 가능",
+          "code_file": "github/skill-factory/repo/adroll/adroll_client.py",
+          "method": "AdrollClient.list_segments(eid, limit, offset)"
+        },
+        "Create Segment": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 세그먼트 생성 가능",
+          "code_file": "github/skill-factory/repo/adroll/adroll_client.py",
+          "method": "AdrollClient.create_segment(eid, name, type, rules)"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-27T21:10:00.000000",
+      "required_tasks": [
+        {
+          "task": "Adroll API 문서 검토",
+          "priority": "high",
+          "description": "https://developers.adroll.com/docs 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Adroll API 키 및 EID 획득",
+          "priority": "high",
+          "description": "Adroll 계정에서 API 키와 EID 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T21:10:00.000000"
+    },
+    "all-images-ai.md": {
+      "service_name": "All Images Ai",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "Search Image Generation": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 이미지 생성 검색 가능",
+          "code_file": "github/skill-factory/repo/all-images-ai/all_images_ai_client.py",
+          "method": "AllImagesAIClient.search_image_generations(limit, offset)"
+        },
+        "Get Image": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 이미지 ID로 조회 가능",
+          "code_file": "github/skill-factory/repo/all-images-ai/all_images_ai_client.py",
+          "method": "AllImagesAIClient.get_image(image_id)"
+        },
+        "Delete Image Generation": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 생성 ID로 삭제 가능",
+          "code_file": "github/skill-factory/repo/all-images-ai/all_images_ai_client.py",
+          "method": "AllImagesAIClient.delete_image_generation(generation_id)"
+        },
+        "Get Image Generation": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 생성 ID로 조회 가능",
+          "code_file": "github/skill-factory/repo/all-images-ai/all_images_ai_client.py",
+          "method": "AllImagesAIClient.get_image_generation(generation_id)"
+        },
+        "Create Image Generation": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 프롬프트로 이미지 생성 가능",
+          "code_file": "github/skill-factory/repo/all-images-ai/all_images_ai_client.py",
+          "method": "AllImagesAIClient.create_image_generation(prompt, style, format)"
+        }
+      },
+      "triggers": {
+        "Print Completed": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AllImagesAIClient.handle_webhook_event()"
+        }
+      },
+      "implemented_at": "2026-02-27T21:10:00.000000",
+      "required_tasks": [
+        {
+          "task": "All Images Ai API 문서 검토",
+          "priority": "high",
+          "description": "https://allimages.ai/docs 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "All Images Ai API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "1개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T21:10:00.000000"
+    },
+    "anymail-finder.md": {
+      "service_name": "Anymail Finder",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "Search for Person's Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 이름과 회사로 이메일 검색 가능",
+          "code_file": "github/skill-factory/repo/anymail-finder/anymail_finder_client.py",
+          "method": "AnymailFinderClient.find_person_email(name, company)"
+        },
+        "Search for Company's Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 회사 도메인으로 이메일 검색 가능",
+          "code_file": "github/skill-factory/repo/anymail-finder/anymail_finder_client.py",
+          "method": "AnymailFinderClient.find_company_email(domain)"
+        },
+        "Validate Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 이메일 유효성 검증 가능",
+          "code_file": "github/skill-factory/repo/anymail-finder/anymail_finder_client.py",
+          "method": "AnymailFinderClient.validate_email(email)"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-27T21:10:00.000000",
+      "required_tasks": [
+        {
+          "task": "Anymail Finder API 문서 검토",
+          "priority": "high",
+          "description": "https://anymailfinder.com/api 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Anymail Finder API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T21:10:00.000000"
+    },
+    "aweber.md": {
+      "service_name": "Aweber",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "Get Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 구독자 ID로 조회 가능",
+          "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
+          "method": "AweberClient.get_subscriber(subscriber_id, account_id, list_id)"
+        },
+        "Find Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 이메일로 구독자 찾기 가능",
+          "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
+          "method": "AweberClient.find_subscriber(email, account_id, list_id)"
+        },
+        "Get Broadcast Open": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 방송 ID로 오픈 통계 조회 가능",
+          "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
+          "method": "AweberClient.get_broadcast_open(broadcast_id, account_id)"
+        },
+        "Get Broadcast Statistic": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 방송 ID로 통계 조회 가능",
+          "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
+          "method": "AweberClient.get_broadcast_statistics(broadcast_id, account_id)"
+        },
+        "Search List": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 계정에서 리스트 검색 가능",
+          "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
+          "method": "AweberClient.search_lists(account_id)"
+        },
+        "Move Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 구독자 이동 가능",
+          "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
+          "method": "AweberClient.move_subscriber(subscriber_id, from_list_id, to_list_id, account_id)"
+        },
+        "Create Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 구독자 생성 가능",
+          "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
+          "method": "AweberClient.create_subscriber(email, account_id, list_id)"
+        },
+        "Get Broadcast Click": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 방송 ID로 클릭 통계 조회 가능",
+          "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
+          "method": "AweberClient.get_broadcast_click(broadcast_id, account_id)"
+        },
+        "Delete Subscriber by Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 이메일로 구독자 삭제 가능",
+          "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
+          "method": "AweberClient.delete_subscriber_by_email(email, account_id, list_id)"
+        },
+        "Update Subscriber by Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 이메일로 구독자 업데이트 가능",
+          "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
+          "method": "AweberClient.update_subscriber_by_email(email, account_id, list_id, data)"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-27T21:10:00.000000",
+      "required_tasks": [
+        {
+          "task": "Aweber API 문서 검토",
+          "priority": "high",
+          "description": "https://api.aweber.com/ 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Aweber OAuth 앱 등록",
+          "priority": "high",
+          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "status": "pending"
+        },
+        {
+          "task": "Aweber API 키 획득",
+          "priority": "high",
+          "description": "API Console에서 API 키와 Consumer Key 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T21:10:00.000000"
+    },
+    "bannerbear.md": {
+      "service_name": "Bannerbear",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "Create Collection": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 컬렉션 생성 가능",
+          "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
+          "method": "BannerbearClient.create_collection(template_id, modifications)"
+        },
+        "Get Video Detail": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 비디오 ID로 조회 가능",
+          "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
+          "method": "BannerbearClient.get_video_detail(video_id)"
+        },
+        "Create Image": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 이미지 생성 가능",
+          "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
+          "method": "BannerbearClient.create_image(template_id, modifications)"
+        },
+        "Create Video": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 비디오 생성 가능",
+          "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
+          "method": "BannerbearClient.create_video(template_id, modifications, fps)"
+        },
+        "Create Movie": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무비 생성 가능",
+          "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
+          "method": "BannerbearClient.create_movie(template_id, modifications, fps)"
+        },
+        "Get Screenshot Detail": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 스크린샷 ID로 조회 가능",
+          "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
+          "method": "BannerbearClient.get_screenshot_detail(screenshot_id)"
+        },
+        "Get File Data": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 콘텐츠 ID로 파일 데이터 조회 가능",
+          "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
+          "method": "BannerbearClient.get_file_data(content_id)"
+        },
+        "Create Screenshot": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - URL로 스크린샷 생성 가능",
+          "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
+          "method": "BannerbearClient.create_screenshot(url, options)"
+        },
+        "Get Movie Detail": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무비 ID로 조회 가능",
+          "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
+          "method": "BannerbearClient.get_movie_detail(movie_id)"
+        },
+        "Get Collection Detail": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 컬렉션 ID로 조회 가능",
+          "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
+          "method": "BannerbearClient.get_collection_detail(collection_id)"
+        },
+        "Get  Image Detail": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 이미지 ID로 조회 가능",
+          "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
+          "method": "BannerbearClient.get_image_detail(image_id)"
+        }
+      },
+      "triggers": {
+        "Animated Gif Created": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BannerbearClient.handle_webhook()"
+        },
+        "Collection Created": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BannerbearClient.handle_webhook()"
+        },
+        "Video Created": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BannerbearClient.handle_webhook()"
+        },
+        "Movie Created": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BannerbearClient.handle_webhook()"
+        },
+        "Image Created": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BannerbearClient.handle_webhook()"
+        },
+        "Screenshot Created": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BannerbearClient.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-27T21:10:00.000000",
+      "required_tasks": [
+        {
+          "task": "Bannerbear API 문서 검토",
+          "priority": "high",
+          "description": "https://developers.bannerbear.com/ 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Bannerbear API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "6개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T21:10:00.000000"
+    },
+    "bannerbite.md": {
+      "service_name": "Bannerbite",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "Get Bite": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Bite ID로 조회 가능",
+          "code_file": "github/skill-factory/repo/bannerbite/bannerbite_client.py",
+          "method": "BannerbiteClient.get_bite(bite_id)"
+        },
+        "Render Media": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Bite 렌더링 가능",
+          "code_file": "github/skill-factory/repo/bannerbite/bannerbite_client.py",
+          "method": "BannerbiteClient.render_media(bite_id, format)"
+        },
+        "Get Project": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 프로젝트 ID로 조회 가능",
+          "code_file": "github/skill-factory/repo/bannerbite/bannerbite_client.py",
+          "method": "BannerbiteClient.get_project(project_id)"
+        },
+        "Search Bites by Project ID": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 프로젝트 ID로 Bites 검색 가능",
+          "code_file": "github/skill-factory/repo/bannerbite/bannerbite_client.py",
+          "method": "BannerbiteClient.search_bites_by_project(project_id)"
+        },
+        "List Projects": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 프로젝트 목록 조회 가능",
+          "code_file": "github/skill-factory/repo/bannerbite/bannerbite_client.py",
+          "method": "BannerbiteClient.list_projects()"
+        }
+      },
+      "triggers": {
+        "Webhook Bannerbite": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BannerbiteClient.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-27T21:10:00.000000",
+      "required_tasks": [
+        {
+          "task": "Bannerbite API 문서 검토",
+          "priority": "high",
+          "description": "https://bannerbite.com/docs 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Bannerbite API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "1개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T21:10:00.000000"
+    }
+  },
   "pending": {
     "01_마케팅_Marketing": {
-      "Pinterest.md": {
-        "service_name": "Pinterest",
+      "ipqualityscore.md": {
+        "service_name": "Ipqualityscore",
         "category": "マーケティング",
         "integration_type": "oauth",
         "integration_confidence": "high",
         "integration_reasoning": "SaaS/OAuth 표준",
         "api_actions": {
-          "Get Pin": {
-            "status": "completed",
-            "testable": false,
-            "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
-            "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
-            "method": "PinterestAPI.get_pin(pin_id)"
-          },
-          "Create Pin": {
-            "status": "completed",
-            "testable": false,
-            "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
-            "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
-            "method": "PinterestAPI.create_pin(title, link, board_id, ...)"
-          },
-          "Get Board": {
-            "status": "completed",
-            "testable": false,
-            "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
-            "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
-            "method": "PinterestAPI.get_board(board_id)"
-          },
-          "Create Board": {
-            "status": "completed",
-            "testable": false,
-            "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
-            "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
-            "method": "PinterestAPI.create_board(name, description, privacy)"
-          },
-          "List Pins": {
-            "status": "completed",
-            "testable": false,
-            "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
-            "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
-            "method": "PinterestAPI.list_pins(board_id, page_size, bookmark)"
-          },
-          "Update Board": {
-            "status": "completed",
-            "testable": false,
-            "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
-            "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
-            "method": "PinterestAPI.update_board(board_id, name, description, privacy)"
-          },
-          "List Boards": {
-            "status": "completed",
-            "testable": false,
-            "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
-            "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
-            "method": "PinterestAPI.list_boards(page_size, bookmark)"
-          }
-        },
-        "triggers": {
-          "New Pin": {
-            "status": "completed",
-            "testable": false,
-            "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
-            "webhook_method": "PinterestAPI.register_webhook(callback_url, ['pins'])"
-          }
-        },
-        "implemented_at": "2026-02-27T20:50:00.000000",
-        "required_tasks": [
-          {
-            "task": "Pinterest API 문서 검토",
-            "priority": "high",
-            "description": "https://lp.yoom.fun/apps/Pinterest 및 공식 API 문서 확인",
-            "status": "pending"
-          },
-          {
-            "task": "Pinterest OAuth 앱 등록",
-            "priority": "high",
-            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
-            "status": "pending"
-          },
-          {
-            "task": "Client ID 및 Client Secret 획득",
-            "priority": "high",
-            "description": "OAuth 앱에서 인증 정보 획득",
-            "status": "pending"
-          },
-          {
-            "task": "1개 트리거용 Webhook 엔드포인트 설정",
-            "priority": "medium",
-            "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
-            "status": "pending"
-          },
-          {
-            "task": "테스트 계정 또는 샌드박스 환경 구축",
-            "priority": "medium",
-            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
-            "status": "pending"
-          },
-          {
-            "task": "7개 API 액션 단위 테스트 작성",
-            "priority": "low",
-            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
-            "status": "pending"
-          }
-        ],
-        "analyzed_at": "2026-02-27T20:46:31.906731"
-      },
-      "abstract.md": {
-        "service_name": "Abstract",
-        "category": "マーケティング",
-        "integration_type": "oauth",
-        "integration_confidence": "high",
-        "integration_reasoning": "SaaS/OAuth 표준",
-        "api_actions": {
-          "Live Exchange Rates": {
+          "Search Phone Number": {
             "status": "pending",
             "testable": null,
             "test_method": null
           },
-          "Convert Exchange Rates": {
+          "Search Proxy &amp; VPN": {
             "status": "pending",
             "testable": null,
             "test_method": null
           },
-          "Phone Number Validation": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Get Current Time": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Convert Time": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "IP Geolocation Information": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Email Validation": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Country Holidays": {
+          "Search Email": {
             "status": "pending",
             "testable": null,
             "test_method": null
@@ -160,419 +977,13 @@
         "triggers": {},
         "required_tasks": [
           {
-            "task": "Abstract API 문서 검토",
+            "task": "Ipqualityscore API 문서 검토",
             "priority": "high",
-            "description": "https://lp.yoom.fun/apps/Abstract 및 공식 API 문서 확인",
+            "description": "https://lp.yoom.fun/apps/Ipqualityscore 및 공식 API 문서 확인",
             "status": "pending"
           },
           {
-            "task": "Abstract OAuth 앱 등록",
-            "priority": "high",
-            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
-            "status": "pending"
-          },
-          {
-            "task": "Client ID 및 Client Secret 획득",
-            "priority": "high",
-            "description": "OAuth 앱에서 인증 정보 획득",
-            "status": "pending"
-          },
-          {
-            "task": "테스트 계정 또는 샌드박스 환경 구축",
-            "priority": "medium",
-            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
-            "status": "pending"
-          },
-          {
-            "task": "8개 API 액션 단위 테스트 작성",
-            "priority": "low",
-            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
-            "status": "pending"
-          }
-        ],
-        "analyzed_at": "2026-02-27T20:46:31.947646"
-      },
-      "abyssale.md": {
-        "service_name": "Abyssale",
-        "category": "マーケティング",
-        "integration_type": "oauth",
-        "integration_confidence": "high",
-        "integration_reasoning": "SaaS/OAuth 표준",
-        "api_actions": {
-          "Generate Content": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Get File": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          }
-        },
-        "triggers": {
-          "New Generation": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          }
-        },
-        "required_tasks": [
-          {
-            "task": "Abyssale API 문서 검토",
-            "priority": "high",
-            "description": "https://lp.yoom.fun/apps/Abyssale 및 공식 API 문서 확인",
-            "status": "pending"
-          },
-          {
-            "task": "Abyssale OAuth 앱 등록",
-            "priority": "high",
-            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
-            "status": "pending"
-          },
-          {
-            "task": "Client ID 및 Client Secret 획득",
-            "priority": "high",
-            "description": "OAuth 앱에서 인증 정보 획득",
-            "status": "pending"
-          },
-          {
-            "task": "1개 트리거용 Webhook 엔드포인트 설정",
-            "priority": "medium",
-            "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
-            "status": "pending"
-          },
-          {
-            "task": "테스트 계정 또는 샌드박스 환경 구축",
-            "priority": "medium",
-            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
-            "status": "pending"
-          },
-          {
-            "task": "2개 API 액션 단위 테스트 작성",
-            "priority": "low",
-            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
-            "status": "pending"
-          }
-        ],
-        "analyzed_at": "2026-02-27T20:46:31.988539"
-      },
-      "activecampaign.md": {
-        "service_name": "Activecampaign",
-        "category": "マーケティング",
-        "integration_type": "oauth",
-        "integration_confidence": "high",
-        "integration_reasoning": "SaaS/OAuth 표준",
-        "api_actions": {
-          "アカウントを更新": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "コンタクト情報を削除": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "コンタクトをリストに登録": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "アカウントを削除": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "コンタクトとアカウントを関連付ける": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "コンタクト情報を検索": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "コンタクト情報の一覧を取得または検索": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "取引を作成": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "コンタクトを作成": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "コンタクト情報を取得": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "オートメーションにコンタクトを登録": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "コンタクトをリストから解除": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "アカウントを作成": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "ノートを追加": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "コンタクトのスコアを取得": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "アカウントを取得": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          }
-        },
-        "triggers": {
-          "取引が作成されたら": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "コンタクトが追加されたら（JSONではないデータがPaylaodで送られる）": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "コンタクトが作成されたら": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "コンタクトのカスタムフィールド値が作成されたら": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          }
-        },
-        "required_tasks": [
-          {
-            "task": "Activecampaign API 문서 검토",
-            "priority": "high",
-            "description": "https://lp.yoom.fun/apps/Activecampaign 및 공식 API 문서 확인",
-            "status": "pending"
-          },
-          {
-            "task": "Activecampaign OAuth 앱 등록",
-            "priority": "high",
-            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
-            "status": "pending"
-          },
-          {
-            "task": "Client ID 및 Client Secret 획득",
-            "priority": "high",
-            "description": "OAuth 앱에서 인증 정보 획득",
-            "status": "pending"
-          },
-          {
-            "task": "4개 트리거용 Webhook 엔드포인트 설정",
-            "priority": "medium",
-            "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
-            "status": "pending"
-          },
-          {
-            "task": "테스트 계정 또는 샌드박스 환경 구축",
-            "priority": "medium",
-            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
-            "status": "pending"
-          },
-          {
-            "task": "16개 API 액션 단위 테스트 작성",
-            "priority": "low",
-            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
-            "status": "pending"
-          }
-        ],
-        "analyzed_at": "2026-02-27T20:46:32.029195"
-      },
-      "adroll.md": {
-        "service_name": "Adroll",
-        "category": "マーケティング",
-        "integration_type": "oauth",
-        "integration_confidence": "high",
-        "integration_reasoning": "SaaS/OAuth 표준",
-        "api_actions": {
-          "List Segment": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Create Segment": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          }
-        },
-        "triggers": {},
-        "required_tasks": [
-          {
-            "task": "Adroll API 문서 검토",
-            "priority": "high",
-            "description": "https://lp.yoom.fun/apps/Adroll 및 공식 API 문서 확인",
-            "status": "pending"
-          },
-          {
-            "task": "Adroll OAuth 앱 등록",
-            "priority": "high",
-            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
-            "status": "pending"
-          },
-          {
-            "task": "Client ID 및 Client Secret 획득",
-            "priority": "high",
-            "description": "OAuth 앱에서 인증 정보 획득",
-            "status": "pending"
-          },
-          {
-            "task": "테스트 계정 또는 샌드박스 환경 구축",
-            "priority": "medium",
-            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
-            "status": "pending"
-          },
-          {
-            "task": "2개 API 액션 단위 테스트 작성",
-            "priority": "low",
-            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
-            "status": "pending"
-          }
-        ],
-        "analyzed_at": "2026-02-27T20:46:32.070508"
-      },
-      "all-images-ai.md": {
-        "service_name": "All Images Ai",
-        "category": "マーケティング",
-        "integration_type": "oauth",
-        "integration_confidence": "high",
-        "integration_reasoning": "SaaS/OAuth 표준",
-        "api_actions": {
-          "Search Image Generation": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Get Image": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Delete Image Generation": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Get Image Generation": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Create Image Generation": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          }
-        },
-        "triggers": {
-          "Print Completed": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          }
-        },
-        "required_tasks": [
-          {
-            "task": "All Images Ai API 문서 검토",
-            "priority": "high",
-            "description": "https://lp.yoom.fun/apps/All Images Ai 및 공식 API 문서 확인",
-            "status": "pending"
-          },
-          {
-            "task": "All Images Ai OAuth 앱 등록",
-            "priority": "high",
-            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
-            "status": "pending"
-          },
-          {
-            "task": "Client ID 및 Client Secret 획득",
-            "priority": "high",
-            "description": "OAuth 앱에서 인증 정보 획득",
-            "status": "pending"
-          },
-          {
-            "task": "1개 트리거용 Webhook 엔드포인트 설정",
-            "priority": "medium",
-            "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
-            "status": "pending"
-          },
-          {
-            "task": "테스트 계정 또는 샌드박스 환경 구축",
-            "priority": "medium",
-            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
-            "status": "pending"
-          },
-          {
-            "task": "5개 API 액션 단위 테스트 작성",
-            "priority": "low",
-            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
-            "status": "pending"
-          }
-        ],
-        "analyzed_at": "2026-02-27T20:46:32.111602"
-      },
-      "anymail-finder.md": {
-        "service_name": "Anymail Finder",
-        "category": "マーケティング",
-        "integration_type": "oauth",
-        "integration_confidence": "high",
-        "integration_reasoning": "SaaS/OAuth 표준",
-        "api_actions": {
-          "Search for Person&#39;s Email": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Search for Company&#39;s Email": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Validate Email": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          }
-        },
-        "triggers": {},
-        "required_tasks": [
-          {
-            "task": "Anymail Finder API 문서 검토",
-            "priority": "high",
-            "description": "https://lp.yoom.fun/apps/Anymail Finder 및 공식 API 문서 확인",
-            "status": "pending"
-          },
-          {
-            "task": "Anymail Finder OAuth 앱 등록",
+            "task": "Ipqualityscore OAuth 앱 등록",
             "priority": "high",
             "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
             "status": "pending"
@@ -596,315 +1007,7 @@
             "status": "pending"
           }
         ],
-        "analyzed_at": "2026-02-27T20:46:32.152709"
-      },
-      "aweber.md": {
-        "service_name": "Aweber",
-        "category": "マーケティング",
-        "integration_type": "oauth",
-        "integration_confidence": "high",
-        "integration_reasoning": "SaaS/OAuth 표준",
-        "api_actions": {
-          "Get Subscriber": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Find Subscriber": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Get Broadcast Open": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Get Broadcast Statistic": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Search List": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Move Subscriber": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Create Subscriber": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Get Broadcast Click": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Delete Subscriber by Email": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Update Subscriber by Email": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          }
-        },
-        "triggers": {},
-        "required_tasks": [
-          {
-            "task": "Aweber API 문서 검토",
-            "priority": "high",
-            "description": "https://lp.yoom.fun/apps/Aweber 및 공식 API 문서 확인",
-            "status": "pending"
-          },
-          {
-            "task": "Aweber OAuth 앱 등록",
-            "priority": "high",
-            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
-            "status": "pending"
-          },
-          {
-            "task": "Client ID 및 Client Secret 획득",
-            "priority": "high",
-            "description": "OAuth 앱에서 인증 정보 획득",
-            "status": "pending"
-          },
-          {
-            "task": "테스트 계정 또는 샌드박스 환경 구축",
-            "priority": "medium",
-            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
-            "status": "pending"
-          },
-          {
-            "task": "10개 API 액션 단위 테스트 작성",
-            "priority": "low",
-            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
-            "status": "pending"
-          }
-        ],
-        "analyzed_at": "2026-02-27T20:46:32.193487"
-      },
-      "bannerbear.md": {
-        "service_name": "Bannerbear",
-        "category": "マーケティング",
-        "integration_type": "oauth",
-        "integration_confidence": "high",
-        "integration_reasoning": "SaaS/OAuth 표준",
-        "api_actions": {
-          "Create Collection": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Get Video Detail": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Create Image": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Create Video": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Create Movie": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Get Screenshot Detail": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Get File Data": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Create Screenshot": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Get Movie Detail": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Get Collection Detail": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Get  Image Detail": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          }
-        },
-        "triggers": {
-          "Animated Gif Created": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Collection Created": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Video Created": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Movie Created": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Image Created": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Screenshot Created": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          }
-        },
-        "required_tasks": [
-          {
-            "task": "Bannerbear API 문서 검토",
-            "priority": "high",
-            "description": "https://lp.yoom.fun/apps/Bannerbear 및 공식 API 문서 확인",
-            "status": "pending"
-          },
-          {
-            "task": "Bannerbear OAuth 앱 등록",
-            "priority": "high",
-            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
-            "status": "pending"
-          },
-          {
-            "task": "Client ID 및 Client Secret 획득",
-            "priority": "high",
-            "description": "OAuth 앱에서 인증 정보 획득",
-            "status": "pending"
-          },
-          {
-            "task": "6개 트리거용 Webhook 엔드포인트 설정",
-            "priority": "medium",
-            "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
-            "status": "pending"
-          },
-          {
-            "task": "테스트 계정 또는 샌드박스 환경 구축",
-            "priority": "medium",
-            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
-            "status": "pending"
-          },
-          {
-            "task": "11개 API 액션 단위 테스트 작성",
-            "priority": "low",
-            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
-            "status": "pending"
-          }
-        ],
-        "analyzed_at": "2026-02-27T20:46:32.234349"
-      },
-      "bannerbite.md": {
-        "service_name": "Bannerbite",
-        "category": "マーケティング",
-        "integration_type": "oauth",
-        "integration_confidence": "high",
-        "integration_reasoning": "SaaS/OAuth 표준",
-        "api_actions": {
-          "Get Bite": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Render Media": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Get Project": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "Search Bites by Project ID": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          },
-          "List Projects": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          }
-        },
-        "triggers": {
-          "Webhook Bannerbite": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
-          }
-        },
-        "required_tasks": [
-          {
-            "task": "Bannerbite API 문서 검토",
-            "priority": "high",
-            "description": "https://lp.yoom.fun/apps/Bannerbite 및 공식 API 문서 확인",
-            "status": "pending"
-          },
-          {
-            "task": "Bannerbite OAuth 앱 등록",
-            "priority": "high",
-            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
-            "status": "pending"
-          },
-          {
-            "task": "Client ID 및 Client Secret 획득",
-            "priority": "high",
-            "description": "OAuth 앱에서 인증 정보 획득",
-            "status": "pending"
-          },
-          {
-            "task": "1개 트리거용 Webhook 엔드포인트 설정",
-            "priority": "medium",
-            "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
-            "status": "pending"
-          },
-          {
-            "task": "테스트 계정 또는 샌드박스 환경 구축",
-            "priority": "medium",
-            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
-            "status": "pending"
-          },
-          {
-            "task": "5개 API 액션 단위 테스트 작성",
-            "priority": "low",
-            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
-            "status": "pending"
-          }
-        ],
-        "analyzed_at": "2026-02-27T20:46:32.274959"
+        "analyzed_at": "2026-02-27T22:14:42.117287"
       }
     }
   }
