@@ -23764,6 +23764,18 @@
       "test_requirements": [
         "requests"
       ]
+    },
+    {
+      "file_key": "hot-profile",
+      "service_name": "Hot Profile",
+      "category": "セールス",
+      "completed_at": "2026-02-27T20:33:15+09:00",
+      "integration_type": "api",
+      "testable": true,
+      "test_requirements": [
+        "requests",
+        "flask"
+      ]
     }
   ],
   "current_category_index": 0,
