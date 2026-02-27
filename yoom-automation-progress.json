@@ -1631,6 +1631,649 @@
       ],
       "analyzed_at": "2026-02-27T22:22:11.601724",
       "implemented_at": "2026-02-28T08:45:00.000000"
+    },
+    "drip.md": {
+      "service_name": "Drip",
+      "category": "마케팅",
+      "integration_type": "api_token",
+      "integration_confidence": "high",
+      "integration_reasoning": "Drip.com: API Token 인증",
+      "api_actions": {
+        "Remove Subscriber from Workflow": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscribe User to Email Campaign": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Add Subscriber to Workflow": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Retrieve Email Series Campaign Subscription": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Retrieve Subscriber Information": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Add Tag to Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Update Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Remove Subscriber from Email Campaign": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Unsubscribe from All Mailings": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Remove Tag from Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/drop/drip_client.py"
+        },
+        "Create Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "List All Subscribers of Campaign": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/drip/drip_client.py"
+        }
+      },
+      "triggers": {
+        "Removed Tag": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscriber Received Email": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscribed to Email Marketing": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscriber Marked as Undeliverable": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscriber Marked as Deliverable": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Updated Email Address": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscriber Created": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscriber Deleted": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscriber Became Lead": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Unsubscribed from Campaign": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscriber Visited Page": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscriber Bounced": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Completed Campaign": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Applied Tag": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Removed from Campaign": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscriber Complained": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscriber Clicked Email": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Unsubscribed All Mailings": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscribed to Campaign": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscriber Opened Email": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscriber Reactivated": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        }
+      },
+      "implemented_at": "2026-02-28 08:48:08"
+    },
+    "dub.md": {
+      "service_name": "Dub",
+      "category": "마케팅",
+      "integration_type": "api_token",
+      "integration_confidence": "high",
+      "integration_reasoning": "Dub.co: Bearer Token 인증",
+      "api_actions": {
+        "Search Link": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/dub/dub_client.py"
+        },
+        "Get Link": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/dub/dub_client.py"
+        },
+        "Delete Link": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/dub/dub_client.py"
+        },
+        "Create Tag": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/dub/dub_client.py"
+        },
+        "Update Link": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/dub/dub_client.py"
+        },
+        "Upsert Link": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/dub/dub_client.py"
+        },
+        "Update Tag": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/dub/dub_client.py"
+        },
+        "Create Link": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/dub/dub_client.py"
+        }
+      },
+      "triggers": {
+        "Clicked Link": {
+          "status": "completed",
+          "code_file": "repo/dub/dub_client.py"
+        },
+        "Created Link": {
+          "status": "completed",
+          "code_file": "repo/dub/dub_client.py"
+        }
+      },
+      "implemented_at": "2026-02-28 08:48:08"
+    },
+    "e_goi.md": {
+      "service_name": "E-goi",
+      "category": "마케팅",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "E-goi.com: API Key 인증",
+      "api_actions": {
+        "Delete List": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Create Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Search Contacts": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "List Tags": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Send Email Campaign to Segment": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Campaign List": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Send Email Campaign to Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Segment List": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Create List": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Create Tag": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Get Lists": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Delete Contacts": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Update Contacts": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        }
+      },
+      "triggers": {
+        "Clicked Email": {
+          "status": "completed",
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "New Subscriber": {
+          "status": "completed",
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "New Unsubscriber": {
+          "status": "completed",
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Opened Email": {
+          "status": "completed",
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Hard Bounced Email": {
+          "status": "completed",
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Soft Bounced Email": {
+          "status": "completed",
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Send Email": {
+          "status": "completed",
+          "code_file": "repo/e_goi/e_goi_client.py"
+        }
+      },
+      "implemented_at": "2026-02-28 08:48:08"
+    },
+    "ecomail.md": {
+      "service_name": "Ecomail",
+      "category": "마케팅",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Ecomailapp.cz: API Key 인증",
+      "api_actions": {
+        "Delete Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/ecomail/ecomail_client.py"
+        },
+        "Get Transactional Email Statistic": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/ecomail/ecomail_client.py"
+        },
+        "Create Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/ecomail/ecomail_client.py"
+        },
+        "Get Subscriber from List": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/ecomail/ecomail_client.py"
+        },
+        "Get Campaign Statistic": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/ecomail/ecomail_client.py"
+        },
+        "Search Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/ecomail/ecomail_client.py"
+        },
+        "Update Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/ecomail/ecomail_client.py"
+        },
+        "Search Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/ecomail/ecomail_client.py"
+        },
+        "Get Subscriber Detail": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/ecomail/ecomail_client.py"
+        }
+      },
+      "triggers": {
+        "New Open": {
+          "status": "completed",
+          "code_file": "repo/ecomail/ecomail_client.py"
+        },
+        "New Click": {
+          "status": "completed",
+          "code_file": "repo/ecomail/ecomail_client.py"
+        },
+        "New Bounce": {
+          "status": "completed",
+          "code_file": "repo/ecomail/ecomail_client.py"
+        }
+      },
+      "implemented_at": "2026-02-28 08:48:08"
+    },
+    "elastic_email.md": {
+      "service_name": "Elastic Email",
+      "category": "마케팅",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "ElasticEmail.com: API Key 인증",
+      "api_actions": {
+        "Add Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elastic-email/elastic_email_client.py"
+        },
+        "Add List": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elastic-email/elastic_email_client.py"
+        },
+        "List Contacts": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elastic-email/elastic_email_client.py"
+        },
+        "Update List": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elastic-email/elastic_email_client.py"
+        },
+        "Delete Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elastic-email/elastic_email_client.py"
+        },
+        "Get Lists": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elastic-email/elastic_email_client.py"
+        },
+        "Delete List": {
+          "status": "skipped",
+          "testable": false,
+          "note": "Skipped as per specification"
+        },
+        "Get List": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elastic-email/elastic_email_client.py"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elastic-email/elastic_email_client.py"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elastic-email/elastic_email_client.py"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28 08:48:08"
+    },
+    "elevenlabs.md": {
+      "service_name": "ElevenLabs",
+      "category": "마케팅",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "ElevenLabs.io: API Key 인증",
+      "api_actions": {
+        "Audio Noise Removal": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elevenlabs/elevenlabs_client.py"
+        },
+        "Obtain the Dubbed File": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elevenlabs/elevenlabs_client.py"
+        },
+        "Dub Audio or Video Files": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elevenlabs/elevenlabs_client.py"
+        },
+        "Convert Text to Speech with Timestamps": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elevenlabs/elevenlabs_client.py"
+        },
+        "Convert Text to Speech": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elevenlabs/elevenlabs_client.py"
+        },
+        "Convert Voice to Another Voice": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elevenlabs/elevenlabs_client.py"
+        },
+        "Add Pronunciation Dictionary": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elevenlabs/elevenlabs_client.py"
+        },
+        "Text to Speech & Sound Effects": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elevenlabs/elevenlabs_client.py"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28 08:48:08"
+    },
+    "email_list_verify.md": {
+      "service_name": "Email List Verify",
+      "category": "마케팅",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "EmailListVerify.com: API Key 인증",
+      "api_actions": {
+        "Find Business Email Address": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/email-list-verify/email_list_verify_client.py"
+        },
+        "Email Address Verification": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/email-list-verify/email_list_verify_client.py"
+        },
+        "Email Deliverability Evaluation": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/email-list-verify/email_list_verify_client.py"
+        },
+        "Check Disposable Email Domain": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/email-list-verify/email_list_verify_client.py"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28 08:48:08"
+    },
+    "emailable.md": {
+      "service_name": "Emailable",
+      "category": "마케팅",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Emailable.com: API Key 인증",
+      "api_actions": {
+        "Verify Email": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/emailable/emailable_client.py"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28 08:48:08"
+    },
+    "emailoctopus.md": {
+      "service_name": "EmailOctopus",
+      "category": "마케팅",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "EmailOctopus.com: Basic Auth with API Key",
+      "api_actions": {
+        "Create Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Get Campaign Link Report": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Delete Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Create Tag": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Start Automation for Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Search Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Get Campaign Summary Report": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        }
+      },
+      "triggers": {
+        "Opened Email": {
+          "status": "completed",
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Clicked Email": {
+          "status": "completed",
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Deleted Contact": {
+          "status": "completed",
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Created Contact": {
+          "status": "completed",
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Unsubscribed Email": {
+          "status": "completed",
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Bounced Email": {
+          "status": "completed",
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Updated Contact": {
+          "status": "completed",
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Complained Email": {
+          "status": "completed",
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        }
+      },
+      "implemented_at": "2026-02-28 08:48:08"
     }
   },
   "pending": {
@@ -2398,5 +3041,6 @@
         "implemented_at": "2026-02-27T22:10:00.000000"
       }
     }
-  }
+  },
+  "last_updated": "2026-02-28 08:48:08"
 }
