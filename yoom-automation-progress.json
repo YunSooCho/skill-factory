@@ -1008,6 +1008,802 @@
           }
         ],
         "analyzed_at": "2026-02-27T22:14:42.117287"
+      },
+      "beamer.md": {
+        "service_name": "Beamer",
+        "category": "マーケティング",
+        "integration_type": "oauth",
+        "integration_confidence": "high",
+        "integration_reasoning": "SaaS/OAuth 표준",
+        "api_actions": {
+          "Create Post": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          }
+        },
+        "triggers": {},
+        "required_tasks": [
+          {
+            "task": "Beamer API 문서 검토",
+            "priority": "high",
+            "description": "https://lp.yoom.fun/apps/Beamer 및 공식 API 문서 확인",
+            "status": "pending"
+          },
+          {
+            "task": "Beamer OAuth 앱 등록",
+            "priority": "high",
+            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+            "status": "pending"
+          },
+          {
+            "task": "Client ID 및 Client Secret 획득",
+            "priority": "high",
+            "description": "OAuth 앱에서 인증 정보 획득",
+            "status": "pending"
+          },
+          {
+            "task": "테스트 계정 또는 샌드박스 환경 구축",
+            "priority": "medium",
+            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+            "status": "pending"
+          },
+          {
+            "task": "1개 API 액션 단위 테스트 작성",
+            "priority": "low",
+            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+            "status": "pending"
+          }
+        ],
+        "analyzed_at": "2026-02-27T22:22:11.601724"
+      },
+      "beehiiv.md": {
+        "service_name": "Beehiiv",
+        "category": "マーケティング",
+        "integration_type": "oauth",
+        "integration_confidence": "high",
+        "integration_reasoning": "SaaS/OAuth 표준",
+        "api_actions": {
+          "Add Tags to Subscription": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "Create Subscription": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "Retrieve Subscription by ID": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "Update Subscription": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "Retrieve a Single Post": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "List Subscriber Ids": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "Retrieve Segments": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "Delete Subscription": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "Search Posts by Publication": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "Retrieve Subscription by Email": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          }
+        },
+        "triggers": {
+          "New Subscription Confirmations": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "New Subscriptions": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "User Unsubscribes": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "New Post Sent": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "New Subscription Upgrades": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "New Survey Responses": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "New Subscription Downgrades": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          }
+        },
+        "required_tasks": [
+          {
+            "task": "Beehiiv API 문서 검토",
+            "priority": "high",
+            "description": "https://lp.yoom.fun/apps/Beehiiv 및 공식 API 문서 확인",
+            "status": "pending"
+          },
+          {
+            "task": "Beehiiv OAuth 앱 등록",
+            "priority": "high",
+            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+            "status": "pending"
+          },
+          {
+            "task": "Client ID 및 Client Secret 획득",
+            "priority": "high",
+            "description": "OAuth 앱에서 인증 정보 획득",
+            "status": "pending"
+          },
+          {
+            "task": "7개 트리거용 Webhook 엔드포인트 설정",
+            "priority": "medium",
+            "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+            "status": "pending"
+          },
+          {
+            "task": "테스트 계정 또는 샌드박스 환경 구축",
+            "priority": "medium",
+            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+            "status": "pending"
+          },
+          {
+            "task": "10개 API 액션 단위 테스트 작성",
+            "priority": "low",
+            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+            "status": "pending"
+          }
+        ],
+        "analyzed_at": "2026-02-27T22:22:12.980536"
+      },
+      "benchmark-email.md": {
+        "service_name": "Benchmark Email",
+        "category": "マーケティング",
+        "integration_type": "oauth",
+        "integration_confidence": "high",
+        "integration_reasoning": "SaaS/OAuth 표준",
+        "api_actions": {
+          "コンタクト情報を更新": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "コンタクトを検索": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "コンタクトを追加": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          }
+        },
+        "triggers": {},
+        "required_tasks": [
+          {
+            "task": "Benchmark Email API 문서 검토",
+            "priority": "high",
+            "description": "https://lp.yoom.fun/apps/Benchmark Email 및 공식 API 문서 확인",
+            "status": "pending"
+          },
+          {
+            "task": "Benchmark Email OAuth 앱 등록",
+            "priority": "high",
+            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+            "status": "pending"
+          },
+          {
+            "task": "Client ID 및 Client Secret 획득",
+            "priority": "high",
+            "description": "OAuth 앱에서 인증 정보 획득",
+            "status": "pending"
+          },
+          {
+            "task": "테스트 계정 또는 샌드박스 환경 구축",
+            "priority": "medium",
+            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+            "status": "pending"
+          },
+          {
+            "task": "3개 API 액션 단위 테스트 작성",
+            "priority": "low",
+            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+            "status": "pending"
+          }
+        ],
+        "analyzed_at": "2026-02-27T22:22:13.008203"
+      },
+      "big_mailer.md": {
+        "service_name": "Big_mailer",
+        "category": "マーケティング",
+        "integration_type": "oauth",
+        "integration_confidence": "high",
+        "integration_reasoning": "SaaS/OAuth 표준",
+        "api_actions": {
+          "List Contacts": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "Create Contact": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "Delete Contact": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "Update Contact": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "Get Contact": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "List Fields": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          }
+        },
+        "triggers": {},
+        "required_tasks": [
+          {
+            "task": "Big_mailer API 문서 검토",
+            "priority": "high",
+            "description": "https://lp.yoom.fun/apps/Big_mailer 및 공식 API 문서 확인",
+            "status": "pending"
+          },
+          {
+            "task": "Big_mailer OAuth 앱 등록",
+            "priority": "high",
+            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+            "status": "pending"
+          },
+          {
+            "task": "Client ID 및 Client Secret 획득",
+            "priority": "high",
+            "description": "OAuth 앱에서 인증 정보 획득",
+            "status": "pending"
+          },
+          {
+            "task": "테스트 계정 또는 샌드박스 환경 구축",
+            "priority": "medium",
+            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+            "status": "pending"
+          },
+          {
+            "task": "6개 API 액션 단위 테스트 작성",
+            "priority": "low",
+            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+            "status": "pending"
+          }
+        ],
+        "analyzed_at": "2026-02-27T22:22:13.032741"
+      },
+      "bigquery.md": {
+        "service_name": "Bigquery",
+        "category": "マーケティング",
+        "integration_type": "oauth",
+        "integration_confidence": "high",
+        "integration_reasoning": "SaaS/OAuth 표준",
+        "api_actions": {
+          "レコードを検索": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "クエリを実行": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "レコードを作成": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          }
+        },
+        "triggers": {},
+        "required_tasks": [
+          {
+            "task": "Bigquery API 문서 검토",
+            "priority": "high",
+            "description": "https://lp.yoom.fun/apps/Bigquery 및 공식 API 문서 확인",
+            "status": "pending"
+          },
+          {
+            "task": "Bigquery OAuth 앱 등록",
+            "priority": "high",
+            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+            "status": "pending"
+          },
+          {
+            "task": "Client ID 및 Client Secret 획득",
+            "priority": "high",
+            "description": "OAuth 앱에서 인증 정보 획득",
+            "status": "pending"
+          },
+          {
+            "task": "테스트 계정 또는 샌드박스 환경 구축",
+            "priority": "medium",
+            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+            "status": "pending"
+          },
+          {
+            "task": "3개 API 액션 단위 테스트 작성",
+            "priority": "low",
+            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+            "status": "pending"
+          }
+        ],
+        "analyzed_at": "2026-02-27T22:22:13.056044"
+      },
+      "bitly.md": {
+        "service_name": "Bitly",
+        "category": "マーケティング",
+        "integration_type": "oauth",
+        "integration_confidence": "high",
+        "integration_reasoning": "SaaS/OAuth 표준",
+        "api_actions": {
+          "Bitlinkを展開する": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "Bitlinkを作成": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "Bitlinkを検索": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "Bitlinkを削除": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "Bitlinkのクリック数を取得": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "リンクを短縮する": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "Bitlinkのクリックサマリーを取得": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          }
+        },
+        "triggers": {},
+        "required_tasks": [
+          {
+            "task": "Bitly API 문서 검토",
+            "priority": "high",
+            "description": "https://lp.yoom.fun/apps/Bitly 및 공식 API 문서 확인",
+            "status": "pending"
+          },
+          {
+            "task": "Bitly OAuth 앱 등록",
+            "priority": "high",
+            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+            "status": "pending"
+          },
+          {
+            "task": "Client ID 및 Client Secret 획득",
+            "priority": "high",
+            "description": "OAuth 앱에서 인증 정보 획득",
+            "status": "pending"
+          },
+          {
+            "task": "테스트 계정 또는 샌드박스 환경 구축",
+            "priority": "medium",
+            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+            "status": "pending"
+          },
+          {
+            "task": "7개 API 액션 단위 테스트 작성",
+            "priority": "low",
+            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+            "status": "pending"
+          }
+        ],
+        "analyzed_at": "2026-02-27T22:22:13.079691"
+      },
+      "botstar.md": {
+        "service_name": "Botstar",
+        "category": "マーケティング",
+        "integration_type": "oauth",
+        "integration_confidence": "high",
+        "integration_reasoning": "SaaS/OAuth 표준",
+        "api_actions": {
+          "Create Entity Item": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "Delete Entity Item": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "Get Entity Item": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "Update Entity Item": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "Search Entity Items": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          }
+        },
+        "triggers": {},
+        "required_tasks": [
+          {
+            "task": "Botstar API 문서 검토",
+            "priority": "high",
+            "description": "https://lp.yoom.fun/apps/Botstar 및 공식 API 문서 확인",
+            "status": "pending"
+          },
+          {
+            "task": "Botstar OAuth 앱 등록",
+            "priority": "high",
+            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+            "status": "pending"
+          },
+          {
+            "task": "Client ID 및 Client Secret 획득",
+            "priority": "high",
+            "description": "OAuth 앱에서 인증 정보 획득",
+            "status": "pending"
+          },
+          {
+            "task": "테스트 계정 또는 샌드박스 환경 구축",
+            "priority": "medium",
+            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+            "status": "pending"
+          },
+          {
+            "task": "5개 API 액션 단위 테스트 작성",
+            "priority": "low",
+            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+            "status": "pending"
+          }
+        ],
+        "analyzed_at": "2026-02-27T22:22:13.103651"
+      },
+      "bouncer.md": {
+        "service_name": "Bouncer",
+        "category": "マーケティング",
+        "integration_type": "oauth",
+        "integration_confidence": "high",
+        "integration_reasoning": "SaaS/OAuth 표준",
+        "api_actions": {
+          "Verification Domain": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "Verify Email Address": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          }
+        },
+        "triggers": {},
+        "required_tasks": [
+          {
+            "task": "Bouncer API 문서 검토",
+            "priority": "high",
+            "description": "https://lp.yoom.fun/apps/Bouncer 및 공식 API 문서 확인",
+            "status": "pending"
+          },
+          {
+            "task": "Bouncer OAuth 앱 등록",
+            "priority": "high",
+            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+            "status": "pending"
+          },
+          {
+            "task": "Client ID 및 Client Secret 획득",
+            "priority": "high",
+            "description": "OAuth 앱에서 인증 정보 획득",
+            "status": "pending"
+          },
+          {
+            "task": "테스트 계정 또는 샌드박스 환경 구축",
+            "priority": "medium",
+            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+            "status": "pending"
+          },
+          {
+            "task": "2개 API 액션 단위 테스트 작성",
+            "priority": "low",
+            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+            "status": "pending"
+          }
+        ],
+        "analyzed_at": "2026-02-27T22:22:13.128070"
+      },
+      "bownow.md": {
+        "service_name": "Bownow",
+        "category": "マーケティング",
+        "integration_type": "oauth",
+        "integration_confidence": "high",
+        "integration_reasoning": "SaaS/OAuth 표준",
+        "api_actions": {
+          "リード情報を取得": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "リード情報を更新": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "リード情報を削除": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "リード情報を検索": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "リード情報を作成": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          }
+        },
+        "triggers": {
+          "リード情報更新通知を受け取ったら（Webhook）": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "フォームコンバージョン通知を受け取ったら（Webhook）": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          }
+        },
+        "required_tasks": [
+          {
+            "task": "Bownow API 문서 검토",
+            "priority": "high",
+            "description": "https://lp.yoom.fun/apps/Bownow 및 공식 API 문서 확인",
+            "status": "pending"
+          },
+          {
+            "task": "Bownow OAuth 앱 등록",
+            "priority": "high",
+            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+            "status": "pending"
+          },
+          {
+            "task": "Client ID 및 Client Secret 획득",
+            "priority": "high",
+            "description": "OAuth 앱에서 인증 정보 획득",
+            "status": "pending"
+          },
+          {
+            "task": "2개 트리거용 Webhook 엔드포인트 설정",
+            "priority": "medium",
+            "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+            "status": "pending"
+          },
+          {
+            "task": "테스트 계정 또는 샌드박스 환경 구축",
+            "priority": "medium",
+            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+            "status": "pending"
+          },
+          {
+            "task": "5개 API 액션 단위 테스트 작성",
+            "priority": "low",
+            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+            "status": "pending"
+          }
+        ],
+        "analyzed_at": "2026-02-27T22:22:13.152223"
+      },
+      "brevo.md": {
+        "service_name": "Brevo",
+        "category": "マーケティング",
+        "integration_type": "oauth",
+        "integration_confidence": "high",
+        "integration_reasoning": "SaaS/OAuth 표준",
+        "api_actions": {
+          "コンタクトを取得": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "SMSキャンペーンを作成": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "WhatsAppキャンペーンの作成と送信": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "メールキャンペーンレポートを取得": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "キャンペーンレポートを送信": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "SMSキャンペーンを即時送信": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "コンタクトを作成": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "コンタクトを更新": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "取引メールを配信": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "既存のコンタクトをリストに追加": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          }
+        },
+        "triggers": {
+          "マーケティングメールが開封されたら（Webhook）": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "トランザクションメールがクリックされたら（Webhook）": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "マーケティングメールが配信されたら（Webhook）": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "トランザクションメールが開封されたら（Webhook）": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "マーケティングメールの配信が停止されたら（Webhook）": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "マーケティングメールのリンクがクリックされたら（Webhook）": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "コンタクトが新たに作成されたら": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          },
+          "トランザクションメールが配信されたら（Webhook）": {
+            "status": "pending",
+            "testable": null,
+            "test_method": null
+          }
+        },
+        "required_tasks": [
+          {
+            "task": "Brevo API 문서 검토",
+            "priority": "high",
+            "description": "https://lp.yoom.fun/apps/Brevo 및 공식 API 문서 확인",
+            "status": "pending"
+          },
+          {
+            "task": "Brevo OAuth 앱 등록",
+            "priority": "high",
+            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+            "status": "pending"
+          },
+          {
+            "task": "Client ID 및 Client Secret 획득",
+            "priority": "high",
+            "description": "OAuth 앱에서 인증 정보 획득",
+            "status": "pending"
+          },
+          {
+            "task": "8개 트리거용 Webhook 엔드포인트 설정",
+            "priority": "medium",
+            "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+            "status": "pending"
+          },
+          {
+            "task": "테스트 계정 또는 샌드박스 환경 구축",
+            "priority": "medium",
+            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+            "status": "pending"
+          },
+          {
+            "task": "10개 API 액션 단위 테스트 작성",
+            "priority": "low",
+            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+            "status": "pending"
+          }
+        ],
+        "analyzed_at": "2026-02-27T22:22:13.176552"
       }
     }
   }
