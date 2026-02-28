@@ -1,0 +1,10 @@
+"""
+Whapi API Integration for Yoom Apps
+"""
+
+from .client import WhapiClient
+
+__version__ = "1.0.0"
+__all__ = [
+    "WhapiClient",
+]
