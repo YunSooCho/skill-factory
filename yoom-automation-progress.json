@@ -2420,6 +2420,90 @@
       ],
       "analyzed_at": "2026-02-27T22:22:12.980536",
       "implemented_at": "2026-02-28T08:50:00.000000"
+    },
+    "bitly.md": {
+      "service_name": "Bitly",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "Bitlinkを展開する": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bitly API token. Example: python bitly_api.py expand bit.ly/example"
+        },
+        "Bitlinkを作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bitly API token. Example: python bitly_api.py shorten https://example.com"
+        },
+        "Bitlinkを検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bitly API token. Example: python bitly_api.py search keyword"
+        },
+        "Bitlinkを削除": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bitly API token. Example: python bitly_api.py delete bit.ly/example"
+        },
+        "Bitlinkのクリック数を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bitly API token. Example: python bitly_api.py clicks bit.ly/example"
+        },
+        "リンクを短縮する": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bitly API token. Example: python bitly_client.py or client.shorten_url(\"https://example.com\")"
+        },
+        "Bitlinkのクリックサマリーを取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bitly API token. Example: python bitly_api.py summary bit.ly/example"
+        },
+        "Bitlinkを短縮する": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bitly API token. Example: python bitly_api.py shorten https://example.com"
+        }
+      },
+      "triggers": {},
+      "required_tasks": [
+        {
+          "task": "Bitly API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/Bitly 및 공식 API 문서 확인",
+          "status": "pending"
+        },
+        {
+          "task": "Bitly OAuth 앱 등록",
+          "priority": "high",
+          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "status": "pending"
+        },
+        {
+          "task": "Client ID 및 Client Secret 획득",
+          "priority": "high",
+          "description": "OAuth 앱에서 인증 정보 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "7개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T22:22:13.079691",
+      "implemented_at": "2026-02-28T09:04:00.000000"
     }
   },
   "pending": {
@@ -2612,89 +2696,6 @@
           }
         ],
         "analyzed_at": "2026-02-27T22:22:13.056044"
-      },
-      "bitly.md": {
-        "service_name": "Bitly",
-        "category": "マーケティング",
-        "integration_type": "oauth",
-        "integration_confidence": "high",
-        "integration_reasoning": "SaaS/OAuth 표준",
-        "api_actions": {
-          "Bitlinkを展開する": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Bitly API token. Example: python bitly_api.py expand bit.ly/example"
-          },
-          "Bitlinkを作成": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Bitly API token. Example: python bitly_api.py shorten https://example.com"
-          },
-          "Bitlinkを検索": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Bitly API token. Example: python bitly_api.py search keyword"
-          },
-          "Bitlinkを削除": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Bitly API token. Example: python bitly_api.py delete bit.ly/example"
-          },
-          "Bitlinkのクリック数を取得": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Bitly API token. Example: python bitly_api.py clicks bit.ly/example"
-          },
-          "リンクを短縮する": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Bitly API token. Example: python bitly_client.py or client.shorten_url(\"https://example.com\")"
-          },
-          "Bitlinkのクリックサマリーを取得": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Bitly API token. Example: python bitly_api.py summary bit.ly/example"
-          },
-          "Bitlinkを短縮する": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Bitly API token. Example: python bitly_api.py shorten https://example.com"
-          }
-        },
-        "triggers": {},
-        "required_tasks": [
-          {
-            "task": "Bitly API 문서 검토",
-            "priority": "high",
-            "description": "https://lp.yoom.fun/apps/Bitly 및 공식 API 문서 확인",
-            "status": "pending"
-          },
-          {
-            "task": "Bitly OAuth 앱 등록",
-            "priority": "high",
-            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
-            "status": "pending"
-          },
-          {
-            "task": "Client ID 및 Client Secret 획득",
-            "priority": "high",
-            "description": "OAuth 앱에서 인증 정보 획득",
-            "status": "pending"
-          },
-          {
-            "task": "테스트 계정 또는 샌드박스 환경 구축",
-            "priority": "medium",
-            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
-            "status": "pending"
-          },
-          {
-            "task": "7개 API 액션 단위 테스트 작성",
-            "priority": "low",
-            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
-            "status": "pending"
-          }
-        ],
-        "analyzed_at": "2026-02-27T22:22:13.079691"
       },
       "botstar.md": {
         "service_name": "Botstar",
