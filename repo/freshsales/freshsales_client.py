@@ -1,396 +1,633 @@
 """
 Freshsales API Client
-CRM platform for managing contacts, accounts, deals, and tasks
-
 API Documentation: https://developers.freshworks.com/crm/api/
 """
 
 import requests
-import time
-from typing import Dict, List, Optional, Any
-from requests.exceptions import RequestException
+from typing import Optional, Dict, List, Any
+from datetime import datetime
 
 
 class FreshsalesAPIError(Exception):
-    """Custom exception for Freshsales API errors"""
-    pass
-
-
-class FreshsalesRateLimitError(FreshsalesAPIError):
-    """Rate limit exceeded error"""
+    """Custom exception for Freshsales API errors."""
     pass
 
 
 class FreshsalesClient:
-    """
-    Freshsales REST API Client
-    Supports full CRUD operations and file uploads for CRM entities
-    """
+    """Client for Freshsales CRM API."""
 
-    def __init__(self, api_url: str, api_key: str, timeout: int = 30):
+    def __init__(self, api_key: str, domain: str, base_url: Optional[str] = None):
         """
-        Initialize Freshsales API client
+        Initialize Freshsales API client.
 
         Args:
-            api_url: Base URL of your Freshsales domain (e.g., https://domain.myfreshworks.com)
-            api_key: API key for authentication
-            timeout: Request timeout in seconds
+            api_key: Your Freshsales API key
+            domain: Your Freshsales domain (e.g., mycompany)
+            base_url: API base URL (default: https://{domain}.freshsales.io)
         """
-        self.api_url = api_url.rstrip('/')
         self.api_key = api_key
-        self.timeout = timeout
+        self.domain = domain
+        self.base_url = base_url or f"https://{domain}.freshsales.io"
         self.session = requests.Session()
         self.session.headers.update({
-            'Content-Type': 'application/json',
-            'Authorization': f'Token token={api_key}'
+            "Authorization": f"Token token={api_key}",
+            "Content-Type": "application/json",
+            "Accept": "application/json"
         })
-        self.last_request_time = 0
-        self.min_request_interval = 0.2  # 200ms between requests (Freshsales recommends 10 req/sec)
-        self.rate_limit_remaining = None
 
-    def _make_request(self, method: str, endpoint: str, data: Optional[Dict] = None,
-                     params: Optional[Dict] = None, files: Optional[Dict] = None) -> Dict[str, Any]:
+    def _make_request(self, method: str, endpoint: str, **kwargs) -> Dict[str, Any]:
         """
-        Make an authenticated API request with error handling and rate limiting
+        Make API request with error handling.
 
         Args:
             method: HTTP method
             endpoint: API endpoint
-            data: Request body data
-            params: Query parameters
-            files: Files to upload
+            **kwargs: Additional request arguments
 
         Returns:
-            Response data as dictionary
+            Response data
         """
-        # Rate limiting
-        current_time = time.time()
-
-        if self.rate_limit_remaining is not None and self.rate_limit_remaining <= 0:
-            time.sleep(1)  # Wait briefly
-
-        time_since_last = current_time - self.last_request_time
-        if time_since_last < self.min_request_interval:
-            time.sleep(self.min_request_interval - time_since_last)
-
-        url = f"{self.api_url}{endpoint}"
+        url = f"{self.base_url}{endpoint}"
 
         try:
-            if method.upper() == 'GET':
-                response = self.session.get(url, params=params, timeout=self.timeout)
-            elif method.upper() == 'POST':
-                if files:
-                    headers = {'Authorization': self.session.headers['Authorization']}
-                    response = requests.post(url, data=data, files=files, headers=headers, timeout=self.timeout)
-                else:
-                    response = self.session.post(url, json=data, params=params, timeout=self.timeout)
-            elif method.upper() == 'PUT':
-                response = self.session.put(url, json=data, params=params, timeout=self.timeout)
-            elif method.upper() == 'DELETE':
-                response = self.session.delete(url, params=params, timeout=self.timeout)
-            else:
-                raise FreshsalesAPIError(f"Unsupported HTTP method: {method}")
+            response = self.session.request(method, url, **kwargs)
+            response.raise_for_status()
 
-            self.last_request_time = time.time()
+            data = response.json()
+            return {
+                "status": "success",
+                "data": data,
+                "status_code": response.status_code
+            }
 
-            # Update rate limit info
-            self.rate_limit_remaining = int(response.headers.get('X-RateLimit-Remaining', '1'))
-
-            # Handle rate limiting (HTTP 429)
-            if response.status_code == 429:
-                retry_after = int(response.headers.get('Retry-After', 5))
-                if response.headers.get('X-RateLimit-Reset'):
-                    wait_until = int(response.headers['X-RateLimit-Reset'])
-                    wait_time = min(wait_until - current_time, 60)
-                    time.sleep(wait_time)
-                else:
-                    time.sleep(retry_after)
-                return self._make_request(method, endpoint, data, params)
-
-            # Handle errors
-            if response.status_code >= 400:
-                try:
-                    error_data = response.json()
-                except:
-                    error_data = {}
-                error_msg = error_data.get('errors', error_data.get('message', response.text))
-                raise FreshsalesAPIError(f"API error {response.status_code}: {error_msg}")
-
-            return response.json() if response.content else {}
-
-        except RequestException as e:
+        except requests.exceptions.HTTPError as e:
+            error_data = self._parse_error(response)
+            raise FreshsalesAPIError(
+                f"HTTP {response.status_code}: {error_data.get('message', str(e))}"
+            )
+        except requests.exceptions.RequestException as e:
             raise FreshsalesAPIError(f"Request failed: {str(e)}")
 
-    # ========== CONTACT METHODS ==========
+    def _parse_error(self, response: requests.Response) -> Dict[str, Any]:
+        """Parse error response."""
+        try:
+            return response.json() if response.content else {"message": response.text}
+        except Exception:
+            return {"message": response.text}
 
-    def create_contact(self, first_name: Optional[str] = None, last_name: Optional[str] = None,
-                      email: Optional[str] = None, **kwargs) -> Dict[str, Any]:
+    def create_view_contact(
+        self,
+        first_name: str,
+        last_name: str,
+        email: str,
+        phone: Optional[str] = None,
+        mobile: Optional[str] = None,
+        title: Optional[str] = None,
+        twitter: Optional[str] = None,
+        linkedin: Optional[str] = None
+    ) -> Dict[str, Any]:
         """
-        Create a new contact
+        Create a view/contact (連絡先の作成).
+
+        API Reference: Contacts endpoint
 
         Args:
             first_name: First name
             last_name: Last name
             email: Email address
-            **kwargs: Additional contact fields
+            phone: Phone number
+            mobile: Mobile phone number
+            title: Job title
+            twitter: Twitter handle
+            linkedin: LinkedIn profile URL
 
         Returns:
-            Created contact data
+            Created contact information with ID
         """
-        contact_data = {}
-        if first_name:
-            contact_data['first_name'] = first_name
-        if last_name:
-            contact_data['last_name'] = last_name
-        if email:
-            contact_data['email'] = email
-        contact_data.update(kwargs)
+        endpoint = "/api/contacts"
 
-        return self._make_request('POST', '/api/contacts', data={'contact': contact_data})
+        data = {
+            "contact": {
+                "first_name": first_name,
+                "last_name": last_name,
+                "email": email
+            }
+        }
 
-    def get_contact(self, contact_id: str, include: Optional[List[str]] = None) -> Dict[str, Any]:
+        if phone:
+            data["contact"]["phone"] = phone
+        if mobile:
+            data["contact"]["mobile_number"] = mobile
+        if title:
+            data["contact"]["job_title"] = title
+        if twitter:
+            data["contact"]["twitter"] = twitter
+        if linkedin:
+            data["contact"]["linkedin"] = linkedin
+
+        return self._make_request("POST", endpoint, json=data)
+
+    def update_view_contact(
+        self,
+        contact_id: int,
+        first_name: Optional[str] = None,
+        last_name: Optional[str] = None,
+        email: Optional[str] = None,
+        phone: Optional[str] = None,
+        mobile: Optional[str] = None,
+        title: Optional[str] = None
+    ) -> Dict[str, Any]:
         """
-        Get contact by ID
+        Update view/contact information (連絡先情報の更新).
+
+        API Reference: Contacts PUT endpoint
 
         Args:
             contact_id: Contact ID
-            include: Include related data (e.g., ['company', 'deals'])
+            first_name: First name
+            last_name: Last name
+            email: Email address
+            phone: Phone number
+            mobile: Mobile phone number
+            title: Job title
 
         Returns:
-            Contact data
+            Updated contact information
         """
-        params = {}
-        if include:
-            params['include'] = ','.join(include)
+        endpoint = f"/api/contacts/{contact_id}"
 
-        return self._make_request('GET', f'/api/contacts/{contact_id}', params=params)
+        data = {"contact": {}}
 
-    def update_contact(self, contact_id: str, **kwargs) -> Dict[str, Any]:
-        """Update contact"""
-        return self._make_request('PUT', f'/api/contacts/{contact_id}', data={'contact': kwargs})
+        if first_name:
+            data["contact"]["first_name"] = first_name
+        if last_name:
+            data["contact"]["last_name"] = last_name
+        if email:
+            data["contact"]["email"] = email
+        if phone:
+            data["contact"]["phone"] = phone
+        if mobile:
+            data["contact"]["mobile_number"] = mobile
+        if title:
+            data["contact"]["job_title"] = title
 
-    def delete_contact(self, contact_id: str) -> Dict[str, Any]:
-        """Delete contact"""
-        return self._make_request('DELETE', f'/api/contacts/{contact_id}')
+        return self._make_request("PUT", endpoint, json=data)
 
-    def search_contacts(self, query: Optional[str] = None, filter_params: Optional[Dict] = None,
-                       page: int = 1, per_page: int = 20) -> Dict[str, Any]:
+    def get_view_contact(self, contact_id: int) -> Dict[str, Any]:
         """
-        Search contacts
+        Get view/contact details (連絡先の詳細を取得).
+
+        API Reference: Contacts GET endpoint
 
         Args:
-            query: Search query
-            filter_params: Filter conditions
-            page: Page number
-            per_page: Results per page
+            contact_id: Contact ID
 
         Returns:
-            List of contacts
+            Contact details
         """
-        params = {'page': page, 'per_page': per_page}
-        if query:
-            params['q'] = query
-        if filter_params:
-            params.update(filter_params)
+        endpoint = f"/api/contacts/{contact_id}"
+        return self._make_request("GET", endpoint)
 
-        return self._make_request('GET', '/api/contacts', params=params)
-
-    # ========== COMPANY/ACCOUNT METHODS ==========
-
-    def create_account(self, name: str, **kwargs) -> Dict[str, Any]:
+    def delete_view_contact(self, contact_id: int) -> Dict[str, Any]:
         """
-        Create a new account/company
+        Delete view/contact (連絡先を削除).
+
+        API Reference: Contacts DELETE endpoint
 
         Args:
-            name: Company name
-            **kwargs: Additional company fields
+            contact_id: Contact ID
 
         Returns:
-            Created account data
+            Deletion confirmation
         """
-        return self._make_request('POST', '/api/sales_accounts', data={'sales_account': {'name': name, **kwargs}})
+        endpoint = f"/api/contacts/{contact_id}"
+        return self._make_request("DELETE", endpoint)
 
-    def get_account(self, account_id: str, include: Optional[List[str]] = None) -> Dict[str, Any]:
-        """Get account by ID"""
-        params = {}
-        if include:
-            params['include'] = ','.join(include)
-
-        return self._make_request('GET', f'/api/sales_accounts/{account_id}', params=params)
-
-    def update_account(self, account_id: str, **kwargs) -> Dict[str, Any]:
-        """Update account"""
-        return self._make_request('PUT', f'/api/sales_accounts/{account_id}', data={'sales_account': kwargs})
-
-    def search_accounts(self, query: Optional[str] = None, filter_params: Optional[Dict] = None,
-                       page: int = 1, per_page: int = 20) -> Dict[str, Any]:
-        """Search accounts"""
-        params = {'page': page, 'per_page': per_page}
-        if query:
-            params['q'] = query
-        if filter_params:
-            params.update(filter_params)
-
-        return self._make_request('GET', '/api/sales_accounts', params=params)
-
-    # ========== DEAL METHODS ==========
-
-    def create_deal(self, amount: str, **kwargs) -> Dict[str, Any]:
+    def create_account(
+        self,
+        name: str,
+        website: Optional[str] = None,
+        phone: Optional[str] = None,
+        address: Optional[str] = None,
+        city: Optional[str] = None,
+        state: Optional[str] = None,
+        zipcode: Optional[str] = None,
+        country: Optional[str] = None
+    ) -> Dict[str, Any]:
         """
-        Create a new deal
+        Create an account (アカウントの作成).
+
+        API Reference: Accounts endpoint
 
         Args:
-            amount: Deal amount
-            **kwargs: Additional deal fields (name, stage, deal_owner_id, etc.)
+            name: Account name
+            website: Website URL
+            phone: Phone number
+            address: Street address
+            city: City
+            state: State or province
+            zipcode: Postal code
+            country: Country
 
         Returns:
-            Created deal data
+            Created account information with ID
         """
-        deal_data = {'amount': amount, **kwargs}
-        return self._make_request('POST', '/api/deals', data={'deal': deal_data})
+        endpoint = "/api/sales_accounts"
 
-    def update_deal(self, deal_id: str, **kwargs) -> Dict[str, Any]:
-        """Update deal"""
-        return self._make_request('PUT', f'/api/deals/{deal_id}', data={'deal': kwargs})
+        data = {
+            "sales_account": {
+                "name": name
+            }
+        }
 
-    def delete_deal(self, deal_id: str) -> Dict[str, Any]:
-        """Delete deal"""
-        return self._make_request('DELETE', f'/api/deals/{deal_id}')
+        if website:
+            data["sales_account"]["website"] = website
+        if phone:
+            data["sales_account"]["phone"] = phone
+        if address:
+            data["sales_account"]["address"] = address
+        if city:
+            data["sales_account"]["city"] = city
+        if state:
+            data["sales_account"]["state"] = state
+        if zipcode:
+            data["sales_account"]["zipcode"] = zipcode
+        if country:
+            data["sales_account"]["country"] = country
 
-    def get_deal(self, deal_id: str, include: Optional[List[str]] = None) -> Dict[str, Any]:
-        """Get deal by ID"""
-        params = {}
-        if include:
-            params['include'] = ','.join(include)
+        return self._make_request("POST", endpoint, json=data)
 
-        return self._make_request('GET', f'/api/deals/{deal_id}', params=params)
-
-    # ========== TASK METHODS ==========
-
-    def create_task(self, title: str, **kwargs) -> Dict[str, Any]:
-        """Create a new task"""
-        return self._make_request('POST', '/api/tasks', data={'task': {'title': title, **kwargs}})
-
-    def get_task(self, task_id: str) -> Dict[str, Any]:
-        """Get task by ID"""
-        return self._make_request('GET', f'/api/tasks/{task_id}')
-
-    def update_task(self, task_id: str, **kwargs) -> Dict[str, Any]:
-        """Update task"""
-        return self._make_request('PUT', f'/api/tasks/{task_id}', data={'task': kwargs})
-
-    def delete_task(self, task_id: str) -> Dict[str, Any]:
-        """Delete task"""
-        return self._make_request('DELETE', f'/api/tasks/{task_id}')
-
-    # ========== NOTE METHODS ==========
-
-    def create_note(self, description: str, targetable_type: str, targetable_id: str,
-                    **kwargs) -> Dict[str, Any]:
+    def update_account(
+        self,
+        account_id: int,
+        name: Optional[str] = None,
+        website: Optional[str] = None,
+        phone: Optional[str] = None
+    ) -> Dict[str, Any]:
         """
-        Create a new note
+        Update account information (アカウント情報の更新).
+
+        API Reference: Accounts PUT endpoint
+
+        Args:
+            account_id: Account ID
+            name: Account name
+            website: Website URL
+            phone: Phone number
+
+        Returns:
+            Updated account information
+        """
+        endpoint = f"/api/sales_accounts/{account_id}"
+
+        data = {"sales_account": {}}
+
+        if name:
+            data["sales_account"]["name"] = name
+        if website:
+            data["sales_account"]["website"] = website
+        if phone:
+            data["sales_account"]["phone"] = phone
+
+        return self._make_request("PUT", endpoint, json=data)
+
+    def get_account(self, account_id: int) -> Dict[str, Any]:
+        """
+        Get account details (アカウントの詳細を取得).
+
+        API Reference: Accounts GET endpoint
+
+        Args:
+            account_id: Account ID
+
+        Returns:
+            Account details
+        """
+        endpoint = f"/api/sales_accounts/{account_id}"
+        return self._make_request("GET", endpoint)
+
+    def create_deal(
+        self,
+        deal_name: str,
+        contact_id: Optional[int] = None,
+        account_id: Optional[int] = None,
+        deal_value: Optional[float] = None,
+        currency: str = "USD",
+        deal_stage_id: Optional[int] = None,
+        closing_date: Optional[str] = None
+    ) -> Dict[str, Any]:
+        """
+        Create a deal (取引の作成).
+
+        API Reference: Deals endpoint
+
+        Args:
+            deal_name: Deal name
+            contact_id: Associated contact ID
+            account_id: Associated account ID
+            deal_value: Deal value
+            currency: Currency code (default: USD)
+            deal_stage_id: Deal stage ID
+            closing_date: Expected closing date (YYYY-MM-DD)
+
+        Returns:
+            Created deal information with ID
+        """
+        endpoint = "/api/deals"
+
+        data = {
+            "deal": {
+                "name": deal_name,
+                "amount": deal_value,
+                "currency_code": currency
+            }
+        }
+
+        if contact_id:
+            data["deal"]["contact_ids"] = [contact_id]
+        if account_id:
+            data["deal"]["sales_account_id"] = account_id
+        if deal_stage_id:
+            data["deal"]["deal_stage_id"] = deal_stage_id
+        if closing_date:
+            data["deal"]["expected_close_date"] = closing_date
+
+        return self._make_request("POST", endpoint, json=data)
+
+    def update_deal(
+        self,
+        deal_id: int,
+        deal_name: Optional[str] = None,
+        deal_value: Optional[float] = None,
+        deal_stage_id: Optional[int] = None,
+        closing_date: Optional[str] = None
+    ) -> Dict[str, Any]:
+        """
+        Update deal information (取引情報の更新).
+
+        API Reference: Deals PUT endpoint
+
+        Args:
+            deal_id: Deal ID
+            deal_name: Deal name
+            deal_value: Deal value
+            deal_stage_id: Deal stage ID
+            closing_date: Expected closing date (YYYY-MM-DD)
+
+        Returns:
+            Updated deal information
+        """
+        endpoint = f"/api/deals/{deal_id}"
+
+        data = {"deal": {}}
+
+        if deal_name:
+            data["deal"]["name"] = deal_name
+        if deal_value is not None:
+            data["deal"]["amount"] = deal_value
+        if deal_stage_id:
+            data["deal"]["deal_stage_id"] = deal_stage_id
+        if closing_date:
+            data["deal"]["expected_close_date"] = closing_date
+
+        return self._make_request("PUT", endpoint, json=data)
+
+    def get_deal(self, deal_id: int) -> Dict[str, Any]:
+        """
+        Get deal details (取引の詳細を取得).
+
+        API Reference: Deals GET endpoint
+
+        Args:
+            deal_id: Deal ID
+
+        Returns:
+            Deal details
+        """
+        endpoint = f"/api/deals/{deal_id}"
+        return self._make_request("GET", endpoint)
+
+    def delete_deal(self, deal_id: int) -> Dict[str, Any]:
+        """
+        Delete a deal (取引を削除).
+
+        API Reference: Deals DELETE endpoint
+
+        Args:
+            deal_id: Deal ID
+
+        Returns:
+            Deletion confirmation
+        """
+        endpoint = f"/api/deals/{deal_id}"
+        return self._make_request("DELETE", endpoint)
+
+    def create_task(
+        self,
+        title: str,
+        due_date: str,
+        owner_id: int,
+        targetable_id: Optional[int] = None,
+        targetable_type: Optional[str] = None,
+        description: Optional[str] = None
+    ) -> Dict[str, Any]:
+        """
+        Create a task (タスクの作成).
+
+        API Reference: Tasks endpoint
+
+        Args:
+            title: Task title
+            due_date: Due date and time (ISO 8601 format)
+            owner_id: Owner user ID
+            targetable_id: Related entity ID (contact, deal, etc.)
+            targetable_type: Related entity type (Contact, Deal, etc.)
+            description: Task description
+
+        Returns:
+            Created task information with ID
+        """
+        endpoint = "/api/tasks"
+
+        data = {
+            "task": {
+                "title": title,
+                "due_date": due_date,
+                "owner_id": owner_id
+            }
+        }
+
+        if targetable_id and targetable_type:
+            data["task"]["targetable_id"] = targetable_id
+            data["task"]["targetable_type"] = targetable_type
+        if description:
+            data["task"]["description"] = description
+
+        return self._make_request("POST", endpoint, json=data)
+
+    def update_task(
+        self,
+        task_id: int,
+        title: Optional[str] = None,
+        due_date: Optional[str] = None,
+        status: Optional[str] = None
+    ) -> Dict[str, Any]:
+        """
+        Update task information (タスク情報の更新).
+
+        API Reference: Tasks PUT endpoint
+
+        Args:
+            task_id: Task ID
+            title: Task title
+            due_date: Due date and time (ISO 8601 format)
+            status: Task status (open, in_progress, completed)
+
+        Returns:
+            Updated task information
+        """
+        endpoint = f"/api/tasks/{task_id}"
+
+        data = {"task": {}}
+
+        if title:
+            data["task"]["title"] = title
+        if due_date:
+            data["task"]["due_date"] = due_date
+        if status:
+            data["task"]["status"] = status
+
+        return self._make_request("PUT", endpoint, json=data)
+
+    def get_task(self, task_id: int) -> Dict[str, Any]:
+        """
+        Get task details (タスクの詳細を取得).
+
+        API Reference: Tasks GET endpoint
+
+        Args:
+            task_id: Task ID
+
+        Returns:
+            Task details
+        """
+        endpoint = f"/api/tasks/{task_id}"
+        return self._make_request("GET", endpoint)
+
+    def delete_task(self, task_id: int) -> Dict[str, Any]:
+        """
+        Delete a task (タスクを削除).
+
+        API Reference: Tasks DELETE endpoint
+
+        Args:
+            task_id: Task ID
+
+        Returns:
+            Deletion confirmation
+        """
+        endpoint = f"/api/tasks/{task_id}"
+        return self._make_request("DELETE", endpoint)
+
+    def create_note(
+        self,
+        description: str,
+        targetable_id: int,
+        targetable_type: str = "Contact",
+        noteable_id: Optional[int] = None,
+        noteable_type: Optional[str] = None
+    ) -> Dict[str, Any]:
+        """
+        Create a note (ノートの新規作成).
+
+        API Reference: Notes endpoint
 
         Args:
             description: Note content
-            targetable_type: Type of entity (e.g., 'Contact', 'Deal')
-            targetable_id: ID of the entity
-            **kwargs: Additional note fields
+            targetable_id: Target entity ID
+            targetable_type: Target entity type (Contact, Deal, etc.)
+            noteable_id: Related entity ID (optional for some note types)
+            noteable_type: Related entity type (optional)
 
         Returns:
-            Created note data
+            Created note information with ID
         """
-        note_data = {
-            'description': description,
-            'targetable_type': targetable_type,
-            'targetable_id': targetable_id,
-            **kwargs
+        endpoint = "/api/notes"
+
+        data = {
+            "note": {
+                "description": description,
+                "targetable_id": str(targetable_id),
+                "targetable_type": targetable_type
+            }
         }
-        return self._make_request('POST', '/api/notes', data={'note': note_data})
 
-    # ========== FILE UPLOAD METHODS ==========
+        if noteable_id and noteable_type:
+            data["note"]["noteable_id"] = str(noteable_id)
+            data["note"]["noteable_type"] = noteable_type
 
-    def upload_file(self, file_path: str, targetable_type: str, targetable_id: str) -> Dict[str, Any]:
+        return self._make_request("POST", endpoint, json=data)
+
+    def upload_file(
+        self,
+        file_path: str,
+        targetable_id: int,
+        targetable_type: str = "Contact"
+    ) -> Dict[str, Any]:
         """
-        Upload a file
+        Upload a file (ファイルのアップロード).
+
+        API Reference: Files endpoint
 
         Args:
-            file_path: Path to the file to upload
-            targetable_type: Type of entity (e.g., 'Contact', 'Deal')
-            targetable_id: ID of the entity
+            file_path: Path to file to upload
+            targetable_id: Target entity ID
+            targetable_type: Target entity type (Contact, Deal, etc.)
 
         Returns:
-            Uploaded file data
+            Uploaded file information
         """
+        endpoint = "/api/files"
+
         with open(file_path, 'rb') as f:
             files = {'file': f}
             data = {
-                'targetable_type': targetable_type,
-                'targetable_id': targetable_id
+                'targetable_id': str(targetable_id),
+                'targetable_type': targetable_type
             }
-            return self._make_request('POST', '/api/files', data=data, files=files)
 
-    # ========== SEARCH/VIEW METHODS ==========
+            return self._make_request("POST", endpoint, files=files, data=data)
 
-    def search_entities(self, query: str, filters: Optional[Dict] = None,
-                       page: int = 1, per_page: int = 20) -> Dict[str, Any]:
+    def search(
+        self,
+        query: str,
+        entity_type: str = "all",
+        filter: Optional[Dict[str, Any]] = None,
+        page: int = 1,
+        per_page: int = 30
+    ) -> Dict[str, Any]:
         """
-        Search across multiple entity types
+        Search for users, leads, contacts, accounts, or deals
+        (ユーザー/リード/コンタクト/アカウント/取引を検索).
+
+        API Reference: Search endpoint
 
         Args:
             query: Search query
-            filters: Filter conditions
-            page: Page number
-            per_page: Results per page
+            entity_type: Entity type to search (all, contact, lead, deal, account, user)
+            filter: Additional filters (e.g., "status": "open")
+            page: Page number (default: 1)
+            per_page: Results per page (default: 30)
 
         Returns:
-            Search results from multiple entity types
+            Search results
         """
-        params = {'q': query, 'page': page, 'per_page': per_page}
-        if filters:
-            params.update(filters)
+        endpoint = f"/api/{entity_type.lower()}s/search"
 
-        return self._make_request('GET', '/api/search', params=params)
+        params = {
+            "q": query,
+            "page": str(page),
+            "per_page": str(per_page)
+        }
 
-
-if __name__ == '__main__':
-    import os
-
-    API_URL = os.getenv('FRESHSALES_API_URL', 'https://your-domain.myfreshworks.com')
-    API_KEY = os.getenv('FRESHSALES_API_KEY', 'your_api_key')
-
-    client = FreshsalesClient(api_url=API_URL, api_key=API_KEY)
-
-    try:
-        # Example: Create a contact
-        contact = client.create_contact(
-            first_name="John",
-            last_name="Doe",
-            email="john.doe@example.com"
-        )
-        print(f"Created contact: {contact}")
-
-        # Example: Create a deal
-        deal = client.create_deal(
-            amount="50000",
-            name="New Opportunity",
-            stage="Qualification"
-        )
-        print(f"Created deal: {deal}")
-
-        # Example: Create a task
-        task = client.create_task(
-            title="Follow up with customer",
-            due_date="2025-03-01"
-        )
-        print(f"Created task: {task}")
-
-        # Example: Upload a file
-        # file_result = client.upload_file(
-        #     file_path="/path/to/file.pdf",
-        #     targetable_type="Contact",
-        #     targetable_id=contact['contact']['id']
-        # )
-        # print(f"Uploaded file: {file_result}")
-
-    except FreshsalesAPIError as e:
-        print(f"Error: {e}")
+        return self._make_request("GET", endpoint, params=params)

@@ -1,336 +1,451 @@
 """
 Holded API Client
-Business management platform with CRM, billing, and inventory features
-
-API Documentation: https://developers.holded.com/
+API Documentation: https://developers.holded.com/reference/overview
 """
 
 import requests
-import time
-from typing import Dict, List, Optional, Any
-from requests.exceptions import RequestException
+from typing import Optional, Dict, List, Any
+from datetime import datetime
 
 
 class HoldedAPIError(Exception):
-    """Custom exception for Holded API errors"""
-    pass
-
-
-class HoldedRateLimitError(HoldedAPIError):
-    """Rate limit exceeded error"""
+    """Custom exception for Holded API errors."""
     pass
 
 
 class HoldedClient:
-    """
-    Holded REST API Client
-    Supports contacts, products, and payments management
-    """
+    """Client for Holded API - CRM and ERP platform."""
 
-    def __init__(self, api_key: str, api_url: str = "https://api.holded.com/api", timeout: int = 30):
+    def __init__(self, api_key: str, base_url: str = "https://api.holded.com/api"):
         """
-        Initialize Holded API client
+        Initialize Holded API client.
 
         Args:
-            api_key: API key for authentication
-            api_url: Base URL of Holded API
-            timeout: Request timeout in seconds
+            api_key: Your Holded API key
+            base_url: API base URL (default: https://api.holded.com/api)
         """
         self.api_key = api_key
-        self.api_url = api_url.rstrip('/')
-        self.timeout = timeout
+        self.base_url = base_url
         self.session = requests.Session()
         self.session.headers.update({
-            'Content-Type': 'application/json',
-            'key': api_key
+            "key": api_key,
+            "Content-Type": "application/json",
+            "Accept": "application/json"
         })
-        self.last_request_time = 0
-        self.min_request_interval = 0.2  # 200ms between requests
-        self.rate_limit_remaining = None
 
-    def _make_request(self, method: str, endpoint: str, data: Optional[Dict] = None,
-                     params: Optional[Dict] = None) -> Dict[str, Any]:
+    def _make_request(self, method: str, endpoint: str, **kwargs) -> Dict[str, Any]:
         """
-        Make an authenticated API request with error handling and rate limiting
+        Make API request with error handling.
 
         Args:
             method: HTTP method
             endpoint: API endpoint
-            data: Request body data
-            params: Query parameters
+            **kwargs: Additional request arguments
 
         Returns:
-            Response data as dictionary
+            Response data
         """
-        # Rate limiting
-        current_time = time.time()
-
-        if self.rate_limit_remaining is not None and self.rate_limit_remaining <= 0:
-            time.sleep(1)
-
-        time_since_last = current_time - self.last_request_time
-        if time_since_last < self.min_request_interval:
-            time.sleep(self.min_request_interval - time_since_last)
-
-        url = f"{self.api_url}{endpoint}"
+        url = f"{self.base_url}{endpoint}"
 
         try:
-            if method.upper() == 'GET':
-                response = self.session.get(url, params=params, timeout=self.timeout)
-            elif method.upper() == 'POST':
-                response = self.session.post(url, json=data, params=params, timeout=self.timeout)
-            elif method.upper() == 'PUT':
-                response = self.session.put(url, json=data, params=params, timeout=self.timeout)
-            elif method.upper() == 'DELETE':
-                response = self.session.delete(url, params=params, timeout=self.timeout)
-            else:
-                raise HoldedAPIError(f"Unsupported HTTP method: {method}")
+            response = self.session.request(method, url, **kwargs)
+            response.raise_for_status()
 
-            self.last_request_time = time.time()
+            data = response.json()
+            return {
+                "status": "success",
+                "data": data,
+                "status_code": response.status_code
+            }
 
-            # Update rate limit info
-            self.rate_limit_remaining = int(response.headers.get('X-RateLimit-Remaining', '1'))
-
-            # Handle rate limiting (HTTP 429)
-            if response.status_code == 429:
-                retry_after = int(response.headers.get('Retry-After', 5))
-                time.sleep(retry_after)
-                return self._make_request(method, endpoint, data, params)
-
-            # Handle errors
-            if response.status_code >= 400:
-                try:
-                    error_data = response.json()
-                except:
-                    error_data = {}
-                error_msg = error_data.get('error', error_data.get('message', response.text))
-                raise HoldedAPIError(f"API error {response.status_code}: {error_msg}")
-
-            return response.json() if response.content else {}
-
-        except RequestException as e:
+        except requests.exceptions.HTTPError as e:
+            error_data = self._parse_error(response)
+            raise HoldedAPIError(
+                f"HTTP {response.status_code}: {error_data.get('message', str(e))}"
+            )
+        except requests.exceptions.RequestException as e:
             raise HoldedAPIError(f"Request failed: {str(e)}")
 
-    # ========== CONTACT METHODS ==========
+    def _parse_error(self, response: requests.Response) -> Dict[str, Any]:
+        """Parse error response."""
+        try:
+            return response.json() if response.content else {"message": response.text}
+        except Exception:
+            return {"message": response.text}
 
-    def create_contact(self, name: str, **kwargs) -> Dict[str, Any]:
+    def create_contact(
+        self,
+        name: str,
+        email: Optional[str] = None,
+        phone: Optional[str] = None,
+        mobile: Optional[str] = None,
+        address: Optional[str] = None,
+        city: Optional[str] = None,
+        province: Optional[str] = None,
+        postalcode: Optional[str] = None,
+        country: Optional[str] = None,
+        type: str = "person",
+        taxid: Optional[str] = None
+    ) -> Dict[str, Any]:
         """
-        Create a new contact
+        Create a new contact (Create Contact).
+
+        API Reference: https://developers.holded.com/reference/create-contact
 
         Args:
             name: Contact name
-            **kwargs: Additional contact fields (email, phone, billingInfo, etc.)
+            email: Email address
+            phone: Phone number
+            mobile: Mobile phone number
+            address: Street address
+            city: City
+            province: Province or state
+            postalcode: Postal code
+            country: Country code (e.g., ES, US)
+            type: Type (person or company)
+            taxid: Tax ID / VAT number
 
         Returns:
-            Created contact data
-
-        Example:
-            client.create_contact(
-                name="John Doe",
-                email="john@example.com",
-                phone="+1234567890",
-                billingInfo={"address": "123 Main St"}
-            )
+            Created contact information with ID
         """
-        data = {'name': name, **kwargs}
-        return self._make_request('POST', '/invoicing/v1/contacts', data=data)
+        endpoint = "/invoicing/v1/contacts"
 
-    def get_contact(self, contact_id: str) -> Dict[str, Any]:
+        data = {"name": name, "type": type}
+
+        if email:
+            data["email"] = email
+        if phone:
+            data["phone"] = phone
+        if mobile:
+            data["mobile"] = mobile
+        if address:
+            data["address"] = address
+        if city:
+            data["city"] = city
+        if province:
+            data["province"] = province
+        if postalcode:
+            data["postalcode"] = postalcode
+        if country:
+            data["country"] = country
+        if taxid:
+            data["taxid"] = taxid
+
+        return self._make_request("POST", endpoint, json=data)
+
+    def update_contact(
+        self,
+        contact_id: str,
+        name: Optional[str] = None,
+        email: Optional[str] = None,
+        phone: Optional[str] = None,
+        mobile: Optional[str] = None,
+        address: Optional[str] = None,
+        city: Optional[str] = None,
+        province: Optional[str] = None,
+        postalcode: Optional[str] = None,
+        country: Optional[str] = None,
+        taxid: Optional[str] = None
+    ) -> Dict[str, Any]:
         """
-        Get contact by ID
+        Update an existing contact (Update Contact).
+
+        API Reference: https://developers.holded.com/reference/update-contact
 
         Args:
             contact_id: Contact ID
+            name: Contact name
+            email: Email address
+            phone: Phone number
+            mobile: Mobile phone number
+            address: Street address
+            city: City
+            province: Province or state
+            postalcode: Postal code
+            country: Country code
+            taxid: Tax ID / VAT number
 
         Returns:
-            Contact data
+            Updated contact information
         """
-        return self._make_request('GET', f'/invoicing/v1/contacts/{contact_id}')
+        endpoint = f"/invoicing/v1/contacts/{contact_id}"
 
-    def update_contact(self, contact_id: str, **kwargs) -> Dict[str, Any]:
-        """
-        Update contact
+        data = {}
 
-        Args:
-            contact_id: Contact ID
-            **kwargs: Fields to update
+        if name:
+            data["name"] = name
+        if email:
+            data["email"] = email
+        if phone:
+            data["phone"] = phone
+        if mobile:
+            data["mobile"] = mobile
+        if address:
+            data["address"] = address
+        if city:
+            data["city"] = city
+        if province:
+            data["province"] = province
+        if postalcode:
+            data["postalcode"] = postalcode
+        if country:
+            data["country"] = country
+        if taxid:
+            data["taxid"] = taxid
 
-        Returns:
-            Updated contact data
-        """
-        return self._make_request('PUT', f'/invoicing/v1/contacts/{contact_id}', data=kwargs)
+        return self._make_request("PUT", endpoint, json=data)
 
     def delete_contact(self, contact_id: str) -> Dict[str, Any]:
         """
-        Delete contact
+        Delete a contact (Delete Contact).
+
+        API Reference: https://developers.holded.com/reference/delete-contact
 
         Args:
             contact_id: Contact ID
 
         Returns:
-            Deletion response
+            Deletion confirmation
         """
-        return self._make_request('DELETE', f'/invoicing/v1/contacts/{contact_id}')
+        endpoint = f"/invoicing/v1/contacts/{contact_id}"
+        return self._make_request("DELETE", endpoint)
 
-    def search_contact(self, query: Optional[str] = None, **filter_params) -> Dict[str, Any]:
+    def get_contact(self, contact_id: str) -> Dict[str, Any]:
         """
-        Search contacts
+        Get contact details (Get Contact).
+
+        API Reference: https://developers.holded.com/reference/get-contact
 
         Args:
-            query: Search query string
-            **filter_params: Filter parameters (name, email, phone, etc.)
+            contact_id: Contact ID
 
         Returns:
-            List of contacts
+            Contact details
         """
+        endpoint = f"/invoicing/v1/contacts/{contact_id}"
+        return self._make_request("GET", endpoint)
+
+    def search_contacts(
+        self,
+        search: Optional[str] = None,
+        limit: int = 20,
+        offset: int = 0
+    ) -> Dict[str, Any]:
+        """
+        Search contacts (Search Contact).
+
+        API Reference: https://developers.holded.com/reference/list-contacts
+
+        Args:
+            search: Search query (name, email, phone, etc.)
+            limit: Maximum number of results (default: 20)
+            offset: Offset for pagination (default: 0)
+
+        Returns:
+            List of matching contacts
+        """
+        endpoint = "/invoicing/v1/contacts"
+
         params = {}
-        if query:
-            params['name'] = query
-        params.update(filter_params)
 
-        return self._make_request('GET', '/invoicing/v1/contacts', params=params)
+        if search:
+            params["search"] = search
+        params["limit"] = str(limit)
+        params["offset"] = str(offset)
 
-    # ========== PRODUCT METHODS ==========
+        return self._make_request("GET", endpoint, params=params)
 
-    def create_product(self, name: str, **kwargs) -> Dict[str, Any]:
+    def create_product(
+        self,
+        name: str,
+        description: Optional[str] = None,
+        sale_price: Optional[float] = None,
+        cost: Optional[float] = None,
+        tax_id: Optional[str] = None,
+        stock: Optional[int] = None,
+        sku: Optional[str] = None
+    ) -> Dict[str, Any]:
         """
-        Create a new product
+        Create a new product (Create Product).
+
+        API Reference: https://developers.holded.com/reference/create-product
 
         Args:
             name: Product name
-            **kwargs: Additional product fields (description, price, stock, etc.)
+            description: Product description
+            sale_price: Sale price
+            cost: Cost price
+            tax_id: Tax ID (get from tax configuration)
+            stock: Stock quantity
+            sku: SKU code
 
         Returns:
-            Created product data
-
-        Example:
-            client.create_product(
-                name="Widget",
-                description="A useful widget",
-                price=99.99,
-                stock=100,
-                tax=21
-            )
+            Created product information with ID
         """
-        data = {'name': name, **kwargs}
-        return self._make_request('POST', '/products/v1/products', data=data)
+        endpoint = "/invoicing/v1/products"
+
+        data = {"name": name}
+
+        if description:
+            data["description"] = description
+        if sale_price is not None:
+            data["sale_price"] = sale_price
+        if cost is not None:
+            data["cost"] = cost
+        if tax_id:
+            data["tax_id"] = tax_id
+        if stock is not None:
+            data["stock"] = stock
+        if sku:
+            data["sku"] = sku
+
+        return self._make_request("POST", endpoint, json=data)
+
+    def update_product(
+        self,
+        product_id: str,
+        name: Optional[str] = None,
+        description: Optional[str] = None,
+        sale_price: Optional[float] = None,
+        cost: Optional[float] = None,
+        tax_id: Optional[str] = None,
+        stock: Optional[int] = None,
+        sku: Optional[str] = None
+    ) -> Dict[str, Any]:
+        """
+        Update an existing product (Update Product).
+
+        API Reference: https://developers.holded.com/reference/update-product
+
+        Args:
+            product_id: Product ID
+            name: Product name
+            description: Product description
+            sale_price: Sale price
+            cost: Cost price
+            tax_id: Tax ID
+            stock: Stock quantity
+            sku: SKU code
+
+        Returns:
+            Updated product information
+        """
+        endpoint = f"/invoicing/v1/products/{product_id}"
+
+        data = {}
+
+        if name:
+            data["name"] = name
+        if description:
+            data["description"] = description
+        if sale_price is not None:
+            data["sale_price"] = sale_price
+        if cost is not None:
+            data["cost"] = cost
+        if tax_id:
+            data["tax_id"] = tax_id
+        if stock is not None:
+            data["stock"] = stock
+        if sku:
+            data["sku"] = sku
+
+        return self._make_request("PUT", endpoint, json=data)
 
     def get_product(self, product_id: str) -> Dict[str, Any]:
         """
-        Get product by ID
+        Get product details (Get Product).
+
+        API Reference: https://developers.holded.com/reference/get-product
 
         Args:
             product_id: Product ID
 
         Returns:
-            Product data
+            Product details
         """
-        return self._make_request('GET', f'/products/v1/products/{product_id}')
+        endpoint = f"/invoicing/v1/products/{product_id}"
+        return self._make_request("GET", endpoint)
 
-    def update_product(self, product_id: str, **kwargs) -> Dict[str, Any]:
+    def create_payment(
+        self,
+        invoice_id: str,
+        amount: float,
+        date: Optional[str] = None,
+        notes: Optional[str] = None,
+        method: Optional[str] = None
+    ) -> Dict[str, Any]:
         """
-        Update product
+        Create a payment (Create Payment).
+
+        API Reference: https://developers.holded.com/reference/create-payment
 
         Args:
-            product_id: Product ID
-            **kwargs: Fields to update
-
-        Returns:
-            Updated product data
-        """
-        return self._make_request('PUT', f'/products/v1/products/{product_id}', data=kwargs)
-
-    # ========== PAYMENT METHODS ==========
-
-    def create_payment(self, amount: float, **kwargs) -> Dict[str, Any]:
-        """
-        Create a new payment
-
-        Args:
+            invoice_id: Invoice ID
             amount: Payment amount
-            **kwargs: Additional payment fields (date, method, contact_id, etc.)
+            date: Payment date (YYYY-MM-DD format, default: today)
+            notes: Notes or description
+            method: Payment method (cash, card, transfer, etc.)
 
         Returns:
-            Created payment data
-
-        Example:
-            client.create_payment(
-                amount=1000.00,
-                date="2025-03-01",
-                method="transfer",
-                contact_id="contact_123"
-            )
+            Created payment information with ID
         """
-        data = {'amount': amount, **kwargs}
-        return self._make_request('POST', '/invoicing/v1/payments', data=data)
+        endpoint = "/invoicing/v1/payments"
+
+        data = {
+            "invoiceid": invoice_id,
+            "amount": amount
+        }
+
+        if date:
+            data["date"] = date
+        if notes:
+            data["notes"] = notes
+        if method:
+            data["method"] = method
+
+        return self._make_request("POST", endpoint, json=data)
 
     def get_payment(self, payment_id: str) -> Dict[str, Any]:
         """
-        Get payment by ID
+        Get payment details (Get Payment).
+
+        API Reference: https://developers.holded.com/reference/get-payment
 
         Args:
             payment_id: Payment ID
 
         Returns:
-            Payment data
+            Payment details
         """
-        return self._make_request('GET', f'/invoicing/v1/payments/{payment_id}')
+        endpoint = f"/invoicing/v1/payments/{payment_id}"
+        return self._make_request("GET", endpoint)
 
-    def search_payment(self, query: Optional[str] = None, **filter_params) -> Dict[str, Any]:
+    def search_payments(
+        self,
+        search: Optional[str] = None,
+        limit: int = 20,
+        offset: int = 0
+    ) -> Dict[str, Any]:
         """
-        Search payments
+        Search payments (Search Payment).
+
+        API Reference: https://developers.holded.com/reference/list-payments
 
         Args:
-            query: Search query
-            **filter_params: Filter parameters
+            search: Search query
+            limit: Maximum number of results (default: 20)
+            offset: Offset for pagination (default: 0)
 
         Returns:
-            List of payments
+            List of matching payments
         """
+        endpoint = "/invoicing/v1/payments"
+
         params = {}
-        if query:
-            params['contact'] = query
-        params.update(filter_params)
 
-        return self._make_request('GET', '/invoicing/v1/payments', params=params)
+        if search:
+            params["search"] = search
+        params["limit"] = str(limit)
+        params["offset"] = str(offset)
 
-
-if __name__ == '__main__':
-    import os
-
-    API_KEY = os.getenv('HOLDED_API_KEY', 'your_api_key')
-
-    client = HoldedClient(api_key=API_KEY)
-
-    try:
-        # Example: Create a contact
-        contact = client.create_contact(
-            name="Acme Corporation",
-            email="contact@acme.com",
-            phone="+1234567890"
-        )
-        print(f"Created contact: {contact}")
-
-        # Example: Create a product
-        product = client.create_product(
-            name="Product A",
-            description="Description A",
-            price=99.99,
-            stock=50
-        )
-        print(f"Created product: {product}")
-
-        # Example: Create a payment
-        payment = client.create_payment(
-            amount=500.00,
-            date="2025-03-01",
-            method="transfer"
-        )
-        print(f"Created payment: {payment}")
-
-        # Example: Search contacts
-        contacts = client.search_contact(name="Acme")
-        print(f"Search results: {contacts}")
-
-    except HoldedAPIError as e:
-        print(f"Error: {e}")
+        return self._make_request("GET", endpoint, params=params)
