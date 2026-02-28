@@ -5470,6 +5470,1253 @@
           "method": "SansanClient.get_person_info(person_id)"
         }
       }
+    },
+    "espo_crm.md": {
+      "service_name": "Espo Crm",
+      "category": "セールス",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Espo Crm: REST API with API key or OAuth authentication",
+      "api_actions": {
+        "Create Opportunity": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Create Account": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "List Accounts": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Update Task": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Delete Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Get Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Create Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Update Opportunity": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Create Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Get Opportunity": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Delete Task": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "List Contacts": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "List Leads": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Update Account": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "List Opportunities": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Get Task": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Update Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Delete Account": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Delete Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "List Tasks": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Delete Opportunity": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Create Task": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Get Account": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        }
+      },
+      "triggers": {
+        "Created Account": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Created Task": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Updated Opportunity": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Created Contact": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Updated Account": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Created Lead": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Updated Lead": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Created Opportunity": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        },
+        "Updated Task": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/espo_crm/espo_crm_client.py"
+        }
+      },
+      "implemented_at": "2026-02-28T10:50:00.000000"
+    },
+    "fireberry.md": {
+      "service_name": "Fireberry",
+      "category": "セールス",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Fireberry: REST API with API key or OAuth authentication",
+      "api_actions": {
+        "Create Account": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        },
+        "Search Contacts": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        },
+        "Update Task": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        },
+        "Delete Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        },
+        "Search Tasks": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        },
+        "Create Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        },
+        "Delete Task": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        },
+        "Create Deal": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        },
+        "Search Deals": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        },
+        "Update Account": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        },
+        "Get Task": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        },
+        "Search Accounts": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        },
+        "Delete Account": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        },
+        "Update Deal": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        },
+        "Get Deal": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        },
+        "Create Task": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        },
+        "Delete Deal": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        },
+        "Get Account": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        }
+      },
+      "triggers": {
+        "Updated Deal": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        },
+        "New Contact": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        },
+        "New Account": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        },
+        "Updated Task": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        },
+        "Updated Account": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        },
+        "New Deal": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        },
+        "Updated Contact": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        },
+        "New Task": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/fireberry/fireberry_client.py"
+        }
+      },
+      "implemented_at": "2026-02-28T10:50:00.000000"
+    },
+    "freshsales.md": {
+      "service_name": "Freshsales",
+      "category": "セールス",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Freshsales: REST API with API key or OAuth authentication",
+      "api_actions": {
+        "ノートの新規作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/freshsales/freshsales_client.py"
+        },
+        "連絡先情報の更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/freshsales/freshsales_client.py"
+        },
+        "取引を削除": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/freshsales/freshsales_client.py"
+        },
+        "連絡先の作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/freshsales/freshsales_client.py"
+        },
+        "連絡先を削除": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/freshsales/freshsales_client.py"
+        },
+        "タスクを削除": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/freshsales/freshsales_client.py"
+        },
+        "連絡先の詳細を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/freshsales/freshsales_client.py"
+        },
+        "アカウントの作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/freshsales/freshsales_client.py"
+        },
+        "タスクの作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/freshsales/freshsales_client.py"
+        },
+        "アカウント情報の更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/freshsales/freshsales_client.py"
+        },
+        "取引の作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/freshsales/freshsales_client.py"
+        },
+        "取引の詳細を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/freshsales/freshsales_client.py"
+        },
+        "タスクの詳細を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/freshsales/freshsales_client.py"
+        },
+        "ファイルのアップロード": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/freshsales/freshsales_client.py"
+        },
+        "ユーザー/リード/コンタクト/アカウント/取引を検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/freshsales/freshsales_client.py"
+        },
+        "タスク情報の更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/freshsales/freshsales_client.py"
+        },
+        "取引情報の更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/freshsales/freshsales_client.py"
+        },
+        "アカウントの詳細を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/freshsales/freshsales_client.py"
+        }
+      },
+      "triggers": {
+        "取引が更新されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/freshsales/freshsales_client.py"
+        },
+        "コンタクトが更新されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/freshsales/freshsales_client.py"
+        },
+        "コンタクトが作成されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/freshsales/freshsales_client.py"
+        },
+        "アカウントが更新されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/freshsales/freshsales_client.py"
+        },
+        "アカウントが作成されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/freshsales/freshsales_client.py"
+        },
+        "取引が作成されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/freshsales/freshsales_client.py"
+        }
+      },
+      "implemented_at": "2026-02-28T10:50:00.000000"
+    },
+    "frictio.md": {
+      "service_name": "Frictio",
+      "category": "セールス",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Frictio: REST API with API key or OAuth authentication",
+      "api_actions": {},
+      "triggers": {
+        "ミーティングが終了したら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/frictio/frictio_client.py",
+          "webhook_method": "FrictioClient.handle_webhook()"
+        },
+        "プレイブック実行結果が更新されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/frictio/frictio_client.py",
+          "webhook_method": "FrictioClient.handle_webhook()"
+        },
+        "プレイブック生成されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/frictio/frictio_client.py",
+          "webhook_method": "FrictioClient.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T10:50:00.000000"
+    },
+    "gbiz-info.md": {
+      "service_name": "GBiz Info",
+      "category": "セールス",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "GBiz Info: REST API with API key or OAuth authentication",
+      "api_actions": {
+        "法人名から法人情報を検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 일본 기업 정보 API",
+          "code_file": "github/skill-factory/repo/gbiz-info/gbiz_info_client.py"
+        },
+        "法人情報を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 일본 기업 정보 API",
+          "code_file": "github/skill-factory/repo/gbiz-info/gbiz_info_client.py"
+        },
+        "法人番号から法人情報を検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 일본 기업 정보 API",
+          "code_file": "github/skill-factory/repo/gbiz-info/gbiz_info_client.py"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T10:50:00.000000"
+    },
+    "geniee-sfa.md": {
+      "service_name": "Geniee Sfa",
+      "category": "セールス",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Geniee Sfa: REST API with API key or OAuth authentication",
+      "api_actions": {},
+      "triggers": {
+        "見込み客が作成されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/geniee-sfa/geniee_sfa_client.py",
+          "webhook_method": "GenieeSFAClient.handle_webhook()"
+        },
+        "商談情報が作成されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/geniee-sfa/geniee_sfa_client.py",
+          "webhook_method": "GenieeSFAClient.handle_webhook()"
+        },
+        "見込み客が作成及び更新されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/geniee-sfa/geniee_sfa_client.py",
+          "webhook_method": "GenieeSFAClient.handle_webhook()"
+        },
+        "商談情報が作成及び更新されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/geniee-sfa/geniee_sfa_client.py",
+          "webhook_method": "GenieeSFAClient.handle_webhook()"
+        },
+        "会社情報が作成されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/geniee-sfa/geniee_sfa_client.py",
+          "webhook_method": "GenieeSFAClient.handle_webhook()"
+        },
+        "会社情報が作成及び更新されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/geniee-sfa/geniee_sfa_client.py",
+          "webhook_method": "GenieeSFAClient.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T10:50:00.000000"
+    },
+    "holded.md": {
+      "service_name": "Holded",
+      "category": "セールス",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Holded: REST API with API key or OAuth authentication",
+      "api_actions": {
+        "Create Payment": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/holded/holded_client.py"
+        },
+        "Create Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/holded/holded_client.py"
+        },
+        "Search Payment": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/holded/holded_client.py"
+        },
+        "Get Payment": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/holded/holded_client.py"
+        },
+        "Get Product": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/holded/holded_client.py"
+        },
+        "Delete Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/holded/holded_client.py"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/holded/holded_client.py"
+        },
+        "Search Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/holded/holded_client.py"
+        },
+        "Update Product": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/holded/holded_client.py"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/holded/holded_client.py"
+        },
+        "Create Product": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/holded/holded_client.py"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T10:50:00.000000"
+    },
+    "hot-profile.md": {
+      "service_name": "Hot Profile",
+      "category": "セールス",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Hot Profile: REST API with API key or OAuth authentication",
+      "api_actions": {
+        "名刺のカスタム項目を更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "報告管理を更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "リードを検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "名刺情報を登録": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "商談を更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "商談のカスタム項目を更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "商品マスターを検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "タスクを検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "名刺情報を更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "リードを更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "会社を登録": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "会社を検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "リードのカスタム項目を更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "報告管理のカスタム項目を更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "リード情報を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "商談のフィールド情報を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "商談を検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "商品マスターを更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "報告管理を登録": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "会社のフィールド情報を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "商品マスターを登録": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "報告管理を検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "リードのフィールド情報を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "リードを登録": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "会社情報を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "会社のカスタム項目を更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "報告管理のフィールド情報を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "会社を更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "名刺のフィールド情報を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "商談を登録": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "名刺を検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        }
+      },
+      "triggers": {
+        "名刺が登録されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "タスクが更新されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "リードが更新されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "会社が更新されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "タスクが作成されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "報告管理が作成されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "報告管理が更新されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "会社が作成されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "商談が作成されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "名刺が更新されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "商談が更新されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "リードが作成されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        },
+        "商談が指定のステージに更新されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/hot-profile/hot_profile_client.py"
+        }
+      },
+      "implemented_at": "2026-02-28T10:50:00.000000"
+    },
+    "hunter.md": {
+      "service_name": "Hunter",
+      "category": "セールス",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Hunter: REST API with API key or OAuth authentication",
+      "api_actions": {
+        "Search emails from domain": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 트라이얼 사용 가능",
+          "code_file": "github/skill-factory/repo/hunter/hunter_client.py"
+        },
+        "Email Verifier": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 트라이얼 사용 가능",
+          "code_file": "github/skill-factory/repo/hunter/hunter_client.py"
+        },
+        "Create Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 트라이얼 사용 가능",
+          "code_file": "github/skill-factory/repo/hunter/hunter_client.py"
+        },
+        "Search Leads": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 트라이얼 사용 가능",
+          "code_file": "github/skill-factory/repo/hunter/hunter_client.py"
+        },
+        "Update Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 트라이얼 사용 가능",
+          "code_file": "github/skill-factory/repo/hunter/hunter_client.py"
+        }
+      },
+      "triggers": {
+        "Created Lead": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/hunter/hunter_client.py"
+        }
+      },
+      "implemented_at": "2026-02-28T10:50:00.000000"
+    },
+    "insightly_crm.md": {
+      "service_name": "Insightly Crm",
+      "category": "セールス",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Insightly Crm: REST API with API key or OAuth authentication",
+      "api_actions": {
+        "Get Project": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        },
+        "Create Project": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        },
+        "List Tasks": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        },
+        "List Leads": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        },
+        "Create Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        },
+        "Update Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        },
+        "Create Task": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        },
+        "Update Organisation": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        },
+        "Create Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        },
+        "Update Project": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        },
+        "List Projects": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        },
+        "Get Task": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        },
+        "List Organisations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        },
+        "Update Project Pipeline": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        },
+        "List Contacts": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        },
+        "Get Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        },
+        "Get Organisation": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        },
+        "Update Task": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        },
+        "Create Organisation": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        }
+      },
+      "triggers": {
+        "New Project": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        },
+        "New Task": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        },
+        "New Contact": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        },
+        "Updated Task": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        },
+        "Updated Project": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요",
+          "code_file": "github/skill-factory/repo/insightly_crm/insightly_crm_client.py"
+        }
+      },
+      "implemented_at": "2026-02-28T10:50:00.000000"
     }
   },
   "last_updated": "2026-02-28 08:48:08"
