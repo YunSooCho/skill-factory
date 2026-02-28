@@ -120,55 +120,130 @@ class HuggingFaceClient:
 
     # ==================== API Methods ====================
 
-    async def text_generation:
-        """Placeholder for text_generation.
+    async def summarize_text(
+        self,
+        text: str,
+        model: str = "facebook/bart-large-cnn",
+        max_length: int = 130,
+        min_length: int = 30
+    ) -> Dict[str, Any]:
+        """
+        Summarize text (テキストを要約).
+
+        Args:
+            text: Input text to summarize
+            model: Model ID (default: facebook/bart-large-cnn)
+            max_length: Maximum length of summary
+            min_length: Minimum length of summary
 
         Returns:
-            Response data
+            Summarized text
 
         Raises:
             Exception: If request fails
         """
-        # Implementation will be added based on specific API docs
-        params = {}
-        return await self._request("GET", "/endpoint", params=params)
+        data = {
+            "inputs": text,
+            "parameters": {
+                "max_length": max_length,
+                "min_length": min_length
+            }
+        }
 
-    async def image_generation:
-        """Placeholder for image_generation.
+        return await self._request("POST", f"/models/{model}", json_data=data)
+
+    async def classify_text(
+        self,
+        text: str,
+        model: str = "distilbert-base-uncased-finetuned-sst-2-english",
+        labels: Optional[List[str]] = None
+    ) -> Dict[str, Any]:
+        """
+        Classify text (テキストを分類).
+
+        Args:
+            text: Input text to classify
+            model: Model ID (default: distilbert-base-uncased-finetuned-sst-2-english)
+            labels: Optional labels for zero-shot classification
 
         Returns:
-            Response data
+            Classification results with labels and scores
 
         Raises:
             Exception: If request fails
         """
-        # Implementation will be added based on specific API docs
-        params = {}
-        return await self._request("GET", "/endpoint", params=params)
+        if labels:
+            # Zero-shot classification
+            data = {
+                "inputs": text,
+                "parameters": {
+                    "candidate_labels": labels
+                }
+            }
+            endpoint = f"/models/facebook/bart-large-mnli"
+        else:
+            # Standard classification
+            data = {
+                "inputs": text
+            }
+            endpoint = f"/models/{model}"
 
-    async def text_classification:
-        """Placeholder for text_classification.
+        return await self._request("POST", endpoint, json_data=data)
+
+    async def answer_question(
+        self,
+        question: str,
+        context: str,
+        model: str = "deepset/roberta-base-squad2"
+    ) -> Dict[str, Any]:
+        """
+        Answer question (質問へ回答).
+
+        Args:
+            question: Question to answer
+            context: Context containing the answer
+            model: Model ID (default: deepset/roberta-base-squad2)
 
         Returns:
-            Response data
+            Answer with confidence score
 
         Raises:
             Exception: If request fails
         """
-        # Implementation will be added based on specific API docs
-        params = {}
-        return await self._request("GET", "/endpoint", params=params)
+        data = {
+            "inputs": {
+                "question": question,
+                "context": context
+            }
+        }
 
-    async def summarization:
-        """Placeholder for summarization.
+        return await self._request("POST", f"/models/{model}", json_data=data)
+
+    async def compare_text_similarity(
+        self,
+        text1: str,
+        text2: str,
+        model: str = "sentence-transformers/all-MiniLM-L6-v2"
+    ) -> Dict[str, Any]:
+        """
+        Determine text similarity (文章の類似性を判別).
+
+        Args:
+            text1: First text
+            text2: Second text
+            model: Model ID (default: sentence-transformers/all-MiniLM-L6-v2)
 
         Returns:
-            Response data
+            Similarity score (0-1)
 
         Raises:
             Exception: If request fails
         """
-        # Implementation will be added based on specific API docs
-        params = {}
-        return await self._request("GET", "/endpoint", params=params)
+        data = {
+            "inputs": {
+                "source_sentence": text1,
+                "sentences": [text2]
+            }
+        }
 
+        return await self._request("POST", f"/models/{model}", json_data=data)

@@ -120,55 +120,110 @@ class ZoomPhoneClient:
 
     # ==================== API Methods ====================
 
-    async def make_call:
-        """Placeholder for make_call.
+    async def get_call_logs(
+        self,
+        from_date: Optional[str] = None,
+        to_date: Optional[str] = None,
+        page_size: int = 30,
+        next_page_token: Optional[str] = None
+    ) -> Dict[str, Any]:
+        """
+        Get call log list (コールログの一覧を取得).
+
+        Args:
+            from_date: Start date (YYYY-MM-DD format)
+            to_date: End date (YYYY-MM-DD format)
+            page_size: Number of records per page (default: 30, max: 300)
+            next_page_token: Token for pagination
 
         Returns:
-            Response data
+            List of call logs
 
         Raises:
             Exception: If request fails
         """
-        # Implementation will be added based on specific API docs
-        params = {}
-        return await self._request("GET", "/endpoint", params=params)
+        params = {
+            "page_size": min(page_size, 300)
+        }
+        if from_date:
+            params["from"] = from_date
+        if to_date:
+            params["to"] = to_date
+        if next_page_token:
+            params["next_page_token"] = next_page_token
 
-    async def get_call_recording:
-        """Placeholder for get_call_recording.
+        return await self._request("GET", "/call_logs", params=params)
+
+    async def get_call_log_details(self, call_id: str) -> Dict[str, Any]:
+        """
+        Get call log details (コールログの詳細を取得).
+
+        Args:
+            call_id: Call log ID
 
         Returns:
-            Response data
+            Detailed call log information
 
         Raises:
             Exception: If request fails
         """
-        # Implementation will be added based on specific API docs
-        params = {}
-        return await self._request("GET", "/endpoint", params=params)
+        return await self._request("GET", f"/call_logs/{call_id}")
 
-    async def get_call_logs:
-        """Placeholder for get_call_logs.
+    async def get_call_recording_info(self, call_id: str) -> Dict[str, Any]:
+        """
+        Get call recording information (通話のレコーディング情報を取得).
+
+        Args:
+            call_id: Call ID
 
         Returns:
-            Response data
+            Recording metadata and download URL
 
         Raises:
             Exception: If request fails
         """
-        # Implementation will be added based on specific API docs
-        params = {}
-        return await self._request("GET", "/endpoint", params=params)
+        return await self._request("GET", f"/call_logs/{call_id}/recordings")
 
-    async def send_sms:
-        """Placeholder for send_sms.
+    async def download_recording_file(self, call_id: str, download_path: str) -> Dict[str, Any]:
+        """
+        Download recording file (レコーディングファイルをダウンロード).
+
+        Args:
+            call_id: Call ID or recording ID
+            download_path: Local path to save the recording file
 
         Returns:
-            Response data
+            Download result with file path
 
         Raises:
             Exception: If request fails
         """
-        # Implementation will be added based on specific API docs
-        params = {}
-        return await self._request("GET", "/endpoint", params=params)
+        await self.rate_limiter.acquire()
+
+        url = f"{self.BASE_URL}/call_logs/{call_id}/recordings/download"
+
+        try:
+            async with self.session.get(
+                url,
+                headers=self._get_headers()
+            ) as response:
+                if response.status >= 400:
+                    error_text = await response.text()
+                    raise Exception(f"ZoomPhoneClient API error ({response.status}): {error_text}")
+
+                # Save the file
+                with open(download_path, 'wb') as f:
+                    f.write(await response.read())
+
+                return {
+                    "status": "success",
+                    "call_id": call_id,
+                    "download_path": download_path,
+                    "file_size": len(await response.read())
+                }
+
+        except aiohttp.ClientError as e:
+            raise Exception(f"Network error during download: {str(e)}")
+        except Exception as e:
+            raise Exception(f"Error during recording download: {str(e)}")
 

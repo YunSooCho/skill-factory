@@ -40,14 +40,16 @@ class GoogleSearchClient:
 
     BASE_URL = "https://www.googleapis.com/customsearch/v1"
 
-    def __init__(self, api_key: str):
+    def __init__(self, api_key: str, search_engine_id: Optional[str] = None):
         """
         Initialize GoogleSearchClient API client.
 
         Args:
             api_key: Your API key
+            search_engine_id: Custom Search Engine ID (for Custom Search API)
         """
         self.api_key = api_key
+        self.search_engine_id = search_engine_id
         self.session = None
         self.rate_limiter = RateLimiter(max_requests=120, per_seconds=60)
 
@@ -120,42 +122,49 @@ class GoogleSearchClient:
 
     # ==================== API Methods ====================
 
-    async def search:
-        """Placeholder for search.
+    async def search(
+        self,
+        query: str,
+        search_type: Optional[str] = None,
+        start: int = 1,
+        num: int = 10,
+        language: str = "ja",
+        country: str = "JP",
+        sort: Optional[str] = None
+    ) -> Dict[str, Any]:
+        """
+        Get search results (検索結果を取得).
+
+        Args:
+            query: Search query string
+            search_type: Type of search (e.g., "image" for images, "news" for news)
+            start: Start index for pagination (default: 1)
+            num: Number of results to return (default: 10, max: 10 for free tier)
+            language: Language code (default: ja)
+            country: Country code (default: JP)
+            sort: Sort order (e.g., "date" for recent results)
 
         Returns:
-            Response data
+            Search results with title, URL, snippet, and other metadata
 
         Raises:
             Exception: If request fails
         """
-        # Implementation will be added based on specific API docs
-        params = {}
-        return await self._request("GET", "/endpoint", params=params)
+        params = {
+            "key": self.api_key,
+            "q": query,
+            "start": start,
+            "num": min(num, 10),
+            "hl": language,
+            "gl": country
+        }
 
-    async def search_images:
-        """Placeholder for search_images.
+        if self.search_engine_id:
+            params["cx"] = self.search_engine_id
+        if search_type:
+            params["searchType"] = search_type
+        if sort:
+            params["sort"] = sort
 
-        Returns:
-            Response data
-
-        Raises:
-            Exception: If request fails
-        """
-        # Implementation will be added based on specific API docs
-        params = {}
-        return await self._request("GET", "/endpoint", params=params)
-
-    async def search_news:
-        """Placeholder for search_news.
-
-        Returns:
-            Response data
-
-        Raises:
-            Exception: If request fails
-        """
-        # Implementation will be added based on specific API docs
-        params = {}
-        return await self._request("GET", "/endpoint", params=params)
+        return await self._request("GET", "", params=params)
 

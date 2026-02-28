@@ -22,7 +22,7 @@ class RateLimiter:
         async with self.lock:
             now = time.time()
             self.requests = [req_time for req_time in self.requests
-                            if now - req_time < self.per_seconds]
+                            if now - req_time < self.per_seconds}
 
             if len(self.requests) >= self.max_requests:
                 sleep_time = self.per_seconds - (now - self.requests[0])
@@ -120,55 +120,149 @@ class GoogleMeetClient:
 
     # ==================== API Methods ====================
 
-    async def create_meeting:
-        """Placeholder for create_meeting.
+    async def create_meeting_space(
+        self,
+        name: Optional[str] = None,
+        access_type: str = "anyone",
+        **kwargs
+    ) -> Dict[str, Any]:
+        """
+        Create meeting space (会議スペースを作成).
+
+        Args:
+            name: Meeting space name
+            access_type: Access type (anyone, trusted_domains, invited_only)
+            **kwargs: Additional fields
 
         Returns:
-            Response data
+            Created meeting space data
 
         Raises:
             Exception: If request fails
         """
-        # Implementation will be added based on specific API docs
-        params = {}
-        return await self._request("GET", "/endpoint", params=params)
+        data = {
+            "name": name,
+            "access_type": access_type,
+            **kwargs
+        }
+        data = {k: v for k, v in data.items() if v is not None}
 
-    async def get_meeting:
-        """Placeholder for get_meeting.
+        return await self._request("POST", "/spaces", json_data=data)
+
+    async def list_meetings(
+        self,
+        page_size: int = 100,
+        page_token: Optional[str] = None,
+        filter_by: Optional[str] = None
+    ) -> Dict[str, Any]:
+        """
+        Get meeting information list (会議情報の一覧を取得).
+
+        Args:
+            page_size: Number of results per page (default: 100)
+            page_token: Token for pagination
+            filter_by: Filter meetings (e.g., "upcoming", "past")
 
         Returns:
-            Response data
+            List of meetings
 
         Raises:
             Exception: If request fails
         """
-        # Implementation will be added based on specific API docs
-        params = {}
-        return await self._request("GET", "/endpoint", params=params)
+        params = {
+            "pageSize": min(page_size, 100)
+        }
+        if page_token:
+            params["pageToken"] = page_token
+        if filter_by:
+            params["filter"] = filter_by
 
-    async def update_meeting:
-        """Placeholder for update_meeting.
+        return await self._request("GET", "/conferences", params=params)
+
+    async def get_meeting(self, conference_code: str) -> Dict[str, Any]:
+        """
+        Get specific meeting information (特定の会議情報を取得).
+
+        Args:
+            conference_code: Conference code or meeting ID
 
         Returns:
-            Response data
+            Meeting information
 
         Raises:
             Exception: If request fails
         """
-        # Implementation will be added based on specific API docs
-        params = {}
-        return await self._request("GET", "/endpoint", params=params)
+        return await self._request("GET", f"/conferences/{conference_code}")
 
-    async def cancel_meeting:
-        """Placeholder for cancel_meeting.
+    async def get_meeting_space_details(self, space_name: str) -> Dict[str, Any]:
+        """
+        Get meeting space details (会議スペースの詳細を取得).
+
+        Args:
+            space_name: Space name
 
         Returns:
-            Response data
+            Meeting space details
 
         Raises:
             Exception: If request fails
         """
-        # Implementation will be added based on specific API docs
-        params = {}
-        return await self._request("GET", "/endpoint", params=params)
+        return await self._request("GET", f"/spaces/{space_name}")
 
+    async def get_participants(
+        self,
+        conference_code: str,
+        page_size: int = 100,
+        page_token: Optional[str] = None
+    ) -> Dict[str, Any]:
+        """
+        Get meeting participants list (会議の参加者一覧を取得).
+
+        Args:
+            conference_code: Conference code or meeting ID
+            page_size: Number of results per page (default: 100)
+            page_token: Token for pagination
+
+        Returns:
+            List of participants
+
+        Raises:
+            Exception: If request fails
+        """
+        params = {
+            "pageSize": min(page_size, 100)
+        }
+        if page_token:
+            params["pageToken"] = page_token
+
+        return await self._request("GET", f"/conferences/{conference_code}/participants", params=params)
+
+    async def get_transcription(self, conference_code: str) -> Dict[str, Any]:
+        """
+        Get transcription information (文字起こし情報を取得).
+
+        Args:
+            conference_code: Conference code or meeting ID
+
+        Returns:
+            Transcription data
+
+        Raises:
+            Exception: If request fails
+        """
+        return await self._request("GET", f"/conferences/{conference_code}/transcripts")
+
+    async def get_recording_info(self, conference_code: str) -> Dict[str, Any]:
+        """
+        Get recording information (レコーディング情報を取得).
+
+        Args:
+            conference_code: Conference code or meeting ID
+
+        Returns:
+            Recording metadata and download URLs
+
+        Raises:
+            Exception: If request fails
+        """
+        return await self._request("GET", f"/conferences/{conference_code}/recordings")

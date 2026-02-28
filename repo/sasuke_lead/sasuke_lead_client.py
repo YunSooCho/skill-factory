@@ -120,68 +120,311 @@ class SasukeLeadClient:
 
     # ==================== API Methods ====================
 
-    async def create_lead:
-        """Placeholder for create_lead.
+    async def register_customer(
+        self,
+        name: Optional[str] = None,
+        email: Optional[str] = None,
+        phone: Optional[str] = None,
+        company: Optional[str] = None,
+        **kwargs
+    ) -> Dict[str, Any]:
+        """
+        Register customer information (顧客情報を登録).
+
+        Args:
+            name: Customer name
+            email: Customer email
+            phone: Customer phone number
+            company: Company name
+            **kwargs: Additional custom fields
 
         Returns:
-            Response data
+            Created customer data
 
         Raises:
             Exception: If request fails
         """
-        # Implementation will be added based on specific API docs
-        params = {}
-        return await self._request("GET", "/endpoint", params=params)
+        data = {
+            "name": name,
+            "email": email,
+            "phone": phone,
+            "company": company,
+            **kwargs
+        }
+        # Filter out None values
+        data = {k: v for k, v in data.items() if v is not None}
 
-    async def update_lead:
-        """Placeholder for update_lead.
+        return await self._request("POST", "/customers", json_data=data)
+
+    async def update_customer(
+        self,
+        customer_id: str,
+        name: Optional[str] = None,
+        email: Optional[str] = None,
+        phone: Optional[str] = None,
+        company: Optional[str] = None,
+        **kwargs
+    ) -> Dict[str, Any]:
+        """
+        Update customer information (顧客情報を修正).
+
+        Args:
+            customer_id: Customer ID to update
+            name: Customer name
+            email: Customer email
+            phone: Customer phone number
+            company: Company name
+            **kwargs: Additional custom fields
 
         Returns:
-            Response data
+            Updated customer data
 
         Raises:
             Exception: If request fails
         """
-        # Implementation will be added based on specific API docs
-        params = {}
-        return await self._request("GET", "/endpoint", params=params)
+        data = {
+            "name": name,
+            "email": email,
+            "phone": phone,
+            "company": company,
+            **kwargs
+        }
+        # Filter out None values
+        data = {k: v for k, v in data.items() if v is not None}
 
-    async def search_leads:
-        """Placeholder for search_leads.
+        return await self._request("PUT", f"/customers/{customer_id}", json_data=data)
+
+    async def delete_customer(self, customer_id: str) -> Dict[str, Any]:
+        """
+        Delete customer information (顧客情報を削除).
+
+        Args:
+            customer_id: Customer ID to delete
 
         Returns:
-            Response data
+            Deletion confirmation
 
         Raises:
             Exception: If request fails
         """
-        # Implementation will be added based on specific API docs
-        params = {}
-        return await self._request("GET", "/endpoint", params=params)
+        return await self._request("DELETE", f"/customers/{customer_id}")
 
-    async def import_leads:
-        """Placeholder for import_leads.
+    async def search_customers(
+        self,
+        query: Optional[str] = None,
+        email: Optional[str] = None,
+        name: Optional[str] = None,
+        limit: int = 100,
+        offset: int = 0
+    ) -> Dict[str, Any]:
+        """
+        Search customer information (顧客情報を検索).
+
+        Args:
+            query: General search query
+            email: Search by email
+            name: Search by name
+            limit: Maximum results (default: 100)
+            offset: Pagination offset (default: 0)
 
         Returns:
-            Response data
+            List of matching customers
 
         Raises:
             Exception: If request fails
         """
-        # Implementation will be added based on specific API docs
-        params = {}
-        return await self._request("GET", "/endpoint", params=params)
+        params = {
+            "limit": limit,
+            "offset": offset
+        }
+        if query:
+            params["q"] = query
+        if email:
+            params["email"] = email
+        if name:
+            params["name"] = name
 
-    async def export_leads:
-        """Placeholder for export_leads.
+        return await self._request("GET", "/customers/search", params=params)
+
+    async def get_customers_by_save_number(
+        self,
+        save_number: str,
+        limit: int = 100,
+        offset: int = 0
+    ) -> Dict[str, Any]:
+        """
+        Get customer information list by save number (顧客情報の一覧を取得（保存番号による取得）).
+
+        Args:
+            save_number: Save number to filter by
+            limit: Maximum results (default: 100)
+            offset: Pagination offset (default: 0)
 
         Returns:
-            Response data
+            List of customers with matching save number
 
         Raises:
             Exception: If request fails
         """
-        # Implementation will be added based on specific API docs
-        params = {}
-        return await self._request("GET", "/endpoint", params=params)
+        params = {
+            "save_number": save_number,
+            "limit": limit,
+            "offset": offset
+        }
+
+        return await self._request("GET", "/customers", params=params)
+
+    async def register_lead_source(
+        self,
+        name: str,
+        description: Optional[str] = None,
+        **kwargs
+    ) -> Dict[str, Any]:
+        """
+        Register lead source (リードソースを登録).
+
+        Args:
+            name: Lead source name
+            description: Lead source description
+            **kwargs: Additional custom fields
+
+        Returns:
+            Created lead source data
+
+        Raises:
+            Exception: If request fails
+        """
+        data = {
+            "name": name,
+            "description": description,
+            **kwargs
+        }
+        # Filter out None values
+        data = {k: v for k, v in data.items() if v is not None}
+
+        return await self._request("POST", "/lead-sources", json_data=data)
+
+    async def update_lead_source(
+        self,
+        source_id: str,
+        name: Optional[str] = None,
+        description: Optional[str] = None,
+        **kwargs
+    ) -> Dict[str, Any]:
+        """
+        Update lead source (リードソースを修正).
+
+        Args:
+            source_id: Lead source ID to update
+            name: Lead source name
+            description: Lead source description
+            **kwargs: Additional custom fields
+
+        Returns:
+            Updated lead source data
+
+        Raises:
+            Exception: If request fails
+        """
+        data = {
+            "name": name,
+            "description": description,
+            **kwargs
+        }
+        # Filter out None values
+        data = {k: v for k, v in data.items() if v is not None}
+
+        return await self._request("PUT", f"/lead-sources/{source_id}", json_data=data)
+
+    async def delete_lead_source(self, source_id: str) -> Dict[str, Any]:
+        """
+        Delete lead source (リードソースを削除).
+
+        Args:
+            source_id: Lead source ID to delete
+
+        Returns:
+            Deletion confirmation
+
+        Raises:
+            Exception: If request fails
+        """
+        return await self._request("DELETE", f"/lead-sources/{source_id}")
+
+    async def register_history_group(
+        self,
+        name: str,
+        description: Optional[str] = None,
+        **kwargs
+    ) -> Dict[str, Any]:
+        """
+        Register history group (履歴グループを登録).
+
+        Args:
+            name: History group name
+            description: History group description
+            **kwargs: Additional custom fields
+
+        Returns:
+            Created history group data
+
+        Raises:
+            Exception: If request fails
+        """
+        data = {
+            "name": name,
+            "description": description,
+            **kwargs
+        }
+        # Filter out None values
+        data = {k: v for k, v in data.items() if v is not None}
+
+        return await self._request("POST", "/history-groups", json_data=data)
+
+    async def update_history_group(
+        self,
+        group_id: str,
+        name: Optional[str] = None,
+        description: Optional[str] = None,
+        **kwargs
+    ) -> Dict[str, Any]:
+        """
+        Update history group (履歴グループを修正).
+
+        Args:
+            group_id: History group ID to update
+            name: History group name
+            description: History group description
+            **kwargs: Additional custom fields
+
+        Returns:
+            Updated history group data
+
+        Raises:
+            Exception: If request fails
+        """
+        data = {
+            "name": name,
+            "description": description,
+            **kwargs
+        }
+        # Filter out None values
+        data = {k: v for k, v in data.items() if v is not None}
+
+        return await self._request("PUT", f"/history-groups/{group_id}", json_data=data)
+
+    async def delete_history_group(self, group_id: str) -> Dict[str, Any]:
+        """
+        Delete history group (履歴グループを削除).
+
+        Args:
+            group_id: History group ID to delete
+
+        Returns:
+            Deletion confirmation
+
+        Raises:
+            Exception: If request fails
+        """
+        return await self._request("DELETE", f"/history-groups/{group_id}")
 
