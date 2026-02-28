@@ -17110,6 +17110,256 @@
           "method": "Google Docs Client.ドキュメントのコンテンツを取得"
         }
       }
+    },
+    "google-sheets.md": {
+      "service_name": "Google Sheets",
+      "category": "03_업무일반_General",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "Google Sheets API v4 with OAuth 2.0 authentication",
+      "api_actions": {
+        "Delete Row": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token required",
+          "code_file": "repo/google-sheets/google-sheets_client.py"
+        },
+        "Delete Column": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token required",
+          "code_file": "repo/google-sheets/google-sheets_client.py"
+        },
+        "Replace Values": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token required",
+          "code_file": "repo/google-sheets/google-sheets_client.py"
+        },
+        "Update Sheet Name": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token required",
+          "code_file": "repo/google-sheets/google-sheets_client.py"
+        },
+        "Enter Values in Multiple Columns": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token required",
+          "code_file": "repo/google-sheets/google-sheets_client.py"
+        },
+        "Enter Value in Cell": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token required",
+          "code_file": "repo/google-sheets/google-sheets_client.py"
+        },
+        "Repeat Formula": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token required",
+          "code_file": "repo/google-sheets/google-sheets_client.py"
+        },
+        "Create New Spreadsheet": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token required",
+          "code_file": "repo/google-sheets/google-sheets_client.py"
+        },
+        "Enter Values in Range": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token required",
+          "code_file": "repo/google-sheets/google-sheets_client.py"
+        },
+        "Sort by Specific Column": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token required",
+          "code_file": "repo/google-sheets/google-sheets_client.py"
+        },
+        "Copy Sheet": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token required",
+          "code_file": "repo/google-sheets/google-sheets_client.py"
+        },
+        "Embed Image in Cell": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token required",
+          "code_file": "repo/google-sheets/google-sheets_client.py"
+        },
+        "Get Spreadsheet Information": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token required",
+          "code_file": "repo/google-sheets/google-sheets_client.py"
+        },
+        "Hide Sheet": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token required",
+          "code_file": "repo/google-sheets/google-sheets_client.py"
+        },
+        "Delete Sheet": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token required",
+          "code_file": "repo/google-sheets/google-sheets_client.py"
+        },
+        "Get Values": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token required",
+          "code_file": "repo/google-sheets/google-sheets_client.py"
+        },
+        "Delete Values": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token required",
+          "code_file": "repo/google-sheets/google-sheets_client.py"
+        },
+        "Add Column": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token required",
+          "code_file": "repo/google-sheets/google-sheets_client.py"
+        },
+        "Add Note to Specified Cell": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token required",
+          "code_file": "repo/google-sheets/google-sheets_client.py"
+        },
+        "Add New Sheet": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token required",
+          "code_file": "repo/google-sheets/google-sheets_client.py"
+        },
+        "Get Sheet Names": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token required",
+          "code_file": "repo/google-sheets/google-sheets_client.py"
+        }
+      },
+      "triggers": {
+        "Row Added": {
+          "type": "webhook",
+          "status": "configured",
+          "implementation": "GoogleSheetsWebhooks"
+        },
+        "Row Updated": {
+          "type": "webhook",
+          "status": "configured",
+          "implementation": "GoogleSheetsWebhooks"
+        }
+      },
+      "implemented_at": "2026-02-28T04:16:32.828153",
+      "analyzed_at": "2026-02-28T04:16:32.828153"
+    },
+    "google-workspace.md": {
+      "service_name": "Google Workspace",
+      "category": "03_업무일반_General",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "Google Workspace Admin SDK API with OAuth 2.0 authentication",
+      "api_actions": {
+        "Delete User": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token with admin permissions",
+          "code_file": "repo/google-workspace/google-workspace_client.py"
+        },
+        "Suspend User": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token with admin permissions",
+          "code_file": "repo/google-workspace/google-workspace_client.py"
+        },
+        "Require Password Change": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token with admin permissions",
+          "code_file": "repo/google-workspace/google-workspace_client.py"
+        },
+        "Remove Member from Group": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token with admin permissions",
+          "code_file": "repo/google-workspace/google-workspace_client.py"
+        },
+        "Search User": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token with admin permissions",
+          "code_file": "repo/google-workspace/google-workspace_client.py"
+        },
+        "Search Groups": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token with admin permissions",
+          "code_file": "repo/google-workspace/google-workspace_client.py"
+        },
+        "Add New User": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token with admin permissions",
+          "code_file": "repo/google-workspace/google-workspace_client.py"
+        },
+        "Get Group Member List": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token with admin permissions",
+          "code_file": "repo/google-workspace/google-workspace_client.py"
+        },
+        "Get Group List": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token with admin permissions",
+          "code_file": "repo/google-workspace/google-workspace_client.py"
+        },
+        "Add Member to Group": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token with admin permissions",
+          "code_file": "repo/google-workspace/google-workspace_client.py"
+        },
+        "Update User Information": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token with admin permissions",
+          "code_file": "repo/google-workspace/google-workspace_client.py"
+        },
+        "Create Group": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token with admin permissions",
+          "code_file": "repo/google-workspace/google-workspace_client.py"
+        },
+        "Get User List": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth token with admin permissions",
+          "code_file": "repo/google-workspace/google-workspace_client.py"
+        }
+      },
+      "triggers": {
+        "User Registered": {
+          "type": "webhook",
+          "status": "configured",
+          "implementation": "GoogleWorkspaceWebhooks"
+        },
+        "User Updated": {
+          "type": "webhook",
+          "status": "configured",
+          "implementation": "GoogleWorkspaceWebhooks"
+        }
+      },
+      "implemented_at": "2026-02-28T04:16:32.828153",
+      "analyzed_at": "2026-02-28T04:16:32.828153"
     }
   },
   "last_updated": "2026-02-28 10:59:11",
