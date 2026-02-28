@@ -2,7 +2,8 @@
 Bitly API Client
 
 Supports:
-- Create Bitlink
+- Shorten URL (simple link shortening)
+- Create Bitlink (advanced link creation with title, tags)
 - Get Bitlink
 - Search Bitlinks
 - Delete Bitlink
@@ -103,6 +104,43 @@ class BitlyClient:
             raise Exception(f"Request failed: {str(e)}")
 
     # ==================== Bitlink Operations ====================
+
+    def shorten_url(
+        self,
+        long_url: str,
+        domain: Optional[str] = None,
+        group_guid: Optional[str] = None,
+        force_new_link: bool = False
+    ) -> Bitlink:
+        """
+        Shorten a long URL (basic link shortening).
+
+        This is the /v4/shorten endpoint which is specifically designed
+        for simple link shortening without title, tags, or other metadata.
+
+        Args:
+            long_url: Original long URL to shorten (required)
+            domain: Custom domain (default: bit.ly)
+            group_guid: Group GUID for custom domains
+            force_new_link: Force creation of a new link even if URL already shortened
+
+        Returns:
+            Bitlink object with the shortened link
+        """
+        if not long_url:
+            raise ValueError("Long URL is required")
+
+        payload = {"long_url": long_url}
+
+        if domain:
+            payload["domain"] = domain
+        if group_guid:
+            payload["group_guid"] = group_guid
+        if force_new_link:
+            payload["force_new_link"] = force_new_link
+
+        result = self._request("POST", "/shorten", json=payload)
+        return self._parse_bitlink(result)
 
     def create_bitlink(
         self,
@@ -329,7 +367,14 @@ def main():
     client = BitlyClient(access_token=access_token)
 
     try:
-        # Create a bitlink
+        # Simplify a URL (basic shortening - /v4/shorten endpoint)
+        short_bitlink = client.shorten_url(
+            long_url="https://www.example.com/simple/url",
+            domain="bit.ly"
+        )
+        print(f"Shortened: {short_bitlink.link} -> {short_bitlink.long_url}")
+
+        # Create a bitlink with metadata (advanced - /v4/bitlinks endpoint)
         bitlink = client.create_bitlink(
             long_url="https://www.example.com/very/long/url/that/needs/shortening",
             title="Example Link",

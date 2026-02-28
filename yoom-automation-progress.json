@@ -2646,9 +2646,9 @@
             "test_method": "Requires Bitly API token. Example: python bitly_api.py clicks bit.ly/example"
           },
           "リンクを短縮する": {
-            "status": "pending",
-            "testable": null,
-            "test_method": null
+            "status": "completed",
+            "testable": true,
+            "test_method": "Requires Bitly API token. Example: python bitly_client.py or client.shorten_url(\"https://example.com\")"
           },
           "Bitlinkのクリックサマリーを取得": {
             "status": "completed",
