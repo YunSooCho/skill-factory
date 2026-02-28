@@ -1581,57 +1581,6 @@
       "triggers": {},
       "implemented_at": "2026-02-27T16:02:03.3NZ"
     },
-    "beamer.md": {
-      "service_name": "Beamer",
-      "category": "マーケティング",
-      "integration_type": "oauth",
-      "integration_confidence": "high",
-      "integration_reasoning": "SaaS/OAuth 표준",
-      "api_actions": {
-        "Create Post": {
-          "status": "completed",
-          "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능 (최대 1,000 요청)",
-          "code_file": "github/skill-factory/repo/beamer/beamer_client.py",
-          "method": "BeamerAPIClient.create_post(post_data)"
-        }
-      },
-      "triggers": {},
-      "required_tasks": [
-        {
-          "task": "Beamer API 문서 검토",
-          "priority": "high",
-          "description": "https://lp.yoom.fun/apps/Beamer 및 공식 API 문서 확인",
-          "status": "pending"
-        },
-        {
-          "task": "Beamer OAuth 앱 등록",
-          "priority": "high",
-          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
-          "status": "pending"
-        },
-        {
-          "task": "Client ID 및 Client Secret 획득",
-          "priority": "high",
-          "description": "OAuth 앱에서 인증 정보 획득",
-          "status": "pending"
-        },
-        {
-          "task": "테스트 계정 또는 샌드박스 환경 구축",
-          "priority": "medium",
-          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
-          "status": "pending"
-        },
-        {
-          "task": "1개 API 액션 단위 테스트 작성",
-          "priority": "low",
-          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
-          "status": "pending"
-        }
-      ],
-      "analyzed_at": "2026-02-27T22:22:11.601724",
-      "implemented_at": "2026-02-28T08:45:00.000000"
-    },
     "drip.md": {
       "service_name": "Drip",
       "category": "마케팅",
@@ -4624,6 +4573,903 @@
       "implemented_at": "2026-02-28T09:56:12.535952",
       "code_file": "github/skill-factory/repo/dynamics-crm/dynamics_crm_client.py",
       "api_count": 23
+    },
+    "myphoner.md": {
+      "service_name": "Myphoner",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T10:00:00.000000",
+      "code_file": "github/skill-factory/repo/myphoner/myphoner_client.py",
+      "api_count": 8,
+      "api_actions": {
+        "Create Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Myphoner API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/myphoner/myphoner_client.py",
+          "method": "MyphonerClient.create_lead(list_id, name, email, phone, company, custom_fields)"
+        },
+        "Get Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Myphoner API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/myphoner/myphoner_client.py",
+          "method": "MyphonerClient.get_lead(lead_id)"
+        },
+        "Update Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Myphoner API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/myphoner/myphoner_client.py",
+          "method": "MyphonerClient.update_lead(lead_id, name, email, phone, company, custom_fields)"
+        },
+        "Search Leads": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Myphoner API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/myphoner/myphoner_client.py",
+          "method": "MyphonerClient.search_leads(list_id, query, fields)"
+        },
+        "Mark Winner": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Myphoner API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/myphoner/myphoner_client.py",
+          "method": "MyphonerClient.mark_winner(lead_id, won_value)"
+        },
+        "Mark Loser": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Myphoner API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/myphoner/myphoner_client.py",
+          "method": "MyphonerClient.mark_loser(lead_id, lost_reason)"
+        },
+        "Mark Callback": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Myphoner API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/myphoner/myphoner_client.py",
+          "method": "MyphonerClient.mark_callback(lead_id, callback_date, note)"
+        },
+        "List Columns": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Myphoner API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/myphoner/myphoner_client.py",
+          "method": "MyphonerClient.list_columns(list_id)"
+        }
+      }
+    },
+    "printbahn.md": {
+      "service_name": "Printbahn",
+      "category": "02_세일ス_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T10:00:00.000000",
+      "code_file": "github/skill-factory/repo/printbahn/printbahn_client.py",
+      "api_count": 2,
+      "api_actions": {
+        "Search Business Card (Single)": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Printbahn API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/printbahn/printbahn_client.py",
+          "method": "PrintbahnClient.search_business_card(keyword, type, limit)"
+        },
+        "Search Business Cards (Multiple)": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Printbahn API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/printbahn/printbahn_client.py",
+          "method": "PrintbahnClient.search_business_cards(keywords, type, limit)"
+        }
+      }
+    },
+    "klenty.md": {
+      "service_name": "Klenty",
+      "category": "02_세일ス_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T10:00:00.000000",
+      "code_file": "github/skill-factory/repo/klenty/klenty_client.py",
+      "api_count": 9,
+      "api_actions": {
+        "Create Prospect": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Klenty API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/klenty/klenty_client.py",
+          "method": "KlentyClient.create_prospect(data)"
+        },
+        "Create Prospect with Tag": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Klenty API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/klenty/klenty_client.py",
+          "method": "KlentyClient.create_prospect_with_tag(prospect_id, tag_id)"
+        },
+        "Update Prospect": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Klenty API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/klenty/klenty_client.py",
+          "method": "KlentyClient.update_prospect(prospect_id, data)"
+        },
+        "List Prospects": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Klenty API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/klenty/klenty_client.py",
+          "method": "KlentyClient.list_prospects(list_id, limit, offset)"
+        },
+        "Remove Prospect Tags": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Klenty API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/klenty/klenty_client.py",
+          "method": "KlentyClient.remove_prospect_tags(prospect_id, tag_ids)"
+        },
+        "Start Cadence": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Klenty API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/klenty/klenty_client.py",
+          "method": "KlentyClient.start_cadence(prospect_id, cadence_id)"
+        },
+        "Stop Cadence": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Klenty API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/klenty/klenty_client.py",
+          "method": "KlentyClient.stop_cadence(prospect_id, cadence_id)"
+        },
+        "Change Status Unsubscribed": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Klenty API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/klenty/klenty_client.py",
+          "method": "KlentyClient.change_status_unsubscribed(prospect_id)"
+        },
+        "Change Status Do Not Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Klenty API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/klenty/klenty_client.py",
+          "method": "KlentyClient.change_status_do_not_contact(prospect_id)"
+        }
+      }
+    },
+    "streak.md": {
+      "service_name": "Streak",
+      "category": "02_세일ス_Sales",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T10:00:00.000000",
+      "code_file": "github/skill-factory/repo/streak/streak_client.py",
+      "api_count": 20,
+      "api_actions": {
+        "Create Box": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Streak API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/streak/streak_client.py",
+          "method": "StreakClient.create_box(name, pipeline_key, stage_key)"
+        },
+        "Get Box": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Streak API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/streak/streak_client.py",
+          "method": "StreakClient.get_box(box_key)"
+        },
+        "Update Box": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Streak API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/streak/streak_client.py",
+          "method": "StreakClient.update_box(box_key, name, notes, stage_key)"
+        },
+        "Delete Box": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Streak API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/streak/streak_client.py",
+          "method": "StreakClient.delete_box(box_key)"
+        },
+        "Search Boxes": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Streak API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/streak/streak_client.py",
+          "method": "StreakClient.search_boxes(query, pipeline_key)"
+        },
+        "Create Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Streak API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/streak/streak_client.py",
+          "method": "StreakClient.create_contact(key, name, email, phone, notes, organization_key)"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Streak API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/streak/streak_client.py",
+          "method": "StreakClient.get_contact(contact_key)"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Streak API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/streak/streak_client.py",
+          "method": "StreakClient.update_contact(contact_key, name, email, phone, notes)"
+        },
+        "Delete Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Streak API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/streak/streak_client.py",
+          "method": "StreakClient.delete_contact(contact_key)"
+        },
+        "Search Contacts": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Streak API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/streak/streak_client.py",
+          "method": "StreakClient.search_contacts(query, limit)"
+        },
+        "Create Organization": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Streak API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/streak/streak_client.py",
+          "method": "StreakClient.create_organization(key, name, domain, notes)"
+        },
+        "Search Organizations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Streak API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/streak/streak_client.py",
+          "method": "StreakClient.search_organizations(query, limit)"
+        },
+        "Create Task": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Streak API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/streak/streak_client.py",
+          "method": "StreakClient.create_task(box_key, text, due_date)"
+        },
+        "Update Task": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Streak API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/streak/streak_client.py",
+          "method": "StreakClient.update_task(task_key, text, completed, due_date)"
+        },
+        "Delete Task": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Streak API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/streak/streak_client.py",
+          "method": "StreakClient.delete_task(task_key)"
+        },
+        "Get Tasks in Box": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Streak API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/streak/streak_client.py",
+          "method": "StreakClient.get_tasks_in_box(box_key)"
+        },
+        "Create Comment": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Streak API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/streak/streak_client.py",
+          "method": "StreakClient.create_comment(box_key, text)"
+        },
+        "Get Files in Box": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Streak API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/streak/streak_client.py",
+          "method": "StreakClient.get_files_in_box(box_key)"
+        },
+        "Get Threads in Box": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Streak API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/streak/streak_client.py",
+          "method": "StreakClient.get_threads_in_box(box_key)"
+        },
+        "Update Stage Name": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Streak API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/streak/streak_client.py",
+          "method": "StreakClient.update_stage_name(box_key, stage_key, name)"
+        }
+      }
+    },
+    "ploomes.md": {
+      "service_name": "Ploomes",
+      "category": "02_세일ス_Sales",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T10:00:00.000000",
+      "code_file": "github/skill-factory/repo/ploomes/ploomes_client.py",
+      "api_count": 17,
+      "api_actions": {
+        "Create Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Ploomes API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/ploomes/ploomes_client.py",
+          "method": "PloomesClient.create_contact(data)"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Ploomes API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/ploomes/ploomes_client.py",
+          "method": "PloomesClient.update_contact(contact_id, data)"
+        },
+        "Delete Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Ploomes API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/ploomes/ploomes_client.py",
+          "method": "PloomesClient.delete_contact(contact_id)"
+        },
+        "Search Contacts": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Ploomes API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/ploomes/ploomes_client.py",
+          "method": "PloomesClient.search_contacts(query, limit, offset)"
+        },
+        "Create Deal": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Ploomes API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/ploomes/ploomes_client.py",
+          "method": "PloomesClient.create_deal(data)"
+        },
+        "Update Deal": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Ploomes API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/ploomes/ploomes_client.py",
+          "method": "PloomesClient.update_deal(deal_id, data)"
+        },
+        "Delete Deal": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Ploomes API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/ploomes/ploomes_client.py",
+          "method": "PloomesClient.delete_deal(deal_id)"
+        },
+        "Search Deals": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Ploomes API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/ploomes/ploomes_client.py",
+          "method": "PloomesClient.search_deals(query, limit, offset)"
+        },
+        "Create Task": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Ploomes API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/ploomes/ploomes_client.py",
+          "method": "PloomesClient.create_task(data)"
+        },
+        "Update Task": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Ploomes API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/ploomes/ploomes_client.py",
+          "method": "PloomesClient.update_task(task_id, data)"
+        },
+        "Complete Task": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Ploomes API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/ploomes/ploomes_client.py",
+          "method": "PloomesClient.complete_task(task_id)"
+        },
+        "Delete Task": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Ploomes API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/ploomes/ploomes_client.py",
+          "method": "PloomesClient.delete_task(task_id)"
+        },
+        "Search Tasks": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Ploomes API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/ploomes/ploomes_client.py",
+          "method": "PloomesClient.search_tasks(query, limit, offset)"
+        },
+        "Create Product": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Ploomes API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/ploomes/ploomes_client.py",
+          "method": "PloomesClient.create_product(data)"
+        },
+        "Update Product": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Ploomes API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/ploomes/ploomes_client.py",
+          "method": "PloomesClient.update_product(product_id, data)"
+        },
+        "Delete Product": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Ploomes API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/ploomes/ploomes_client.py",
+          "method": "PloomesClient.delete_product(product_id)"
+        },
+        "Search Products": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Ploomes API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/ploomes/ploomes_client.py",
+          "method": "PloomesClient.search_products(query, limit, offset)"
+        }
+      }
+    },
+    "hif.md": {
+      "service_name": "Hif",
+      "category": "02_세일ス_Sales",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T10:00:00.000000",
+      "code_file": "github/skill-factory/repo/hif/hif_client.py",
+      "api_count": 3,
+      "api_actions": {
+        "Request Screening": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Hif API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/hif/hif_client.py",
+          "method": "HifClient.request_screening(data)"
+        },
+        "Get Screening Details": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Hif API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/hif/hif_client.py",
+          "method": "HifClient.get_screening_details(screening_id)"
+        },
+        "Get Company Score": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Hif API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/hif/hif_client.py",
+          "method": "HifClient.get_company_score(company_id)"
+        }
+      }
+    },
+    "getprospect.md": {
+      "service_name": "Getprospect",
+      "category": "02_세일ス_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T10:00:00.000000",
+      "code_file": "github/skill-factory/repo/getprospect/getprospect_client.py",
+      "api_count": 13,
+      "api_actions": {
+        "Create Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Getprospect API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/getprospect/getprospect_client.py",
+          "method": "GetprospectClient.create_contact(data)"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Getprospect API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/getprospect/getprospect_client.py",
+          "method": "GetprospectClient.get_contact(contact_id)"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Getprospect API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/getprospect/getprospect_client.py",
+          "method": "GetprospectClient.update_contact(contact_id, data)"
+        },
+        "Search Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Getprospect API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/getprospect/getprospect_client.py",
+          "method": "GetprospectClient.search_contact(query, limit, offset)"
+        },
+        "Search by Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Getprospect API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/getprospect/getprospect_client.py",
+          "method": "GetprospectClient.search_by_email(email)"
+        },
+        "Find Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Getprospect API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/getprospect/getprospect_client.py",
+          "method": "GetprospectClient.find_email(first_name, last_name, company_name)"
+        },
+        "Verify Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Getprospect API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/getprospect/getprospect_client.py",
+          "method": "GetprospectClient.verify_email(email)"
+        },
+        "Create Company": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Getprospect API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/getprospect/getprospect_client.py",
+          "method": "GetprospectClient.create_company(data)"
+        },
+        "Get Company by ID": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Getprospect API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/getprospect/getprospect_client.py",
+          "method": "GetprospectClient.get_company_by_id(company_id)"
+        },
+        "Get Company by Name": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Getprospect API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/getprospect/getprospect_client.py",
+          "method": "GetprospectClient.get_company_by_name(name)"
+        },
+        "Get Lists": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Getprospect API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/getprospect/getprospect_client.py",
+          "method": "GetprospectClient.get_lists(limit, offset)"
+        },
+        "Add Contacts to List": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Getprospect API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/getprospect/getprospect_client.py",
+          "method": "GetprospectClient.add_contacts_to_list(list_id, contact_ids)"
+        },
+        "List Properties": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Getprospect API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/getprospect/getprospect_client.py",
+          "method": "GetprospectClient.list_properties()"
+        }
+      }
+    },
+    "pipedrive.md": {
+      "service_name": "Pipedrive",
+      "category": "02_세일ス_Sales",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T10:00:00.000000",
+      "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+      "api_count": 28,
+      "api_actions": {
+        "Add Person": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.add_person(data)"
+        },
+        "Get Person": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.get_person(person_id)"
+        },
+        "Update Person": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.update_person(person_id, data)"
+        },
+        "Delete Person": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.delete_person(person_id)"
+        },
+        "Search People": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.search_people(term, fields, limit)"
+        },
+        "Get People in Organization": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.get_people_in_organization(org_id)"
+        },
+        "Add Organization": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.add_organization(data)"
+        },
+        "Get Organization": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.get_organization(org_id)"
+        },
+        "Update Organization": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.update_organization(org_id, data)"
+        },
+        "Delete Organization": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.delete_organization(org_id)"
+        },
+        "Search Organizations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.search_organizations(term, fields, limit)"
+        },
+        "Add Deal": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.add_deal(data)"
+        },
+        "Get Deal": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.get_deal(deal_id)"
+        },
+        "Update Deal": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.update_deal(deal_id, data)"
+        },
+        "Delete Deal": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.delete_deal(deal_id)"
+        },
+        "Create Activity": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.create_activity(data)"
+        },
+        "Update Activity": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.update_activity(activity_id, data)"
+        },
+        "Search Activities": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.search_activities(term, limit)"
+        },
+        "Add Note": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.add_note(data)"
+        },
+        "Create Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.create_lead(data)"
+        },
+        "Get Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.get_lead(lead_id)"
+        },
+        "Update Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.update_lead(lead_id, data)"
+        },
+        "Delete Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.delete_lead(lead_id)"
+        },
+        "Search Leads": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.search_leads(term, limit)"
+        },
+        "Create User": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.create_user(data)"
+        },
+        "Add File": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.add_file(data)"
+        },
+        "Get Products for Deal": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.get_products_for_deal(deal_id)"
+        },
+        "Get Products": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Pipedrive API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+          "method": "PipedriveClient.get_products(limit, start)"
+        }
+      }
+    },
+    "kyusms.md": {
+      "service_name": "Kyusms",
+      "category": "02_세일ス_Sales",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T10:00:00.000000",
+      "code_file": "github/skill-factory/repo/kyusms/kyusms_client.py",
+      "api_count": 3,
+      "api_actions": {
+        "Send SMS": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Kyusms API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/kyusms/kyusms_client.py",
+          "method": "KyusmsClient.send_sms(to, content, sender_id)"
+        },
+        "Cancel SMS": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Kyusms API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/kyusms/kyusms_client.py",
+          "method": "KyusmsClient.cancel_sms(request_id)"
+        },
+        "Get SMS Result": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Kyusms API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/kyusms/kyusms_client.py",
+          "method": "KyusmsClient.get_sms_result(request_id)"
+        }
+      }
+    },
+    "sansan.md": {
+      "service_name": "Sansan",
+      "category": "02_세일ス_Sales",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T10:00:00.000000",
+      "code_file": "github/skill-factory/repo/sansan/sansan_client.py",
+      "api_count": 8,
+      "api_actions": {
+        "Get Business Card": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Sansan API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/sansan/sansan_client.py",
+          "method": "SansanClient.get_business_card(card_id)"
+        },
+        "Get Business Card List": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Sansan API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/sansan/sansan_client.py",
+          "method": "SansanClient.get_business_card_list(limit, offset)"
+        },
+        "Get Business Card List by Date": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Sansan API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/sansan/sansan_client.py",
+          "method": "SansanClient.get_business_card_list_by_date(start_date, end_date, limit, offset)"
+        },
+        "Search Business Cards": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Sansan API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/sansan/sansan_client.py",
+          "method": "SansanClient.search_business_cards(query, fields, limit, offset)"
+        },
+        "Get Business Card Image": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Sansan API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/sansan/sansan_client.py",
+          "method": "SansanClient.get_business_card_image(card_id)"
+        },
+        "Register Business Card Image": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Sansan API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/sansan/sansan_client.py",
+          "method": "SansanClient.register_business_card_image(image_data)"
+        },
+        "Register Business Card Data": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Sansan API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/sansan/sansan_client.py",
+          "method": "SansanClient.register_business_card_data(data)"
+        },
+        "Get Person Info": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Sansan API로 테스트 가능",
+          "code_file": "github/skill-factory/repo/sansan/sansan_client.py",
+          "method": "SansanClient.get_person_info(person_id)"
+        }
+      }
     }
   },
   "last_updated": "2026-02-28 08:48:08"
