@@ -1,58 +1,30 @@
-# ClickUp API Client
+# ClickUp API 클라이언트
 
-Python client for [ClickUp](https://clickup.com/) - Project management and collaboration platform.
+ClickUp을 위한 Python API 클라이언트입니다. 프로젝트 관리 기능을 제공합니다.
 
-## Features
-
-- ✅ Create, read, update, delete tasks
-- ✅ Search tasks by status and custom fields
-- ✅ Add comments to tasks
-- ✅ File attachments
-- ✅ Custom field management
-- ✅ Webhook support for triggers
-
-## Installation
+## 설치
 
 ```bash
-pip install -r requirements.txt
+pip install requests
 ```
 
-## Usage
+## 사용법
 
 ```python
-from clickup.client import ClickUpClient
+from clickup import ClickUpClient, ClickUpError
 
-client = ClickUpClient(api_key="your_api_key")
+client = ClickUpClient(api_token="YOUR_API_TOKEN")
 
-# Create a task
-task = client.create_task(
-    list_id="list_123",
-    name="Complete project documentation",
-    description="Write comprehensive docs",
-    status="in progress"
-)
-print(task['id'])
+# 작업 조회
+tasks = client.get_tasks("list_id")
 
-# Get task
-task = client.get_task("task_456")
-print(task)
-
-# Update task
-client.update_task("task_456", status="completed")
-
-# Search tasks
-tasks = client.search_tasks_by_status("workspace_123", "in progress")
-
-# Add custom field
-client.add_label_custom_field("task_456", "priority", "High")
-
-# Add comment
-client.add_comment("task_456", "Task is completed successfully")
-
-# Create webhooks
-client.create_webhook("list_123", "https://your.webhook.com", ["task.created", "task.updated"])
+# 작업 생성
+task = client.create_task("list_id", {
+    "name": "Task name",
+    "description": "Description"
+})
 ```
 
-## License
+## 라이선스
 
 MIT License

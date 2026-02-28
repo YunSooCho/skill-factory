@@ -1,8 +1,7 @@
 """
-ClickUp API Client - Project Management
+ClickUp API Client
 """
 
-from .client import ClickUpClient
+from .client import ClickUpClient, ClickUpError
 
-__version__ = "1.0.0"
-__all__ = ["ClickUpClient"]
+__all__ = ['ClickUpClient', 'ClickUpError']

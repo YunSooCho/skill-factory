@@ -2889,9 +2889,200 @@
       "name": "clickup.md",
       "status": "completed",
       "completed_at": "2026-02-28T17:30:00+09:00"
+    },
+    {
+      "name": "scraptio.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/scraptio/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed"
+    },
+    {
+      "name": "shotstack.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/shotstack/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed"
+    },
+    {
+      "name": "snack_prompt.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/snack-prompt/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed"
+    },
+    {
+      "name": "stability_ai.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/stability-ai/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed"
+    },
+    {
+      "name": "templated.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/templated/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed"
+    },
+    {
+      "name": "textcortex_ai.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/textcortex-ai/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed"
+    },
+    {
+      "name": "uproc.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/uproc/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed"
+    },
+    {
+      "name": "vapi.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/vapi/client.py",
+      "has_api_actions": true,
+      "has_triggers": true,
+      "status": "completed"
+    },
+    {
+      "name": "vectorizer_ai.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/vectorizer-ai/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed"
+    },
+    {
+      "name": "wachete.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/wachete/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed"
+    },
+    {
+      "name": "zerocodekit.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/zerocodekit/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed"
+    },
+    {
+      "name": "asana-oauth.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/asana-oauth/client.py",
+      "has_api_actions": true,
+      "has_triggers": true,
+      "status": "completed"
+    },
+    {
+      "name": "avaza.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/avaza/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed"
+    },
+    {
+      "name": "awork.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/awork/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed"
+    },
+    {
+      "name": "backlog.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/backlog/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed"
+    },
+    {
+      "name": "bizer-team.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/bizer-team/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed"
+    },
+    {
+      "name": "brushup.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/brushup/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed"
+    },
+    {
+      "name": "bugherd.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/bugherd/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed"
+    },
+    {
+      "name": "clockify.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/clockify/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed"
+    },
+    {
+      "name": "connecteam.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/connecteam/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed"
+    },
+    {
+      "name": "crowdin.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/crowdin/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed"
+    },
+    {
+      "name": "dandoli.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/dandoli/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed"
+    },
+    {
+      "name": "dribbble.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/dribbble/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed"
+    },
+    {
+      "name": "everhour.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/everhour/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed"
+    },
+    {
+      "name": "float.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/float/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed"
+    },
+    {
+      "name": "freee-pm.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/freee-pm/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed"
+    },
+    {
+      "name": "freelo.md",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/freelo/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed"
     }
   ],
   "total_services": 749,
   "completed_count": 410,
-  "last_updated": "2026-02-28"
+  "last_updated": "2026-02-28",
+  "last_batch_completion": "2024-02-28T18:23:00+09:00",
+  "total_completed": 443
 }
