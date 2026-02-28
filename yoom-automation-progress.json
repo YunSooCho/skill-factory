@@ -17560,6 +17560,156 @@
       },
       "implemented_at": "2026-02-28T04:17:28.745389",
       "analyzed_at": "2026-02-28T04:17:28.745389"
+    },
+    "pinterest.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "big_mailer.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "burst_sms.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "cloudcontact_ai.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "cuenote_sms.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "dlvr_it.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "elastic_email.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "email_list_verify.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "emelia.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "encharge.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "endorsal.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "eventbrite.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "eventee.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "facebook_ads.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "findymail.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "firstpromoter.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "flodesk.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "fulleRich.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "gender_api.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "getresponse_api.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "giphy.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "google_ads_oauth.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "google_analytics.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "google_business_profile.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "google_search_console.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "heygen.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "hubspot.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "ipinfo.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "itreview.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
+    },
+    "kairos.md": {
+      "completed_at": "2026-02-28T13:36:00+09:00",
+      "testable": true,
+      "test_method": "python"
     }
   },
   "last_updated": "2026-02-28 10:59:11",
