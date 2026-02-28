@@ -2792,6 +2792,46 @@
       "has_api_actions": true,
       "has_triggers": false,
       "status": "completed"
+    },
+    {
+      "name": "Pinterest.md",
+      "status": "completed",
+      "completed_at": "2026-02-28T17:00:00+09:00"
+    },
+    {
+      "name": "big_mailer.md",
+      "status": "completed",
+      "completed_at": "2026-02-28T17:00:00+09:00"
+    },
+    {
+      "name": "cloudcontact_AI.md",
+      "status": "completed",
+      "completed_at": "2026-02-28T17:00:00+09:00"
+    },
+    {
+      "name": "elastic_email.md",
+      "status": "completed",
+      "completed_at": "2026-02-28T17:00:00+09:00"
+    },
+    {
+      "name": "email_list_verify.md",
+      "status": "completed",
+      "completed_at": "2026-02-28T17:00:00+09:00"
+    },
+    {
+      "name": "rd-station.md",
+      "status": "completed",
+      "completed_at": "2026-02-28T17:00:00+09:00"
+    },
+    {
+      "name": "zoho_sheet.md",
+      "status": "completed",
+      "completed_at": "2026-02-28T17:00:00+09:00"
+    },
+    {
+      "name": "zoho_writer.md",
+      "status": "completed",
+      "completed_at": "2026-02-28T17:00:00+09:00"
     }
   ],
   "total_services": 749,
