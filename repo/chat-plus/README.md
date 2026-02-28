@@ -1,42 +1,41 @@
-# ChatPlus
+# ChatPlus Chat Platform Integration
 
-ChatPlus is a live chat platform for connecting with website visitors.
+ChatPlus is a customer messaging platform enabling real-time communication with customers through live chat.
 
 ## Installation
-
 ```bash
-pip install -r requirements.txt
+pip install -e .
 ```
 
-## API Key
-
-To get your ChatPlus API key:
-
-1. Sign up at [ChatPlus](https://www.chatplus.jp)
-2. Go to Settings > API Settings
-3. Generate and copy your API key
+## API Key Setup
+1. Log in to your ChatPlus account
+2. Go to Settings > API Access
+3. Generate an API key
 
 ## Usage
-
 ```python
 from chat_plus import ChatPlusClient
 
-# Initialize the client
-client = ChatPlusClient(api_key='your-api-key')
+client = ChatPlusClient(api_key="your-api-key")
 
-# Send a message to a chat
-message = client.send_message(
-    chat_id='chat-123',
-    message='Thank you for your message! We will get back to you soon.'
-)
-print(f"Sent message: {message}")
+# Get messages
+messages = client.get_messages(chat_id="CHAT123")
 
-# Get visitor information
-visitor = client.get_visitor_info(visitor_id='visitor-123')
-print(f"Visitor info: {visitor}")
+# Send message
+client.send_message(chat_id="CHAT123", message="Hello!")
+
+# Get chats
+chats = client.get_chats()
+
+# Statistics
+stats = client.get_statistics("2024-01-01", "2024-01-31")
 ```
 
 ## API Methods
-
-- `send_message(chat_id, message, **kwargs)` - Send a message to a chat
-- `get_visitor_info(visitor_id)` - Get visitor information
+- `get_messages(chat_id, limit)` - Get chat messages
+- `send_message(chat_id, message)` - Send message
+- `get_chats(limit)` - List chats
+- `get_user(user_id)` - Get user details
+- `create_user(data)` - Create user
+- `get_agents()` - Get support agents
+- `get_statistics(start_date, end_date)` - Get statistics

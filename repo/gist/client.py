@@ -1,74 +1,38 @@
+"""Gist Communication Platform API Client"""
 import requests
-from typing import Dict, List, Optional
-
+from typing import Dict, List, Optional, Any
 
 class GistClient:
-    """
-    Client for Gist API - Customer Engagement Platform
-    """
-
-    def __init__(self, api_key: str, base_url: str = "https://api.gist.com"):
-        """
-        Initialize Gist client
-
-        Args:
-            api_key: Gist API key
-            base_url: Base URL for Gist API
-        """
+    def __init__(self, api_key: str, base_url: str = "https://api.gist.com/v1", timeout: int = 30):
         self.api_key = api_key
         self.base_url = base_url.rstrip('/')
+        self.timeout = timeout
         self.session = requests.Session()
-        self.session.headers.update({
-            'Authorization': f'Bearer {api_key}',
-            'Content-Type': 'application/json'
-        })
+        self.session.headers.update({'Authorization': f'Bearer {api_key}', 'Content-Type': 'application/json'})
 
-    def _request(self, method: str, endpoint: str, **kwargs) -> Dict:
-        """Internal method to make API requests"""
+    def _request(self, method: str, endpoint: str, params=None, data=None) -> Dict[str, Any]:
         url = f"{self.base_url}{endpoint}"
-        response = self.session.request(method, url, **kwargs)
+        response = self.session.request(method, url, params=params, json=data, timeout=self.timeout)
         response.raise_for_status()
-        return response.json() if response.content else {}
+        return response.json()
 
-    def remove_tag_from_contacts(self, tag: str, contact_ids: List[str]) -> Dict:
-        """Remove a tag from multiple contacts"""
-        return self._request('POST', '/v1/tags/remove', json={
-            'tag': tag,
-            'contact_ids': contact_ids
-        })
+    def get_messages(self, conversation_id: str, limit: int = 100) -> List[Dict[str, Any]]:
+        result = self._request('GET', f'/conversations/{conversation_id}/messages', params={'limit': limit})
+        return result.get('messages', [])
 
-    def unsubscribe_contact_from_campaign(self, contact_id: str, campaign_id: str) -> Dict:
-        """Unsubscribe contact from a campaign"""
-        return self._request('POST', f'/v1/contacts/{contact_id}/unsubscribe', json={
-            'campaign_id': campaign_id
-        })
+    def send_message(self, conversation_id: str, message: str) -> Dict[str, Any]:
+        return self._request('POST', f'/conversations/{conversation_id}/messages', data={'text': message})
 
-    def delete_contact(self, contact_id: str) -> Dict:
-        """Delete a contact"""
-        return self._request('DELETE', f'/v1/contacts/{contact_id}')
+    def get_conversations(self, limit: int = 100) -> List[Dict[str, Any]]:
+        result = self._request('GET', '/conversations', params={'limit': limit})
+        return result.get('conversations', [])
 
-    def tag_contacts(self, tag: str, contact_ids: List[str]) -> Dict:
-        """Tag multiple contacts"""
-        return self._request('POST', '/v1/tags/apply', json={
-            'tag': tag,
-            'contact_ids': contact_ids
-        })
+    def get_user(self, user_id: str) -> Dict[str, Any]:
+        return self._request('GET', f'/users/{user_id}')
 
-    def create_or_update_contact(self, contact_data: Dict) -> Dict:
-        """Create or update a contact"""
-        return self._request('POST', '/v1/contacts', json=contact_data)
+    def create_user(self, data: Dict[str, Any]) -> Dict[str, Any]:
+        return self._request('POST', '/users', data=data)
 
-    def search_contact(self, query: str) -> List[Dict]:
-        """Search for contacts"""
-        result = self._request('GET', '/v1/contacts/search', params={'q': query})
-        return result.get('contacts', [])
-
-    def get_contact(self, contact_id: str) -> Dict:
-        """Get a specific contact"""
-        return self._request('GET', f'/v1/contacts/{contact_id}')
-
-    def subscribe_contact_to_campaign(self, contact_id: str, campaign_id: str) -> Dict:
-        """Subscribe contact to a campaign"""
-        return self._request('POST', f'/v1/contacts/{contact_id}/subscribe', json={
-            'campaign_id': campaign_id
-        })
+    def get_teams(self) -> List[Dict[str, Any]]:
+        result = self._request('GET', '/teams')
+        return result.get('teams', [])

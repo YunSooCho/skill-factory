@@ -1,99 +1,54 @@
+"""Front Shared Inbox API Client"""
 import requests
-from typing import Dict, List, Optional
-
+from typing import Dict, List, Optional, Any
 
 class FrontClient:
-    """
-    Client for Front API - Shared Inbox Platform
-    """
-
-    def __init__(self, api_token: str):
-        """
-        Initialize Front client
-
-        Args:
-            api_token: Front API token
-        """
+    def __init__(self, api_token: str, timeout: int = 30):
         self.api_token = api_token
-        self.base_url = "https://api2.frontapp.com"
+        self.base_url = "https://api2.frontapp.com/v1"
+        self.timeout = timeout
         self.session = requests.Session()
-        self.session.headers.update({
-            'Authorization': f'Bearer {api_token}',
-            'Content-Type': 'application/json'
-        })
+        self.session.headers.update({'Authorization': f'Bearer {api_token}', 'Content-Type': 'application/json'})
 
-    def _request(self, method: str, endpoint: str, **kwargs) -> Dict:
-        """Internal method to make API requests"""
+    def _request(self, method: str, endpoint: str, params=None, data=None) -> Dict[str, Any]:
         url = f"{self.base_url}{endpoint}"
-        response = self.session.request(method, url, **kwargs)
+        response = self.session.request(method, url, params=params, json=data, timeout=self.timeout)
         response.raise_for_status()
         return response.json()
 
-    def search_conversations(self, q: str, limit: int = 50) -> Dict:
-        """Search conversations"""
-        params = {'q': q, 'limit': limit}
-        return self._request('GET', '/conversations/search', params=params)
+    def get_conversations(self, status: Optional[str] = None, limit: int = 100) -> List[Dict[str, Any]]:
+        params = {'limit': limit}
+        if status:
+            params['statuses'] = [status]
+        result = self._request('GET', '/conversations', params=params)
+        return result.get('_results', [])
 
-    def create_contact(self, data: Dict) -> Dict:
-        """Create a new contact"""
-        return self._request('POST', '/contacts', json=data)
+    def get_conversation(self, conversation_id: str) -> Dict[str, Any]:
+        return self._request('GET', f'/conversations/{conversation_id}')
 
-    def retrieve_message(self, message_id: str) -> Dict:
-        """Retrieve a specific message"""
-        return self._request('GET', f'/messages/{message_id}')
+    def send_message(self, conversation_id: str, message: str) -> Dict[str, Any]:
+        return self._request('POST', f'/conversations/{conversation_id}/messages', data={
+            'body': message,
+            'options': {'archive': False}
+        })
 
-    def add_links_to_conversation(self, conversation_id: str, data: Dict) -> Dict:
-        """Add external links to a conversation"""
-        return self._request('POST', f'/conversations/{conversation_id}/links', json=data)
+    def add_comment(self, conversation_id: str, comment: str) -> Dict[str, Any]:
+        return self._request('POST', f'/conversations/{conversation_id}/comments', data={
+            'body': comment
+        })
 
-    def get_conversation_last_message(self, conversation_id: str) -> Dict:
-        """Get the last message of a conversation"""
-        return self._request('GET', f'/conversations/{conversation_id}/last_message')
+    def get_inboxes(self) -> List[Dict[str, Any]]:
+        result = self._request('GET', '/inboxes')
+        return result.get('_results', [])
 
-    def add_tags_to_conversation(self, conversation_id: str, tag_ids: List[str]) -> Dict:
-        """Add tags to a conversation"""
-        return self._request('POST', f'/conversations/{conversation_id}/tags', json={'tag_ids': tag_ids})
+    def get_teams(self) -> List[Dict[str, Any]]:
+        result = self._request('GET', '/teams')
+        return result.get('_results', [])
 
-    def send_reply(self, conversation_id: str, data: Dict) -> Dict:
-        """Send a reply to a conversation"""
-        return self._request('POST', f'/conversations/{conversation_id}/replies', json=data)
+    def get_teammates(self) -> List[Dict[str, Any]]:
+        result = self._request('GET', '/teammates')
+        return result.get('_results', [])
 
-    def send_new_message(self, data: Dict) -> Dict:
-        """Send a new message"""
-        return self._request('POST', '/conversations', json=data)
-
-    def retrieve_contact_by_email(self, email: str) -> Dict:
-        """Retrieve contact information by email"""
-        return self._request('GET', '/contacts/search', params={'q': email})
-
-    def create_draft_reply(self, conversation_id: str, data: Dict) -> Dict:
-        """Create a draft reply"""
-        return self._request('POST', f'/conversations/{conversation_id}/drafts', json=data)
-
-    def retrieve_contact(self, contact_id: str) -> Dict:
-        """Retrieve contact information"""
-        return self._request('GET', f'/contacts/{contact_id}')
-
-    def delete_contact(self, contact_id: str) -> Dict:
-        """Delete a contact"""
-        return self._request('DELETE', f'/contacts/{contact_id}')
-
-    def add_comment_to_conversation(self, conversation_id: str, body: str) -> Dict:
-        """Add a comment to a conversation"""
-        return self._request('POST', f'/conversations/{conversation_id}/comments', json={'body': body})
-
-    def update_contact(self, contact_id: str, data: Dict) -> Dict:
-        """Update a contact"""
-        return self._request('PATCH', f'/contacts/{contact_id}', json=data)
-
-    def create_discussion_conversation(self, data: Dict) -> Dict:
-        """Create a discussion conversation"""
-        return self._request('POST', '/conversations', json={**data, 'type': 'discussion'})
-
-    def list_inboxes(self) -> Dict:
-        """List all inboxes"""
-        return self._request('GET', '/inboxes')
-
-    def list_conversation_messages(self, conversation_id: str, limit: int = 50) -> Dict:
-        """List messages in a conversation"""
-        return self._request('GET', f'/conversations/{conversation_id}/messages', params={'limit': limit})
+    def get_channels(self) -> List[Dict[str, Any]]:
+        result = self._request('GET', '/channels')
+        return result.get('_results', [])

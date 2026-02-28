@@ -1,67 +1,55 @@
-# Jitbit
+# Jitbit Help Desk Integration
 
-Jitbit is a help desk platform for managing customer support tickets.
+Jitbit provides help desk and ticketing system for customer support.
 
 ## Installation
-
 ```bash
-pip install -r requirements.txt
+pip install -e .
 ```
 
-## API Key
-
-To get your Jitbit API key:
-
-1. Sign up at [Jitbit](https://www.jitbit.com)
-2. Go to Settings > API
-3. Generate and copy your API key and base URL
+## API Key Setup
+1. Log in to Jitbit help desk
+2. Get API key from settings
+3. Note your Helpdesk URL
 
 ## Usage
-
 ```python
 from jitbit import JitbitClient
 
-client = JitbitClient(api_key='your-api-key', base_url='https://yourcompany.jitbit.com')
+client = JitbitClient(api_key="your-key", base_url="https://yourcompany.jitbit.com")
 
-# Create a ticket
-ticket = client.create_ticket({
-    'Subject': 'Support Request',
-    'Body': 'I need help with my account',
-    'UserID': 123
+# Get ticket
+ticket = client.get_ticket(12345)
+
+# Get tickets
+tickets = client.get_tickets(start_date="2024-01-01")
+
+# Create ticket
+client.create_ticket({
+    "Subject": "Support request",
+    "Body": "I need help with...",
+    "UserEmail": "customer@example.com"
 })
 
-# List tickets
-tickets = client.list_tickets()
+# Update ticket
+client.update_ticket(12345, {"StatusId": 3})
 
-# Get ticket details
-ticket = client.get_ticket(ticket_id='123')
+# Add comment
+client.add_comment(12345, "Follow-up scheduled")
 
-# Search tickets
-tickets = client.search_tickets(query='account')
+# Get categories
+categories = client.get_categories()
 
-# Create a user
-user = client.create_user({
-    'Username': 'john.doe',
-    'FirstName': 'John',
-    'LastName': 'Doe',
-    'Email': 'john@example.com'
-})
-
-# Create a knowledge base article
-article = client.create_kb_article({
-    'Title': 'How to reset password',
-    'Body': '...',
-    'CategoryID': 1
-})
+# Get users
+users = client.get_users()
 ```
 
 ## API Methods
-
-- `create_ticket(ticket_data)` - Create a ticket
-- `get_ticket(ticket_id)` - Get ticket details
-- `list_tickets(**params)` - List tickets
-- `search_tickets(query)` - Search tickets
-- `attach_file_to_ticket(ticket_id, file_data)` - Attach file to ticket
-- `create_user(user_data)` - Create a user
-- `list_users()` - List users
-- `create_kb_article(article_data)` - Create KB article
+- `get_ticket(ticket_id)` - Get ticket
+- `get_tickets(start_date, limit)` - List tickets
+- `create_ticket(data)` - Create ticket
+- `update_ticket(ticket_id, data)` - Update ticket
+- `add_comment(ticket_id, comment)` - Add comment
+- `get_categories()` - Get categories
+- `get_users()` - Get users
+- `get_user(user_id)` - Get user

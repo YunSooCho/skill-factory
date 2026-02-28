@@ -1,85 +1,56 @@
-# Missive
+# Missive Team Inbox Integration
 
-Missive is a team email and chat platform for collaborative communication.
+Missive provides team inbox and collaboration platform for shared email management.
 
 ## Installation
-
 ```bash
-pip install -r requirements.txt
+pip install -e .
 ```
 
-## API Key
-
-To get your Missive API key:
-
-1. Sign up at [Missive](https://missiveapp.com)
-2. Go to Settings > Integrations > API
-3. Generate and copy your API key
+## API Key Setup
+1. Log in to Missive account
+2. Generate API token from settings
 
 ## Usage
-
 ```python
 from missive import MissiveClient
 
-client = MissiveClient(api_key='your-api-key')
+client = MissiveClient(api_token="your-token")
 
-# Create contacts
-contacts = client.create_contacts([
-    {'name': 'John Doe', 'email': 'john@example.com'}
-])
+# Get conversations
+convs = client.get_conversations()
 
-# Search contacts
-contacts = client.search_contacts(query='john')
+# Get conversation
+conv = client.get_conversation("conv_123")
 
-# Get contact details
-contact = client.get_contact_details(contact_id='123')
+# Send message
+client.send_message("conv_123", {
+    "body": "Hello!",
+    "html": "<p>Hello!</p>"
+})
 
-# Update a contact
-client.update_contacts(contact_id='123', data={'name': 'Jane Doe'})
+# Get tasks
+tasks = client.get_tasks("conv_123")
 
-# Get conversation list
-conversations = client.get_conversation_list()
+# Create task
+client.create_task({
+    "title": "Follow up",
+    "due_on": "2024-03-15",
+    "assignee_id": "user_456"
+})
 
-# Get conversation details
-conversation = client.get_conversation_details(conversation_id='conv-123')
+# Get teams
+teams = client.get_teams()
 
-# Get conversation messages
-messages = client.get_conversation_messages(conversation_id='conv-123')
-
-# Create a draft message
-draft = client.create_draft_message(
-    conversation_id='conv-123',
-    content='Reply to the message'
-)
-
-# Create draft with attachment
-draft = client.create_draft_message_with_attachment(
-    conversation_id='conv-123',
-    content='Here is the file',
-    attachment_url='https://example.com/file.pdf'
-)
-
-# Send a message
-message = client.send_message(
-    conversation_id='conv-123',
-    content='Hello!'
-)
+# Get users
+users = client.get_users()
 ```
 
 ## API Methods
-
-### Contacts
-- `create_contacts(contacts)` - Create contacts
-- `get_contact_details(contact_id)` - Get contact details
-- `update_contacts(contact_id, data)` - Update contact
-- `search_contacts(query)` - Search contacts
-
-### Conversations
-- `get_conversation_list(**params)` - List conversations
-- `get_conversation_details(conversation_id)` - Get conversation details
-- `get_conversation_messages(conversation_id)` - Get conversation messages
-
-### Messages
-- `create_draft_message(**message_data)` - Create a draft
-- `create_draft_message_with_attachment(content, attachment_url, **kwargs)` - Create draft with attachment
-- `send_message(**message_data)` - Send a message
+- `get_conversations(limit)` - List conversations
+- `get_conversation(conversation_id)` - Get conversation
+- `send_message(conversation_id, data)` - Send message
+- `get_tasks(conversation_id)` - Get tasks
+- `create_task(data)` - Create task
+- `get_teams()` - List teams
+- `get_users()` - List users

@@ -1,58 +1,42 @@
+"""Missive Team Inbox API Client"""
 import requests
-from typing import Dict, List, Optional
-
+from typing import Dict, List, Optional, Any
 
 class MissiveClient:
-    """Client for Missive API - Team Email & Chat Platform"""
-
-    def __init__(self, api_key: str):
-        self.api_key = api_key
-        self.base_url = "https://api.missiveapp.com"
+    def __init__(self, api_token: str, timeout: int = 30):
+        self.api_token = api_token
+        self.base_url = "https://api.missiveapp.com/v1"
+        self.timeout = timeout
         self.session = requests.Session()
-        self.session.headers.update({
-            'Authorization': f'Bearer {api_key}',
-            'Content-Type': 'application/json'
-        })
+        self.session.headers.update({'Authorization': f'Bearer {api_token}', 'Content-Type': 'application/json'})
 
-    def _request(self, method: str, endpoint: str, **kwargs) -> Dict:
+    def _request(self, method: str, endpoint: str, params=None, data=None) -> Dict[str, Any]:
         url = f"{self.base_url}{endpoint}"
-        response = self.session.request(method, url, **kwargs)
+        response = self.session.request(method, url, params=params, json=data, timeout=self.timeout)
         response.raise_for_status()
-        return response.json() if response.content else {}
+        return response.json()
 
-    def create_draft_message(self, **message_data) -> Dict:
-        return self._request('POST', '/v1/drafts', json=message_data)
+    def get_conversations(self, limit: int = 100) -> List[Dict[str, Any]]:
+        result = self._request('GET', '/conversations', params={'limit': limit})
+        return result.get('data', [])
 
-    def create_contacts(self, contacts: List[Dict]) -> Dict:
-        return self._request('POST', '/v1/contacts', json={'contacts': contacts})
+    def get_conversation(self, conversation_id: str) -> Dict[str, Any]:
+        return self._request('GET', f'/conversations/{conversation_id}')
 
-    def send_message(self, **message_data) -> Dict:
-        return self._request('POST', '/v1/messages', json=message_data)
+    def send_message(self, conversation_id: str, data: Dict[str, Any]) -> Dict[str, Any]:
+        return self._request('POST', f'/conversations/{conversation_id}/messages', data=data)
 
-    def get_conversation_messages(self, conversation_id: str) -> List[Dict]:
-        result = self._request('GET', f'/v1/conversations/{conversation_id}/messages')
-        return result.get('messages', []) if isinstance(result, dict) else []
+    def get_tasks(self, conversation_id: str) -> List[Dict[str, Any]]:
+        result = self._request('GET', f'/conversations/{conversation_id}/tasks')
+        return result.get('data', [])
 
-    def search_contacts(self, query: str) -> List[Dict]:
-        result = self._request('GET', '/v1/contacts/search', params={'q': query})
-        return result.get('contacts', []) if isinstance(result, dict) else []
+    def create_task(self, data: Dict[str, Any]) -> Dict[str, Any]:
+        return self._request('POST', '/tasks', data=data)
 
-    def update_contacts(self, contact_id: str, data: Dict) -> Dict:
-        return self._request('PUT', f'/v1/contacts/{contact_id}', json=data)
+    def get_teams(self) -> List[Dict[str, Any]]:
+        result = self._request('GET', '/teams')
+        return result.get('data', [])
 
-    def get_conversation_details(self, conversation_id: str) -> Dict:
-        return self._request('GET', f'/v1/conversations/{conversation_id}')
-
-    def get_contact_details(self, contact_id: str) -> Dict:
-        return self._request('GET', f'/v1/contacts/{contact_id}')
-
-    def get_conversation_list(self, **params) -> List[Dict]:
-        result = self._request('GET', '/v1/conversations', params=params)
-        return result.get('conversations', []) if isinstance(result, dict) else []
-
-    def create_draft_message_with_attachment(self, content: str, attachment_url: str, **kwargs) -> Dict:
-        return self._request('POST', '/v1/drafts', json={
-            'content': content,
-            'attachment_url': attachment_url,
-            **kwargs
-        })
+    def get_users(self) -> List[Dict[str, Any]]:
+        result = self._request('GET', '/users')
+        return result.get('data', [])

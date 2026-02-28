@@ -1,92 +1,52 @@
-# Help Scout
+# Help Scout Customer Support Integration
 
-Help Scout is a customer support platform for managing customer emails and conversations.
+Help Scout provides email-based customer support with shared inbox features.
 
 ## Installation
-
 ```bash
-pip install -r requirements.txt
+pip install -e .
 ```
 
-## API Key
-
-To get your Help Scout API key:
-
-1. Sign up at [Help Scout](https://www.helpscout.com)
-2. Go to Your Account > API Key
-3. Generate and copy your API key
+## API Key Setup
+1. Log in to Help Scout account
+2. Generate API key (app ID and secret) from settings
 
 ## Usage
-
 ```python
 from help_scout import HelpScoutClient
 
-client = HelpScoutClient(api_key='your-api-key')
+client = HelpScoutClient(api_key="your-key")
 
-# Search conversations
-conversations = client.search_conversations(query='support')
+# Get conversations
+conversations = client.get_conversations(status="active")
 
-# Create a customer
-customer = client.create_customer({
-    'firstName': 'John',
-    'lastName': 'Doe',
-    'emails': [{'value': 'john@example.com'}]
+# Get conversation
+conv = client.get_conversation(12345)
+
+# Create conversation
+client.create_conversation({
+    "subject": "Help needed",
+    "mailboxId": 123,
+    "customer": {"email": "customer@example.com"},
+    "threads": [{"type": "customer", "body": "I need help"}]
 })
-
-# Create a conversation
-conversation = client.create_conversation({
-    'subject': 'Support Request',
-    'customer': {'id': customer['id']},
-    'mailbox': {'id': 123}
-})
-
-# Send a reply
-reply = client.create_reply(
-    conversation_id='conv-123',
-    text='Thank you for contacting us!'
-)
-
-# Add a note
-note = client.add_conversation_note(
-    conversation_id='conv-123',
-    text='Internal note: Customer is waiting'
-)
-
-# Search customers
-customers = client.search_customer(query='john')
-
-# Update customer properties
-client.update_customer_properties(
-    customer_id='customer-123',
-    properties={'vip': True}
-)
 
 # Get mailboxes
-mailboxes = client.get_mailbox_list()
+mailboxes = client.get_mailboxes()
 
-# Get tags
-tags = client.get_tag_list()
+# Get customers
+customers = client.get_customers()
 ```
 
 ## API Methods
+- `get_conversations(status, page)` - List conversations
+- `get_conversation(conversation_id)` - Get conversation
+- `create_conversation(data)` - Create conversation
+- `get_mailboxes()` - List mailboxes
+- `get_customers(page)` - List customers
+- `get_customer(customer_id)` - Get customer
+- `create_customer(data)` - Create customer
+- `get_threads(conversation_id)` - Get conversation threads
 
-### Conversations
-- `create_conversation(conversation_data)` - Create a conversation
-- `update_conversation(conversation_id, data)` - Update a conversation
-- `search_conversations(query, **kwargs)` - Search conversations
-- `create_reply(conversation_id, text)` - Create a reply
-- `add_conversation_note(conversation_id, text)` - Add a note
-- `update_tags(conversation_id, tags)` - Update conversation tags
-
-### Customers
-- `create_customer(customer_data)` - Create a customer
-- `get_customer(customer_id)` - Get customer details
-- `search_customer(query)` - Search customers
-- `update_customer_properties(customer_id, properties)` - Update properties
-- `get_customer_properties(customer_id)` - Get customer properties
-
-### Other
-- `get_user(user_id)` - Get user details
-- `get_mailbox_list()` - List mailboxes
-- `get_tag_list()` - List tags
-- `get_company_report()` - Get company report
+## Status Codes
+- active, pending, closed, spam, draft

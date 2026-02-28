@@ -1,110 +1,44 @@
+"""Kasika Customer Support API Client"""
 import requests
-from typing import Dict, List, Optional
-
+from typing import Dict, List, Optional, Any
 
 class KasikaClient:
-    """Client for Kasika API - Japanese CRM Platform"""
-
-    def __init__(self, api_key: str):
+    def __init__(self, api_key: str, base_url: str = "https://api.kasika.com/v1", timeout: int = 30):
         self.api_key = api_key
-        self.base_url = "https://api.kasika.jp"
+        self.base_url = base_url.rstrip('/')
+        self.timeout = timeout
         self.session = requests.Session()
-        self.session.headers.update({
-            'X-API-Key': api_key,
-            'Content-Type': 'application/json'
-        })
+        self.session.headers.update({'Authorization': f'Bearer {api_key}', 'Content-Type': 'application/json'})
 
-    def _request(self, method: str, endpoint: str, **kwargs) -> Dict:
+    def _request(self, method: str, endpoint: str, params=None, data=None) -> Dict[str, Any]:
         url = f"{self.base_url}{endpoint}"
-        response = self.session.request(method, url, **kwargs)
+        response = self.session.request(method, url, params=params, json=data, timeout=self.timeout)
         response.raise_for_status()
-        return response.json() if response.content else {}
+        return response.json()
 
-    def invite_employee(self, email: str, **kwargs) -> Dict:
-        data = {'email': email, **kwargs}
-        return self._request('POST', '/v1/employees/invite', json=data)
+    def get_tickets(self, status: Optional[str] = None, limit: int = 100) -> List[Dict[str, Any]]:
+        params = {'limit': limit}
+        if status:
+            params['status'] = status
+        result = self._request('GET', '/tickets', params=params)
+        return result.get('tickets', [])
 
-    def send_inquiry_notification_email(self, data: Dict) -> Dict:
-        return self._request('POST', '/v1/inquiry/notification', json=data)
+    def get_ticket(self, ticket_id: str) -> Dict[str, Any]:
+        return self._request('GET', f'/tickets/{ticket_id}')
 
-    def get_sales_action_types(self) -> List[Dict]:
-        result = self._request('GET', '/v1/sales/actions/types')
-        return result.get('types', [])
+    def create_ticket(self, data: Dict[str, Any]) -> Dict[str, Any]:
+        return self._request('POST', '/tickets', data=data)
 
-    def get_customer(self, customer_id: str) -> Dict:
-        return self._request('GET', f'/v1/customers/{customer_id}')
+    def update_ticket(self, ticket_id: str, data: Dict[str, Any]) -> Dict[str, Any]:
+        return self._request('PUT', f'/tickets/{ticket_id}', data=data)
 
-    def bulk_delete_customer_tags(self, customer_ids: List[str], tag: str) -> Dict:
-        return self._request('POST', '/v1/customers/tags/bulk-delete', json={
-            'customer_ids': customer_ids,
-            'tag': tag
-        })
+    def add_comment(self, ticket_id: str, comment: str) -> Dict[str, Any]:
+        return self._request('POST', f'/tickets/{ticket_id}/comments', data={'text': comment})
 
-    def delete_customer(self, customer_id: str) -> Dict:
-        return self._request('DELETE', f'/v1/customers/{customer_id}')
+    def get_customers(self, limit: int = 100) -> List[Dict[str, Any]]:
+        result = self._request('GET', '/customers', params={'limit': limit})
+        return result.get('customers', [])
 
-    def export_customer_csv(self, **filter_params) -> str:
-        result = self._request('POST', '/v1/customers/export', json=filter_params)
-        return result.get('download_url', '')
-
-    def update_sales_action(self, action_id: str, data: Dict) -> Dict:
-        return self._request('PUT', f'/v1/sales/actions/{action_id}', json=data)
-
-    def assign_agent_by_postal_code(self, postal_code: str) -> Dict:
-        return self._request('POST', '/v1/agents/assign', json={'postal_code': postal_code})
-
-    def get_inquiry(self, inquiry_id: str) -> Dict:
-        return self._request('GET', f'/v1/inquiries/{inquiry_id}')
-
-    def create_sales_action(self, action_data: Dict) -> Dict:
-        return self._request('POST', '/v1/sales/actions', json=action_data)
-
-    def get_sales_action_types_list(self) -> List[Dict]:
-        result = self._request('GET', '/v1/sales/actions/types/list')
-        return result.get('types', [])
-
-    def get_customer_id_change_history(self, customer_id: str) -> List[Dict]:
-        return self._request('GET', f'/v1/customers/{customer_id}/id/history')
-
-    def add_customer_external_activity(self, customer_id: str, activity: Dict) -> Dict:
-        return self._request('POST', f'/v1/customers/{customer_id}/activities', json=activity)
-
-    def remove_customer_agent(self, customer_id: str, agent_id: str) -> Dict:
-        return self._request('DELETE', f'/v1/customers/{customer_id}/agents/{agent_id}')
-
-    def add_email_address(self, customer_id: str, email: str) -> Dict:
-        return self._request('POST', f'/v1/customers/{customer_id}/emails', json={'email': email})
-
-    def update_employee_status(self, employee_id: str, status: str) -> Dict:
-        return self._request('PUT', f'/v1/employees/{employee_id}/status', json={'status': status})
-
-    def delete_inquiry(self, inquiry_id: str) -> Dict:
-        return self._request('DELETE', f'/v1/inquiries/{inquiry_id}')
-
-    def update_customer(self, customer_id: str, data: Dict) -> Dict:
-        return self._request('PUT', f'/v1/customers/{customer_id}', json=data)
-
-    def register_customer(self, customer_data: Dict) -> Dict:
-        return self._request('POST', '/v1/customers', json=customer_data)
-
-    def add_customer_agent(self, customer_id: str, agent_id: str, **kwargs) -> Dict:
-        data = {'agent_id': agent_id, **kwargs}
-        return self._request('POST', f'/v1/customers/{customer_id}/agents', json=data)
-
-    def export_optout_customers_csv(self, **filter_params) -> str:
-        result = self._request('POST', '/v1/customers/export/optout', json=filter_params)
-        return result.get('download_url', '')
-
-    def bulk_add_customer_tags(self, customer_ids: List[str], tag: str) -> Dict:
-        return self._request('POST', '/v1/customers/tags/bulk-add', json={
-            'customer_ids': customer_ids,
-            'tag': tag
-        })
-
-    def export_hot_customers_csv(self, **filter_params) -> str:
-        result = self._request('POST', '/v1/customers/export/hot', json=filter_params)
-        return result.get('download_url', '')
-
-    def list_sales_actions(self, **filter_params) -> List[Dict]:
-        result = self._request('GET', '/v1/sales/actions', params=filter_params)
-        return result.get('actions', [])
+    def get_agents(self) -> List[Dict[str, Any]]:
+        result = self._request('GET', '/agents')
+        return result.get('agents', [])

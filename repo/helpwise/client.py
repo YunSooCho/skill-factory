@@ -1,56 +1,48 @@
+"""Helpwise Shared Inbox API Client"""
 import requests
-from typing import Dict, List, Optional
-
+from typing import Dict, List, Optional, Any
 
 class HelpwiseClient:
-    """Client for Helpwise API - Shared Inbox Platform"""
-
-    def __init__(self, api_key: str):
+    def __init__(self, api_key: str, base_url: str = "https://app.helpwise.io/api", timeout: int = 30):
         self.api_key = api_key
-        self.base_url = "https://app.helpwise.io/api"
+        self.base_url = base_url.rstrip('/')
+        self.timeout = timeout
         self.session = requests.Session()
-        self.session.headers.update({
-            'X-API-KEY': api_key,
-            'Content-Type': 'application/json'
-        })
+        self.session.headers.update({'Authorization': f'Bearer {api_key}', 'Content-Type': 'application/json'})
 
-    def _request(self, method: str, endpoint: str, **kwargs) -> Dict:
+    def _request(self, method: str, endpoint: str, params=None, data=None) -> Dict[str, Any]:
         url = f"{self.base_url}{endpoint}"
-        response = self.session.request(method, url, **kwargs)
+        response = self.session.request(method, url, params=params, json=data, timeout=self.timeout)
         response.raise_for_status()
-        return response.json() if response.content else {}
+        return response.json()
 
-    def search_conversations(self, query: str) -> List[Dict]:
-        result = self._request('GET', '/conversations/search', params={'q': query})
+    def get_inboxes(self) -> List[Dict[str, Any]]:
+        result = self._request('GET', '/inboxes')
+        return result.get('inboxes', [])
+
+    def get_conversations(self, inbox_id: str, limit: int = 100) -> List[Dict[str, Any]]:
+        result = self._request('GET', f'/inboxes/{inbox_id}/conversations', params={'limit': limit})
         return result.get('conversations', [])
 
-    def create_contact(self, contact_data: Dict) -> Dict:
-        return self._request('POST', '/contacts', json=contact_data)
-
-    def get_overall_report(self) -> Dict:
-        return self._request('GET', '/reports/overall')
-
-    def update_contact(self, contact_id: str, data: Dict) -> Dict:
-        return self._request('PUT', f'/contacts/{contact_id}', json=data)
-
-    def search_contact(self, query: str) -> List[Dict]:
-        result = self._request('GET', '/contacts/search', params={'q': query})
-        return result.get('contacts', [])
-
-    def get_conversation(self, conversation_id: str) -> Dict:
+    def get_conversation(self, conversation_id: str) -> Dict[str, Any]:
         return self._request('GET', f'/conversations/{conversation_id}')
 
-    def remove_tags_conversations(self, conversation_ids: List[str], tag: str) -> Dict:
-        return self._request('POST', '/conversations/remove_tags', json={
-            'conversation_ids': conversation_ids,
-            'tag': tag
-        })
+    def send_reply(self, conversation_id: str, message: str) -> Dict[str, Any]:
+        return self._request('POST', f'/conversations/{conversation_id}/reply', data={'message': message})
 
-    def get_contact(self, contact_id: str) -> Dict:
-        return self._request('GET', f'/contacts/{contact_id}')
+    def create_note(self, conversation_id: str, note: str) -> Dict[str, Any]:
+        return self._request('POST', f'/conversations/{conversation_id}/notes', data={'note': note})
 
-    def apply_tags_conversations(self, conversation_ids: List[str], tag: str) -> Dict:
-        return self._request('POST', '/conversations/apply_tags', json={
-            'conversation_ids': conversation_ids,
-            'tag': tag
-        })
+    def assign_conversation(self, conversation_id: str, assignee_id: str) -> Dict[str, Any]:
+        return self._request('POST', f'/conversations/{conversation_id}/assign', data={'assignee_id': assignee_id})
+
+    def get_labels(self) -> List[Dict[str, Any]]:
+        result = self._request('GET', '/labels')
+        return result.get('labels', [])
+
+    def add_label(self, conversation_id: str, label_id: str) -> Dict[str, Any]:
+        return self._request('POST', f'/conversations/{conversation_id}/labels', data={'label_id': label_id})
+
+    def get_team_members(self) -> List[Dict[str, Any]]:
+        result = self._request('GET', '/team')
+        return result.get('team', [])

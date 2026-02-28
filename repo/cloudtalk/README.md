@@ -1,67 +1,42 @@
-# Cloudtalk
+# CloudTalk Cloud Phone System Integration
 
-Cloudtalk is a cloud-based phone system for customer support.
+CloudTalk provides cloud-based phone system and call center solutions.
 
 ## Installation
-
 ```bash
-pip install -r requirements.txt
+pip install -e .
 ```
 
-## API Key
-
-To get your Cloudtalk API key:
-
-1. Sign up at [Cloudtalk](https://www.cloudtalk.io)
-2. Go to Settings > Integrations > API
-3. Generate and copy your API key
+## API Key Setup
+1. Log in to CloudTalk dashboard
+2. Get API ID and API Key from settings
 
 ## Usage
-
 ```python
-from cloudtalk import CloudtalkClient
+from cloudtalk import CloudTalkClient
 
-# Initialize the client
-client = CloudtalkClient(api_key='your-api-key')
+client = CloudTalkClient(api_key="your-key", api_id="your-id")
 
-# Create a contact
-contact = client.create_contact({
-    'firstName': 'John',
-    'lastName': 'Doe',
-    'phone': '+1234567890',
-    'email': 'john@example.com'
-})
-print(f"Created contact: {contact}")
+# Get call logs
+calls = client.get_calls()
 
-# Search contacts
-contacts = client.search_contact(query='John')
-print(f"Found {len(contacts)} contacts")
+# Make a call
+client.make_call({"to": "+1234567890", "agent_id": "AGENT123"})
 
-# Get a specific contact
-contact = client.get_contact(contact_id='contact-123')
-print(f"Contact: {contact}")
+# Get contacts
+contacts = client.get_contacts()
 
-# Update a contact
-updated = client.update_contact(contact_id='contact-123', data={'phone': '+0987654321'})
-print(f"Updated contact: {updated}")
-
-# Send an SMS
-sms = client.send_sms(
-    phone_number='+1234567890',
-    message='Your booking is confirmed!'
-)
-print(f"Sent SMS: {sms}")
-
-# Delete a contact
-result = client.delete_contact(contact_id='contact-123')
-print(f"Deleted contact: {result}")
+# Statistics
+stats = client.get_statistics("2024-01-01", "2024-01-31")
 ```
 
 ## API Methods
-
-- `create_contact(contact_data)` - Create a new contact
-- `get_contact(contact_id)` - Get a specific contact
-- `update_contact(contact_id, data)` - Update a contact
-- `delete_contact(contact_id)` - Delete a contact
-- `search_contact(query)` - Search contacts
-- `send_sms(phone_number, message, **kwargs)` - Send an SMS message
+- `get_calls(limit)` - List calls
+- `get_call(call_id)` - Get call details
+- `make_call(data)` - Make outbound call
+- `get_call_recording(call_id)` - Get recording URL
+- `get_contacts(limit)` - List contacts
+- `create_contact(data)` - Create contact
+- `get_agents()` - List agents
+- `get_numbers()` - List phone numbers
+- `get_statistics(start_date, end_date)` - Get call statistics

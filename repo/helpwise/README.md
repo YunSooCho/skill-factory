@@ -1,64 +1,51 @@
-# Helpwise
+# Helpwise Shared Inbox Integration
 
-Helpwise is a shared inbox platform for managing team communications.
+Helpwise is a shared inbox platform for managing team email accounts.
 
 ## Installation
-
 ```bash
-pip install -r requirements.txt
+pip install -e .
 ```
 
-## API Key
-
-To get your Helpwise API key:
-
-1. Sign up at [Helpwise](https://helpwise.io)
-2. Go to Settings > API Keys
-3. Generate and copy your API key
+## API Key Setup
+1. Log in to Helpwise account
+2. Generate API key from settings
 
 ## Usage
-
 ```python
 from helpwise import HelpwiseClient
 
-client = HelpwiseClient(api_key='your-api-key')
+client = HelpwiseClient(api_key="your-key")
 
-# Create a contact
-contact = client.create_contact({
-    'name': 'John Doe',
-    'email': 'john@example.com'
-})
+# Get inboxes
+inboxes = client.get_inboxes()
 
-# Search conversations
-conversations = client.search_conversations(query='support')
+# Get conversations
+convs = client.get_conversations(inbox_id="INBOX123")
 
-# Get conversation details
-conversation = client.get_conversation(conversation_id='conv-123')
+# Send reply
+client.send_reply("CONV456", "Here's the answer")
 
-# Apply tags to conversations
-client.apply_tags_conversations(
-    conversation_ids=['conv-1', 'conv-2'],
-    tag='urgent'
-)
+# Add note
+client.create_note("CONV456", "Following up on this")
 
-# Remove tags from conversations
-client.remove_tags_conversations(
-    conversation_ids=['conv-1'],
-    tag='urgent'
-)
+# Assign
+client.assign_conversation("CONV456", "USER789")
 
-# Get overall report
-report = client.get_overall_report()
+# Get labels
+labels = client.get_labels()
+
+# Get team
+team = client.get_team_members()
 ```
 
 ## API Methods
-
-- `create_contact(contact_data)` - Create a contact
-- `get_contact(contact_id)` - Get contact details
-- `update_contact(contact_id, data)` - Update a contact
-- `search_contact(query)` - Search contacts
-- `search_conversations(query)` - Search conversations
-- `get_conversation(conversation_id)` - Get conversation details
-- `apply_tags_conversations(conversation_ids, tag)` - Apply tags
-- `remove_tags_conversations(conversation_ids, tag)` - Remove tags
-- `get_overall_report()` - Get overall report
+- `get_inboxes()` - List inboxes
+- `get_conversations(inbox_id, limit)` - Get conversations
+- `get_conversation(conversation_id)` - Get conversation
+- `send_reply(conversation_id, message)` - Reply to conversation
+- `create_note(conversation_id, note)` - Add internal note
+- `assign_conversation(conversation_id, assignee_id)` - Assign conversation
+- `get_labels()` - List labels
+- `add_label(conversation_id, label_id)` - Add label
+- `get_team_members()` - List team members

@@ -1,38 +1,56 @@
-# Lodgify
+# Lodgify Reservation Management Integration
 
-Lodgify is a vacation rental platform for managing property bookings.
+Lodgify provides vacation rental reservation and property management.
 
 ## Installation
-
 ```bash
-pip install -r requirements.txt
+pip install -e .
 ```
 
-## API Key
-
-To get your Lodgify API key:
-
-1. Sign up at [Lodgify](https://www.lodgify.com)
-2. Go to Settings > Integrations > API
-3. Generate and copy your API key
+## API Key Setup
+1. Log in to Lodgify account
+2. Generate API key from settings
 
 ## Usage
-
 ```python
 from lodgify import LodgifyClient
 
-client = LodgifyClient(api_key='your-api-key')
+client = LodgifyClient(api_key="your-key")
 
-# Note: Lodgify is primarily a trigger-based integration
-# Use webhooks to receive booking updates and status changes
+# Get reservations
+reservations = client.get_reservations(property_id="PROP123")
+
+# Get reservation
+res = client.get_reservation("RES456")
+
+# Create reservation
+client.create_reservation({
+    "property_id": "PROP123",
+    "guest_id": "GUEST789",
+    "arrival": "2024-06-01",
+    "departure": "2024-06-07"
+})
+
+# Update reservation
+client.update_reservation("RES456", {"status": "confirmed"})
+
+# Get properties
+properties = client.get_properties()
+
+# Get availability
+availability = client.get_availability("PROP123", "2024-06-01", "2024-06-30")
+
+# Get guests
+guests = client.get_guests()
 ```
 
-## API
-
-Lodgify provides trigger-based webhooks for:
-- Received Messages
-- Booking Status Changes (Open, Booked, Declined, Tentative)
-- Booking Updates
-- New Bookings
-
-Contact Lodgify support for webhook configuration.
+## API Methods
+- `get_reservations(property_id, limit)` - List reservations
+- `get_reservation(reservation_id)` - Get reservation
+- `create_reservation(data)` - Create reservation
+- `update_reservation(reservation_id, data)` - Update reservation
+- `get_properties()` - List properties
+- `get_property(property_id)` - Get property
+- `get_guests(limit)` - List guests
+- `get_guest(guest_id)` - Get guest
+- `get_availability(property_id, start_date, end_date)` - Check availability

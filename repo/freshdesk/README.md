@@ -1,103 +1,57 @@
-# Freshdesk
+# Freshdesk Customer Support Integration
 
-Freshdesk is a complete customer support platform for managing tickets and customer interactions.
+Freshdesk is a cloud-based customer support platform for ticket management.
 
 ## Installation
-
 ```bash
-pip install -r requirements.txt
+pip install -e .
 ```
 
-## API Key
-
-To get your Freshdesk API key:
-
-1. Sign up at [Freshdesk](https://www.freshdesk.com)
-2. Go to your profile > API Key Settings
-3. Copy your API key
+## API Key Setup
+1. Log in to your Freshdesk account
+2. Get API key from profile settings
+3. Note your domain (e.g., yourcompany.freshdesk.com)
 
 ## Usage
-
 ```python
 from freshdesk import FreshdeskClient
 
-# Initialize the client
-client = FreshdeskClient(domain='yourcompany.freshdesk.com', api_key='your-api-key')
+client = FreshdeskClient(api_key="your-key", domain="yourcompany")
 
-# Create a ticket
-ticket = client.create_ticket({
-    'subject': 'Issue with my order',
-    'description': 'My order has not been delivered yet',
-    'email': 'customer@example.com',
-    'priority': 2,
-    'status': 2
+# Get tickets
+tickets = client.get_tickets(status="open")
+
+# Get ticket
+ticket = client.get_ticket(12345)
+
+# Create ticket
+new_ticket = client.create_ticket({
+    "subject": "Issue",
+    "description": "Problem description",
+    "email": "customer@example.com",
+    "priority": 2
 })
-print(f"Created ticket: {ticket}")
 
-# Get a ticket
-ticket = client.get_ticket(ticket_id=12345)
-print(f"Ticket: {ticket}")
+# Update ticket
+client.update_ticket(12345, {"status": 2, "priority": 3})
 
-# Update a ticket
-updated = client.update_ticket(ticket_id=12345, data={'status': 4, 'priority': 3})
-print(f"Updated ticket: {updated}")
-
-# Create a contact
-contact = client.create_contact({
-    'name': 'John Doe',
-    'email': 'john@example.com'
-})
-print(f"Created contact: {contact}")
-
-# Search contacts
-contacts = client.search_contacts(query='John')
-print(f"Found {len(contacts)} contacts")
-
-# Reply to a ticket
-reply = client.reply_to_ticket(
-    ticket_id=12345,
-    body='Thank you for contacting us. We are looking into this.'
-)
-print(f"Replied: {reply}")
-
-# Add a note to a ticket
-note = client.add_note_to_ticket(
-    ticket_id=12345,
-    note='Internal note: Customer is waiting for update'
-)
-print(f"Added note: {note}")
-
-# List ticket conversations
-conversations = client.list_ticket_conversations(ticket_id=12345)
-print(f"Found {len(conversations)} conversations")
-
-# Create a company
-company = client.create_company({'name': 'Acme Corp'})
-print(f"Created company: {company}")
+# Manage contacts
+contact = client.get_contact(67890)
+client.create_contact({"name": "John Doe", "email": "john@example.com"})
 ```
 
 ## API Methods
+- `get_tickets(status, page)` - List tickets
+- `get_ticket(ticket_id)` - Get ticket
+- `create_ticket(data)` - Create ticket
+- `update_ticket(ticket_id, data)` - Update ticket
+- `delete_ticket(ticket_id)` - Delete ticket
+- `get_contacts(page)` - List contacts
+- `get_contact(contact_id)` - Get contact
+- `create_contact(data)` - Create contact
+- `get_companies(page)` - List companies
+- `get_agents()` - List agents
+- `get_groups()` - List groups
 
-### Tickets
-- `create_ticket(ticket_data)` - Create a new ticket
-- `get_ticket(ticket_id)` - Get a ticket by ID
-- `update_ticket(ticket_id, data)` - Update a ticket
-- `delete_ticket(ticket_id)` - Delete a ticket
-- `reply_to_ticket(ticket_id, body, **kwargs)` - Reply to a ticket
-- `add_note_to_ticket(ticket_id, note, **kwargs)` - Add a note to a ticket
-- `list_ticket_conversations(ticket_id)` - List ticket conversations
-- `get_latest_ticket_conversation(ticket_id)` - Get latest conversation
-
-### Contacts
-- `create_contact(contact_data)` - Create a contact
-- `get_contact(contact_id)` - Get a contact by ID
-- `update_contact(contact_id, data)` - Update a contact
-- `delete_contact(contact_id)` - Delete a contact
-- `search_contacts(query)` - Search contacts
-
-### Companies
-- `create_company(data)` - Create a company
-- `get_company(company_id)` - Get a company by ID
-- `update_company(company_id, data)` - Update a company
-- `delete_company(company_id)` - Delete a company
-- `search_companies(query)` - Search companies
+## Status Codes
+1 - Open, 2 - Pending, 3 - Resolved, 4 - Closed, 5 - Waiting on Customer

@@ -1,64 +1,45 @@
+"""LiveAgent Help Desk API Client"""
 import requests
-from typing import Dict, List, Optional
-
+from typing import Dict, List, Optional, Any
 
 class LiveagentClient:
-    """Client for LiveAgent API - Help Desk & Live Chat Platform"""
-
-    def __init__(self, api_key: str, base_url: str):
+    def __init__(self, api_key: str, base_url: str, timeout: int = 30):
         self.api_key = api_key
         self.base_url = base_url.rstrip('/')
+        self.timeout = timeout
         self.session = requests.Session()
-        self.session.headers.update({
-            'Authorization': f'Bearer {api_key}',
-            'Content-Type': 'application/json'
-        })
+        self.session.headers.update({'Authorization': f'Bearer {api_key}', 'Content-Type': 'application/json', 'Accept': 'application/json'})
 
-    def _request(self, method: str, endpoint: str, **kwargs) -> Dict:
+    def _request(self, method: str, endpoint: str, params=None, data=None) -> Dict[str, Any]:
         url = f"{self.base_url}{endpoint}"
-        response = self.session.request(method, url, **kwargs)
+        response = self.session.request(method, url, params=params, json=data, timeout=self.timeout)
         response.raise_for_status()
-        return response.json() if response.content else {}
+        return response.json()
 
-    def delete_contact(self, contact_id: str) -> Dict:
-        return self._request('DELETE', f'/contacts/{contact_id}')
+    def get_tickets(self, limit: int = 100) -> List[Dict[str, Any]]:
+        result = self._request('GET', '/tickets', params={'limit': limit})
+        return result.get('response', [])
 
-    def list_tickets(self, **params) -> List[Dict]:
-        result = self._request('GET', '/tickets', params=params)
-        return result.get('tickets', []) if isinstance(result, dict) else []
+    def get_ticket(self, ticket_id: str) -> Dict[str, Any]:
+        result = self._request('GET', f'/tickets/{ticket_id}')
+        return result.get('response', {})
 
-    def create_contact_group(self, name: str, **kwargs) -> Dict:
-        data = {'name': name, **kwargs}
-        return self._request('POST', '/contact_groups', json=data)
+    def create_ticket(self, data: Dict[str, Any]) -> Dict[str, Any]:
+        result = self._request('POST', '/tickets', data=data)
+        return result.get('response', {})
 
-    def delete_contact_group(self, group_id: str) -> Dict:
-        return self._request('DELETE', f'/contact_groups/{group_id}')
+    def update_ticket(self, ticket_id: str, data: Dict[str, Any]) -> Dict[str, Any]:
+        result = self._request('PUT', f'/tickets/{ticket_id}', data=data)
+        return result.get('response', {})
 
-    def create_contact(self, contact_data: Dict) -> Dict:
-        return self._request('POST', '/contacts', json=contact_data)
+    def add_message(self, ticket_id: str, message: str) -> Dict[str, Any]:
+        result = self._request('POST', f'/tickets/{ticket_id}/messages', data={'message': message})
+        return result.get('response', {})
 
-    def update_contact_group(self, group_id: str, data: Dict) -> Dict:
-        return self._request('PUT', f'/contact_groups/{group_id}', json=data)
+    def get_customers(self, limit: int = 100) -> List[Dict[str, Any]]:
+        result = self._request('GET', '/customers', params={'limit': limit})
+        return result.get('response', [])
 
-    def list_contacts(self, **params) -> List[Dict]:
-        result = self._request('GET', '/contacts', params=params)
-        return result.get('contacts', []) if isinstance(result, dict) else []
-
-    def update_contact(self, contact_id: str, data: Dict) -> Dict:
-        return self._request('PUT', f'/contacts/{contact_id}', json=data)
-
-    def delete_ticket(self, ticket_id: str) -> Dict:
-        return self._request('DELETE', f'/tickets/{ticket_id}')
-
-    def get_ticket(self, ticket_id: str) -> Dict:
-        return self._request('GET', f'/tickets/{ticket_id}')
-
-    def list_contact_groups(self) -> List[Dict]:
-        result = self._request('GET', '/contact_groups')
-        return result.get('contact_groups', []) if isinstance(result, dict) else []
-
-    def get_contact_group(self, group_id: str) -> Dict:
-        return self._request('GET', f'/contact_groups/{group_id}')
-
-    def get_contact(self, contact_id: str) -> Dict:
-        return self._request('GET', f'/contacts/{contact_id}')
+    def get_agents(self) -> List[Dict[str, Any]]:
+        result = self._request('GET', '/agents')
+        return result.get('response', [])
