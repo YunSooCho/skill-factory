@@ -17710,6 +17710,1395 @@
       "completed_at": "2026-02-28T13:36:00+09:00",
       "testable": true,
       "test_method": "python"
+    },
+    "Pinterest.md": {
+      "service_name": "Pinterest",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard OAuth 2.0 flow with Pinterest API v5",
+      "api_actions": {
+        "Get Pin": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth access token required - test with actual Pinterest account",
+          "code_file": "repo/Pinterest/actions.py",
+          "method": "PinterestActions.get_pin"
+        },
+        "Create Pin": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth access token required - test with actual Pinterest account",
+          "code_file": "repo/Pinterest/actions.py",
+          "method": "PinterestActions.create_pin"
+        },
+        "Get Board": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth access token required - test with actual Pinterest account",
+          "code_file": "repo/Pinterest/actions.py",
+          "method": "PinterestActions.get_board"
+        },
+        "Create Board": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth access token required - test with actual Pinterest account",
+          "code_file": "repo/Pinterest/actions.py",
+          "method": "PinterestActions.create_board"
+        },
+        "List Pins": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth access token required - test with actual Pinterest account",
+          "code_file": "repo/Pinterest/actions.py",
+          "method": "PinterestActions.list_pins"
+        },
+        "Update Board": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth access token required - test with actual Pinterest account",
+          "code_file": "repo/Pinterest/actions.py",
+          "method": "PinterestActions.update_board"
+        },
+        "List Boards": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth access token required - test with actual Pinterest account",
+          "code_file": "repo/Pinterest/actions.py",
+          "method": "PinterestActions.list_boards"
+        }
+      },
+      "triggers": {
+        "New Pin": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Webhook subscription required - test with actual Pinterest account",
+          "code_file": "repo/Pinterest/triggers.py",
+          "method": "PinterestTriggers.handle_webhook"
+        }
+      },
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "triggers.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "cloudcontact_AI.md": {
+      "service_name": "CloudContactAI",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Uses Client ID and API Key for authentication, standard REST API",
+      "api_actions": {
+        "Create Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Client ID and API Key required - test with actual CloudContactAI account",
+          "code_file": "repo/cloudcontact_ai/actions.py",
+          "method": "CloudContactAIActions.create_contact"
+        },
+        "Sent SMS Messages by Campaign": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Client ID and API Key required - test with actual CloudContactAI account",
+          "code_file": "repo/cloudcontact_ai/actions.py",
+          "method": "CloudContactAIActions.send_sms_by_campaign"
+        },
+        "Get Sent SMS Messages": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Client ID and API Key required - test with actual CloudContactAI account",
+          "code_file": "repo/cloudcontact_ai/actions.py",
+          "method": "CloudContactAIActions.get_sent_sms_messages"
+        },
+        "Search Contacts": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Client ID and API Key required - test with actual CloudContactAI account",
+          "code_file": "repo/cloudcontact_ai/actions.py",
+          "method": "CloudContactAIActions.search_contacts"
+        }
+      },
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "facebook-ads.md": {
+      "service_name": "Facebook Ads",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "OAuth 2.0 flow with Facebook Graph API v19.0",
+      "api_actions": {
+        "アカウントレポートの作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth access token required - test with actual Facebook Ads account",
+          "code_file": "repo/facebook-ads/actions.py",
+          "method": "FacebookAdsActions.create_account_report"
+        },
+        "広告セットレポートを取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth access token required - test with actual Facebook Ads account",
+          "code_file": "repo/facebook-ads/actions.py",
+          "method": "FacebookAdsActions.get_adset_report"
+        },
+        "アカウントレポートを取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth access token required - test with actual Facebook Ads account",
+          "code_file": "repo/facebook-ads/actions.py",
+          "method": "FacebookAdsActions.get_account_report"
+        },
+        "広告レポートを取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth access token required - test with actual Facebook Ads account",
+          "code_file": "repo/facebook-ads/actions.py",
+          "method": "FacebookAdsActions.get_ad_report"
+        },
+        "キャンペーンレポートの作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth access token required - test with actual Facebook Ads account",
+          "code_file": "repo/facebook-ads/actions.py",
+          "method": "FacebookAdsActions.create_campaign_report"
+        },
+        "キャンペーンレポートを取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth access token required - test with actual Facebook Ads account",
+          "code_file": "repo/facebook-ads/actions.py",
+          "method": "FacebookAdsActions.get_campaign_report"
+        },
+        "広告レポートの作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth access token required - test with actual Facebook Ads account",
+          "code_file": "repo/facebook-ads/actions.py",
+          "method": "FacebookAdsActions.create_ad_report"
+        },
+        "広告セットレポートの作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "OAuth access token required - test with actual Facebook Ads account",
+          "code_file": "repo/facebook-ads/actions.py",
+          "method": "FacebookAdsActions.create_adset_report"
+        }
+      },
+      "triggers": {
+        "リード情報が作成されたら": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Webhook subscription required - test with actual Facebook Ads account",
+          "code_file": "repo/facebook-ads/triggers.py",
+          "method": "FacebookAdsTriggers.handle_webhook"
+        }
+      },
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "triggers.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "fullenrich.md": {
+      "service_name": "Fullenrich",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API_KEY authentication with REST API",
+      "api_actions": {
+        "Enrich Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/fullenrich/actions.py",
+          "method": "FullenrichActions.enrich_contact"
+        },
+        "Get Enrichment Result": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/fullenrich/actions.py",
+          "method": "FullenrichActions.get_enrichment_result"
+        }
+      },
+      "triggers": {},
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "getresponse-api.md": {
+      "service_name": "GetResponse API",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API_KEY authentication with REST API",
+      "api_actions": {
+        "連絡先リストを取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/getresponseapi/actions.py",
+          "method": "GetResponseAPIActions.連絡先リストを取得"
+        },
+        "ニュースレターのリストを取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/getresponseapi/actions.py",
+          "method": "GetResponseAPIActions.ニュースレターのリストを取得"
+        },
+        "連絡先を削除": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/getresponseapi/actions.py",
+          "method": "GetResponseAPIActions.連絡先を削除"
+        },
+        "特定の連絡先情報を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/getresponseapi/actions.py",
+          "method": "GetResponseAPIActions.特定の連絡先情報を取得"
+        },
+        "連絡先を作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/getresponseapi/actions.py",
+          "method": "GetResponseAPIActions.連絡先を作成"
+        },
+        "ニュースレターを作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/getresponseapi/actions.py",
+          "method": "GetResponseAPIActions.ニュースレターを作成"
+        },
+        "連絡先を更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/getresponseapi/actions.py",
+          "method": "GetResponseAPIActions.連絡先を更新"
+        }
+      },
+      "triggers": {
+        "リンクがクリックされたら": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Webhook subscription required - test with actual account",
+          "code_file": "repo/getresponseapi/triggers.py",
+          "method": "GetResponseAPITriggers.handle_webhook"
+        },
+        "連絡先が登録されたら": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Webhook subscription required - test with actual account",
+          "code_file": "repo/getresponseapi/triggers.py",
+          "method": "GetResponseAPITriggers.handle_webhook"
+        },
+        "連絡先が登録解除したら": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Webhook subscription required - test with actual account",
+          "code_file": "repo/getresponseapi/triggers.py",
+          "method": "GetResponseAPITriggers.handle_webhook"
+        },
+        "メールが開封されたら": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Webhook subscription required - test with actual account",
+          "code_file": "repo/getresponseapi/triggers.py",
+          "method": "GetResponseAPITriggers.handle_webhook"
+        },
+        "バウンスした連絡先が削除されたら": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Webhook subscription required - test with actual account",
+          "code_file": "repo/getresponseapi/triggers.py",
+          "method": "GetResponseAPITriggers.handle_webhook"
+        },
+        "連絡先のメールアドレスが変更されたら": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Webhook subscription required - test with actual account",
+          "code_file": "repo/getresponseapi/triggers.py",
+          "method": "GetResponseAPITriggers.handle_webhook"
+        }
+      },
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt",
+        "triggers.py"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "google-ads-oauth.md": {
+      "service_name": "Google Ads OAuth",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard OAUTH authentication with REST API",
+      "api_actions": {
+        "アカウントレポートの取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/googleadsoauth/actions.py",
+          "method": "GoogleAdsOAuthActions.アカウントレポートの取得"
+        },
+        "特定のキャンペーンのレポートを取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/googleadsoauth/actions.py",
+          "method": "GoogleAdsOAuthActions.特定のキャンペーンのレポートを取得"
+        },
+        "広告グループレポートの取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/googleadsoauth/actions.py",
+          "method": "GoogleAdsOAuthActions.広告グループレポートの取得"
+        },
+        "検索語句レポートの取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/googleadsoauth/actions.py",
+          "method": "GoogleAdsOAuthActions.検索語句レポートの取得"
+        },
+        "キーワードの検索ボリュームを取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/googleadsoauth/actions.py",
+          "method": "GoogleAdsOAuthActions.キーワードの検索ボリュームを取得"
+        },
+        "複数のキャンペーンのレポートを取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/googleadsoauth/actions.py",
+          "method": "GoogleAdsOAuthActions.複数のキャンペーンのレポートを取得"
+        }
+      },
+      "triggers": {},
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "google-analytics.md": {
+      "service_name": "Google Analytics",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard OAUTH authentication with REST API",
+      "api_actions": {
+        "【GA4】イベントレポートを取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/googleanalytics/actions.py",
+          "method": "GoogleAnalyticsActions.ga4イベントレポートを取得"
+        },
+        "【GA4】ユーザーレポートを取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/googleanalytics/actions.py",
+          "method": "GoogleAnalyticsActions.ga4ユーザーレポートを取得"
+        }
+      },
+      "triggers": {},
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "google-business-profile.md": {
+      "service_name": "Google Business Profile",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard OAUTH authentication with REST API",
+      "api_actions": {
+        "Get Business Info": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/googlebusinessprofile/actions.py",
+          "method": "GoogleBusinessProfileActions.get_business_info"
+        },
+        "Get Reviews": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/googlebusinessprofile/actions.py",
+          "method": "GoogleBusinessProfileActions.get_reviews"
+        }
+      },
+      "triggers": {
+        "New Review": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Webhook subscription required - test with actual account",
+          "code_file": "repo/googlebusinessprofile/triggers.py",
+          "method": "GoogleBusinessProfileTriggers.handle_webhook"
+        }
+      },
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt",
+        "triggers.py"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "keboola.md": {
+      "service_name": "Keboola",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API_KEY authentication with REST API",
+      "api_actions": {
+        "Run Job": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/keboola/actions.py",
+          "method": "KeboolaActions.run_job"
+        },
+        "Get Job Status": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/keboola/actions.py",
+          "method": "KeboolaActions.get_job_status"
+        }
+      },
+      "triggers": {},
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "kickbox.md": {
+      "service_name": "Kickbox",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API_KEY authentication with REST API",
+      "api_actions": {
+        "Verify Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/kickbox/actions.py",
+          "method": "KickboxActions.verify_email"
+        },
+        "Batch Verify": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/kickbox/actions.py",
+          "method": "KickboxActions.batch_verify"
+        }
+      },
+      "triggers": {},
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "klaviyo.md": {
+      "service_name": "Klaviyo",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API_KEY authentication with REST API",
+      "api_actions": {
+        "Create Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/klaviyo/actions.py",
+          "method": "KlaviyoActions.create_contact"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/klaviyo/actions.py",
+          "method": "KlaviyoActions.get_contact"
+        },
+        "Get Lists": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/klaviyo/actions.py",
+          "method": "KlaviyoActions.get_lists"
+        },
+        "Send Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/klaviyo/actions.py",
+          "method": "KlaviyoActions.send_email"
+        }
+      },
+      "triggers": {
+        "Contact Subscribed": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Webhook subscription required - test with actual account",
+          "code_file": "repo/klaviyo/triggers.py",
+          "method": "KlaviyoTriggers.handle_webhook"
+        },
+        "Email Clicked": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Webhook subscription required - test with actual account",
+          "code_file": "repo/klaviyo/triggers.py",
+          "method": "KlaviyoTriggers.handle_webhook"
+        },
+        "Email Opened": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Webhook subscription required - test with actual account",
+          "code_file": "repo/klaviyo/triggers.py",
+          "method": "KlaviyoTriggers.handle_webhook"
+        }
+      },
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt",
+        "triggers.py"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "leady.md": {
+      "service_name": "Leady",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API_KEY authentication with REST API",
+      "api_actions": {
+        "Get Leads": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/leady/actions.py",
+          "method": "LeadyActions.get_leads"
+        },
+        "Get Lead Details": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/leady/actions.py",
+          "method": "LeadyActions.get_lead_details"
+        }
+      },
+      "triggers": {},
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "lemlist.md": {
+      "service_name": "Lemlist",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API_KEY authentication with REST API",
+      "api_actions": {
+        "Send Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/lemlist/actions.py",
+          "method": "LemlistActions.send_email"
+        },
+        "Get Campaigns": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/lemlist/actions.py",
+          "method": "LemlistActions.get_campaigns"
+        }
+      },
+      "triggers": {},
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "line.md": {
+      "service_name": "LINE",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard OAUTH authentication with REST API",
+      "api_actions": {
+        "Send Message": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/line/actions.py",
+          "method": "LINEActions.send_message"
+        },
+        "Get Profile": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/line/actions.py",
+          "method": "LINEActions.get_profile"
+        }
+      },
+      "triggers": {
+        "Message Received": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Webhook subscription required - test with actual account",
+          "code_file": "repo/line/triggers.py",
+          "method": "LINETriggers.handle_webhook"
+        },
+        "Message Delivered": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Webhook subscription required - test with actual account",
+          "code_file": "repo/line/triggers.py",
+          "method": "LINETriggers.handle_webhook"
+        }
+      },
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt",
+        "triggers.py"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "liny.md": {
+      "service_name": "Liny",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API_KEY authentication with REST API",
+      "api_actions": {
+        "Sync Contacts": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/liny/actions.py",
+          "method": "LinyActions.sync_contacts"
+        },
+        "Get Contacts": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/liny/actions.py",
+          "method": "LinyActions.get_contacts"
+        }
+      },
+      "triggers": {},
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "list-finder.md": {
+      "service_name": "List Finder",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API_KEY authentication with REST API",
+      "api_actions": {
+        "Search Lists": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/listfinder/actions.py",
+          "method": "ListFinderActions.search_lists"
+        },
+        "Get List Details": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/listfinder/actions.py",
+          "method": "ListFinderActions.get_list_details"
+        }
+      },
+      "triggers": {},
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "livestorm.md": {
+      "service_name": "Livestorm",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API_KEY authentication with REST API",
+      "api_actions": {
+        "Create Event": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/livestorm/actions.py",
+          "method": "LivestormActions.create_event"
+        },
+        "Get Attendees": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/livestorm/actions.py",
+          "method": "LivestormActions.get_attendees"
+        }
+      },
+      "triggers": {
+        "New Registrant": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Webhook subscription required - test with actual account",
+          "code_file": "repo/livestorm/triggers.py",
+          "method": "LivestormTriggers.handle_webhook"
+        },
+        "Event Started": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Webhook subscription required - test with actual account",
+          "code_file": "repo/livestorm/triggers.py",
+          "method": "LivestormTriggers.handle_webhook"
+        }
+      },
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt",
+        "triggers.py"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "lob.md": {
+      "service_name": "Lob",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API_KEY authentication with REST API",
+      "api_actions": {
+        "Send Letter": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/lob/actions.py",
+          "method": "LobActions.send_letter"
+        },
+        "Send Postcard": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/lob/actions.py",
+          "method": "LobActions.send_postcard"
+        }
+      },
+      "triggers": {},
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "location_io.md": {
+      "service_name": "Location.io",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API_KEY authentication with REST API",
+      "api_actions": {
+        "Geocode": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/location.io/actions.py",
+          "method": "Location.ioActions.geocode"
+        },
+        "Reverse Geocode": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/location.io/actions.py",
+          "method": "Location.ioActions.reverse_geocode"
+        }
+      },
+      "triggers": {},
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "loops.md": {
+      "service_name": "Loops",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API_KEY authentication with REST API",
+      "api_actions": {
+        "Send Transactional Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/loops/actions.py",
+          "method": "LoopsActions.send_transactional_email"
+        },
+        "Get Contacts": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/loops/actions.py",
+          "method": "LoopsActions.get_contacts"
+        }
+      },
+      "triggers": {},
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "loqate.md": {
+      "service_name": "Loqate",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API_KEY authentication with REST API",
+      "api_actions": {
+        "Validate Address": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/loqate/actions.py",
+          "method": "LoqateActions.validate_address"
+        },
+        "Find Address": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/loqate/actions.py",
+          "method": "LoqateActions.find_address"
+        }
+      },
+      "triggers": {},
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "luma.md": {
+      "service_name": "Luma",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API_KEY authentication with REST API",
+      "api_actions": {
+        "Create Event": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/luma/actions.py",
+          "method": "LumaActions.create_event"
+        },
+        "Get Events": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/luma/actions.py",
+          "method": "LumaActions.get_events"
+        }
+      },
+      "triggers": {
+        "New Registrant": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Webhook subscription required - test with actual account",
+          "code_file": "repo/luma/triggers.py",
+          "method": "LumaTriggers.handle_webhook"
+        },
+        "Event Completed": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Webhook subscription required - test with actual account",
+          "code_file": "repo/luma/triggers.py",
+          "method": "LumaTriggers.handle_webhook"
+        }
+      },
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt",
+        "triggers.py"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "mailbluster.md": {
+      "service_name": "MailBluster",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API_KEY authentication with REST API",
+      "api_actions": {
+        "Add Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/mailbluster/actions.py",
+          "method": "MailBlusterActions.add_lead"
+        },
+        "Get Leads": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/mailbluster/actions.py",
+          "method": "MailBlusterActions.get_leads"
+        }
+      },
+      "triggers": {},
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "mailchimp.md": {
+      "service_name": "Mailchimp",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API_KEY authentication with REST API",
+      "api_actions": {
+        "Add Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/mailchimp/actions.py",
+          "method": "MailchimpActions.add_subscriber"
+        },
+        "Get Campaigns": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/mailchimp/actions.py",
+          "method": "MailchimpActions.get_campaigns"
+        },
+        "Send Campaign": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/mailchimp/actions.py",
+          "method": "MailchimpActions.send_campaign"
+        }
+      },
+      "triggers": {
+        "Subscribed": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Webhook subscription required - test with actual account",
+          "code_file": "repo/mailchimp/triggers.py",
+          "method": "MailchimpTriggers.handle_webhook"
+        },
+        "Unsubscribed": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Webhook subscription required - test with actual account",
+          "code_file": "repo/mailchimp/triggers.py",
+          "method": "MailchimpTriggers.handle_webhook"
+        },
+        "Campaign Sent": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Webhook subscription required - test with actual account",
+          "code_file": "repo/mailchimp/triggers.py",
+          "method": "MailchimpTriggers.handle_webhook"
+        },
+        "Email Opened": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Webhook subscription required - test with actual account",
+          "code_file": "repo/mailchimp/triggers.py",
+          "method": "MailchimpTriggers.handle_webhook"
+        }
+      },
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt",
+        "triggers.py"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "mailchimp_transactional.md": {
+      "service_name": "Mailchimp Transactional",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API_KEY authentication with REST API",
+      "api_actions": {
+        "Send Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/mailchimptransactional/actions.py",
+          "method": "MailchimpTransactionalActions.send_email"
+        },
+        "Get Stats": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/mailchimptransactional/actions.py",
+          "method": "MailchimpTransactionalActions.get_stats"
+        }
+      },
+      "triggers": {},
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "mailercloud.md": {
+      "service_name": "MailerCloud",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API_KEY authentication with REST API",
+      "api_actions": {
+        "Add Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/mailercloud/actions.py",
+          "method": "MailerCloudActions.add_contact"
+        },
+        "Send Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/mailercloud/actions.py",
+          "method": "MailerCloudActions.send_email"
+        }
+      },
+      "triggers": {},
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "mailerlite.md": {
+      "service_name": "MailerLite",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API_KEY authentication with REST API",
+      "api_actions": {
+        "Add Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/mailerlite/actions.py",
+          "method": "MailerLiteActions.add_subscriber"
+        },
+        "Get Campaigns": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/mailerlite/actions.py",
+          "method": "MailerLiteActions.get_campaigns"
+        }
+      },
+      "triggers": {
+        "Subscriber Added": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Webhook subscription required - test with actual account",
+          "code_file": "repo/mailerlite/triggers.py",
+          "method": "MailerLiteTriggers.handle_webhook"
+        },
+        "Email Opened": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Webhook subscription required - test with actual account",
+          "code_file": "repo/mailerlite/triggers.py",
+          "method": "MailerLiteTriggers.handle_webhook"
+        },
+        "Link Clicked": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Webhook subscription required - test with actual account",
+          "code_file": "repo/mailerlite/triggers.py",
+          "method": "MailerLiteTriggers.handle_webhook"
+        }
+      },
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt",
+        "triggers.py"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "mailersend.md": {
+      "service_name": "MailerSend",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API_KEY authentication with REST API",
+      "api_actions": {
+        "Send Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/mailersend/actions.py",
+          "method": "MailerSendActions.send_email"
+        },
+        "Get Templates": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/mailersend/actions.py",
+          "method": "MailerSendActions.get_templates"
+        }
+      },
+      "triggers": {},
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "mailmodo.md": {
+      "service_name": "Mailmodo",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API_KEY authentication with REST API",
+      "api_actions": {
+        "Send Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/mailmodo/actions.py",
+          "method": "MailmodoActions.send_email"
+        },
+        "Create Campaign": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/mailmodo/actions.py",
+          "method": "MailmodoActions.create_campaign"
+        }
+      },
+      "triggers": {},
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
+    },
+    "mailrelay.md": {
+      "service_name": "MailRelay",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API_KEY authentication with REST API",
+      "api_actions": {
+        "Add Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/mailrelay/actions.py",
+          "method": "MailRelayActions.add_subscriber"
+        },
+        "Get Subscribers": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API authentication required - test with actual account",
+          "code_file": "repo/mailrelay/actions.py",
+          "method": "MailRelayActions.get_subscribers"
+        }
+      },
+      "triggers": {},
+      "files_created": [
+        "__init__.py",
+        "actions.py",
+        "models.py",
+        "exceptions.py",
+        "requirements.txt"
+      ],
+      "implementation_date": "2026-02-28",
+      "rate_limiting": true,
+      "error_handling": true
     }
   },
   "last_updated": "2026-02-28 10:59:11",
