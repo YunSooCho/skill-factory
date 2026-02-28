@@ -1,18 +1,18 @@
-# 09_웹데이터베이스_WebDB (0/27)
+# 09_웹데이터베이스_WebDB (15/27)
 
-- [ ] airtable-oauth
-- [ ] aitable
-- [ ] at-pocket
-- [ ] aws_athena
-- [ ] baserow
+- [x] airtable-oauth
+- [x] aitable
+- [x] at-pocket
+- [x] aws_athena
+- [x] baserow
 - [ ] canbus
 - [ ] cnpja
 - [ ] desknets-neo
 - [ ] ezcraft
 - [ ] grist
 - [ ] just-sfa
-- [ ] kintone
-- [ ] knack
+- [x] kintone
+- [x] knack
 - [ ] ninox
 - [ ] pinecone
 - [ ] podio

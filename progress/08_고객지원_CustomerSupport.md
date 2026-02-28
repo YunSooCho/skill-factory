@@ -1,8 +1,8 @@
-# 08_고객지원_CustomerSupport (26/36)
+# 08_고객지원_CustomerSupport (36/36)
 
 - [x] aircall
-- [ ] askhandle
-- [ ] canny
+- [x] askhandle
+- [x] canny
 - [x] channel-talk
 - [x] chat-plus
 - [x] chatbot
@@ -24,16 +24,16 @@
 - [x] lodgify
 - [x] missive
 - [x] notion-customercs
-- [ ] product_fruits
-- [ ] reamaze
-- [ ] refiner
-- [ ] relation
-- [ ] respond-io
-- [ ] sleekflow
-- [ ] statuspage
-- [ ] superchat
-- [ ] telnyx
-- [ ] timelinesai
-- [ ] typebot
-- [ ] zendesk
-- [ ] zoho_desk
+- [x] product_fruits
+- [x] reamaze
+- [x] refiner
+- [x] relation
+- [x] respond-io
+- [x] sleekflow
+- [x] statuspage
+- [x] superchat
+- [x] telnyx
+- [x] timelinesai
+- [x] typebot
+- [x] zendesk
+- [x] zoho_desk
