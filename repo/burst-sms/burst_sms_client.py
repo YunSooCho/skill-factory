@@ -1,376 +1,397 @@
-"""
-Burst SMS API Client
-SMS sending and webhook handling
-"""
-
 import requests
-from typing import Dict, Optional, Any, List
 import time
+from typing import Dict, List, Optional
+from datetime import datetime
 import hmac
 import hashlib
-import json
-from flask import Flask, request, jsonify
+
+
+class BurstSMSAPIError(Exception):
+    """Burst SMS API 에러"""
+    pass
+
+
+class BurstSMSRateLimitError(BurstSMSAPIError):
+    """Rate limit 초과 에러"""
+    pass
 
 
 class BurstSMSClient:
-    """Burst SMS API Client for SMS operations"""
+    """
+    Burst SMS API Client
 
-    def __init__(self, api_key: str, base_url: str = "https://api.transmitsms.com"):
+    API key authentication을 사용합니다.
+    """
+
+    def __init__(
+        self,
+        api_key: str,
+        api_secret: Optional[str] = None,
+        base_url: str = "https://api.transmitsms.com",
+        timeout: int = 30,
+        max_retries: int = 3,
+        retry_delay: float = 1.0
+    ):
         """
-        Initialize Burst SMS client
+        Burst SMS 클라이언트 초기화
 
         Args:
-            api_key: Burst SMS API key
-            base_url: Base URL for API requests
+            api_key: API key
+            api_secret: API secret (필요시)
+            base_url: API 베이스 URL
+            timeout: 요청 타임아웃 (초)
+            max_retries: 최대 재시도 횟수
+            retry_delay: 재시도 간 지연 (초)
         """
         self.api_key = api_key
-        self.base_url = base_url
-        self.timeout = 30
+        self.api_secret = api_secret
+        self.base_url = base_url.rstrip('/')
+        self.timeout = timeout
+        self.max_retries = max_retries
+        self.retry_delay = retry_delay
 
-    def _handle_response(self, response: requests.Response) -> Dict[str, Any]:
-        """Handle API response"""
-        if response.status_code == 401:
-            raise ValueError("Invalid API key")
-        elif response.status_code == 403:
-            raise ValueError("Access forbidden - insufficient credits or permissions")
-        elif response.status_code == 429:
-            retry_after = int(response.headers.get('Retry-After', 60))
-            time.sleep(retry_after)
-            raise ValueError(f"Rate limit exceeded. Wait {retry_after} seconds before retrying.")
-        elif response.status_code >= 500:
-            raise ValueError(f"Server error: {response.status_code}")
+        # Rate limiting
+        self._last_request_time = 0
+        self._min_request_interval = 0.1  # 최소 요청 간격 (초)
 
-        return response.json()
+    def _make_request(
+        self,
+        method: str,
+        endpoint: str,
+        params: Optional[Dict] = None,
+        data: Optional[Dict] = None,
+        json_data: Optional[Dict] = None,
+        headers: Optional[Dict] = None
+    ) -> Dict:
+        """
+        API 요청 전송 (재시도 및 rate limiting 포함)
+
+        Args:
+            method: HTTP 메서드 (GET, POST, DELETE)
+            endpoint: API 엔드포인트
+            params: 쿼리 파라미터
+            data: 폼 데이터
+            json_data: JSON body
+            headers: 추가 헤더
+
+        Returns:
+            API 응답 (字典)
+
+        Raises:
+            BurstSMSAPIError: API 오류 발생 시
+            BurstSMSRateLimitError: Rate limit 초과 시
+        """
+        # Rate limiting
+        current_time = time.time()
+        time_since_last_request = current_time - self._last_request_time
+        if time_since_last_request < self._min_request_interval:
+            time.sleep(self._min_request_interval - time_since_last_request)
+
+        url = f"{self.base_url}{endpoint}"
+
+        # API 인증 - 기본 인증 헤더
+        auth = requests.auth.HTTPBasicAuth(self.api_key, self.api_secret or '')
+
+        request_headers = {
+            'Accept': 'application/json'
+        }
+        if headers:
+            request_headers.update(headers)
+
+        last_error = None
+        for attempt in range(self.max_retries):
+            try:
+                response = requests.request(
+                    method=method,
+                    url=url,
+                    params=params,
+                    data=data,
+                    json=json_data,
+                    headers=request_headers,
+                    auth=auth,
+                    timeout=self.timeout
+                )
+
+                self._last_request_time = time.time()
+
+                # Rate limit 체크 (HTTP 429)
+                if response.status_code == 429:
+                    retry_after = int(response.headers.get('Retry-After', self.retry_delay))
+                    if attempt < self.max_retries - 1:
+                        time.sleep(retry_after)
+                        continue
+                    else:
+                        raise BurstSMSRateLimitError(
+                            f"Rate limit exceeded. Retry after {retry_after} seconds"
+                        )
+
+                # 오류 응답 처리
+                if not response.ok:
+                    error_data = response.text
+                    try:
+                        error_data = response.json()
+                    except ValueError:
+                        pass
+                    raise BurstSMSAPIError(
+                        f"API error {response.status_code}: {error_data}"
+                    )
+
+                return response.json()
+
+            except requests.exceptions.RequestException as e:
+                last_error = e
+                if attempt < self.max_retries - 1:
+                    time.sleep(self.retry_delay * (attempt + 1))
+                    continue
+                else:
+                    raise BurstSMSAPIError(f"Request failed: {str(e)}")
+
+        raise BurstSMSAPIError(f"Max retries exceeded: {str(last_error)}")
+
+    # ===== SMS ACTIONS =====
 
     def send_sms(
         self,
-        to: str,
         message: str,
-        from_: str = None,
-        message_id: str = None
-    ) -> Dict[str, Any]:
+        to: str,
+        from_: Optional[str] = None,
+        send_at: Optional[str] = None,
+        validity: Optional[int] = None,
+        reply_type: Optional[str] = None,
+        max_split: Optional[int] = None,
+        scheduled: Optional[str] = None
+    ) -> Dict:
         """
-        Send SMS message
+        SMS 발송
 
         Args:
-            to: Recipient phone number (with country code, e.g., +821012345678)
-            message: SMS message content (max 160 chars per segment)
-            from_: Sender ID (optional)
-            message_id: Custom message ID (optional)
+            message: 메시지 내용
+            to: 수신 번호 (국가 코드 포함: +821012345678)
+            from_: 발신 번호 (선택사항)
+            send_at: 예약 발송 시간 (YYYY-MM-DD HH:MM:SS)
+            validity: 유효 시간 (분)
+            reply_type: 답장 유형
+            max_split: 최대 분할 개수
+            scheduled: 예약 발송 여부
 
         Returns:
-            Dict with response including:
-                - success: Boolean
-                - message_id: Message ID
-                - recipients: List of recipient results
-                - cost: SMS cost
+            발송된 메시지 정보
+
+        Raises:
+            BurstSMSAPIError: API 오류 발생 시
         """
-        url = f"{self.base_url}/send-sms.json"
+        if not message:
+            raise ValueError("message is required")
+        if not to:
+            raise ValueError("to (recipient number) is required")
 
         data = {
-            'api_key': self.api_key,
-            'to': to,
-            'message': message
+            'message': message,
+            'to': to
         }
 
-        if from_ is not None:
+        if from_:
             data['from'] = from_
-        if message_id is not None:
-            data['message_id'] = message_id
+        if send_at:
+            data['send_at'] = send_at
+        if validity:
+            data['validity'] = validity
+        if reply_type:
+            data['reply_type'] = reply_type
+        if max_split:
+            data['max_split'] = max_split
+        if scheduled:
+            data['scheduled'] = scheduled
 
-        try:
-            response = requests.post(url, data=data, timeout=self.timeout)
-            return self._handle_response(response)
-        except requests.exceptions.RequestException as e:
-            raise ValueError(f"Failed to send SMS: {str(e)}")
-
-    def retrieve_messages(
-        self,
-        message_id: str = None,
-        from_: str = None,
-        to: str = None,
-        date_from: str = None,
-        date_to: str = None,
-        limit: int = 20,
-        offset: int = 0
-    ) -> Dict[str, Any]:
-        """
-        Retrieve sent messages
-
-        Args:
-            message_id: Filter by message ID (optional)
-            from_: Filter by sender (optional)
-            to: Filter by recipient (optional)
-            date_from: Filter by start date (YYYY-MM-DD)
-            date_to: Filter by end date (YYYY-MM-DD)
-            limit: Number of messages to return
-            offset: Offset for pagination
-
-        Returns:
-            Dict with messages list
-        """
-        url = f"{self.base_url}/get-sms.json"
-
-        params = {
-            'api_key': self.api_key,
-            'limit': limit,
-            'offset': offset
-        }
-
-        if message_id is not None:
-            params['message_id'] = message_id
-        if from_ is not None:
-            params['from'] = from_
-        if to is not None:
-            params['to'] = to
-        if date_from is not None:
-            params['date_from'] = date_from
-        if date_to is not None:
-            params['date_to'] = date_to
-
-        try:
-            response = requests.get(url, params=params, timeout=self.timeout)
-            return self._handle_response(response)
-        except requests.exceptions.RequestException as e:
-            raise ValueError(f"Failed to retrieve messages: {str(e)}")
+        return self._make_request('POST', '/send-sms.json', data=data)
 
     def list_related_messages(
         self,
         message_id: str,
-        limit: int = 20,
+        limit: int = 100,
         offset: int = 0
-    ) -> Dict[str, Any]:
+    ) -> Dict:
         """
-        List messages related to a specific message
+        관련 메시지 목록 조회
 
         Args:
-            message_id: Original message ID
-            limit: Number of messages to return
-            offset: Offset for pagination
+            message_id: 메시지 ID
+            limit: 최대 반환 개수
+            offset: 오프셋
 
         Returns:
-            Dict with related messages list
+            관련 메시지 목록
+
+        Raises:
+            BurstSMSAPIError: API 오류 발생 시
         """
-        url = f"{self.base_url}/get-sms.json"
+        if not message_id:
+            raise ValueError("message_id is required")
 
         params = {
-            'api_key': self.api_key,
             'message_id': message_id,
-            'limit': limit,
+            'limit': min(limit, 1000),
             'offset': offset
         }
 
-        try:
-            response = requests.get(url, params=params, timeout=self.timeout)
-            return self._handle_response(response)
-        except requests.exceptions.RequestException as e:
-            raise ValueError(f"Failed to list related messages: {str(e)}")
+        return self._make_request('GET', '/get-sms-messages.json', params=params)
 
-    def get_message_status(self, message_id: str) -> Dict[str, Any]:
+    def retrieve_messages(
+        self,
+        message_id: Optional[str] = None,
+        message_ids: Optional[List[str]] = None,
+        to: Optional[str] = None,
+        from_: Optional[str] = None,
+        start_date: Optional[str] = None,
+        end_date: Optional[str] = None,
+        limit: int = 100,
+        offset: int = 0,
+        status: Optional[str] = None
+    ) -> Dict:
         """
-        Get status of a specific message
+        메시지 조회
 
         Args:
-            message_id: Message ID
+            message_id: 단일 메시지 ID
+            message_ids: 메시지 ID 목록
+            to: 수신 번호와 매칭
+            from_: 발신 번호와 매칭
+            start_date: 시작 날짜 (YYYY-MM-DD)
+            end_date: 종료 날짜 (YYYY-MM-DD)
+            limit: 최대 반환 개수
+            offset: 오프셋
+            status: 상태 필터
 
         Returns:
-            Dict with message status
-        """
-        url = f"{self.base_url}/get-sms.json"
+            메시지 목록
 
+        Raises:
+            BurstSMSAPIError: API 오류 발생 시
+        """
         params = {
-            'api_key': self.api_key,
-            'message_id': message_id
+            'limit': min(limit, 1000),
+            'offset': offset
         }
 
-        try:
-            response = requests.get(url, params=params, timeout=self.timeout)
-            return self._handle_response(response)
-        except requests.exceptions.RequestException as e:
-            raise ValueError(f"Failed to get message status: {str(e)}")
+        if message_id:
+            params['message_id'] = message_id
+        if message_ids:
+            params['message_ids'] = ','.join(message_ids)
+        if to:
+            params['to'] = to
+        if from_:
+            params['from'] = from_
+        if start_date:
+            params['start_date'] = start_date
+        if end_date:
+            params['end_date'] = end_date
+        if status:
+            params['status'] = status
 
+        return self._make_request('GET', '/get-sms-messages.json', params=params)
 
-class BurstSMSWebhookHandler:
-    """Webhook handler for Burst SMS events"""
+    # ===== WEBHOOK HANDLING =====
 
-    @staticmethod
-    def verify_webhook_signature(payload: bytes, signature: str, webhook_secret: str) -> bool:
+    def verify_webhook_signature(
+        self,
+        payload: str,
+        signature: str,
+        webhook_secret: str
+    ) -> bool:
         """
-        Verify webhook signature
+        Webhook 시그니처 검증
 
         Args:
-            payload: Raw request payload
-            signature: X-BurstSMS-Signature header
-            webhook_secret: Webhook secret key
+            payload: Webhook payload (json string)
+            signature: X-Signature 헤더 값
+            webhook_secret: Webhook secret
 
         Returns:
-            True if signature is valid
+            시그니처 유효성 여부
         """
-        if not signature or not webhook_secret:
-            return False
+        payload_bytes = payload.encode('utf-8')
 
-        # Calculate expected signature
         expected_signature = hmac.new(
-            webhook_secret.encode(),
-            payload,
+            webhook_secret.encode('utf-8'),
+            payload_bytes,
             hashlib.sha256
         ).hexdigest()
 
-        return hmac.compare_digest(signature, expected_signature)
+        return hmac.compare_digest(expected_signature, signature.lstrip('sha256='))
 
-    @staticmethod
-    def parse_incoming_message(data: Dict[str, Any]) -> Dict[str, Any]:
+    def handle_new_message_webhook(
+        self,
+        payload: Dict,
+        signature: Optional[str] = None,
+        webhook_secret: Optional[str] = None
+    ) -> Dict:
         """
-        Parse incoming message webhook data
+        New Message Webhook 이벤트 처리
 
         Args:
-            data: Webhook payload
+            payload: Webhook payload
+            signature: X-Signature 헤더 값
+            webhook_secret: Webhook secret
 
         Returns:
-            Parsed message data
+            처리된 이벤트信息
         """
-        return {
-            'message_id': data.get('message_id'),
-            'from': data.get('from'),
-            'to': data.get('to'),
-            'message': data.get('message'),
-            'timestamp': data.get('timestamp'),
-            'keyword': data.get('keyword'),
-            'custom': data.get('custom')
+        if signature and webhook_secret:
+            payload_str = str(payload)
+            if not self.verify_webhook_signature(payload_str, signature, webhook_secret):
+                raise BurstSMSAPIError("Invalid webhook signature")
+
+        event_data = {
+            'event_type': 'new_message',
+            'timestamp': payload.get('timestamp'),
+            'message_id': payload.get('message_id'),
+            'from': payload.get('from'),
+            'to': payload.get('to'),
+            'message': payload.get('message'),
+            'status': payload.get('status'),
+            'raw_payload': payload
         }
 
-    @staticmethod
-    def parse_new_message(data: Dict[str, Any]) -> Dict[str, Any]:
+        return event_data
+
+    def handle_received_message_webhook(
+        self,
+        payload: Dict,
+        signature: Optional[str] = None,
+        webhook_secret: Optional[str] = None
+    ) -> Dict:
         """
-        Parse new message trigger webhook data
+        Received Message Webhook 이벤트 처리
 
         Args:
-            data: Webhook payload
+            payload: Webhook payload
+            signature: X-Signature 헤더 값
+            webhook_secret: Webhook secret
 
         Returns:
-            Parsed message data
+            처리된 이벤트信息
         """
-        return {
-            'message_id': data.get('message_id'),
-            'status': data.get('status'),
-            'recipient': data.get('recipient'),
-            'sent_at': data.get('sent_at'),
-            'delivered_at': data.get('delivered_at'),
-            'cost': data.get('cost')
+        if signature and webhook_secret:
+            payload_str = str(payload)
+            if not self.verify_webhook_signature(payload_str, signature, webhook_secret):
+                raise BurstSMSAPIError("Invalid webhook signature")
+
+        event_data = {
+            'event_type': 'received_message',
+            'timestamp': payload.get('timestamp'),
+            'message_id': payload.get('message_id'),
+            'from': payload.get('from'),
+            'to': payload.get('to'),
+            'message': payload.get('message'),
+            'raw_payload': payload
         }
 
+        return event_data
 
-# Flask Webhook Server Example
-def create_webhook_server(webhook_secret: str = None, host: str = '0.0.0.0', port: int = 8080):
-    """
-    Create Flask server for Burst SMS webhooks
+    # ===== CLOSE =====
 
-    Args:
-        webhook_secret: Webhook secret for signature verification
-        host: Server host
-        port: Server port
-    """
-    app = Flask(__name__)
-
-    @app.route('/webhook/received-message', methods=['POST'])
-    def handle_received_message():
-        """Handle received message webhook"""
-        if webhook_secret:
-            signature = request.headers.get('X-BurstSMS-Signature')
-            payload = request.data
-
-            if not BurstSMSWebhookHandler.verify_webhook_signature(payload, signature, webhook_secret):
-                return jsonify({'error': 'Invalid signature'}), 401
-
-        try:
-            data = request.json
-            parsed = BurstSMSWebhookHandler.parse_incoming_message(data)
-            print(f"Received message: {parsed}")
-            return jsonify({'status': 'success'}), 200
-        except Exception as e:
-            return jsonify({'error': str(e)}), 400
-
-    @app.route('/webhook/new-message', methods=['POST'])
-    def handle_new_message():
-        """Handle new message webhook"""
-        if webhook_secret:
-            signature = request.headers.get('X-BurstSMS-Signature')
-            payload = request.data
-
-            if not BurstSMSWebhookHandler.verify_webhook_signature(payload, signature, webhook_secret):
-                return jsonify({'error': 'Invalid signature'}), 401
-
-        try:
-            data = request.json
-            parsed = BurstSMSWebhookHandler.parse_new_message(data)
-            print(f"New message: {parsed}")
-            return jsonify({'status': 'success'}), 200
-        except Exception as e:
-            return jsonify({'error': str(e)}), 400
-
-    @app.route('/health', methods=['GET'])
-    def health():
-        """Health check endpoint"""
-        return jsonify({'status': 'healthy'}), 200
-
-    app.run(host=host, port=port)
-
-
-# CLI Example
-if __name__ == "__main__":
-    import sys
-
-    if len(sys.argv) < 3:
-        print("Usage:")
-        print("  Send SMS: python burst_sms_client.py send <api_key> <to_number> <message> [sender_id]")
-        print("  Get messages: python burst_sms_client.py get <api_key>")
-        print("  Get message status: python burst_sms_client.py status <api_key> <message_id>")
-        print("  Start webhook server: python burst_sms_client.py webhook [webhook_secret] [port]")
-        sys.exit(1)
-
-    api_key = sys.argv[2]
-
-    if sys.argv[1] == "send":
-        to = sys.argv[3]
-        message = sys.argv[4]
-        from_ = sys.argv[5] if len(sys.argv) > 5 else None
-
-        client = BurstSMSClient(api_key)
-        result = client.send_sms(to, message, from_=from_)
-
-        if result.get('success'):
-            print(f"SMS sent successfully")
-            print(f"Message ID: {result.get('message_id')}")
-            print(f"Cost: {result.get('cost')}")
-        else:
-            print(f"Failed to send SMS: {result}")
-
-    elif sys.argv[1] == "get":
-        message_id = sys.argv[3] if len(sys.argv) > 3 else None
-
-        client = BurstSMSClient(api_key)
-        result = client.retrieve_messages(message_id=message_id)
-
-        messages = result.get('messages', result.get('sms_list', []))
-        print(f"Total messages: {len(messages)}")
-        for msg in messages[:10]:
-            print(f"  - {msg.get('message_id')}: {msg.get('status')}")
-
-    elif sys.argv[1] == "status":
-        message_id = sys.argv[3]
-
-        client = BurstSMSClient(api_key)
-        result = client.get_message_status(message_id)
-
-        print(f"Message ID: {result.get('message_id')}")
-        print(f"Status: {result.get('status')}")
-        print(f"Recipient: {result.get('recipient')}")
-
-    elif sys.argv[1] == "webhook":
-        webhook_secret = sys.argv[3] if len(sys.argv) > 3 else None
-        port = int(sys.argv[4]) if len(sys.argv) > 4 else 8080
-
-        print(f"Starting webhook server on port {port}...")
-        if webhook_secret:
-            print(f"Webhook signature verification enabled")
-        create_webhook_server(webhook_secret, port=port)
+    def close(self):
+        """
+        클라이언트 리소스 정리
+        """
+        self.session = None
