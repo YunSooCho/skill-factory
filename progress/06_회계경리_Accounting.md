@@ -1,4 +1,4 @@
-# 06_회계경리_Accounting (37/49)
+# 06_회계경리_Accounting (49/49)
 
 - [x] bakuraku-denshichobohozon
 - [x] bakuraku-kyotsukanri
@@ -37,15 +37,15 @@
 - [x] pca-cloud-accounting
 - [x] pca_cloud_accounting_hyper
 - [x] pennylane
-- [ ] quaderno
-- [ ] quipu-token
-- [ ] rakuraku-meisai
-- [ ] sevdesk
-- [ ] smartbill
-- [ ] splitwise
-- [ ] tokium
-- [ ] tovas
-- [ ] upbooks_api
-- [ ] xero
-- [ ] zoho-books
-- [ ] zoho-invoice
+- [x] quaderno
+- [x] quipu-token
+- [x] rakuraku-meisai
+- [x] sevdesk
+- [x] smartbill
+- [x] splitwise
+- [x] tokium
+- [x] tovas
+- [x] upbooks_api
+- [x] xero
+- [x] zoho-books
+- [x] zoho-invoice
