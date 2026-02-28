@@ -4524,6 +4524,106 @@
       },
       "implemented_at": "2026-02-28T09:36:17.358866+09:00",
       "analyzed_at": "2026-02-28T09:36:17.358866+09:00"
+    },
+    "chumonbunjo-cloud.md": {
+      "service_name": "Chumonbunjo Cloud",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T09:56:12.535952",
+      "code_file": "github/skill-factory/repo/chumonbunjo-cloud/chumonbunjo_client.py",
+      "api_count": 28
+    },
+    "clio_manage.md": {
+      "service_name": "Clio Manage",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T09:56:12.535952",
+      "code_file": "github/skill-factory/repo/clio_manage/clio_manage_client.py",
+      "api_count": 19
+    },
+    "close.md": {
+      "service_name": "Close",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T09:56:12.535952",
+      "code_file": "github/skill-factory/repo/close/close_client.py",
+      "api_count": 19
+    },
+    "cloze.md": {
+      "service_name": "Cloze",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T09:56:12.535952",
+      "code_file": "github/skill-factory/repo/cloze/cloze_client.py",
+      "api_count": 14
+    },
+    "cogmento.md": {
+      "service_name": "Cogmento",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T09:56:12.535952",
+      "code_file": "github/skill-factory/repo/cogmento/cogmento_client.py",
+      "api_count": 20
+    },
+    "contactship_ai.md": {
+      "service_name": "Contactship AI",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T09:56:12.535952",
+      "code_file": "github/skill-factory/repo/contactship_ai/contactship_ai_client.py",
+      "api_count": 7
+    },
+    "copper.md": {
+      "service_name": "Copper",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T09:56:12.535952",
+      "code_file": "github/skill-factory/repo/copper/copper_client.py",
+      "api_count": 12
+    },
+    "cyzen.md": {
+      "service_name": "Cyzen",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T09:56:12.535952",
+      "code_file": "github/skill-factory/repo/cyzen/cyzen_client.py",
+      "api_count": 17
+    },
+    "dropcontact.md": {
+      "service_name": "Dropcontact",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T09:56:12.535952",
+      "code_file": "github/skill-factory/repo/dropcontact/dropcontact_client.py",
+      "api_count": 2
+    },
+    "dynamics-crm.md": {
+      "service_name": "Dynamics CRM",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T09:56:12.535952",
+      "code_file": "github/skill-factory/repo/dynamics-crm/dynamics_crm_client.py",
+      "api_count": 23
     }
   },
   "last_updated": "2026-02-28 08:48:08"
