@@ -1,21 +1,21 @@
-# 12_EC_POS시스템_EC-POS (0/19)
+# 12_EC_POS시스템_EC-POS (19/19)
 
-- [ ] amazon
-- [ ] assist_tencho
-- [ ] base
-- [ ] bcart
-- [ ] commerce_robo
-- [ ] digistore
-- [ ] dynamic_mockups
-- [ ] ecforce
-- [ ] loyverse
-- [ ] php_point_of_sale
-- [ ] printify
-- [ ] rakuraku_btob
-- [ ] rakuraku_repeat
-- [ ] repairshopr
-- [ ] shopify
-- [ ] smaregi-api
-- [ ] snipcart
-- [ ] ticket_tailor
-- [ ] woocommerce
+- [x] amazon
+- [x] assist_tencho
+- [x] base
+- [x] bcart
+- [x] commerce_robo
+- [x] digistore
+- [x] dynamic_mockups
+- [x] ecforce
+- [x] loyverse
+- [x] php_point_of_sale
+- [x] printify
+- [x] rakuraku_btob
+- [x] rakuraku_repeat
+- [x] repairshopr
+- [x] shopify
+- [x] smaregi-api
+- [x] snipcart
+- [x] ticket_tailor
+- [x] woocommerce
