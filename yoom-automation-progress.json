@@ -13352,6 +13352,766 @@
           "status": "pending"
         }
       ]
+    },
+    "kairos-sales.md": {
+      "service_name": "Kairos Sales",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "REST API with Bearer token authentication",
+      "api_actions": {
+        "案件に営業ログを追加": {
+          "status": "completed",
+          "code_file": "repo/kairos-sales/kairos_sales_client.py"
+        },
+        "会社にタグを追加": {
+          "status": "completed",
+          "code_file": "repo/kairos-sales/kairos_sales_client.py"
+        },
+        "案件を作成": {
+          "status": "completed",
+          "code_file": "repo/kairos-sales/kairos_sales_client.py"
+        },
+        "会社を作成": {
+          "status": "completed",
+          "code_file": "repo/kairos-sales/kairos_sales_client.py"
+        },
+        "顧客を削除": {
+          "status": "completed",
+          "code_file": "repo/kairos-sales/kairos_sales_client.py"
+        },
+        "案件を更新": {
+          "status": "completed",
+          "code_file": "repo/kairos-sales/kairos_sales_client.py"
+        },
+        "会社を検索": {
+          "status": "completed",
+          "code_file": "repo/kairos-sales/kairos_sales_client.py"
+        },
+        "顧客を更新": {
+          "status": "completed",
+          "code_file": "repo/kairos-sales/kairos_sales_client.py"
+        },
+        "顧客にタグを追加": {
+          "status": "completed",
+          "code_file": "repo/kairos-sales/kairos_sales_client.py"
+        },
+        "案件にToDoを追加": {
+          "status": "completed",
+          "code_file": "repo/kairos-sales/kairos_sales_client.py"
+        },
+        "会社のタグを削除": {
+          "status": "completed",
+          "code_file": "repo/kairos-sales/kairos_sales_client.py"
+        },
+        "顧客を取得": {
+          "status": "completed",
+          "code_file": "repo/kairos-sales/kairos_sales_client.py"
+        },
+        "顧客のタグを削除": {
+          "status": "completed",
+          "code_file": "repo/kairos-sales/kairos_sales_client.py"
+        },
+        "会社を削除": {
+          "status": "completed",
+          "code_file": "repo/kairos-sales/kairos_sales_client.py"
+        },
+        "顧客にToDoを追加": {
+          "status": "completed",
+          "code_file": "repo/kairos-sales/kairos_sales_client.py"
+        },
+        "会社を取得": {
+          "status": "completed",
+          "code_file": "repo/kairos-sales/kairos_sales_client.py"
+        },
+        "案件を削除": {
+          "status": "completed",
+          "code_file": "repo/kairos-sales/kairos_sales_client.py"
+        },
+        "案件を検索": {
+          "status": "completed",
+          "code_file": "repo/kairos-sales/kairos_sales_client.py"
+        },
+        "顧客を作成": {
+          "status": "completed",
+          "code_file": "repo/kairos-sales/kairos_sales_client.py"
+        },
+        "顧客に営業ログを追加": {
+          "status": "completed",
+          "code_file": "repo/kairos-sales/kairos_sales_client.py"
+        },
+        "顧客を検索": {
+          "status": "completed",
+          "code_file": "repo/kairos-sales/kairos_sales_client.py"
+        },
+        "案件を取得": {
+          "status": "completed",
+          "code_file": "repo/kairos-sales/kairos_sales_client.py"
+        },
+        "会社を更新": {
+          "status": "completed",
+          "code_file": "repo/kairos-sales/kairos_sales_client.py"
+        }
+      },
+      "implemented_at": "2026-02-28T11:00:00.000000"
+    },
+    "keap.md": {
+      "service_name": "Keap",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "REST API with authentication",
+      "api_actions": {
+        "Update Sales Opportunity": {
+          "status": "completed",
+          "code_file": "repo/keap/keap_client.py"
+        },
+        "Create Product": {
+          "status": "completed",
+          "code_file": "repo/keap/keap_client.py"
+        },
+        "Delete Note": {
+          "status": "completed",
+          "code_file": "repo/keap/keap_client.py"
+        },
+        "Get Notes": {
+          "status": "completed",
+          "code_file": "repo/keap/keap_client.py"
+        },
+        "Search Contacts": {
+          "status": "completed",
+          "code_file": "repo/keap/keap_client.py"
+        },
+        "Create Task": {
+          "status": "completed",
+          "code_file": "repo/keap/keap_client.py"
+        },
+        "Delete Contact": {
+          "status": "completed",
+          "code_file": "repo/keap/keap_client.py"
+        },
+        "Update Note": {
+          "status": "completed",
+          "code_file": "repo/keap/keap_client.py"
+        },
+        "Delete Task": {
+          "status": "completed",
+          "code_file": "repo/keap/keap_client.py"
+        },
+        "Update Product": {
+          "status": "completed",
+          "code_file": "repo/keap/keap_client.py"
+        },
+        "Create Note": {
+          "status": "completed",
+          "code_file": "repo/keap/keap_client.py"
+        },
+        "Create Contact": {
+          "status": "completed",
+          "code_file": "repo/keap/keap_client.py"
+        },
+        "Create Sales Opportunity": {
+          "status": "completed",
+          "code_file": "repo/keap/keap_client.py"
+        },
+        "Get Product": {
+          "status": "completed",
+          "code_file": "repo/keap/keap_client.py"
+        },
+        "Search Products": {
+          "status": "completed",
+          "code_file": "repo/keap/keap_client.py"
+        },
+        "Get Task": {
+          "status": "completed",
+          "code_file": "repo/keap/keap_client.py"
+        },
+        "Search Opportunities": {
+          "status": "completed",
+          "code_file": "repo/keap/keap_client.py"
+        },
+        "Remove Tag from Contacts": {
+          "status": "completed",
+          "code_file": "repo/keap/keap_client.py"
+        },
+        "Delete Product": {
+          "status": "completed",
+          "code_file": "repo/keap/keap_client.py"
+        },
+        "Apply Tag to Contacts": {
+          "status": "completed",
+          "code_file": "repo/keap/keap_client.py"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "code_file": "repo/keap/keap_client.py"
+        },
+        "Search Tasks": {
+          "status": "completed",
+          "code_file": "repo/keap/keap_client.py"
+        },
+        "Update Task": {
+          "status": "completed",
+          "code_file": "repo/keap/keap_client.py"
+        },
+        "Get Sales Opportunity": {
+          "status": "completed",
+          "code_file": "repo/keap/keap_client.py"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "code_file": "repo/keap/keap_client.py"
+        }
+      },
+      "implemented_at": "2026-02-28T11:06:59.169138"
+    },
+    "kommo.md": {
+      "service_name": "Kommo",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "REST API with authentication",
+      "api_actions": {
+        "Update Note": {
+          "status": "completed",
+          "code_file": "repo/kommo/kommo_client.py"
+        },
+        "Add Note": {
+          "status": "completed",
+          "code_file": "repo/kommo/kommo_client.py"
+        },
+        "Search Tags": {
+          "status": "completed",
+          "code_file": "repo/kommo/kommo_client.py"
+        },
+        "Search Notes by Entity Type": {
+          "status": "completed",
+          "code_file": "repo/kommo/kommo_client.py"
+        },
+        "Add Task": {
+          "status": "completed",
+          "code_file": "repo/kommo/kommo_client.py"
+        },
+        "Search Contacts": {
+          "status": "completed",
+          "code_file": "repo/kommo/kommo_client.py"
+        },
+        "Add Lead": {
+          "status": "completed",
+          "code_file": "repo/kommo/kommo_client.py"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "code_file": "repo/kommo/kommo_client.py"
+        },
+        "Update Company": {
+          "status": "completed",
+          "code_file": "repo/kommo/kommo_client.py"
+        },
+        "Search Tasks": {
+          "status": "completed",
+          "code_file": "repo/kommo/kommo_client.py"
+        },
+        "Search Leads": {
+          "status": "completed",
+          "code_file": "repo/kommo/kommo_client.py"
+        },
+        "Add Contact": {
+          "status": "completed",
+          "code_file": "repo/kommo/kommo_client.py"
+        },
+        "Update Task": {
+          "status": "completed",
+          "code_file": "repo/kommo/kommo_client.py"
+        },
+        "Update Lead": {
+          "status": "completed",
+          "code_file": "repo/kommo/kommo_client.py"
+        },
+        "Add Company": {
+          "status": "completed",
+          "code_file": "repo/kommo/kommo_client.py"
+        },
+        "Search Companies": {
+          "status": "completed",
+          "code_file": "repo/kommo/kommo_client.py"
+        },
+        "Add Tags to Entity": {
+          "status": "completed",
+          "code_file": "repo/kommo/kommo_client.py"
+        },
+        "Search Notes by Entity ID": {
+          "status": "completed",
+          "code_file": "repo/kommo/kommo_client.py"
+        }
+      },
+      "implemented_at": "2026-02-28T11:06:59.169146"
+    },
+    "mixmax.md": {
+      "service_name": "Mixmax",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "REST API with authentication",
+      "api_actions": {
+        "Cancel Active Sequence Recipients": {
+          "status": "completed",
+          "code_file": "repo/mixmax/mixmax_client.py"
+        },
+        "Add Recipients to Sequence": {
+          "status": "completed",
+          "code_file": "repo/mixmax/mixmax_client.py"
+        },
+        "Send Message": {
+          "status": "completed",
+          "code_file": "repo/mixmax/mixmax_client.py"
+        },
+        "Get Message": {
+          "status": "completed",
+          "code_file": "repo/mixmax/mixmax_client.py"
+        },
+        "Create Email Draft": {
+          "status": "completed",
+          "code_file": "repo/mixmax/mixmax_client.py"
+        },
+        "Get Recipient Sequence": {
+          "status": "completed",
+          "code_file": "repo/mixmax/mixmax_client.py"
+        },
+        "List Messages": {
+          "status": "completed",
+          "code_file": "repo/mixmax/mixmax_client.py"
+        },
+        "Search Sequence": {
+          "status": "completed",
+          "code_file": "repo/mixmax/mixmax_client.py"
+        }
+      },
+      "implemented_at": "2026-02-28T11:06:59.169148"
+    },
+    "monica-crm.md": {
+      "service_name": "Monica CRM",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "REST API with authentication",
+      "api_actions": {
+        "Create Contact": {
+          "status": "completed",
+          "code_file": "repo/monica-crm/monica_crm_client.py"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "code_file": "repo/monica-crm/monica_crm_client.py"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "code_file": "repo/monica-crm/monica_crm_client.py"
+        },
+        "Delete Contact": {
+          "status": "completed",
+          "code_file": "repo/monica-crm/monica_crm_client.py"
+        },
+        "Search Contacts": {
+          "status": "completed",
+          "code_file": "repo/monica-crm/monica_crm_client.py"
+        },
+        "Create Note": {
+          "status": "completed",
+          "code_file": "repo/monica-crm/monica_crm_client.py"
+        },
+        "Get Notes": {
+          "status": "completed",
+          "code_file": "repo/monica-crm/monica_crm_client.py"
+        },
+        "Create Call": {
+          "status": "completed",
+          "code_file": "repo/monica-crm/monica_crm_client.py"
+        },
+        "Create Activity": {
+          "status": "completed",
+          "code_file": "repo/monica-crm/monica_crm_client.py"
+        },
+        "Get Activities": {
+          "status": "completed",
+          "code_file": "repo/monica-crm/monica_crm_client.py"
+        },
+        "Create Deal": {
+          "status": "completed",
+          "code_file": "repo/monica-crm/monica_crm_client.py"
+        },
+        "Get Deal": {
+          "status": "completed",
+          "code_file": "repo/monica-crm/monica_crm_client.py"
+        },
+        "Update Deal": {
+          "status": "completed",
+          "code_file": "repo/monica-crm/monica_crm_client.py"
+        },
+        "Delete Deal": {
+          "status": "completed",
+          "code_file": "repo/monica-crm/monica_crm_client.py"
+        },
+        "Search Deals": {
+          "status": "completed",
+          "code_file": "repo/monica-crm/monica_crm_client.py"
+        },
+        "Create Task": {
+          "status": "completed",
+          "code_file": "repo/monica-crm/monica_crm_client.py"
+        },
+        "Get Tasks": {
+          "status": "completed",
+          "code_file": "repo/monica-crm/monica_crm_client.py"
+        },
+        "Update Task": {
+          "status": "completed",
+          "code_file": "repo/monica-crm/monica_crm_client.py"
+        },
+        "Complete Task": {
+          "status": "completed",
+          "code_file": "repo/monica-crm/monica_crm_client.py"
+        },
+        "Create Reminder": {
+          "status": "completed",
+          "code_file": "repo/monica-crm/monica_crm_client.py"
+        },
+        "Get Reminders": {
+          "status": "completed",
+          "code_file": "repo/monica-crm/monica_crm_client.py"
+        },
+        "Create Tag": {
+          "status": "completed",
+          "code_file": "repo/monica-crm/monica_crm_client.py"
+        },
+        "Add Tag to Contact": {
+          "status": "completed",
+          "code_file": "repo/monica-crm/monica_crm_client.py"
+        },
+        "Remove Tag from Contact": {
+          "status": "completed",
+          "code_file": "repo/monica-crm/monica_crm_client.py"
+        },
+        "Upload Avatar": {
+          "status": "completed",
+          "code_file": "repo/monica-crm/monica_crm_client.py"
+        }
+      },
+      "implemented_at": "2026-02-28T11:06:59.169154"
+    },
+    "moskit.md": {
+      "service_name": "Moskit",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "REST API with authentication",
+      "api_actions": {
+        "Delete Deal": {
+          "status": "completed",
+          "code_file": "repo/moskit/moskit_client.py"
+        },
+        "Create Deal": {
+          "status": "completed",
+          "code_file": "repo/moskit/moskit_client.py"
+        },
+        "Get Company": {
+          "status": "completed",
+          "code_file": "repo/moskit/moskit_client.py"
+        },
+        "Delete Activity": {
+          "status": "completed",
+          "code_file": "repo/moskit/moskit_client.py"
+        },
+        "Get Activity": {
+          "status": "completed",
+          "code_file": "repo/moskit/moskit_client.py"
+        },
+        "Search Company": {
+          "status": "completed",
+          "code_file": "repo/moskit/moskit_client.py"
+        },
+        "Search Contact": {
+          "status": "completed",
+          "code_file": "repo/moskit/moskit_client.py"
+        },
+        "Search Deal": {
+          "status": "completed",
+          "code_file": "repo/moskit/moskit_client.py"
+        },
+        "Delete Contact": {
+          "status": "completed",
+          "code_file": "repo/moskit/moskit_client.py"
+        },
+        "Delete Company": {
+          "status": "completed",
+          "code_file": "repo/moskit/moskit_client.py"
+        },
+        "Create Activity": {
+          "status": "completed",
+          "code_file": "repo/moskit/moskit_client.py"
+        },
+        "Create Company": {
+          "status": "completed",
+          "code_file": "repo/moskit/moskit_client.py"
+        },
+        "Update Activity": {
+          "status": "completed",
+          "code_file": "repo/moskit/moskit_client.py"
+        },
+        "Create Contact": {
+          "status": "completed",
+          "code_file": "repo/moskit/moskit_client.py"
+        },
+        "Update Deal": {
+          "status": "completed",
+          "code_file": "repo/moskit/moskit_client.py"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "code_file": "repo/moskit/moskit_client.py"
+        },
+        "Update Company": {
+          "status": "completed",
+          "code_file": "repo/moskit/moskit_client.py"
+        },
+        "Get Deal": {
+          "status": "completed",
+          "code_file": "repo/moskit/moskit_client.py"
+        },
+        "Search Activity": {
+          "status": "completed",
+          "code_file": "repo/moskit/moskit_client.py"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "code_file": "repo/moskit/moskit_client.py"
+        }
+      },
+      "implemented_at": "2026-02-28T11:06:59.169158"
+    },
+    "moxie.md": {
+      "service_name": "Moxie",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "REST API with authentication",
+      "api_actions": {
+        "Create Client": {
+          "status": "completed",
+          "code_file": "repo/moxie/moxie_client.py"
+        },
+        "Add Comment to Ticket": {
+          "status": "completed",
+          "code_file": "repo/moxie/moxie_client.py"
+        },
+        "Create Form Submission": {
+          "status": "completed",
+          "code_file": "repo/moxie/moxie_client.py"
+        },
+        "Approve Deliverable": {
+          "status": "completed",
+          "code_file": "repo/moxie/moxie_client.py"
+        },
+        "Create Contact": {
+          "status": "completed",
+          "code_file": "repo/moxie/moxie_client.py"
+        },
+        "Search Client": {
+          "status": "completed",
+          "code_file": "repo/moxie/moxie_client.py"
+        },
+        "Search Client Invoices": {
+          "status": "completed",
+          "code_file": "repo/moxie/moxie_client.py"
+        },
+        "Create Project": {
+          "status": "completed",
+          "code_file": "repo/moxie/moxie_client.py"
+        },
+        "Upload File": {
+          "status": "completed",
+          "code_file": "repo/moxie/moxie_client.py"
+        },
+        "Create or Update Calendar Event": {
+          "status": "completed",
+          "code_file": "repo/moxie/moxie_client.py"
+        },
+        "Create Expense": {
+          "status": "completed",
+          "code_file": "repo/moxie/moxie_client.py"
+        },
+        "Create Invoice": {
+          "status": "completed",
+          "code_file": "repo/moxie/moxie_client.py"
+        },
+        "Create Ticket": {
+          "status": "completed",
+          "code_file": "repo/moxie/moxie_client.py"
+        },
+        "Search Projects": {
+          "status": "completed",
+          "code_file": "repo/moxie/moxie_client.py"
+        },
+        "Create Task": {
+          "status": "completed",
+          "code_file": "repo/moxie/moxie_client.py"
+        },
+        "Search Contact": {
+          "status": "completed",
+          "code_file": "repo/moxie/moxie_client.py"
+        }
+      },
+      "implemented_at": "2026-02-28T11:06:59.169161"
+    },
+    "onepagecrm.md": {
+      "service_name": "OnepageCRM",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "REST API with authentication",
+      "api_actions": {
+        "Search Deals": {
+          "status": "completed",
+          "code_file": "repo/onepagecrm/onepagecrm_client.py"
+        },
+        "Create Contact": {
+          "status": "completed",
+          "code_file": "repo/onepagecrm/onepagecrm_client.py"
+        },
+        "Get Company": {
+          "status": "completed",
+          "code_file": "repo/onepagecrm/onepagecrm_client.py"
+        },
+        "Get Deal": {
+          "status": "completed",
+          "code_file": "repo/onepagecrm/onepagecrm_client.py"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "code_file": "repo/onepagecrm/onepagecrm_client.py"
+        },
+        "Create Deal": {
+          "status": "completed",
+          "code_file": "repo/onepagecrm/onepagecrm_client.py"
+        },
+        "Search Companies": {
+          "status": "completed",
+          "code_file": "repo/onepagecrm/onepagecrm_client.py"
+        },
+        "Create Note": {
+          "status": "completed",
+          "code_file": "repo/onepagecrm/onepagecrm_client.py"
+        },
+        "Create Action": {
+          "status": "completed",
+          "code_file": "repo/onepagecrm/onepagecrm_client.py"
+        },
+        "Search Contacts": {
+          "status": "completed",
+          "code_file": "repo/onepagecrm/onepagecrm_client.py"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "code_file": "repo/onepagecrm/onepagecrm_client.py"
+        },
+        "Update Deal": {
+          "status": "completed",
+          "code_file": "repo/onepagecrm/onepagecrm_client.py"
+        },
+        "Update Company": {
+          "status": "completed",
+          "code_file": "repo/onepagecrm/onepagecrm_client.py"
+        }
+      },
+      "implemented_at": "2026-02-28T11:06:59.169164"
+    },
+    "ontraport.md": {
+      "service_name": "Ontraport",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "REST API with authentication",
+      "api_actions": {
+        "Search Contact": {
+          "status": "completed",
+          "code_file": "repo/ontraport/ontraport_client.py"
+        },
+        "Create Task Message": {
+          "status": "completed",
+          "code_file": "repo/ontraport/ontraport_client.py"
+        },
+        "Create Contact": {
+          "status": "completed",
+          "code_file": "repo/ontraport/ontraport_client.py"
+        },
+        "Create Product": {
+          "status": "completed",
+          "code_file": "repo/ontraport/ontraport_client.py"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "code_file": "repo/ontraport/ontraport_client.py"
+        },
+        "Search Transaction": {
+          "status": "completed",
+          "code_file": "repo/ontraport/ontraport_client.py"
+        },
+        "Search Product": {
+          "status": "completed",
+          "code_file": "repo/ontraport/ontraport_client.py"
+        },
+        "Add Task to Contact": {
+          "status": "completed",
+          "code_file": "repo/ontraport/ontraport_client.py"
+        },
+        "Get Transaction": {
+          "status": "completed",
+          "code_file": "repo/ontraport/ontraport_client.py"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "code_file": "repo/ontraport/ontraport_client.py"
+        },
+        "Get Product": {
+          "status": "completed",
+          "code_file": "repo/ontraport/ontraport_client.py"
+        },
+        "Delete Contact": {
+          "status": "completed",
+          "code_file": "repo/ontraport/ontraport_client.py"
+        },
+        "Delete Product": {
+          "status": "completed",
+          "code_file": "repo/ontraport/ontraport_client.py"
+        },
+        "Update Product": {
+          "status": "completed",
+          "code_file": "repo/ontraport/ontraport_client.py"
+        }
+      },
+      "implemented_at": "2026-02-28T11:06:59.169175"
+    },
+    "pappers.md": {
+      "service_name": "Pappers",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "REST API with authentication",
+      "api_actions": {
+        "Search Company": {
+          "status": "completed",
+          "code_file": "repo/pappers/pappers_client.py"
+        },
+        "Get Company": {
+          "status": "completed",
+          "code_file": "repo/pappers/pappers_client.py"
+        },
+        "Download Document": {
+          "status": "completed",
+          "code_file": "repo/pappers/pappers_client.py"
+        }
+      },
+      "implemented_at": "2026-02-28T11:06:59.169176"
     }
   },
   "last_updated": "2026-02-28 10:59:11"
