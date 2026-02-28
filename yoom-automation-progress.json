@@ -21777,6 +21777,726 @@
           "status": "pending"
         }
       ]
+    },
+    "reverse_contact.md": {
+      "service_name": "Reverse_contact",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/reverse_contact/",
+      "api_actions": {
+        "Get LinkedIn Company": {
+          "status": "completed"
+        },
+        "Email Lookup": {
+          "status": "completed"
+        },
+        "Domain Lookup": {
+          "status": "completed"
+        },
+        "Get LinkedIn Profile": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
+    },
+    "rocketreach.md": {
+      "service_name": "RocketReach",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/rocketreach/",
+      "api_actions": {
+        "Bulk People Lookup": {
+          "status": "completed"
+        },
+        "Lookup Company": {
+          "status": "completed"
+        },
+        "Lookup Person": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
+    },
+    "satismeter.md": {
+      "service_name": "Satismeter",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/satismeter/",
+      "api_actions": {
+        "Add or Update User": {
+          "status": "completed"
+        },
+        "List Users": {
+          "status": "completed"
+        }
+      },
+      "triggers": {
+        "New Survey Response": {
+          "status": "completed"
+        }
+      }
+    },
+    "satori.md": {
+      "service_name": "Satori",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/satori/",
+      "api_actions": {
+        "Register Customer Action": {
+          "status": "completed"
+        },
+        "Register Customer": {
+          "status": "completed"
+        },
+        "Register or Update Customer": {
+          "status": "completed"
+        },
+        "Delete Customer": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
+    },
+    "scribeless.md": {
+      "service_name": "Scribeless",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/scribeless/",
+      "api_actions": {
+        "Create Recipient": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
+    },
+    "sender.md": {
+      "service_name": "Sender",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/sender/",
+      "api_actions": {
+        "Add Subscriber": {
+          "status": "completed"
+        },
+        "List Subscribers": {
+          "status": "completed"
+        },
+        "Add Subscribers to Group": {
+          "status": "completed"
+        },
+        "Delete Subscriber": {
+          "status": "completed"
+        },
+        "Get Subscriber": {
+          "status": "completed"
+        },
+        "Remove Subscribers from Group": {
+          "status": "completed"
+        },
+        "Update Subscriber": {
+          "status": "completed"
+        }
+      },
+      "triggers": {
+        "New Subscriber": {
+          "status": "completed"
+        },
+        "Updated Subscriber": {
+          "status": "completed"
+        },
+        "New Unsubscriber From Group": {
+          "status": "completed"
+        },
+        "New Subscriber in Group": {
+          "status": "completed"
+        },
+        "New Unsubscriber": {
+          "status": "completed"
+        }
+      }
+    },
+    "sendgrid.md": {
+      "service_name": "SendGrid",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/sendgrid/",
+      "api_actions": {
+        "Delete Contact": {
+          "status": "completed"
+        },
+        "Add Contact to List": {
+          "status": "completed"
+        },
+        "Search Contact": {
+          "status": "completed"
+        },
+        "Send Email": {
+          "status": "completed"
+        },
+        "Send Email with Attachment": {
+          "status": "completed"
+        },
+        "Create Contact List": {
+          "status": "completed"
+        },
+        "Get Bounce List": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
+    },
+    "sendpulse.md": {
+      "service_name": "SendPulse",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/sendpulse/",
+      "api_actions": {
+        "Add Email": {
+          "status": "completed"
+        },
+        "Add Email to Blacklist": {
+          "status": "completed"
+        },
+        "Search Contact": {
+          "status": "completed"
+        },
+        "Change Phone Number": {
+          "status": "completed"
+        },
+        "Add Phone Number": {
+          "status": "completed"
+        },
+        "Delete Phone Number": {
+          "status": "completed"
+        },
+        "Get Email Campaign Statistics": {
+          "status": "completed"
+        },
+        "Change Variables for Phone": {
+          "status": "completed"
+        },
+        "Update Variables for Phone Number": {
+          "status": "completed"
+        },
+        "Get Phone Number": {
+          "status": "completed"
+        },
+        "Delete Email": {
+          "status": "completed"
+        },
+        "Unsubscribe Mailing List": {
+          "status": "completed"
+        },
+        "Add Phone Number to Blacklist": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
+    },
+    "sendx.md": {
+      "service_name": "SendX",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/sendx/",
+      "api_actions": {
+        "Search Tag": {
+          "status": "completed"
+        },
+        "Get Tag": {
+          "status": "completed"
+        },
+        "Search Contact": {
+          "status": "completed"
+        },
+        "Create Contact": {
+          "status": "completed"
+        },
+        "Create List": {
+          "status": "completed"
+        },
+        "Create Tag": {
+          "status": "completed"
+        },
+        "Update Tag": {
+          "status": "completed"
+        },
+        "Update Contact": {
+          "status": "completed"
+        },
+        "Search List": {
+          "status": "completed"
+        },
+        "Delete Tag": {
+          "status": "completed"
+        },
+        "Delete List": {
+          "status": "completed"
+        },
+        "Update List": {
+          "status": "completed"
+        },
+        "Get Contact": {
+          "status": "completed"
+        },
+        "Delete Contact": {
+          "status": "completed"
+        },
+        "Get List": {
+          "status": "completed"
+        }
+      },
+      "triggers": {
+        "Drop Event": {
+          "status": "completed"
+        },
+        "Bounced Event": {
+          "status": "completed"
+        },
+        "New Contact": {
+          "status": "completed"
+        },
+        "Opened Event": {
+          "status": "completed"
+        },
+        "Marked as Spam": {
+          "status": "completed"
+        },
+        "Clicked Event": {
+          "status": "completed"
+        },
+        "UnSubscribed": {
+          "status": "completed"
+        }
+      }
+    },
+    "sendy.md": {
+      "service_name": "Sendy",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/sendy/",
+      "api_actions": {
+        "Add Subscriber": {
+          "status": "completed"
+        },
+        "Delete Subscriber": {
+          "status": "completed"
+        },
+        "Unsubscribe User": {
+          "status": "completed"
+        },
+        "Get Lists": {
+          "status": "completed"
+        },
+        "Get Brands": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
+    },
+    "serpapi.md": {
+      "service_name": "SerpApi",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/serpapi/",
+      "api_actions": {
+        "YouTube Search": {
+          "status": "completed"
+        },
+        "Google Maps Search": {
+          "status": "completed"
+        },
+        "Google Images Search": {
+          "status": "completed"
+        },
+        "Google Autocomplete": {
+          "status": "completed"
+        },
+        "Baidu Search": {
+          "status": "completed"
+        },
+        "Yelp Search": {
+          "status": "completed"
+        },
+        "Google Search": {
+          "status": "completed"
+        },
+        "Google Local Search": {
+          "status": "completed"
+        },
+        "Bing Search": {
+          "status": "completed"
+        },
+        "Google News Search": {
+          "status": "completed"
+        },
+        "Google Finance Search": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
+    },
+    "seven_io.md": {
+      "service_name": "Seven_io",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/seven_io/",
+      "api_actions": {
+        "Create Contact": {
+          "status": "completed"
+        },
+        "Update Contact": {
+          "status": "completed"
+        },
+        "Search Contact": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
+    },
+    "short-io.md": {
+      "service_name": "Short.io",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/short.io/",
+      "api_actions": {
+        "Get Link from Path": {
+          "status": "completed"
+        },
+        "Delete Link": {
+          "status": "completed"
+        },
+        "Generate QR Code": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
+    },
+    "smartlead.md": {
+      "service_name": "Smartlead",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/smartlead/",
+      "api_actions": {
+        "Update Campaign Schedule": {
+          "status": "completed"
+        },
+        "Add Leads to Campaign": {
+          "status": "completed"
+        },
+        "Update Lead": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
+    },
+    "smoove.md": {
+      "service_name": "Smoove",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/smoove/",
+      "api_actions": {
+        "Search Contacts": {
+          "status": "completed"
+        },
+        "Get Contact Details": {
+          "status": "completed"
+        },
+        "Get Lists": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
+    },
+    "sms_alert.md": {
+      "service_name": "SMS Alert",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/sms_alert/",
+      "api_actions": {
+        "Search Contacts": {
+          "status": "completed"
+        },
+        "Delete Contact": {
+          "status": "completed"
+        },
+        "Send SMS": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
+    },
+    "sms_hana.md": {
+      "service_name": "SMS Hana",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/sms_hana/",
+      "api_actions": {
+        "Get SMS Result": {
+          "status": "completed"
+        },
+        "Cancel SMS": {
+          "status": "completed"
+        },
+        "List Phone Numbers": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
+    },
+    "sparkpost.md": {
+      "service_name": "SparkPost",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/sparkpost/",
+      "api_actions": {
+        "Schedule Transmission": {
+          "status": "completed"
+        },
+        "Delete Recipient List": {
+          "status": "completed"
+        },
+        "Search Message Events": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
+    },
+    "stores-yk.md": {
+      "service_name": "Stores YK",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/stores_yk/",
+      "api_actions": {
+        "Search Customer": {
+          "status": "completed"
+        },
+        "List Reservations": {
+          "status": "completed"
+        },
+        "Get Customer": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
+    },
+    "systeme-io.md": {
+      "service_name": "Systeme.io",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/systeme.io/",
+      "api_actions": {
+        "Create Tag": {
+          "status": "completed"
+        },
+        "Create Membership": {
+          "status": "completed"
+        },
+        "Create Enrollment": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
+    },
+    "textit.md": {
+      "service_name": "TextIt",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/textit/",
+      "api_actions": {
+        "Search Contacts": {
+          "status": "completed"
+        },
+        "Delete Contact": {
+          "status": "completed"
+        },
+        "Search Messages": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
+    },
+    "textmagic.md": {
+      "service_name": "TextMagic",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/textmagic/",
+      "api_actions": {
+        "Delete Contact": {
+          "status": "completed"
+        },
+        "Search Contact": {
+          "status": "completed"
+        },
+        "Delete Contact from List": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
+    },
+    "thanks_io.md": {
+      "service_name": "Thanks.io",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/thanks.io/",
+      "api_actions": {
+        "List Recipients": {
+          "status": "completed"
+        },
+        "Delete Recipient": {
+          "status": "completed"
+        },
+        "List Orders": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
+    },
+    "tuemilio.md": {
+      "service_name": "Tuemilio",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/tuemilio/",
+      "api_actions": {
+        "List Email": {
+          "status": "completed"
+        },
+        "Update Email": {
+          "status": "completed"
+        },
+        "Create Email": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
+    },
+    "tumblr.md": {
+      "service_name": "Tumblr",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/tumblr/",
+      "api_actions": {
+        "Get Blog": {
+          "status": "completed"
+        },
+        "Get Page": {
+          "status": "completed"
+        },
+        "Get Post": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
+    },
+    "twilio_verify.md": {
+      "service_name": "Twilio Verify",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/twilio_verify/",
+      "api_actions": {
+        "Check Verification": {
+          "status": "completed"
+        },
+        "Create Verification": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
+    },
+    "twitch.md": {
+      "service_name": "Twitch",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/twitch/",
+      "api_actions": {
+        "Get User": {
+          "status": "completed"
+        },
+        "Search Streams": {
+          "status": "completed"
+        },
+        "Get Channel Followers": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
+    },
+    "unisender.md": {
+      "service_name": "Unisender",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/unisender/",
+      "api_actions": {
+        "Create Contact List": {
+          "status": "completed"
+        },
+        "List Contact Lists": {
+          "status": "completed"
+        },
+        "Create or Update Contact": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
+    },
+    "verificaremails.md": {
+      "service_name": "Verificaremails",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/verificaremails/",
+      "api_actions": {
+        "Validate Single Email": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
+    },
+    "whoisfreaks.md": {
+      "service_name": "Whoisfreaks",
+      "category": "01_마케팅_Marketing",
+      "status": "completed",
+      "implementation_date": "2025-02-28",
+      "code_location": "repo/whoisfreaks/",
+      "api_actions": {
+        "Historical Whois Lookup": {
+          "status": "completed"
+        },
+        "IP Whois Lookup": {
+          "status": "completed"
+        },
+        "Reverse Whois Lookup": {
+          "status": "completed"
+        }
+      },
+      "triggers": {}
     }
   },
   "last_updated": "2026-02-28 10:59:11",
