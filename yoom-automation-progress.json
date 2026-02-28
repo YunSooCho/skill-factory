@@ -13012,6 +13012,299 @@
           "status": "pending"
         }
       ]
+    },
+    "burst_sms.md": {
+      "service_name": "BurstSMS",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "BurstSMS: API key authentication required",
+      "api_actions": {
+        "Send SMS": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/burst_sms/actions.py",
+          "method": "BurstSMSActions.send_sms()"
+        },
+        "List Related Messages": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/burst_sms/actions.py",
+          "method": "BurstSMSActions.list_related_messages()"
+        },
+        "Retrieve Messages": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/burst_sms/actions.py",
+          "method": "BurstSMSActions.retrieve_messages()"
+        }
+      },
+      "implementation_details": {
+        "client_file": "repo/burst_sms/actions.py",
+        "has_models": true,
+        "has_exceptions": true,
+        "has_requirements": true
+      }
+    },
+    "cuenote_sms.md": {
+      "service_name": "Cuenote_sms",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Cuenote_sms: API key authentication required",
+      "api_actions": {
+        "Get Address Book": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/cuenote_sms/actions.py",
+          "method": "CuenoteSMSActions.get_address_book()"
+        },
+        "Delete Address Book": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/cuenote_sms/actions.py",
+          "method": "CuenoteSMSActions.delete_address_book()"
+        },
+        "Update SMS Delivery Phone": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/cuenote_sms/actions.py",
+          "method": "CuenoteSMSActions.update_sms_delivery_phone()"
+        },
+        "Create Address Book": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/cuenote_sms/actions.py",
+          "method": "CuenoteSMSActions.create_address_book()"
+        },
+        "List Address Books": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/cuenote_sms/actions.py",
+          "method": "CuenoteSMSActions.list_address_books()"
+        },
+        "Get Delivery": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/cuenote_sms/actions.py",
+          "method": "CuenoteSMSActions.get_delivery()"
+        },
+        "Search Delivery": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/cuenote_sms/actions.py",
+          "method": "CuenoteSMSActions.search_delivery()"
+        },
+        "Update Address Book": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/cuenote_sms/actions.py",
+          "method": "CuenoteSMSActions.update_address_book()"
+        },
+        "Create SMS Delivery Phone": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/cuenote_sms/actions.py",
+          "method": "CuenoteSMSActions.create_sms_delivery_phone()"
+        }
+      },
+      "implementation_details": {
+        "client_file": "repo/cuenote_sms/actions.py",
+        "has_models": true,
+        "has_exceptions": true,
+        "has_requirements": true
+      }
+    },
+    "dlvr_it.md": {
+      "service_name": "Dlvr_it",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Dlvr_it: API key authentication required",
+      "api_actions": {
+        "Create Post to Account": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/dlvr_it/actions.py",
+          "method": "DlvrItActions.create_post_to_account()"
+        },
+        "Create Post to Route": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/dlvr_it/actions.py",
+          "method": "DlvrItActions.create_post_to_route()"
+        },
+        "List Accounts": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/dlvr_it/actions.py",
+          "method": "DlvrItActions.list_accounts()"
+        },
+        "List Routes": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/dlvr_it/actions.py",
+          "method": "DlvrItActions.list_routes()"
+        }
+      },
+      "implementation_details": {
+        "client_file": "repo/dlvr_it/actions.py",
+        "has_models": true,
+        "has_exceptions": true,
+        "has_requirements": true
+      }
+    },
+    "gender_api.md": {
+      "service_name": "Gender_api",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Gender_api: API key authentication required",
+      "api_actions": {
+        "Get Account Stats": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/gender_api/actions.py",
+          "method": "GenderAPIActions.get_account_stats()"
+        },
+        "Get Country of Origin": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/gender_api/actions.py",
+          "method": "GenderAPIActions.get_country_of_origin()"
+        },
+        "Query Gender By First Name": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/gender_api/actions.py",
+          "method": "GenderAPIActions.query_gender_by_first_name()"
+        }
+      },
+      "implementation_details": {
+        "client_file": "repo/gender_api/actions.py",
+        "has_models": true,
+        "has_exceptions": true,
+        "has_requirements": true
+      }
+    },
+    "meta-cv.md": {
+      "service_name": "Meta Cv",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Meta Cv: API key authentication required",
+      "api_actions": {
+        "Send Conversion Event": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/meta-cv/actions.py",
+          "method": "MetaCVActions.send_conversion_event()"
+        }
+      },
+      "implementation_details": {
+        "client_file": "repo/meta-cv/actions.py",
+        "has_models": true,
+        "has_exceptions": true,
+        "has_requirements": true
+      }
+    },
+    "one-signal.md": {
+      "service_name": "One Signal",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "One Signal: API key authentication required",
+      "api_actions": {
+        "Delete Subscription": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/one-signal/actions.py",
+          "method": "OneSignalActions.delete_subscription()"
+        },
+        "Cancel Message": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/one-signal/actions.py",
+          "method": "OneSignalActions.cancel_message()"
+        },
+        "Create User": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/one-signal/actions.py",
+          "method": "OneSignalActions.create_user()"
+        },
+        "Add Subscription": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/one-signal/actions.py",
+          "method": "OneSignalActions.add_subscription()"
+        },
+        "Update Subscription": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/one-signal/actions.py",
+          "method": "OneSignalActions.update_subscription()"
+        },
+        "Search Messages": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/one-signal/actions.py",
+          "method": "OneSignalActions.search_messages()"
+        },
+        "Get Message": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/one-signal/actions.py",
+          "method": "OneSignalActions.get_message()"
+        },
+        "Update User": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/one-signal/actions.py",
+          "method": "OneSignalActions.update_user()"
+        },
+        "Get User": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/one-signal/actions.py",
+          "method": "OneSignalActions.get_user()"
+        }
+      },
+      "implementation_details": {
+        "client_file": "repo/one-signal/actions.py",
+        "has_models": true,
+        "has_exceptions": true,
+        "has_requirements": true
+      }
     }
   },
   "total_services": 749,
