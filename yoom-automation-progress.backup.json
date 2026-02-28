@@ -1,0 +1,4630 @@
+{
+  "currentCategory": "02_세일스_Sales",
+  "completed": {
+    "abstract.md": {
+      "service_name": "Abstract",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "AbstractAPI.com: 각 서비스별 개별 API 키 필요",
+      "api_actions": {
+        "Live Exchange Rates": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/abstract/abstract_client.py",
+          "method": "AbstractAPIClient.live_exchange_rates(base)"
+        },
+        "Convert Exchange Rates": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/abstract/abstract_client.py",
+          "method": "AbstractAPIClient.convert_exchange_rates(amount, base, target)"
+        },
+        "Phone Number Validation": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/abstract/abstract_client.py",
+          "method": "AbstractAPIClient.phone_number_validation(phone, country)"
+        },
+        "Get Current Time": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/abstract/abstract_client.py",
+          "method": "AbstractAPIClient.get_current_time(location)"
+        },
+        "Convert Time": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/abstract/abstract_client.py",
+          "method": "AbstractAPIClient.convert_time(base_location, base_date, target_location)"
+        },
+        "IP Geolocation Information": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/abstract/abstract_client.py",
+          "method": "AbstractAPIClient.ip_geolocation(ip_address)"
+        },
+        "Email Validation": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/abstract/abstract_client.py",
+          "method": "AbstractAPIClient.email_validation(email)"
+        },
+        "Country Holidays": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/abstract/abstract_client.py",
+          "method": "AbstractAPIClient.get_country_holidays(country, year)"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-27T21:00:00.000000",
+      "required_tasks": [
+        {
+          "task": "Abstract API 문서 검토",
+          "priority": "high",
+          "description": "https://app.abstractapi.com/ 및 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "API 키 획득 (6개 서비스)",
+          "priority": "high",
+          "description": "Exchange Rates, Phone Validation, Timezone, IP Geolocation, Email Validation, Holidays",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 환경 구축",
+          "priority": "medium",
+          "description": "무료 플랜으로 테스트 가능",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T21:00:00.000000"
+    },
+    "Pinterest.md": {
+      "service_name": "Pinterest",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "Get Pin": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
+          "method": "PinterestAPI.get_pin(pin_id)"
+        },
+        "Create Pin": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
+          "method": "PinterestAPI.create_pin(title, link, board_id, ...)"
+        },
+        "Get Board": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
+          "method": "PinterestAPI.get_board(board_id)"
+        },
+        "Create Board": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
+          "method": "PinterestAPI.create_board(name, description, privacy)"
+        },
+        "List Pins": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
+          "method": "PinterestAPI.list_pins(board_id, page_size, bookmark)"
+        },
+        "Update Board": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
+          "method": "PinterestAPI.update_board(board_id, name, description, privacy)"
+        },
+        "List Boards": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
+          "method": "PinterestAPI.list_boards(page_size, bookmark)"
+        }
+      },
+      "triggers": {
+        "New Pin": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "PinterestAPI.register_webhook(callback_url, ['pins'])"
+        }
+      },
+      "implemented_at": "2026-02-27T20:50:00.000000",
+      "required_tasks": [
+        {
+          "task": "Pinterest API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/Pinterest 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Pinterest OAuth 앱 등록",
+          "priority": "high",
+          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "status": "pending"
+        },
+        {
+          "task": "Client ID 및 Client Secret 획득",
+          "priority": "high",
+          "description": "OAuth 앱에서 인증 정보 획득",
+          "status": "pending"
+        },
+        {
+          "task": "1개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "7개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T20:46:31.906731"
+    },
+    "abyssale.md": {
+      "service_name": "Abyssale",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "Generate Content": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 템플릿 ID로 테스트 가능",
+          "code_file": "github/skill-factory/repo/abyssale/abyssale_client.py",
+          "method": "AbyssaleClient.generate_content(template_id, format, elements)"
+        },
+        "Get File": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 생성된 콘텐츠 ID로 테스트 가능",
+          "code_file": "github/skill-factory/repo/abyssale/abyssale_client.py",
+          "method": "AbyssaleClient.get_file(generation_id)"
+        }
+      },
+      "triggers": {
+        "New Generation": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AbyssaleClient.verify_webhook_signature()"
+        }
+      },
+      "implemented_at": "2026-02-27T21:10:00.000000",
+      "required_tasks": [
+        {
+          "task": "Abyssale API 문서 검토",
+          "priority": "high",
+          "description": "https://api.abyssale.com/docs 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Abyssale API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "1개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T21:10:00.000000"
+    },
+    "activecampaign.md": {
+      "service_name": "Activecampaign",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "アカウントを更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 계정 ID로 테스트 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.update_account(account_id, data)"
+        },
+        "コンタクト情報を削除": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 컨택트 ID로 테스트 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.delete_contact(contact_id)"
+        },
+        "コンタクトをリストに登録": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 컨택트 ID와 리스트 ID로 테스트 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.add_contact_to_list(contact_id, list_id)"
+        },
+        "アカウントを削除": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 계정 ID로 테스트 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.delete_account(account_id)"
+        },
+        "コンタクトとアカウントを関連付ける": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 컨택트 ID와 계정 ID로 테스트 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.associate_contact_account(contact_id, account_id)"
+        },
+        "コンタクト情報を検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 이메일로 검색 테스트 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.search_contact(email)"
+        },
+        "コンタクト情報の一覧を取得または検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 페이징으로 리스트 조회 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.list_contacts(limit, offset)"
+        },
+        "取引を作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 딜 생성 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.create_deal(contact_id, value, currency, stage)"
+        },
+        "コンタクトを作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 컨택트 생성 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.create_contact(email, first_name, last_name, phone)"
+        },
+        "コンタクト情報を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 컨택트 ID로 조회 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.get_contact(contact_id)"
+        },
+        "オート메ーションにコンタクトを登録": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 컨택트와 오토메이션 ID로 테스트 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.add_contact_to_automation(contact_id, automation_id)"
+        },
+        "コンタクトをリストから解除": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 컨택트와 리스트 ID로 테스트 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.remove_contact_from_list(contact_id, list_id)"
+        },
+        "アカウントを作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 계정 생성 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.create_account(name, account_url)"
+        },
+        "ノートを追加": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 컨택트 ID와 노트 내용으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.add_note(contact_id, note)"
+        },
+        "コンタクトのスコアを取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 컨택트 ID로 스코어 조회 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.get_contact_score(contact_id)"
+        },
+        "アカウントを取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 계정 ID로 조회 가능",
+          "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
+          "method": "ActiveCampaignClient.get_account(account_id)"
+        }
+      },
+      "triggers": {
+        "取引が作成されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "ActiveCampaignClient.handle_webhook_event()"
+        },
+        "コンタクトが追加されたら（JSONではないデータがPaylaodで送られる）": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "ActiveCampaignClient.handle_webhook_event()"
+        },
+        "コンタクトが作成されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "ActiveCampaignClient.handle_webhook_event()"
+        },
+        "コンタクトのカスタムフィールド値が作成されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "ActiveCampaignClient.handle_webhook_event()"
+        }
+      },
+      "implemented_at": "2026-02-27T21:10:00.000000",
+      "required_tasks": [
+        {
+          "task": "Activecampaign API 문서 검토",
+          "priority": "high",
+          "description": "https://developers.activecampaign.com/ 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Activecampaign API URL 및 API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API URL과 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "4개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T21:10:00.000000"
+    },
+    "adroll.md": {
+      "service_name": "Adroll",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "List Segment": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 세그먼트 목록 조회 가능",
+          "code_file": "github/skill-factory/repo/adroll/adroll_client.py",
+          "method": "AdrollClient.list_segments(eid, limit, offset)"
+        },
+        "Create Segment": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 세그먼트 생성 가능",
+          "code_file": "github/skill-factory/repo/adroll/adroll_client.py",
+          "method": "AdrollClient.create_segment(eid, name, type, rules)"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-27T21:10:00.000000",
+      "required_tasks": [
+        {
+          "task": "Adroll API 문서 검토",
+          "priority": "high",
+          "description": "https://developers.adroll.com/docs 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Adroll API 키 및 EID 획득",
+          "priority": "high",
+          "description": "Adroll 계정에서 API 키와 EID 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T21:10:00.000000"
+    },
+    "all-images-ai.md": {
+      "service_name": "All Images Ai",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "Search Image Generation": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 이미지 생성 검색 가능",
+          "code_file": "github/skill-factory/repo/all-images-ai/all_images_ai_client.py",
+          "method": "AllImagesAIClient.search_image_generations(limit, offset)"
+        },
+        "Get Image": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 이미지 ID로 조회 가능",
+          "code_file": "github/skill-factory/repo/all-images-ai/all_images_ai_client.py",
+          "method": "AllImagesAIClient.get_image(image_id)"
+        },
+        "Delete Image Generation": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 생성 ID로 삭제 가능",
+          "code_file": "github/skill-factory/repo/all-images-ai/all_images_ai_client.py",
+          "method": "AllImagesAIClient.delete_image_generation(generation_id)"
+        },
+        "Get Image Generation": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 생성 ID로 조회 가능",
+          "code_file": "github/skill-factory/repo/all-images-ai/all_images_ai_client.py",
+          "method": "AllImagesAIClient.get_image_generation(generation_id)"
+        },
+        "Create Image Generation": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 프롬프트로 이미지 생성 가능",
+          "code_file": "github/skill-factory/repo/all-images-ai/all_images_ai_client.py",
+          "method": "AllImagesAIClient.create_image_generation(prompt, style, format)"
+        }
+      },
+      "triggers": {
+        "Print Completed": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AllImagesAIClient.handle_webhook_event()"
+        }
+      },
+      "implemented_at": "2026-02-27T21:10:00.000000",
+      "required_tasks": [
+        {
+          "task": "All Images Ai API 문서 검토",
+          "priority": "high",
+          "description": "https://allimages.ai/docs 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "All Images Ai API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "1개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T21:10:00.000000"
+    },
+    "anymail-finder.md": {
+      "service_name": "Anymail Finder",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "Search for Person's Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 이름과 회사로 이메일 검색 가능",
+          "code_file": "github/skill-factory/repo/anymail-finder/anymail_finder_client.py",
+          "method": "AnymailFinderClient.find_person_email(name, company)"
+        },
+        "Search for Company's Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 회사 도메인으로 이메일 검색 가능",
+          "code_file": "github/skill-factory/repo/anymail-finder/anymail_finder_client.py",
+          "method": "AnymailFinderClient.find_company_email(domain)"
+        },
+        "Validate Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 이메일 유효성 검증 가능",
+          "code_file": "github/skill-factory/repo/anymail-finder/anymail_finder_client.py",
+          "method": "AnymailFinderClient.validate_email(email)"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-27T21:10:00.000000",
+      "required_tasks": [
+        {
+          "task": "Anymail Finder API 문서 검토",
+          "priority": "high",
+          "description": "https://anymailfinder.com/api 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Anymail Finder API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T21:10:00.000000"
+    },
+    "aweber.md": {
+      "service_name": "Aweber",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "Get Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 구독자 ID로 조회 가능",
+          "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
+          "method": "AweberClient.get_subscriber(subscriber_id, account_id, list_id)"
+        },
+        "Find Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 이메일로 구독자 찾기 가능",
+          "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
+          "method": "AweberClient.find_subscriber(email, account_id, list_id)"
+        },
+        "Get Broadcast Open": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 방송 ID로 오픈 통계 조회 가능",
+          "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
+          "method": "AweberClient.get_broadcast_open(broadcast_id, account_id)"
+        },
+        "Get Broadcast Statistic": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 방송 ID로 통계 조회 가능",
+          "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
+          "method": "AweberClient.get_broadcast_statistics(broadcast_id, account_id)"
+        },
+        "Search List": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 계정에서 리스트 검색 가능",
+          "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
+          "method": "AweberClient.search_lists(account_id)"
+        },
+        "Move Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 구독자 이동 가능",
+          "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
+          "method": "AweberClient.move_subscriber(subscriber_id, from_list_id, to_list_id, account_id)"
+        },
+        "Create Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 구독자 생성 가능",
+          "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
+          "method": "AweberClient.create_subscriber(email, account_id, list_id)"
+        },
+        "Get Broadcast Click": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 방송 ID로 클릭 통계 조회 가능",
+          "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
+          "method": "AweberClient.get_broadcast_click(broadcast_id, account_id)"
+        },
+        "Delete Subscriber by Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 이메일로 구독자 삭제 가능",
+          "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
+          "method": "AweberClient.delete_subscriber_by_email(email, account_id, list_id)"
+        },
+        "Update Subscriber by Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 이메일로 구독자 업데이트 가능",
+          "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
+          "method": "AweberClient.update_subscriber_by_email(email, account_id, list_id, data)"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-27T21:10:00.000000",
+      "required_tasks": [
+        {
+          "task": "Aweber API 문서 검토",
+          "priority": "high",
+          "description": "https://api.aweber.com/ 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Aweber OAuth 앱 등록",
+          "priority": "high",
+          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "status": "pending"
+        },
+        {
+          "task": "Aweber API 키 획득",
+          "priority": "high",
+          "description": "API Console에서 API 키와 Consumer Key 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T21:10:00.000000"
+    },
+    "bannerbear.md": {
+      "service_name": "Bannerbear",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "Create Collection": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 컬렉션 생성 가능",
+          "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
+          "method": "BannerbearClient.create_collection(template_id, modifications)"
+        },
+        "Get Video Detail": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 비디오 ID로 조회 가능",
+          "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
+          "method": "BannerbearClient.get_video_detail(video_id)"
+        },
+        "Create Image": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 이미지 생성 가능",
+          "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
+          "method": "BannerbearClient.create_image(template_id, modifications)"
+        },
+        "Create Video": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 비디오 생성 가능",
+          "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
+          "method": "BannerbearClient.create_video(template_id, modifications, fps)"
+        },
+        "Create Movie": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무비 생성 가능",
+          "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
+          "method": "BannerbearClient.create_movie(template_id, modifications, fps)"
+        },
+        "Get Screenshot Detail": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 스크린샷 ID로 조회 가능",
+          "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
+          "method": "BannerbearClient.get_screenshot_detail(screenshot_id)"
+        },
+        "Get File Data": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 콘텐츠 ID로 파일 데이터 조회 가능",
+          "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
+          "method": "BannerbearClient.get_file_data(content_id)"
+        },
+        "Create Screenshot": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - URL로 스크린샷 생성 가능",
+          "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
+          "method": "BannerbearClient.create_screenshot(url, options)"
+        },
+        "Get Movie Detail": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무비 ID로 조회 가능",
+          "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
+          "method": "BannerbearClient.get_movie_detail(movie_id)"
+        },
+        "Get Collection Detail": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 컬렉션 ID로 조회 가능",
+          "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
+          "method": "BannerbearClient.get_collection_detail(collection_id)"
+        },
+        "Get  Image Detail": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 이미지 ID로 조회 가능",
+          "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
+          "method": "BannerbearClient.get_image_detail(image_id)"
+        }
+      },
+      "triggers": {
+        "Animated Gif Created": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BannerbearClient.handle_webhook()"
+        },
+        "Collection Created": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BannerbearClient.handle_webhook()"
+        },
+        "Video Created": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BannerbearClient.handle_webhook()"
+        },
+        "Movie Created": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BannerbearClient.handle_webhook()"
+        },
+        "Image Created": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BannerbearClient.handle_webhook()"
+        },
+        "Screenshot Created": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BannerbearClient.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-27T21:10:00.000000",
+      "required_tasks": [
+        {
+          "task": "Bannerbear API 문서 검토",
+          "priority": "high",
+          "description": "https://developers.bannerbear.com/ 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Bannerbear API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "6개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T21:10:00.000000"
+    },
+    "bannerbite.md": {
+      "service_name": "Bannerbite",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "Get Bite": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Bite ID로 조회 가능",
+          "code_file": "github/skill-factory/repo/bannerbite/bannerbite_client.py",
+          "method": "BannerbiteClient.get_bite(bite_id)"
+        },
+        "Render Media": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - Bite 렌더링 가능",
+          "code_file": "github/skill-factory/repo/bannerbite/bannerbite_client.py",
+          "method": "BannerbiteClient.render_media(bite_id, format)"
+        },
+        "Get Project": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 프로젝트 ID로 조회 가능",
+          "code_file": "github/skill-factory/repo/bannerbite/bannerbite_client.py",
+          "method": "BannerbiteClient.get_project(project_id)"
+        },
+        "Search Bites by Project ID": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 프로젝트 ID로 Bites 검색 가능",
+          "code_file": "github/skill-factory/repo/bannerbite/bannerbite_client.py",
+          "method": "BannerbiteClient.search_bites_by_project(project_id)"
+        },
+        "List Projects": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 프로젝트 목록 조회 가능",
+          "code_file": "github/skill-factory/repo/bannerbite/bannerbite_client.py",
+          "method": "BannerbiteClient.list_projects()"
+        }
+      },
+      "triggers": {
+        "Webhook Bannerbite": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BannerbiteClient.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-27T21:10:00.000000",
+      "required_tasks": [
+        {
+          "task": "Bannerbite API 문서 검토",
+          "priority": "high",
+          "description": "https://bannerbite.com/docs 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Bannerbite API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "1개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T21:10:00.000000"
+    },
+    "ipqualityscore.md": {
+      "service_name": "Ipqualityscore",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "Search Phone Number": {
+          "status": "pending",
+          "testable": null,
+          "test_method": null
+        },
+        "Search Proxy &amp; VPN": {
+          "status": "pending",
+          "testable": null,
+          "test_method": null
+        },
+        "Search Email": {
+          "status": "pending",
+          "testable": null,
+          "test_method": null
+        }
+      },
+      "triggers": {},
+      "required_tasks": [
+        {
+          "task": "Ipqualityscore API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/Ipqualityscore 및 공식 API 문서 확인",
+          "status": "pending"
+        },
+        {
+          "task": "Ipqualityscore OAuth 앱 등록",
+          "priority": "high",
+          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "status": "pending"
+        },
+        {
+          "task": "Client ID 및 Client Secret 획득",
+          "priority": "high",
+          "description": "OAuth 앱에서 인증 정보 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "3개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T22:14:42.117287"
+    },
+    "byteplant-phone-validator.md": {
+      "service_name": "Byteplant Phone Validator",
+      "category": "마케팅",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "API Key authentication for phone validation API",
+      "api_actions": {
+        "Verify Phone Number": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/byteplant-phone-validator/byteplant_phone_validator_client.py",
+          "method": "ByteplantPhoneValidatorClient.verify_phone_number(phone_number, country_code)"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-27T16:02:03.3NZ"
+    },
+    "clearout.md": {
+      "service_name": "Clearout",
+      "category": "마케팅",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "API Key authentication for email validation and finder",
+      "api_actions": {
+        "Check Email Address for Business Account": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜(100 크레딧/월)",
+          "code_file": "github/skill-factory/repo/clearout/clearout_client.py",
+          "method": "ClearoutClient.check_email_for_business_account(email)"
+        },
+        "Instant Email Finder": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/clearout/clearout_client.py",
+          "method": "ClearoutClient.instant_email_finder(first_name, last_name, domain)"
+        },
+        "Check Email Address for Catch All": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/clearout/clearout_client.py",
+          "method": "ClearoutClient.check_email_for_catch_all(email)"
+        },
+        "Check Progress Status of Bulk Customer List": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/clearout/clearout_client.py",
+          "method": "ClearoutClient.check_progress_status_bulk_customer_list(job_id)"
+        },
+        "Check Email Address for Free Account": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/clearout/clearout_client.py",
+          "method": "ClearoutClient.check_email_for_free_account(email)"
+        },
+        "Check Progress Status of Bulk Email Finder": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/clearout/clearout_client.py",
+          "method": "ClearoutClient.check_progress_status_bulk_email_finder(job_id)"
+        },
+        "Bulk Customer List": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/clearout/clearout_client.py",
+          "method": "ClearoutClient.bulk_customer_list(emails)"
+        },
+        "Check Email Address for Disposable Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/clearout/clearout_client.py",
+          "method": "ClearoutClient.check_email_for_disposable_email(email)"
+        },
+        "Bulk Email Finder": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/clearout/clearout_client.py",
+          "method": "ClearoutClient.bulk_email_finder(contacts)"
+        },
+        "Check Email Address for Role Account": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/clearout/clearout_client.py",
+          "method": "ClearoutClient.check_email_for_role_account(email)"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-27T16:02:03.3NZ"
+    },
+    "cleverreach.md": {
+      "service_name": "CleverReach",
+      "category": "마케팅",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "API Key authentication for email marketing",
+      "api_actions": {
+        "Update Receiver": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜(300 수신자)",
+          "code_file": "github/skill-factory/repo/cleverreach/cleverreach_client.py",
+          "method": "CleverReachClient.update_receiver(receiver_id, group_id, ...)"
+        },
+        "Register Email to Group Blacklist": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/cleverreach/cleverreach_client.py",
+          "method": "CleverReachClient.register_email_to_blacklist(email, group_id)"
+        },
+        "Get Receiver Information": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/cleverreach/cleverreach_client.py",
+          "method": "CleverReachClient.get_receiver(receiver_id, group_id)"
+        },
+        "Add Event to Receiver": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/cleverreach/cleverreach_client.py",
+          "method": "CleverReachClient.add_event_to_receiver(receiver_id, group_id, event_type, event_data)"
+        },
+        "Search Receivers": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/cleverreach/cleverreach_client.py",
+          "method": "CleverReachClient.search_receivers(group_id, email, page, pagesize)"
+        },
+        "Add Receiver": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜(300 수신자)",
+          "code_file": "github/skill-factory/repo/cleverreach/cleverreach_client.py",
+          "method": "CleverReachClient.add_receiver(group_id, email, ...)"
+        },
+        "Delete Receivers": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/cleverreach/cleverreach_client.py",
+          "method": "CleverReachClient.delete_receivers(group_id, receiver_ids, emails)"
+        }
+      },
+      "triggers": {
+        "New Receiver": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 웹훅 설정 필요"
+        }
+      },
+      "implemented_at": "2026-02-27T16:02:03.3NZ"
+    },
+    "clickfunnels.md": {
+      "service_name": "Clickfunnels",
+      "category": "마케팅",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "Bearer Token authentication via API Key",
+      "api_actions": {
+        "Search Workspaces of a Team": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 유료 계정 필요",
+          "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
+          "method": "ClickFunnelsClient.search_contacts(workspace_id, ...)"
+        },
+        "Update Enrollment": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 유료 계정 필요",
+          "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
+          "method": "ClickFunnelsClient.update_enrollment(workspace_id, enrollment_id, status)"
+        },
+        "Remove Applied Tag": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 유료 계정 필요",
+          "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
+          "method": "ClickFunnelsClient.remove_tag_from_contact(workspace_id, contact_id, tag_id)"
+        },
+        "Search Enrollments": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 유료 계정 필요",
+          "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
+          "method": "ClickFunnelsClient.search_enrollments(workspace_id, ...)"
+        },
+        "Get List of Tags Applied to Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 유료 계정 필요",
+          "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
+          "method": "ClickFunnelsClient.get_contact_tags(workspace_id, contact_id)"
+        },
+        "Create Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 유료 계정 필요",
+          "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
+          "method": "ClickFunnelsClient.create_contact(workspace_id, email, ...)"
+        },
+        "Get List All Tags in Workspace": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 유료 계정 필요",
+          "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
+          "method": "ClickFunnelsClient.list_tags(workspace_id)"
+        },
+        "Remove Contact Tag": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 유료 계정 필요",
+          "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
+          "method": "ClickFunnelsClient.remove_tag_from_contact(workspace_id, contact_id, tag_id)"
+        },
+        "Update Contact Tag": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 유료 계정 필요",
+          "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
+          "method": "ClickFunnelsClient.update_tag(workspace_id, tag_id, ...)"
+        },
+        "Create New Enrollment": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 유료 계정 필요",
+          "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
+          "method": "ClickFunnelsClient.create_enrollment(workspace_id, contact_id, course_id)"
+        },
+        "Delete Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 유료 계정 필요",
+          "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
+          "method": "ClickFunnelsClient.delete_contact(workspace_id, contact_id)"
+        },
+        "Create Applied Tag": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 유료 계정 필요",
+          "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
+          "method": "ClickFunnelsClient.apply_tag_to_contact(workspace_id, contact_id, tag_id)"
+        },
+        "Search Contacts": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 유료 계정 필요",
+          "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
+          "method": "ClickFunnelsClient.search_contacts(workspace_id, ...)"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 유료 계정 필요",
+          "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
+          "method": "ClickFunnelsClient.update_contact(workspace_id, contact_id, ...)"
+        },
+        "Get List Courses": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 유료 계정 필요",
+          "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
+          "method": "ClickFunnelsClient.list_courses(workspace_id)"
+        },
+        "Create Contact Tag": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 유료 계정 필요",
+          "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
+          "method": "ClickFunnelsClient.create_tag(workspace_id, name, color)"
+        }
+      },
+      "triggers": {
+        "Order Created": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 + 웹훅 설정"
+        },
+        "Subscription Invoice Paid": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 + 웹훅 설정"
+        },
+        "Contact Suspended From Course": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 + 웹훅 설정"
+        },
+        "Contact Identified": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 + 웹훅 설정"
+        },
+        "Contact Submitted Form": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 + 웹훅 설정"
+        },
+        "Course Enrollment Created": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 + 웹훅 설정"
+        },
+        "Contact Created": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 + 웹훅 설정"
+        },
+        "Contact Updated": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 + 웹훅 설정"
+        },
+        "Course Enrollment Completed": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 + 웹훅 설정"
+        },
+        "One-Time Order Paid": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 + 웹훅 설정"
+        }
+      },
+      "implemented_at": "2026-02-27T16:02:03.3NZ"
+    },
+    "clickmeeting.md": {
+      "service_name": "Clickmeeting",
+      "category": "마케팅",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "API Key authentication for webinar management",
+      "api_actions": {
+        "List Conference Rooms": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/clickmeeting/clickmeeting_client.py",
+          "method": "ClickMeetingClient.list_conference_rooms(status, page, per_page)"
+        },
+        "Update Conference": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/clickmeeting/clickmeeting_client.py",
+          "method": "ClickMeetingClient.update_conference(room_id, ...)"
+        },
+        "Get All Registrants of Session": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/clickmeeting/clickmeeting_client.py",
+          "method": "ClickMeetingClient.get_all_registrants(room_id)"
+        },
+        "List Sessions": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/clickmeeting/clickmeeting_client.py",
+          "method": "ClickMeetingClient.list_sessions(room_id, status, page, per_page)"
+        },
+        "Delete Conference": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/clickmeeting/clickmeeting_client.py",
+          "method": "ClickMeetingClient.delete_conference(room_id)"
+        },
+        "Create Conference": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/clickmeeting/clickmeeting_client.py",
+          "method": "ClickMeetingClient.create_conference(name, starts_at, duration, ...)"
+        },
+        "Register Participant": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/clickmeeting/clickmeeting_client.py",
+          "method": "ClickMeetingClient.register_participant(room_id, email, first_name, last_name, ...)"
+        },
+        "Generate PDF Report": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/clickmeeting/clickmeeting_client.py",
+          "method": "ClickMeetingClient.generate_pdf_report(session_id)"
+        },
+        "Get Registration": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/clickmeeting/clickmeeting_client.py",
+          "method": "ClickMeetingClient.get_registration(room_id, participant_id)"
+        },
+        "Get Session": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/clickmeeting/clickmeeting_client.py",
+          "method": "ClickMeetingClient.get_session(room_id, session_id)"
+        },
+        "Get Room": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/clickmeeting/clickmeeting_client.py",
+          "method": "ClickMeetingClient.get_room(room_id)"
+        },
+        "Get Attendees of Room Session": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "code_file": "github/skill-factory/repo/clickmeeting/clickmeeting_client.py",
+          "method": "ClickMeetingClient.get_attendees(room_id, session_id)"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-27T16:02:03.3NZ"
+    },
+    "clicksend.md": {
+      "service_name": "Clicksend",
+      "category": "마케팅",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "API Key authentication for SMS and contact management",
+      "api_actions": {
+        "Create Contact List": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키(User + Key) 필요 - 무료 트라이얼",
+          "code_file": "github/skill-factory/repo/clicksend/clicksend_client.py",
+          "method": "ClickSendClient.create_contact_list(name, description)"
+        },
+        "Create Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키(User + Key) 필요 - 무료 트라이얼",
+          "code_file": "github/skill-factory/repo/clicksend/clicksend_client.py",
+          "method": "ClickSendClient.create_contact(phone_number, email, ...)"
+        },
+        "Send SMS": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키(User + Key) 필요 - 크레딧 소모",
+          "code_file": "github/skill-factory/repo/clicksend/clicksend_client.py",
+          "method": "ClickSendClient.send_sms(body, to, from_number, schedule)"
+        },
+        "Send SMS Campaign": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키(User + Key) 필요 - 크레딧 소모",
+          "code_file": "github/skill-factory/repo/clicksend/clicksend_client.py",
+          "method": "ClickSendClient.send_sms_campaign(body, recipients, ...)"
+        },
+        "Send Email SMS": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키(User + Key) 필요 - 크레딧 소모",
+          "code_file": "github/skill-factory/repo/clicksend/clicksend_client.py",
+          "method": "ClickSendClient.send_email_sms(to, subject, body, ...)"
+        },
+        "Delete Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키(User + Key) 필요 - 무료 트라이얼",
+          "code_file": "github/skill-factory/repo/clicksend/clicksend_client.py",
+          "method": "ClickSendClient.delete_contact(contact_id)"
+        },
+        "Update Contact List": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키(User + Key) 필요 - 무료 트라이얼",
+          "code_file": "github/skill-factory/repo/clicksend/clicksend_client.py",
+          "method": "ClickSendClient.update_contact_list(list_id, name, description)"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키(User + Key) 필요 - 무료 트라이얼",
+          "code_file": "github/skill-factory/repo/clicksend/clicksend_client.py",
+          "method": "ClickSendClient.update_contact(contact_id, ...)"
+        },
+        "Get Contacts": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키(User + Key) 필요 - 무료 트라이얼",
+          "code_file": "github/skill-factory/repo/clicksend/clicksend_client.py",
+          "method": "ClickSendClient.get_contacts(list_id, page, limit)"
+        },
+        "Delete Contact List": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키(User + Key) 필요 - 무료 트라이얼",
+          "code_file": "github/skill-factory/repo/clicksend/clicksend_client.py",
+          "method": "ClickSendClient.delete_contact_list(list_id)"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키(User + Key) 필요 - 무료 트라이얼",
+          "code_file": "github/skill-factory/repo/clicksend/clicksend_client.py",
+          "method": "ClickSendClient.get_contact(contact_id)"
+        },
+        "Search Contact List": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키(User + Key) 필요 - 무료 트라이얼",
+          "code_file": "github/skill-factory/repo/clicksend/clicksend_client.py",
+          "method": "ClickSendClient.search_contact_lists(name, page, limit)"
+        },
+        "Cancel SMS": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키(User + Key) 필요 - 무료 트라이얼",
+          "code_file": "github/skill-factory/repo/clicksend/clicksend_client.py",
+          "method": "ClickSendClient.cancel_sms(message_id)"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-27T16:02:03.3NZ"
+    },
+    "cloudcontact_AI.md": {
+      "service_name": "Cloudcontact AI",
+      "category": "마케팅",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "API Key authentication for contact and SMS management",
+      "api_actions": {
+        "Create Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 연락처 생성 테스트 가능",
+          "code_file": "github/skill-factory/repo/cloudcontact-ai/cloudcontact_ai_client.py",
+          "method": "CloudContactAIClient.create_contact(email, phone, first_name, ...)"
+        },
+        "Sent SMS Messages by Campaign": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - SMS 기록 조회 가능",
+          "code_file": "github/skill-factory/repo/cloudcontact-ai/cloudcontact_ai_client.py",
+          "method": "CloudContactAIClient.get_sent_sms_by_campaign(campaign_id)"
+        },
+        "Get Sent SMS Messages": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - SMS 기록 조회 가능",
+          "code_file": "github/skill-factory/repo/cloudcontact-ai/cloudcontact_ai_client.py",
+          "method": "CloudContactAIClient.get_sent_sms_messages(phone, status, ...)"
+        },
+        "Search Contacts": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 연락처 검색 테스트 가능",
+          "code_file": "github/skill-factory/repo/cloudcontact-ai/cloudcontact_ai_client.py",
+          "method": "CloudContactAIClient.search_contacts(email, phone, tags, ...)"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-27T16:02:03.3NZ"
+    },
+    "beamer.md": {
+      "service_name": "Beamer",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "Create Post": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능 (최대 1,000 요청)",
+          "code_file": "github/skill-factory/repo/beamer/beamer_client.py",
+          "method": "BeamerAPIClient.create_post(post_data)"
+        }
+      },
+      "triggers": {},
+      "required_tasks": [
+        {
+          "task": "Beamer API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/Beamer 및 공식 API 문서 확인",
+          "status": "pending"
+        },
+        {
+          "task": "Beamer OAuth 앱 등록",
+          "priority": "high",
+          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "status": "pending"
+        },
+        {
+          "task": "Client ID 및 Client Secret 획득",
+          "priority": "high",
+          "description": "OAuth 앱에서 인증 정보 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "1개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T22:22:11.601724",
+      "implemented_at": "2026-02-28T08:45:00.000000"
+    },
+    "drip.md": {
+      "service_name": "Drip",
+      "category": "마케팅",
+      "integration_type": "api_token",
+      "integration_confidence": "high",
+      "integration_reasoning": "Drip.com: API Token 인증",
+      "api_actions": {
+        "Remove Subscriber from Workflow": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscribe User to Email Campaign": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Add Subscriber to Workflow": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Retrieve Email Series Campaign Subscription": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Retrieve Subscriber Information": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Add Tag to Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Update Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Remove Subscriber from Email Campaign": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Unsubscribe from All Mailings": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Remove Tag from Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/drop/drip_client.py"
+        },
+        "Create Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "List All Subscribers of Campaign": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/drip/drip_client.py"
+        }
+      },
+      "triggers": {
+        "Removed Tag": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscriber Received Email": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscribed to Email Marketing": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscriber Marked as Undeliverable": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscriber Marked as Deliverable": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Updated Email Address": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscriber Created": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscriber Deleted": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscriber Became Lead": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Unsubscribed from Campaign": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscriber Visited Page": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscriber Bounced": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Completed Campaign": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Applied Tag": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Removed from Campaign": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscriber Complained": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscriber Clicked Email": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Unsubscribed All Mailings": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscribed to Campaign": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscriber Opened Email": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        },
+        "Subscriber Reactivated": {
+          "status": "completed",
+          "code_file": "repo/drip/drip_client.py"
+        }
+      },
+      "implemented_at": "2026-02-28 08:48:08"
+    },
+    "dub.md": {
+      "service_name": "Dub",
+      "category": "마케팅",
+      "integration_type": "api_token",
+      "integration_confidence": "high",
+      "integration_reasoning": "Dub.co: Bearer Token 인증",
+      "api_actions": {
+        "Search Link": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/dub/dub_client.py"
+        },
+        "Get Link": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/dub/dub_client.py"
+        },
+        "Delete Link": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/dub/dub_client.py"
+        },
+        "Create Tag": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/dub/dub_client.py"
+        },
+        "Update Link": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/dub/dub_client.py"
+        },
+        "Upsert Link": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/dub/dub_client.py"
+        },
+        "Update Tag": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/dub/dub_client.py"
+        },
+        "Create Link": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/dub/dub_client.py"
+        }
+      },
+      "triggers": {
+        "Clicked Link": {
+          "status": "completed",
+          "code_file": "repo/dub/dub_client.py"
+        },
+        "Created Link": {
+          "status": "completed",
+          "code_file": "repo/dub/dub_client.py"
+        }
+      },
+      "implemented_at": "2026-02-28 08:48:08"
+    },
+    "e_goi.md": {
+      "service_name": "E-goi",
+      "category": "마케팅",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "E-goi.com: API Key 인증",
+      "api_actions": {
+        "Delete List": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Create Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Search Contacts": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "List Tags": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Send Email Campaign to Segment": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Campaign List": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Send Email Campaign to Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Segment List": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Create List": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Create Tag": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Get Lists": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Delete Contacts": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Update Contacts": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/e_goi/e_goi_client.py"
+        }
+      },
+      "triggers": {
+        "Clicked Email": {
+          "status": "completed",
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "New Subscriber": {
+          "status": "completed",
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "New Unsubscriber": {
+          "status": "completed",
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Opened Email": {
+          "status": "completed",
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Hard Bounced Email": {
+          "status": "completed",
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Soft Bounced Email": {
+          "status": "completed",
+          "code_file": "repo/e_goi/e_goi_client.py"
+        },
+        "Send Email": {
+          "status": "completed",
+          "code_file": "repo/e_goi/e_goi_client.py"
+        }
+      },
+      "implemented_at": "2026-02-28 08:48:08"
+    },
+    "ecomail.md": {
+      "service_name": "Ecomail",
+      "category": "마케팅",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Ecomailapp.cz: API Key 인증",
+      "api_actions": {
+        "Delete Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/ecomail/ecomail_client.py"
+        },
+        "Get Transactional Email Statistic": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/ecomail/ecomail_client.py"
+        },
+        "Create Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/ecomail/ecomail_client.py"
+        },
+        "Get Subscriber from List": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/ecomail/ecomail_client.py"
+        },
+        "Get Campaign Statistic": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/ecomail/ecomail_client.py"
+        },
+        "Search Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/ecomail/ecomail_client.py"
+        },
+        "Update Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/ecomail/ecomail_client.py"
+        },
+        "Search Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/ecomail/ecomail_client.py"
+        },
+        "Get Subscriber Detail": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/ecomail/ecomail_client.py"
+        }
+      },
+      "triggers": {
+        "New Open": {
+          "status": "completed",
+          "code_file": "repo/ecomail/ecomail_client.py"
+        },
+        "New Click": {
+          "status": "completed",
+          "code_file": "repo/ecomail/ecomail_client.py"
+        },
+        "New Bounce": {
+          "status": "completed",
+          "code_file": "repo/ecomail/ecomail_client.py"
+        }
+      },
+      "implemented_at": "2026-02-28 08:48:08"
+    },
+    "elastic_email.md": {
+      "service_name": "Elastic Email",
+      "category": "마케팅",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "ElasticEmail.com: API Key 인증",
+      "api_actions": {
+        "Add Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elastic-email/elastic_email_client.py"
+        },
+        "Add List": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elastic-email/elastic_email_client.py"
+        },
+        "List Contacts": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elastic-email/elastic_email_client.py"
+        },
+        "Update List": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elastic-email/elastic_email_client.py"
+        },
+        "Delete Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elastic-email/elastic_email_client.py"
+        },
+        "Get Lists": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elastic-email/elastic_email_client.py"
+        },
+        "Delete List": {
+          "status": "skipped",
+          "testable": false,
+          "note": "Skipped as per specification"
+        },
+        "Get List": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elastic-email/elastic_email_client.py"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elastic-email/elastic_email_client.py"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elastic-email/elastic_email_client.py"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28 08:48:08"
+    },
+    "elevenlabs.md": {
+      "service_name": "ElevenLabs",
+      "category": "마케팅",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "ElevenLabs.io: API Key 인증",
+      "api_actions": {
+        "Audio Noise Removal": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elevenlabs/elevenlabs_client.py"
+        },
+        "Obtain the Dubbed File": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elevenlabs/elevenlabs_client.py"
+        },
+        "Dub Audio or Video Files": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elevenlabs/elevenlabs_client.py"
+        },
+        "Convert Text to Speech with Timestamps": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elevenlabs/elevenlabs_client.py"
+        },
+        "Convert Text to Speech": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elevenlabs/elevenlabs_client.py"
+        },
+        "Convert Voice to Another Voice": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elevenlabs/elevenlabs_client.py"
+        },
+        "Add Pronunciation Dictionary": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elevenlabs/elevenlabs_client.py"
+        },
+        "Text to Speech & Sound Effects": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/elevenlabs/elevenlabs_client.py"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28 08:48:08"
+    },
+    "email_list_verify.md": {
+      "service_name": "Email List Verify",
+      "category": "마케팅",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "EmailListVerify.com: API Key 인증",
+      "api_actions": {
+        "Find Business Email Address": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/email-list-verify/email_list_verify_client.py"
+        },
+        "Email Address Verification": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/email-list-verify/email_list_verify_client.py"
+        },
+        "Email Deliverability Evaluation": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/email-list-verify/email_list_verify_client.py"
+        },
+        "Check Disposable Email Domain": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/email-list-verify/email_list_verify_client.py"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28 08:48:08"
+    },
+    "emailable.md": {
+      "service_name": "Emailable",
+      "category": "마케팅",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Emailable.com: API Key 인증",
+      "api_actions": {
+        "Verify Email": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/emailable/emailable_client.py"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28 08:48:08"
+    },
+    "emailoctopus.md": {
+      "service_name": "EmailOctopus",
+      "category": "마케팅",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "EmailOctopus.com: Basic Auth with API Key",
+      "api_actions": {
+        "Create Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Get Campaign Link Report": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Delete Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Create Tag": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Start Automation for Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Search Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Get Campaign Summary Report": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        }
+      },
+      "triggers": {
+        "Opened Email": {
+          "status": "completed",
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Clicked Email": {
+          "status": "completed",
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Deleted Contact": {
+          "status": "completed",
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Created Contact": {
+          "status": "completed",
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Unsubscribed Email": {
+          "status": "completed",
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Bounced Email": {
+          "status": "completed",
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Updated Contact": {
+          "status": "completed",
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        },
+        "Complained Email": {
+          "status": "completed",
+          "code_file": "repo/emailoctopus/emailoctopus_client.py"
+        }
+      },
+      "implemented_at": "2026-02-28 08:48:08"
+    },
+    "beehiiv.md": {
+      "service_name": "Beehiiv",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "Add Tags to Subscription": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/beehiiv/beehiiv_client.py",
+          "method": "BeehiivAPIClient.add_tags_to_subscription(subscription_id, tags)"
+        },
+        "Create Subscription": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/beehiiv/beehiiv_client.py",
+          "method": "BeehiivAPIClient.create_subscription(request)"
+        },
+        "Retrieve Subscription by ID": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/beehiiv/beehiiv_client.py",
+          "method": "BeehiivAPIClient.get_subscription_by_id(subscription_id)"
+        },
+        "Update Subscription": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/beehiiv/beehiiv_client.py",
+          "method": "BeehiivAPIClient.update_subscription(subscription_id, request)"
+        },
+        "Retrieve a Single Post": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/beehiiv/beehiiv_client.py",
+          "method": "BeehiivAPIClient.get_post_by_id(post_id)"
+        },
+        "List Subscriber Ids": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/beehiiv/beehiiv_client.py",
+          "method": "BeehiivAPIClient.list_subscriber_ids(limit, offset)"
+        },
+        "Retrieve Segments": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/beehiiv/beehiiv_client.py",
+          "method": "BeehiivAPIClient.list_segments(limit, offset)"
+        },
+        "Delete Subscription": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/beehiiv/beehiiv_client.py",
+          "method": "BeehiivAPIClient.delete_subscription(subscription_id)"
+        },
+        "Search Posts by Publication": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/beehiiv/beehiiv_client.py",
+          "method": "BeehiivAPIClient.search_posts(query, status, limit)"
+        },
+        "Retrieve Subscription by Email": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/beehiiv/beehiiv_client.py",
+          "method": "BeehiivAPIClient.get_subscription_by_email(email)"
+        }
+      },
+      "triggers": {
+        "New Subscription Confirmations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint. Use BeehiivWebhooks class with Flask server"
+        },
+        "New Subscriptions": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint. Example: python beehiiv_api.py webhook 8080"
+        },
+        "User Unsubscribes": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint with handler registered"
+        },
+        "New Post Sent": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint. Test by sending post to subscribers"
+        },
+        "New Subscription Upgrades": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint. Test by upgrading subscription"
+        },
+        "New Survey Responses": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint with webhook handler"
+        },
+        "New Subscription Downgrades": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint. Test by downgrading subscription"
+        }
+      },
+      "required_tasks": [
+        {
+          "task": "Beehiiv API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/Beehiiv 및 공식 API 문서 확인",
+          "status": "pending"
+        },
+        {
+          "task": "Beehiiv OAuth 앱 등록",
+          "priority": "high",
+          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "status": "pending"
+        },
+        {
+          "task": "Client ID 및 Client Secret 획득",
+          "priority": "high",
+          "description": "OAuth 앱에서 인증 정보 획득",
+          "status": "pending"
+        },
+        {
+          "task": "7개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "10개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T22:22:12.980536",
+      "implemented_at": "2026-02-28T08:50:00.000000"
+    },
+    "bitly.md": {
+      "service_name": "Bitly",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "Bitlinkを展開する": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bitly API token. Example: python bitly_api.py expand bit.ly/example"
+        },
+        "Bitlinkを作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bitly API token. Example: python bitly_api.py shorten https://example.com"
+        },
+        "Bitlinkを検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bitly API token. Example: python bitly_api.py search keyword"
+        },
+        "Bitlinkを削除": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bitly API token. Example: python bitly_api.py delete bit.ly/example"
+        },
+        "Bitlinkのクリック数を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bitly API token. Example: python bitly_api.py clicks bit.ly/example"
+        },
+        "リンクを短縮する": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bitly API token. Example: python bitly_client.py or client.shorten_url(\"https://example.com\")"
+        },
+        "Bitlinkのクリックサマリーを取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bitly API token. Example: python bitly_api.py summary bit.ly/example"
+        },
+        "Bitlinkを短縮する": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bitly API token. Example: python bitly_api.py shorten https://example.com"
+        }
+      },
+      "triggers": {},
+      "required_tasks": [
+        {
+          "task": "Bitly API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/Bitly 및 공식 API 문서 확인",
+          "status": "pending"
+        },
+        {
+          "task": "Bitly OAuth 앱 등록",
+          "priority": "high",
+          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "status": "pending"
+        },
+        {
+          "task": "Client ID 및 Client Secret 획득",
+          "priority": "high",
+          "description": "OAuth 앱에서 인증 정보 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "7개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T22:22:13.079691",
+      "implemented_at": "2026-02-28T09:04:00.000000"
+    },
+    "big_mailer.md": {
+      "service_name": "Big_mailer",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "List Contacts": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key and brand ID. Example: python bigmailer_api.py list-contacts <brand_id>"
+        },
+        "Create Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key, brand ID and email. Example: python bigmailer_api.py create-contact <brand_id> test@example.com"
+        },
+        "Delete Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key, brand ID and contact ID"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key, brand ID and contact ID"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key, brand ID and contact ID"
+        },
+        "List Fields": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key and brand ID"
+        }
+      },
+      "triggers": {},
+      "required_tasks": [
+        {
+          "task": "Big_mailer API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/Big_mailer 및 공식 API 문서 확인",
+          "status": "pending"
+        },
+        {
+          "task": "Big_mailer OAuth 앱 등록",
+          "priority": "high",
+          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "status": "pending"
+        },
+        {
+          "task": "Client ID 및 Client Secret 획득",
+          "priority": "high",
+          "description": "OAuth 앱에서 인증 정보 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "6개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T22:22:13.032741",
+      "implemented_at": "2026-02-28T09:04:00.000000"
+    },
+    "benchmark-email.md": {
+      "service_name": "Benchmark Email",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "コンタクト情報を更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key, list ID and email. Example: python benchmark_email_api.py update-contact <list_id> test@example.com"
+        },
+        "コンタクトを検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key and list ID. Example: python benchmark_email_api.py search-contacts <list_id>"
+        },
+        "コンタクトを追加": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key, list ID and email. Example: python benchmark_email_api.py add-contact <list_id> test@example.com"
+        }
+      },
+      "triggers": {},
+      "required_tasks": [
+        {
+          "task": "Benchmark Email API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/Benchmark Email 및 공식 API 문서 확인",
+          "status": "pending"
+        },
+        {
+          "task": "Benchmark Email OAuth 앱 등록",
+          "priority": "high",
+          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "status": "pending"
+        },
+        {
+          "task": "Client ID 및 Client Secret 획득",
+          "priority": "high",
+          "description": "OAuth 앱에서 인증 정보 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "3개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T22:22:13.008203",
+      "implemented_at": "2026-02-28T09:04:00.000000"
+    },
+    "bigquery.md": {
+      "service_name": "Bigquery",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "レコードを検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Google Cloud credentials. Example: python bigquery_api.py search project.dataset.table 100"
+        },
+        "クエリを実行": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Google Cloud credentials. Example: python bigquery_api.py query 'SELECT COUNT(*) FROM project.dataset.table'"
+        },
+        "レコードを作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Google Cloud credentials. Example: python bigquery_api.py insert project.dataset.table"
+        }
+      },
+      "triggers": {},
+      "required_tasks": [
+        {
+          "task": "Bigquery API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/Bigquery 및 공식 API 문서 확인",
+          "status": "pending"
+        },
+        {
+          "task": "Bigquery OAuth 앱 등록",
+          "priority": "high",
+          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "status": "pending"
+        },
+        {
+          "task": "Client ID 및 Client Secret 획득",
+          "priority": "high",
+          "description": "OAuth 앱에서 인증 정보 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "3개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T22:22:13.056044",
+      "implemented_at": "2026-02-28T09:04:00.000000"
+    },
+    "botstar.md": {
+      "service_name": "Botstar",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "Create Entity Item": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key and bot ID"
+        },
+        "Delete Entity Item": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key and bot ID"
+        },
+        "Get Entity Item": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key and bot ID"
+        },
+        "Update Entity Item": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key and bot ID"
+        },
+        "Search Entity Items": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key and bot ID"
+        }
+      },
+      "triggers": {},
+      "required_tasks": [
+        {
+          "task": "Botstar API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/Botstar 및 공식 API 문서 확인",
+          "status": "pending"
+        },
+        {
+          "task": "Botstar OAuth 앱 등록",
+          "priority": "high",
+          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "status": "pending"
+        },
+        {
+          "task": "Client ID 및 Client Secret 획득",
+          "priority": "high",
+          "description": "OAuth 앱에서 인증 정보 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "5개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T22:22:13.103651",
+      "implemented_at": "2026-02-28T09:04:00.000000"
+    },
+    "bouncer.md": {
+      "service_name": "Bouncer",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "Verification Domain": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bouncer API key. Example: python bouncer_api.py domain example.com"
+        },
+        "Verify Email Address": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bouncer API key. Example: python bouncer_api.py verify test@example.com"
+        }
+      },
+      "triggers": {},
+      "required_tasks": [
+        {
+          "task": "Bouncer API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/Bouncer 및 공식 API 문서 확인",
+          "status": "pending"
+        },
+        {
+          "task": "Bouncer OAuth 앱 등록",
+          "priority": "high",
+          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "status": "pending"
+        },
+        {
+          "task": "Client ID 및 Client Secret 획득",
+          "priority": "high",
+          "description": "OAuth 앱에서 인증 정보 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "2개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T22:22:13.128070",
+      "implemented_at": "2026-02-28T09:04:00.000000"
+    },
+    "bownow.md": {
+      "service_name": "Bownow",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "リード情報を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bownow API key. Example: python bownow_api.py get <lead_id>"
+        },
+        "リード情報を更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bownow API key. Example: python bownow_api.py update <lead_id>"
+        },
+        "リード情報を削除": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bownow API key. Example: python bownow_api.py delete <lead_id>"
+        },
+        "リード情報を検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bownow API key. Example: python bownow_api.py search test@example.com"
+        },
+        "リード情報を作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bownow API key. Example: python bownow_api.py create test@example.com"
+        }
+      },
+      "triggers": {
+        "リード情報更新通知を受け取ったら（Webhook）": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint. Use BownowWebhooks class with Flask server"
+        },
+        "フォームコンバージョン通知を受け取ったら（Webhook）": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint. Example: python bownow_api.py webhook 8080"
+        }
+      },
+      "required_tasks": [
+        {
+          "task": "Bownow API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/Bownow 및 공식 API 문서 확인",
+          "status": "pending"
+        },
+        {
+          "task": "Bownow OAuth 앱 등록",
+          "priority": "high",
+          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "status": "pending"
+        },
+        {
+          "task": "Client ID 및 Client Secret 획득",
+          "priority": "high",
+          "description": "OAuth 앱에서 인증 정보 획득",
+          "status": "pending"
+        },
+        {
+          "task": "2개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "5개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T22:22:13.152223",
+      "implemented_at": "2026-02-28T09:04:00.000000"
+    },
+    "brevo.md": {
+      "service_name": "Brevo",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "コンタクトを取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Brevo API key"
+        },
+        "SMSキャンペーンを作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Brevo API key"
+        },
+        "WhatsAppキャンペーンの作成と送信": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Brevo API key"
+        },
+        "メールキャンペーンレポートを取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Brevo API key"
+        },
+        "キャンペーンレポートを送信": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Brevo API key"
+        },
+        "SMSキャンペーンを即時送信": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Brevo API key"
+        },
+        "コンタクトを作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key"
+        },
+        "コンタクトを更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Brevo API key"
+        },
+        "取引メールを配信": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key"
+        },
+        "既存のコンタクトをリストに追加": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Brevo API key"
+        },
+        "トランザクションメールを配信": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Brevo API key"
+        }
+      },
+      "triggers": {
+        "マーケティングメールが開封されたら（Webhook）": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint"
+        },
+        "トランザクションメールがクリックされたら（Webhook）": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint"
+        },
+        "マーケティングメールが配信されたら（Webhook）": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint"
+        },
+        "トランザクションメールが開封されたら（Webhook）": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint"
+        },
+        "マーケティングメールの配信が停止されたら（Webhook）": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint"
+        },
+        "マーケティングメールのリンクがクリックされたら（Webhook）": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint"
+        },
+        "コンタクトが新たに作成されたら": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint"
+        },
+        "トランザクションメールが配信されたら（Webhook）": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint"
+        }
+      },
+      "required_tasks": [
+        {
+          "task": "Brevo API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/Brevo 및 공식 API 문서 확인",
+          "status": "pending"
+        },
+        {
+          "task": "Brevo OAuth 앱 등록",
+          "priority": "high",
+          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "status": "pending"
+        },
+        {
+          "task": "Client ID 및 Client Secret 획득",
+          "priority": "high",
+          "description": "OAuth 앱에서 인증 정보 획득",
+          "status": "pending"
+        },
+        {
+          "task": "8개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "10개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T22:22:13.176552",
+      "implemented_at": "2026-02-28T09:04:00.000000"
+    },
+    "agendor.md": {
+      "service_name": "Agendor",
+      "category": "세일스",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Agendor: API Key/Bearer Token 인증",
+      "api_actions": {
+        "Create Organization": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        },
+        "Search Deal": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        },
+        "Search Organization": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        },
+        "Get Organization": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        },
+        "Search Tasks of Person": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        },
+        "Get Product": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        },
+        "Update Deal": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        },
+        "Create Task For Person": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        },
+        "Update Deal Stage": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        },
+        "Search Tasks of Deals": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        },
+        "Update Product": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        },
+        "Create Task For Organization": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        },
+        "Create Person": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        },
+        "Create Product": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        },
+        "Update Organization": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        },
+        "Create Task For Deal": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        },
+        "Get Deal Of Person": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        },
+        "Create Deal For Organization": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        },
+        "Get Person": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        },
+        "Update Person": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        },
+        "Get Deal For Organization": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        },
+        "Search Product": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        },
+        "Search Tasks of Organization": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        },
+        "Get Deal": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        },
+        "Update Deal Status": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        },
+        "Create Deal For Person": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        },
+        "Search Person": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/agendor/agendor_client.py"
+        }
+      },
+      "triggers": {
+        "Updated Stage Deal": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AgendorClient.handle_webhook()"
+        },
+        "Created Organization": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AgendorClient.handle_webhook()"
+        },
+        "Updated Deal": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AgendorClient.handle_webhook()"
+        },
+        "Won Deal": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AgendorClient.handle_webhook()"
+        },
+        "Updated Person": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AgendorClient.handle_webhook()"
+        },
+        "Lost Deal": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AgendorClient.handle_webhook()"
+        },
+        "Created Activity/Task/Comment": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AgendorClient.handle_webhook()"
+        },
+        "Deleted Person": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AgendorClient.handle_webhook()"
+        },
+        "Updated Organization": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AgendorClient.handle_webhook()"
+        },
+        "Created Deal": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AgendorClient.handle_webhook()"
+        },
+        "Deleted Organization": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AgendorClient.handle_webhook()"
+        },
+        "Created Person": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AgendorClient.handle_webhook()"
+        },
+        "Deleted Deal": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AgendorClient.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T09:36:17.358866+09:00",
+      "analyzed_at": "2026-02-28T09:36:17.358866+09:00"
+    },
+    "amptalk.md": {
+      "service_name": "Amptalk",
+      "category": "세일스",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Amptalk: API Key/Bearer Token 인증",
+      "api_actions": {
+        "通話の要約を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/amptalk/amptalk_client.py"
+        },
+        "分析情報を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/amptalk/amptalk_client.py"
+        },
+        "ユーザーの一覧を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/amptalk/amptalk_client.py"
+        },
+        "通話を検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/amptalk/amptalk_client.py"
+        },
+        "通話を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/amptalk/amptalk_client.py"
+        }
+      },
+      "triggers": {
+        "通話が完了したら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AmptalkClient.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T09:36:17.358866+09:00",
+      "analyzed_at": "2026-02-28T09:36:17.358866+09:00"
+    },
+    "apollo.md": {
+      "service_name": "Apollo",
+      "category": "세일스",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Apollo: API Key/Bearer Token 인증",
+      "api_actions": {
+        "アカウントを更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/apollo/apollo_client.py"
+        },
+        "コンタクトを検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/apollo/apollo_client.py"
+        },
+        "人物情報のエンリッチメント": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/apollo/apollo_client.py"
+        },
+        "組織情報のエンリッチメント": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/apollo/apollo_client.py"
+        },
+        "人物情報を検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/apollo/apollo_client.py"
+        },
+        "アカウントを検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/apollo/apollo_client.py"
+        },
+        "コンタクトを作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/apollo/apollo_client.py"
+        },
+        "コンタクトを更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/apollo/apollo_client.py"
+        },
+        "アカウントを作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/apollo/apollo_client.py"
+        }
+      },
+      "triggers": {
+        "コンタクトが作成されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "ApolloClient.handle_webhook()"
+        },
+        "コンタクトが更新されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "ApolloClient.handle_webhook()"
+        },
+        "アカウントが作成されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "ApolloClient.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T09:36:17.358866+09:00",
+      "analyzed_at": "2026-02-28T09:36:17.358866+09:00"
+    },
+    "attio.md": {
+      "service_name": "Attio",
+      "category": "세일스",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Attio: API Key/Bearer Token 인증",
+      "api_actions": {
+        "Create Note": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/attio/attio_client.py"
+        },
+        "Create Comment": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/attio/attio_client.py"
+        },
+        "Search Entry": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/attio/attio_client.py"
+        },
+        "Get List Entry": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/attio/attio_client.py"
+        },
+        "Create Entry": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/attio/attio_client.py"
+        },
+        "Search Record": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/attio/attio_client.py"
+        },
+        "Update Record": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/attio/attio_client.py"
+        },
+        "Get Record": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/attio/attio_client.py"
+        },
+        "Delete Record": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/attio/attio_client.py"
+        },
+        "Delete List Entry": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/attio/attio_client.py"
+        },
+        "Update List Entry": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/attio/attio_client.py"
+        },
+        "Create Record": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/attio/attio_client.py"
+        },
+        "Create Task": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/attio/attio_client.py"
+        }
+      },
+      "triggers": {
+        "Updated Note": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AttioClient.handle_webhook()"
+        },
+        "Deleted Record": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AttioClient.handle_webhook()"
+        },
+        "Deleted Entry": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AttioClient.handle_webhook()"
+        },
+        "Resolved Comment": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AttioClient.handle_webhook()"
+        },
+        "New Record": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AttioClient.handle_webhook()"
+        },
+        "New Comment": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AttioClient.handle_webhook()"
+        },
+        "Unresolved Comment": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AttioClient.handle_webhook()"
+        },
+        "Updated Record": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AttioClient.handle_webhook()"
+        },
+        "New Note": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AttioClient.handle_webhook()"
+        },
+        "Updated Entry": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AttioClient.handle_webhook()"
+        },
+        "New Entry": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AttioClient.handle_webhook()"
+        },
+        "New Task": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AttioClient.handle_webhook()"
+        },
+        "Updated Task": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AttioClient.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T09:36:17.358866+09:00",
+      "analyzed_at": "2026-02-28T09:36:17.358866+09:00"
+    },
+    "axonaut.md": {
+      "service_name": "Axonaut",
+      "category": "세일스",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Axonaut: API Key/Bearer Token 인증",
+      "api_actions": {
+        "Get Product": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Delete Employee": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Delete Company": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Search Quotations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Create Employee": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Search Employees": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Update Company": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Update Employee": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Create Invoice": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Get Ticket": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Get Employee": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Search Expenses": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Create Company": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Get Supplier": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Create Product": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Search Companies": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Search Opportunities": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Get Supplier List": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Create Supplier": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Create Expense": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Get Events List": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Get Company": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Create Ticket": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Get Quotation": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Create Quotation": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Create Event": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Get Expense": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Create Opportunity": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Search Invoices": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        },
+        "Get Opportunity": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/axonaut/axonaut_client.py"
+        }
+      },
+      "triggers": {
+        "New Quotation": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AxonautClient.handle_webhook()"
+        },
+        "New Company": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AxonautClient.handle_webhook()"
+        },
+        "New Invoice": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AxonautClient.handle_webhook()"
+        },
+        "Updated Task": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AxonautClient.handle_webhook()"
+        },
+        "New Opportunity": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AxonautClient.handle_webhook()"
+        },
+        "Updated Opportunity": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AxonautClient.handle_webhook()"
+        },
+        "Updated Product": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AxonautClient.handle_webhook()"
+        },
+        "Updated Ticket": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AxonautClient.handle_webhook()"
+        },
+        "New Project": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AxonautClient.handle_webhook()"
+        },
+        "Updated Employee": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AxonautClient.handle_webhook()"
+        },
+        "New Ticket": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AxonautClient.handle_webhook()"
+        },
+        "Updated Expense": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AxonautClient.handle_webhook()"
+        },
+        "Updated Event": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AxonautClient.handle_webhook()"
+        },
+        "Updated Company": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AxonautClient.handle_webhook()"
+        },
+        "New Product": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AxonautClient.handle_webhook()"
+        },
+        "New Expense": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AxonautClient.handle_webhook()"
+        },
+        "New Employee": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AxonautClient.handle_webhook()"
+        },
+        "Updated Project": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AxonautClient.handle_webhook()"
+        },
+        "New Event": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AxonautClient.handle_webhook()"
+        },
+        "New Task": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "AxonautClient.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T09:36:17.358866+09:00",
+      "analyzed_at": "2026-02-28T09:36:17.358866+09:00"
+    },
+    "bettercontact.md": {
+      "service_name": "Bettercontact",
+      "category": "세일스",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Bettercontact: API Key/Bearer Token 인증",
+      "api_actions": {
+        "Get Enrichment Results": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bettercontact/bettercontact_client.py"
+        },
+        "Enrich Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bettercontact/bettercontact_client.py"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T09:36:17.358866+09:00",
+      "analyzed_at": "2026-02-28T09:36:17.358866+09:00"
+    },
+    "bird.md": {
+      "service_name": "Bird",
+      "category": "세일스",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Bird: API Key/Bearer Token 인증",
+      "api_actions": {
+        "Create Conversation": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bird/bird_client.py"
+        },
+        "Search Conversation Messages": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bird/bird_client.py"
+        },
+        "Add Participant to Conversation": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bird/bird_client.py"
+        },
+        "Get Participant": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bird/bird_client.py"
+        },
+        "List Contacts": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bird/bird_client.py"
+        },
+        "Create Conversation Message": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bird/bird_client.py"
+        },
+        "Create Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bird/bird_client.py"
+        },
+        "Get Conversation Message": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bird/bird_client.py"
+        },
+        "Search Channels": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bird/bird_client.py"
+        },
+        "Delete Conversation": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bird/bird_client.py"
+        },
+        "Get Conversation": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bird/bird_client.py"
+        },
+        "Delete Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bird/bird_client.py"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bird/bird_client.py"
+        },
+        "List Conversations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bird/bird_client.py"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bird/bird_client.py"
+        },
+        "List Participants": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bird/bird_client.py"
+        }
+      },
+      "triggers": {
+        "Received Email Message": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BirdClient.handle_webhook()"
+        },
+        "Send Email Message": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BirdClient.handle_webhook()"
+        },
+        "Created Conversation": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BirdClient.handle_webhook()"
+        },
+        "Created Channel": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BirdClient.handle_webhook()"
+        },
+        "Opened Email": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BirdClient.handle_webhook()"
+        },
+        "Deleted Conversation": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BirdClient.handle_webhook()"
+        },
+        "Updated Conversation": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BirdClient.handle_webhook()"
+        },
+        "Updated Channel": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BirdClient.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T09:36:17.358866+09:00",
+      "analyzed_at": "2026-02-28T09:36:17.358866+09:00"
+    },
+    "bitrix.md": {
+      "service_name": "Bitrix",
+      "category": "세일스",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Bitrix: API Key/Bearer Token 인증",
+      "api_actions": {
+        "Create Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bitrix/bitrix_client.py"
+        },
+        "Search Deal": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bitrix/bitrix_client.py"
+        },
+        "Update Deal": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bitrix/bitrix_client.py"
+        },
+        "Update Product Item": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bitrix/bitrix_client.py"
+        },
+        "Delete Product Item": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bitrix/bitrix_client.py"
+        },
+        "Create Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bitrix/bitrix_client.py"
+        },
+        "Get Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bitrix/bitrix_client.py"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bitrix/bitrix_client.py"
+        },
+        "Search Product Item": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bitrix/bitrix_client.py"
+        },
+        "Delete Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bitrix/bitrix_client.py"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bitrix/bitrix_client.py"
+        },
+        "Create Deal": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bitrix/bitrix_client.py"
+        },
+        "Create Product Item": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bitrix/bitrix_client.py"
+        },
+        "Get Product Item": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bitrix/bitrix_client.py"
+        },
+        "Update Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bitrix/bitrix_client.py"
+        },
+        "Get Deal": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bitrix/bitrix_client.py"
+        },
+        "Search Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bitrix/bitrix_client.py"
+        },
+        "Delete Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bitrix/bitrix_client.py"
+        },
+        "Delete Deal": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bitrix/bitrix_client.py"
+        },
+        "Search Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/bitrix/bitrix_client.py"
+        }
+      },
+      "triggers": {
+        "New Lead": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BitrixClient.handle_webhook()"
+        },
+        "Updated Deal": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BitrixClient.handle_webhook()"
+        },
+        "New Deal": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BitrixClient.handle_webhook()"
+        },
+        "Updated Contact": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BitrixClient.handle_webhook()"
+        },
+        "Updated Lead": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BitrixClient.handle_webhook()"
+        },
+        "New Contact": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BitrixClient.handle_webhook()"
+        },
+        "New Task": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "BitrixClient.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T09:36:17.358866+09:00",
+      "analyzed_at": "2026-02-28T09:36:17.358866+09:00"
+    },
+    "callconnect.md": {
+      "service_name": "Callconnect",
+      "category": "세일스",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Callconnect: API Key/Bearer Token 인증",
+      "api_actions": {
+        "顧客を検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/callconnect/callconnect_client.py"
+        },
+        "通話履歴を検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/callconnect/callconnect_client.py"
+        },
+        "顧客の取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/callconnect/callconnect_client.py"
+        },
+        "顧客を作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/callconnect/callconnect_client.py"
+        },
+        "顧客を削除": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/callconnect/callconnect_client.py"
+        }
+      },
+      "triggers": {
+        "Webhookを受信したら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "CallconnectClient.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T09:36:17.358866+09:00",
+      "analyzed_at": "2026-02-28T09:36:17.358866+09:00"
+    },
+    "capsule-crm.md": {
+      "service_name": "Capsule Crm",
+      "category": "세일스",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Capsule Crm: API Key/Bearer Token 인증",
+      "api_actions": {
+        "Search Project": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/capsule-crm/capsule-crm_client.py"
+        },
+        "Get Party": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/capsule-crm/capsule-crm_client.py"
+        },
+        "Delete Task": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/capsule-crm/capsule-crm_client.py"
+        },
+        "Update Task": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/capsule-crm/capsule-crm_client.py"
+        },
+        "Get Task": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/capsule-crm/capsule-crm_client.py"
+        },
+        "Delete Opportunity": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/capsule-crm/capsule-crm_client.py"
+        },
+        "Search Party": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/capsule-crm/capsule-crm_client.py"
+        },
+        "Search Opportunity": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/capsule-crm/capsule-crm_client.py"
+        },
+        "List Task": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/capsule-crm/capsule-crm_client.py"
+        },
+        "Delete Party": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/capsule-crm/capsule-crm_client.py"
+        },
+        "List Project": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/capsule-crm/capsule-crm_client.py"
+        },
+        "Create Party": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/capsule-crm/capsule-crm_client.py"
+        },
+        "Update Party": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/capsule-crm/capsule-crm_client.py"
+        },
+        "Update Project": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/capsule-crm/capsule-crm_client.py"
+        },
+        "Delete Project": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/capsule-crm/capsule-crm_client.py"
+        },
+        "Create Opportunity": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/capsule-crm/capsule-crm_client.py"
+        },
+        "List Opportunity": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/capsule-crm/capsule-crm_client.py"
+        },
+        "Get Opportunity": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/capsule-crm/capsule-crm_client.py"
+        },
+        "Create Project": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/capsule-crm/capsule-crm_client.py"
+        },
+        "Update Opportunity": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/capsule-crm/capsule-crm_client.py"
+        },
+        "Create Task": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/capsule-crm/capsule-crm_client.py"
+        }
+      },
+      "triggers": {
+        "Completed Task": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "Capsule crmClient.handle_webhook()"
+        },
+        "Updated Opportunity Milestone": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "Capsule crmClient.handle_webhook()"
+        },
+        "New Opportunity": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "Capsule crmClient.handle_webhook()"
+        },
+        "Updated Opportunity": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "Capsule crmClient.handle_webhook()"
+        },
+        "Updated Party": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "Capsule crmClient.handle_webhook()"
+        },
+        "Updated to Specified Opportunity Milestone": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "Capsule crmClient.handle_webhook()"
+        },
+        "Closed Opportunity": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "Capsule crmClient.handle_webhook()"
+        },
+        "New Party": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "Capsule crmClient.handle_webhook()"
+        },
+        "New Task": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "Capsule crmClient.handle_webhook()"
+        },
+        "Updated Task": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "Capsule crmClient.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T09:36:17.358866+09:00",
+      "analyzed_at": "2026-02-28T09:36:17.358866+09:00"
+    },
+    "chumonbunjo-cloud.md": {
+      "service_name": "Chumonbunjo Cloud",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T09:56:12.535952",
+      "code_file": "github/skill-factory/repo/chumonbunjo-cloud/chumonbunjo_client.py",
+      "api_count": 28
+    },
+    "clio_manage.md": {
+      "service_name": "Clio Manage",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T09:56:12.535952",
+      "code_file": "github/skill-factory/repo/clio_manage/clio_manage_client.py",
+      "api_count": 19
+    },
+    "close.md": {
+      "service_name": "Close",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T09:56:12.535952",
+      "code_file": "github/skill-factory/repo/close/close_client.py",
+      "api_count": 19
+    },
+    "cloze.md": {
+      "service_name": "Cloze",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T09:56:12.535952",
+      "code_file": "github/skill-factory/repo/cloze/cloze_client.py",
+      "api_count": 14
+    },
+    "cogmento.md": {
+      "service_name": "Cogmento",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T09:56:12.535952",
+      "code_file": "github/skill-factory/repo/cogmento/cogmento_client.py",
+      "api_count": 20
+    },
+    "contactship_ai.md": {
+      "service_name": "Contactship AI",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T09:56:12.535952",
+      "code_file": "github/skill-factory/repo/contactship_ai/contactship_ai_client.py",
+      "api_count": 7
+    },
+    "copper.md": {
+      "service_name": "Copper",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T09:56:12.535952",
+      "code_file": "github/skill-factory/repo/copper/copper_client.py",
+      "api_count": 12
+    },
+    "cyzen.md": {
+      "service_name": "Cyzen",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T09:56:12.535952",
+      "code_file": "github/skill-factory/repo/cyzen/cyzen_client.py",
+      "api_count": 17
+    },
+    "dropcontact.md": {
+      "service_name": "Dropcontact",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T09:56:12.535952",
+      "code_file": "github/skill-factory/repo/dropcontact/dropcontact_client.py",
+      "api_count": 2
+    },
+    "dynamics-crm.md": {
+      "service_name": "Dynamics CRM",
+      "category": "02_세일스_Sales",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "implementation_status": "completed",
+      "implemented_at": "2026-02-28T09:56:12.535952",
+      "code_file": "github/skill-factory/repo/dynamics-crm/dynamics_crm_client.py",
+      "api_count": 23
+    }
+  },
+  "last_updated": "2026-02-28 08:48:08"
+}
