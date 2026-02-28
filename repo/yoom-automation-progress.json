@@ -1,6 +1,6 @@
 {
   "category": "02_세일스_Sales",
-  "last_updated": "2026-02-28T10:04:00+09:00",
+  "last_updated": "2026-02-28T10:15:00+09:00",
   "services": [
     {
       "id": "agendor",
@@ -121,11 +121,131 @@
       "triggers": 7,
       "authentication": "API Token",
       "notes": "Comprehensive CRM implementation with parties, opportunities, projects, and tasks management."
+    },
+    {
+      "id": "myphoner",
+      "name": "Myphoner",
+      "description": "Lead Management Platform",
+      "status": "completed",
+      "implementation_date": "2026-02-28",
+      "code_path": "github/skill-factory/repo/myphoner/myphoner_client.py",
+      "api_actions": 8,
+      "triggers": 4,
+      "authentication": "API Key (Bearer Token)",
+      "notes": "Lead management implementation with create, update, search, and status operations (winner, loser, callback)."
+    },
+    {
+      "id": "printbahn",
+      "name": "Printbahn",
+      "description": "Business Card Search",
+      "status": "completed",
+      "implementation_date": "2026-02-28",
+      "code_path": "github/skill-factory/repo/printbahn/printbahn_client.py",
+      "api_actions": 2,
+      "triggers": 0,
+      "authentication": "API Key (Bearer Token)",
+      "notes": "Business card search implementation supporting single and multiple result queries with email, name, organization, and phone filters."
+    },
+    {
+      "id": "klenty",
+      "name": "Klenty",
+      "description": "Sales Engagement Platform",
+      "status": "completed",
+      "implementation_date": "2026-02-28",
+      "code_path": "github/skill-factory/repo/klenty/klenty_client.py",
+      "api_actions": 10,
+      "triggers": 9,
+      "authentication": "API Key (Bearer Token)",
+      "notes": "Sales engagement implementation with prospect management, cadence control, email tracking handlers, and status management."
+    },
+    {
+      "id": "streak",
+      "name": "Streak",
+      "description": "Gmail-based CRM",
+      "status": "completed",
+      "implementation_date": "2026-02-28",
+      "code_path": "github/skill-factory/repo/streak/streak_client.py",
+      "api_actions": 21,
+      "triggers": 10,
+      "authentication": "API Key (Basic Auth)",
+      "notes": "Full Gmail CRM implementation with boxes, contacts, organizations, tasks, comments, files, and threads management."
+    },
+    {
+      "id": "ploomes",
+      "name": "Ploomes",
+      "description": "Sales CRM Platform",
+      "status": "completed",
+      "implementation_date": "2026-02-28",
+      "code_path": "github/skill-factory/repo/ploomes/ploomes_client.py",
+      "api_actions": 17,
+      "triggers": 1,
+      "authentication": "API Key (User-Key Header)",
+      "notes": "Brazilian CRM implementation with contacts, deals, tasks, and products. Includes webhook trigger support and OData-style queries."
+    },
+    {
+      "id": "hif",
+      "name": "HIF",
+      "description": "Credit Scoring Service",
+      "status": "completed",
+      "implementation_date": "2026-02-28",
+      "code_path": "github/skill-factory/repo/hif/hif_client.py",
+      "api_actions": 3,
+      "triggers": 0,
+      "authentication": "API Key (Bearer Token)",
+      "notes": "Credit scoring implementation with request screening, get screening details, and get company score operations."
+    },
+    {
+      "id": "getprospect",
+      "name": "Getprospect",
+      "description": "Lead Enrichment Platform",
+      "status": "completed",
+      "implementation_date": "2026-02-28",
+      "code_path": "github/skill-factory/repo/getprospect/getprospect_client.py",
+      "api_actions": 13,
+      "triggers": 1,
+      "authentication": "API Key (Bearer Token)",
+      "notes": "Lead enrichment implementation with contact management, email finding/verification, company lookup, and list management."
+    },
+    {
+      "id": "pipedrive",
+      "name": "Pipedrive",
+      "description": "Sales CRM Platform",
+      "status": "completed",
+      "implementation_date": "2026-02-28",
+      "code_path": "github/skill-factory/repo/pipedrive/pipedrive_client.py",
+      "api_actions": 28,
+      "triggers": 10,
+      "authentication": "API Token (Basic Auth)",
+      "notes": "Comprehensive CRM implementation with persons, organizations, deals, leads, activities, notes, files, and products. Largest action count of batch."
+    },
+    {
+      "id": "kyusms",
+      "name": "Kyusms",
+      "description": "SMS Messaging Service",
+      "status": "completed",
+      "implementation_date": "2026-02-28",
+      "code_path": "github/skill-factory/repo/kyusms/kyusms_client.py",
+      "api_actions": 3,
+      "triggers": 0,
+      "authentication": "API Key (Bearer Token)",
+      "notes": "SMS messaging implementation with send, cancel, and status check operations. Includes delivery tracking support."
+    },
+    {
+      "id": "sansan",
+      "name": "Sansan",
+      "description": "Business Card Management",
+      "status": "completed",
+      "implementation_date": "2026-02-28",
+      "code_path": "github/skill-factory/repo/sansan/sansan_client.py",
+      "api_actions": 9,
+      "triggers": 5,
+      "authentication": "API Key (Basic Auth)",
+      "notes": "Business card management implementation with image registration, data registration, search, and contact list operations. Japanese company support."
     }
   ],
   "summary": {
-    "total_services": 10,
-    "completed": 10,
+    "total_services": 20,
+    "completed": 20,
     "pending": 0,
     "completion_percentage": 100
   },
@@ -140,8 +260,10 @@
       "Complete API action coverage as per Yoom Apps specifications"
     ],
     "authentication_methods": {
-      "API Token": ["Agendor", "Capsule CRM"],
-      "API Key": ["Amptalk", "Apollo", "Attio", "Axonaut", "Bettercontact", "Bird", "Callconnect"],
+      "API Token": ["Agendor", "Capsule CRM", "Pipedrive"],
+      "API Key (Bearer Token)": ["Amptalk", "Apollo", "Attio", "Axonaut", "Bettercontact", "Bird", "Callconnect", "Myphoner", "Printbahn", "Klenty", "Hif", "Getprospect", "Kyusms"],
+      "API Key (Basic Auth)": ["Streak", "Sansan"],
+      "API Key (User-Key Header)": ["Ploomes"],
       "Webhook URL": ["Bitrix"]
     }
   }

@@ -1,202 +1,398 @@
 """
-Myphoner API Client
-API Documentation: https://www.myphoner.com/developers
+Myphoner API - Lead Management Client
+
+Supports 8 API Actions:
+- Mark Loser
+- List Columns
+- Create Lead
+- Get Lead
+- Mark Winner
+- Search Leads
+- Update Lead
+- Mark Callback
+
+Triggers:
+- Lead Marked as Winner
+- Lead Marked as Loser
+- Lead Archive
+- Lead Marked as Callback
 """
 
-import requests
-from typing import Optional, Dict, List, Any
+import aiohttp
+import asyncio
+import logging
+from typing import Optional, Dict, Any, List
+from dataclasses import dataclass
 from datetime import datetime
-import json
 
 
-class MyphonerAPIError(Exception):
-    """Custom exception for Myphoner API errors."""
+@dataclass
+class Lead:
+    """Lead entity"""
+    id: str
+    list_id: str
+    name: Optional[str] = None
+    email: Optional[str] = None
+    phone: Optional[str] = None
+    company: Optional[str] = None
+    status: Optional[str] = None
+    loser_reason: Optional[str] = None
+    winner_reason: Optional[str] = None
+    callback_time: Optional[str] = None
+    custom_fields: Optional[Dict[str, Any]] = None
+    created_at: str = ""
+    updated_at: str = ""
+
+
+@dataclass
+class Column:
+    """Column entity"""
+    id: str
+    list_id: str
+    name: str
+    position: int
+
+
+class MyphonerClientError(Exception):
+    """Base exception for Myphoner client errors"""
+    pass
+
+
+class MyphonerRateLimitError(MyphonerClientError):
+    """Raised when rate limit is exceeded"""
     pass
 
 
 class MyphonerClient:
-    """Client for Myphoner API - Lead management and tracking."""
+    """
+    Myphoner API client for lead management.
 
-    def __init__(self, api_key: str, base_url: str = "https://api.myphoner.com/v1"):
+    API Documentation: https://help.myphoner.com/api/
+    Uses API Key for authentication via Bearer token.
+    """
+
+    BASE_URL = "https://api.myphoner.com"
+
+    def __init__(self, api_key: str, base_url: Optional[str] = None):
         """
-        Initialize Myphoner API client.
+        Initialize Myphoner client.
 
         Args:
-            api_key: Your Myphoner API key
-            base_url: API base URL (default: https://api.myphoner.com/v1)
+            api_key: API key for authentication
+            base_url: Optional custom base URL
         """
         self.api_key = api_key
-        self.base_url = base_url
-        self.session = requests.Session()
-        self.session.headers.update({
-            "Authorization": f"Bearer {api_key}",
+        self.base_url = (base_url or self.BASE_URL).rstrip("/")
+        self.session: Optional[aiohttp.ClientSession] = None
+        self._rate_limit_remaining = 100
+        self._rate_limit_reset = 0
+
+        logger = logging.getLogger("myphoner")
+        logger.setLevel(logging.DEBUG)
+        if not logger.handlers:
+            handler = logging.StreamHandler()
+            handler.setLevel(logging.INFO)
+            formatter = logging.Formatter(
+                '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+            )
+            handler.setFormatter(formatter)
+            logger.addHandler(handler)
+        self._logger = logger
+
+    async def __aenter__(self):
+        headers = {
+            "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json",
             "Accept": "application/json"
-        })
-        self.rate_limit_wait = 1.0  # seconds between requests
+        }
+        timeout = aiohttp.ClientTimeout(total=30)
+        self.session = aiohttp.ClientSession(
+            headers=headers,
+            timeout=timeout
+        )
+        return self
 
-    def _make_request(self, method: str, endpoint: str, **kwargs) -> Dict[str, Any]:
+    async def __aexit__(self, exc_type, exc_val, exc_tb):
+        if self.session:
+            await self.session.close()
+
+    async def _request(
+        self,
+        method: str,
+        endpoint: str,
+        data: Optional[Dict[str, Any]] = None,
+        params: Optional[Dict[str, Any]] = None
+    ) -> Dict[str, Any]:
         """
-        Make API request with error handling.
+        Make HTTP request with error handling and rate limiting.
 
         Args:
-            method: HTTP method (GET, POST, PUT, DELETE)
-            endpoint: API endpoint path
-            **kwargs: Additional arguments for request
+            method: HTTP method
+            endpoint: API endpoint
+            data: Request body data
+            params: Query parameters
 
         Returns:
             Response data as dictionary
 
         Raises:
-            MyphonerAPIError: If request fails
+            MyphonerClientError: On API errors
+            MyphonerRateLimitError: On rate limit exceeded
         """
+        await self._check_rate_limit()
+
         url = f"{self.base_url}{endpoint}"
-        try:
-            response = self.session.request(method, url, **kwargs)
-            response.raise_for_status()
 
-            data = response.json()
-            return {
-                "status": "success",
-                "data": data,
-                "status_code": response.status_code
-            }
+        retry_count = 0
+        max_retries = 3
 
-        except requests.exceptions.HTTPError as e:
-            error_data = self._parse_error(response)
-            raise MyphonerAPIError(
-                f"HTTP {response.status_code}: {error_data.get('message', str(e))}"
-            )
-        except requests.exceptions.RequestException as e:
-            raise MyphonerAPIError(f"Request failed: {str(e)}")
-        except json.JSONDecodeError:
-            raise MyphonerAPIError("Invalid JSON response")
+        while retry_count < max_retries:
+            try:
+                self._logger.debug(f"Request: {method} {url}")
+                if data:
+                    self._logger.debug(f"Data: {data}")
 
-    def _parse_error(self, response: requests.Response) -> Dict[str, Any]:
-        """Parse error response."""
-        try:
-            return response.json()
-        except json.JSONDecodeError:
-            return {"message": response.text}
+                async with self.session.request(
+                    method,
+                    url,
+                    json=data,
+                    params=params
+                ) as response:
+                    await self._update_rate_limit(response)
 
-    def create_lead(
+                    if response.status == 200 or response.status == 201:
+                        result = await response.json()
+                        self._logger.debug(f"Response: {result}")
+                        return result
+
+                    elif response.status == 204:
+                        self._logger.debug("Response: No Content")
+                        return {}
+
+                    elif response.status == 401:
+                        raise MyphonerClientError("Authentication failed")
+
+                    elif response.status == 403:
+                        raise MyphonerClientError("Forbidden - insufficient permissions")
+
+                    elif response.status == 404:
+                        raise MyphonerClientError("Resource not found")
+
+                    elif response.status == 422:
+                        error_data = await response.json()
+                        raise MyphonerClientError(
+                            f"Validation error: {error_data.get('errors', 'Unknown error')}"
+                        )
+
+                    elif response.status == 429:
+                        await self._handle_rate_limit()
+                        retry_count += 1
+                        continue
+
+                    else:
+                        error_text = await response.text()
+                        raise MyphonerClientError(
+                            f"API error {response.status}: {error_text}"
+                        )
+
+            except aiohttp.ClientError as e:
+                retry_count += 1
+                if retry_count >= max_retries:
+                    raise MyphonerClientError(f"Network error: {str(e)}")
+                await asyncio.sleep(2 ** retry_count)
+
+    async def _check_rate_limit(self):
+        """Check if rate limit allows request"""
+        if self._rate_limit_remaining <= 1:
+            now = int(datetime.now().timestamp())
+            if now < self._rate_limit_reset:
+                wait_time = self._rate_limit_reset - now
+                self._logger.warning(f"Rate limit reached, waiting {wait_time}s")
+                await asyncio.sleep(wait_time)
+
+    async def _update_rate_limit(self, response: aiohttp.ClientResponse):
+        """Update rate limit info from response headers"""
+        remaining = response.headers.get("X-RateLimit-Remaining")
+        reset = response.headers.get("X-RateLimit-Reset")
+
+        if remaining:
+            self._rate_limit_remaining = int(remaining)
+        if reset:
+            self._rate_limit_reset = int(reset)
+
+        self._logger.debug(
+            f"Rate limit: {self._rate_limit_remaining} remaining, "
+            f"resets at {self._rate_limit_reset}"
+        )
+
+    async def _handle_rate_limit(self):
+        """Handle rate limit by waiting"""
+        now = int(datetime.now().timestamp())
+        wait_time = max(0, self._rate_limit_reset - now + 1)
+        self._logger.warning(f"Rate limited, waiting {wait_time}s")
+        await asyncio.sleep(wait_time)
+
+    async def create_lead(
         self,
         list_id: str,
-        name: str,
-        phone: Optional[str] = None,
+        name: Optional[str] = None,
         email: Optional[str] = None,
+        phone: Optional[str] = None,
         company: Optional[str] = None,
-        title: Optional[str] = None,
-        notes: Optional[str] = None,
         custom_fields: Optional[Dict[str, Any]] = None
-    ) -> Dict[str, Any]:
+    ) -> Lead:
         """
-        Create a new lead.
+        Create a new lead in Myphoner.
 
         Args:
             list_id: ID of the list to add lead to
             name: Lead name
-            phone: Phone number
-            email: Email address
-            company: Company name
-            title: Job title
-            notes: Additional notes
+            email: Lead email
+            phone: Lead phone
+            company: Lead company
             custom_fields: Custom field values
 
         Returns:
-            Created lead data
+            Created lead object
+
+        Raises:
+            MyphonerClientError: On API errors
         """
-        data = {
-            "list_id": list_id,
-            "name": name,
-            "phone": phone,
-            "email": email,
-            "company": company,
-            "title": title,
-            "notes": notes
-        }
+        data = {"list_id": list_id}
+        if name:
+            data["name"] = name
+        if email:
+            data["email"] = email
+        if phone:
+            data["phone"] = phone
+        if company:
+            data["company"] = company
         if custom_fields:
             data["custom_fields"] = custom_fields
 
-        return self._make_request("POST", "/leads", json=data)
+        self._logger.info(f"Creating lead in list {list_id}")
+        result = await self._request("POST", "/leads", data=data)
 
-    def get_lead(self, lead_id: str) -> Dict[str, Any]:
+        return Lead(
+            id=str(result.get("id", "")),
+            list_id=list_id,
+            name=result.get("name"),
+            email=result.get("email"),
+            phone=result.get("phone"),
+            company=result.get("company"),
+            custom_fields=result.get("custom_fields"),
+            created_at=result.get("created_at", ""),
+            updated_at=result.get("updated_at", "")
+        )
+
+    async def get_lead(self, lead_id: str) -> Lead:
         """
-        Get lead details by ID.
+        Get a lead by ID.
 
         Args:
             lead_id: ID of the lead
 
         Returns:
-            Lead data
-        """
-        return self._make_request("GET", f"/leads/{lead_id}")
+            Lead object
 
-    def update_lead(
+        Raises:
+            MyphonerClientError: On API errors
+        """
+        self._logger.info(f"Getting lead {lead_id}")
+        result = await self._request("GET", f"/leads/{lead_id}")
+
+        return Lead(
+            id=str(result.get("id", "")),
+            list_id=str(result.get("list_id", "")),
+            name=result.get("name"),
+            email=result.get("email"),
+            phone=result.get("phone"),
+            company=result.get("company"),
+            status=result.get("status"),
+            loser_reason=result.get("loser_reason"),
+            winner_reason=result.get("winner_reason"),
+            callback_time=result.get("callback_time"),
+            custom_fields=result.get("custom_fields"),
+            created_at=result.get("created_at", ""),
+            updated_at=result.get("updated_at", "")
+        )
+
+    async def update_lead(
         self,
         lead_id: str,
         name: Optional[str] = None,
-        phone: Optional[str] = None,
         email: Optional[str] = None,
+        phone: Optional[str] = None,
         company: Optional[str] = None,
-        title: Optional[str] = None,
-        notes: Optional[str] = None,
         custom_fields: Optional[Dict[str, Any]] = None
-    ) -> Dict[str, Any]:
+    ) -> Lead:
         """
-        Update lead information.
+        Update an existing lead.
 
         Args:
             lead_id: ID of the lead to update
-            name: Lead name
-            phone: Phone number
-            email: Email address
-            company: Company name
-            title: Job title
-            notes: Additional notes
-            custom_fields: Custom field values
+            name: New name
+            email: New email
+            phone: New phone
+            company: New company
+            custom_fields: New custom field values
 
         Returns:
-            Updated lead data
+            Updated lead object
+
+        Raises:
+            MyphonerClientError: On API errors
         """
         data = {}
         if name is not None:
             data["name"] = name
-        if phone is not None:
-            data["phone"] = phone
         if email is not None:
             data["email"] = email
+        if phone is not None:
+            data["phone"] = phone
         if company is not None:
             data["company"] = company
-        if title is not None:
-            data["title"] = title
-        if notes is not None:
-            data["notes"] = notes
         if custom_fields is not None:
             data["custom_fields"] = custom_fields
 
-        return self._make_request("PUT", f"/leads/{lead_id}", json=data)
+        self._logger.info(f"Updating lead {lead_id}")
+        result = await self._request("PUT", f"/leads/{lead_id}", data=data)
 
-    def search_leads(
+        return Lead(
+            id=str(result.get("id", "")),
+            list_id=str(result.get("list_id", "")),
+            name=result.get("name"),
+            email=result.get("email"),
+            phone=result.get("phone"),
+            company=result.get("company"),
+            custom_fields=result.get("custom_fields"),
+            created_at=result.get("created_at", ""),
+            updated_at=result.get("updated_at", "")
+        )
+
+    async def search_leads(
         self,
         list_id: str,
         query: Optional[str] = None,
         status: Optional[str] = None,
         limit: int = 50,
         offset: int = 0
-    ) -> Dict[str, Any]:
+    ) -> List[Lead]:
         """
-        Search for leads.
+        Search leads in a list.
 
         Args:
             list_id: ID of the list to search
-            query: Search query string
-            status: Filter by status (todo, won, lost, callback)
-            limit: Maximum number of results (default: 50)
-            offset: Offset for pagination (default: 0)
+            query: Search query
+            status: Filter by status
+            limit: Maximum number of results
+            offset: Pagination offset
 
         Returns:
-            List of leads matching criteria
+            List of matching leads
+
+        Raises:
+            MyphonerClientError: On API errors
         """
         params = {
             "list_id": list_id,
@@ -204,155 +400,171 @@ class MyphonerClient:
             "offset": offset
         }
         if query:
-            params["query"] = query
+            params["q"] = query
         if status:
             params["status"] = status
 
-        return self._make_request("GET", "/leads", params=params)
+        self._logger.info(f"Searching leads in list {list_id}")
+        result = await self._request("GET", "/leads", params=params)
 
-    def list_columns(self, list_id: str) -> Dict[str, Any]:
-        """
-        List all columns in a list.
+        leads = []
+        for item in result.get("leads", []):
+            leads.append(Lead(
+                id=str(item.get("id", "")),
+                list_id=list_id,
+                name=item.get("name"),
+                email=item.get("email"),
+                phone=item.get("phone"),
+                company=item.get("company"),
+                status=item.get("status"),
+                loser_reason=item.get("loser_reason"),
+                winner_reason=item.get("winner_reason"),
+                callback_time=item.get("callback_time"),
+                custom_fields=item.get("custom_fields"),
+                created_at=item.get("created_at", ""),
+                updated_at=item.get("updated_at", "")
+            ))
 
-        Args:
-            list_id: ID of the list
+        return leads
 
-        Returns:
-            List of columns with their properties
-        """
-        params = {"list_id": list_id}
-        return self._make_request("GET", "/columns", params=params)
-
-    def mark_winner(self, lead_id: str, notes: Optional[str] = None) -> Dict[str, Any]:
-        """
-        Mark a lead as winner (successful sale).
-
-        Args:
-            lead_id: ID of the lead
-            notes: Optional notes about the sale
-
-        Returns:
-            Updated lead data
-        """
-        data = {"status": "won"}
-        if notes:
-            data["notes"] = notes
-
-        return self._make_request("PUT", f"/leads/{lead_id}/status", json=data)
-
-    def mark_loser(self, lead_id: str, notes: Optional[str] = None) -> Dict[str, Any]:
-        """
-        Mark a lead as loser (lost sale).
-
-        Args:
-            lead_id: ID of the lead
-            notes: Optional notes about why the sale was lost
-
-        Returns:
-            Updated lead data
-        """
-        data = {"status": "lost"}
-        if notes:
-            data["notes"] = notes
-
-        return self._make_request("PUT", f"/leads/{lead_id}/status", json=data)
-
-    def mark_callback(
+    async def mark_winner(
         self,
         lead_id: str,
-        callback_date: Optional[datetime] = None,
-        notes: Optional[str] = None
-    ) -> Dict[str, Any]:
+        reason: Optional[str] = None
+    ) -> Lead:
+        """
+        Mark a lead as winner.
+
+        Args:
+            lead_id: ID of the lead
+            reason: Optional reason for winning
+
+        Returns:
+            Updated lead object
+
+        Raises:
+            MyphonerClientError: On API errors
+        """
+        data = {"status": "winner"}
+        if reason:
+            data["winner_reason"] = reason
+
+        self._logger.info(f"Marking lead {lead_id} as winner")
+        result = await self._request("PUT", f"/leads/{lead_id}", data=data)
+
+        return Lead(
+            id=str(result.get("id", "")),
+            list_id=str(result.get("list_id", "")),
+            name=result.get("name"),
+            email=result.get("email"),
+            phone=result.get("phone"),
+            company=result.get("company"),
+            status=result.get("status"),
+            winner_reason=result.get("winner_reason"),
+            created_at=result.get("created_at", ""),
+            updated_at=result.get("updated_at", "")
+        )
+
+    async def mark_loser(
+        self,
+        lead_id: str,
+        reason: Optional[str] = None
+    ) -> Lead:
+        """
+        Mark a lead as loser.
+
+        Args:
+            lead_id: ID of the lead
+            reason: Optional reason for losing
+
+        Returns:
+            Updated lead object
+
+        Raises:
+            MyphonerClientError: On API errors
+        """
+        data = {"status": "loser"}
+        if reason:
+            data["loser_reason"] = reason
+
+        self._logger.info(f"Marking lead {lead_id} as loser")
+        result = await self._request("PUT", f"/leads/{lead_id}", data=data)
+
+        return Lead(
+            id=str(result.get("id", "")),
+            list_id=str(result.get("list_id", "")),
+            name=result.get("name"),
+            email=result.get("email"),
+            phone=result.get("phone"),
+            company=result.get("company"),
+            status=result.get("status"),
+            loser_reason=result.get("loser_reason"),
+            created_at=result.get("created_at", ""),
+            updated_at=result.get("updated_at", "")
+        )
+
+    async def mark_callback(
+        self,
+        lead_id: str,
+        callback_time: str
+    ) -> Lead:
         """
         Mark a lead for callback.
 
         Args:
             lead_id: ID of the lead
-            callback_date: When to callback (datetime object)
-            notes: Optional notes about the callback
+            callback_time: ISO datetime string for callback
 
         Returns:
-            Updated lead data
+            Updated lead object
+
+        Raises:
+            MyphonerClientError: On API errors
         """
-        data = {"status": "callback"}
-        if callback_date:
-            data["callback_date"] = callback_date.isoformat()
-        if notes:
-            data["notes"] = notes
-
-        return self._make_request("PUT", f"/leads/{lead_id}/status", json=data)
-
-    def handle_webhook(self, payload: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Handle incoming webhook events.
-
-        Supported events:
-        - lead_marked_winner
-        - lead_marked_loser
-        - lead_archived
-        - lead_marked_callback
-
-        Args:
-            payload: Webhook payload
-
-        Returns:
-            Processed webhook data
-        """
-        event_type = payload.get("event_type")
-        event_data = payload.get("data", {})
-
-        if not event_type:
-            raise MyphonerAPIError("Missing event_type in webhook payload")
-
-        return {
-            "event": event_type,
-            "data": event_data,
-            "processed_at": datetime.now().isoformat()
+        data = {
+            "status": "callback",
+            "callback_time": callback_time
         }
 
-    def verify_webhook_signature(
-        self,
-        payload: str,
-        signature: str,
-        webhook_secret: str
-    ) -> bool:
+        self._logger.info(f"Marking lead {lead_id} for callback at {callback_time}")
+        result = await self._request("PUT", f"/leads/{lead_id}", data=data)
+
+        return Lead(
+            id=str(result.get("id", "")),
+            list_id=str(result.get("list_id", "")),
+            name=result.get("name"),
+            email=result.get("email"),
+            phone=result.get("phone"),
+            company=result.get("company"),
+            status=result.get("status"),
+            callback_time=result.get("callback_time"),
+            created_at=result.get("created_at", ""),
+            updated_at=result.get("updated_at", "")
+        )
+
+    async def list_columns(self, list_id: str) -> List[Column]:
         """
-        Verify webhook signature for security.
+        List columns in a list.
 
         Args:
-            payload: Raw webhook payload string
-            signature: Signature from webhook header
-            webhook_secret: Your webhook secret
+            list_id: ID of the list
 
         Returns:
-            True if signature is valid
+            List of columns
+
+        Raises:
+            MyphonerClientError: On API errors
         """
-        import hmac
-        import hashlib
+        self._logger.info(f"Listing columns for list {list_id}")
+        result = await self._request("GET", f"/lists/{list_id}/columns")
 
-        expected_signature = hmac.new(
-            webhook_secret.encode(),
-            payload.encode(),
-            hashlib.sha256
-        ).hexdigest()
+        columns = []
+        for item in result.get("columns", []):
+            columns.append(Column(
+                id=str(item.get("id", "")),
+                list_id=list_id,
+                name=item.get("name", ""),
+                position=item.get("position", 0)
+            ))
 
-        return hmac.compare_digest(expected_signature, signature)
-
-
-# Example usage
-if __name__ == "__main__":
-    # Example: Initialize client
-    client = MyphonerClient(api_key="your_api_key_here")
-
-    # Example: Create a lead
-    try:
-        result = client.create_lead(
-            list_id="list_123",
-            name="John Doe",
-            phone="+1234567890",
-            email="john@example.com",
-            company="Acme Inc."
-        )
-        print("Lead created:", result)
-    except MyphonerAPIError as e:
-        print(f"Error: {e}")
+        return columns
