@@ -2504,554 +2504,553 @@
       ],
       "analyzed_at": "2026-02-27T22:22:13.079691",
       "implemented_at": "2026-02-28T09:04:00.000000"
-    }
-  },
-  "pending": {
-    "01_마케팅_Marketing": {
-      "benchmark-email.md": {
-        "service_name": "Benchmark Email",
-        "category": "マーケティング",
-        "integration_type": "oauth",
-        "integration_confidence": "high",
-        "integration_reasoning": "SaaS/OAuth 표준",
-        "api_actions": {
-          "コンタクト情報を更新": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Test with API key, list ID and email. Example: python benchmark_email_api.py update-contact <list_id> test@example.com"
-          },
-          "コンタクトを検索": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Test with API key and list ID. Example: python benchmark_email_api.py search-contacts <list_id>"
-          },
-          "コンタクトを追加": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Test with API key, list ID and email. Example: python benchmark_email_api.py add-contact <list_id> test@example.com"
-          }
+    },
+    "big_mailer.md": {
+      "service_name": "Big_mailer",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "List Contacts": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key and brand ID. Example: python bigmailer_api.py list-contacts <brand_id>"
         },
-        "triggers": {},
-        "required_tasks": [
-          {
-            "task": "Benchmark Email API 문서 검토",
-            "priority": "high",
-            "description": "https://lp.yoom.fun/apps/Benchmark Email 및 공식 API 문서 확인",
-            "status": "pending"
-          },
-          {
-            "task": "Benchmark Email OAuth 앱 등록",
-            "priority": "high",
-            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
-            "status": "pending"
-          },
-          {
-            "task": "Client ID 및 Client Secret 획득",
-            "priority": "high",
-            "description": "OAuth 앱에서 인증 정보 획득",
-            "status": "pending"
-          },
-          {
-            "task": "테스트 계정 또는 샌드박스 환경 구축",
-            "priority": "medium",
-            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
-            "status": "pending"
-          },
-          {
-            "task": "3개 API 액션 단위 테스트 작성",
-            "priority": "low",
-            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
-            "status": "pending"
-          }
-        ],
-        "analyzed_at": "2026-02-27T22:22:13.008203"
+        "Create Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key, brand ID and email. Example: python bigmailer_api.py create-contact <brand_id> test@example.com"
+        },
+        "Delete Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key, brand ID and contact ID"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key, brand ID and contact ID"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key, brand ID and contact ID"
+        },
+        "List Fields": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key and brand ID"
+        }
       },
-      "big_mailer.md": {
-        "service_name": "Big_mailer",
-        "category": "マーケティング",
-        "integration_type": "oauth",
-        "integration_confidence": "high",
-        "integration_reasoning": "SaaS/OAuth 표준",
-        "api_actions": {
-          "List Contacts": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Test with API key and brand ID. Example: python bigmailer_api.py list-contacts <brand_id>"
-          },
-          "Create Contact": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Test with API key, brand ID and email. Example: python bigmailer_api.py create-contact <brand_id> test@example.com"
-          },
-          "Delete Contact": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Test with API key, brand ID and contact ID"
-          },
-          "Update Contact": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Test with API key, brand ID and contact ID"
-          },
-          "Get Contact": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Test with API key, brand ID and contact ID"
-          },
-          "List Fields": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Test with API key and brand ID"
-          }
+      "triggers": {},
+      "required_tasks": [
+        {
+          "task": "Big_mailer API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/Big_mailer 및 공식 API 문서 확인",
+          "status": "pending"
         },
-        "triggers": {},
-        "required_tasks": [
-          {
-            "task": "Big_mailer API 문서 검토",
-            "priority": "high",
-            "description": "https://lp.yoom.fun/apps/Big_mailer 및 공식 API 문서 확인",
-            "status": "pending"
-          },
-          {
-            "task": "Big_mailer OAuth 앱 등록",
-            "priority": "high",
-            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
-            "status": "pending"
-          },
-          {
-            "task": "Client ID 및 Client Secret 획득",
-            "priority": "high",
-            "description": "OAuth 앱에서 인증 정보 획득",
-            "status": "pending"
-          },
-          {
-            "task": "테스트 계정 또는 샌드박스 환경 구축",
-            "priority": "medium",
-            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
-            "status": "pending"
-          },
-          {
-            "task": "6개 API 액션 단위 테스트 작성",
-            "priority": "low",
-            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
-            "status": "pending"
-          }
-        ],
-        "analyzed_at": "2026-02-27T22:22:13.032741"
+        {
+          "task": "Big_mailer OAuth 앱 등록",
+          "priority": "high",
+          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "status": "pending"
+        },
+        {
+          "task": "Client ID 및 Client Secret 획득",
+          "priority": "high",
+          "description": "OAuth 앱에서 인증 정보 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "6개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T22:22:13.032741",
+      "implemented_at": "2026-02-28T09:04:00.000000"
+    },
+    "benchmark-email.md": {
+      "service_name": "Benchmark Email",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "コンタクト情報を更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key, list ID and email. Example: python benchmark_email_api.py update-contact <list_id> test@example.com"
+        },
+        "コンタクトを検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key and list ID. Example: python benchmark_email_api.py search-contacts <list_id>"
+        },
+        "コンタクトを追加": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key, list ID and email. Example: python benchmark_email_api.py add-contact <list_id> test@example.com"
+        }
       },
-      "bigquery.md": {
-        "service_name": "Bigquery",
-        "category": "マーケティング",
-        "integration_type": "oauth",
-        "integration_confidence": "high",
-        "integration_reasoning": "SaaS/OAuth 표준",
-        "api_actions": {
-          "レコードを検索": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Google Cloud credentials. Example: python bigquery_api.py search project.dataset.table 100"
-          },
-          "クエリを実行": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Google Cloud credentials. Example: python bigquery_api.py query 'SELECT COUNT(*) FROM project.dataset.table'"
-          },
-          "レコードを作成": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Google Cloud credentials. Example: python bigquery_api.py insert project.dataset.table"
-          }
+      "triggers": {},
+      "required_tasks": [
+        {
+          "task": "Benchmark Email API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/Benchmark Email 및 공식 API 문서 확인",
+          "status": "pending"
         },
-        "triggers": {},
-        "required_tasks": [
-          {
-            "task": "Bigquery API 문서 검토",
-            "priority": "high",
-            "description": "https://lp.yoom.fun/apps/Bigquery 및 공식 API 문서 확인",
-            "status": "pending"
-          },
-          {
-            "task": "Bigquery OAuth 앱 등록",
-            "priority": "high",
-            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
-            "status": "pending"
-          },
-          {
-            "task": "Client ID 및 Client Secret 획득",
-            "priority": "high",
-            "description": "OAuth 앱에서 인증 정보 획득",
-            "status": "pending"
-          },
-          {
-            "task": "테스트 계정 또는 샌드박스 환경 구축",
-            "priority": "medium",
-            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
-            "status": "pending"
-          },
-          {
-            "task": "3개 API 액션 단위 테스트 작성",
-            "priority": "low",
-            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
-            "status": "pending"
-          }
-        ],
-        "analyzed_at": "2026-02-27T22:22:13.056044"
+        {
+          "task": "Benchmark Email OAuth 앱 등록",
+          "priority": "high",
+          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "status": "pending"
+        },
+        {
+          "task": "Client ID 및 Client Secret 획득",
+          "priority": "high",
+          "description": "OAuth 앱에서 인증 정보 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "3개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T22:22:13.008203",
+      "implemented_at": "2026-02-28T09:04:00.000000"
+    },
+    "bigquery.md": {
+      "service_name": "Bigquery",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "レコードを検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Google Cloud credentials. Example: python bigquery_api.py search project.dataset.table 100"
+        },
+        "クエリを実行": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Google Cloud credentials. Example: python bigquery_api.py query 'SELECT COUNT(*) FROM project.dataset.table'"
+        },
+        "レコードを作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Google Cloud credentials. Example: python bigquery_api.py insert project.dataset.table"
+        }
       },
-      "botstar.md": {
-        "service_name": "Botstar",
-        "category": "マーケティング",
-        "integration_type": "oauth",
-        "integration_confidence": "high",
-        "integration_reasoning": "SaaS/OAuth 표준",
-        "api_actions": {
-          "Create Entity Item": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Test with API key and bot ID"
-          },
-          "Delete Entity Item": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Test with API key and bot ID"
-          },
-          "Get Entity Item": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Test with API key and bot ID"
-          },
-          "Update Entity Item": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Test with API key and bot ID"
-          },
-          "Search Entity Items": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Test with API key and bot ID"
-          }
+      "triggers": {},
+      "required_tasks": [
+        {
+          "task": "Bigquery API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/Bigquery 및 공식 API 문서 확인",
+          "status": "pending"
         },
-        "triggers": {},
-        "required_tasks": [
-          {
-            "task": "Botstar API 문서 검토",
-            "priority": "high",
-            "description": "https://lp.yoom.fun/apps/Botstar 및 공식 API 문서 확인",
-            "status": "pending"
-          },
-          {
-            "task": "Botstar OAuth 앱 등록",
-            "priority": "high",
-            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
-            "status": "pending"
-          },
-          {
-            "task": "Client ID 및 Client Secret 획득",
-            "priority": "high",
-            "description": "OAuth 앱에서 인증 정보 획득",
-            "status": "pending"
-          },
-          {
-            "task": "테스트 계정 또는 샌드박스 환경 구축",
-            "priority": "medium",
-            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
-            "status": "pending"
-          },
-          {
-            "task": "5개 API 액션 단위 테스트 작성",
-            "priority": "low",
-            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
-            "status": "pending"
-          }
-        ],
-        "analyzed_at": "2026-02-27T22:22:13.103651",
-        "implemented_at": "2026-02-27T22:00:00.000000"
+        {
+          "task": "Bigquery OAuth 앱 등록",
+          "priority": "high",
+          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "status": "pending"
+        },
+        {
+          "task": "Client ID 및 Client Secret 획득",
+          "priority": "high",
+          "description": "OAuth 앱에서 인증 정보 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "3개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T22:22:13.056044",
+      "implemented_at": "2026-02-28T09:04:00.000000"
+    },
+    "botstar.md": {
+      "service_name": "Botstar",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "Create Entity Item": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key and bot ID"
+        },
+        "Delete Entity Item": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key and bot ID"
+        },
+        "Get Entity Item": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key and bot ID"
+        },
+        "Update Entity Item": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key and bot ID"
+        },
+        "Search Entity Items": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key and bot ID"
+        }
       },
-      "bouncer.md": {
-        "service_name": "Bouncer",
-        "category": "マーケティング",
-        "integration_type": "oauth",
-        "integration_confidence": "high",
-        "integration_reasoning": "SaaS/OAuth 표준",
-        "api_actions": {
-          "Verification Domain": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Bouncer API key. Example: python bouncer_api.py domain example.com"
-          },
-          "Verify Email Address": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Bouncer API key. Example: python bouncer_api.py verify test@example.com"
-          }
+      "triggers": {},
+      "required_tasks": [
+        {
+          "task": "Botstar API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/Botstar 및 공식 API 문서 확인",
+          "status": "pending"
         },
-        "triggers": {},
-        "required_tasks": [
-          {
-            "task": "Bouncer API 문서 검토",
-            "priority": "high",
-            "description": "https://lp.yoom.fun/apps/Bouncer 및 공식 API 문서 확인",
-            "status": "pending"
-          },
-          {
-            "task": "Bouncer OAuth 앱 등록",
-            "priority": "high",
-            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
-            "status": "pending"
-          },
-          {
-            "task": "Client ID 및 Client Secret 획득",
-            "priority": "high",
-            "description": "OAuth 앱에서 인증 정보 획득",
-            "status": "pending"
-          },
-          {
-            "task": "테스트 계정 또는 샌드박스 환경 구축",
-            "priority": "medium",
-            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
-            "status": "pending"
-          },
-          {
-            "task": "2개 API 액션 단위 테스트 작성",
-            "priority": "low",
-            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
-            "status": "pending"
-          }
-        ],
-        "analyzed_at": "2026-02-27T22:22:13.128070",
-        "implemented_at": "2026-02-27T22:00:00.000000"
+        {
+          "task": "Botstar OAuth 앱 등록",
+          "priority": "high",
+          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "status": "pending"
+        },
+        {
+          "task": "Client ID 및 Client Secret 획득",
+          "priority": "high",
+          "description": "OAuth 앱에서 인증 정보 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "5개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T22:22:13.103651",
+      "implemented_at": "2026-02-28T09:04:00.000000"
+    },
+    "bouncer.md": {
+      "service_name": "Bouncer",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "Verification Domain": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bouncer API key. Example: python bouncer_api.py domain example.com"
+        },
+        "Verify Email Address": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bouncer API key. Example: python bouncer_api.py verify test@example.com"
+        }
       },
-      "bownow.md": {
-        "service_name": "Bownow",
-        "category": "マーケティング",
-        "integration_type": "oauth",
-        "integration_confidence": "high",
-        "integration_reasoning": "SaaS/OAuth 표준",
-        "api_actions": {
-          "リード情報を取得": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Bownow API key. Example: python bownow_api.py get <lead_id>"
-          },
-          "リード情報を更新": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Bownow API key. Example: python bownow_api.py update <lead_id>"
-          },
-          "リード情報を削除": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Bownow API key. Example: python bownow_api.py delete <lead_id>"
-          },
-          "リード情報を検索": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Bownow API key. Example: python bownow_api.py search test@example.com"
-          },
-          "リード情報を作成": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Bownow API key. Example: python bownow_api.py create test@example.com"
-          }
+      "triggers": {},
+      "required_tasks": [
+        {
+          "task": "Bouncer API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/Bouncer 및 공식 API 문서 확인",
+          "status": "pending"
         },
-        "triggers": {
-          "リード情報更新通知を受け取ったら（Webhook）": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires public webhook endpoint. Use BownowWebhooks class with Flask server"
-          },
-          "フォームコンバージョン通知を受け取ったら（Webhook）": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires public webhook endpoint. Example: python bownow_api.py webhook 8080"
-          }
+        {
+          "task": "Bouncer OAuth 앱 등록",
+          "priority": "high",
+          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "status": "pending"
         },
-        "required_tasks": [
-          {
-            "task": "Bownow API 문서 검토",
-            "priority": "high",
-            "description": "https://lp.yoom.fun/apps/Bownow 및 공식 API 문서 확인",
-            "status": "pending"
-          },
-          {
-            "task": "Bownow OAuth 앱 등록",
-            "priority": "high",
-            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
-            "status": "pending"
-          },
-          {
-            "task": "Client ID 및 Client Secret 획득",
-            "priority": "high",
-            "description": "OAuth 앱에서 인증 정보 획득",
-            "status": "pending"
-          },
-          {
-            "task": "2개 트리거용 Webhook 엔드포인트 설정",
-            "priority": "medium",
-            "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
-            "status": "pending"
-          },
-          {
-            "task": "테스트 계정 또는 샌드박스 환경 구축",
-            "priority": "medium",
-            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
-            "status": "pending"
-          },
-          {
-            "task": "5개 API 액션 단위 테스트 작성",
-            "priority": "low",
-            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
-            "status": "pending"
-          }
-        ],
-        "analyzed_at": "2026-02-27T22:22:13.152223",
-        "implemented_at": "2026-02-27T22:00:00.000000"
+        {
+          "task": "Client ID 및 Client Secret 획득",
+          "priority": "high",
+          "description": "OAuth 앱에서 인증 정보 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "2개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T22:22:13.128070",
+      "implemented_at": "2026-02-28T09:04:00.000000"
+    },
+    "bownow.md": {
+      "service_name": "Bownow",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "リード情報を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bownow API key. Example: python bownow_api.py get <lead_id>"
+        },
+        "リード情報を更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bownow API key. Example: python bownow_api.py update <lead_id>"
+        },
+        "リード情報を削除": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bownow API key. Example: python bownow_api.py delete <lead_id>"
+        },
+        "リード情報を検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bownow API key. Example: python bownow_api.py search test@example.com"
+        },
+        "リード情報を作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Bownow API key. Example: python bownow_api.py create test@example.com"
+        }
       },
-      "brevo.md": {
-        "service_name": "Brevo",
-        "category": "マーケティング",
-        "integration_type": "oauth",
-        "integration_confidence": "high",
-        "integration_reasoning": "SaaS/OAuth 표준",
-        "api_actions": {
-          "コンタクトを取得": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Brevo API key"
-          },
-          "SMSキャンペーンを作成": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Brevo API key"
-          },
-          "WhatsAppキャンペーンの作成と送信": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Brevo API key"
-          },
-          "メールキャンペーンレポートを取得": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Brevo API key"
-          },
-          "キャンペーンレポートを送信": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Brevo API key"
-          },
-          "SMSキャンペーンを即時送信": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Brevo API key"
-          },
-          "コンタクトを作成": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Test with API key"
-          },
-          "コンタクトを更新": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Brevo API key"
-          },
-          "取引メールを配信": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Test with API key"
-          },
-          "既存のコンタクトをリストに追加": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Brevo API key"
-          },
-          "トランザクションメールを配信": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires Brevo API key"
-          }
+      "triggers": {
+        "リード情報更新通知を受け取ったら（Webhook）": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint. Use BownowWebhooks class with Flask server"
         },
-        "triggers": {
-          "マーケティングメールが開封されたら（Webhook）": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires public webhook endpoint"
-          },
-          "トランザクションメールがクリックされたら（Webhook）": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires public webhook endpoint"
-          },
-          "マーケティングメールが配信されたら（Webhook）": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires public webhook endpoint"
-          },
-          "トランザクションメールが開封されたら（Webhook）": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires public webhook endpoint"
-          },
-          "マーケティングメールの配信が停止されたら（Webhook）": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires public webhook endpoint"
-          },
-          "マーケティングメールのリンクがクリックされたら（Webhook）": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires public webhook endpoint"
-          },
-          "コンタクトが新たに作成されたら": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires public webhook endpoint"
-          },
-          "トランザクションメールが配信されたら（Webhook）": {
-            "status": "completed",
-            "testable": true,
-            "test_method": "Requires public webhook endpoint"
-          }
+        "フォームコンバージョン通知を受け取ったら（Webhook）": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint. Example: python bownow_api.py webhook 8080"
+        }
+      },
+      "required_tasks": [
+        {
+          "task": "Bownow API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/Bownow 및 공식 API 문서 확인",
+          "status": "pending"
         },
-        "required_tasks": [
-          {
-            "task": "Brevo API 문서 검토",
-            "priority": "high",
-            "description": "https://lp.yoom.fun/apps/Brevo 및 공식 API 문서 확인",
-            "status": "pending"
-          },
-          {
-            "task": "Brevo OAuth 앱 등록",
-            "priority": "high",
-            "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
-            "status": "pending"
-          },
-          {
-            "task": "Client ID 및 Client Secret 획득",
-            "priority": "high",
-            "description": "OAuth 앱에서 인증 정보 획득",
-            "status": "pending"
-          },
-          {
-            "task": "8개 트리거용 Webhook 엔드포인트 설정",
-            "priority": "medium",
-            "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
-            "status": "pending"
-          },
-          {
-            "task": "테스트 계정 또는 샌드박스 환경 구축",
-            "priority": "medium",
-            "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
-            "status": "pending"
-          },
-          {
-            "task": "10개 API 액션 단위 테스트 작성",
-            "priority": "low",
-            "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
-            "status": "pending"
-          }
-        ],
-        "analyzed_at": "2026-02-27T22:22:13.176552",
-        "implemented_at": "2026-02-27T22:10:00.000000"
-      }
+        {
+          "task": "Bownow OAuth 앱 등록",
+          "priority": "high",
+          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "status": "pending"
+        },
+        {
+          "task": "Client ID 및 Client Secret 획득",
+          "priority": "high",
+          "description": "OAuth 앱에서 인증 정보 획득",
+          "status": "pending"
+        },
+        {
+          "task": "2개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "5개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T22:22:13.152223",
+      "implemented_at": "2026-02-28T09:04:00.000000"
+    },
+    "brevo.md": {
+      "service_name": "Brevo",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/OAuth 표준",
+      "api_actions": {
+        "コンタクトを取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Brevo API key"
+        },
+        "SMSキャンペーンを作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Brevo API key"
+        },
+        "WhatsAppキャンペーンの作成と送信": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Brevo API key"
+        },
+        "メールキャンペーンレポートを取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Brevo API key"
+        },
+        "キャンペーンレポートを送信": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Brevo API key"
+        },
+        "SMSキャンペーンを即時送信": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Brevo API key"
+        },
+        "コンタクトを作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key"
+        },
+        "コンタクトを更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Brevo API key"
+        },
+        "取引メールを配信": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key"
+        },
+        "既存のコンタクトをリストに追加": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Brevo API key"
+        },
+        "トランザクションメールを配信": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires Brevo API key"
+        }
+      },
+      "triggers": {
+        "マーケティングメールが開封されたら（Webhook）": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint"
+        },
+        "トランザクションメールがクリックされたら（Webhook）": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint"
+        },
+        "マーケティングメールが配信されたら（Webhook）": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint"
+        },
+        "トランザクションメールが開封されたら（Webhook）": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint"
+        },
+        "マーケティングメールの配信が停止されたら（Webhook）": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint"
+        },
+        "マーケティングメールのリンクがクリックされたら（Webhook）": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint"
+        },
+        "コンタクトが新たに作成されたら": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint"
+        },
+        "トランザクションメールが配信されたら（Webhook）": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Requires public webhook endpoint"
+        }
+      },
+      "required_tasks": [
+        {
+          "task": "Brevo API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/Brevo 및 공식 API 문서 확인",
+          "status": "pending"
+        },
+        {
+          "task": "Brevo OAuth 앱 등록",
+          "priority": "high",
+          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "status": "pending"
+        },
+        {
+          "task": "Client ID 및 Client Secret 획득",
+          "priority": "high",
+          "description": "OAuth 앱에서 인증 정보 획득",
+          "status": "pending"
+        },
+        {
+          "task": "8개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "10개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-27T22:22:13.176552",
+      "implemented_at": "2026-02-28T09:04:00.000000"
     }
   },
   "last_updated": "2026-02-28 08:48:08"
