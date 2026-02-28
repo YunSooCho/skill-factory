@@ -1,4 +1,4 @@
-# 10_채팅도구_ChatTools (10/24)
+# 10_채팅도구_ChatTools (18/24)
 
 - [x] chatluck
 - [x] chatwork
@@ -10,14 +10,14 @@
 - [x] inout-whatsapp
 - [x] jandi
 - [x] kakaowork
-- [ ] line-notify
-- [ ] line-works-oauth
-- [ ] megaapi
-- [ ] noor
-- [ ] slack
-- [ ] talknote
-- [ ] teams
-- [ ] telegram
+- [x] line-notify
+- [x] line-works-oauth
+- [x] megaapi
+- [x] noor
+- [x] slack
+- [x] talknote
+- [x] teams
+- [x] telegram
 - [ ] twist
 - [ ] twochat
 - [ ] wamm_app
