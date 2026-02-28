@@ -3393,6 +3393,111 @@
       ],
       "analyzed_at": "2026-02-28T09:04:00.000000",
       "implemented_at": "2026-02-28T09:04:00.000000"
+    },
+    "apollo.md": {
+      "service_name": "Apollo",
+      "category": "セールス",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "API Key 인증 (Api-Key header)",
+      "api_actions": {
+        "アカウントを更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key. Example: python apollo_client.py or client.update_account(...)",
+          "code_file": "github/skill-factory/repo/apollo/apollo_client.py"
+        },
+        "コンタクトを検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key. Example: python apollo_client.py or client.search_contacts(...)",
+          "code_file": "github/skill-factory/repo/apollo/apollo_client.py"
+        },
+        "人物情報のエンリッチメント": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key. Example: python apollo_client.py or client.enrich_person(...)",
+          "code_file": "github/skill-factory/repo/apollo/apollo_client.py"
+        },
+        "組織情報のエンリッチメント": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key. Example: python apollo_client.py or client.enrich_organization(...)",
+          "code_file": "github/skill-factory/repo/apollo/apollo_client.py"
+        },
+        "人物情報を検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key. Example: python apollo_client.py or client.search_people(...)",
+          "code_file": "github/skill-factory/repo/apollo/apollo_client.py"
+        },
+        "アカウントを検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key. Example: python apollo_client.py or client.search_accounts(...)",
+          "code_file": "github/skill-factory/repo/apollo/apollo_client.py"
+        },
+        "コンタクトを作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key. Example: python apollo_client.py or client.create_contact(...)",
+          "code_file": "github/skill-factory/repo/apollo/apollo_client.py"
+        },
+        "コンタクトを更新": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key. Example: python apollo_client.py or client.update_contact(...)",
+          "code_file": "github/skill-factory/repo/apollo/apollo_client.py"
+        },
+        "アカウントを作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API key. Example: python apollo_client.py or client.create_account(...)",
+          "code_file": "github/skill-factory/repo/apollo/apollo_client.py"
+        }
+      },
+      "triggers": {
+        "コンタクトが作成されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook endpoint required. Use register_webhook() method",
+          "webhook_method": "ApolloClient.register_webhook(callback_url, events)"
+        },
+        "コンタクトが更新されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook endpoint required. Use register_webhook() method",
+          "webhook_method": "ApolloClient.register_webhook(callback_url, events)"
+        },
+        "アカウントが作成されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook endpoint required. Use register_webhook() method",
+          "webhook_method": "ApolloClient.register_webhook(callback_url, events)"
+        }
+      },
+      "required_tasks": [
+        {
+          "task": "Apollo API 문서 검토",
+          "priority": "high",
+          "description": "https://api.apollo.io/v1 확인",
+          "status": "completed"
+        },
+        {
+          "task": "API 키 획득",
+          "priority": "high",
+          "description": "https://app.apollo.io/settings/api에서 API 키 발급",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 환경 구축",
+          "priority": "medium",
+          "description": "실제 API 키로 9개 API 액션 테스트",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T09:04:00.000000",
+      "implemented_at": "2026-02-28T09:04:00.000000"
     }
   },
   "last_updated": "2026-02-28 08:48:08"
