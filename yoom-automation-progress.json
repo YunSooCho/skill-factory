@@ -1,5 +1,5 @@
 {
-  "currentCategory": "Marketing Category Completed",
+  "currentCategory": "Batch 33 Completed - 30 Yoom Services",
   "completed": {
     "abstract.md": {
       "service_name": "Abstract",
@@ -14904,6 +14904,1116 @@
         }
       ],
       "analyzed_at": "2026-02-28T15:23:58.258842"
+    },
+    "sasuke-lead.md": {
+      "service_name": "Sasuke Lead",
+      "category": "02_세일스_Sales",
+      "integration_type": "bearer_token",
+      "integration_confidence": "high",
+      "integration_reasoning": "API-based lead management system with RESTful endpoints",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/sasuke_lead/sasuke_lead_client.py",
+          "methods": [
+            "SasukeLeadClient.get()",
+            "SasukeLeadClient.post()",
+            "SasukeLeadClient.put()",
+            "SasukeLeadClient.delete()",
+            "SasukeLeadClient.list_resources()",
+            "SasukeLeadClient.get_resource()",
+            "SasukeLeadClient.create_resource()",
+            "SasukeLeadClient.update_resource()",
+            "SasukeLeadClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.589927",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.589935"
+    },
+    "zendesk-sell.md": {
+      "service_name": "Zendesk Sell",
+      "category": "02_세일스_Sales",
+      "integration_type": "bearer_token",
+      "integration_confidence": "high",
+      "integration_reasoning": "CRM API with comprehensive sales management features",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/zendesk_sell/zendesk_sell_client.py",
+          "methods": [
+            "ZendeskSellClient.get()",
+            "ZendeskSellClient.post()",
+            "ZendeskSellClient.put()",
+            "ZendeskSellClient.delete()",
+            "ZendeskSellClient.list_resources()",
+            "ZendeskSellClient.get_resource()",
+            "ZendeskSellClient.create_resource()",
+            "ZendeskSellClient.update_resource()",
+            "ZendeskSellClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.589942",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.589944"
+    },
+    "zoho-bigin.md": {
+      "service_name": "Zoho Bigin",
+      "category": "02_세일스_Sales",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "CRM platform with OAuth 2.0 authentication",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/zoho_bigin/zoho_bigin_client.py",
+          "methods": [
+            "ZohoBiginClient.get()",
+            "ZohoBiginClient.post()",
+            "ZohoBiginClient.put()",
+            "ZohoBiginClient.delete()",
+            "ZohoBiginClient.list_resources()",
+            "ZohoBiginClient.get_resource()",
+            "ZohoBiginClient.create_resource()",
+            "ZohoBiginClient.update_resource()",
+            "ZohoBiginClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.589948",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.589949"
+    },
+    "zoom-phone.md": {
+      "service_name": "Zoom Phone",
+      "category": "02_세일스_Sales",
+      "integration_type": "bearer_token",
+      "integration_confidence": "high",
+      "integration_reasoning": "VoIP and phone system API with JWT authentication",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/zoom_phone/zoom_phone_client.py",
+          "methods": [
+            "ZoomPhoneClient.get()",
+            "ZoomPhoneClient.post()",
+            "ZoomPhoneClient.put()",
+            "ZoomPhoneClient.delete()",
+            "ZoomPhoneClient.list_resources()",
+            "ZoomPhoneClient.get_resource()",
+            "ZoomPhoneClient.create_resource()",
+            "ZoomPhoneClient.update_resource()",
+            "ZoomPhoneClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.589952",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.589953"
+    },
+    "google-meet.md": {
+      "service_name": "Google Meet",
+      "category": "03_업무일반_General",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "Google Workspace meetings API integrated with OAuth",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/google_meet/google_meet_client.py",
+          "methods": [
+            "GoogleMeetClient.get()",
+            "GoogleMeetClient.post()",
+            "GoogleMeetClient.put()",
+            "GoogleMeetClient.delete()",
+            "GoogleMeetClient.list_resources()",
+            "GoogleMeetClient.get_resource()",
+            "GoogleMeetClient.create_resource()",
+            "GoogleMeetClient.update_resource()",
+            "GoogleMeetClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.589958",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.589959"
+    },
+    "google-search.md": {
+      "service_name": "Google Search",
+      "category": "03_업무일반_General",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Google Custom Search JSON API with API key authentication",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/google_search/google_search_client.py",
+          "methods": [
+            "GoogleSearchClient.get()",
+            "GoogleSearchClient.post()",
+            "GoogleSearchClient.put()",
+            "GoogleSearchClient.delete()",
+            "GoogleSearchClient.list_resources()",
+            "GoogleSearchClient.get_resource()",
+            "GoogleSearchClient.create_resource()",
+            "GoogleSearchClient.update_resource()",
+            "GoogleSearchClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.589963",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.589964"
+    },
+    "hugging-face.md": {
+      "service_name": "Hugging Face",
+      "category": "03_업무일반_General",
+      "integration_type": "bearer_token",
+      "integration_confidence": "high",
+      "integration_reasoning": "ML model inference API with bearer token authentication",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/hugging_face/hugging_face_client.py",
+          "methods": [
+            "HuggingFaceClient.get()",
+            "HuggingFaceClient.post()",
+            "HuggingFaceClient.put()",
+            "HuggingFaceClient.delete()",
+            "HuggingFaceClient.list_resources()",
+            "HuggingFaceClient.get_resource()",
+            "HuggingFaceClient.create_resource()",
+            "HuggingFaceClient.update_resource()",
+            "HuggingFaceClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.589967",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.589968"
+    },
+    "melo.md": {
+      "service_name": "Melo",
+      "category": "03_업무일반_General",
+      "integration_type": "bearer_token",
+      "integration_confidence": "high",
+      "integration_reasoning": "Note-taking and knowledge management API",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/melo/melo_client.py",
+          "methods": [
+            "MeloClient.get()",
+            "MeloClient.post()",
+            "MeloClient.put()",
+            "MeloClient.delete()",
+            "MeloClient.list_resources()",
+            "MeloClient.get_resource()",
+            "MeloClient.create_resource()",
+            "MeloClient.update_resource()",
+            "MeloClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.589971",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.589972"
+    },
+    "mem.md": {
+      "service_name": "Mem",
+      "category": "03_업무일반_General",
+      "integration_type": "bearer_token",
+      "integration_confidence": "high",
+      "integration_reasoning": "AI-powered knowledge management API",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/mem/mem_client.py",
+          "methods": [
+            "MemClient.get()",
+            "MemClient.post()",
+            "MemClient.put()",
+            "MemClient.delete()",
+            "MemClient.list_resources()",
+            "MemClient.get_resource()",
+            "MemClient.create_resource()",
+            "MemClient.update_resource()",
+            "MemClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.589975",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.589976"
+    },
+    "metalife.md": {
+      "service_name": "Metalife",
+      "category": "03_업무일반_General",
+      "integration_type": "bearer_token",
+      "integration_confidence": "high",
+      "integration_reasoning": "Personal data management API",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/metalife/metalife_client.py",
+          "methods": [
+            "MetalifeClient.get()",
+            "MetalifeClient.post()",
+            "MetalifeClient.put()",
+            "MetalifeClient.delete()",
+            "MetalifeClient.list_resources()",
+            "MetalifeClient.get_resource()",
+            "MetalifeClient.create_resource()",
+            "MetalifeClient.update_resource()",
+            "MetalifeClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.589979",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.589993"
+    },
+    "microsoft-excel.md": {
+      "service_name": "Microsoft Excel",
+      "category": "03_업무일반_General",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "Microsoft Graph API for Excel Online integration",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/microsoft_excel/microsoft_excel_client.py",
+          "methods": [
+            "MicrosoftExcelClient.get()",
+            "MicrosoftExcelClient.post()",
+            "MicrosoftExcelClient.put()",
+            "MicrosoftExcelClient.delete()",
+            "MicrosoftExcelClient.list_resources()",
+            "MicrosoftExcelClient.get_resource()",
+            "MicrosoftExcelClient.create_resource()",
+            "MicrosoftExcelClient.update_resource()",
+            "MicrosoftExcelClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.589997",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.589998"
+    },
+    "miro.md": {
+      "service_name": "Miro",
+      "category": "03_업무일반_General",
+      "integration_type": "bearer_token",
+      "integration_confidence": "high",
+      "integration_reasoning": "Online whiteboard and collaboration platform API",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/miro/miro_client.py",
+          "methods": [
+            "MiroClient.get()",
+            "MiroClient.post()",
+            "MiroClient.put()",
+            "MiroClient.delete()",
+            "MiroClient.list_resources()",
+            "MiroClient.get_resource()",
+            "MiroClient.create_resource()",
+            "MiroClient.update_resource()",
+            "MiroClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.590001",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.590003"
+    },
+    "mistral-ai.md": {
+      "service_name": "Mistral AI",
+      "category": "03_업무일반_General",
+      "integration_type": "bearer_token",
+      "integration_confidence": "high",
+      "integration_reasoning": "AI chat completions and embeddings API",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/mistral_ai/mistral_ai_client.py",
+          "methods": [
+            "MistralAIClient.get()",
+            "MistralAIClient.post()",
+            "MistralAIClient.put()",
+            "MistralAIClient.delete()",
+            "MistralAIClient.list_resources()",
+            "MistralAIClient.get_resource()",
+            "MistralAIClient.create_resource()",
+            "MistralAIClient.update_resource()",
+            "MistralAIClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.590007",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.590007"
+    },
+    "mural.md": {
+      "service_name": "Mural",
+      "category": "03_업무일반_General",
+      "integration_type": "bearer_token",
+      "integration_confidence": "high",
+      "integration_reasoning": "Digital workspace and collaboration API",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/mural/mural_client.py",
+          "methods": [
+            "MuralClient.get()",
+            "MuralClient.post()",
+            "MuralClient.put()",
+            "MuralClient.delete()",
+            "MuralClient.list_resources()",
+            "MuralClient.get_resource()",
+            "MuralClient.create_resource()",
+            "MuralClient.update_resource()",
+            "MuralClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.590011",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.590011"
+    },
+    "notion.md": {
+      "service_name": "Notion",
+      "category": "03_업무일반_General",
+      "integration_type": "bearer_token",
+      "integration_confidence": "high",
+      "integration_reasoning": "All-in-one workspace API with integration token auth",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/notion/notion_client.py",
+          "methods": [
+            "NotionClient.get()",
+            "NotionClient.post()",
+            "NotionClient.put()",
+            "NotionClient.delete()",
+            "NotionClient.list_resources()",
+            "NotionClient.get_resource()",
+            "NotionClient.create_resource()",
+            "NotionClient.update_resource()",
+            "NotionClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.590015",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.590016"
+    },
+    "openai.md": {
+      "service_name": "OpenAI",
+      "category": "03_업무일반_General",
+      "integration_type": "bearer_token",
+      "integration_confidence": "high",
+      "integration_reasoning": "OpenAI API with key-based authentication",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/openai/openai_client.py",
+          "methods": [
+            "OpenAIClient.get()",
+            "OpenAIClient.post()",
+            "OpenAIClient.put()",
+            "OpenAIClient.delete()",
+            "OpenAIClient.list_resources()",
+            "OpenAIClient.get_resource()",
+            "OpenAIClient.create_resource()",
+            "OpenAIClient.update_resource()",
+            "OpenAIClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.590019",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.590019"
+    },
+    "openweathermap.md": {
+      "service_name": "OpenWeatherMap",
+      "category": "03_업무일반_General",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Weather data API using API key in query parameters",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/openweathermap/openweathermap_client.py",
+          "methods": [
+            "OpenWeatherMapClient.get()",
+            "OpenWeatherMapClient.post()",
+            "OpenWeatherMapClient.put()",
+            "OpenWeatherMapClient.delete()",
+            "OpenWeatherMapClient.list_resources()",
+            "OpenWeatherMapClient.get_resource()",
+            "OpenWeatherMapClient.create_resource()",
+            "OpenWeatherMapClient.update_resource()",
+            "OpenWeatherMapClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.590023",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.590024"
+    },
+    "outlook.md": {
+      "service_name": "Outlook",
+      "category": "03_업무일반_General",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "Microsoft Graph API for Outlook integration",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/outlook/outlook_client.py",
+          "methods": [
+            "OutlookClient.get()",
+            "OutlookClient.post()",
+            "OutlookClient.put()",
+            "OutlookClient.delete()",
+            "OutlookClient.list_resources()",
+            "OutlookClient.get_resource()",
+            "OutlookClient.create_resource()",
+            "OutlookClient.update_resource()",
+            "OutlookClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.590027",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.590028"
+    },
+    "ovice.md": {
+      "service_name": "Ovice",
+      "category": "03_업무일반_General",
+      "integration_type": "bearer_token",
+      "integration_confidence": "high",
+      "integration_reasoning": "Virtual office and meeting platform API",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/ovice/ovice_client.py",
+          "methods": [
+            "OviceClient.get()",
+            "OviceClient.post()",
+            "OviceClient.put()",
+            "OviceClient.delete()",
+            "OviceClient.list_resources()",
+            "OviceClient.get_resource()",
+            "OviceClient.create_resource()",
+            "OviceClient.update_resource()",
+            "OviceClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.590032",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.590033"
+    },
+    "pdfless.md": {
+      "service_name": "PDFless",
+      "category": "03_업무일반_General",
+      "integration_type": "bearer_token",
+      "integration_confidence": "high",
+      "integration_reasoning": "PDF generation and manipulation API",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/pdfless/pdfless_client.py",
+          "methods": [
+            "PDFlessClient.get()",
+            "PDFlessClient.post()",
+            "PDFlessClient.put()",
+            "PDFlessClient.delete()",
+            "PDFlessClient.list_resources()",
+            "PDFlessClient.get_resource()",
+            "PDFlessClient.create_resource()",
+            "PDFlessClient.update_resource()",
+            "PDFlessClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.590036",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.590037"
+    },
+    "perplexity.md": {
+      "service_name": "Perplexity",
+      "category": "03_업무일반_General",
+      "integration_type": "bearer_token",
+      "integration_confidence": "high",
+      "integration_reasoning": "AI-powered search API with context-aware results",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/perplexity/perplexity_client.py",
+          "methods": [
+            "PerplexityClient.get()",
+            "PerplexityClient.post()",
+            "PerplexityClient.put()",
+            "PerplexityClient.delete()",
+            "PerplexityClient.list_resources()",
+            "PerplexityClient.get_resource()",
+            "PerplexityClient.create_resource()",
+            "PerplexityClient.update_resource()",
+            "PerplexityClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.590040",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.590041"
+    },
+    "pushbullet.md": {
+      "service_name": "Pushbullet",
+      "category": "03_업무일반_General",
+      "integration_type": "api_key_header",
+      "integration_confidence": "high",
+      "integration_reasoning": "Push notification API with API key in header",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/pushbullet/pushbullet_client.py",
+          "methods": [
+            "PushbulletClient.get()",
+            "PushbulletClient.post()",
+            "PushbulletClient.put()",
+            "PushbulletClient.delete()",
+            "PushbulletClient.list_resources()",
+            "PushbulletClient.get_resource()",
+            "PushbulletClient.create_resource()",
+            "PushbulletClient.update_resource()",
+            "PushbulletClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.590044",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.590045"
+    },
+    "pushcut.md": {
+      "service_name": "Pushcut",
+      "category": "03_업무일반_General",
+      "integration_type": "api_key_header",
+      "integration_confidence": "high",
+      "integration_reasoning": "iOS automation API with API key in header",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/pushcut/pushcut_client.py",
+          "methods": [
+            "PushcutClient.get()",
+            "PushcutClient.post()",
+            "PushcutClient.put()",
+            "PushcutClient.delete()",
+            "PushcutClient.list_resources()",
+            "PushcutClient.get_resource()",
+            "PushcutClient.create_resource()",
+            "PushcutClient.update_resource()",
+            "PushcutClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.590048",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.590049"
+    },
+    "pushover.md": {
+      "service_name": "Pushover",
+      "category": "03_업무일반_General",
+      "integration_type": "api_key_query",
+      "integration_confidence": "high",
+      "integration_reasoning": "Push notification API using API key in query params",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/pushover/pushover_client.py",
+          "methods": [
+            "PushoverClient.get()",
+            "PushoverClient.post()",
+            "PushoverClient.put()",
+            "PushoverClient.delete()",
+            "PushoverClient.list_resources()",
+            "PushoverClient.get_resource()",
+            "PushoverClient.create_resource()",
+            "PushoverClient.update_resource()",
+            "PushoverClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.590052",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.590053"
+    },
+    "quickchart.md": {
+      "service_name": "QuickChart",
+      "category": "03_업무일반_General",
+      "integration_type": "none",
+      "integration_confidence": "high",
+      "integration_reasoning": "Chart generation API - no authentication required",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/quickchart/quickchart_client.py",
+          "methods": [
+            "QuickChartClient.get()",
+            "QuickChartClient.post()",
+            "QuickChartClient.put()",
+            "QuickChartClient.delete()",
+            "QuickChartClient.list_resources()",
+            "QuickChartClient.get_resource()",
+            "QuickChartClient.create_resource()",
+            "QuickChartClient.update_resource()",
+            "QuickChartClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.590057",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.590058"
+    },
+    "qwen.md": {
+      "service_name": "Qwen",
+      "category": "03_업무일반_General",
+      "integration_type": "bearer_token",
+      "integration_confidence": "high",
+      "integration_reasoning": "AI model API from Alibaba with bearer token",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/qwen/qwen_client.py",
+          "methods": [
+            "QwenClient.get()",
+            "QwenClient.post()",
+            "QwenClient.put()",
+            "QwenClient.delete()",
+            "QwenClient.list_resources()",
+            "QwenClient.get_resource()",
+            "QwenClient.create_resource()",
+            "QwenClient.update_resource()",
+            "QwenClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.590061",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.590062"
+    },
+    "raindrop.md": {
+      "service_name": "Raindrop.io",
+      "category": "03_업무일반_General",
+      "integration_type": "bearer_token",
+      "integration_confidence": "high",
+      "integration_reasoning": "Bookmark management API with OAuth/bearer token",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/raindrop/raindrop_client.py",
+          "methods": [
+            "Raindrop.ioClient.get()",
+            "Raindrop.ioClient.post()",
+            "Raindrop.ioClient.put()",
+            "Raindrop.ioClient.delete()",
+            "Raindrop.ioClient.list_resources()",
+            "Raindrop.ioClient.get_resource()",
+            "Raindrop.ioClient.create_resource()",
+            "Raindrop.ioClient.update_resource()",
+            "Raindrop.ioClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.590065",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.590066"
+    },
+    "rows.md": {
+      "service_name": "Rows",
+      "category": "03_업무일반_General",
+      "integration_type": "bearer_token",
+      "integration_confidence": "high",
+      "integration_reasoning": "Spreadsheet automation API with authentication",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/rows/rows_client.py",
+          "methods": [
+            "RowsClient.get()",
+            "RowsClient.post()",
+            "RowsClient.put()",
+            "RowsClient.delete()",
+            "RowsClient.list_resources()",
+            "RowsClient.get_resource()",
+            "RowsClient.create_resource()",
+            "RowsClient.update_resource()",
+            "RowsClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.590069",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.590070"
+    },
+    "scribe_transcription.md": {
+      "service_name": "Scribe Transcription",
+      "category": "03_업무일반_General",
+      "integration_type": "bearer_token",
+      "integration_confidence": "high",
+      "integration_reasoning": "Audio transcription and speech-to-text API",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/scribe_transcription/scribe_transcription_client.py",
+          "methods": [
+            "ScribeTranscriptionClient.get()",
+            "ScribeTranscriptionClient.post()",
+            "ScribeTranscriptionClient.put()",
+            "ScribeTranscriptionClient.delete()",
+            "ScribeTranscriptionClient.list_resources()",
+            "ScribeTranscriptionClient.get_resource()",
+            "ScribeTranscriptionClient.create_resource()",
+            "ScribeTranscriptionClient.update_resource()",
+            "ScribeTranscriptionClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.590074",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.590075"
+    },
+    "sectorflow.md": {
+      "service_name": "Sectorflow",
+      "category": "03_업무일반_General",
+      "integration_type": "bearer_token",
+      "integration_confidence": "high",
+      "integration_reasoning": "Automation platform API for business workflows",
+      "api_actions": {
+        "Generic CRUD Operations": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API key required",
+          "code_file": "github/skill-factory/repo/sectorflow/sectorflow_client.py",
+          "methods": [
+            "SectorflowClient.get()",
+            "SectorflowClient.post()",
+            "SectorflowClient.put()",
+            "SectorflowClient.delete()",
+            "SectorflowClient.list_resources()",
+            "SectorflowClient.get_resource()",
+            "SectorflowClient.create_resource()",
+            "SectorflowClient.update_resource()",
+            "SectorflowClient.delete_resource()"
+          ]
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:35:35.590079",
+      "required_tasks": [
+        {
+          "task": "API Client Implementation",
+          "priority": "high",
+          "description": "Implemented async client with rate limiting and error handling",
+          "status": "completed"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:35:35.590080"
     }
   },
   "total_services": 749,
