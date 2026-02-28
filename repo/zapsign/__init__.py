@@ -1,9 +1,3 @@
-"""
-zapsign API Client
+from .client import ZapSignClient
 
-Yoom Apps integration for zapsign
-"""
-
-from .client import ZapsignAPIClient
-
-__all__ = ['ZapsignAPIClient']
+__all__ = ['ZapSignClient']

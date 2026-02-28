@@ -1,9 +1,3 @@
-"""
-sendle API Client
+from .client import SendleClient
 
-Yoom Apps integration for sendle
-"""
-
-from .client import SendleAPIClient
-
-__all__ = ['SendleAPIClient']
+__all__ = ['SendleClient']

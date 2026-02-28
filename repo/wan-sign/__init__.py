@@ -1,9 +1,3 @@
-"""
-wan-sign API Client
+from .client import WanSignClient
 
-Yoom Apps integration for wan-sign
-"""
-
-from .client import WanSignAPIClient
-
-__all__ = ['WanSignAPIClient']
+__all__ = ['WanSignClient']

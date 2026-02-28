@@ -1,29 +1,28 @@
-# Weclapp API Integration
+# Weclapp
 
-Complete Weclapp ERP API client. Supports products, orders, customers, and inventory.
+Cloud ERP software for small and medium businesses.
 
-## Features
-- ✅ Product management
-- ✅ Order processing
-- ✅ Customer management
-- ✅ Inventory tracking
-- ✅ Warehouse management
+## API Key
+1. Sign up at [https://weclapp.com](https://weclapp.com)
+2. Go to Administration > API Keys
+3. Generate API key
 
-## Setup
+## Installation
 ```bash
-export WECLAPP_API_KEY="your_api_key"
-pip install -r requirements.txt
+pip install requests
 ```
 
-## Usage
+## Example
 ```python
-import os
-from weclapp_client import WeclappAPIClient
+from weclapp.client import WeclappClient
 
-os.environ['WECLAPP_API_KEY'] = 'your_api_key'
+client = WeclappClient(api_key='your_api_key')
 
-client = WeclappAPIClient()
-products = client.get_products()
-orders = client.get_orders()
-client.close()
+# Get articles
+articles = client.get_articles()
+
+# Create order
+result = client.create_order(
+    order_items=[{'articleId': 'ART123', 'quantity': 5}]
+)
 ```

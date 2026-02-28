@@ -1,9 +1,3 @@
-"""
-dextre API Client
+from .client import DextreClient
 
-Yoom Apps integration for dextre
-"""
-
-from .client import DextreAPIClient
-
-__all__ = ['DextreAPIClient']
+__all__ = ['DextreClient']

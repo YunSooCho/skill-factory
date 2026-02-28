@@ -1,26 +1,26 @@
-# Kura-Bugyo API Integration
+# Kura-Bugyo
 
-Complete Kura-Bugyo warehouse management API client. Japanese warehouse operations support.
+Japanese inventory and warehouse management system (蔵奉行).
 
-## Features
-- ✅ Product management
-- ✅ Order processing
-- ✅ Inventory tracking
+## API Key
+1. Sign up at [https://kura-bugyo.com](https://kura-bugyo.com)
+2. Navigate to Settings > API Access
+3. Generate API credentials
 
-## Setup
+## Installation
 ```bash
-export KURA_BUGYO_API_KEY="your_api_key"
-pip install -r requirements.txt
+pip install requests
 ```
 
-## Usage
+## Example
 ```python
-import os
-from kura_bugyo_client import KuraBugyoAPIClient
+from kura_bugyo.client import KuraBugyoClient
 
-os.environ['KURA_BUGYO_API_KEY'] = 'your_api_key'
+client = KuraBugyoClient(api_key='your_api_key')
 
-client = KuraBugyoAPIClient()
-products = client.get_products()
-client.close()
+# List inventory
+inventory = client.list_inventory()
+
+# Receive goods
+result = client.receive_goods(product_code='P001', quantity=50, location='A-01-01')
 ```

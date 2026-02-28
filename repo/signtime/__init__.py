@@ -1,9 +1,3 @@
-"""
-signtime API Client
+from .client import SignTimeClient
 
-Yoom Apps integration for signtime
-"""
-
-from .client import SigntimeAPIClient
-
-__all__ = ['SigntimeAPIClient']
+__all__ = ['SignTimeClient']

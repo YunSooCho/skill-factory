@@ -1,9 +1,3 @@
-"""
-openlogi API Client
+from .client import OpenlogiClient
 
-Yoom Apps integration for openlogi
-"""
-
-from .client import OpenlogiAPIClient
-
-__all__ = ['OpenlogiAPIClient']
+__all__ = ['OpenlogiClient']

@@ -1,69 +1,30 @@
-# Zaico API Integration
+# Zaico
 
-## Overview
-Complete Zaico cloud inventory management API client for Yoom automation. Supports inventory items, stock management, locations, categories, and reporting.
+Japanese cloud-based inventory management platform (在庫管理).
 
-## Supported Features
-- ✅ Create and manage inventory items
-- ✅ Stock adjustment and history
-- ✅ Multi-location inventory
-- ✅ Category management
-- ✅ Inventory reports
-- ✅ Low stock alerts
-- ✅ Barcode and QR code generation
-- ✅ Webhook notifications
-- ✅ User management
+## API Key
+1. Sign up at [https://zaico.co.jp](https://zaico.co.jp)
+2. Go to Settings > API Settings
+3. Generate API token
 
-## Setup
-
-### 1. Get API Key
-Visit https://web.zaico.co.jp/settings/api to get your API key.
-
-### 2. Install Dependencies
+## Installation
 ```bash
-pip install -r requirements.txt
+pip install requests
 ```
 
-### 3. Configure
-```bash
-export ZAICO_API_KEY="your_api_key_here"
-```
-
-## Usage
-
+## Example
 ```python
-import os
-from zaico_client import ZaicoAPIClient
+from zaico.client import ZaicoClient
 
-os.environ['ZAICO_API_KEY'] = 'your_api_key'
+client = ZaicoClient(api_token='your_api_token')
 
-client = ZaicoAPIClient()
+# Get inventory
+inventory = client.get_inventory()
 
 # Create item
-item = client.create_item(
-    name='Product A',
-    sku='PROD-001',
-    description='Sample product',
-    unit='pieces',
-    initial_quantity=100
+result = client.create_item(
+    title='New Product',
+    quantity=100,
+    sku='SKU001'
 )
-
-# Adjust stock
-client.adjust_stock(
-    item_id=item['id'],
-    quantity=-10,
-    reason='Sale',
-    notes='Order #12345'
-)
-
-# Get stock history
-history = client.get_stock_history(item['id'])
-
-# Get low stock report
-low_stock = client.get_low_stock_report()
-
-# Generate QR code
-barcode = client.generate_barcode(item['id'], barcode_type='QR')
-
-client.close()
 ```

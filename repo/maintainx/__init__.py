@@ -1,9 +1,3 @@
-"""
-maintainx API Client
+from .client import MaintainXClient
 
-Yoom Apps integration for maintainx
-"""
-
-from .client import MaintainxAPIClient
-
-__all__ = ['MaintainxAPIClient']
+__all__ = ['MaintainXClient']

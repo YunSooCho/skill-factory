@@ -1,9 +1,3 @@
-"""
-xodo-sign API Client
+from .client import XodoSignClient
 
-Yoom Apps integration for xodo-sign
-"""
-
-from .client import XodoSignAPIClient
-
-__all__ = ['XodoSignAPIClient']
+__all__ = ['XodoSignClient']

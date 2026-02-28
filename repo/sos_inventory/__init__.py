@@ -1,9 +1,3 @@
-"""
-sos_inventory API Client
+from .client import SOSInventoryClient
 
-Yoom Apps integration for sos_inventory
-"""
-
-from .client import SosInventoryAPIClient
-
-__all__ = ['SosInventoryAPIClient']
+__all__ = ['SOSInventoryClient']

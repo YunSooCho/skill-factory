@@ -1,254 +1,104 @@
-"""
-Detrack API Client
-
-Complete client for Detrack delivery management integration.
-Full API coverage with no stub code.
-"""
-
-import os
 import requests
-from typing import Optional, Dict, List, Any
-from urllib.parse import urljoin
+from typing import Dict, List, Optional, Any
+from datetime import datetime, date
 
 
-class DetrackAPIClient:
-    """
-    Complete client for Detrack delivery management.
-    Supports order creation, delivery tracking, and route optimization.
-    """
+class DetrackClient:
+    """Client for Detrack delivery tracking API."""
 
-    def __init__(
-        self,
-        api_key: Optional[str] = None,
-        base_url: Optional[str] = None,
-        timeout: int = 30,
-        verify_ssl: bool = True
-    ):
+    BASE_URL = "https://api.detrack.com/api/v1"
+
+    def __init__(self, api_key: str):
         """
-        Initialize Detrack API client.
+        Initialize Detrack client.
 
         Args:
-            api_key: Detrack API key (from env: DETRACK_API_KEY)
-            base_url: Base URL (default: https://app.detrack.com/api/v1)
-            timeout: Request timeout in seconds
-            verify_ssl: Whether to verify SSL certificates
+            api_key: Your Detrack API key
         """
-        self.api_key = api_key or os.getenv("DETRACK_API_KEY")
-        self.base_url = base_url or os.getenv(
-            "DETRACK_BASE_URL",
-            "https://app.detrack.com/api/v1"
-        )
-        self.timeout = timeout
-        self.verify_ssl = verify_ssl
-
-        if not self.api_key:
-            raise ValueError(
-                "API key is required. Set DETRACK_API_KEY environment variable."
-            )
-
+        self.api_key = api_key
         self.session = requests.Session()
         self.session.headers.update({
-            "X-API-KEY": self.api_key,
-            "Content-Type": "application/json",
-            "Accept": "application/json"
+            "X-API-KEY": api_key,
+            "Content-Type": "application/json"
         })
 
-    def _request(
-        self,
-        method: str,
-        endpoint: str,
-        data: Optional[Dict[str, Any]] = None,
-        params: Optional[Dict[str, Any]] = None
-    ) -> Dict[str, Any]:
+    def _request(self, method: str, endpoint: str, data: Optional[Dict] = None) -> Dict[str, Any]:
         """Make HTTP request to Detrack API."""
-        url = urljoin(self.base_url + "/", endpoint.lstrip("/"))
-
-        response = self.session.request(
-            method=method,
-            url=url,
-            json=data,
-            params=params,
-            timeout=self.timeout,
-            verify=self.verify_ssl
-        )
-
-        response.raise_for_status()
-
+        url = f"{self.BASE_URL}{endpoint}"
         try:
+            response = self.session.request(method, url, json=data)
+            response.raise_for_status()
             return response.json()
-        except ValueError:
-            return {"status": "success"}
+        except requests.RequestException as e:
+            return {"error": str(e)}
 
-    # Orders
-
-    def create_order(
-        self,
-        order_number: str,
-        address: str,
-        date: str,
-        status: str = "pending",
-        time_from: Optional[str] = None,
-        time_to: Optional[str] = None,
-        assign_to: Optional[str] = None,
-        do_number: Optional[str] = None,
-        remarks: Optional[str] = None
-    ) -> Dict[str, Any]:
-        """
-        Create a delivery order.
-
-        Args:
-            order_number: Unique order number
-            address: Delivery address
-            date: Delivery date (YYYY-MM-DD)
-            status: Order status
-            time_from: Delivery time from (HH:MM)
-            time_to: Delivery time to (HH:MM)
-            assign_to: Assigned driver name or ID
-            do_number: Delivery order number
-            remarks: Order remarks
-
-        Returns:
-            Order information
-        """
+    def create_delivery(self, order_no: str, address: str, deliver_to: str,
+                       tel: str = None, deliver_date: str = None,
+                       deliver_time: str = None, instructions: str = None) -> Dict[str, Any]:
+        """Create a new delivery."""
         data = {
-            'order_number': order_number,
-            'address': address,
-            'date': date,
-            'status': status
+            "do": [{
+                "order_no": order_no,
+                "address": address,
+                "deliver_to": deliver_to
+            }]
         }
+        if tel:
+            data["do"][0]["tel"] = tel
+        if deliver_date:
+            data["do"][0]["deliver_date"] = deliver_date
+        if deliver_time:
+            data["do"][0]["deliver_time"] = deliver_time
+        if instructions:
+            data["do"][0]["instructions"] = instructions
+        return self._request("POST", "/deliveries", data=data)
 
-        if time_from:
-            data['time_from'] = time_from
-        if time_to:
-            data['time_to'] = time_to
-        if assign_to:
-            data['assign_to'] = assign_to
-        if do_number:
-            data['do_number'] = do_number
-        if remarks:
-            data['remarks'] = remarks
+    def batch_create_deliveries(self, deliveries: List[Dict]) -> Dict[str, Any]:
+        """Create multiple deliveries in batch."""
+        data = {"do": deliveries}
+        return self._request("POST", "/deliveries", data=data)
 
-        return self._request('POST', '/orders', data=data)
+    def get_delivery(self, order_no: str) -> Dict[str, Any]:
+        """Get delivery status."""
+        return self._request("GET", f"/deliveries/{order_no}")
 
-    def get_order(self, order_number: str) -> Dict[str, Any]:
-        """Get order details."""
-        return self._request('GET', f'/orders/{order_number}')
+    def update_delivery(self, order_no: str, data: Dict) -> Dict[str, Any]:
+        """Update delivery details."""
+        return self._request("PUT", f"/deliveries/{order_no}", data)
 
-    def list_orders(
-        self,
-        date: Optional[str] = None,
-        status: Optional[str] = None,
-        limit: int = 50,
-        offset: int = 0
-    ) -> Dict[str, Any]:
-        """List orders with filtering."""
-        params = {'limit': limit, 'offset': offset}
+    def delete_delivery(self, order_no: str) -> Dict[str, Any]:
+        """Delete/cancel delivery."""
+        return self._request("DELETE", f"/deliveries/{order_no}")
+
+    def list_deliveries(self, date: str = None, status: str = None) -> Dict[str, Any]:
+        """List all deliveries."""
+        endpoint = "/deliveries"
+        params = []
         if date:
-            params['date'] = date
+            params.append(f"date={date}")
         if status:
-            params['status'] = status
-        return self._request('GET', '/orders', params=params)
-
-    def update_order(
-        self,
-        order_number: str,
-        **kwargs
-    ) -> Dict[str, Any]:
-        """Update order."""
-        return self._request('PUT', f'/orders/{order_number}', data=kwargs)
-
-    def delete_order(self, order_number: str) -> Dict[str, Any]:
-        """Delete an order."""
-        return self._request('DELETE', f'/orders/{order_number}')
-
-    # Upload Items
-
-    def import_orders(
-        self,
-        orders: List[Dict[str, Any]]
-    ) -> Dict[str, Any]:
-        """Bulk import orders."""
-        data = {'orders': orders}
-        return self._request('POST', '/import', data=data)
-
-    # Drivers
+            params.append(f"status={status}")
+        if params:
+            endpoint += "?" + "&".join(params)
+        return self._request("GET", endpoint)
 
     def list_drivers(self) -> Dict[str, Any]:
         """List all drivers."""
-        return self._request('GET', '/drivers')
+        return self._request("GET", "/drivers")
 
     def get_driver(self, driver_id: str) -> Dict[str, Any]:
         """Get driver details."""
-        return self._request('GET', f'/drivers/{driver_id}')
+        return self._request("GET", f"/drivers/{driver_id}")
 
-    # Route Optimization
+    def assign_delivery(self, order_no: str, driver_id: str) -> Dict[str, Any]:
+        """Assign delivery to driver."""
+        data = {"driver_id": driver_id}
+        return self._request("POST", f"/deliveries/{order_no}/assign", data=data)
 
-    def optimize_route(
-        self,
-        date: str,
-        driver: Optional[str] = None,
-        start_address: Optional[str] = None,
-        end_address: Optional[str] = None
-    ) -> Dict[str, Any]:
-        """
-        Optimize delivery route.
+    def unassign_delivery(self, order_no: str) -> Dict[str, Any]:
+        """Unassign delivery from driver."""
+        return self._request("POST", f"/deliveries/{order_no}/unassign")
 
-        Args:
-            date: Date for route
-            driver: Specific driver (optional)
-            start_address: Starting address
-            end_address: Ending address
-
-        Returns:
-            Route optimization result
-        """
-        data = {'date': date}
-        if driver:
-            data['driver'] = driver
-        if start_address:
-            data['start_address'] = start_address
-        if end_address:
-            data['end_address'] = end_address
-        return self._request('POST', '/routes/optimize', data=data)
-
-    # Reports
-
-    def get_daily_report(
-        self,
-        date: str
-    ) -> Dict[str, Any]:
-        """Get daily delivery report."""
-        params = {'date': date}
-        return self._request('GET', '/reports/daily', params=params)
-
-    # Webhooks
-
-    def create_webhook(
-        self,
-        url: str,
-        events: List[str],
-        secret: Optional[str] = None
-    ) -> Dict[str, Any]:
-        """Create webhook."""
-        data = {'url': url, 'events': events}
-        if secret:
-            data['secret'] = secret
-        return self._request('POST', '/webhooks', data=data)
-
-    def list_webhooks(self) -> Dict[str, Any]:
-        """List webhooks."""
-        return self._request('GET', '/webhooks')
-
-    def delete_webhook(self, webhook_id: str) -> Dict[str, Any]:
-        """Delete webhook."""
-        return self._request('DELETE', f'/webhooks/{webhook_id}')
-
-    def close(self):
-        """Close HTTP session."""
-        self.session.close()
-
-    def __enter__(self):
-        return self
-
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        self.close()
+    def get_delivery_proof(self, order_no: str) -> Dict[str, Any]:
+        """Get delivery proof (POD)."""
+        return self._request("GET", f"/deliveries/{order_no}/proof")

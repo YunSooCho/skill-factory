@@ -1,9 +1,3 @@
-"""
-weclapp API Client
+from .client import WeclappClient
 
-Yoom Apps integration for weclapp
-"""
-
-from .client import WeclappAPIClient
-
-__all__ = ['WeclappAPIClient']
+__all__ = ['WeclappClient']

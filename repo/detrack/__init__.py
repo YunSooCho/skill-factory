@@ -1,9 +1,3 @@
-"""
-detrack API Client
+from .client import DetrackClient
 
-Yoom Apps integration for detrack
-"""
-
-from .client import DetrackAPIClient
-
-__all__ = ['DetrackAPIClient']
+__all__ = ['DetrackClient']

@@ -1,27 +1,13 @@
-# Order Desk API Integration
+# Order Desk
 
-Complete Order Desk order management API client. Supports orders, products, and inventory.
+Order management and fulfillment automation platform.
 
-## Features
-- ✅ Order management
-- ✅ Product management
-- ✅ Inventory tracking
-- ✅ Order fulfillment
+## API Key
+1. Sign up at [https://orderdesk.me](https://orderdesk.me)
+2. Go to Settings > API Access
+3. Generate API key
 
-## Setup
+## Installation
 ```bash
-export ORDER_DESK_API_KEY="your_api_key"
-pip install -r requirements.txt
-```
-
-## Usage
-```python
-import os
-from order_desk_client import OrderDeskAPIClient
-
-os.environ['ORDER_DESK_API_KEY'] = 'your_api_key'
-
-client = OrderDeskAPIClient()
-orders = client.get_orders()
-client.close()
+pip install requests
 ```

@@ -1,71 +1,29 @@
-# SOS Inventory API Integration
+# SOS Inventory
 
-## Overview
-Complete SOS Inventory management API client for Yoom automation. Supports items, sales orders, purchase orders, warehouses, and inventory management.
+Manufacturing and inventory management platform.
 
-## Supported Features
-- ✅ Create and manage items
-- ✅ Sales order management
-- ✅ Purchase order management
-- ✅ Customer and vendor management
-- ✅ Multi-warehouse inventory
-- ✅ Inventory level tracking
-- ✅ Inventory adjustments
-- ✅ Inventory reports
+## API Key
+1. Sign up at [https://sosinventory.com](https://sosinventory.com)
+2. Navigate to Settings > API Access
+3. Generate API credentials
 
-## Setup
-
-### 1. Get API Key
-Visit https://www.sosinventory.com/settings/api to get your API key.
-
-### 2. Install Dependencies
+## Installation
 ```bash
-pip install -r requirements.txt
+pip install requests
 ```
 
-### 3. Configure
-```bash
-export SOS_INVENTORY_API_KEY="your_api_key_here"
-```
-
-## Usage
-
+## Example
 ```python
-import os
-from sos_inventory_client import SosInventoryAPIClient
+from sos_inventory.client import SOSInventoryClient
 
-os.environ['SOS_INVENTORY_API_KEY'] = 'your_api_key'
+client = SOSInventoryClient(api_key='your_api_key')
 
-client = SosInventoryAPIClient()
-
-# Create item
-item = client.create_item(
-    name='Product A',
-    sku='PROD-001',
-    description='Sample product',
-    cost_price=10.00,
-    selling_price=15.00
-)
+# Get inventory
+inventory = client.get_inventory()
 
 # Create sales order
-order = client.create_sales_order(
-    customer_id='cust_123',
-    items=[
-        {'item_id': item['id'], 'quantity': 10, 'price': 15.00}
-    ],
-    order_date='2024-01-15'
+result = client.create_sales_order(
+    customer_id='CUST001',
+    items=[{'product_id': 'PROD1', 'quantity': 5}]
 )
-
-# Check inventory levels
-levels = client.get_inventory_levels(warehouse_id='wh_456')
-
-# Adjust inventory
-client.adjust_inventory(
-    item_id=item['id'],
-    warehouse_id='wh_456',
-    quantity=-5,
-    reason='Sale'
-)
-
-client.close()
 ```

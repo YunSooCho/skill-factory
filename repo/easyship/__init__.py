@@ -1,9 +1,3 @@
-"""
-easyship API Client
+from .client import EasyshipClient
 
-Yoom Apps integration for easyship
-"""
-
-from .client import EasyshipAPIClient
-
-__all__ = ['EasyshipAPIClient']
+__all__ = ['EasyshipClient']

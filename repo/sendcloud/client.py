@@ -1,96 +1,114 @@
-"""
-Sendcloud API Client
-
-Complete client for Sendcloud shipping integration.
-Full API coverage with no stub code.
-"""
-
-import os
 import requests
-from typing import Optional, Dict, List, Any
-from urllib.parse import urljoin
+from typing import Dict, List, Optional, Any
 
 
-class SendcloudAPIClient:
-    """
-    Complete client for Sendcloud shipping platform.
-    Supports shipments, labels, tracking, and carrier integration.
-    """
+class SendcloudClient:
+    """Client for Sendcloud shipping platform API."""
 
-    def __init__(
-        self,
-        api_key: Optional[str] = None,
-        api_secret: Optional[str] = None,
-        base_url: Optional[str] = None,
-        timeout: int = 30,
-        verify_ssl: bool = True
-    ):
-        self.api_key = api_key or os.getenv("SENDCLOUD_API_KEY")
-        self.api_secret = api_secret or os.getenv("SENDCLOUD_API_SECRET")
-        self.base_url = base_url or os.getenv("SENDCLOUD_BASE_URL", "https://panel.sendcloud.sc/api/v2")
-        self.timeout = timeout
-        self.verify_ssl = verify_ssl
+    BASE_URL = "https://panel.sendcloud.com/api/v2"
 
-        if not self.api_key or not self.api_secret:
-            raise ValueError("API key and secret required. Set SENDCLOUD_API_KEY and SENDCLOUD_API_SECRET environment variables.")
+    def __init__(self, api_key: str, api_secret: str):
+        """
+        Initialize Sendcloud client.
 
+        Args:
+            api_key: Your Sendcloud API key
+            api_secret: Your Sendcloud API secret
+        """
+        self.api_key = api_key
+        self.api_secret = api_secret
         self.session = requests.Session()
+        self.session.auth = (api_key, api_secret)
         self.session.headers.update({
-            "Content-Type": "application/json",
-            "Accept": "application/json"
+            "Content-Type": "application/json"
         })
-        self.session.auth = (self.api_key, self.api_secret)
 
-    def _request(self, method: str, endpoint: str, data: Optional[Dict[str, Any]] = None, params: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
-        url = urljoin(self.base_url + "/", endpoint.lstrip("/"))
-        response = self.session.request(method=method, url=url, json=data, params=params, timeout=self.timeout, verify=self.verify_ssl)
-        response.raise_for_status()
+    def _request(self, method: str, endpoint: str, data: Optional[Dict] = None) -> Dict[str, Any]:
+        """Make HTTP request to Sendcloud API."""
+        url = f"{self.BASE_URL}{endpoint}"
         try:
+            response = self.session.request(method, url, json=data)
+            response.raise_for_status()
             return response.json()
-        except ValueError:
-            return {"status": "success"}
+        except requests.RequestException as e:
+            return {"error": str(e)}
 
-    def create_parcel(self, parcel_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Create a shipping parcel."""
-        return self._request('POST', '/shipments', data=parcel_data)
-
-    def get_parcel(self, parcel_id: str) -> Dict[str, Any]:
+    def get_parcel(self, parcel_id: int) -> Dict[str, Any]:
         """Get parcel details."""
-        return self._request('GET', f'/shipments/{parcel_id}')
+        return self._request("GET", f"/parcels/{parcel_id}")
 
-    def list_parcels(self, limit: int = 50, offset: int = 0) -> Dict[str, Any]:
-        """List parcels."""
-        return self._request('GET', '/shipments', params={'limit': limit, 'offset': offset})
+    def get_parcels(self, page: int = 1, limit: int = 20) -> Dict[str, Any]:
+        """Get all parcels."""
+        return self._request("GET", f"/parcels?page={page}&limit={limit}")
 
-    def cancel_parcel(self, parcel_id: str) -> Dict[str, Any]:
-        """Cancel a parcel."""
-        return self._request('POST', f'/shipments/{parcel_id}/cancel')
+    def create_parcel(self, address: Dict, parcels: List[Dict],
+                     weight: float = None, phone: str = None, email: str = None) -> Dict[str, Any]:
+        """Create a new parcel."""
+        data = {
+            "address": address,
+            "parcels": parcels
+        }
+        if weight:
+            data["weight"] = weight
+        if phone:
+            data["phone"] = phone
+        if email:
+            data["email"] = email
+        return self._request("POST", "/parcels", data=data)
 
-    def print_label(self, parcel_id: str) -> Dict[str, Any]:
-        """Print shipping label."""
-        return self._request('POST', f'/shipments/{parcel_id}/labels')
+    def update_parcel(self, parcel_id: int, data: Dict) -> Dict[str, Any]:
+        """Update parcel."""
+        return self._request("PUT", f"/parcels/{parcel_id}", data)
+
+    def cancel_parcel(self, parcel_id: int) -> Dict[str, Any]:
+        """Cancel parcel."""
+        return self._request("DELETE", f"/parcels/{parcel_id}")
 
     def get_carriers(self) -> Dict[str, Any]:
-        """List available carriers."""
-        return self._request('GET', '/carriers')
+        """Get available carriers."""
+        return self._request("GET", "/carriers")
 
-    def get_carrier_services(self, carrier_id: str) -> Dict[str, Any]:
-        """Get services for carrier."""
-        return self._request('GET', f'/carriers/{carrier_id}/services')
+    def get_carrier(self, carrier_id: int) -> Dict[str, Any]:
+        """Get carrier details."""
+        return self._request("GET", f"/carriers/{carrier_id}")
 
-    def get_parcel_status(self, parcel_id: str) -> Dict[str, Any]:
-        """Get parcel tracking status."""
-        return self._request('GET', f'/shipments/{parcel_id}/status')
+    def get_shipping_methods(self) -> Dict[str, Any]:
+        """Get shipping methods."""
+        return self._request("GET", "/shipping_methods")
 
-    def get_return_portal(self, return_portal_id: str) -> Dict[str, Any]:
-        """Get return portal details."""
-        return self._request('GET', f'/returns/{return_portal_id}')
+    def get_label(self, parcel_id: int) -> Dict[str, Any]:
+        """Get label for parcel."""
+        return self._request("POST", f"/parcels/{parcel_id}/labels")
 
-    def close(self):
-        self.session.close()
+    def create_return_portal(self, order_id: str, email: str = None) -> Dict[str, Any]:
+        """Create return portal."""
+        data = {"order_id": order_id}
+        if email:
+            data["email"] = email
+        return self._request("POST", "/user/returns", data=data)
 
-    def __enter__(self):
-        return self
+    def get_shipments(self, page: int = 1) -> Dict[str, Any]:
+        """Get shipments."""
+        return self._request("GET", f"/shipments?page={page}")
 
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        self.close()
+    def get_shipment(self, shipment_id: int) -> Dict[str, Any]:
+        """Get shipment details."""
+        return self._request("GET", f"/shipments/{shipment_id}")
+
+    def webhooks(self) -> Dict[str, Any]:
+        """Get webhook settings."""
+        return self._request("GET", "/webhooks")
+
+    def create_webhook(self, event: str, url: str, secret: str = None) -> Dict[str, Any]:
+        """Create webhook."""
+        data = {
+            "event": event,
+            "url": url
+        }
+        if secret:
+            data["secret"] = secret
+        return self._request("POST", "/webhooks", data=data)
+
+    def delete_webhook(self, webhook_id: int) -> Dict[str, Any]:
+        """Delete webhook."""
+        return self._request("DELETE", f"/webhooks/{webhook_id}")

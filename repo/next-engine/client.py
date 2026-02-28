@@ -1,96 +1,134 @@
-"""
-Next-Engine API Client
-
-Complete client for Next-Engine ERP integration.
-Full API coverage with no stub code.
-"""
-
-import os
 import requests
-from typing import Optional, Dict, List, Any
-from urllib.parse import urljoin
+import hmac
+import hashlib
+import time
+from typing import Dict, List, Optional, Any
 
 
-class NextEngineAPIClient:
-    """
-    Complete client for Next-Engine ERP system.
-    Supports products, orders, customers, and inventory management.
-    """
+class NextEngineClient:
+    """Client for Next-Engine Japanese ERP API."""
 
-    def __init__(
-        self,
-        api_key: Optional[str] = None,
-        base_url: Optional[str] = None,
-        timeout: int = 30,
-        verify_ssl: bool = True
-    ):
-        self.api_key = api_key or os.getenv("NEXT_ENGINE_API_KEY")
-        self.base_url = base_url or os.getenv("NEXT_ENGINE_BASE_URL", "https://api.next-engine.org/api/v1")
-        self.timeout = timeout
-        self.verify_ssl = verify_ssl
+    BASE_URL = "https://api.next-engine.org/api_neauth"
+    API_BASE = "https://api.next-engine.org/api_v1_master_"
 
-        if not self.api_key:
-            raise ValueError("API key is required. Set NEXT_ENGINE_API_KEY environment variable.")
+    def __init__(self, api_key: str, sign_key: str, client_id: str = None):
+        """
+        Initialize Next-Engine client.
 
+        Args:
+            api_key: Your Next-Engine API key
+            sign_key: Your Next-Engine sign key
+            client_id: Client ID (optional)
+        """
+        self.api_key = api_key
+        self.sign_key = sign_key
+        self.client_id = client_id
+        self.access_token = None
         self.session = requests.Session()
         self.session.headers.update({
-            "Authorization": f"Bearer {self.api_key}",
-            "Content-Type": "application/json",
-            "Accept": "application/json"
+            "Content-Type": "application/json"
         })
 
-    def _request(self, method: str, endpoint: str, data: Optional[Dict[str, Any]] = None, params: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
-        url = urljoin(self.base_url + "/", endpoint.lstrip("/"))
-        response = self.session.request(method=method, url=url, json=data, params=params, timeout=self.timeout, verify=self.verify_ssl)
-        response.raise_for_status()
+    def _generate_signature(self, path: str, timestamp: str) -> str:
+        """Generate HMAC signature for authentication."""
+        message = f"{path}&{timestamp}"
+        signature = hmac.new(
+            bytes(self.sign_key, 'UTF-8'),
+            bytes(message, 'UTF-8'),
+            hashlib.sha256
+        ).hexdigest()
+        return signature
+
+    def _auth_request(self, data: Dict) -> Dict[str, Any]:
+        """Make auth request."""
+        url = self.BASE_URL
         try:
+            response = self.session.post(url, json=data)
+            response.raise_for_status()
             return response.json()
-        except ValueError:
-            return {"status": "success"}
+        except requests.RequestException as e:
+            return {"error": str(e)}
 
-    def get_products(self, limit: int = 50, offset: int = 0) -> Dict[str, Any]:
-        """List products."""
-        return self._request('GET', '/products', params={'limit': limit, 'offset': offset})
+    def authenticate(self) -> Dict[str, Any]:
+        """Authenticate and get access token."""
+        data = {
+            "api_key": self.api_key,
+            "sign_key": self.sign_key
+        }
+        if self.client_id:
+            data["client_id"] = self.client_id
+        result = self._auth_request(data)
+        if "access_token" in result:
+            self.access_token = result["access_token"]
+        return result
 
-    def get_product(self, product_id: str) -> Dict[str, Any]:
-        """Get product details."""
-        return self._request('GET', f'/products/{product_id}')
+    def _api_request(self, endpoint: str, body: List[Dict] = None) -> Dict[str, Any]:
+        """Make API request."""
+        timestamp = str(int(time.time()))
+        path = endpoint
+        signature = self._generate_signature(path, timestamp)
 
-    def create_product(self, product_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Create a product."""
-        return self._request('POST', '/products', data=product_data)
+        data = {
+            "api_key": self.api_key,
+            "sign_key": self.sign_key,
+            "access_token": self.access_token,
+            "signature": signature,
+            "timestamp": timestamp,
+            "path": path
+        }
+        if body:
+            data["body"] = body
+            data["data"] = body[0] if len(body) == 1 else body
 
-    def get_orders(self, status: Optional[str] = None, limit: int = 50, offset: int = 0) -> Dict[str, Any]:
-        """List orders."""
-        params = {'limit': limit, 'offset': offset}
-        if status:
-            params['status'] = status
-        return self._request('GET', '/orders', params=params)
+        url = f"{self.API_BASE}{endpoint}"
+        try:
+            response = self.session.post(url, json=data)
+            return response.json()
+        except requests.RequestException as e:
+            return {"error": str(e)}
 
-    def get_order(self, order_id: str) -> Dict[str, Any]:
-        """Get order details."""
-        return self._request('GET', f'/orders/{order_id}')
+    def get_products(self, fields: str = "all", search: Dict = None) -> Dict[str, Any]:
+        """Get products."""
+        params = f"/fields/{fields}"
+        return self._api_request(f"products{params}")
 
-    def create_order(self, order_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Create an order."""
-        return self._request('POST', '/orders', data=order_data)
+    def get_product(self, goods_id: str) -> Dict[str, Any]:
+        """Get product by ID."""
+        return self._api_request(f"/goods/{goods_id}")
 
-    def get_customers(self, limit: int = 50, offset: int = 0) -> Dict[str, Any]:
-        """List customers."""
-        return self._request('GET', '/customers', params={'limit': limit, 'offset': offset})
+    def get_inventory(self, stock_id: str = None) -> Dict[str, Any]:
+        """Get inventory."""
+        if stock_id:
+            return self._api_request(f"/stock/{stock_id}")
+        return self._api_request("/stock")
 
-    def get_inventory(self, warehouse_id: Optional[str] = None) -> Dict[str, Any]:
-        """Get inventory levels."""
-        params = {}
-        if warehouse_id:
-            params['warehouse_id'] = warehouse_id
-        return self._request('GET', '/inventory', params=params)
+    def get_orders(self, search: Dict = None) -> Dict[str, Any]:
+        """Get orders."""
+        return self._api_request("/orders")
 
-    def close(self):
-        self.session.close()
+    def register_order(self, order_data: Dict) -> Dict[str, Any]:
+        """Register new order."""
+        return self._api_request("/receiveorder/register", [order_data])
 
-    def __enter__(self):
-        return self
+    def update_order(self, order_id: str, data: Dict) -> Dict[str, Any]:
+        """Update order."""
+        data["order_id"] = order_id
+        return self._api_request("/receiveorder/update", [data])
 
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        self.close()
+    def get_customers(self, search: Dict = None) -> Dict[str, Any]:
+        """Get customers."""
+        return self._api_request("/customer")
+
+    def register_customer(self, customer_data: Dict) -> Dict[str, Any]:
+        """Register new customer."""
+        return self._api_request("/customer/register", [customer_data])
+
+    def get_shipments(self, order_id: str = None) -> Dict[str, Any]:
+        """Get shipments."""
+        if order_id:
+            return self._api_request(f"/shipment?receive_order_id={order_id}")
+        return self._api_request("/shipment")
+
+    def register_shipment(self, shipment_data: Dict) -> Dict[str, Any]:
+        """Register shipment."""
+        return self._api_request("/shipment/register", [shipment_data])

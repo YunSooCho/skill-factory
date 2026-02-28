@@ -1,60 +1,30 @@
-# Maintainx API Integration
+# MaintainX
 
-## Overview
-Complete Maintainx facilities maintenance API client for Yoom automation. Supports work orders, tasks, users, vendors, and locations.
+Facility maintenance and work order management platform.
 
-## Supported Features
-- ✅ Create and manage work orders
-- ✅ Task management within work orders
-- ✅ Location and facility management
-- ✅ User management with roles
-- ✅ Vendor management
-- ✅ Comments and notes
-- ✅ File attachments
-- ✅ Webhook notifications
+## API Key
+1. Sign up at [https://maintainx.com](https://maintainx.com)
+2. Navigate to Settings > API > Generate Token
+3. Create API token
 
-## Setup
-
-### 1. Get API Key
-Visit https://app.maintainx.com/settings/api to get your API key.
-
-### 2. Install Dependencies
+## Installation
 ```bash
-pip install -r requirements.txt
+pip install requests
 ```
 
-### 3. Configure
-```bash
-export MAINTAINX_API_KEY="your_api_key_here"
-```
-
-## Usage
-
+## Example
 ```python
-import os
-from maintainx_client import MaintainxAPIClient
+from maintainx.client import MaintainXClient
 
-os.environ['MAINTAINX_API_KEY'] = 'your_api_key'
+client = MaintainXClient(api_key='your_api_key')
 
-client = MaintainxAPIClient()
+# List work orders
+work_orders = client.list_work_orders()
 
 # Create work order
-wo = client.create_work_order(
+result = client.create_work_order(
     title='Fix HVAC System',
-    description='HVAC not cooling properly',
-    location_id='loc_123',
     priority='high',
-    assigned_to_ids=['user_456']
+    assignee_id='USER123'
 )
-
-# Add comment
-client.add_comment(
-    work_order_id=wo['id'],
-    comment='Vendor scheduled for tomorrow'
-)
-
-# Close work order
-client.close_work_order(wo['id'], notes='Issue resolved')
-
-client.close()
 ```

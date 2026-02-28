@@ -1,26 +1,13 @@
-# PCA Cloud Konkan API Integration
+# PCA Cloud Konkan
 
-Complete PCA Cloud Konkan warehouse API client. Japanese warehouse operations support.
+Japanese warehouse and logistics management system (PCA雲管理).
 
-## Features
-- ✅ Order management
-- ✅ Product management
-- ✅ Inventory tracking
+## API Key
+1. Sign up at [https://pca-cloud.co.jp](https://pca-cloud.co.jp)
+2. Go to Settings > API Integration
+3. Generate API credentials
 
-## Setup
+## Installation
 ```bash
-export PCA_CLOUD_KONKAN_API_KEY="your_api_key"
-pip install -r requirements.txt
-```
-
-## Usage
-```python
-import os
-from pca_cloud_konkan_client import PcaCloudKonkanAPIClient
-
-os.environ['PCA_CLOUD_KONKAN_API_KEY'] = 'your_api_key'
-
-client = PcaCloudKonkanAPIClient()
-orders = client.get_orders()
-client.close()
+pip install requests
 ```

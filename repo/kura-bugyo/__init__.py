@@ -1,9 +1,3 @@
-"""
-kura-bugyo API Client
+from .client import KuraBugyoClient
 
-Yoom Apps integration for kura-bugyo
-"""
-
-from .client import KuraBugyoAPIClient
-
-__all__ = ['KuraBugyoAPIClient']
+__all__ = ['KuraBugyoClient']

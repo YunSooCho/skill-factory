@@ -1,9 +1,3 @@
-"""
-booqable API Client
+from .client import BooqableClient
 
-Yoom Apps integration for booqable
-"""
-
-from .client import BooqableAPIClient
-
-__all__ = ['BooqableAPIClient']
+__all__ = ['BooqableClient']

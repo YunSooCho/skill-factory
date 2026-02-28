@@ -1,9 +1,3 @@
-"""
-tookan API Client
+from .client import TookanClient
 
-Yoom Apps integration for tookan
-"""
-
-from .client import TookanAPIClient
-
-__all__ = ['TookanAPIClient']
+__all__ = ['TookanClient']

@@ -1,9 +1,3 @@
-"""
-next-engine API Client
+from .client import NextEngineClient
 
-Yoom Apps integration for next-engine
-"""
-
-from .client import NextEngineAPIClient
-
-__all__ = ['NextEngineAPIClient']
+__all__ = ['NextEngineClient']

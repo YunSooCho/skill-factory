@@ -1,92 +1,129 @@
-"""
-Order Desk API Client
-
-Complete client for Order Desk order management integration.
-Full API coverage with no stub code.
-"""
-
-import os
 import requests
-from typing import Optional, Dict, List, Any
-from urllib.parse import urljoin
+from typing import Dict, List, Optional, Any
 
 
-class OrderDeskAPIClient:
-    """
-    Complete client for Order Desd order management system.
-    Supports orders, products, and fulfillment operations.
-    """
+class OrderDeskClient:
+    """Client for Order Desk order management API."""
 
-    def __init__(
-        self,
-        api_key: Optional[str] = None,
-        base_url: Optional[str] = None,
-        timeout: int = 30,
-        verify_ssl: bool = True
-    ):
-        self.api_key = api_key or os.getenv("ORDER_DESK_API_KEY")
-        self.base_url = base_url or os.getenv("ORDER_DESK_BASE_URL", "https://app.orderdesk.me/api/v1")
-        self.timeout = timeout
-        self.verify_ssl = verify_ssl
+    BASE_URL = "https://app.orderdesk.me/api/v2"
 
-        if not self.api_key:
-            raise ValueError("API key is required. Set ORDER_DESK_API_KEY environment variable.")
+    def __init__(self, api_key: str, store_id: str):
+        """
+        Initialize Order Desk client.
 
+        Args:
+            api_key: Your Order Desk API key
+            store_id: Your Order Desk store ID
+        """
+        self.api_key = api_key
+        self.store_id = store_id
         self.session = requests.Session()
         self.session.headers.update({
-            "X-ORDERDESK-API-KEY": self.api_key,
-            "Content-Type": "application/json",
-            "Accept": "application/json"
+            "ORDERDESK-API-KEY": api_key,
+            "ORDERDESK-STORE-ID": store_id,
+            "Content-Type": "application/json"
         })
 
-    def _request(self, method: str, endpoint: str, data: Optional[Dict[str, Any]] = None, params: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
-        url = urljoin(self.base_url + "/", endpoint.lstrip("/"))
-        response = self.session.request(method=method, url=url, json=data, params=params, timeout=self.timeout, verify=self.verify_ssl)
-        response.raise_for_status()
+    def _request(self, method: str, endpoint: str, data: Optional[Dict] = None) -> Dict[str, Any]:
+        """Make HTTP request to Order Desk API."""
+        url = f"{self.BASE_URL}{endpoint}"
         try:
+            response = self.session.request(method, url, json=data)
+            response.raise_for_status()
             return response.json()
-        except ValueError:
-            return {"status": "success"}
+        except requests.RequestException as e:
+            return {"error": str(e)}
 
-    def get_orders(self, status: Optional[str] = None, limit: int = 50, offset: int = 0) -> Dict[str, Any]:
-        """List orders."""
-        params = {'limit': limit, 'offset': offset}
+    def get_orders(self, search: str = None, status: str = None, page: int = 1) -> Dict[str, Any]:
+        """Get orders."""
+        endpoint = f"/orders?page={page}"
+        if search:
+            endpoint += f"&search={search}"
         if status:
-            params['status'] = status
-        return self._request('GET', '/orders', params=params)
+            endpoint += f"&order_status={status}"
+        return self._request("GET", endpoint)
 
     def get_order(self, order_id: str) -> Dict[str, Any]:
         """Get order details."""
-        return self._request('GET', f'/orders/{order_id}')
+        return self._request("GET", f"/orders/{order_id}")
 
-    def create_order(self, order_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Create an order."""
-        return self._request('POST', '/orders', data=order_data)
+    def create_order(self, order_data: Dict) -> Dict[str, Any]:
+        """Create a new order."""
+        return self._request("POST", "/orders", order_data)
 
-    def update_order(self, order_id: str, order_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Update an order."""
-        return self._request('PUT', f'/orders/{order_id}', data=order_data)
+    def update_order(self, order_id: str, data: Dict) -> Dict[str, Any]:
+        """Update order."""
+        return self._request("PUT", f"/orders/{order_id}", data)
 
-    def get_products(self, limit: int = 50, offset: int = 0) -> Dict[str, Any]:
-        """List products."""
-        return self._request('GET', '/products', params={'limit': limit, 'offset': offset})
+    def delete_order(self, order_id: str) -> Dict[str, Any]:
+        """Delete order."""
+        return self._request("DELETE", f"/orders/{order_id}")
 
-    def get_inventory(self, sku: Optional[str] = None) -> Dict[str, Any]:
-        """Get inventory levels."""
-        params = {}
+    def get_products(self, search: str = None, page: int = 1) -> Dict[str, Any]:
+        """Get products."""
+        endpoint = f"/products?page={page}"
+        if search:
+            endpoint += f"&search={search}"
+        return self._request("GET", endpoint)
+
+    def get_product(self, product_id: str) -> Dict[str, Any]:
+        """Get product details."""
+        return self._request("GET", f"/products/{product_id}")
+
+    def create_product(self, code: str, name: str, price: float,
+                      sku: str = None) -> Dict[str, Any]:
+        """Create a new product."""
+        data = {
+            "code": code,
+            "name": name,
+            "price": price
+        }
         if sku:
-            params['sku'] = sku
-        return self._request('GET', '/inventory', params=params)
+            data["sku"] = sku
+        return self._request("POST", "/products", data=data)
 
-    def create_product(self, product_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Create a product."""
-        return self._request('POST', '/products', data=product_data)
+    def update_product(self, product_id: str, data: Dict) -> Dict[str, Any]:
+        """Update product."""
+        return self._request("PUT", f"/products/{product_id}", data)
 
-    def close(self):
-        self.session.close()
+    def get_inventory(self, sku: str = None) -> Dict[str, Any]:
+        """Get inventory levels."""
+        if sku:
+            return self._request("GET", f"/inventory/{sku}")
+        return self._request("GET", "/inventory")
 
-    def __enter__(self):
-        return self
+    def update_inventory(self, sku: str, quantity: int) -> Dict[str, Any]:
+        """Update inventory quantity."""
+        data = {
+            "sku": sku,
+            "quantity": quantity
+        }
+        return self._request("POST", "/inventory", data=data)
 
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        self.close()
+    def get_customers(self, search: str = None) -> Dict[str, Any]:
+        """Get customers."""
+        endpoint = "/customers"
+        if search:
+            endpoint += f"?search={search}"
+        return self._request("GET", endpoint)
+
+    def get_customer(self, customer_id: str) -> Dict[str, Any]:
+        """Get customer details."""
+        return self._request("GET", f"/customers/{customer_id}")
+
+    def get_shipments(self, order_id: str = None) -> Dict[str, Any]:
+        """Get shipments."""
+        endpoint = "/shipments"
+        if order_id:
+            endpoint += f"?order_id={order_id}"
+        return self._request("GET", endpoint)
+
+    def create_shipment(self, order_id: str, tracking_number: str,
+                       carrier: str) -> Dict[str, Any]:
+        """Create shipment."""
+        data = {
+            "order_id": order_id,
+            "tracking_number": tracking_number,
+            "carrier": carrier
+        }
+        return self._request("POST", "/shipments", data=data)

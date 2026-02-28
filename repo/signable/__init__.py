@@ -1,9 +1,3 @@
-"""
-signable API Client
+from .client import SignableClient
 
-Yoom Apps integration for signable
-"""
-
-from .client import SignableAPIClient
-
-__all__ = ['SignableAPIClient']
+__all__ = ['SignableClient']

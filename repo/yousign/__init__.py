@@ -1,9 +1,3 @@
-"""
-yousign API Client
+from .client import YouSignClient
 
-Yoom Apps integration for yousign
-"""
-
-from .client import YousignAPIClient
-
-__all__ = ['YousignAPIClient']
+__all__ = ['YouSignClient']

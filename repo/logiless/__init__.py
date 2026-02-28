@@ -1,9 +1,3 @@
-"""
-logiless API Client
+from .client import LogilessClient
 
-Yoom Apps integration for logiless
-"""
-
-from .client import LogilessAPIClient
-
-__all__ = ['LogilessAPIClient']
+__all__ = ['LogilessClient']

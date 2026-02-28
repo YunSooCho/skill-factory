@@ -1,9 +1,3 @@
-"""
-pca-cloud-konkan API Client
+from .client import PCACloudKonkanClient
 
-Yoom Apps integration for pca-cloud-konkan
-"""
-
-from .client import PcaCloudKonkanAPIClient
-
-__all__ = ['PcaCloudKonkanAPIClient']
+__all__ = ['PCACloudKonkanClient']

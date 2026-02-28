@@ -1,356 +1,104 @@
-"""
-Booqable API Client
-
-Complete client for Booqable rental inventory management integration.
-Full API coverage with no stub code.
-"""
-
-import os
 import requests
-from typing import Optional, Dict, List, Any
-from urllib.parse import urljoin
+from typing import Dict, List, Optional, Any
 
 
-class BooqableAPIClient:
-    """
-    Complete client for Booqable rental inventory management.
-    Supports orders, products, customers, stock management, and more.
-    """
+class BooqableClient:
+    """Client for Booqable rental inventory API."""
 
-    def __init__(
-        self,
-        api_key: Optional[str] = None,
-        base_url: Optional[str] = None,
-        timeout: int = 30,
-        verify_ssl: bool = True
-    ):
+    BASE_URL = "https://api.booqable.com/api"
+
+    def __init__(self, api_key: str):
         """
-        Initialize Booqable API client.
+        Initialize Booqable client.
 
         Args:
-            api_key: Booqable API key (from env: BOOQABLE_API_KEY)
-            base_url: Base URL (default: https://api.booqable.com/api/v1)
-            timeout: Request timeout in seconds
-            verify_ssl: Whether to verify SSL certificates
+            api_key: Your Booqable API key
         """
-        self.api_key = api_key or os.getenv("BOOQABLE_API_KEY")
-        self.base_url = base_url or os.getenv(
-            "BOOQABLE_BASE_URL",
-            "https://api.booqable.com/api/v1"
-        )
-        self.timeout = timeout
-        self.verify_ssl = verify_ssl
-
-        if not self.api_key:
-            raise ValueError(
-                "API key is required. Set BOOQABLE_API_KEY environment variable."
-            )
-
+        self.api_key = api_key
         self.session = requests.Session()
         self.session.headers.update({
-            "Authorization": f"Token {self.api_key}",
+            "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json",
             "Accept": "application/json"
         })
 
-    def _request(
-        self,
-        method: str,
-        endpoint: str,
-        data: Optional[Dict[str, Any]] = None,
-        params: Optional[Dict[str, Any]] = None
-    ) -> Dict[str, Any]:
+    def _request(self, method: str, endpoint: str, data: Optional[Dict] = None) -> Dict[str, Any]:
         """Make HTTP request to Booqable API."""
-        url = urljoin(self.base_url + "/", endpoint.lstrip("/"))
-
-        response = self.session.request(
-            method=method,
-            url=url,
-            json=data,
-            params=params,
-            timeout=self.timeout,
-            verify=self.verify_ssl
-        )
-
-        response.raise_for_status()
-
+        url = f"{self.BASE_URL}{endpoint}"
         try:
+            response = self.session.request(method, url, json=data)
+            response.raise_for_status()
             return response.json()
-        except ValueError:
-            return {"data": None}
+        except requests.RequestException as e:
+            return {"error": str(e)}
 
-    # Orders
-
-    def create_order(
-        self,
-        customer_id: str,
-        start_date: str,
-        end_date: str,
-        order_items: List[Dict[str, Any]],
-        notes: Optional[str] = None,
-        status: str = "concept"
-    ) -> Dict[str, Any]:
-        """
-        Create a rental order.
-
-        Args:
-            customer_id: Customer ID
-            start_date: Start date (YYYY-MM-DD)
-            end_date: End date (YYYY-MM-DD)
-            order_items: List of order items (product_id, quantity)
-            notes: Order notes
-            status: Order status (concept, confirmed, etc.)
-
-        Returns:
-            Order information
-        """
-        data = {
-            'customer_id': customer_id,
-            'start_date': start_date,
-            'end_date': end_date,
-            'order_items': order_items,
-            'status': status
-        }
-
-        if notes:
-            data['notes'] = notes
-
-        return self._request('POST', '/orders', data=data)
-
-    def get_order(self, order_id: str) -> Dict[str, Any]:
-        """Get order details."""
-        return self._request('GET', f'/orders/{order_id}')
-
-    def list_orders(
-        self,
-        status: Optional[str] = None,
-        limit: int = 50,
-        page: int = 1
-    ) -> Dict[str, Any]:
-        """List orders with optional filtering."""
-        params = {'limit': limit, 'page': page}
-        if status:
-            params['status'] = status
-        return self._request('GET', '/orders', params=params)
-
-    def update_order(
-        self,
-        order_id: str,
-        **kwargs
-    ) -> Dict[str, Any]:
-        """
-        Update order.
-
-        Args:
-            order_id: Order ID
-            **kwargs: Fields to update
-
-        Returns:
-            Updated order information
-        """
-        return self._request('PUT', f'/orders/{order_id}', data=kwargs)
-
-    def delete_order(self, order_id: str) -> Dict[str, Any]:
-        """Delete an order."""
-        return self._request('DELETE', f'/orders/{order_id}')
-
-    def confirm_order(self, order_id: str) -> Dict[str, Any]:
-        """Confirm an order."""
-        return self._request('POST', f'/orders/{order_id}/confirm')
-
-    def cancel_order(self, order_id: str) -> Dict[str, Any]:
-        """Cancel an order."""
-        return self._request('POST', f'/orders/{order_id}/cancel')
-
-    # Products
-
-    def list_products(
-        self,
-        limit: int = 50,
-        page: int = 1
-    ) -> Dict[str, Any]:
+    def list_products(self, page: int = 1) -> Dict[str, Any]:
         """List all products."""
-        params = {'limit': limit, 'page': page}
-        return self._request('GET', '/products', params=params)
+        return self._request("GET", f"/products?page={page}")
 
     def get_product(self, product_id: str) -> Dict[str, Any]:
         """Get product details."""
-        return self._request('GET', f'/products/{product_id}')
+        return self._request("GET", f"/products/{product_id}")
 
-    def create_product(
-        self,
-        name: str,
-        product_group_id: str,
-        price: Optional[float] = None,
-        description: Optional[str] = None
-    ) -> Dict[str, Any]:
-        """Create a product."""
+    def list_orders(self, status: str = None, page: int = 1) -> Dict[str, Any]:
+        """List orders."""
+        endpoint = f"/orders?page={page}"
+        if status:
+            endpoint += f"&status={status}"
+        return self._request("GET", endpoint)
+
+    def get_order(self, order_id: str) -> Dict[str, Any]:
+        """Get order details."""
+        return self._request("GET", f"/orders/{order_id}")
+
+    def create_order(self, product_id: str, quantity: int, customer_id: str,
+                    start_date: str, end_date: str) -> Dict[str, Any]:
+        """Create a rental order."""
         data = {
-            'name': name,
-            'product_group_id': product_group_id
+            "order": {
+                "customer_id": customer_id,
+                "start_at": start_date,
+                "stop_at": end_date,
+                "order_items": [{
+                    "product_id": product_id,
+                    "quantity": quantity
+                }]
+            }
         }
+        return self._request("POST", "/orders", data=data)
 
-        if price:
-            data['price'] = price
-        if description:
-            data['description'] = description
+    def update_order(self, order_id: str, data: Dict) -> Dict[str, Any]:
+        """Update order."""
+        return self._request("PUT", f"/orders/{order_id}", {"order": data})
 
-        return self._request('POST', '/products', data=data)
+    def cancel_order(self, order_id: str) -> Dict[str, Any]:
+        """Cancel order."""
+        return self._request("DELETE", f"/orders/{order_id}")
 
-    # Product Groups
-
-    def list_product_groups(
-        self,
-        limit: int = 50,
-        page: int = 1
-    ) -> Dict[str, Any]:
-        """List product groups."""
-        params = {'limit': limit, 'page': page}
-        return self._request('GET', '/product_groups', params=params)
-
-    def get_product_group(self, group_id: str) -> Dict[str, Any]:
-        """Get product group details."""
-        return self._request('GET', f'/product_groups/{group_id}')
-
-    # Customers
-
-    def list_customers(
-        self,
-        limit: int = 50,
-        page: int = 1
-    ) -> Dict[str, Any]:
+    def list_customers(self, page: int = 1) -> Dict[str, Any]:
         """List customers."""
-        params = {'limit': limit, 'page': page}
-        return self._request('GET', '/customers', params=params)
+        return self._request("GET", f"/customers?page={page}")
 
     def get_customer(self, customer_id: str) -> Dict[str, Any]:
         """Get customer details."""
-        return self._request('GET', f'/customers/{customer_id}')
+        return self._request("GET", f"/customers/{customer_id}")
 
-    def create_customer(
-        self,
-        first_name: str,
-        last_name: str,
-        email: str,
-        phone: Optional[str] = None,
-        company: Optional[str] = None
-    ) -> Dict[str, Any]:
-        """Create a customer."""
+    def create_customer(self, email: str, first_name: str, last_name: str,
+                       phone: str = None, company: str = None) -> Dict[str, Any]:
+        """Create customer."""
         data = {
-            'first_name': first_name,
-            'last_name': last_name,
-            'email': email
+            "customer": {
+                "email": email,
+                "first_name": first_name,
+                "last_name": last_name
+            }
         }
-
         if phone:
-            data['phone'] = phone
+            data["customer"]["phone"] = phone
         if company:
-            data['company'] = company
+            data["customer"]["company"] = company
+        return self._request("POST", "/customers", data=data)
 
-        return self._request('POST', '/customers', data=data)
-
-    def update_customer(
-        self,
-        customer_id: str,
-        **kwargs
-    ) -> Dict[str, Any]:
-        """Update customer."""
-        return self._request('PUT', f'/customers/{customer_id}', data=kwargs)
-
-    # Inventory/Stock
-
-    def list_stock_items(
-        self,
-        product_id: Optional[str] = None,
-        limit: int = 50,
-        page: int = 1
-    ) -> Dict[str, Any]:
-        """List stock items."""
-        params = {'limit': limit, 'page': page}
-        if product_id:
-            params['product_id'] = product_id
-        return self._request('GET', '/stock_items', params=params)
-
-    def get_stock_item(self, stock_item_id: str) -> Dict[str, Any]:
-        """Get stock item details."""
-        return self._request('GET', f'/stock_items/{stock_item_id}')
-
-    # Taxes
-
-    def list_taxes(
-        self,
-        limit: int = 50,
-        page: int = 1
-    ) -> Dict[str, Any]:
-        """List tax rates."""
-        params = {'limit': limit, 'page': page}
-        return self._request('GET', '/taxes', params=params)
-
-    # Locations
-
-    def list_locations(
-        self,
-        limit: int = 50,
-        page: int = 1
-    ) -> Dict[str, Any]:
-        """List locations."""
-        params = {'limit': limit, 'page': page}
-        return self._request('GET', '/locations', params=params)
-
-    def get_location(self, location_id: str) -> Dict[str, Any]:
-        """Get location details."""
-        return self._request('GET', f'/locations/{location_id}')
-
-    # Documents and Invoices
-
-    def list_documents(
-        self,
-        order_id: Optional[str] = None,
-        limit: int = 50,
-        page: int = 1
-    ) -> Dict[str, Any]:
-        """List documents."""
-        params = {'limit': limit, 'page': page}
-        if order_id:
-            params['order_id'] = order_id
-        return self._request('GET', '/documents', params=params)
-
-    def create_invoice(self, order_id: str) -> Dict[str, Any]:
-        """Create invoice for order."""
-        data = {'order_id': order_id}
-        return self._request('POST', '/invoices', data=data)
-
-    # Webhooks
-
-    def create_webhook(
-        self,
-        url: str,
-        events: List[str]
-    ) -> Dict[str, Any]:
-        """Create webhook subscription."""
-        data = {'url': url, 'events': events}
-        return self._request('POST', '/webhooks', data=data)
-
-    def list_webhooks(self) -> Dict[str, Any]:
-        """List webhooks."""
-        return self._request('GET', '/webhooks')
-
-    def delete_webhook(self, webhook_id: str) -> Dict[str, Any]:
-        """Delete webhook."""
-        return self._request('DELETE', f'/webhooks/{webhook_id}')
-
-    # Account
-
-    def get_account(self) -> Dict[str, Any]:
-        """Get account information."""
-        return self._request('GET', '/account')
-
-    def close(self):
-        """Close HTTP session."""
-        self.session.close()
-
-    def __enter__(self):
-        return self
-
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        self.close()
+    def get_inventory(self, product_id: str) -> Dict[str, Any]:
+        """Get inventory availability for product."""
+        return self._request("GET", f"/products/{product_id}/inventory")

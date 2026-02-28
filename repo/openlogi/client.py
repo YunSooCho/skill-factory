@@ -1,88 +1,123 @@
-"""
-Openlogi API Client
-
-Complete client for Openlogi logistics integration.
-Full API coverage with no stub code.
-"""
-
-import os
 import requests
-from typing import Optional, Dict, List, Any
-from urllib.parse import urljoin
+from typing import Dict, List, Optional, Any
 
 
-class OpenlogiAPIClient:
-    """
-    Complete client for Openlogi shipping and logistics.
-    Supports orders, inventory, and delivery operations.
-    """
+class OpenlogiClient:
+    """Client for Openlogi fulfillment service API."""
 
-    def __init__(
-        self,
-        api_key: Optional[str] = None,
-        base_url: Optional[str] = None,
-        timeout: int = 30,
-        verify_ssl: bool = True
-    ):
-        self.api_key = api_key or os.getenv("OPENLOGI_API_KEY")
-        self.base_url = base_url or os.getenv("OPENLOGI_BASE_URL", "https://api.openlogi.com/v1")
-        self.timeout = timeout
-        self.verify_ssl = verify_ssl
+    BASE_URL = "https://api.openlogi.com/v1"
 
-        if not self.api_key:
-            raise ValueError("API key is required. Set OPENLOGI_API_KEY environment variable.")
+    def __init__(self, api_key: str):
+        """
+        Initialize Openlogi client.
 
+        Args:
+            api_key: Your Openlogi API key
+        """
+        self.api_key = api_key
         self.session = requests.Session()
         self.session.headers.update({
-            "Authorization": f"Bearer {self.api_key}",
-            "Content-Type": "application/json",
-            "Accept": "application/json"
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json"
         })
 
-    def _request(self, method: str, endpoint: str, data: Optional[Dict[str, Any]] = None, params: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
-        url = urljoin(self.base_url + "/", endpoint.lstrip("/"))
-        response = self.session.request(method=method, url=url, json=data, params=params, timeout=self.timeout, verify=self.verify_ssl)
-        response.raise_for_status()
+    def _request(self, method: str, endpoint: str, data: Optional[Dict] = None) -> Dict[str, Any]:
+        """Make HTTP request to Openlogi API."""
+        url = f"{self.BASE_URL}{endpoint}"
         try:
+            response = self.session.request(method, url, json=data)
+            response.raise_for_status()
             return response.json()
-        except ValueError:
-            return {"status": "success"}
+        except requests.RequestException as e:
+            return {"error": str(e)}
 
-    def get_orders(self, status: Optional[str] = None, limit: int = 50, offset: int = 0) -> Dict[str, Any]:
-        """List orders."""
-        params = {'limit': limit, 'offset': offset}
+    def get_inventory(self, warehouse_code: str = None) -> Dict[str, Any]:
+        """Get warehouse inventory."""
+        endpoint = "/items"
+        if warehouse_code:
+            endpoint += f"?warehouse_code={warehouse_code}"
+        return self._request("GET", endpoint)
+
+    def get_item(self, item_code: str) -> Dict[str, Any]:
+        """Get item details by code."""
+        return self._request("GET", f"/items/{item_code}")
+
+    def create_item(self, item_code: str, name: str, unit: str = "EA",
+                   price: float = None) -> Dict[str, Any]:
+        """Create a new item."""
+        data = {
+            "item_code": item_code,
+            "name": name,
+            "unit": unit
+        }
+        if price:
+            data["price"] = price
+        return self._request("POST", "/items", data=data)
+
+    def update_item(self, item_code: str, data: Dict) -> Dict[str, Any]:
+        """Update item."""
+        return self._request("PUT", f"/items/{item_code}", data)
+
+    def get_warehouses(self) -> Dict[str, Any]:
+        """Get all warehouses."""
+        return self._request("GET", "/warehouses")
+
+    def get_warehouse(self, warehouse_code: str) -> Dict[str, Any]:
+        """Get warehouse details."""
+        return self._request("GET", f"/warehouses/{warehouse_code}")
+
+    def get_orders(self, status: str = None, limit: int = 100) -> Dict[str, Any]:
+        """Get orders."""
+        endpoint = f"/orders?limit={limit}"
         if status:
-            params['status'] = status
-        return self._request('GET', '/orders', params=params)
+            endpoint += f"&status={status}"
+        return self._request("GET", endpoint)
 
-    def get_order(self, order_id: str) -> Dict[str, Any]:
+    def get_order(self, order_code: str) -> Dict[str, Any]:
         """Get order details."""
-        return self._request('GET', f'/orders/{order_id}')
+        return self._request("GET", f"/orders/{order_code}")
 
-    def create_order(self, order_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Create an order."""
-        return self._request('POST', '/orders', data=order_data)
+    def create_shipment(self, order_code: str, items: List[Dict],
+                       recipient_address: Dict) -> Dict[str, Any]:
+        """Create shipment order."""
+        data = {
+            "order_code": order_code,
+            "items": items,
+            "recipient_address": recipient_address
+        }
+        return self._request("POST", "/shipments", data=data)
 
-    def get_products(self, limit: int = 50, offset: int = 0) -> Dict[str, Any]:
-        """List products."""
-        return self._request('GET', '/products', params={'limit': limit, 'offset': offset})
+    def update_shipment(self, shipment_id: str, data: Dict) -> Dict[str, Any]:
+        """Update shipment."""
+        return self._request("PUT", f"/shipments/{shipment_id}", data)
 
-    def get_inventory(self, sku: Optional[str] = None) -> Dict[str, Any]:
-        """Get inventory levels."""
-        params = {}
-        if sku:
-            params['sku'] = sku
-        return self._request('GET', '/inventory', params=params)
+    def cancel_shipment(self, shipment_id: str) -> Dict[str, Any]:
+        """Cancel shipment."""
+        return self._request("DELETE", f"/shipments/{shipment_id}")
 
-    def get_delivery_status(self, order_id: str) -> Dict[str, Any]:
-        """Get delivery status."""
-        return self._request('GET', f'/orders/{order_id}/delivery')
+    def get_shipment(self, shipment_id: str) -> Dict[str, Any]:
+        """Get shipment details."""
+        return self._request("GET", f"/shipments/{shipment_id}")
 
-    def close(self):
-        self.session.close()
+    def get_customers(self, limit: int = 100) -> Dict[str, Any]:
+        """Get customers."""
+        return self._request("GET", f"/customers?limit={limit}")
 
-    def __enter__(self):
-        return self
+    def get_customer(self, customer_code: str) -> Dict[str, Any]:
+        """Get customer details."""
+        return self._request("GET", f"/customers/{customer_code}")
 
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        self.close()
+    def create_customer(self, customer_code: str, name: str, email: str = None,
+                       phone: str = None, address: Dict = None) -> Dict[str, Any]:
+        """Create customer."""
+        data = {
+            "customer_code": customer_code,
+            "name": name
+        }
+        if email:
+            data["email"] = email
+        if phone:
+            data["phone"] = phone
+        if address:
+            data["address"] = address
+        return self._request("POST", "/customers", data=data)

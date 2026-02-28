@@ -1,45 +1,31 @@
-# Zoho Inventory API Integration
+# Zoho Inventory
 
-Complete Zoho Inventory API client. Supports items, orders, contacts, warehouse, and inventory management.
+Cloud-based inventory management from Zoho.
 
-## Features
-- ✅ Item management
-- ✅ Sales orders
-- ✅ Purchase orders
-- ✅ Contact management
-- ✅ Warehouse tracking
-- ✅ Inventory levels
-- ✅ Shipments
-- ✅ Invoices
+## API Key
+1. Create account at [https://inventory.zoho.com](https://inventory.zoho.com)
+2. Go to Settings > API Keys
+3. Generate auth token (authtoken) or use OAuth2
 
-## Setup
+## Installation
 ```bash
-export ZOHO_INVENTORY_API_KEY="your_authtoken"
-pip install -r requirements.txt
+pip install requests
 ```
 
-## Usage
+## Example
 ```python
-import os
-from zoho_inventory_client import ZohoInventoryAPIClient
+from zoho_inventory.client import ZohoInventoryClient
 
-os.environ['ZOHO_INVENTORY_API_KEY'] = 'your_authtoken'
+client = ZohoInventoryClient(authtoken='your_authtoken', organization_id='your_org_id')
 
-client = ZohoInventoryAPIClient()
-
-# List items
+# Get items
 items = client.get_items()
 
 # Create sales order
-order = client.create_sales_order({
-    'customer_id': 'cust_123',
-    'line_items': [
-        {'item_id': 'item_456', 'quantity': 10}
-    ]
-})
-
-# Check inventory
-inventory = client.get_inventory(item_id='item_456')
-
-client.close()
+result = client.create_sales_order(
+    customer_id='CUST001',
+    item_id='ITEM123',
+    rate=100.00,
+    quantity=5
+)
 ```

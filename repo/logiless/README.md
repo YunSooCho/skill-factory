@@ -1,27 +1,26 @@
-# Logiless API Integration
+# Logiless
 
-Complete Logiless logistics API client. Supports orders, inventory, and shipping tracking.
+Japanese e-commerce and inventory management platform.
 
-## Features
-- ✅ Order management
-- ✅ Product management
-- ✅ Inventory tracking
-- ✅ Shipment tracking
+## API Key
+1. Sign up at [https://logiless.com](https://logiless.com)
+2. Go to Settings > API Integration
+3. Generate API key
 
-## Setup
+## Installation
 ```bash
-export LOGILESS_API_KEY="your_api_key"
-pip install -r requirements.txt
+pip install requests
 ```
 
-## Usage
+## Example
 ```python
-import os
-from logiless_client import LogilessAPIClient
+from logiless.client import LogilessClient
 
-os.environ['LOGILESS_API_KEY'] = 'your_api_key'
+client = LogilessClient(api_key='your_api_key')
 
-client = LogilessAPIClient()
-orders = client.get_orders()
-client.close()
+# Get product list
+products = client.get_products()
+
+# Update inventory
+result = client.update_inventory(item_id='ITEM123', quantity=100)
 ```

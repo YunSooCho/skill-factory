@@ -1,27 +1,29 @@
-# Openlogi API Integration
+# Openlogi
 
-Complete Openlogi shipping API client. Supports orders, inventory, and delivery tracking.
+Japanese cloud-based fulfillment and warehouse service.
 
-## Features
-- ✅ Order management
-- ✅ Product management
-- ✅ Inventory tracking
-- ✅ Delivery status tracking
+## API Key
+1. Sign up at [https://openlogi.com](https://openlogi.com)
+2. Navigate to Settings > API Integration
+3. Generate API key
 
-## Setup
+## Installation
 ```bash
-export OPENLOGI_API_KEY="your_api_key"
-pip install -r requirements.txt
+pip install requests
 ```
 
-## Usage
+## Example
 ```python
-import os
-from openlogi_client import OpenlogiAPIClient
+from openlogi.client import OpenlogiClient
 
-os.environ['OPENLOGI_API_KEY'] = 'your_api_key'
+client = OpenlogiClient(api_key='your_api_key')
 
-client = OpenlogiAPIClient()
-orders = client.get_orders()
-client.close()
+# Get warehouse inventory
+inventory = client.get_inventory()
+
+# Create shipment order
+result = client.create_shipment(
+    order_code='ORD001',
+    items=[{'sku': 'SKU001', 'quantity': 2}]
+)
 ```

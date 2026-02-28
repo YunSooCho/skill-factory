@@ -1,64 +1,26 @@
-# Wan-Sign API Integration
+# Wan-Sign
 
-## Overview
-Complete Wan-Sign electronic signature API client for Yoom automation. Supports documents, signature requests, templates, webhooks, and team management.
+Digital signature solution for business document signing.
 
-## Supported Features
-- ✅ Document upload and management
-- ✅ Create and track signature requests
-- ✅ Multi-recipient signing workflows
-- ✅ Template-based signature requests
-- ✅ Reminder system
-- ✅ Signed document download
-- ✅ Team member management
-- ✅ Webhook notifications
-- ✅ Usage statistics
+## API Key
+1. Sign up at [https://wansign.com](https://wansign.com)
+2. Navigate to Developer Settings > API Keys
+3. Create new API key
 
-## Setup
-
-### 1. Get API Credentials
-Visit https://developer.wansign.com to get your API key.
-
-### 2. Install Dependencies
+## Installation
 ```bash
-pip install -r requirements.txt
+pip install requests
 ```
 
-### 3. Configure
-```bash
-export WAN_SIGN_API_KEY="your_api_key_here"
-```
-
-## Usage
-
+## Example
 ```python
-import os
-from wan_sign_client import WanSignAPIClient
+from wan_sign.client import WanSignClient
 
-os.environ['WAN_SIGN_API_KEY'] = 'your_api_key'
+client = WanSignClient(api_key='your_api_key')
 
-client = WanSignAPIClient()
-
-# Upload document
-doc = client.upload_document('contract.pdf')
-
-# Create signature request
-request = client.create_signature_request(
-    document_id=doc['id'],
-    recipients=[
-        {'email': 'client@example.com', 'name': 'John Doe'}
-    ],
-    subject='Please sign agreement'
+# Upload and sign
+result = client.upload_and_sign(
+    document_path='contract.pdf',
+    signers=[{'name': 'John', 'email': 'john@example.com'}]
 )
-
-# Track status
-status = client.get_signature_request(request['id'])
-
-# Use template
-template_request = client.create_from_template(
-    template_id='tpl_123',
-    recipients=[{'email': 'signer@example.com', 'name': 'Signer'}]
-)
-
-client.close()
 ```

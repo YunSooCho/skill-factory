@@ -1,9 +1,3 @@
-"""
-zoho_sign API Client
+from .client import ZohoSignClient
 
-Yoom Apps integration for zoho_sign
-"""
-
-from .client import ZohoSignAPIClient
-
-__all__ = ['ZohoSignAPIClient']
+__all__ = ['ZohoSignClient']

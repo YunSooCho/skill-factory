@@ -1,27 +1,26 @@
-# Next-Engine API Integration
+# Next-Engine
 
-Complete Next-Engine ERP API client. Supports products, orders, customers, and inventory.
+Japanese integrated ERP and inventory management system.
 
-## Features
-- ✅ Product management
-- ✅ Order processing
-- ✅ Customer management
-- ✅ Inventory tracking
+## API Key
+1. Sign up at [https://next-engine.com](https://next-engine.com)
+2. Go to Settings > API Configuration
+3. Generate API key and sign key
 
-## Setup
+## Installation
 ```bash
-export NEXT_ENGINE_API_KEY="your_api_key"
-pip install -r requirements.txt
+pip install requests
 ```
 
-## Usage
+## Example
 ```python
-import os
-from next_engine_client import NextEngineAPIClient
+from next_engine.client import NextEngineClient
 
-os.environ['NEXT_ENGINE_API_KEY'] = 'your_api_key'
+client = NextEngineClient(api_key='your_api_key', sign_key='your_sign_key')
 
-client = NextEngineAPIClient()
+# Get product list
 products = client.get_products()
-client.close()
+
+# Register order
+result = client.register_order(order_data={'customer_id': 'CUST001', 'items': [...]})
 ```

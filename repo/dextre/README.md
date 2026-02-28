@@ -1,26 +1,26 @@
-# Dextre API Integration
+# Dextre
 
-Complete Dextre warehouse management API client. Supports inventory and order management.
+Warehouse and inventory management system.
 
-## Features
-- ✅ Order management
-- ✅ Inventory tracking
-- ✅ Fulfillment operations
+## API Key
+1. Sign up at [https://dextre.io](https://dextre.io)
+2. Go to Settings > API Access
+3. Generate API credentials
 
-## Setup
+## Installation
 ```bash
-export DEXTRE_API_KEY="your_api_key"
-pip install -r requirements.txt
+pip install requests
 ```
 
-## Usage
+## Example
 ```python
-import os
-from dextre_client import DextreAPIClient
+from dextre.client import DextreClient
 
-os.environ['DEXTRE_API_KEY'] = 'your_api_key'
+client = DextreClient(api_key='your_api_key')
 
-client = DextreAPIClient()
-inventory = client.get_inventory(sku='PROD-001')
-client.close()
+# Get inventory
+inventory = client.get_inventory()
+
+# Adjust stock
+result = client.adjust_stock(product_sku='SKU001', quantity=100)
 ```

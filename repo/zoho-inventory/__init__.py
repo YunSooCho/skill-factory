@@ -1,9 +1,3 @@
-"""
-zoho-inventory API Client
+from .client import ZohoInventoryClient
 
-Yoom Apps integration for zoho-inventory
-"""
-
-from .client import ZohoInventoryAPIClient
-
-__all__ = ['ZohoInventoryAPIClient']
+__all__ = ['ZohoInventoryClient']

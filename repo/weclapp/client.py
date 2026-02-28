@@ -1,110 +1,126 @@
-"""
-Weclapp API Client
-
-Complete client for Weclapp ERP integration.
-Full API coverage with no stub code.
-"""
-
-import os
 import requests
-from typing import Optional, Dict, List, Any
-from urllib.parse import urljoin
+from typing import Dict, List, Optional, Any
 
 
-class WeclappAPIClient:
-    """
-    Complete client for Weclapp ERP and inventory management.
-    Supports products, orders, customers, and warehouse operations.
-    """
+class WeclappClient:
+    """Client for Weclapp cloud ERP API."""
 
-    def __init__(
-        self,
-        api_key: Optional[str] = None,
-        base_url: Optional[str] = None,
-        timeout: int = 30,
-        verify_ssl: bool = True
-    ):
-        self.api_key = api_key or os.getenv("WECLAPP_API_KEY")
-        self.base_url = base_url or os.getenv("WECLAPP_BASE_URL", "https://www.weclapp.com/webapp/api/v1")
-        self.timeout = timeout
-        self.verify_ssl = verify_ssl
+    BASE_URL = "https://www.weclapp.com/webapp/api/v1"
 
-        if not self.api_key:
-            raise ValueError("API key is required. Set WECLAPP_API_KEY environment variable.")
+    def __init__(self, api_key: str):
+        """
+        Initialize Weclapp client.
 
+        Args:
+            api_key: Your Weclapp API key
+        """
+        self.api_key = api_key
         self.session = requests.Session()
         self.session.headers.update({
-            "AuthenticationToken": self.api_key,
-            "Content-Type": "application/json",
-            "Accept": "application/json"
+            "AuthenticationToken": api_key,
+            "Content-Type": "application/json"
         })
 
-    def _request(self, method: str, endpoint: str, data: Optional[Dict[str, Any]] = None, params: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
-        url = urljoin(self.base_url + "/", endpoint.lstrip("/"))
-        response = self.session.request(method=method, url=url, json=data, params=params, timeout=self.timeout, verify=self.verify_ssl)
-        response.raise_for_status()
+    def _request(self, method: str, endpoint: str, data: Optional[Dict] = None) -> Dict[str, Any]:
+        """Make HTTP request to Weclapp API."""
+        url = f"{self.BASE_URL}{endpoint}"
         try:
+            response = self.session.request(method, url, json=data)
+            response.raise_for_status()
             return response.json()
-        except ValueError:
-            return {"status": "success"}
+        except requests.RequestException as e:
+            return {"error": str(e)}
 
-    def get_products(self, limit: int = 50, offset: int = 0) -> Dict[str, Any]:
-        """List products."""
-        params = {'pageSize': limit, 'page': offset // limit + 1}
-        return self._request('GET', '/product', params=params)
+    def get_articles(self, page: int = 1, page_size: int = 100) -> Dict[str, Any]:
+        """Get all articles/products."""
+        return self._request("GET", f"/article?page={page}&pageSize={page_size}")
 
-    def get_product(self, product_id: str) -> Dict[str, Any]:
-        """Get product details."""
-        return self._request('GET', f'/product/id/{product_id}')
+    def get_article(self, article_id: str) -> Dict[str, Any]:
+        """Get article details."""
+        return self._request("GET", f"/article/id/{article_id}")
 
-    def create_product(self, product_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Create a product."""
-        return self._request('POST', '/product', data=product_data)
+    def create_article(self, title: str, description: str = None,
+                      item_number: str = None, price: float = None) -> Dict[str, Any]:
+        """Create article."""
+        data = {"title": title}
+        if description:
+            data["description"] = description
+        if item_number:
+            data["itemNumber"] = item_number
+        if price:
+            data["price"] = price
+        return self._request("POST", "/article", data=data)
 
-    def get_orders(self, status: Optional[str] = None, limit: int = 50, offset: int = 0) -> Dict[str, Any]:
-        """List orders."""
-        params = {'pageSize': limit, 'page': offset // limit + 1}
-        if status:
-            params['orderStatus'] = status
-        return self._request('GET', '/salesorder', params=params)
+    def update_article(self, article_id: str, data: Dict) -> Dict[str, Any]:
+        """Update article."""
+        return self._request("PUT", f"/article/id/{article_id}", data)
+
+    def delete_article(self, article_id: str) -> Dict[str, Any]:
+        """Delete article."""
+        return self._request("DELETE", f"/article/id/{article_id}")
+
+    def get_orders(self, page: int = 1, page_size: int = 100) -> Dict[str, Any]:
+        """Get sales orders."""
+        return self._request("GET", f"/salesOrder?page={page}&pageSize={page_size}")
 
     def get_order(self, order_id: str) -> Dict[str, Any]:
         """Get order details."""
-        return self._request('GET', f'/salesorder/id/{order_id}')
+        return self._request("GET", f"/salesOrder/id/{order_id}")
 
-    def create_order(self, order_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Create a sales order."""
-        return self._request('POST', '/salesorder', data=order_data)
+    def create_order(self, order_items: List[Dict], status: str = None) -> Dict[str, Any]:
+        """Create sales order."""
+        data = {"orderItems": order_items}
+        if status:
+            data["orderStatus"] = status
+        return self._request("POST", "/salesOrder", data=data)
 
-    def get_customers(self, limit: int = 50, offset: int = 0) -> Dict[str, Any]:
-        """List customers."""
-        params = {'pageSize': limit, 'page': offset // limit + 1}
-        return self._request('GET', '/customer', params=params)
+    def update_order(self, order_id: str, data: Dict) -> Dict[str, Any]:
+        """Update order."""
+        return self._request("PUT", f"/salesOrder/id/{order_id}", data)
+
+    def delete_order(self, order_id: str) -> Dict[str, Any]:
+        """Delete order."""
+        return self._request("DELETE", f"/salesOrder/id/{order_id}")
+
+    def get_invoices(self, page: int = 1, page_size: int = 100) -> Dict[str, Any]:
+        """Get invoices."""
+        return self._request("GET", f"/invoice?page={page}&pageSize={page_size}")
+
+    def get_invoice(self, invoice_id: str) -> Dict[str, Any]:
+        """Get invoice details."""
+        return self._request("GET", f"/invoice/id/{invoice_id}")
+
+    def create_invoice(self, invoice_items: List[Dict], title: str) -> Dict[str, Any]:
+        """Create invoice."""
+        data = {
+            "invoiceItems": invoice_items,
+            "title": title
+        }
+        return self._request("POST", "/invoice", data=data)
+
+    def get_customers(self, page: int = 1, page_size: int = 100) -> Dict[str, Any]:
+        """Get customers."""
+        return self._request("GET", f"/customer?page={page}&pageSize={page_size}")
 
     def get_customer(self, customer_id: str) -> Dict[str, Any]:
         """Get customer details."""
-        return self._request('GET', f'/customer/id/{customer_id}')
+        return self._request("GET", f"/customer/id/{customer_id}")
 
-    def create_customer(self, customer_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Create a customer."""
-        return self._request('POST', '/customer', data=customer_data)
+    def create_customer(self, name: str, email: str = None, phone: str = None) -> Dict[str, Any]:
+        """Create customer."""
+        data = {"name": name}
+        if email:
+            data["email"] = email
+        if phone:
+            data["phone"] = phone
+        return self._request("POST", "/customer", data=data)
 
-    def get_inventory(self, product_id: Optional[str] = None) -> Dict[str, Any]:
-        """Get inventory levels."""
-        params = {}
-        if product_id:
-            params['productId'] = product_id
-        return self._request('GET', '/stockavailability', params=params)
+    def get_stock(self, article_id: str = None) -> Dict[str, Any]:
+        """Get stock levels."""
+        if article_id:
+            return self._request("GET", f"/stock/article/id/{article_id}")
+        return self._request("GET", "/stock")
 
-    def get_warehouses(self) -> Dict[str, Any]:
-        """List warehouses."""
-        return self._request('GET', '/warehouse')
-
-    def close(self):
-        self.session.close()
-
-    def __enter__(self):
-        return self
-
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        self.close()
+    def get_purchase_orders(self, page: int = 1, page_size: int = 100) -> Dict[str, Any]:
+        """Get purchase orders."""
+        return self._request("GET", f"/purchaseOrder?page={page}&pageSize={page_size}")

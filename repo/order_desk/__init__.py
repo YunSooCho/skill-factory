@@ -1,9 +1,3 @@
-"""
-order_desk API Client
+from .client import OrderDeskClient
 
-Yoom Apps integration for order_desk
-"""
-
-from .client import OrderDeskAPIClient
-
-__all__ = ['OrderDeskAPIClient']
+__all__ = ['OrderDeskClient']

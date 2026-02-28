@@ -1,60 +1,27 @@
-# Easyship API Integration
+# EasyShip
 
-## Overview
-Complete Easyship shipping API client for Yoom automation. Supports shipments, rate calculation, labels, tracking, and courier management.
+Global shipping and logistics platform.
 
-## Supported Features
-- ✅ Create and manage shipments
-- ✅ Get shipping rates from multiple couriers
-- ✅ Generate shipping labels
-- ✅ Shipment tracking
-- ✅ Courier account management
-- ✅ Address validation
-- ✅ Webhook notifications
+## API Key
+1. Sign up at [https://easyship.com](https://easyship.com)
+2. Go to Account > API Keys
+3. Generate API key
 
-## Setup
-
-### 1. Get API Key
-Visit https://dashboard.easyship.com/account/api to get your API key.
-
-### 2. Install Dependencies
+## Installation
 ```bash
-pip install -r requirements.txt
+pip install requests
 ```
 
-### 3. Configure
-```bash
-export EASYSHIP_API_KEY="your_api_key_here"
-```
-
-## Usage
-
+## Example
 ```python
-import os
-from easyship_client import EasyshipAPIClient
+from easyship.client import EasyshipClient
 
-os.environ['EASYSHIP_API_KEY'] = 'your_api_key'
+client = EasyshipClient(api_key='your_api_key')
 
-client = EasyshipAPIClient()
-
-# Get rates
+# Get shipping rates
 rates = client.get_rates(
-    origin={'city': 'New York', 'country_code': 'US'},
-    destination={'city': 'London', 'country_code': 'GB'},
-    parcels=[{'length': 10, 'width': 10, 'height': 10, 'weight': 1}]
+    origin_address={'country_code': 'US', 'postal_code': '10001'},
+    destination_address={'country_code': 'GB', 'postal_code': 'SW1A1AA'},
+    parcels=[{'weight': 1.5, 'length': 30, 'width': 20, 'height': 10}]
 )
-
-# Create shipment
-shipment = client.create_shipment(
-    CourierAccountId=rate['courier_account_id'],
-    # ... other shipment details
-)
-
-# Generate label
-label = client.generate_label(shipment['id'])
-
-# Track shipment
-tracking = client.track_shipment(shipment['id'])
-
-client.close()
 ```
