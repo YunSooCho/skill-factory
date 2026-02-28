@@ -3051,6 +3051,279 @@
       ],
       "analyzed_at": "2026-02-27T22:22:13.176552",
       "implemented_at": "2026-02-28T09:04:00.000000"
+    },
+    "agendor.md": {
+      "service_name": "Agendor",
+      "category": "セールス",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "API Key 인증 (Token: {api_token} in Authorization header)",
+      "api_actions": {
+        "Create Organization": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.create_organization(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        },
+        "Search Deal": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.search_deal(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        },
+        "Search Organization": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.search_organization(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        },
+        "Get Organization": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.get_organization(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        },
+        "Search Tasks of Person": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.search_tasks_of_person(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        },
+        "Get Product": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.get_product(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        },
+        "Update Deal": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.update_deal(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        },
+        "Create Task For Person": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.create_task_for_person(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        },
+        "Update Deal Stage": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.update_deal_stage(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        },
+        "Search Tasks of Deals": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.search_tasks_of_deals(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        },
+        "Update Product": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.update_product(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        },
+        "Create Task For Organization": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.create_task_for_organization(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        },
+        "Create Person": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.create_person(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        },
+        "Create Product": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.create_product(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        },
+        "Update Organization": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.update_organization(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        },
+        "Create Task For Deal": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.create_task_for_deal(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        },
+        "Get Deal Of Person": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.get_deal_of_person(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        },
+        "Create Deal For Organization": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.create_deal_for_organization(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        },
+        "Get Person": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.get_person(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        },
+        "Update Person": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.update_person(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        },
+        "Get Deal For Organization": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.get_deal_for_organization(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        },
+        "Search Product": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.search_product(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        },
+        "Search Tasks of Organization": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.search_tasks_of_organization(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        },
+        "Get Deal": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.get_deal(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        },
+        "Update Deal Status": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.update_deal_status(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        },
+        "Create Deal For Person": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.create_deal_for_person(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        },
+        "Search Person": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "Test with API token. Example: python agendor_client.py or client.search_person(...)",
+          "code_file": "github/skill-factory/repo/agendor/agendor_client.py"
+        }
+      },
+      "triggers": {
+        "Updated Stage Deal": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook endpoint required. Use AgendorCallback class or Flask server to receive events",
+          "webhook_method": "AgendorWebhook.register_webhook(callback_url, webhook_events)"
+        },
+        "Created Organization": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook endpoint required. Use AgendorCallback class or Flask server to receive events",
+          "webhook_method": "AgendorWebhook.register_webhook(callback_url, webhook_events)"
+        },
+        "Updated Deal": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook endpoint required. Use AgendorCallback class or Flask server to receive events",
+          "webhook_method": "AgendorWebhook.register_webhook(callback_url, webhook_events)"
+        },
+        "Won Deal": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook endpoint required. Use AgendorCallback class or Flask server to receive events",
+          "webhook_method": "AgendorWebhook.register_webhook(callback_url, webhook_events)"
+        },
+        "Updated Person": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook endpoint required. Use AgendorCallback class or Flask server to receive events",
+          "webhook_method": "AgendorWebhook.register_webhook(callback_url, webhook_events)"
+        },
+        "Losted Deal": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook endpoint required. Use AgendorCallback class or Flask server to receive events",
+          "webhook_method": "AgendorWebhook.register_webhook(callback_url, webhook_events)"
+        },
+        "Created Activity/Task/Comment": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook endpoint required. Use AgendorCallback class or Flask server to receive events",
+          "webhook_method": "AgendorWebhook.register_webhook(callback_url, webhook_events)"
+        },
+        "Deleted Person": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook endpoint required. Use AgendorCallback class or Flask server to receive events",
+          "webhook_method": "AgendorWebhook.register_webhook(callback_url, webhook_events)"
+        },
+        "Updated Organization": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook endpoint required. Use AgendorCallback class or Flask server to receive events",
+          "webhook_method": "AgendorWebhook.register_webhook(callback_url, webhook_events)"
+        },
+        "Created Deal": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook endpoint required. Use AgendorCallback class or Flask server to receive events",
+          "webhook_method": "AgendorWebhook.register_webhook(callback_url, webhook_events)"
+        },
+        "Deleted Organization": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook endpoint required. Use AgendorCallback class or Flask server to receive events",
+          "webhook_method": "AgendorWebhook.register_webhook(callback_url, webhook_events)"
+        },
+        "Created Person": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook endpoint required. Use AgendorCallback class or Flask server to receive events",
+          "webhook_method": "AgendorWebhook.register_webhook(callback_url, webhook_events)"
+        },
+        "Deleted Deal": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook endpoint required. Use AgendorCallback class or Flask server to receive events",
+          "webhook_method": "AgendorWebhook.register_webhook(callback_url, webhook_events)"
+        }
+      },
+      "required_tasks": [
+        {
+          "task": "Agendor API 문서 검토",
+          "priority": "high",
+          "description": "https://api.agendor.com.br/docs/ 확인",
+          "status": "completed"
+        },
+        {
+          "task": "API 토큰 획득",
+          "priority": "high",
+          "description": "https://app.agendor.com.br/settings/api에서 API 토큰 발급",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 환경 구축",
+          "priority": "medium",
+          "description": "실제 API 토큰으로 27개 API 액션 테스트",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T09:04:00.000000",
+      "implemented_at": "2026-02-28T09:04:00.000000"
     }
   },
   "last_updated": "2026-02-28 08:48:08"
