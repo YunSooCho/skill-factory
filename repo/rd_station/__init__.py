@@ -1,23 +1,25 @@
 """
-Rd Station API Client for Yoom Apps Integration.
+ RD Station - Yoom Apps
+ Marketing automation and lead management API integration
 """
 
-from .actions import RdStationActions
-from .exceptions import (
-    RdStationError,
-    RdStationAuthenticationError,
-    RdStationRateLimitError,
-    RdStationNotFoundError,
-    RdStationValidationError,
+__version__ = "1.0.0"
+__author__ = "Yoom Apps"
+
+from .client import RDStationClient
+from .models import (
+    Contact,
+    ConversionEvent,
+    ContactListResponse,
 )
+from .exceptions import RDStationError, RateLimitError, AuthenticationError
 
 __all__ = [
-    "RdStationActions",
-    "RdStationError",
-    "RdStationAuthenticationError",
-    "RdStationRateLimitError",
-    "RdStationNotFoundError",
-    "RdStationValidationError",
+    "RDStationClient",
+    "Contact",
+    "ConversionEvent",
+    "ContactListResponse",
+    "RDStationError",
+    "RateLimitError",
+    "AuthenticationError",
 ]
-
-__version__ = "1.0.0"

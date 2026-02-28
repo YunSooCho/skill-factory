@@ -1,22 +1,23 @@
 """
-CloudContact AI API Integration for Yoom Apps
-
-This module provides API actions for CloudContact AI operations.
+ CloudContact AI - Yoom Apps
+ SMS and Contact management API integration
 """
 
-from .actions import CloudContactAIActions
-from .exceptions import (
-    CloudContactAIError,
-    CloudContactAIAuthenticationError,
-    CloudContactAIRateLimitError,
-    CloudContactAINotFoundError,
-)
-
 __version__ = "1.0.0"
+__author__ = "Yoom Apps"
+
+from .client import CloudContactAIClient
+from .models import Contact, SMSMessage, Campaign, ContactListResponse, SMSListResponse
+from .exceptions import CloudContactAIError, RateLimitError, AuthenticationError
+
 __all__ = [
-    "CloudContactAIActions",
+    "CloudContactAIClient",
+    "Contact",
+    "SMSMessage",
+    "Campaign",
+    "ContactListResponse",
+    "SMSListResponse",
     "CloudContactAIError",
-    "CloudContactAIAuthenticationError",
-    "CloudContactAIRateLimitError",
-    "CloudContactAINotFoundError",
+    "RateLimitError",
+    "AuthenticationError",
 ]

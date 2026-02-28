@@ -1,24 +1,22 @@
 """
-Pinterest API Integration for Yoom Apps
-
-This module provides API actions and triggers for Pinterest operations.
+ Pinterest Integration - Yoom Apps
+ Pinterest API v5 integration for pin and board management
 """
 
-from .actions import PinterestActions
-from .triggers import PinterestTriggers
-from .exceptions import (
-    PinterestAPIError,
-    PinterestAuthenticationError,
-    PinterestRateLimitError,
-    PinterestNotFoundError,
-)
-
 __version__ = "1.0.0"
+__author__ = "Yoom Apps"
+
+from .client import PinterestClient
+from .models import Pin, Board, PinListResponse, BoardListResponse
+from .exceptions import PinterestAPIError, RateLimitError, AuthenticationError
+
 __all__ = [
-    "PinterestActions",
-    "PinterestTriggers",
+    "PinterestClient",
+    "Pin",
+    "Board",
+    "PinListResponse",
+    "BoardListResponse",
     "PinterestAPIError",
-    "PinterestAuthenticationError",
-    "PinterestRateLimitError",
-    "PinterestNotFoundError",
+    "RateLimitError",
+    "AuthenticationError",
 ]

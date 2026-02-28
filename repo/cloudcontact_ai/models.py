@@ -1,122 +1,187 @@
 """
-Data models for CloudContact AI API integration.
+ CloudContact AI API Models
 """
+
 from dataclasses import dataclass, field
-from typing import Optional, List, Dict, Any
 from datetime import datetime
+from typing import Optional, List, Dict, Any
 
 
 @dataclass
 class Contact:
-    """Contact data model for CloudContact AI."""
+    """Contact model"""
 
-    id: Optional[str] = None
+    id: str
+    phone: str
+    email: Optional[str] = None
     first_name: Optional[str] = None
     last_name: Optional[str] = None
-    phone: Optional[str] = None
-    email: Optional[str] = None
-    external_id: Optional[str] = None
+    name: Optional[str] = None
+    company: Optional[str] = None
+    tags: List[str] = field(default_factory=list)
+    custom_fields: Dict[str, Any] = field(default_factory=dict)
+    opted_in: bool = False
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
     @classmethod
-    def from_dict(cls, data: Dict[str, Any]) -> "Contact":
-        """Create Contact from API response dict."""
+    def from_api_response(cls, data: dict) -> "Contact":
+        """Create Contact from API response"""
         return cls(
-            id=data.get("id") or data.get("Id"),
-            first_name=data.get("first_name") or data.get("FirstName"),
-            last_name=data.get("last_name") or data.get("LastName"),
-            phone=data.get("phone") or data.get("Phone"),
-            email=data.get("email") or data.get("Email"),
-            external_id=data.get("external_id") or data.get("ExternalId"),
-            created_at=data.get("created_at") or data.get("CreatedAt"),
-            updated_at=data.get("updated_at") or data.get("UpdatedAt"),
+            id=data.get("id", data.get("contact_id", "")),
+            phone=data.get("phone", ""),
+            email=data.get("email"),
+            first_name=data.get("first_name"),
+            last_name=data.get("last_name"),
+            name=data.get("name"),
+            company=data.get("company"),
+            tags=data.get("tags", []) or [],
+            custom_fields=data.get("custom_fields", {}) or {},
+            opted_in=data.get("opted_in", False),
+            created_at=data.get("created_at"),
+            updated_at=data.get("updated_at"),
         )
 
 
 @dataclass
 class SMSMessage:
-    """SMS Message data model."""
+    """SMS Message model"""
 
-    id: Optional[str] = None
-    message: Optional[str] = None
-    to: Optional[str] = None
-    status: Optional[str] = None
-    campaign_id: Optional[str] = None
-    campaign_title: Optional[str] = None
-    segments: Optional[int] = None
-    total_price: Optional[float] = None
-    created_at: Optional[str] = None
-    custom_data: Optional[str] = None
-    external_id: Optional[str] = None
+    id: str
+    campaign_id: Optional[str]
+    phone: str
+    message: str
+    status: str
+    sent_at: Optional[str]
+    delivered_at: Optional[str]
+    failed_at: Optional[str]
+    error_code: Optional[str]
+    error_message: Optional[str]
+    segments: int = 1
 
     @classmethod
-    def from_dict(cls, data: Dict[str, Any]) -> "SMSMessage":
-        """Create SMSMessage from API response dict."""
+    def from_api_response(cls, data: dict) -> "SMSMessage":
+        """Create SMSMessage from API response"""
         return cls(
-            id=data.get("id") or data.get("Id"),
-            message=data.get("message") or data.get("Message"),
-            to=data.get("to") or data.get("To"),
-            status=data.get("message_status") or data.get("MessageStatus") or data.get("status"),
-            campaign_id=data.get("campaign_id") or data.get("CampaignId"),
-            campaign_title=data.get("campaign_title") or data.get("CampaignTitle"),
-            segments=data.get("segments") or data.get("Segments"),
-            total_price=data.get("total_price") or data.get("TotalPrice"),
-            created_at=data.get("created_at") or data.get("CreatedAt"),
-            custom_data=data.get("custom_data") or data.get("CustomData"),
-            external_id=data.get("external_id") or data.get("ExternalId"),
+            id=data.get("id", data.get("message_id", "")),
+            campaign_id=data.get("campaign_id"),
+            phone=data.get("phone", ""),
+            message=data.get("message", ""),
+            status=data.get("status", ""),
+            sent_at=data.get("sent_at"),
+            delivered_at=data.get("delivered_at"),
+            failed_at=data.get("failed_at"),
+            error_code=data.get("error_code"),
+            error_message=data.get("error_message"),
+            segments=data.get("segments", 1),
         )
 
 
 @dataclass
 class Campaign:
-    """Campaign data model."""
+    """SMS Campaign model"""
 
-    id: Optional[str] = None
-    title: Optional[str] = None
-    message: Optional[str] = None
-    campaign_type: Optional[str] = None
-    scheduled_timestamp: Optional[str] = None
-    scheduled_timezone: Optional[str] = None
+    id: str
+    name: str
+    message: str
+    status: str
+    total_recipients: int = 0
+    sent_count: int = 0
+    delivered_count: int = 0
+    failed_count: int = 0
     created_at: Optional[str] = None
-    status: Optional[str] = None
+    scheduled_at: Optional[str]
+    sent_at: Optional[str] = None
 
     @classmethod
-    def from_dict(cls, data: Dict[str, Any]) -> "Campaign":
-        """Create Campaign from API response dict."""
+    def from_api_response(cls, data: dict) -> "Campaign":
+        """Create Campaign from API response"""
         return cls(
-            id=data.get("id") or data.get("Id"),
-            title=data.get("title") or data.get("Title"),
-            message=data.get("message") or data.get("Message"),
-            campaign_type=data.get("campaign_type") or data.get("CampaignType"),
-            scheduled_timestamp=data.get("scheduled_timestamp") or data.get("ScheduledTimestamp"),
-            scheduled_timezone=data.get("scheduled_timezone") or data.get("ScheduledTimezone"),
-            created_at=data.get("created_at") or data.get("CreatedAt"),
-            status=data.get("status") or data.get("Status"),
+            id=data.get("id", data.get("campaign_id", "")),
+            name=data.get("name", ""),
+            message=data.get("message", ""),
+            status=data.get("status", ""),
+            total_recipients=data.get("total_recipients", 0),
+            sent_count=data.get("sent_count", 0),
+            delivered_count=data.get("delivered_count", 0),
+            failed_count=data.get("failed_count", 0),
+            created_at=data.get("created_at"),
+            scheduled_at=data.get("scheduled_at"),
+            sent_at=data.get("sent_at"),
         )
 
 
 @dataclass
-class ContactSearchResult:
-    """Contact search result model."""
+class ContactListResponse:
+    """Paginated Contact list response"""
 
-    contacts: List[Contact] = field(default_factory=list)
-    total_count: int = 0
+    items: List[Contact]
+    total: int = 0
     page: int = 1
-    page_size: int = 50
+    per_page: int = 25
+    total_pages: int = 1
 
     @classmethod
-    def from_dict(cls, data: Dict[str, Any]) -> "ContactSearchResult":
-        """Create ContactSearchResult from API response."""
-        contacts = []
-        if "contacts" in data:
-            contacts = [Contact.from_dict(c) for c in data["contacts"]]
+    def from_api_response(cls, data: dict) -> "ContactListResponse":
+        """Create ContactListResponse from API response"""
+        items = []
+        items_data = data
+
+        # Handle both array and paginated response formats
+        if isinstance(data, list):
+            items_data = {"contacts": data, "total": len(data)}
         elif "items" in data:
-            contacts = [Contact.from_dict(c) for c in data["items"]]
+            items_data = data
+        elif "contacts" in data:
+            items_data = {"items": data["contacts"], **{k: v for k, v in data.items() if k != "contacts"}}
+        elif isinstance(data, dict) and "id" in data:
+            # Single contact wrapped in list
+            items_data = {"items": [data], "total": 1}
+
+        items = [Contact.from_api_response(item) for item in items_data.get("items", items_data if isinstance(items_data, list) else [])]
 
         return cls(
-            contacts=contacts,
-            total_count=data.get("total_count") or data.get("totalCount", 0),
-            page=data.get("page", 1),
-            page_size=data.get("page_size") or data.get("pageSize", 50),
+            items=items,
+            total=int(items_data.get("total", len(items))),
+            page=int(items_data.get("page", 1)),
+            per_page=int(items_data.get("per_page", len(items) or 25)),
+            total_pages=int(items_data.get("total_pages", 1)),
+        )
+
+
+@dataclass
+class SMSListResponse:
+    """Paginated SMS list response"""
+
+    items: List[SMSMessage]
+    total: int = 0
+    page: int = 1
+    per_page: int = 25
+    total_pages: int = 1
+
+    @classmethod
+    def from_api_response(cls, data: dict) -> "SMSListResponse":
+        """Create SMSListResponse from API response"""
+        items = []
+        items_data = data
+
+        # Handle both array and paginated response formats
+        if isinstance(data, list):
+            items_data = {"messages": data, "total": len(data)}
+        elif "items" in data:
+            items_data = data
+        elif "messages" in data:
+            items_data = {"items": data["messages"], **{k: v for k, v in data.items() if k != "messages"}}
+        elif isinstance(data, dict) and "id" in data:
+            # Single message wrapped in list
+            items_data = {"items": [data], "total": 1}
+
+        items = [SMSMessage.from_api_response(item) for item in items_data.get("items", items_data if isinstance(items_data, list) else [])]
+
+        return cls(
+            items=items,
+            total=int(items_data.get("total", len(items))),
+            page=int(items_data.get("page", 1)),
+            per_page=int(items_data.get("per_page", len(items) or 25)),
+            total_pages=int(items_data.get("total_pages", 1)),
         )

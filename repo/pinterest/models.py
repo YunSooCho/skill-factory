@@ -1,93 +1,139 @@
 """
-Data models for Pinterest API integration.
+ Pinterest API Models
 """
-from dataclasses import dataclass, field
-from typing import Optional, List, Dict, Any
+
+from dataclasses import dataclass
 from datetime import datetime
+from typing import Optional, List
 
 
 @dataclass
-class PinterestPin:
-    """Pinterest Pin data model."""
+class Pin:
+    """Pinterest Pin model"""
 
     id: str
-    url: str
-    title: Optional[str] = None
-    description: Optional[str] = None
-    board_id: Optional[str] = None
-    board_url: Optional[str] = None
-    media: Optional[Dict[str, Any]] = None
-    created_at: Optional[str] = None
-    link: Optional[str] = None
-    alt_text: Optional[str] = None
-    dominant_color: Optional[str] = None
-    note: Optional[str] = None
+    link: Optional[str]
+    title: Optional[str]
+    description: Optional[str]
+    dominant_color: Optional[str]
+    alt_text: Optional[str]
+    board_id: str
+    board_section_id: Optional[str]
+    board_url: Optional[str]
+    created_at: Optional[str]
+    media: Optional[dict]
+    media_source: Optional[dict]
+    parent_pin_id: Optional[str]
+    note: Optional[str]
+    url: Optional[str]
 
     @classmethod
-    def from_dict(cls, data: Dict[str, Any]) -> "PinterestPin":
-        """Create PinterestPin from API response dict."""
+    def from_api_response(cls, data: dict) -> "Pin":
+        """Create Pin from API response"""
         return cls(
             id=data.get("id"),
-            url=data.get("url"),
+            link=data.get("link"),
             title=data.get("title"),
             description=data.get("description"),
-            board_id=data.get("board_id"),
-            board_url=data.get("board_url"),
-            media=data.get("media"),
-            created_at=data.get("created_at"),
-            link=data.get("link"),
-            alt_text=data.get("alt_text"),
             dominant_color=data.get("dominant_color"),
+            alt_text=data.get("alt_text"),
+            board_id=data.get("board_id"),
+            board_section_id=data.get("board_section_id"),
+            board_url=data.get("board_url"),
+            created_at=data.get("created_at"),
+            media=data.get("media"),
+            media_source=data.get("media_source"),
+            parent_pin_id=data.get("parent_pin_id"),
             note=data.get("note"),
+            url=data.get("url"),
         )
 
 
 @dataclass
-class PinterestBoard:
-    """Pinterest Board data model."""
+class Board:
+    """Pinterest Board model"""
 
     id: str
     name: str
-    url: str
-    description: Optional[str] = None
-    pin_count: Optional[int] = None
-    follower_count: Optional[int] = None
-    media: Optional[Dict[str, Any]] = None
-    created_at: Optional[str] = None
-    privacy: Optional[str] = None
+    description: Optional[str]
+    owner: Optional[dict]
+    privacy: Optional[str]
+    created_at: Optional[str]
+    counts: Optional[dict]
+    image_cover_url: Optional[str]
+    image_cover_thumbnail_url: Optional[str]
+    pins: Optional[List[dict]]
 
     @classmethod
-    def from_dict(cls, data: Dict[str, Any]) -> "PinterestBoard":
-        """Create PinterestBoard from API response dict."""
+    def from_api_response(cls, data: dict) -> "Board":
+        """Create Board from API response"""
         return cls(
             id=data.get("id"),
             name=data.get("name"),
-            url=data.get("url"),
             description=data.get("description"),
-            pin_count=data.get("pin_count"),
-            follower_count=data.get("follower_count"),
-            media=data.get("media"),
-            created_at=data.get("created_at"),
+            owner=data.get("owner"),
             privacy=data.get("privacy"),
+            created_at=data.get("created_at"),
+            counts=data.get("counts"),
+            image_cover_url=data.get("image_cover_url"),
+            image_cover_thumbnail_url=data.get("image_cover_thumbnail_url"),
+            pins=data.get("pins"),
         )
 
 
 @dataclass
-class PinterestPaginatedResponse:
-    """Paginated response model."""
+class PinListResponse:
+    """Paginated Pin list response"""
 
-    items: List[Any]
-    page_size: int
+    items: List[Pin]
     bookmark: Optional[str] = None
+    has_next: bool = False
 
     @classmethod
-    def from_dict(
-        cls, data: Dict[str, Any], item_class: type
-    ) -> "PinterestPaginatedResponse":
-        """Create paginated response from API response."""
-        items = [item_class.from_dict(item) for item in data.get("items", [])]
+    def from_api_response(cls, data: dict) -> "PinListResponse":
+        """Create PinListResponse from API response"""
+        items = [Pin.from_api_response(item) for item in data.get("items", [])]
         return cls(
             items=items,
-            page_size=data.get("page_size", 0),
             bookmark=data.get("bookmark"),
+            has_next=bool(data.get("bookmark")),
+        )
+
+
+@dataclass
+class BoardListResponse:
+    """Paginated Board list response"""
+
+    items: List[Board]
+    bookmark: Optional[str] = None
+    has_next: bool = False
+
+    @classmethod
+    def from_api_response(cls, data: dict) -> "BoardListResponse":
+        """Create BoardListResponse from API response"""
+        items = [Board.from_api_response(item) for item in data.get("items", [])]
+        return cls(
+            items=items,
+            bookmark=data.get("bookmark"),
+            has_next=bool(data.get("bookmark")),
+        )
+
+
+@dataclass
+class WebhookEvent:
+    """Pinterest Webhook event model"""
+
+    event_id: str
+    event_type: str
+    event_data: dict
+    timestamp: str
+
+    @classmethod
+    def from_webhook(cls, data: dict) -> "WebhookEvent":
+        """Create WebhookEvent from webhook payload"""
+        return cls(
+            event_id=data.get("event_id", ""),
+            event_type=data.get("event_type", ""),
+            event_data=data.get("event_data", {}),
+            timestamp=data.get("event_time", ""),
         )

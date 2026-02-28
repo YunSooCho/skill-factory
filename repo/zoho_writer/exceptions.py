@@ -1,10 +1,10 @@
 """
- RD Station API Exceptions
+ Zoho Writer API Exceptions
 """
 
 
-class RDStationError(Exception):
-    """Base exception for RD Station API errors"""
+class ZohoWriterError(Exception):
+    """Base exception for Zoho Writer API errors"""
 
     def __init__(self, message: str, status_code: int = None, response: dict = None):
         self.message = message
@@ -18,7 +18,7 @@ class RDStationError(Exception):
         return self.message
 
 
-class RateLimitError(RDStationError):
+class RateLimitError(ZohoWriterError):
     """Raised when rate limit is exceeded"""
 
     def __init__(
@@ -33,21 +33,21 @@ class RateLimitError(RDStationError):
         return self.message
 
 
-class AuthenticationError(RDStationError):
+class AuthenticationError(ZohoWriterError):
     """Raised for authentication/authorization errors"""
 
     def __init__(self, message: str = "Authentication failed", response: dict = None):
         super().__init__(message, status_code=401, response=response)
 
 
-class ResourceNotFoundError(RDStationError):
+class ResourceNotFoundError(ZohoWriterError):
     """Raised when a resource is not found"""
 
     def __init__(self, message: str = "Resource not found", response: dict = None):
         super().__init__(message, status_code=404, response=response)
 
 
-class ValidationError(RDStationError):
+class ValidationError(ZohoWriterError):
     """Raised for validation errors"""
 
     def __init__(self, message: str = "Validation failed", response: dict = None):

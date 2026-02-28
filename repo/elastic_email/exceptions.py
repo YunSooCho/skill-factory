@@ -1,10 +1,10 @@
 """
- RD Station API Exceptions
+ Elastic Email API Exceptions
 """
 
 
-class RDStationError(Exception):
-    """Base exception for RD Station API errors"""
+class ElasticEmailError(Exception):
+    """Base exception for Elastic Email API errors"""
 
     def __init__(self, message: str, status_code: int = None, response: dict = None):
         self.message = message
@@ -18,7 +18,7 @@ class RDStationError(Exception):
         return self.message
 
 
-class RateLimitError(RDStationError):
+class RateLimitError(ElasticEmailError):
     """Raised when rate limit is exceeded"""
 
     def __init__(
@@ -33,21 +33,21 @@ class RateLimitError(RDStationError):
         return self.message
 
 
-class AuthenticationError(RDStationError):
+class AuthenticationError(ElasticEmailError):
     """Raised for authentication/authorization errors"""
 
     def __init__(self, message: str = "Authentication failed", response: dict = None):
         super().__init__(message, status_code=401, response=response)
 
 
-class ResourceNotFoundError(RDStationError):
+class ResourceNotFoundError(ElasticEmailError):
     """Raised when a resource is not found"""
 
     def __init__(self, message: str = "Resource not found", response: dict = None):
         super().__init__(message, status_code=404, response=response)
 
 
-class ValidationError(RDStationError):
+class ValidationError(ElasticEmailError):
     """Raised for validation errors"""
 
     def __init__(self, message: str = "Validation failed", response: dict = None):
