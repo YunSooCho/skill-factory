@@ -1,20 +1,20 @@
-# 14_수발주재고관리_Inventory (0/18)
+# 14_수발주재고관리_Inventory (18/18)
 
-- [ ] booqable
-- [ ] detrack
-- [ ] dextre
-- [ ] easyship
-- [ ] kura-bugyo
-- [ ] logiless
-- [ ] maintainx
-- [ ] next-engine
-- [ ] openlogi
-- [ ] order_desk
-- [ ] pca-cloud-konkan
-- [ ] sendcloud
-- [ ] sendle
-- [ ] sos_inventory
-- [ ] tookan
-- [ ] weclapp
-- [ ] zaico
-- [ ] zoho-inventory
+- [x] booqable
+- [x] detrack
+- [x] dextre
+- [x] easyship
+- [x] kura-bugyo
+- [x] logiless
+- [x] maintainx
+- [x] next-engine
+- [x] openlogi
+- [x] order_desk
+- [x] pca-cloud-konkan
+- [x] sendcloud
+- [x] sendle
+- [x] sos_inventory
+- [x] tookan
+- [x] weclapp
+- [x] zaico
+- [x] zoho-inventory

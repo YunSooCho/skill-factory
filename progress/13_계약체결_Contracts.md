@@ -1,4 +1,4 @@
-# 13_계약체결_Contracts (11/18)
+# 13_계약체결_Contracts (18/18)
 
 - [x] adobe-sign
 - [x] certifier
@@ -11,10 +11,10 @@
 - [x] gmo-sign
 - [x] ninja-sign
 - [x] pandadoc
-- [ ] signable
-- [ ] signtime
-- [ ] wan-sign
-- [ ] xodo-sign
-- [ ] yousign
-- [ ] zapsign
-- [ ] zoho_sign
+- [x] signable
+- [x] signtime
+- [x] wan-sign
+- [x] xodo-sign
+- [x] yousign
+- [x] zapsign
+- [x] zoho_sign
