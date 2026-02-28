@@ -1,4 +1,4 @@
-# 10_채팅도구_ChatTools (18/24)
+# 10_채팅도구_ChatTools (24/24)
 
 - [x] chatluck
 - [x] chatwork
@@ -18,9 +18,9 @@
 - [x] talknote
 - [x] teams
 - [x] telegram
-- [ ] twist
-- [ ] twochat
-- [ ] wamm_app
-- [ ] whapi
-- [ ] whatsable-message
-- [ ] zoho_cliq
+- [x] twist
+- [x] twochat
+- [x] wamm_app
+- [x] whapi
+- [x] whatsable-message
+- [x] zoho_cliq
