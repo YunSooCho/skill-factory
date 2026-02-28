@@ -1,4 +1,4 @@
-# 05_프로젝트관리_ProjectManagement (56/58)
+# 05_프로젝트관리_ProjectManagement (58/58)
 
 - [x] asana-oauth
 - [x] avaza
@@ -17,7 +17,7 @@
 - [x] float
 - [x] freee-pm
 - [x] freelo
-- [ ] ganttpro
+- [x] ganttpro
 - [x] github
 - [x] gitlab
 - [x] harness
@@ -29,7 +29,7 @@
 - [x] kanban_tool
 - [x] kanbanzone
 - [x] keeping
-- [ ] launchDarkly
+- [x] launchDarkly
 - [x] linear
 - [x] meistertask
 - [x] moco

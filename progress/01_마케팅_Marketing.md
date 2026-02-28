@@ -1,6 +1,6 @@
-# 01_마케팅_Marketing (160/162)
+# 01_마케팅_Marketing (162/162)
 
-- [ ] Pinterest
+- [x] Pinterest
 - [x] abstract
 - [x] abyssale
 - [x] activecampaign

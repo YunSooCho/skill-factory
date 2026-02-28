@@ -1,4 +1,4 @@
-# 06_회계경리_Accounting (11/49)
+# 06_회계경리_Accounting (37/49)
 
 - [x] bakuraku-denshichobohozon
 - [x] bakuraku-kyotsukanri
@@ -11,32 +11,32 @@
 - [x] climbercloud
 - [x] dx-suite
 - [x] easybill
-- [ ] fakturoid
-- [ ] fatture_in_cloud
-- [ ] freee-iv
-- [ ] freee
-- [ ] idoklad
-- [ ] invoice-api
-- [ ] invoice_ninja
-- [ ] invox-issue
-- [ ] invox
-- [ ] kanjo-bugyo
-- [ ] klippa_docHorizon
-- [ ] lexoffice
-- [ ] makeleaps
-- [ ] misoca
-- [ ] moneybird
-- [ ] moneyforward-expenses
-- [ ] moneyforward-invoice-three
-- [ ] moneyforward-kessai
-- [ ] moneyforward-payable
-- [ ] moneyforward-plus
-- [ ] moneyforward
-- [ ] moneyforward_cloudinvoice
-- [ ] np-kakebarai
-- [ ] pca-cloud-accounting
-- [ ] pca_cloud_accounting_hyper
-- [ ] pennylane
+- [x] fakturoid
+- [x] fatture_in_cloud
+- [x] freee-iv
+- [x] freee
+- [x] idoklad
+- [x] invoice-api
+- [x] invoice_ninja
+- [x] invox-issue
+- [x] invox
+- [x] kanjo-bugyo
+- [x] klippa_docHorizon
+- [x] lexoffice
+- [x] makeleaps
+- [x] misoca
+- [x] moneybird
+- [x] moneyforward-expenses
+- [x] moneyforward-invoice-three
+- [x] moneyforward-kessai
+- [x] moneyforward-payable
+- [x] moneyforward-plus
+- [x] moneyforward
+- [x] moneyforward_cloudinvoice
+- [x] np-kakebarai
+- [x] pca-cloud-accounting
+- [x] pca_cloud_accounting_hyper
+- [x] pennylane
 - [ ] quaderno
 - [ ] quipu-token
 - [ ] rakuraku-meisai
