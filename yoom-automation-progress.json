@@ -19099,6 +19099,2684 @@
       "implementation_date": "2026-02-28",
       "rate_limiting": true,
       "error_handling": true
+    },
+    "mails_so.md": {
+      "service_name": "# Mails_so",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "Single Validation": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/mails_so/mails_so_client.py",
+          "method": "#Mails_soClient.single_validation"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T14:03:19.154311",
+      "analyzed_at": "2026-02-28T14:03:19.154311",
+      "required_tasks": [
+        {
+          "task": "# Mails_so API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/mails_so 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Mails_so API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "1개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "manychat.md": {
+      "service_name": "# Manychat",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "Update Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/manychat/manychat_client.py",
+          "method": "#ManychatClient.update_subscriber"
+        },
+        "Send Flow to Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/manychat/manychat_client.py",
+          "method": "#ManychatClient.send_flow_to_subscriber"
+        },
+        "Add Tag to Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/manychat/manychat_client.py",
+          "method": "#ManychatClient.add_tag_to_subscriber"
+        },
+        "Create Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/manychat/manychat_client.py",
+          "method": "#ManychatClient.create_subscriber"
+        },
+        "Set Custom Fields for Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/manychat/manychat_client.py",
+          "method": "#ManychatClient.set_custom_fields_for_subscriber"
+        },
+        "Search Subscriber by Full Name": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/manychat/manychat_client.py",
+          "method": "#ManychatClient.search_subscriber_by_full_name"
+        },
+        "Remove Tag from Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/manychat/manychat_client.py",
+          "method": "#ManychatClient.remove_tag_from_subscriber"
+        },
+        "Get Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/manychat/manychat_client.py",
+          "method": "#ManychatClient.get_subscriber"
+        }
+      },
+      "triggers": {
+        "Received External Request": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_received_external_request_trigger"
+        }
+      },
+      "implemented_at": "2026-02-28T14:03:19.154566",
+      "analyzed_at": "2026-02-28T14:03:19.154566",
+      "required_tasks": [
+        {
+          "task": "# Manychat API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/manychat 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Manychat API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "1개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "8개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "mastodon.md": {
+      "service_name": "# Mastodon",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "Delete Notification": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/mastodon/mastodon_client.py",
+          "method": "#MastodonClient.delete_notification"
+        },
+        "Delete Status": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/mastodon/mastodon_client.py",
+          "method": "#MastodonClient.delete_status"
+        },
+        "Get Multi Status": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/mastodon/mastodon_client.py",
+          "method": "#MastodonClient.get_multi_status"
+        },
+        "Upload File": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/mastodon/mastodon_client.py",
+          "method": "#MastodonClient.upload_file"
+        },
+        "Create Status": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/mastodon/mastodon_client.py",
+          "method": "#MastodonClient.create_status"
+        },
+        "Get Account": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/mastodon/mastodon_client.py",
+          "method": "#MastodonClient.get_account"
+        },
+        "Create Account": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/mastodon/mastodon_client.py",
+          "method": "#MastodonClient.create_account"
+        },
+        "Get Single Status": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/mastodon/mastodon_client.py",
+          "method": "#MastodonClient.get_single_status"
+        },
+        "Get All Notification": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/mastodon/mastodon_client.py",
+          "method": "#MastodonClient.get_all_notification"
+        },
+        "Update Status": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/mastodon/mastodon_client.py",
+          "method": "#MastodonClient.update_status"
+        },
+        "Account Search": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/mastodon/mastodon_client.py",
+          "method": "#MastodonClient.account_search"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T14:03:19.154794",
+      "analyzed_at": "2026-02-28T14:03:19.154794",
+      "required_tasks": [
+        {
+          "task": "# Mastodon API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/mastodon 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Mastodon API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "11개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "mautic.md": {
+      "service_name": "# Mautic",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {},
+      "triggers": {
+        "New Page Hit": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_new_page_hit_trigger"
+        },
+        "New Form Entry": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_new_form_entry_trigger"
+        },
+        "Updated Contact": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_updated_contact_trigger"
+        },
+        "New Contact": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_new_contact_trigger"
+        },
+        "Email Opened": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_email_opened_trigger"
+        },
+        "Contact Points Changed": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_contact_points_changed_trigger"
+        }
+      },
+      "implemented_at": "2026-02-28T14:03:19.155001",
+      "analyzed_at": "2026-02-28T14:03:19.155001",
+      "required_tasks": [
+        {
+          "task": "# Mautic API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/mautic 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Mautic API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "6개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "0개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "mediasms.md": {
+      "service_name": "# Mediasms",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "SMSの送信をキャンセル": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/mediasms/mediasms_client.py",
+          "method": "#MediasmsClient.sms"
+        },
+        "SMSを送信（双方向）": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/mediasms/mediasms_client.py",
+          "method": "#MediasmsClient.sms"
+        },
+        "SMSを送信": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/mediasms/mediasms_client.py",
+          "method": "#MediasmsClient.sms"
+        },
+        "SMS送信結果を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/mediasms/mediasms_client.py",
+          "method": "#MediasmsClient.sms"
+        }
+      },
+      "triggers": {
+        "SMSを受信したら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_sms_trigger"
+        }
+      },
+      "implemented_at": "2026-02-28T14:03:19.155186",
+      "analyzed_at": "2026-02-28T14:03:19.155186",
+      "required_tasks": [
+        {
+          "task": "# Mediasms API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/mediasms 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Mediasms API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "1개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "4개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "medium.md": {
+      "service_name": "# Medium",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "Create Post in Publication": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/medium/medium_client.py",
+          "method": "#MediumClient.create_post_in_publication"
+        },
+        "Get Contributors List": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/medium/medium_client.py",
+          "method": "#MediumClient.get_contributors_list"
+        },
+        "Get User Details": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/medium/medium_client.py",
+          "method": "#MediumClient.get_user_details"
+        },
+        "Get User Publications": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/medium/medium_client.py",
+          "method": "#MediumClient.get_user_publications"
+        },
+        "Create Post": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/medium/medium_client.py",
+          "method": "#MediumClient.create_post"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T14:03:19.155375",
+      "analyzed_at": "2026-02-28T14:03:19.155375",
+      "required_tasks": [
+        {
+          "task": "# Medium API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/medium 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Medium API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "5개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "memberful.md": {
+      "service_name": "# Memberful",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "List Plans": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/memberful/memberful_client.py",
+          "method": "#MemberfulClient.list_plans"
+        },
+        "Update Member": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/memberful/memberful_client.py",
+          "method": "#MemberfulClient.update_member"
+        },
+        "List Order": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/memberful/memberful_client.py",
+          "method": "#MemberfulClient.list_order"
+        },
+        "Search Member by Email Address": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/memberful/memberful_client.py",
+          "method": "#MemberfulClient.search_member_by_email_address"
+        },
+        "List Members": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/memberful/memberful_client.py",
+          "method": "#MemberfulClient.list_members"
+        },
+        "Delete Subscription": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/memberful/memberful_client.py",
+          "method": "#MemberfulClient.delete_subscription"
+        },
+        "List Subscriptions": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/memberful/memberful_client.py",
+          "method": "#MemberfulClient.list_subscriptions"
+        },
+        "Create Subscription": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/memberful/memberful_client.py",
+          "method": "#MemberfulClient.create_subscription"
+        },
+        "Create Member": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/memberful/memberful_client.py",
+          "method": "#MemberfulClient.create_member"
+        }
+      },
+      "triggers": {
+        "New Member": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_new_member_trigger"
+        },
+        "Suspended Order": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_suspended_order_trigger"
+        },
+        "Purchased Order": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_purchased_order_trigger"
+        },
+        "Deactivated Subscription": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_deactivated_subscription_trigger"
+        },
+        "Deleted Subscription": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_deleted_subscription_trigger"
+        },
+        "Renewed Subscription": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_renewed_subscription_trigger"
+        },
+        "Completed Order": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_completed_order_trigger"
+        },
+        "Updated Member": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_updated_member_trigger"
+        },
+        "New Subscription": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_new_subscription_trigger"
+        },
+        "Deleted Member": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_deleted_member_trigger"
+        },
+        "Activated Subscription": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_activated_subscription_trigger"
+        },
+        "Updated Subscription": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_updated_subscription_trigger"
+        },
+        "Refunded Order": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_refunded_order_trigger"
+        }
+      },
+      "implemented_at": "2026-02-28T14:03:19.155635",
+      "analyzed_at": "2026-02-28T14:03:19.155635",
+      "required_tasks": [
+        {
+          "task": "# Memberful API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/memberful 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Memberful API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "13개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "9개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "memberspot_io.md": {
+      "service_name": "# Memberspot_io",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "Delete User": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/memberspot_io/memberspot_io_client.py",
+          "method": "#Memberspot_ioClient.delete_user"
+        },
+        "Grant User Offer": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/memberspot_io/memberspot_io_client.py",
+          "method": "#Memberspot_ioClient.grant_user_offer"
+        },
+        "Search Users": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/memberspot_io/memberspot_io_client.py",
+          "method": "#Memberspot_ioClient.search_users"
+        },
+        "Get User": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/memberspot_io/memberspot_io_client.py",
+          "method": "#Memberspot_ioClient.get_user"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T14:03:19.155843",
+      "analyzed_at": "2026-02-28T14:03:19.155843",
+      "required_tasks": [
+        {
+          "task": "# Memberspot_io API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/memberspot_io 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Memberspot_io API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "4개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "memberstack.md": {
+      "service_name": "# Memberstack",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "Delete a member": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/memberstack/memberstack_client.py",
+          "method": "#MemberstackClient.delete_a_member"
+        },
+        "List all members": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/memberstack/memberstack_client.py",
+          "method": "#MemberstackClient.list_all_members"
+        },
+        "Verify Member&#39;s Token": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/memberstack/memberstack_client.py",
+          "method": "#MemberstackClient.verify_member_39_s_token"
+        },
+        "Retrieve a member": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/memberstack/memberstack_client.py",
+          "method": "#MemberstackClient.retrieve_a_member"
+        },
+        "Remove a free plan from a member": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/memberstack/memberstack_client.py",
+          "method": "#MemberstackClient.remove_a_free_plan_from_a_member"
+        },
+        "Add a free plan to a member": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/memberstack/memberstack_client.py",
+          "method": "#MemberstackClient.add_a_free_plan_to_a_member"
+        },
+        "Create a member": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/memberstack/memberstack_client.py",
+          "method": "#MemberstackClient.create_a_member"
+        },
+        "Update a member": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/memberstack/memberstack_client.py",
+          "method": "#MemberstackClient.update_a_member"
+        }
+      },
+      "triggers": {
+        "Member Updated": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_member_updated_trigger"
+        },
+        "New Member": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_new_member_trigger"
+        },
+        "Member&#39;s Plan Updated": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_member_39_s_plan_updated_trigger"
+        },
+        "Member&#39;s Plan Canceled": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_member_39_s_plan_canceled_trigger"
+        },
+        "Member Deleted": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_member_deleted_trigger"
+        },
+        "Member&#39;s Plan Added": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_member_39_s_plan_added_trigger"
+        }
+      },
+      "implemented_at": "2026-02-28T14:03:19.156065",
+      "analyzed_at": "2026-02-28T14:03:19.156065",
+      "required_tasks": [
+        {
+          "task": "# Memberstack API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/memberstack 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Memberstack API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "6개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "8개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "meta-cv.md": {
+      "service_name": "# Meta Cv",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "コンバージョンイベントを送信（非推奨）": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/meta_cv/meta_cv_client.py",
+          "method": "#MetaCvClient."
+        },
+        "コンバージョンイベントを送信": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/meta_cv/meta_cv_client.py",
+          "method": "#MetaCvClient."
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T14:03:19.156283",
+      "analyzed_at": "2026-02-28T14:03:19.156283",
+      "required_tasks": [
+        {
+          "task": "# Meta Cv API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/meta-cv 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Meta Cv API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "2개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "mitto_sms.md": {
+      "service_name": "# Mitto_sms",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "Track Conversions": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/mitto_sms/mitto_sms_client.py",
+          "method": "#Mitto_smsClient.track_conversions"
+        },
+        "Send SMS": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/mitto_sms/mitto_sms_client.py",
+          "method": "#Mitto_smsClient.send_sms"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T14:03:19.156462",
+      "analyzed_at": "2026-02-28T14:03:19.156462",
+      "required_tasks": [
+        {
+          "task": "# Mitto_sms API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/mitto_sms 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Mitto_sms API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "2개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "mixpanel.md": {
+      "service_name": "# Mixpanel",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "Create or Update Profile": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/mixpanel/mixpanel_client.py",
+          "method": "#MixpanelClient.create_or_update_profile"
+        },
+        "Delete Property": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/mixpanel/mixpanel_client.py",
+          "method": "#MixpanelClient.delete_property"
+        },
+        "Delete Profile": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/mixpanel/mixpanel_client.py",
+          "method": "#MixpanelClient.delete_profile"
+        },
+        "Track Event": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/mixpanel/mixpanel_client.py",
+          "method": "#MixpanelClient.track_event"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T14:03:19.156634",
+      "analyzed_at": "2026-02-28T14:03:19.156634",
+      "required_tasks": [
+        {
+          "task": "# Mixpanel API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/mixpanel 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Mixpanel API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "4개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "moosend.md": {
+      "service_name": "# Moosend",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "Get Subscriber Lists": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/moosend/moosend_client.py",
+          "method": "#MoosendClient.get_subscriber_lists"
+        },
+        "Get Mailing List": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/moosend/moosend_client.py",
+          "method": "#MoosendClient.get_mailing_list"
+        },
+        "Unsubscribe Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/moosend/moosend_client.py",
+          "method": "#MoosendClient.unsubscribe_subscriber"
+        },
+        "Get Mailing Lists": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/moosend/moosend_client.py",
+          "method": "#MoosendClient.get_mailing_lists"
+        },
+        "Add Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/moosend/moosend_client.py",
+          "method": "#MoosendClient.add_subscriber"
+        },
+        "Get Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/moosend/moosend_client.py",
+          "method": "#MoosendClient.get_subscriber"
+        }
+      },
+      "triggers": {
+        "Webhook Received": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_webhook_received_trigger"
+        }
+      },
+      "implemented_at": "2026-02-28T14:03:19.156829",
+      "analyzed_at": "2026-02-28T14:03:19.156829",
+      "required_tasks": [
+        {
+          "task": "# Moosend API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/moosend 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Moosend API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "1개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "6개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "neverbounce.md": {
+      "service_name": "# Neverbounce",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "Verify Email Address": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/neverbounce/neverbounce_client.py",
+          "method": "#NeverbounceClient.verify_email_address"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T14:03:19.157023",
+      "analyzed_at": "2026-02-28T14:03:19.157023",
+      "required_tasks": [
+        {
+          "task": "# Neverbounce API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/neverbounce 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Neverbounce API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "1개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "numverify.md": {
+      "service_name": "# Numverify",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "Phone Number Validation": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/numverify/numverify_client.py",
+          "method": "#NumverifyClient.phone_number_validation"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T14:03:19.157188",
+      "analyzed_at": "2026-02-28T14:03:19.157188",
+      "required_tasks": [
+        {
+          "task": "# Numverify API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/numverify 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Numverify API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "1개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "omnisend.md": {
+      "service_name": "# Omnisend",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "Create Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/omnisend/omnisend_client.py",
+          "method": "#OmnisendClient.create_contact"
+        },
+        "Create Product Category": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/omnisend/omnisend_client.py",
+          "method": "#OmnisendClient.create_product_category"
+        },
+        "Create Product": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/omnisend/omnisend_client.py",
+          "method": "#OmnisendClient.create_product"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/omnisend/omnisend_client.py",
+          "method": "#OmnisendClient.update_contact"
+        },
+        "Seach Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/omnisend/omnisend_client.py",
+          "method": "#OmnisendClient.seach_contact"
+        },
+        "Update Product": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/omnisend/omnisend_client.py",
+          "method": "#OmnisendClient.update_product"
+        },
+        "List Categories": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/omnisend/omnisend_client.py",
+          "method": "#OmnisendClient.list_categories"
+        },
+        "Send Event": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/omnisend/omnisend_client.py",
+          "method": "#OmnisendClient.send_event"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/omnisend/omnisend_client.py",
+          "method": "#OmnisendClient.get_contact"
+        },
+        "Get Product": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/omnisend/omnisend_client.py",
+          "method": "#OmnisendClient.get_product"
+        },
+        "Delete Product": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/omnisend/omnisend_client.py",
+          "method": "#OmnisendClient.delete_product"
+        },
+        "List Products": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/omnisend/omnisend_client.py",
+          "method": "#OmnisendClient.list_products"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T14:03:19.157375",
+      "analyzed_at": "2026-02-28T14:03:19.157375",
+      "required_tasks": [
+        {
+          "task": "# Omnisend API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/omnisend 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Omnisend API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "12개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "one-signal.md": {
+      "service_name": "# One Signal",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "Delete Subscription": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/one_signal/one_signal_client.py",
+          "method": "#OneSignalClient.delete_subscription"
+        },
+        "Cancel Message": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/one_signal/one_signal_client.py",
+          "method": "#OneSignalClient.cancel_message"
+        },
+        "Create User": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/one_signal/one_signal_client.py",
+          "method": "#OneSignalClient.create_user"
+        },
+        "Add Subscription": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/one_signal/one_signal_client.py",
+          "method": "#OneSignalClient.add_subscription"
+        },
+        "Update Subscription": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/one_signal/one_signal_client.py",
+          "method": "#OneSignalClient.update_subscription"
+        },
+        "Search Messages": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/one_signal/one_signal_client.py",
+          "method": "#OneSignalClient.search_messages"
+        },
+        "Get Message": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/one_signal/one_signal_client.py",
+          "method": "#OneSignalClient.get_message"
+        },
+        "Update User": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/one_signal/one_signal_client.py",
+          "method": "#OneSignalClient.update_user"
+        },
+        "Get User": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/one_signal/one_signal_client.py",
+          "method": "#OneSignalClient.get_user"
+        }
+      },
+      "triggers": {
+        "New Message": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_new_message_trigger"
+        }
+      },
+      "implemented_at": "2026-02-28T14:03:19.157590",
+      "analyzed_at": "2026-02-28T14:03:19.157590",
+      "required_tasks": [
+        {
+          "task": "# One Signal API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/one-signal 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# One Signal API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "1개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "9개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "oopspam_anti_spam.md": {
+      "service_name": "# Oopspam_anti_spam",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "Check Domain Reputation": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/oopspam_anti_spam/oopspam_anti_spam_client.py",
+          "method": "#Oopspam_anti_spamClient.check_domain_reputation"
+        },
+        "Spam Detection": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/oopspam_anti_spam/oopspam_anti_spam_client.py",
+          "method": "#Oopspam_anti_spamClient.spam_detection"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T14:03:19.157788",
+      "analyzed_at": "2026-02-28T14:03:19.157788",
+      "required_tasks": [
+        {
+          "task": "# Oopspam_anti_spam API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/oopspam_anti_spam 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Oopspam_anti_spam API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "2개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "people_data_labs.md": {
+      "service_name": "# People_data_labs",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "Enrich Person": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/people_data_labs/people_data_labs_client.py",
+          "method": "#People_data_labsClient.enrich_person"
+        },
+        "Enrich Company": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/people_data_labs/people_data_labs_client.py",
+          "method": "#People_data_labsClient.enrich_company"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T14:03:19.157949",
+      "analyzed_at": "2026-02-28T14:03:19.157949",
+      "required_tasks": [
+        {
+          "task": "# People_data_labs API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/people_data_labs 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# People_data_labs API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "2개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "picsart.md": {
+      "service_name": "# Picsart",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "Ultra Upscale": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/picsart/picsart_client.py",
+          "method": "#PicsartClient.ultra_upscale"
+        },
+        "Download Image File": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/picsart/picsart_client.py",
+          "method": "#PicsartClient.download_image_file"
+        },
+        "Create Image": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/picsart/picsart_client.py",
+          "method": "#PicsartClient.create_image"
+        },
+        "Inpaint Image": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/picsart/picsart_client.py",
+          "method": "#PicsartClient.inpaint_image"
+        },
+        "Expand Image": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/picsart/picsart_client.py",
+          "method": "#PicsartClient.expand_image"
+        },
+        "Create Sticker": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/picsart/picsart_client.py",
+          "method": "#PicsartClient.create_sticker"
+        },
+        "Face Enhancement": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/picsart/picsart_client.py",
+          "method": "#PicsartClient.face_enhancement"
+        },
+        "Get Image": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/picsart/picsart_client.py",
+          "method": "#PicsartClient.get_image"
+        },
+        "Remove &amp; Change Background": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/picsart/picsart_client.py",
+          "method": "#PicsartClient.remove_amp_change_background"
+        },
+        "Get Sticker": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/picsart/picsart_client.py",
+          "method": "#PicsartClient.get_sticker"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T14:03:19.158149",
+      "analyzed_at": "2026-02-28T14:03:19.158149",
+      "required_tasks": [
+        {
+          "task": "# Picsart API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/picsart 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Picsart API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "10개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "placid.md": {
+      "service_name": "# Placid",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "メディアをアップロード": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/placid/placid_client.py",
+          "method": "#PlacidClient."
+        },
+        "ビデオの詳細を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/placid/placid_client.py",
+          "method": "#PlacidClient."
+        },
+        "テンプレートからPDFを作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/placid/placid_client.py",
+          "method": "#PlacidClient.pdf"
+        },
+        "テンプレートから画像を作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/placid/placid_client.py",
+          "method": "#PlacidClient."
+        },
+        "ファイルをダウンロード": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/placid/placid_client.py",
+          "method": "#PlacidClient."
+        },
+        "テンプレートからビデオを作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/placid/placid_client.py",
+          "method": "#PlacidClient."
+        },
+        "画像の詳細を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/placid/placid_client.py",
+          "method": "#PlacidClient."
+        },
+        "PDFの詳細を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/placid/placid_client.py",
+          "method": "#PlacidClient.pdf"
+        }
+      },
+      "triggers": {
+        "画像が作成されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle__trigger"
+        },
+        "ビデオが作成されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle__trigger"
+        },
+        "PDFが作成されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_pdf_trigger"
+        }
+      },
+      "implemented_at": "2026-02-28T14:03:19.158386",
+      "analyzed_at": "2026-02-28T14:03:19.158386",
+      "required_tasks": [
+        {
+          "task": "# Placid API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/placid 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Placid API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "3개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "8개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "postalytics.md": {
+      "service_name": "# Postalytics",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "List Contact Lists": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/postalytics/postalytics_client.py",
+          "method": "#PostalyticsClient.list_contact_lists"
+        },
+        "Create Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/postalytics/postalytics_client.py",
+          "method": "#PostalyticsClient.create_contact"
+        },
+        "List Contacts": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/postalytics/postalytics_client.py",
+          "method": "#PostalyticsClient.list_contacts"
+        },
+        "Create Campaign": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/postalytics/postalytics_client.py",
+          "method": "#PostalyticsClient.create_campaign"
+        },
+        "Send Mail": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/postalytics/postalytics_client.py",
+          "method": "#PostalyticsClient.send_mail"
+        },
+        "List Drip Campaigns": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/postalytics/postalytics_client.py",
+          "method": "#PostalyticsClient.list_drip_campaigns"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/postalytics/postalytics_client.py",
+          "method": "#PostalyticsClient.get_contact"
+        },
+        "Delete Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/postalytics/postalytics_client.py",
+          "method": "#PostalyticsClient.delete_contact"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T14:03:19.158581",
+      "analyzed_at": "2026-02-28T14:03:19.158581",
+      "required_tasks": [
+        {
+          "task": "# Postalytics API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/postalytics 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Postalytics API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "8개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "posthog.md": {
+      "service_name": "# Posthog",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "Create Query": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/posthog/posthog_client.py",
+          "method": "#PosthogClient.create_query"
+        },
+        "Capture Event": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/posthog/posthog_client.py",
+          "method": "#PosthogClient.capture_event"
+        },
+        "Search Events": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/posthog/posthog_client.py",
+          "method": "#PosthogClient.search_events"
+        },
+        "Check Query Status": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/posthog/posthog_client.py",
+          "method": "#PosthogClient.check_query_status"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T14:03:19.158782",
+      "analyzed_at": "2026-02-28T14:03:19.158782",
+      "required_tasks": [
+        {
+          "task": "# Posthog API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/posthog 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Posthog API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "4개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "postmark.md": {
+      "service_name": "# Postmark",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "Get Bounce Counts": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/postmark/postmark_client.py",
+          "method": "#PostmarkClient.get_bounce_counts"
+        },
+        "Send Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/postmark/postmark_client.py",
+          "method": "#PostmarkClient.send_email"
+        },
+        "Get Unique Click Counts": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/postmark/postmark_client.py",
+          "method": "#PostmarkClient.get_unique_click_counts"
+        },
+        "Get Outbound Send Stats": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/postmark/postmark_client.py",
+          "method": "#PostmarkClient.get_outbound_send_stats"
+        },
+        "Get Email Open Counts": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/postmark/postmark_client.py",
+          "method": "#PostmarkClient.get_email_open_counts"
+        },
+        "Send Email Using Template": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/postmark/postmark_client.py",
+          "method": "#PostmarkClient.send_email_using_template"
+        },
+        "Search Inbound Messages": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/postmark/postmark_client.py",
+          "method": "#PostmarkClient.search_inbound_messages"
+        },
+        "Search Outbound Messages": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/postmark/postmark_client.py",
+          "method": "#PostmarkClient.search_outbound_messages"
+        },
+        "Search Outbound Message Details": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/postmark/postmark_client.py",
+          "method": "#PostmarkClient.search_outbound_message_details"
+        },
+        "Search Inbound Message Details": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/postmark/postmark_client.py",
+          "method": "#PostmarkClient.search_inbound_message_details"
+        }
+      },
+      "triggers": {
+        "New Email Click": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_new_email_click_trigger"
+        },
+        "New Bounce": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_new_bounce_trigger"
+        },
+        "New Inbound Message": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_new_inbound_message_trigger"
+        },
+        "New Delivered Email": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_new_delivered_email_trigger"
+        },
+        "New Email Open": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_new_email_open_trigger"
+        }
+      },
+      "implemented_at": "2026-02-28T14:03:19.158997",
+      "analyzed_at": "2026-02-28T14:03:19.158997",
+      "required_tasks": [
+        {
+          "task": "# Postmark API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/postmark 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Postmark API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "5개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "10개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "quickemailverification.md": {
+      "service_name": "# Quickemailverification",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "Verify Email Address": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/quickemailverification/quickemailverification_client.py",
+          "method": "#QuickemailverificationClient.verify_email_address"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T14:03:19.159193",
+      "analyzed_at": "2026-02-28T14:03:19.159193",
+      "required_tasks": [
+        {
+          "task": "# Quickemailverification API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/quickemailverification 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Quickemailverification API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "1개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "rd-station.md": {
+      "service_name": "# Rd Station",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "Create Default Conversion Event": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/rd_station/rd_station_client.py",
+          "method": "#RdStationClient.create_default_conversion_event"
+        },
+        "Update Contact Information": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/rd_station/rd_station_client.py",
+          "method": "#RdStationClient.update_contact_information"
+        },
+        "Create Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/rd_station/rd_station_client.py",
+          "method": "#RdStationClient.create_contact"
+        },
+        "Add Tag to Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/rd_station/rd_station_client.py",
+          "method": "#RdStationClient.add_tag_to_lead"
+        },
+        "Create Closing Event": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/rd_station/rd_station_client.py",
+          "method": "#RdStationClient.create_closing_event"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/rd_station/rd_station_client.py",
+          "method": "#RdStationClient.update_contact"
+        },
+        "Create Call Event": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/rd_station/rd_station_client.py",
+          "method": "#RdStationClient.create_call_event"
+        },
+        "Create Abandonment Event": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/rd_station/rd_station_client.py",
+          "method": "#RdStationClient.create_abandonment_event"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/rd_station/rd_station_client.py",
+          "method": "#RdStationClient.get_contact"
+        },
+        "Delete Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/rd_station/rd_station_client.py",
+          "method": "#RdStationClient.delete_contact"
+        },
+        "Get Contact Information": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/rd_station/rd_station_client.py",
+          "method": "#RdStationClient.get_contact_information"
+        },
+        "Create Chat Starter Event": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/rd_station/rd_station_client.py",
+          "method": "#RdStationClient.create_chat_starter_event"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T14:03:19.159384",
+      "analyzed_at": "2026-02-28T14:03:19.159384",
+      "required_tasks": [
+        {
+          "task": "# Rd Station API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/rd-station 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Rd Station API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "12개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "rebrandly.md": {
+      "service_name": "# Rebrandly",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "Get Link": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/rebrandly/rebrandly_client.py",
+          "method": "#RebrandlyClient.get_link"
+        },
+        "Update Link": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/rebrandly/rebrandly_client.py",
+          "method": "#RebrandlyClient.update_link"
+        },
+        "Search Links": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/rebrandly/rebrandly_client.py",
+          "method": "#RebrandlyClient.search_links"
+        },
+        "Delete Tag from Link": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/rebrandly/rebrandly_client.py",
+          "method": "#RebrandlyClient.delete_tag_from_link"
+        },
+        "Create Tag": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/rebrandly/rebrandly_client.py",
+          "method": "#RebrandlyClient.create_tag"
+        },
+        "Create Link": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/rebrandly/rebrandly_client.py",
+          "method": "#RebrandlyClient.create_link"
+        },
+        "Delete Link": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/rebrandly/rebrandly_client.py",
+          "method": "#RebrandlyClient.delete_link"
+        },
+        "Add Tag to Link": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/rebrandly/rebrandly_client.py",
+          "method": "#RebrandlyClient.add_tag_to_link"
+        }
+      },
+      "triggers": {
+        "New Link": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_new_link_trigger"
+        }
+      },
+      "implemented_at": "2026-02-28T14:03:19.159585",
+      "analyzed_at": "2026-02-28T14:03:19.159585",
+      "required_tasks": [
+        {
+          "task": "# Rebrandly API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/rebrandly 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Rebrandly API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "1개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "8개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "reddit.md": {
+      "service_name": "# Reddit",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "サブレディットの新着一覧を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/reddit/reddit_client.py",
+          "method": "#RedditClient."
+        },
+        "サブレディットに新規投稿を作成": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/reddit/reddit_client.py",
+          "method": "#RedditClient."
+        },
+        "レディット内を検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/reddit/reddit_client.py",
+          "method": "#RedditClient."
+        },
+        "投稿を検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/reddit/reddit_client.py",
+          "method": "#RedditClient."
+        },
+        "コメントの投稿": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/reddit/reddit_client.py",
+          "method": "#RedditClient."
+        },
+        "ユーザーの投稿一覧を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/reddit/reddit_client.py",
+          "method": "#RedditClient."
+        },
+        "サブレディットの投稿一覧を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/reddit/reddit_client.py",
+          "method": "#RedditClient."
+        },
+        "ユーザーの公開情報を取得": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/reddit/reddit_client.py",
+          "method": "#RedditClient."
+        },
+        "サブレディットを検索": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/reddit/reddit_client.py",
+          "method": "#RedditClient."
+        }
+      },
+      "triggers": {
+        "コメントが追加されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle__trigger"
+        },
+        "キーワードにマッチする投稿が行われたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle__trigger"
+        },
+        "サブレディットで投稿が作成されたら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle__trigger"
+        },
+        "特定のユーザーが投稿したら": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle__trigger"
+        }
+      },
+      "implemented_at": "2026-02-28T14:03:19.159825",
+      "analyzed_at": "2026-02-28T14:03:19.159825",
+      "required_tasks": [
+        {
+          "task": "# Reddit API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/reddit 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Reddit API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "4개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "9개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "renderform.md": {
+      "service_name": "# Renderform",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "Get Image File": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/renderform/renderform_client.py",
+          "method": "#RenderformClient.get_image_file"
+        },
+        "Take Screenshot": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/renderform/renderform_client.py",
+          "method": "#RenderformClient.take_screenshot"
+        },
+        "Render Image": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/renderform/renderform_client.py",
+          "method": "#RenderformClient.render_image"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T14:03:19.160008",
+      "analyzed_at": "2026-02-28T14:03:19.160008",
+      "required_tasks": [
+        {
+          "task": "# Renderform API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/renderform 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Renderform API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "3개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
+    },
+    "retently.md": {
+      "service_name": "# Retently",
+      "category": "01_마케팅_Marketing",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "Standard API authentication",
+      "api_actions": {
+        "Create or Update Customer": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/retently/retently_client.py",
+          "method": "#RetentlyClient.create_or_update_customer"
+        },
+        "Add Feedback Topics": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/retently/retently_client.py",
+          "method": "#RetentlyClient.add_feedback_topics"
+        },
+        "Add Feedback Tags": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/retently/retently_client.py",
+          "method": "#RetentlyClient.add_feedback_tags"
+        },
+        "Search Customer": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/retently/retently_client.py",
+          "method": "#RetentlyClient.search_customer"
+        },
+        "Unsubscribe Customers": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/retently/retently_client.py",
+          "method": "#RetentlyClient.unsubscribe_customers"
+        },
+        "Send Transactional Survey": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/retently/retently_client.py",
+          "method": "#RetentlyClient.send_transactional_survey"
+        },
+        "Get Customer": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "code_file": "repo/retently/retently_client.py",
+          "method": "#RetentlyClient.get_customer"
+        }
+      },
+      "triggers": {
+        "New Survey Response": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "handle_new_survey_response_trigger"
+        }
+      },
+      "implemented_at": "2026-02-28T14:03:19.160186",
+      "analyzed_at": "2026-02-28T14:03:19.160186",
+      "required_tasks": [
+        {
+          "task": "# Retently API 문서 검토",
+          "priority": "high",
+          "description": "https://lp.yoom.fun/apps/retently 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "# Retently API 키 획득",
+          "priority": "high",
+          "description": "계정 설정에서 API 키 획득",
+          "status": "pending"
+        },
+        {
+          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "priority": "medium",
+          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "status": "pending"
+        },
+        {
+          "task": "1개 트리거용 Webhook 엔드포인트 설정",
+          "priority": "medium",
+          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "status": "pending"
+        },
+        {
+          "task": "7개 API 액션 단위 테스트 작성",
+          "priority": "low",
+          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "status": "pending"
+        }
+      ]
     }
   },
   "last_updated": "2026-02-28 10:59:11",
