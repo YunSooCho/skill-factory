@@ -1,5 +1,5 @@
 {
-  "currentCategory": "Batch 33 Completed - 30 Yoom Services",
+  "currentCategory": "Batch 34 Completed - 30 Yoom Services",
   "completed": {
     "abstract.md": {
       "service_name": "Abstract",
@@ -16014,6 +16014,1265 @@
         }
       ],
       "analyzed_at": "2026-02-28T15:35:35.590080"
+    },
+    "smartsheet.md": {
+      "service_name": "Smartsheet",
+      "category": "03_업무일반_General",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "share_sheet": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/smartsheet/smartsheet_client.py",
+          "method": "smartsheet_client.share_sheet()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "update_row": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/smartsheet/smartsheet_client.py",
+          "method": "smartsheet_client.update_row()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "search_rows": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/smartsheet/smartsheet_client.py",
+          "method": "smartsheet_client.search_rows()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_row": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/smartsheet/smartsheet_client.py",
+          "method": "smartsheet_client.get_row()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "add_user": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/smartsheet/smartsheet_client.py",
+          "method": "smartsheet_client.add_user()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_discussion": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/smartsheet/smartsheet_client.py",
+          "method": "smartsheet_client.get_discussion()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "add_comment": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/smartsheet/smartsheet_client.py",
+          "method": "smartsheet_client.add_comment()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "list_discussions": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/smartsheet/smartsheet_client.py",
+          "method": "smartsheet_client.list_discussions()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "add_row": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/smartsheet/smartsheet_client.py",
+          "method": "smartsheet_client.add_row()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "create_sheet": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/smartsheet/smartsheet_client.py",
+          "method": "smartsheet_client.create_sheet()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "delete_row": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/smartsheet/smartsheet_client.py",
+          "method": "smartsheet_client.delete_row()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "create_folder": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/smartsheet/smartsheet_client.py",
+          "method": "smartsheet_client.create_folder()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "attach_file_to_sheet": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/smartsheet/smartsheet_client.py",
+          "method": "smartsheet_client.attach_file_to_sheet()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "attach_file_to_row": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/smartsheet/smartsheet_client.py",
+          "method": "smartsheet_client.attach_file_to_row()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "techulus_push.md": {
+      "service_name": "Techulus Push",
+      "category": "03_업무일반_General",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "send_push_notification": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/techulus-push/techulus-push_client.py",
+          "method": "techulus_push_client.send_push_notification()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "send_bulk_notifications": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/techulus-push/techulus-push_client.py",
+          "method": "techulus_push_client.send_bulk_notifications()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "trint.md": {
+      "service_name": "Trint",
+      "category": "03_업무일반_General",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "create_transcription": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/trint/trint_client.py",
+          "method": "trint_client.create_transcription()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_transcription": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/trint/trint_client.py",
+          "method": "trint_client.get_transcription()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "list_transcriptions": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/trint/trint_client.py",
+          "method": "trint_client.list_transcriptions()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "delete_transcription": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/trint/trint_client.py",
+          "method": "trint_client.delete_transcription()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "uniqode.md": {
+      "service_name": "Uniqode",
+      "category": "03_업무일반_General",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "create_qr": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/uniqode/uniqode_client.py",
+          "method": "uniqode_client.create_qr()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_qr": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/uniqode/uniqode_client.py",
+          "method": "uniqode_client.get_qr()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "update_qr": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/uniqode/uniqode_client.py",
+          "method": "uniqode_client.update_qr()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "delete_qr": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/uniqode/uniqode_client.py",
+          "method": "uniqode_client.delete_qr()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "list_qrs": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/uniqode/uniqode_client.py",
+          "method": "uniqode_client.list_qrs()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "viewdns.md": {
+      "service_name": "ViewDNS",
+      "category": "03_업무일반_General",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "dns_lookup": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/viewdns/viewdns_client.py",
+          "method": "viewdns_client.dns_lookup()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "whois_lookup": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/viewdns/viewdns_client.py",
+          "method": "viewdns_client.whois_lookup()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "reverse_ip": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/viewdns/viewdns_client.py",
+          "method": "viewdns_client.reverse_ip()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "dns_records": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/viewdns/viewdns_client.py",
+          "method": "viewdns_client.dns_records()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "subdomain_scan": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/viewdns/viewdns_client.py",
+          "method": "viewdns_client.subdomain_scan()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "whereby.md": {
+      "service_name": "Whereby",
+      "category": "03_업무일반_General",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "create_meeting": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/whereby/whereby_client.py",
+          "method": "whereby_client.create_meeting()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_meeting": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/whereby/whereby_client.py",
+          "method": "whereby_client.get_meeting()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "update_meeting": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/whereby/whereby_client.py",
+          "method": "whereby_client.update_meeting()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "delete_meeting": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/whereby/whereby_client.py",
+          "method": "whereby_client.delete_meeting()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "list_meetings": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/whereby/whereby_client.py",
+          "method": "whereby_client.list_meetings()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "workplace.md": {
+      "service_name": "Workplace",
+      "category": "03_업무일반_General",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "create_post": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/workplace/workplace_client.py",
+          "method": "workplace_client.create_post()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_post": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/workplace/workplace_client.py",
+          "method": "workplace_client.get_post()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "update_post": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/workplace/workplace_client.py",
+          "method": "workplace_client.update_post()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "delete_post": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/workplace/workplace_client.py",
+          "method": "workplace_client.delete_post()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "list_posts": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/workplace/workplace_client.py",
+          "method": "workplace_client.list_posts()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "xai.md": {
+      "service_name": "xAI",
+      "category": "03_업무일반_General",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "chat_completion": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/xai/xai_client.py",
+          "method": "xai_client.chat_completion()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "list_models": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/xai/xai_client.py",
+          "method": "xai_client.list_models()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_model": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/xai/xai_client.py",
+          "method": "xai_client.get_model()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "zoho-mail.md": {
+      "service_name": "Zoho Mail",
+      "category": "03_업무일반_General",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "send_email": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/zoho-mail/zoho-mail_client.py",
+          "method": "zoho_mail_client.send_email()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_email": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/zoho-mail/zoho-mail_client.py",
+          "method": "zoho_mail_client.get_email()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "list_emails": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/zoho-mail/zoho-mail_client.py",
+          "method": "zoho_mail_client.list_emails()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "delete_email": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/zoho-mail/zoho-mail_client.py",
+          "method": "zoho_mail_client.delete_email()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "mark_as_read": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/zoho-mail/zoho-mail_client.py",
+          "method": "zoho_mail_client.mark_as_read()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "zoho_sheet.md": {
+      "service_name": "Zoho Sheet",
+      "category": "03_업무일반_General",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "create_sheet": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/zoho-sheet/zoho-sheet_client.py",
+          "method": "zoho_sheet_client.create_sheet()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_sheet": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/zoho-sheet/zoho-sheet_client.py",
+          "method": "zoho_sheet_client.get_sheet()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "update_cell": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/zoho-sheet/zoho-sheet_client.py",
+          "method": "zoho_sheet_client.update_cell()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "add_row": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/zoho-sheet/zoho-sheet_client.py",
+          "method": "zoho_sheet_client.add_row()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_data": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/zoho-sheet/zoho-sheet_client.py",
+          "method": "zoho_sheet_client.get_data()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "zoho_writer.md": {
+      "service_name": "Zoho Writer",
+      "category": "03_업무일반_General",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "create_document": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/zoho-writer/zoho-writer_client.py",
+          "method": "zoho_writer_client.create_document()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_document": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/zoho-writer/zoho-writer_client.py",
+          "method": "zoho_writer_client.get_document()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "update_document": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/zoho-writer/zoho-writer_client.py",
+          "method": "zoho_writer_client.update_document()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "export_document": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/zoho-writer/zoho-writer_client.py",
+          "method": "zoho_writer_client.export_document()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "zoom.md": {
+      "service_name": "Zoom",
+      "category": "03_업무일반_General",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "create_meeting": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/zoom/zoom_client.py",
+          "method": "zoom_client.create_meeting()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_meeting": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/zoom/zoom_client.py",
+          "method": "zoom_client.get_meeting()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "update_meeting": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/zoom/zoom_client.py",
+          "method": "zoom_client.update_meeting()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "delete_meeting": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/zoom/zoom_client.py",
+          "method": "zoom_client.delete_meeting()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "list_meetings": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/zoom/zoom_client.py",
+          "method": "zoom_client.list_meetings()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_user": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/zoom/zoom_client.py",
+          "method": "zoom_client.get_user()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "airparser.md": {
+      "service_name": "Airparser",
+      "category": "04_오토메이션_Automation",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "parse_document": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/airparser/airparser_client.py",
+          "method": "airparser_client.parse_document()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_parser": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/airparser/airparser_client.py",
+          "method": "airparser_client.get_parser()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "list_parsers": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/airparser/airparser_client.py",
+          "method": "airparser_client.list_parsers()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "create_parser": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/airparser/airparser_client.py",
+          "method": "airparser_client.create_parser()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "apify.md": {
+      "service_name": "Apify",
+      "category": "04_오토메이션_Automation",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "run_actor": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/apify/apify_client.py",
+          "method": "apify_client.run_actor()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_actor": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/apify/apify_client.py",
+          "method": "apify_client.get_actor()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "list_actors": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/apify/apify_client.py",
+          "method": "apify_client.list_actors()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_run": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/apify/apify_client.py",
+          "method": "apify_client.get_run()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "list_runs": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/apify/apify_client.py",
+          "method": "apify_client.list_runs()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "apitemplate.md": {
+      "service_name": "APITemplate",
+      "category": "04_오토메이션_Automation",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "create_image": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/apitemplate/apitemplate_client.py",
+          "method": "apitemplate_client.create_image()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "create_pdf": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/apitemplate/apitemplate_client.py",
+          "method": "apitemplate_client.create_pdf()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "list_templates": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/apitemplate/apitemplate_client.py",
+          "method": "apitemplate_client.list_templates()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_template": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/apitemplate/apitemplate_client.py",
+          "method": "apitemplate_client.get_template()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "axiom.md": {
+      "service_name": "Axiom",
+      "category": "04_오토메이션_Automation",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "ingest_events": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/axiom/axiom_client.py",
+          "method": "axiom_client.ingest_events()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "query_events": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/axiom/axiom_client.py",
+          "method": "axiom_client.query_events()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "list_datasets": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/axiom/axiom_client.py",
+          "method": "axiom_client.list_datasets()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_dataset": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/axiom/axiom_client.py",
+          "method": "axiom_client.get_dataset()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "beLazy.md": {
+      "service_name": "BeLazy",
+      "category": "04_오토메이션_Automation",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "create_task": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/belazy/belazy_client.py",
+          "method": "belazy_client.create_task()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_task": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/belazy/belazy_client.py",
+          "method": "belazy_client.get_task()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "list_tasks": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/belazy/belazy_client.py",
+          "method": "belazy_client.list_tasks()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "update_task": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/belazy/belazy_client.py",
+          "method": "belazy_client.update_task()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "bland_ai.md": {
+      "service_name": "Bland AI",
+      "category": "04_오토메이션_Automation",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "create_call": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/bland-ai/bland-ai_client.py",
+          "method": "bland_ai_client.create_call()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_call": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/bland-ai/bland-ai_client.py",
+          "method": "bland_ai_client.get_call()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "list_calls": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/bland-ai/bland-ai_client.py",
+          "method": "bland_ai_client.list_calls()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "end_call": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/bland-ai/bland-ai_client.py",
+          "method": "bland_ai_client.end_call()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "analyze_call": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/bland-ai/bland-ai_client.py",
+          "method": "bland_ai_client.analyze_call()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "botpress.md": {
+      "service_name": "Botpress",
+      "category": "04_오토메이션_Automation",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "create_bot": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/botpress/botpress_client.py",
+          "method": "botpress_client.create_bot()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_bot": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/botpress/botpress_client.py",
+          "method": "botpress_client.get_bot()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "list_bots": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/botpress/botpress_client.py",
+          "method": "botpress_client.list_bots()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "send_message": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/botpress/botpress_client.py",
+          "method": "botpress_client.send_message()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_analytics": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/botpress/botpress_client.py",
+          "method": "botpress_client.get_analytics()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "botsonic.md": {
+      "service_name": "Botsonic",
+      "category": "04_오토메이션_Automation",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "create_chatbot": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/botsonic/botsonic_client.py",
+          "method": "botsonic_client.create_chatbot()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_chatbot": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/botsonic/botsonic_client.py",
+          "method": "botsonic_client.get_chatbot()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "train_chatbot": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/botsonic/botsonic_client.py",
+          "method": "botsonic_client.train_chatbot()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "chat": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/botsonic/botsonic_client.py",
+          "method": "botsonic_client.chat()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "browse-ai.md": {
+      "service_name": "Browse AI",
+      "category": "04_오토메이션_Automation",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "create_robot": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/browse-ai/browse-ai_client.py",
+          "method": "browse_ai_client.create_robot()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "run_robot": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/browse-ai/browse-ai_client.py",
+          "method": "browse_ai_client.run_robot()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_robot": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/browse-ai/browse-ai_client.py",
+          "method": "browse_ai_client.get_robot()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "list_robots": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/browse-ai/browse-ai_client.py",
+          "method": "browse_ai_client.list_robots()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_robot_data": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/browse-ai/browse-ai_client.py",
+          "method": "browse_ai_client.get_robot_data()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "carbone.md": {
+      "service_name": "Carbone",
+      "category": "04_오토메이션_Automation",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "render_template": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/carbone/carbone_client.py",
+          "method": "carbone_client.render_template()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_template": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/carbone/carbone_client.py",
+          "method": "carbone_client.get_template()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "delete_template": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/carbone/carbone_client.py",
+          "method": "carbone_client.delete_template()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "cdata-connect.md": {
+      "service_name": "CData Connect",
+      "category": "04_오토메이션_Automation",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "list_tables": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/cdata-connect/cdata-connect_client.py",
+          "method": "cdata_connect_client.list_tables()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "query_table": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/cdata-connect/cdata-connect_client.py",
+          "method": "cdata_connect_client.query_table()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "insert_row": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/cdata-connect/cdata-connect_client.py",
+          "method": "cdata_connect_client.insert_row()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "update_row": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/cdata-connect/cdata-connect_client.py",
+          "method": "cdata_connect_client.update_row()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "delete_row": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/cdata-connect/cdata-connect_client.py",
+          "method": "cdata_connect_client.delete_row()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "cloudbot.md": {
+      "service_name": "CloudBot",
+      "category": "04_오토메이션_Automation",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "deploy_bot": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/cloudbot/cloudbot_client.py",
+          "method": "cloudbot_client.deploy_bot()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_bot": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/cloudbot/cloudbot_client.py",
+          "method": "cloudbot_client.get_bot()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "list_bots": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/cloudbot/cloudbot_client.py",
+          "method": "cloudbot_client.list_bots()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "update_bot": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/cloudbot/cloudbot_client.py",
+          "method": "cloudbot_client.update_bot()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "cloudconvert.md": {
+      "service_name": "CloudConvert",
+      "category": "04_오토메이션_Automation",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "convert_file": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/cloudconvert/cloudconvert_client.py",
+          "method": "cloudconvert_client.convert_file()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "create_job": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/cloudconvert/cloudconvert_client.py",
+          "method": "cloudconvert_client.create_job()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_job": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/cloudconvert/cloudconvert_client.py",
+          "method": "cloudconvert_client.get_job()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "list_jobs": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/cloudconvert/cloudconvert_client.py",
+          "method": "cloudconvert_client.list_jobs()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "cloudmersive.md": {
+      "service_name": "Cloudmersive",
+      "category": "04_오토메이션_Automation",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "validate_email": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/cloudmersive/cloudmersive_client.py",
+          "method": "cloudmersive_client.validate_email()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "convert_document": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/cloudmersive/cloudmersive_client.py",
+          "method": "cloudmersive_client.convert_document()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "virus_scan": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/cloudmersive/cloudmersive_client.py",
+          "method": "cloudmersive_client.virus_scan()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "ocr_scan": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/cloudmersive/cloudmersive_client.py",
+          "method": "cloudmersive_client.ocr_scan()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "convertapi.md": {
+      "service_name": "ConvertAPI",
+      "category": "04_오토메이션_Automation",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "convert": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/convertapi/convertapi_client.py",
+          "method": "convertapi_client.convert()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_info": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/convertapi/convertapi_client.py",
+          "method": "convertapi_client.get_info()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "list_formats": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/convertapi/convertapi_client.py",
+          "method": "convertapi_client.list_formats()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "convertio.md": {
+      "service_name": "Convertio",
+      "category": "04_오토메이션_Automation",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "convert": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/convertio/convertio_client.py",
+          "method": "convertio_client.convert()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_status": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/convertio/convertio_client.py",
+          "method": "convertio_client.get_status()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_result": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/convertio/convertio_client.py",
+          "method": "convertio_client.get_result()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_usage": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/convertio/convertio_client.py",
+          "method": "convertio_client.get_usage()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "craftmypdf.md": {
+      "service_name": "CraftMyPDF",
+      "category": "04_오토메이션_Automation",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "create_pdf": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/craftmypdf/craftmypdf_client.py",
+          "method": "craftmypdf_client.create_pdf()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_pdf": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/craftmypdf/craftmypdf_client.py",
+          "method": "craftmypdf_client.get_pdf()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "list_templates": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/craftmypdf/craftmypdf_client.py",
+          "method": "craftmypdf_client.list_templates()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
+    },
+    "deepgram.md": {
+      "service_name": "Deepgram",
+      "category": "04_오토메이션_Automation",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "api_actions": {
+        "transcribe_audio": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/deepgram/deepgram_client.py",
+          "method": "deepgram_client.transcribe_audio()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "get_transcript": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/deepgram/deepgram_client.py",
+          "method": "deepgram_client.get_transcript()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "list_projects": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/deepgram/deepgram_client.py",
+          "method": "deepgram_client.list_projects()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        },
+        "create_project": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "github/skill-factory/repo/deepgram/deepgram_client.py",
+          "method": "deepgram_client.create_project()",
+          "implemented_at": "2026-02-28T07:03:37.000000"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T07:03:37.000000"
     }
   },
   "total_services": 749,
