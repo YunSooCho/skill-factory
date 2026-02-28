@@ -1,66 +1,66 @@
 {
-  "currentCategory": "02_세일스_Sales",
+  "currentCategory": "02_\uc138\uc77c\uc2a4_Sales",
   "completed": {
     "abstract.md": {
       "service_name": "Abstract",
-      "category": "マーケティング",
+      "category": "\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0",
       "integration_type": "api_key",
       "integration_confidence": "high",
-      "integration_reasoning": "AbstractAPI.com: 각 서비스별 개별 API 키 필요",
+      "integration_reasoning": "AbstractAPI.com: \uac01 \uc11c\ube44\uc2a4\ubcc4 \uac1c\ubcc4 API \ud0a4 \ud544\uc694",
       "api_actions": {
         "Live Exchange Rates": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/abstract/abstract_client.py",
           "method": "AbstractAPIClient.live_exchange_rates(base)"
         },
         "Convert Exchange Rates": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/abstract/abstract_client.py",
           "method": "AbstractAPIClient.convert_exchange_rates(amount, base, target)"
         },
         "Phone Number Validation": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/abstract/abstract_client.py",
           "method": "AbstractAPIClient.phone_number_validation(phone, country)"
         },
         "Get Current Time": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/abstract/abstract_client.py",
           "method": "AbstractAPIClient.get_current_time(location)"
         },
         "Convert Time": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/abstract/abstract_client.py",
           "method": "AbstractAPIClient.convert_time(base_location, base_date, target_location)"
         },
         "IP Geolocation Information": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/abstract/abstract_client.py",
           "method": "AbstractAPIClient.ip_geolocation(ip_address)"
         },
         "Email Validation": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/abstract/abstract_client.py",
           "method": "AbstractAPIClient.email_validation(email)"
         },
         "Country Holidays": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/abstract/abstract_client.py",
           "method": "AbstractAPIClient.get_country_holidays(country, year)"
         }
@@ -69,21 +69,21 @@
       "implemented_at": "2026-02-27T21:00:00.000000",
       "required_tasks": [
         {
-          "task": "Abstract API 문서 검토",
+          "task": "Abstract API \ubb38\uc11c \uac80\ud1a0",
           "priority": "high",
-          "description": "https://app.abstractapi.com/ 및 API 문서 확인",
+          "description": "https://app.abstractapi.com/ \ubc0f API \ubb38\uc11c \ud655\uc778",
           "status": "completed"
         },
         {
-          "task": "API 키 획득 (6개 서비스)",
+          "task": "API \ud0a4 \ud68d\ub4dd (6\uac1c \uc11c\ube44\uc2a4)",
           "priority": "high",
           "description": "Exchange Rates, Phone Validation, Timezone, IP Geolocation, Email Validation, Holidays",
           "status": "pending"
         },
         {
-          "task": "테스트 환경 구축",
+          "task": "\ud14c\uc2a4\ud2b8 \ud658\uacbd \uad6c\ucd95",
           "priority": "medium",
-          "description": "무료 플랜으로 테스트 가능",
+          "description": "\ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "status": "pending"
         }
       ],
@@ -91,57 +91,57 @@
     },
     "Pinterest.md": {
       "service_name": "Pinterest",
-      "category": "マーケティング",
+      "category": "\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0",
       "integration_type": "oauth",
       "integration_confidence": "high",
-      "integration_reasoning": "SaaS/OAuth 표준",
+      "integration_reasoning": "SaaS/OAuth \ud45c\uc900",
       "api_actions": {
         "Get Pin": {
           "status": "completed",
           "testable": false,
-          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc2e4\uc81c \uacc4\uc815\uc5d0\uc11c \ud14c\uc2a4\ud2b8 \ud544\uc694",
           "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
           "method": "PinterestAPI.get_pin(pin_id)"
         },
         "Create Pin": {
           "status": "completed",
           "testable": false,
-          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc2e4\uc81c \uacc4\uc815\uc5d0\uc11c \ud14c\uc2a4\ud2b8 \ud544\uc694",
           "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
           "method": "PinterestAPI.create_pin(title, link, board_id, ...)"
         },
         "Get Board": {
           "status": "completed",
           "testable": false,
-          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc2e4\uc81c \uacc4\uc815\uc5d0\uc11c \ud14c\uc2a4\ud2b8 \ud544\uc694",
           "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
           "method": "PinterestAPI.get_board(board_id)"
         },
         "Create Board": {
           "status": "completed",
           "testable": false,
-          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc2e4\uc81c \uacc4\uc815\uc5d0\uc11c \ud14c\uc2a4\ud2b8 \ud544\uc694",
           "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
           "method": "PinterestAPI.create_board(name, description, privacy)"
         },
         "List Pins": {
           "status": "completed",
           "testable": false,
-          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc2e4\uc81c \uacc4\uc815\uc5d0\uc11c \ud14c\uc2a4\ud2b8 \ud544\uc694",
           "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
           "method": "PinterestAPI.list_pins(board_id, page_size, bookmark)"
         },
         "Update Board": {
           "status": "completed",
           "testable": false,
-          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc2e4\uc81c \uacc4\uc815\uc5d0\uc11c \ud14c\uc2a4\ud2b8 \ud544\uc694",
           "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
           "method": "PinterestAPI.update_board(board_id, name, description, privacy)"
         },
         "List Boards": {
           "status": "completed",
           "testable": false,
-          "test_method": "API 키 필요 - 실제 계정에서 테스트 필요",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc2e4\uc81c \uacc4\uc815\uc5d0\uc11c \ud14c\uc2a4\ud2b8 \ud544\uc694",
           "code_file": "github/skill-factory/repo/pinterest_api/pinterest_api.py",
           "method": "PinterestAPI.list_boards(page_size, bookmark)"
         }
@@ -150,46 +150,46 @@
         "New Pin": {
           "status": "completed",
           "testable": false,
-          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "test_method": "Webhook \ud544\uc694 - \uc2e4\uc81c \ud658\uacbd\uc5d0\uc11c \ud14c\uc2a4\ud2b8 \ud544\uc694",
           "webhook_method": "PinterestAPI.register_webhook(callback_url, ['pins'])"
         }
       },
       "implemented_at": "2026-02-27T20:50:00.000000",
       "required_tasks": [
         {
-          "task": "Pinterest API 문서 검토",
+          "task": "Pinterest API \ubb38\uc11c \uac80\ud1a0",
           "priority": "high",
-          "description": "https://lp.yoom.fun/apps/Pinterest 및 공식 API 문서 확인",
+          "description": "https://lp.yoom.fun/apps/Pinterest \ubc0f \uacf5\uc2dd API \ubb38\uc11c \ud655\uc778",
           "status": "completed"
         },
         {
-          "task": "Pinterest OAuth 앱 등록",
+          "task": "Pinterest OAuth \uc571 \ub4f1\ub85d",
           "priority": "high",
-          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "description": "API Console\uc5d0\uc11c OAuth \ud074\ub77c\uc774\uc5b8\ud2b8 \uc0dd\uc131, \ub9ac\ub2e4\uc774\ub809\ud2b8 URI \uc124\uc815",
           "status": "pending"
         },
         {
-          "task": "Client ID 및 Client Secret 획득",
+          "task": "Client ID \ubc0f Client Secret \ud68d\ub4dd",
           "priority": "high",
-          "description": "OAuth 앱에서 인증 정보 획득",
+          "description": "OAuth \uc571\uc5d0\uc11c \uc778\uc99d \uc815\ubcf4 \ud68d\ub4dd",
           "status": "pending"
         },
         {
-          "task": "1개 트리거용 Webhook 엔드포인트 설정",
+          "task": "1\uac1c \ud2b8\ub9ac\uac70\uc6a9 Webhook \uc5d4\ub4dc\ud3ec\uc778\ud2b8 \uc124\uc815",
           "priority": "medium",
-          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "description": "Webhook URL \uc218\uc2e0\uc6a9 \uc11c\ubc84 \uc124\uc815, \uc774\ubca4\ud2b8 \ucc98\ub9ac \ub85c\uc9c1 \uad6c\ud604",
           "status": "pending"
         },
         {
-          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "task": "\ud14c\uc2a4\ud2b8 \uacc4\uc815 \ub610\ub294 \uc0cc\ub4dc\ubc15\uc2a4 \ud658\uacbd \uad6c\ucd95",
           "priority": "medium",
-          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "description": "\uc2e4\uc81c \uacc4\uc815 \uc0ac\uc6a9 \uc2dc \uc8fc\uc758, \ud14c\uc2a4\ud2b8 \ub370\uc774\ud130\ub85c \uad6c\ud604 \uac80\uc99d",
           "status": "pending"
         },
         {
-          "task": "7개 API 액션 단위 테스트 작성",
+          "task": "7\uac1c API \uc561\uc158 \ub2e8\uc704 \ud14c\uc2a4\ud2b8 \uc791\uc131",
           "priority": "low",
-          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "description": "\uac01 \uc561\uc158 \ubcc4 \ud14c\uc2a4\ud2b8 \ucf54\ub4dc \uc791\uc131, \ud30c\ub77c\ubbf8\ud130 \uac80\uc99d",
           "status": "pending"
         }
       ],
@@ -197,22 +197,22 @@
     },
     "abyssale.md": {
       "service_name": "Abyssale",
-      "category": "マーケティング",
+      "category": "\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0",
       "integration_type": "oauth",
       "integration_confidence": "high",
-      "integration_reasoning": "SaaS/OAuth 표준",
+      "integration_reasoning": "SaaS/OAuth \ud45c\uc900",
       "api_actions": {
         "Generate Content": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 템플릿 ID로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ud15c\ud50c\ub9bf ID\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/abyssale/abyssale_client.py",
           "method": "AbyssaleClient.generate_content(template_id, format, elements)"
         },
         "Get File": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 생성된 콘텐츠 ID로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc0dd\uc131\ub41c \ucf58\ud150\uce20 ID\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/abyssale/abyssale_client.py",
           "method": "AbyssaleClient.get_file(generation_id)"
         }
@@ -221,34 +221,34 @@
         "New Generation": {
           "status": "completed",
           "testable": false,
-          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "test_method": "Webhook \ud544\uc694 - \uc2e4\uc81c \ud658\uacbd\uc5d0\uc11c \ud14c\uc2a4\ud2b8 \ud544\uc694",
           "webhook_method": "AbyssaleClient.verify_webhook_signature()"
         }
       },
       "implemented_at": "2026-02-27T21:10:00.000000",
       "required_tasks": [
         {
-          "task": "Abyssale API 문서 검토",
+          "task": "Abyssale API \ubb38\uc11c \uac80\ud1a0",
           "priority": "high",
-          "description": "https://api.abyssale.com/docs 및 공식 API 문서 확인",
+          "description": "https://api.abyssale.com/docs \ubc0f \uacf5\uc2dd API \ubb38\uc11c \ud655\uc778",
           "status": "completed"
         },
         {
-          "task": "Abyssale API 키 획득",
+          "task": "Abyssale API \ud0a4 \ud68d\ub4dd",
           "priority": "high",
-          "description": "API Dashboard에서 API 키 획득",
+          "description": "API Dashboard\uc5d0\uc11c API \ud0a4 \ud68d\ub4dd",
           "status": "pending"
         },
         {
-          "task": "1개 트리거용 Webhook 엔드포인트 설정",
+          "task": "1\uac1c \ud2b8\ub9ac\uac70\uc6a9 Webhook \uc5d4\ub4dc\ud3ec\uc778\ud2b8 \uc124\uc815",
           "priority": "medium",
-          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "description": "Webhook URL \uc218\uc2e0\uc6a9 \uc11c\ubc84 \uc124\uc815, \uc774\ubca4\ud2b8 \ucc98\ub9ac \ub85c\uc9c1 \uad6c\ud604",
           "status": "pending"
         },
         {
-          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "task": "\ud14c\uc2a4\ud2b8 \uacc4\uc815 \ub610\ub294 \uc0cc\ub4dc\ubc15\uc2a4 \ud658\uacbd \uad6c\ucd95",
           "priority": "medium",
-          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "description": "\uc2e4\uc81c \uacc4\uc815 \uc0ac\uc6a9 \uc2dc \uc8fc\uc758, \ud14c\uc2a4\ud2b8 \ub370\uc774\ud130\ub85c \uad6c\ud604 \uac80\uc99d",
           "status": "pending"
         }
       ],
@@ -256,174 +256,174 @@
     },
     "activecampaign.md": {
       "service_name": "Activecampaign",
-      "category": "マーケティング",
+      "category": "\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0",
       "integration_type": "oauth",
       "integration_confidence": "high",
-      "integration_reasoning": "SaaS/OAuth 표준",
+      "integration_reasoning": "SaaS/OAuth \ud45c\uc900",
       "api_actions": {
-        "アカウントを更新": {
+        "\u30a2\u30ab\u30a6\u30f3\u30c8\u3092\u66f4\u65b0": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 계정 ID로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uacc4\uc815 ID\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
           "method": "ActiveCampaignClient.update_account(account_id, data)"
         },
-        "コンタクト情報を削除": {
+        "\u30b3\u30f3\u30bf\u30af\u30c8\u60c5\u5831\u3092\u524a\u9664": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 컨택트 ID로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ucee8\ud0dd\ud2b8 ID\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
           "method": "ActiveCampaignClient.delete_contact(contact_id)"
         },
-        "コンタクトをリストに登録": {
+        "\u30b3\u30f3\u30bf\u30af\u30c8\u3092\u30ea\u30b9\u30c8\u306b\u767b\u9332": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 컨택트 ID와 리스트 ID로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ucee8\ud0dd\ud2b8 ID\uc640 \ub9ac\uc2a4\ud2b8 ID\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
           "method": "ActiveCampaignClient.add_contact_to_list(contact_id, list_id)"
         },
-        "アカウントを削除": {
+        "\u30a2\u30ab\u30a6\u30f3\u30c8\u3092\u524a\u9664": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 계정 ID로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uacc4\uc815 ID\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
           "method": "ActiveCampaignClient.delete_account(account_id)"
         },
-        "コンタクトとアカウントを関連付ける": {
+        "\u30b3\u30f3\u30bf\u30af\u30c8\u3068\u30a2\u30ab\u30a6\u30f3\u30c8\u3092\u95a2\u9023\u4ed8\u3051\u308b": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 컨택트 ID와 계정 ID로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ucee8\ud0dd\ud2b8 ID\uc640 \uacc4\uc815 ID\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
           "method": "ActiveCampaignClient.associate_contact_account(contact_id, account_id)"
         },
-        "コンタクト情報を検索": {
+        "\u30b3\u30f3\u30bf\u30af\u30c8\u60c5\u5831\u3092\u691c\u7d22": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 이메일로 검색 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc774\uba54\uc77c\ub85c \uac80\uc0c9 \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
           "method": "ActiveCampaignClient.search_contact(email)"
         },
-        "コンタクト情報の一覧を取得または検索": {
+        "\u30b3\u30f3\u30bf\u30af\u30c8\u60c5\u5831\u306e\u4e00\u89a7\u3092\u53d6\u5f97\u307e\u305f\u306f\u691c\u7d22": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 페이징으로 리스트 조회 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ud398\uc774\uc9d5\uc73c\ub85c \ub9ac\uc2a4\ud2b8 \uc870\ud68c \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
           "method": "ActiveCampaignClient.list_contacts(limit, offset)"
         },
-        "取引を作成": {
+        "\u53d6\u5f15\u3092\u4f5c\u6210": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 딜 생성 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ub51c \uc0dd\uc131 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
           "method": "ActiveCampaignClient.create_deal(contact_id, value, currency, stage)"
         },
-        "コンタクトを作成": {
+        "\u30b3\u30f3\u30bf\u30af\u30c8\u3092\u4f5c\u6210": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 컨택트 생성 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ucee8\ud0dd\ud2b8 \uc0dd\uc131 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
           "method": "ActiveCampaignClient.create_contact(email, first_name, last_name, phone)"
         },
-        "コンタクト情報を取得": {
+        "\u30b3\u30f3\u30bf\u30af\u30c8\u60c5\u5831\u3092\u53d6\u5f97": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 컨택트 ID로 조회 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ucee8\ud0dd\ud2b8 ID\ub85c \uc870\ud68c \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
           "method": "ActiveCampaignClient.get_contact(contact_id)"
         },
-        "オート메ーションにコンタクトを登録": {
+        "\u30aa\u30fc\u30c8\uba54\u30fc\u30b7\u30e7\u30f3\u306b\u30b3\u30f3\u30bf\u30af\u30c8\u3092\u767b\u9332": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 컨택트와 오토메이션 ID로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ucee8\ud0dd\ud2b8\uc640 \uc624\ud1a0\uba54\uc774\uc158 ID\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
           "method": "ActiveCampaignClient.add_contact_to_automation(contact_id, automation_id)"
         },
-        "コンタクトをリストから解除": {
+        "\u30b3\u30f3\u30bf\u30af\u30c8\u3092\u30ea\u30b9\u30c8\u304b\u3089\u89e3\u9664": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 컨택트와 리스트 ID로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ucee8\ud0dd\ud2b8\uc640 \ub9ac\uc2a4\ud2b8 ID\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
           "method": "ActiveCampaignClient.remove_contact_from_list(contact_id, list_id)"
         },
-        "アカウントを作成": {
+        "\u30a2\u30ab\u30a6\u30f3\u30c8\u3092\u4f5c\u6210": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 계정 생성 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uacc4\uc815 \uc0dd\uc131 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
           "method": "ActiveCampaignClient.create_account(name, account_url)"
         },
-        "ノートを追加": {
+        "\u30ce\u30fc\u30c8\u3092\u8ffd\u52a0": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 컨택트 ID와 노트 내용으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ucee8\ud0dd\ud2b8 ID\uc640 \ub178\ud2b8 \ub0b4\uc6a9\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
           "method": "ActiveCampaignClient.add_note(contact_id, note)"
         },
-        "コンタクトのスコアを取得": {
+        "\u30b3\u30f3\u30bf\u30af\u30c8\u306e\u30b9\u30b3\u30a2\u3092\u53d6\u5f97": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 컨택트 ID로 스코어 조회 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ucee8\ud0dd\ud2b8 ID\ub85c \uc2a4\ucf54\uc5b4 \uc870\ud68c \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
           "method": "ActiveCampaignClient.get_contact_score(contact_id)"
         },
-        "アカウントを取得": {
+        "\u30a2\u30ab\u30a6\u30f3\u30c8\u3092\u53d6\u5f97": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 계정 ID로 조회 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uacc4\uc815 ID\ub85c \uc870\ud68c \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/activecampaign/activecampaign_client.py",
           "method": "ActiveCampaignClient.get_account(account_id)"
         }
       },
       "triggers": {
-        "取引が作成されたら": {
+        "\u53d6\u5f15\u304c\u4f5c\u6210\u3055\u308c\u305f\u3089": {
           "status": "completed",
           "testable": false,
-          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "test_method": "Webhook \ud544\uc694 - \uc2e4\uc81c \ud658\uacbd\uc5d0\uc11c \ud14c\uc2a4\ud2b8 \ud544\uc694",
           "webhook_method": "ActiveCampaignClient.handle_webhook_event()"
         },
-        "コンタクトが追加されたら（JSONではないデータがPaylaodで送られる）": {
+        "\u30b3\u30f3\u30bf\u30af\u30c8\u304c\u8ffd\u52a0\u3055\u308c\u305f\u3089\uff08JSON\u3067\u306f\u306a\u3044\u30c7\u30fc\u30bf\u304cPaylaod\u3067\u9001\u3089\u308c\u308b\uff09": {
           "status": "completed",
           "testable": false,
-          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "test_method": "Webhook \ud544\uc694 - \uc2e4\uc81c \ud658\uacbd\uc5d0\uc11c \ud14c\uc2a4\ud2b8 \ud544\uc694",
           "webhook_method": "ActiveCampaignClient.handle_webhook_event()"
         },
-        "コンタクトが作成されたら": {
+        "\u30b3\u30f3\u30bf\u30af\u30c8\u304c\u4f5c\u6210\u3055\u308c\u305f\u3089": {
           "status": "completed",
           "testable": false,
-          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "test_method": "Webhook \ud544\uc694 - \uc2e4\uc81c \ud658\uacbd\uc5d0\uc11c \ud14c\uc2a4\ud2b8 \ud544\uc694",
           "webhook_method": "ActiveCampaignClient.handle_webhook_event()"
         },
-        "コンタクトのカスタムフィールド値が作成されたら": {
+        "\u30b3\u30f3\u30bf\u30af\u30c8\u306e\u30ab\u30b9\u30bf\u30e0\u30d5\u30a3\u30fc\u30eb\u30c9\u5024\u304c\u4f5c\u6210\u3055\u308c\u305f\u3089": {
           "status": "completed",
           "testable": false,
-          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "test_method": "Webhook \ud544\uc694 - \uc2e4\uc81c \ud658\uacbd\uc5d0\uc11c \ud14c\uc2a4\ud2b8 \ud544\uc694",
           "webhook_method": "ActiveCampaignClient.handle_webhook_event()"
         }
       },
       "implemented_at": "2026-02-27T21:10:00.000000",
       "required_tasks": [
         {
-          "task": "Activecampaign API 문서 검토",
+          "task": "Activecampaign API \ubb38\uc11c \uac80\ud1a0",
           "priority": "high",
-          "description": "https://developers.activecampaign.com/ 및 공식 API 문서 확인",
+          "description": "https://developers.activecampaign.com/ \ubc0f \uacf5\uc2dd API \ubb38\uc11c \ud655\uc778",
           "status": "completed"
         },
         {
-          "task": "Activecampaign API URL 및 API 키 획득",
+          "task": "Activecampaign API URL \ubc0f API \ud0a4 \ud68d\ub4dd",
           "priority": "high",
-          "description": "계정 설정에서 API URL과 API 키 획득",
+          "description": "\uacc4\uc815 \uc124\uc815\uc5d0\uc11c API URL\uacfc API \ud0a4 \ud68d\ub4dd",
           "status": "pending"
         },
         {
-          "task": "4개 트리거용 Webhook 엔드포인트 설정",
+          "task": "4\uac1c \ud2b8\ub9ac\uac70\uc6a9 Webhook \uc5d4\ub4dc\ud3ec\uc778\ud2b8 \uc124\uc815",
           "priority": "medium",
-          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "description": "Webhook URL \uc218\uc2e0\uc6a9 \uc11c\ubc84 \uc124\uc815, \uc774\ubca4\ud2b8 \ucc98\ub9ac \ub85c\uc9c1 \uad6c\ud604",
           "status": "pending"
         },
         {
-          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "task": "\ud14c\uc2a4\ud2b8 \uacc4\uc815 \ub610\ub294 \uc0cc\ub4dc\ubc15\uc2a4 \ud658\uacbd \uad6c\ucd95",
           "priority": "medium",
-          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "description": "\uc2e4\uc81c \uacc4\uc815 \uc0ac\uc6a9 \uc2dc \uc8fc\uc758, \ud14c\uc2a4\ud2b8 \ub370\uc774\ud130\ub85c \uad6c\ud604 \uac80\uc99d",
           "status": "pending"
         }
       ],
@@ -431,22 +431,22 @@
     },
     "adroll.md": {
       "service_name": "Adroll",
-      "category": "マーケティング",
+      "category": "\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0",
       "integration_type": "oauth",
       "integration_confidence": "high",
-      "integration_reasoning": "SaaS/OAuth 표준",
+      "integration_reasoning": "SaaS/OAuth \ud45c\uc900",
       "api_actions": {
         "List Segment": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 세그먼트 목록 조회 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc138\uadf8\uba3c\ud2b8 \ubaa9\ub85d \uc870\ud68c \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/adroll/adroll_client.py",
           "method": "AdrollClient.list_segments(eid, limit, offset)"
         },
         "Create Segment": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 세그먼트 생성 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc138\uadf8\uba3c\ud2b8 \uc0dd\uc131 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/adroll/adroll_client.py",
           "method": "AdrollClient.create_segment(eid, name, type, rules)"
         }
@@ -455,21 +455,21 @@
       "implemented_at": "2026-02-27T21:10:00.000000",
       "required_tasks": [
         {
-          "task": "Adroll API 문서 검토",
+          "task": "Adroll API \ubb38\uc11c \uac80\ud1a0",
           "priority": "high",
-          "description": "https://developers.adroll.com/docs 및 공식 API 문서 확인",
+          "description": "https://developers.adroll.com/docs \ubc0f \uacf5\uc2dd API \ubb38\uc11c \ud655\uc778",
           "status": "completed"
         },
         {
-          "task": "Adroll API 키 및 EID 획득",
+          "task": "Adroll API \ud0a4 \ubc0f EID \ud68d\ub4dd",
           "priority": "high",
-          "description": "Adroll 계정에서 API 키와 EID 획득",
+          "description": "Adroll \uacc4\uc815\uc5d0\uc11c API \ud0a4\uc640 EID \ud68d\ub4dd",
           "status": "pending"
         },
         {
-          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "task": "\ud14c\uc2a4\ud2b8 \uacc4\uc815 \ub610\ub294 \uc0cc\ub4dc\ubc15\uc2a4 \ud658\uacbd \uad6c\ucd95",
           "priority": "medium",
-          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "description": "\uc2e4\uc81c \uacc4\uc815 \uc0ac\uc6a9 \uc2dc \uc8fc\uc758, \ud14c\uc2a4\ud2b8 \ub370\uc774\ud130\ub85c \uad6c\ud604 \uac80\uc99d",
           "status": "pending"
         }
       ],
@@ -477,43 +477,43 @@
     },
     "all-images-ai.md": {
       "service_name": "All Images Ai",
-      "category": "マーケティング",
+      "category": "\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0",
       "integration_type": "oauth",
       "integration_confidence": "high",
-      "integration_reasoning": "SaaS/OAuth 표준",
+      "integration_reasoning": "SaaS/OAuth \ud45c\uc900",
       "api_actions": {
         "Search Image Generation": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 이미지 생성 검색 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc774\ubbf8\uc9c0 \uc0dd\uc131 \uac80\uc0c9 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/all-images-ai/all_images_ai_client.py",
           "method": "AllImagesAIClient.search_image_generations(limit, offset)"
         },
         "Get Image": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 이미지 ID로 조회 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc774\ubbf8\uc9c0 ID\ub85c \uc870\ud68c \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/all-images-ai/all_images_ai_client.py",
           "method": "AllImagesAIClient.get_image(image_id)"
         },
         "Delete Image Generation": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 생성 ID로 삭제 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc0dd\uc131 ID\ub85c \uc0ad\uc81c \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/all-images-ai/all_images_ai_client.py",
           "method": "AllImagesAIClient.delete_image_generation(generation_id)"
         },
         "Get Image Generation": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 생성 ID로 조회 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc0dd\uc131 ID\ub85c \uc870\ud68c \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/all-images-ai/all_images_ai_client.py",
           "method": "AllImagesAIClient.get_image_generation(generation_id)"
         },
         "Create Image Generation": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 프롬프트로 이미지 생성 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ud504\ub86c\ud504\ud2b8\ub85c \uc774\ubbf8\uc9c0 \uc0dd\uc131 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/all-images-ai/all_images_ai_client.py",
           "method": "AllImagesAIClient.create_image_generation(prompt, style, format)"
         }
@@ -522,34 +522,34 @@
         "Print Completed": {
           "status": "completed",
           "testable": false,
-          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "test_method": "Webhook \ud544\uc694 - \uc2e4\uc81c \ud658\uacbd\uc5d0\uc11c \ud14c\uc2a4\ud2b8 \ud544\uc694",
           "webhook_method": "AllImagesAIClient.handle_webhook_event()"
         }
       },
       "implemented_at": "2026-02-27T21:10:00.000000",
       "required_tasks": [
         {
-          "task": "All Images Ai API 문서 검토",
+          "task": "All Images Ai API \ubb38\uc11c \uac80\ud1a0",
           "priority": "high",
-          "description": "https://allimages.ai/docs 및 공식 API 문서 확인",
+          "description": "https://allimages.ai/docs \ubc0f \uacf5\uc2dd API \ubb38\uc11c \ud655\uc778",
           "status": "completed"
         },
         {
-          "task": "All Images Ai API 키 획득",
+          "task": "All Images Ai API \ud0a4 \ud68d\ub4dd",
           "priority": "high",
-          "description": "API Dashboard에서 API 키 획득",
+          "description": "API Dashboard\uc5d0\uc11c API \ud0a4 \ud68d\ub4dd",
           "status": "pending"
         },
         {
-          "task": "1개 트리거용 Webhook 엔드포인트 설정",
+          "task": "1\uac1c \ud2b8\ub9ac\uac70\uc6a9 Webhook \uc5d4\ub4dc\ud3ec\uc778\ud2b8 \uc124\uc815",
           "priority": "medium",
-          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "description": "Webhook URL \uc218\uc2e0\uc6a9 \uc11c\ubc84 \uc124\uc815, \uc774\ubca4\ud2b8 \ucc98\ub9ac \ub85c\uc9c1 \uad6c\ud604",
           "status": "pending"
         },
         {
-          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "task": "\ud14c\uc2a4\ud2b8 \uacc4\uc815 \ub610\ub294 \uc0cc\ub4dc\ubc15\uc2a4 \ud658\uacbd \uad6c\ucd95",
           "priority": "medium",
-          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "description": "\uc2e4\uc81c \uacc4\uc815 \uc0ac\uc6a9 \uc2dc \uc8fc\uc758, \ud14c\uc2a4\ud2b8 \ub370\uc774\ud130\ub85c \uad6c\ud604 \uac80\uc99d",
           "status": "pending"
         }
       ],
@@ -557,29 +557,29 @@
     },
     "anymail-finder.md": {
       "service_name": "Anymail Finder",
-      "category": "マーケティング",
+      "category": "\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0",
       "integration_type": "oauth",
       "integration_confidence": "high",
-      "integration_reasoning": "SaaS/OAuth 표준",
+      "integration_reasoning": "SaaS/OAuth \ud45c\uc900",
       "api_actions": {
         "Search for Person's Email": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 이름과 회사로 이메일 검색 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc774\ub984\uacfc \ud68c\uc0ac\ub85c \uc774\uba54\uc77c \uac80\uc0c9 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/anymail-finder/anymail_finder_client.py",
           "method": "AnymailFinderClient.find_person_email(name, company)"
         },
         "Search for Company's Email": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 회사 도메인으로 이메일 검색 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ud68c\uc0ac \ub3c4\uba54\uc778\uc73c\ub85c \uc774\uba54\uc77c \uac80\uc0c9 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/anymail-finder/anymail_finder_client.py",
           "method": "AnymailFinderClient.find_company_email(domain)"
         },
         "Validate Email": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 이메일 유효성 검증 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc774\uba54\uc77c \uc720\ud6a8\uc131 \uac80\uc99d \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/anymail-finder/anymail_finder_client.py",
           "method": "AnymailFinderClient.validate_email(email)"
         }
@@ -588,21 +588,21 @@
       "implemented_at": "2026-02-27T21:10:00.000000",
       "required_tasks": [
         {
-          "task": "Anymail Finder API 문서 검토",
+          "task": "Anymail Finder API \ubb38\uc11c \uac80\ud1a0",
           "priority": "high",
-          "description": "https://anymailfinder.com/api 및 공식 API 문서 확인",
+          "description": "https://anymailfinder.com/api \ubc0f \uacf5\uc2dd API \ubb38\uc11c \ud655\uc778",
           "status": "completed"
         },
         {
-          "task": "Anymail Finder API 키 획득",
+          "task": "Anymail Finder API \ud0a4 \ud68d\ub4dd",
           "priority": "high",
-          "description": "API Dashboard에서 API 키 획득",
+          "description": "API Dashboard\uc5d0\uc11c API \ud0a4 \ud68d\ub4dd",
           "status": "pending"
         },
         {
-          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "task": "\ud14c\uc2a4\ud2b8 \uacc4\uc815 \ub610\ub294 \uc0cc\ub4dc\ubc15\uc2a4 \ud658\uacbd \uad6c\ucd95",
           "priority": "medium",
-          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "description": "\uc2e4\uc81c \uacc4\uc815 \uc0ac\uc6a9 \uc2dc \uc8fc\uc758, \ud14c\uc2a4\ud2b8 \ub370\uc774\ud130\ub85c \uad6c\ud604 \uac80\uc99d",
           "status": "pending"
         }
       ],
@@ -610,78 +610,78 @@
     },
     "aweber.md": {
       "service_name": "Aweber",
-      "category": "マーケティング",
+      "category": "\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0",
       "integration_type": "oauth",
       "integration_confidence": "high",
-      "integration_reasoning": "SaaS/OAuth 표준",
+      "integration_reasoning": "SaaS/OAuth \ud45c\uc900",
       "api_actions": {
         "Get Subscriber": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 구독자 ID로 조회 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uad6c\ub3c5\uc790 ID\ub85c \uc870\ud68c \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
           "method": "AweberClient.get_subscriber(subscriber_id, account_id, list_id)"
         },
         "Find Subscriber": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 이메일로 구독자 찾기 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc774\uba54\uc77c\ub85c \uad6c\ub3c5\uc790 \ucc3e\uae30 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
           "method": "AweberClient.find_subscriber(email, account_id, list_id)"
         },
         "Get Broadcast Open": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 방송 ID로 오픈 통계 조회 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubc29\uc1a1 ID\ub85c \uc624\ud508 \ud1b5\uacc4 \uc870\ud68c \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
           "method": "AweberClient.get_broadcast_open(broadcast_id, account_id)"
         },
         "Get Broadcast Statistic": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 방송 ID로 통계 조회 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubc29\uc1a1 ID\ub85c \ud1b5\uacc4 \uc870\ud68c \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
           "method": "AweberClient.get_broadcast_statistics(broadcast_id, account_id)"
         },
         "Search List": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 계정에서 리스트 검색 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uacc4\uc815\uc5d0\uc11c \ub9ac\uc2a4\ud2b8 \uac80\uc0c9 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
           "method": "AweberClient.search_lists(account_id)"
         },
         "Move Subscriber": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 구독자 이동 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uad6c\ub3c5\uc790 \uc774\ub3d9 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
           "method": "AweberClient.move_subscriber(subscriber_id, from_list_id, to_list_id, account_id)"
         },
         "Create Subscriber": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 구독자 생성 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uad6c\ub3c5\uc790 \uc0dd\uc131 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
           "method": "AweberClient.create_subscriber(email, account_id, list_id)"
         },
         "Get Broadcast Click": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 방송 ID로 클릭 통계 조회 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubc29\uc1a1 ID\ub85c \ud074\ub9ad \ud1b5\uacc4 \uc870\ud68c \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
           "method": "AweberClient.get_broadcast_click(broadcast_id, account_id)"
         },
         "Delete Subscriber by Email": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 이메일로 구독자 삭제 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc774\uba54\uc77c\ub85c \uad6c\ub3c5\uc790 \uc0ad\uc81c \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
           "method": "AweberClient.delete_subscriber_by_email(email, account_id, list_id)"
         },
         "Update Subscriber by Email": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 이메일로 구독자 업데이트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc774\uba54\uc77c\ub85c \uad6c\ub3c5\uc790 \uc5c5\ub370\uc774\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/aweber/aweber_client.py",
           "method": "AweberClient.update_subscriber_by_email(email, account_id, list_id, data)"
         }
@@ -690,27 +690,27 @@
       "implemented_at": "2026-02-27T21:10:00.000000",
       "required_tasks": [
         {
-          "task": "Aweber API 문서 검토",
+          "task": "Aweber API \ubb38\uc11c \uac80\ud1a0",
           "priority": "high",
-          "description": "https://api.aweber.com/ 및 공식 API 문서 확인",
+          "description": "https://api.aweber.com/ \ubc0f \uacf5\uc2dd API \ubb38\uc11c \ud655\uc778",
           "status": "completed"
         },
         {
-          "task": "Aweber OAuth 앱 등록",
+          "task": "Aweber OAuth \uc571 \ub4f1\ub85d",
           "priority": "high",
-          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "description": "API Console\uc5d0\uc11c OAuth \ud074\ub77c\uc774\uc5b8\ud2b8 \uc0dd\uc131, \ub9ac\ub2e4\uc774\ub809\ud2b8 URI \uc124\uc815",
           "status": "pending"
         },
         {
-          "task": "Aweber API 키 획득",
+          "task": "Aweber API \ud0a4 \ud68d\ub4dd",
           "priority": "high",
-          "description": "API Console에서 API 키와 Consumer Key 획득",
+          "description": "API Console\uc5d0\uc11c API \ud0a4\uc640 Consumer Key \ud68d\ub4dd",
           "status": "pending"
         },
         {
-          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "task": "\ud14c\uc2a4\ud2b8 \uacc4\uc815 \ub610\ub294 \uc0cc\ub4dc\ubc15\uc2a4 \ud658\uacbd \uad6c\ucd95",
           "priority": "medium",
-          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "description": "\uc2e4\uc81c \uacc4\uc815 \uc0ac\uc6a9 \uc2dc \uc8fc\uc758, \ud14c\uc2a4\ud2b8 \ub370\uc774\ud130\ub85c \uad6c\ud604 \uac80\uc99d",
           "status": "pending"
         }
       ],
@@ -718,85 +718,85 @@
     },
     "bannerbear.md": {
       "service_name": "Bannerbear",
-      "category": "マーケティング",
+      "category": "\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0",
       "integration_type": "oauth",
       "integration_confidence": "high",
-      "integration_reasoning": "SaaS/OAuth 표준",
+      "integration_reasoning": "SaaS/OAuth \ud45c\uc900",
       "api_actions": {
         "Create Collection": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 컬렉션 생성 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uceec\ub809\uc158 \uc0dd\uc131 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
           "method": "BannerbearClient.create_collection(template_id, modifications)"
         },
         "Get Video Detail": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 비디오 ID로 조회 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ube44\ub514\uc624 ID\ub85c \uc870\ud68c \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
           "method": "BannerbearClient.get_video_detail(video_id)"
         },
         "Create Image": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 이미지 생성 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc774\ubbf8\uc9c0 \uc0dd\uc131 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
           "method": "BannerbearClient.create_image(template_id, modifications)"
         },
         "Create Video": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 비디오 생성 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ube44\ub514\uc624 \uc0dd\uc131 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
           "method": "BannerbearClient.create_video(template_id, modifications, fps)"
         },
         "Create Movie": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무비 생성 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ube44 \uc0dd\uc131 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
           "method": "BannerbearClient.create_movie(template_id, modifications, fps)"
         },
         "Get Screenshot Detail": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 스크린샷 ID로 조회 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc2a4\ud06c\ub9b0\uc0f7 ID\ub85c \uc870\ud68c \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
           "method": "BannerbearClient.get_screenshot_detail(screenshot_id)"
         },
         "Get File Data": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 콘텐츠 ID로 파일 데이터 조회 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ucf58\ud150\uce20 ID\ub85c \ud30c\uc77c \ub370\uc774\ud130 \uc870\ud68c \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
           "method": "BannerbearClient.get_file_data(content_id)"
         },
         "Create Screenshot": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - URL로 스크린샷 생성 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - URL\ub85c \uc2a4\ud06c\ub9b0\uc0f7 \uc0dd\uc131 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
           "method": "BannerbearClient.create_screenshot(url, options)"
         },
         "Get Movie Detail": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무비 ID로 조회 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ube44 ID\ub85c \uc870\ud68c \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
           "method": "BannerbearClient.get_movie_detail(movie_id)"
         },
         "Get Collection Detail": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 컬렉션 ID로 조회 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uceec\ub809\uc158 ID\ub85c \uc870\ud68c \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
           "method": "BannerbearClient.get_collection_detail(collection_id)"
         },
         "Get  Image Detail": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 이미지 ID로 조회 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc774\ubbf8\uc9c0 ID\ub85c \uc870\ud68c \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/bannerbear/bannerbear_client.py",
           "method": "BannerbearClient.get_image_detail(image_id)"
         }
@@ -805,64 +805,64 @@
         "Animated Gif Created": {
           "status": "completed",
           "testable": false,
-          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "test_method": "Webhook \ud544\uc694 - \uc2e4\uc81c \ud658\uacbd\uc5d0\uc11c \ud14c\uc2a4\ud2b8 \ud544\uc694",
           "webhook_method": "BannerbearClient.handle_webhook()"
         },
         "Collection Created": {
           "status": "completed",
           "testable": false,
-          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "test_method": "Webhook \ud544\uc694 - \uc2e4\uc81c \ud658\uacbd\uc5d0\uc11c \ud14c\uc2a4\ud2b8 \ud544\uc694",
           "webhook_method": "BannerbearClient.handle_webhook()"
         },
         "Video Created": {
           "status": "completed",
           "testable": false,
-          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "test_method": "Webhook \ud544\uc694 - \uc2e4\uc81c \ud658\uacbd\uc5d0\uc11c \ud14c\uc2a4\ud2b8 \ud544\uc694",
           "webhook_method": "BannerbearClient.handle_webhook()"
         },
         "Movie Created": {
           "status": "completed",
           "testable": false,
-          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "test_method": "Webhook \ud544\uc694 - \uc2e4\uc81c \ud658\uacbd\uc5d0\uc11c \ud14c\uc2a4\ud2b8 \ud544\uc694",
           "webhook_method": "BannerbearClient.handle_webhook()"
         },
         "Image Created": {
           "status": "completed",
           "testable": false,
-          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "test_method": "Webhook \ud544\uc694 - \uc2e4\uc81c \ud658\uacbd\uc5d0\uc11c \ud14c\uc2a4\ud2b8 \ud544\uc694",
           "webhook_method": "BannerbearClient.handle_webhook()"
         },
         "Screenshot Created": {
           "status": "completed",
           "testable": false,
-          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "test_method": "Webhook \ud544\uc694 - \uc2e4\uc81c \ud658\uacbd\uc5d0\uc11c \ud14c\uc2a4\ud2b8 \ud544\uc694",
           "webhook_method": "BannerbearClient.handle_webhook()"
         }
       },
       "implemented_at": "2026-02-27T21:10:00.000000",
       "required_tasks": [
         {
-          "task": "Bannerbear API 문서 검토",
+          "task": "Bannerbear API \ubb38\uc11c \uac80\ud1a0",
           "priority": "high",
-          "description": "https://developers.bannerbear.com/ 및 공식 API 문서 확인",
+          "description": "https://developers.bannerbear.com/ \ubc0f \uacf5\uc2dd API \ubb38\uc11c \ud655\uc778",
           "status": "completed"
         },
         {
-          "task": "Bannerbear API 키 획득",
+          "task": "Bannerbear API \ud0a4 \ud68d\ub4dd",
           "priority": "high",
-          "description": "API Dashboard에서 API 키 획득",
+          "description": "API Dashboard\uc5d0\uc11c API \ud0a4 \ud68d\ub4dd",
           "status": "pending"
         },
         {
-          "task": "6개 트리거용 Webhook 엔드포인트 설정",
+          "task": "6\uac1c \ud2b8\ub9ac\uac70\uc6a9 Webhook \uc5d4\ub4dc\ud3ec\uc778\ud2b8 \uc124\uc815",
           "priority": "medium",
-          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "description": "Webhook URL \uc218\uc2e0\uc6a9 \uc11c\ubc84 \uc124\uc815, \uc774\ubca4\ud2b8 \ucc98\ub9ac \ub85c\uc9c1 \uad6c\ud604",
           "status": "pending"
         },
         {
-          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "task": "\ud14c\uc2a4\ud2b8 \uacc4\uc815 \ub610\ub294 \uc0cc\ub4dc\ubc15\uc2a4 \ud658\uacbd \uad6c\ucd95",
           "priority": "medium",
-          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "description": "\uc2e4\uc81c \uacc4\uc815 \uc0ac\uc6a9 \uc2dc \uc8fc\uc758, \ud14c\uc2a4\ud2b8 \ub370\uc774\ud130\ub85c \uad6c\ud604 \uac80\uc99d",
           "status": "pending"
         }
       ],
@@ -870,43 +870,43 @@
     },
     "bannerbite.md": {
       "service_name": "Bannerbite",
-      "category": "マーケティング",
+      "category": "\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0",
       "integration_type": "oauth",
       "integration_confidence": "high",
-      "integration_reasoning": "SaaS/OAuth 표준",
+      "integration_reasoning": "SaaS/OAuth \ud45c\uc900",
       "api_actions": {
         "Get Bite": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - Bite ID로 조회 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - Bite ID\ub85c \uc870\ud68c \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/bannerbite/bannerbite_client.py",
           "method": "BannerbiteClient.get_bite(bite_id)"
         },
         "Render Media": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - Bite 렌더링 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - Bite \ub80c\ub354\ub9c1 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/bannerbite/bannerbite_client.py",
           "method": "BannerbiteClient.render_media(bite_id, format)"
         },
         "Get Project": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 프로젝트 ID로 조회 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ud504\ub85c\uc81d\ud2b8 ID\ub85c \uc870\ud68c \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/bannerbite/bannerbite_client.py",
           "method": "BannerbiteClient.get_project(project_id)"
         },
         "Search Bites by Project ID": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 프로젝트 ID로 Bites 검색 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ud504\ub85c\uc81d\ud2b8 ID\ub85c Bites \uac80\uc0c9 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/bannerbite/bannerbite_client.py",
           "method": "BannerbiteClient.search_bites_by_project(project_id)"
         },
         "List Projects": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 프로젝트 목록 조회 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ud504\ub85c\uc81d\ud2b8 \ubaa9\ub85d \uc870\ud68c \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/bannerbite/bannerbite_client.py",
           "method": "BannerbiteClient.list_projects()"
         }
@@ -915,34 +915,34 @@
         "Webhook Bannerbite": {
           "status": "completed",
           "testable": false,
-          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "test_method": "Webhook \ud544\uc694 - \uc2e4\uc81c \ud658\uacbd\uc5d0\uc11c \ud14c\uc2a4\ud2b8 \ud544\uc694",
           "webhook_method": "BannerbiteClient.handle_webhook()"
         }
       },
       "implemented_at": "2026-02-27T21:10:00.000000",
       "required_tasks": [
         {
-          "task": "Bannerbite API 문서 검토",
+          "task": "Bannerbite API \ubb38\uc11c \uac80\ud1a0",
           "priority": "high",
-          "description": "https://bannerbite.com/docs 및 공식 API 문서 확인",
+          "description": "https://bannerbite.com/docs \ubc0f \uacf5\uc2dd API \ubb38\uc11c \ud655\uc778",
           "status": "completed"
         },
         {
-          "task": "Bannerbite API 키 획득",
+          "task": "Bannerbite API \ud0a4 \ud68d\ub4dd",
           "priority": "high",
-          "description": "API Dashboard에서 API 키 획득",
+          "description": "API Dashboard\uc5d0\uc11c API \ud0a4 \ud68d\ub4dd",
           "status": "pending"
         },
         {
-          "task": "1개 트리거용 Webhook 엔드포인트 설정",
+          "task": "1\uac1c \ud2b8\ub9ac\uac70\uc6a9 Webhook \uc5d4\ub4dc\ud3ec\uc778\ud2b8 \uc124\uc815",
           "priority": "medium",
-          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "description": "Webhook URL \uc218\uc2e0\uc6a9 \uc11c\ubc84 \uc124\uc815, \uc774\ubca4\ud2b8 \ucc98\ub9ac \ub85c\uc9c1 \uad6c\ud604",
           "status": "pending"
         },
         {
-          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "task": "\ud14c\uc2a4\ud2b8 \uacc4\uc815 \ub610\ub294 \uc0cc\ub4dc\ubc15\uc2a4 \ud658\uacbd \uad6c\ucd95",
           "priority": "medium",
-          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "description": "\uc2e4\uc81c \uacc4\uc815 \uc0ac\uc6a9 \uc2dc \uc8fc\uc758, \ud14c\uc2a4\ud2b8 \ub370\uc774\ud130\ub85c \uad6c\ud604 \uac80\uc99d",
           "status": "pending"
         }
       ],
@@ -950,10 +950,10 @@
     },
     "ipqualityscore.md": {
       "service_name": "Ipqualityscore",
-      "category": "マーケティング",
+      "category": "\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0",
       "integration_type": "oauth",
       "integration_confidence": "high",
-      "integration_reasoning": "SaaS/OAuth 표준",
+      "integration_reasoning": "SaaS/OAuth \ud45c\uc900",
       "api_actions": {
         "Search Phone Number": {
           "status": "pending",
@@ -974,33 +974,33 @@
       "triggers": {},
       "required_tasks": [
         {
-          "task": "Ipqualityscore API 문서 검토",
+          "task": "Ipqualityscore API \ubb38\uc11c \uac80\ud1a0",
           "priority": "high",
-          "description": "https://lp.yoom.fun/apps/Ipqualityscore 및 공식 API 문서 확인",
+          "description": "https://lp.yoom.fun/apps/Ipqualityscore \ubc0f \uacf5\uc2dd API \ubb38\uc11c \ud655\uc778",
           "status": "pending"
         },
         {
-          "task": "Ipqualityscore OAuth 앱 등록",
+          "task": "Ipqualityscore OAuth \uc571 \ub4f1\ub85d",
           "priority": "high",
-          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "description": "API Console\uc5d0\uc11c OAuth \ud074\ub77c\uc774\uc5b8\ud2b8 \uc0dd\uc131, \ub9ac\ub2e4\uc774\ub809\ud2b8 URI \uc124\uc815",
           "status": "pending"
         },
         {
-          "task": "Client ID 및 Client Secret 획득",
+          "task": "Client ID \ubc0f Client Secret \ud68d\ub4dd",
           "priority": "high",
-          "description": "OAuth 앱에서 인증 정보 획득",
+          "description": "OAuth \uc571\uc5d0\uc11c \uc778\uc99d \uc815\ubcf4 \ud68d\ub4dd",
           "status": "pending"
         },
         {
-          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "task": "\ud14c\uc2a4\ud2b8 \uacc4\uc815 \ub610\ub294 \uc0cc\ub4dc\ubc15\uc2a4 \ud658\uacbd \uad6c\ucd95",
           "priority": "medium",
-          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "description": "\uc2e4\uc81c \uacc4\uc815 \uc0ac\uc6a9 \uc2dc \uc8fc\uc758, \ud14c\uc2a4\ud2b8 \ub370\uc774\ud130\ub85c \uad6c\ud604 \uac80\uc99d",
           "status": "pending"
         },
         {
-          "task": "3개 API 액션 단위 테스트 작성",
+          "task": "3\uac1c API \uc561\uc158 \ub2e8\uc704 \ud14c\uc2a4\ud2b8 \uc791\uc131",
           "priority": "low",
-          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "description": "\uac01 \uc561\uc158 \ubcc4 \ud14c\uc2a4\ud2b8 \ucf54\ub4dc \uc791\uc131, \ud30c\ub77c\ubbf8\ud130 \uac80\uc99d",
           "status": "pending"
         }
       ],
@@ -1008,7 +1008,7 @@
     },
     "byteplant-phone-validator.md": {
       "service_name": "Byteplant Phone Validator",
-      "category": "마케팅",
+      "category": "\ub9c8\ucf00\ud305",
       "integration_type": "api_key",
       "integration_confidence": "high",
       "integration_reasoning": "API Key authentication for phone validation API",
@@ -1016,7 +1016,7 @@
         "Verify Phone Number": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/byteplant-phone-validator/byteplant_phone_validator_client.py",
           "method": "ByteplantPhoneValidatorClient.verify_phone_number(phone_number, country_code)"
         }
@@ -1026,7 +1026,7 @@
     },
     "clearout.md": {
       "service_name": "Clearout",
-      "category": "마케팅",
+      "category": "\ub9c8\ucf00\ud305",
       "integration_type": "api_key",
       "integration_confidence": "high",
       "integration_reasoning": "API Key authentication for email validation and finder",
@@ -1034,70 +1034,70 @@
         "Check Email Address for Business Account": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜(100 크레딧/월)",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c(100 \ud06c\ub808\ub527/\uc6d4)",
           "code_file": "github/skill-factory/repo/clearout/clearout_client.py",
           "method": "ClearoutClient.check_email_for_business_account(email)"
         },
         "Instant Email Finder": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/clearout/clearout_client.py",
           "method": "ClearoutClient.instant_email_finder(first_name, last_name, domain)"
         },
         "Check Email Address for Catch All": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/clearout/clearout_client.py",
           "method": "ClearoutClient.check_email_for_catch_all(email)"
         },
         "Check Progress Status of Bulk Customer List": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/clearout/clearout_client.py",
           "method": "ClearoutClient.check_progress_status_bulk_customer_list(job_id)"
         },
         "Check Email Address for Free Account": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/clearout/clearout_client.py",
           "method": "ClearoutClient.check_email_for_free_account(email)"
         },
         "Check Progress Status of Bulk Email Finder": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/clearout/clearout_client.py",
           "method": "ClearoutClient.check_progress_status_bulk_email_finder(job_id)"
         },
         "Bulk Customer List": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/clearout/clearout_client.py",
           "method": "ClearoutClient.bulk_customer_list(emails)"
         },
         "Check Email Address for Disposable Email": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/clearout/clearout_client.py",
           "method": "ClearoutClient.check_email_for_disposable_email(email)"
         },
         "Bulk Email Finder": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/clearout/clearout_client.py",
           "method": "ClearoutClient.bulk_email_finder(contacts)"
         },
         "Check Email Address for Role Account": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/clearout/clearout_client.py",
           "method": "ClearoutClient.check_email_for_role_account(email)"
         }
@@ -1107,7 +1107,7 @@
     },
     "cleverreach.md": {
       "service_name": "CleverReach",
-      "category": "마케팅",
+      "category": "\ub9c8\ucf00\ud305",
       "integration_type": "api_key",
       "integration_confidence": "high",
       "integration_reasoning": "API Key authentication for email marketing",
@@ -1115,49 +1115,49 @@
         "Update Receiver": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜(300 수신자)",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c(300 \uc218\uc2e0\uc790)",
           "code_file": "github/skill-factory/repo/cleverreach/cleverreach_client.py",
           "method": "CleverReachClient.update_receiver(receiver_id, group_id, ...)"
         },
         "Register Email to Group Blacklist": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/cleverreach/cleverreach_client.py",
           "method": "CleverReachClient.register_email_to_blacklist(email, group_id)"
         },
         "Get Receiver Information": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/cleverreach/cleverreach_client.py",
           "method": "CleverReachClient.get_receiver(receiver_id, group_id)"
         },
         "Add Event to Receiver": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/cleverreach/cleverreach_client.py",
           "method": "CleverReachClient.add_event_to_receiver(receiver_id, group_id, event_type, event_data)"
         },
         "Search Receivers": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/cleverreach/cleverreach_client.py",
           "method": "CleverReachClient.search_receivers(group_id, email, page, pagesize)"
         },
         "Add Receiver": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜(300 수신자)",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c(300 \uc218\uc2e0\uc790)",
           "code_file": "github/skill-factory/repo/cleverreach/cleverreach_client.py",
           "method": "CleverReachClient.add_receiver(group_id, email, ...)"
         },
         "Delete Receivers": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/cleverreach/cleverreach_client.py",
           "method": "CleverReachClient.delete_receivers(group_id, receiver_ids, emails)"
         }
@@ -1166,14 +1166,14 @@
         "New Receiver": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 웹훅 설정 필요"
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc6f9\ud6c5 \uc124\uc815 \ud544\uc694"
         }
       },
       "implemented_at": "2026-02-27T16:02:03.3NZ"
     },
     "clickfunnels.md": {
       "service_name": "Clickfunnels",
-      "category": "마케팅",
+      "category": "\ub9c8\ucf00\ud305",
       "integration_type": "oauth",
       "integration_confidence": "high",
       "integration_reasoning": "Bearer Token authentication via API Key",
@@ -1181,112 +1181,112 @@
         "Search Workspaces of a Team": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 유료 계정 필요",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc720\ub8cc \uacc4\uc815 \ud544\uc694",
           "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
           "method": "ClickFunnelsClient.search_contacts(workspace_id, ...)"
         },
         "Update Enrollment": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 유료 계정 필요",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc720\ub8cc \uacc4\uc815 \ud544\uc694",
           "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
           "method": "ClickFunnelsClient.update_enrollment(workspace_id, enrollment_id, status)"
         },
         "Remove Applied Tag": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 유료 계정 필요",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc720\ub8cc \uacc4\uc815 \ud544\uc694",
           "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
           "method": "ClickFunnelsClient.remove_tag_from_contact(workspace_id, contact_id, tag_id)"
         },
         "Search Enrollments": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 유료 계정 필요",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc720\ub8cc \uacc4\uc815 \ud544\uc694",
           "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
           "method": "ClickFunnelsClient.search_enrollments(workspace_id, ...)"
         },
         "Get List of Tags Applied to Contact": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 유료 계정 필요",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc720\ub8cc \uacc4\uc815 \ud544\uc694",
           "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
           "method": "ClickFunnelsClient.get_contact_tags(workspace_id, contact_id)"
         },
         "Create Contact": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 유료 계정 필요",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc720\ub8cc \uacc4\uc815 \ud544\uc694",
           "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
           "method": "ClickFunnelsClient.create_contact(workspace_id, email, ...)"
         },
         "Get List All Tags in Workspace": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 유료 계정 필요",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc720\ub8cc \uacc4\uc815 \ud544\uc694",
           "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
           "method": "ClickFunnelsClient.list_tags(workspace_id)"
         },
         "Remove Contact Tag": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 유료 계정 필요",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc720\ub8cc \uacc4\uc815 \ud544\uc694",
           "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
           "method": "ClickFunnelsClient.remove_tag_from_contact(workspace_id, contact_id, tag_id)"
         },
         "Update Contact Tag": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 유료 계정 필요",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc720\ub8cc \uacc4\uc815 \ud544\uc694",
           "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
           "method": "ClickFunnelsClient.update_tag(workspace_id, tag_id, ...)"
         },
         "Create New Enrollment": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 유료 계정 필요",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc720\ub8cc \uacc4\uc815 \ud544\uc694",
           "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
           "method": "ClickFunnelsClient.create_enrollment(workspace_id, contact_id, course_id)"
         },
         "Delete Contact": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 유료 계정 필요",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc720\ub8cc \uacc4\uc815 \ud544\uc694",
           "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
           "method": "ClickFunnelsClient.delete_contact(workspace_id, contact_id)"
         },
         "Create Applied Tag": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 유료 계정 필요",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc720\ub8cc \uacc4\uc815 \ud544\uc694",
           "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
           "method": "ClickFunnelsClient.apply_tag_to_contact(workspace_id, contact_id, tag_id)"
         },
         "Search Contacts": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 유료 계정 필요",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc720\ub8cc \uacc4\uc815 \ud544\uc694",
           "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
           "method": "ClickFunnelsClient.search_contacts(workspace_id, ...)"
         },
         "Update Contact": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 유료 계정 필요",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc720\ub8cc \uacc4\uc815 \ud544\uc694",
           "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
           "method": "ClickFunnelsClient.update_contact(workspace_id, contact_id, ...)"
         },
         "Get List Courses": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 유료 계정 필요",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc720\ub8cc \uacc4\uc815 \ud544\uc694",
           "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
           "method": "ClickFunnelsClient.list_courses(workspace_id)"
         },
         "Create Contact Tag": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 유료 계정 필요",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc720\ub8cc \uacc4\uc815 \ud544\uc694",
           "code_file": "github/skill-factory/repo/clickfunnels/clickfunnels_client.py",
           "method": "ClickFunnelsClient.create_tag(workspace_id, name, color)"
         }
@@ -1295,59 +1295,59 @@
         "Order Created": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 + 웹훅 설정"
+          "test_method": "API \ud0a4 + \uc6f9\ud6c5 \uc124\uc815"
         },
         "Subscription Invoice Paid": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 + 웹훅 설정"
+          "test_method": "API \ud0a4 + \uc6f9\ud6c5 \uc124\uc815"
         },
         "Contact Suspended From Course": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 + 웹훅 설정"
+          "test_method": "API \ud0a4 + \uc6f9\ud6c5 \uc124\uc815"
         },
         "Contact Identified": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 + 웹훅 설정"
+          "test_method": "API \ud0a4 + \uc6f9\ud6c5 \uc124\uc815"
         },
         "Contact Submitted Form": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 + 웹훅 설정"
+          "test_method": "API \ud0a4 + \uc6f9\ud6c5 \uc124\uc815"
         },
         "Course Enrollment Created": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 + 웹훅 설정"
+          "test_method": "API \ud0a4 + \uc6f9\ud6c5 \uc124\uc815"
         },
         "Contact Created": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 + 웹훅 설정"
+          "test_method": "API \ud0a4 + \uc6f9\ud6c5 \uc124\uc815"
         },
         "Contact Updated": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 + 웹훅 설정"
+          "test_method": "API \ud0a4 + \uc6f9\ud6c5 \uc124\uc815"
         },
         "Course Enrollment Completed": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 + 웹훅 설정"
+          "test_method": "API \ud0a4 + \uc6f9\ud6c5 \uc124\uc815"
         },
         "One-Time Order Paid": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 + 웹훅 설정"
+          "test_method": "API \ud0a4 + \uc6f9\ud6c5 \uc124\uc815"
         }
       },
       "implemented_at": "2026-02-27T16:02:03.3NZ"
     },
     "clickmeeting.md": {
       "service_name": "Clickmeeting",
-      "category": "마케팅",
+      "category": "\ub9c8\ucf00\ud305",
       "integration_type": "api_key",
       "integration_confidence": "high",
       "integration_reasoning": "API Key authentication for webinar management",
@@ -1355,84 +1355,84 @@
         "List Conference Rooms": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/clickmeeting/clickmeeting_client.py",
           "method": "ClickMeetingClient.list_conference_rooms(status, page, per_page)"
         },
         "Update Conference": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/clickmeeting/clickmeeting_client.py",
           "method": "ClickMeetingClient.update_conference(room_id, ...)"
         },
         "Get All Registrants of Session": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/clickmeeting/clickmeeting_client.py",
           "method": "ClickMeetingClient.get_all_registrants(room_id)"
         },
         "List Sessions": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/clickmeeting/clickmeeting_client.py",
           "method": "ClickMeetingClient.list_sessions(room_id, status, page, per_page)"
         },
         "Delete Conference": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/clickmeeting/clickmeeting_client.py",
           "method": "ClickMeetingClient.delete_conference(room_id)"
         },
         "Create Conference": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/clickmeeting/clickmeeting_client.py",
           "method": "ClickMeetingClient.create_conference(name, starts_at, duration, ...)"
         },
         "Register Participant": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/clickmeeting/clickmeeting_client.py",
           "method": "ClickMeetingClient.register_participant(room_id, email, first_name, last_name, ...)"
         },
         "Generate PDF Report": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/clickmeeting/clickmeeting_client.py",
           "method": "ClickMeetingClient.generate_pdf_report(session_id)"
         },
         "Get Registration": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/clickmeeting/clickmeeting_client.py",
           "method": "ClickMeetingClient.get_registration(room_id, participant_id)"
         },
         "Get Session": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/clickmeeting/clickmeeting_client.py",
           "method": "ClickMeetingClient.get_session(room_id, session_id)"
         },
         "Get Room": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/clickmeeting/clickmeeting_client.py",
           "method": "ClickMeetingClient.get_room(room_id)"
         },
         "Get Attendees of Room Session": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/clickmeeting/clickmeeting_client.py",
           "method": "ClickMeetingClient.get_attendees(room_id, session_id)"
         }
@@ -1442,7 +1442,7 @@
     },
     "clicksend.md": {
       "service_name": "Clicksend",
-      "category": "마케팅",
+      "category": "\ub9c8\ucf00\ud305",
       "integration_type": "api_key",
       "integration_confidence": "high",
       "integration_reasoning": "API Key authentication for SMS and contact management",
@@ -1450,91 +1450,91 @@
         "Create Contact List": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키(User + Key) 필요 - 무료 트라이얼",
+          "test_method": "API \ud0a4(User + Key) \ud544\uc694 - \ubb34\ub8cc \ud2b8\ub77c\uc774\uc5bc",
           "code_file": "github/skill-factory/repo/clicksend/clicksend_client.py",
           "method": "ClickSendClient.create_contact_list(name, description)"
         },
         "Create Contact": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키(User + Key) 필요 - 무료 트라이얼",
+          "test_method": "API \ud0a4(User + Key) \ud544\uc694 - \ubb34\ub8cc \ud2b8\ub77c\uc774\uc5bc",
           "code_file": "github/skill-factory/repo/clicksend/clicksend_client.py",
           "method": "ClickSendClient.create_contact(phone_number, email, ...)"
         },
         "Send SMS": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키(User + Key) 필요 - 크레딧 소모",
+          "test_method": "API \ud0a4(User + Key) \ud544\uc694 - \ud06c\ub808\ub527 \uc18c\ubaa8",
           "code_file": "github/skill-factory/repo/clicksend/clicksend_client.py",
           "method": "ClickSendClient.send_sms(body, to, from_number, schedule)"
         },
         "Send SMS Campaign": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키(User + Key) 필요 - 크레딧 소모",
+          "test_method": "API \ud0a4(User + Key) \ud544\uc694 - \ud06c\ub808\ub527 \uc18c\ubaa8",
           "code_file": "github/skill-factory/repo/clicksend/clicksend_client.py",
           "method": "ClickSendClient.send_sms_campaign(body, recipients, ...)"
         },
         "Send Email SMS": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키(User + Key) 필요 - 크레딧 소모",
+          "test_method": "API \ud0a4(User + Key) \ud544\uc694 - \ud06c\ub808\ub527 \uc18c\ubaa8",
           "code_file": "github/skill-factory/repo/clicksend/clicksend_client.py",
           "method": "ClickSendClient.send_email_sms(to, subject, body, ...)"
         },
         "Delete Contact": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키(User + Key) 필요 - 무료 트라이얼",
+          "test_method": "API \ud0a4(User + Key) \ud544\uc694 - \ubb34\ub8cc \ud2b8\ub77c\uc774\uc5bc",
           "code_file": "github/skill-factory/repo/clicksend/clicksend_client.py",
           "method": "ClickSendClient.delete_contact(contact_id)"
         },
         "Update Contact List": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키(User + Key) 필요 - 무료 트라이얼",
+          "test_method": "API \ud0a4(User + Key) \ud544\uc694 - \ubb34\ub8cc \ud2b8\ub77c\uc774\uc5bc",
           "code_file": "github/skill-factory/repo/clicksend/clicksend_client.py",
           "method": "ClickSendClient.update_contact_list(list_id, name, description)"
         },
         "Update Contact": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키(User + Key) 필요 - 무료 트라이얼",
+          "test_method": "API \ud0a4(User + Key) \ud544\uc694 - \ubb34\ub8cc \ud2b8\ub77c\uc774\uc5bc",
           "code_file": "github/skill-factory/repo/clicksend/clicksend_client.py",
           "method": "ClickSendClient.update_contact(contact_id, ...)"
         },
         "Get Contacts": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키(User + Key) 필요 - 무료 트라이얼",
+          "test_method": "API \ud0a4(User + Key) \ud544\uc694 - \ubb34\ub8cc \ud2b8\ub77c\uc774\uc5bc",
           "code_file": "github/skill-factory/repo/clicksend/clicksend_client.py",
           "method": "ClickSendClient.get_contacts(list_id, page, limit)"
         },
         "Delete Contact List": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키(User + Key) 필요 - 무료 트라이얼",
+          "test_method": "API \ud0a4(User + Key) \ud544\uc694 - \ubb34\ub8cc \ud2b8\ub77c\uc774\uc5bc",
           "code_file": "github/skill-factory/repo/clicksend/clicksend_client.py",
           "method": "ClickSendClient.delete_contact_list(list_id)"
         },
         "Get Contact": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키(User + Key) 필요 - 무료 트라이얼",
+          "test_method": "API \ud0a4(User + Key) \ud544\uc694 - \ubb34\ub8cc \ud2b8\ub77c\uc774\uc5bc",
           "code_file": "github/skill-factory/repo/clicksend/clicksend_client.py",
           "method": "ClickSendClient.get_contact(contact_id)"
         },
         "Search Contact List": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키(User + Key) 필요 - 무료 트라이얼",
+          "test_method": "API \ud0a4(User + Key) \ud544\uc694 - \ubb34\ub8cc \ud2b8\ub77c\uc774\uc5bc",
           "code_file": "github/skill-factory/repo/clicksend/clicksend_client.py",
           "method": "ClickSendClient.search_contact_lists(name, page, limit)"
         },
         "Cancel SMS": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키(User + Key) 필요 - 무료 트라이얼",
+          "test_method": "API \ud0a4(User + Key) \ud544\uc694 - \ubb34\ub8cc \ud2b8\ub77c\uc774\uc5bc",
           "code_file": "github/skill-factory/repo/clicksend/clicksend_client.py",
           "method": "ClickSendClient.cancel_sms(message_id)"
         }
@@ -1544,7 +1544,7 @@
     },
     "cloudcontact_AI.md": {
       "service_name": "Cloudcontact AI",
-      "category": "마케팅",
+      "category": "\ub9c8\ucf00\ud305",
       "integration_type": "api_key",
       "integration_confidence": "high",
       "integration_reasoning": "API Key authentication for contact and SMS management",
@@ -1552,28 +1552,28 @@
         "Create Contact": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 연락처 생성 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc5f0\ub77d\ucc98 \uc0dd\uc131 \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/cloudcontact-ai/cloudcontact_ai_client.py",
           "method": "CloudContactAIClient.create_contact(email, phone, first_name, ...)"
         },
         "Sent SMS Messages by Campaign": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - SMS 기록 조회 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - SMS \uae30\ub85d \uc870\ud68c \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/cloudcontact-ai/cloudcontact_ai_client.py",
           "method": "CloudContactAIClient.get_sent_sms_by_campaign(campaign_id)"
         },
         "Get Sent SMS Messages": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - SMS 기록 조회 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - SMS \uae30\ub85d \uc870\ud68c \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/cloudcontact-ai/cloudcontact_ai_client.py",
           "method": "CloudContactAIClient.get_sent_sms_messages(phone, status, ...)"
         },
         "Search Contacts": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 연락처 검색 테스트 가능",
+          "test_method": "API \ud0a4 \ud544\uc694 - \uc5f0\ub77d\ucc98 \uac80\uc0c9 \ud14c\uc2a4\ud2b8 \uac00\ub2a5",
           "code_file": "github/skill-factory/repo/cloudcontact-ai/cloudcontact_ai_client.py",
           "method": "CloudContactAIClient.search_contacts(email, phone, tags, ...)"
         }
@@ -1583,15 +1583,15 @@
     },
     "beamer.md": {
       "service_name": "Beamer",
-      "category": "マーケティング",
+      "category": "\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0",
       "integration_type": "oauth",
       "integration_confidence": "high",
-      "integration_reasoning": "SaaS/OAuth 표준",
+      "integration_reasoning": "SaaS/OAuth \ud45c\uc900",
       "api_actions": {
         "Create Post": {
           "status": "completed",
           "testable": true,
-          "test_method": "API 키 필요 - 무료 플랜으로 테스트 가능 (최대 1,000 요청)",
+          "test_method": "API \ud0a4 \ud544\uc694 - \ubb34\ub8cc \ud50c\ub79c\uc73c\ub85c \ud14c\uc2a4\ud2b8 \uac00\ub2a5 (\ucd5c\ub300 1,000 \uc694\uccad)",
           "code_file": "github/skill-factory/repo/beamer/beamer_client.py",
           "method": "BeamerAPIClient.create_post(post_data)"
         }
@@ -1599,33 +1599,33 @@
       "triggers": {},
       "required_tasks": [
         {
-          "task": "Beamer API 문서 검토",
+          "task": "Beamer API \ubb38\uc11c \uac80\ud1a0",
           "priority": "high",
-          "description": "https://lp.yoom.fun/apps/Beamer 및 공식 API 문서 확인",
+          "description": "https://lp.yoom.fun/apps/Beamer \ubc0f \uacf5\uc2dd API \ubb38\uc11c \ud655\uc778",
           "status": "pending"
         },
         {
-          "task": "Beamer OAuth 앱 등록",
+          "task": "Beamer OAuth \uc571 \ub4f1\ub85d",
           "priority": "high",
-          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "description": "API Console\uc5d0\uc11c OAuth \ud074\ub77c\uc774\uc5b8\ud2b8 \uc0dd\uc131, \ub9ac\ub2e4\uc774\ub809\ud2b8 URI \uc124\uc815",
           "status": "pending"
         },
         {
-          "task": "Client ID 및 Client Secret 획득",
+          "task": "Client ID \ubc0f Client Secret \ud68d\ub4dd",
           "priority": "high",
-          "description": "OAuth 앱에서 인증 정보 획득",
+          "description": "OAuth \uc571\uc5d0\uc11c \uc778\uc99d \uc815\ubcf4 \ud68d\ub4dd",
           "status": "pending"
         },
         {
-          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "task": "\ud14c\uc2a4\ud2b8 \uacc4\uc815 \ub610\ub294 \uc0cc\ub4dc\ubc15\uc2a4 \ud658\uacbd \uad6c\ucd95",
           "priority": "medium",
-          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "description": "\uc2e4\uc81c \uacc4\uc815 \uc0ac\uc6a9 \uc2dc \uc8fc\uc758, \ud14c\uc2a4\ud2b8 \ub370\uc774\ud130\ub85c \uad6c\ud604 \uac80\uc99d",
           "status": "pending"
         },
         {
-          "task": "1개 API 액션 단위 테스트 작성",
+          "task": "1\uac1c API \uc561\uc158 \ub2e8\uc704 \ud14c\uc2a4\ud2b8 \uc791\uc131",
           "priority": "low",
-          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "description": "\uac01 \uc561\uc158 \ubcc4 \ud14c\uc2a4\ud2b8 \ucf54\ub4dc \uc791\uc131, \ud30c\ub77c\ubbf8\ud130 \uac80\uc99d",
           "status": "pending"
         }
       ],
@@ -1634,10 +1634,10 @@
     },
     "drip.md": {
       "service_name": "Drip",
-      "category": "마케팅",
+      "category": "\ub9c8\ucf00\ud305",
       "integration_type": "api_token",
       "integration_confidence": "high",
-      "integration_reasoning": "Drip.com: API Token 인증",
+      "integration_reasoning": "Drip.com: API Token \uc778\uc99d",
       "api_actions": {
         "Remove Subscriber from Workflow": {
           "status": "completed",
@@ -1790,10 +1790,10 @@
     },
     "dub.md": {
       "service_name": "Dub",
-      "category": "마케팅",
+      "category": "\ub9c8\ucf00\ud305",
       "integration_type": "api_token",
       "integration_confidence": "high",
-      "integration_reasoning": "Dub.co: Bearer Token 인증",
+      "integration_reasoning": "Dub.co: Bearer Token \uc778\uc99d",
       "api_actions": {
         "Search Link": {
           "status": "completed",
@@ -1850,10 +1850,10 @@
     },
     "e_goi.md": {
       "service_name": "E-goi",
-      "category": "마케팅",
+      "category": "\ub9c8\ucf00\ud305",
       "integration_type": "api_key",
       "integration_confidence": "high",
-      "integration_reasoning": "E-goi.com: API Key 인증",
+      "integration_reasoning": "E-goi.com: API Key \uc778\uc99d",
       "api_actions": {
         "Delete List": {
           "status": "completed",
@@ -1960,10 +1960,10 @@
     },
     "ecomail.md": {
       "service_name": "Ecomail",
-      "category": "마케팅",
+      "category": "\ub9c8\ucf00\ud305",
       "integration_type": "api_key",
       "integration_confidence": "high",
-      "integration_reasoning": "Ecomailapp.cz: API Key 인증",
+      "integration_reasoning": "Ecomailapp.cz: API Key \uc778\uc99d",
       "api_actions": {
         "Delete Subscriber": {
           "status": "completed",
@@ -2029,10 +2029,10 @@
     },
     "elastic_email.md": {
       "service_name": "Elastic Email",
-      "category": "마케팅",
+      "category": "\ub9c8\ucf00\ud305",
       "integration_type": "api_key",
       "integration_confidence": "high",
-      "integration_reasoning": "ElasticEmail.com: API Key 인증",
+      "integration_reasoning": "ElasticEmail.com: API Key \uc778\uc99d",
       "api_actions": {
         "Add Contact": {
           "status": "completed",
@@ -2090,10 +2090,10 @@
     },
     "elevenlabs.md": {
       "service_name": "ElevenLabs",
-      "category": "마케팅",
+      "category": "\ub9c8\ucf00\ud305",
       "integration_type": "api_key",
       "integration_confidence": "high",
-      "integration_reasoning": "ElevenLabs.io: API Key 인증",
+      "integration_reasoning": "ElevenLabs.io: API Key \uc778\uc99d",
       "api_actions": {
         "Audio Noise Removal": {
           "status": "completed",
@@ -2141,10 +2141,10 @@
     },
     "email_list_verify.md": {
       "service_name": "Email List Verify",
-      "category": "마케팅",
+      "category": "\ub9c8\ucf00\ud305",
       "integration_type": "api_key",
       "integration_confidence": "high",
-      "integration_reasoning": "EmailListVerify.com: API Key 인증",
+      "integration_reasoning": "EmailListVerify.com: API Key \uc778\uc99d",
       "api_actions": {
         "Find Business Email Address": {
           "status": "completed",
@@ -2172,10 +2172,10 @@
     },
     "emailable.md": {
       "service_name": "Emailable",
-      "category": "마케팅",
+      "category": "\ub9c8\ucf00\ud305",
       "integration_type": "api_key",
       "integration_confidence": "high",
-      "integration_reasoning": "Emailable.com: API Key 인증",
+      "integration_reasoning": "Emailable.com: API Key \uc778\uc99d",
       "api_actions": {
         "Verify Email": {
           "status": "completed",
@@ -2188,7 +2188,7 @@
     },
     "emailoctopus.md": {
       "service_name": "EmailOctopus",
-      "category": "마케팅",
+      "category": "\ub9c8\ucf00\ud305",
       "integration_type": "api_key",
       "integration_confidence": "high",
       "integration_reasoning": "EmailOctopus.com: Basic Auth with API Key",
@@ -2277,10 +2277,10 @@
     },
     "beehiiv.md": {
       "service_name": "Beehiiv",
-      "category": "マーケティング",
+      "category": "\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0",
       "integration_type": "oauth",
       "integration_confidence": "high",
-      "integration_reasoning": "SaaS/OAuth 표준",
+      "integration_reasoning": "SaaS/OAuth \ud45c\uc900",
       "api_actions": {
         "Add Tags to Subscription": {
           "status": "completed",
@@ -2382,39 +2382,39 @@
       },
       "required_tasks": [
         {
-          "task": "Beehiiv API 문서 검토",
+          "task": "Beehiiv API \ubb38\uc11c \uac80\ud1a0",
           "priority": "high",
-          "description": "https://lp.yoom.fun/apps/Beehiiv 및 공식 API 문서 확인",
+          "description": "https://lp.yoom.fun/apps/Beehiiv \ubc0f \uacf5\uc2dd API \ubb38\uc11c \ud655\uc778",
           "status": "pending"
         },
         {
-          "task": "Beehiiv OAuth 앱 등록",
+          "task": "Beehiiv OAuth \uc571 \ub4f1\ub85d",
           "priority": "high",
-          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "description": "API Console\uc5d0\uc11c OAuth \ud074\ub77c\uc774\uc5b8\ud2b8 \uc0dd\uc131, \ub9ac\ub2e4\uc774\ub809\ud2b8 URI \uc124\uc815",
           "status": "pending"
         },
         {
-          "task": "Client ID 및 Client Secret 획득",
+          "task": "Client ID \ubc0f Client Secret \ud68d\ub4dd",
           "priority": "high",
-          "description": "OAuth 앱에서 인증 정보 획득",
+          "description": "OAuth \uc571\uc5d0\uc11c \uc778\uc99d \uc815\ubcf4 \ud68d\ub4dd",
           "status": "pending"
         },
         {
-          "task": "7개 트리거용 Webhook 엔드포인트 설정",
+          "task": "7\uac1c \ud2b8\ub9ac\uac70\uc6a9 Webhook \uc5d4\ub4dc\ud3ec\uc778\ud2b8 \uc124\uc815",
           "priority": "medium",
-          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "description": "Webhook URL \uc218\uc2e0\uc6a9 \uc11c\ubc84 \uc124\uc815, \uc774\ubca4\ud2b8 \ucc98\ub9ac \ub85c\uc9c1 \uad6c\ud604",
           "status": "pending"
         },
         {
-          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "task": "\ud14c\uc2a4\ud2b8 \uacc4\uc815 \ub610\ub294 \uc0cc\ub4dc\ubc15\uc2a4 \ud658\uacbd \uad6c\ucd95",
           "priority": "medium",
-          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "description": "\uc2e4\uc81c \uacc4\uc815 \uc0ac\uc6a9 \uc2dc \uc8fc\uc758, \ud14c\uc2a4\ud2b8 \ub370\uc774\ud130\ub85c \uad6c\ud604 \uac80\uc99d",
           "status": "pending"
         },
         {
-          "task": "10개 API 액션 단위 테스트 작성",
+          "task": "10\uac1c API \uc561\uc158 \ub2e8\uc704 \ud14c\uc2a4\ud2b8 \uc791\uc131",
           "priority": "low",
-          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "description": "\uac01 \uc561\uc158 \ubcc4 \ud14c\uc2a4\ud2b8 \ucf54\ub4dc \uc791\uc131, \ud30c\ub77c\ubbf8\ud130 \uac80\uc99d",
           "status": "pending"
         }
       ],
@@ -2423,47 +2423,47 @@
     },
     "bitly.md": {
       "service_name": "Bitly",
-      "category": "マーケティング",
+      "category": "\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0",
       "integration_type": "oauth",
       "integration_confidence": "high",
-      "integration_reasoning": "SaaS/OAuth 표준",
+      "integration_reasoning": "SaaS/OAuth \ud45c\uc900",
       "api_actions": {
-        "Bitlinkを展開する": {
+        "Bitlink\u3092\u5c55\u958b\u3059\u308b": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires Bitly API token. Example: python bitly_api.py expand bit.ly/example"
         },
-        "Bitlinkを作成": {
+        "Bitlink\u3092\u4f5c\u6210": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires Bitly API token. Example: python bitly_api.py shorten https://example.com"
         },
-        "Bitlinkを検索": {
+        "Bitlink\u3092\u691c\u7d22": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires Bitly API token. Example: python bitly_api.py search keyword"
         },
-        "Bitlinkを削除": {
+        "Bitlink\u3092\u524a\u9664": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires Bitly API token. Example: python bitly_api.py delete bit.ly/example"
         },
-        "Bitlinkのクリック数を取得": {
+        "Bitlink\u306e\u30af\u30ea\u30c3\u30af\u6570\u3092\u53d6\u5f97": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires Bitly API token. Example: python bitly_api.py clicks bit.ly/example"
         },
-        "リンクを短縮する": {
+        "\u30ea\u30f3\u30af\u3092\u77ed\u7e2e\u3059\u308b": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires Bitly API token. Example: python bitly_client.py or client.shorten_url(\"https://example.com\")"
         },
-        "Bitlinkのクリックサマリーを取得": {
+        "Bitlink\u306e\u30af\u30ea\u30c3\u30af\u30b5\u30de\u30ea\u30fc\u3092\u53d6\u5f97": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires Bitly API token. Example: python bitly_api.py summary bit.ly/example"
         },
-        "Bitlinkを短縮する": {
+        "Bitlink\u3092\u77ed\u7e2e\u3059\u308b": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires Bitly API token. Example: python bitly_api.py shorten https://example.com"
@@ -2472,33 +2472,33 @@
       "triggers": {},
       "required_tasks": [
         {
-          "task": "Bitly API 문서 검토",
+          "task": "Bitly API \ubb38\uc11c \uac80\ud1a0",
           "priority": "high",
-          "description": "https://lp.yoom.fun/apps/Bitly 및 공식 API 문서 확인",
+          "description": "https://lp.yoom.fun/apps/Bitly \ubc0f \uacf5\uc2dd API \ubb38\uc11c \ud655\uc778",
           "status": "pending"
         },
         {
-          "task": "Bitly OAuth 앱 등록",
+          "task": "Bitly OAuth \uc571 \ub4f1\ub85d",
           "priority": "high",
-          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "description": "API Console\uc5d0\uc11c OAuth \ud074\ub77c\uc774\uc5b8\ud2b8 \uc0dd\uc131, \ub9ac\ub2e4\uc774\ub809\ud2b8 URI \uc124\uc815",
           "status": "pending"
         },
         {
-          "task": "Client ID 및 Client Secret 획득",
+          "task": "Client ID \ubc0f Client Secret \ud68d\ub4dd",
           "priority": "high",
-          "description": "OAuth 앱에서 인증 정보 획득",
+          "description": "OAuth \uc571\uc5d0\uc11c \uc778\uc99d \uc815\ubcf4 \ud68d\ub4dd",
           "status": "pending"
         },
         {
-          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "task": "\ud14c\uc2a4\ud2b8 \uacc4\uc815 \ub610\ub294 \uc0cc\ub4dc\ubc15\uc2a4 \ud658\uacbd \uad6c\ucd95",
           "priority": "medium",
-          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "description": "\uc2e4\uc81c \uacc4\uc815 \uc0ac\uc6a9 \uc2dc \uc8fc\uc758, \ud14c\uc2a4\ud2b8 \ub370\uc774\ud130\ub85c \uad6c\ud604 \uac80\uc99d",
           "status": "pending"
         },
         {
-          "task": "7개 API 액션 단위 테스트 작성",
+          "task": "7\uac1c API \uc561\uc158 \ub2e8\uc704 \ud14c\uc2a4\ud2b8 \uc791\uc131",
           "priority": "low",
-          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "description": "\uac01 \uc561\uc158 \ubcc4 \ud14c\uc2a4\ud2b8 \ucf54\ub4dc \uc791\uc131, \ud30c\ub77c\ubbf8\ud130 \uac80\uc99d",
           "status": "pending"
         }
       ],
@@ -2507,10 +2507,10 @@
     },
     "big_mailer.md": {
       "service_name": "Big_mailer",
-      "category": "マーケティング",
+      "category": "\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0",
       "integration_type": "oauth",
       "integration_confidence": "high",
-      "integration_reasoning": "SaaS/OAuth 표준",
+      "integration_reasoning": "SaaS/OAuth \ud45c\uc900",
       "api_actions": {
         "List Contacts": {
           "status": "completed",
@@ -2546,33 +2546,33 @@
       "triggers": {},
       "required_tasks": [
         {
-          "task": "Big_mailer API 문서 검토",
+          "task": "Big_mailer API \ubb38\uc11c \uac80\ud1a0",
           "priority": "high",
-          "description": "https://lp.yoom.fun/apps/Big_mailer 및 공식 API 문서 확인",
+          "description": "https://lp.yoom.fun/apps/Big_mailer \ubc0f \uacf5\uc2dd API \ubb38\uc11c \ud655\uc778",
           "status": "pending"
         },
         {
-          "task": "Big_mailer OAuth 앱 등록",
+          "task": "Big_mailer OAuth \uc571 \ub4f1\ub85d",
           "priority": "high",
-          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "description": "API Console\uc5d0\uc11c OAuth \ud074\ub77c\uc774\uc5b8\ud2b8 \uc0dd\uc131, \ub9ac\ub2e4\uc774\ub809\ud2b8 URI \uc124\uc815",
           "status": "pending"
         },
         {
-          "task": "Client ID 및 Client Secret 획득",
+          "task": "Client ID \ubc0f Client Secret \ud68d\ub4dd",
           "priority": "high",
-          "description": "OAuth 앱에서 인증 정보 획득",
+          "description": "OAuth \uc571\uc5d0\uc11c \uc778\uc99d \uc815\ubcf4 \ud68d\ub4dd",
           "status": "pending"
         },
         {
-          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "task": "\ud14c\uc2a4\ud2b8 \uacc4\uc815 \ub610\ub294 \uc0cc\ub4dc\ubc15\uc2a4 \ud658\uacbd \uad6c\ucd95",
           "priority": "medium",
-          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "description": "\uc2e4\uc81c \uacc4\uc815 \uc0ac\uc6a9 \uc2dc \uc8fc\uc758, \ud14c\uc2a4\ud2b8 \ub370\uc774\ud130\ub85c \uad6c\ud604 \uac80\uc99d",
           "status": "pending"
         },
         {
-          "task": "6개 API 액션 단위 테스트 작성",
+          "task": "6\uac1c API \uc561\uc158 \ub2e8\uc704 \ud14c\uc2a4\ud2b8 \uc791\uc131",
           "priority": "low",
-          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "description": "\uac01 \uc561\uc158 \ubcc4 \ud14c\uc2a4\ud2b8 \ucf54\ub4dc \uc791\uc131, \ud30c\ub77c\ubbf8\ud130 \uac80\uc99d",
           "status": "pending"
         }
       ],
@@ -2581,22 +2581,22 @@
     },
     "benchmark-email.md": {
       "service_name": "Benchmark Email",
-      "category": "マーケティング",
+      "category": "\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0",
       "integration_type": "oauth",
       "integration_confidence": "high",
-      "integration_reasoning": "SaaS/OAuth 표준",
+      "integration_reasoning": "SaaS/OAuth \ud45c\uc900",
       "api_actions": {
-        "コンタクト情報を更新": {
+        "\u30b3\u30f3\u30bf\u30af\u30c8\u60c5\u5831\u3092\u66f4\u65b0": {
           "status": "completed",
           "testable": true,
           "test_method": "Test with API key, list ID and email. Example: python benchmark_email_api.py update-contact <list_id> test@example.com"
         },
-        "コンタクトを検索": {
+        "\u30b3\u30f3\u30bf\u30af\u30c8\u3092\u691c\u7d22": {
           "status": "completed",
           "testable": true,
           "test_method": "Test with API key and list ID. Example: python benchmark_email_api.py search-contacts <list_id>"
         },
-        "コンタクトを追加": {
+        "\u30b3\u30f3\u30bf\u30af\u30c8\u3092\u8ffd\u52a0": {
           "status": "completed",
           "testable": true,
           "test_method": "Test with API key, list ID and email. Example: python benchmark_email_api.py add-contact <list_id> test@example.com"
@@ -2605,33 +2605,33 @@
       "triggers": {},
       "required_tasks": [
         {
-          "task": "Benchmark Email API 문서 검토",
+          "task": "Benchmark Email API \ubb38\uc11c \uac80\ud1a0",
           "priority": "high",
-          "description": "https://lp.yoom.fun/apps/Benchmark Email 및 공식 API 문서 확인",
+          "description": "https://lp.yoom.fun/apps/Benchmark Email \ubc0f \uacf5\uc2dd API \ubb38\uc11c \ud655\uc778",
           "status": "pending"
         },
         {
-          "task": "Benchmark Email OAuth 앱 등록",
+          "task": "Benchmark Email OAuth \uc571 \ub4f1\ub85d",
           "priority": "high",
-          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "description": "API Console\uc5d0\uc11c OAuth \ud074\ub77c\uc774\uc5b8\ud2b8 \uc0dd\uc131, \ub9ac\ub2e4\uc774\ub809\ud2b8 URI \uc124\uc815",
           "status": "pending"
         },
         {
-          "task": "Client ID 및 Client Secret 획득",
+          "task": "Client ID \ubc0f Client Secret \ud68d\ub4dd",
           "priority": "high",
-          "description": "OAuth 앱에서 인증 정보 획득",
+          "description": "OAuth \uc571\uc5d0\uc11c \uc778\uc99d \uc815\ubcf4 \ud68d\ub4dd",
           "status": "pending"
         },
         {
-          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "task": "\ud14c\uc2a4\ud2b8 \uacc4\uc815 \ub610\ub294 \uc0cc\ub4dc\ubc15\uc2a4 \ud658\uacbd \uad6c\ucd95",
           "priority": "medium",
-          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "description": "\uc2e4\uc81c \uacc4\uc815 \uc0ac\uc6a9 \uc2dc \uc8fc\uc758, \ud14c\uc2a4\ud2b8 \ub370\uc774\ud130\ub85c \uad6c\ud604 \uac80\uc99d",
           "status": "pending"
         },
         {
-          "task": "3개 API 액션 단위 테스트 작성",
+          "task": "3\uac1c API \uc561\uc158 \ub2e8\uc704 \ud14c\uc2a4\ud2b8 \uc791\uc131",
           "priority": "low",
-          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "description": "\uac01 \uc561\uc158 \ubcc4 \ud14c\uc2a4\ud2b8 \ucf54\ub4dc \uc791\uc131, \ud30c\ub77c\ubbf8\ud130 \uac80\uc99d",
           "status": "pending"
         }
       ],
@@ -2640,22 +2640,22 @@
     },
     "bigquery.md": {
       "service_name": "Bigquery",
-      "category": "マーケティング",
+      "category": "\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0",
       "integration_type": "oauth",
       "integration_confidence": "high",
-      "integration_reasoning": "SaaS/OAuth 표준",
+      "integration_reasoning": "SaaS/OAuth \ud45c\uc900",
       "api_actions": {
-        "レコードを検索": {
+        "\u30ec\u30b3\u30fc\u30c9\u3092\u691c\u7d22": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires Google Cloud credentials. Example: python bigquery_api.py search project.dataset.table 100"
         },
-        "クエリを実行": {
+        "\u30af\u30a8\u30ea\u3092\u5b9f\u884c": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires Google Cloud credentials. Example: python bigquery_api.py query 'SELECT COUNT(*) FROM project.dataset.table'"
         },
-        "レコードを作成": {
+        "\u30ec\u30b3\u30fc\u30c9\u3092\u4f5c\u6210": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires Google Cloud credentials. Example: python bigquery_api.py insert project.dataset.table"
@@ -2664,33 +2664,33 @@
       "triggers": {},
       "required_tasks": [
         {
-          "task": "Bigquery API 문서 검토",
+          "task": "Bigquery API \ubb38\uc11c \uac80\ud1a0",
           "priority": "high",
-          "description": "https://lp.yoom.fun/apps/Bigquery 및 공식 API 문서 확인",
+          "description": "https://lp.yoom.fun/apps/Bigquery \ubc0f \uacf5\uc2dd API \ubb38\uc11c \ud655\uc778",
           "status": "pending"
         },
         {
-          "task": "Bigquery OAuth 앱 등록",
+          "task": "Bigquery OAuth \uc571 \ub4f1\ub85d",
           "priority": "high",
-          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "description": "API Console\uc5d0\uc11c OAuth \ud074\ub77c\uc774\uc5b8\ud2b8 \uc0dd\uc131, \ub9ac\ub2e4\uc774\ub809\ud2b8 URI \uc124\uc815",
           "status": "pending"
         },
         {
-          "task": "Client ID 및 Client Secret 획득",
+          "task": "Client ID \ubc0f Client Secret \ud68d\ub4dd",
           "priority": "high",
-          "description": "OAuth 앱에서 인증 정보 획득",
+          "description": "OAuth \uc571\uc5d0\uc11c \uc778\uc99d \uc815\ubcf4 \ud68d\ub4dd",
           "status": "pending"
         },
         {
-          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "task": "\ud14c\uc2a4\ud2b8 \uacc4\uc815 \ub610\ub294 \uc0cc\ub4dc\ubc15\uc2a4 \ud658\uacbd \uad6c\ucd95",
           "priority": "medium",
-          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "description": "\uc2e4\uc81c \uacc4\uc815 \uc0ac\uc6a9 \uc2dc \uc8fc\uc758, \ud14c\uc2a4\ud2b8 \ub370\uc774\ud130\ub85c \uad6c\ud604 \uac80\uc99d",
           "status": "pending"
         },
         {
-          "task": "3개 API 액션 단위 테스트 작성",
+          "task": "3\uac1c API \uc561\uc158 \ub2e8\uc704 \ud14c\uc2a4\ud2b8 \uc791\uc131",
           "priority": "low",
-          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "description": "\uac01 \uc561\uc158 \ubcc4 \ud14c\uc2a4\ud2b8 \ucf54\ub4dc \uc791\uc131, \ud30c\ub77c\ubbf8\ud130 \uac80\uc99d",
           "status": "pending"
         }
       ],
@@ -2699,10 +2699,10 @@
     },
     "botstar.md": {
       "service_name": "Botstar",
-      "category": "マーケティング",
+      "category": "\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0",
       "integration_type": "oauth",
       "integration_confidence": "high",
-      "integration_reasoning": "SaaS/OAuth 표준",
+      "integration_reasoning": "SaaS/OAuth \ud45c\uc900",
       "api_actions": {
         "Create Entity Item": {
           "status": "completed",
@@ -2733,33 +2733,33 @@
       "triggers": {},
       "required_tasks": [
         {
-          "task": "Botstar API 문서 검토",
+          "task": "Botstar API \ubb38\uc11c \uac80\ud1a0",
           "priority": "high",
-          "description": "https://lp.yoom.fun/apps/Botstar 및 공식 API 문서 확인",
+          "description": "https://lp.yoom.fun/apps/Botstar \ubc0f \uacf5\uc2dd API \ubb38\uc11c \ud655\uc778",
           "status": "pending"
         },
         {
-          "task": "Botstar OAuth 앱 등록",
+          "task": "Botstar OAuth \uc571 \ub4f1\ub85d",
           "priority": "high",
-          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "description": "API Console\uc5d0\uc11c OAuth \ud074\ub77c\uc774\uc5b8\ud2b8 \uc0dd\uc131, \ub9ac\ub2e4\uc774\ub809\ud2b8 URI \uc124\uc815",
           "status": "pending"
         },
         {
-          "task": "Client ID 및 Client Secret 획득",
+          "task": "Client ID \ubc0f Client Secret \ud68d\ub4dd",
           "priority": "high",
-          "description": "OAuth 앱에서 인증 정보 획득",
+          "description": "OAuth \uc571\uc5d0\uc11c \uc778\uc99d \uc815\ubcf4 \ud68d\ub4dd",
           "status": "pending"
         },
         {
-          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "task": "\ud14c\uc2a4\ud2b8 \uacc4\uc815 \ub610\ub294 \uc0cc\ub4dc\ubc15\uc2a4 \ud658\uacbd \uad6c\ucd95",
           "priority": "medium",
-          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "description": "\uc2e4\uc81c \uacc4\uc815 \uc0ac\uc6a9 \uc2dc \uc8fc\uc758, \ud14c\uc2a4\ud2b8 \ub370\uc774\ud130\ub85c \uad6c\ud604 \uac80\uc99d",
           "status": "pending"
         },
         {
-          "task": "5개 API 액션 단위 테스트 작성",
+          "task": "5\uac1c API \uc561\uc158 \ub2e8\uc704 \ud14c\uc2a4\ud2b8 \uc791\uc131",
           "priority": "low",
-          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "description": "\uac01 \uc561\uc158 \ubcc4 \ud14c\uc2a4\ud2b8 \ucf54\ub4dc \uc791\uc131, \ud30c\ub77c\ubbf8\ud130 \uac80\uc99d",
           "status": "pending"
         }
       ],
@@ -2768,10 +2768,10 @@
     },
     "bouncer.md": {
       "service_name": "Bouncer",
-      "category": "マーケティング",
+      "category": "\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0",
       "integration_type": "oauth",
       "integration_confidence": "high",
-      "integration_reasoning": "SaaS/OAuth 표준",
+      "integration_reasoning": "SaaS/OAuth \ud45c\uc900",
       "api_actions": {
         "Verification Domain": {
           "status": "completed",
@@ -2787,33 +2787,33 @@
       "triggers": {},
       "required_tasks": [
         {
-          "task": "Bouncer API 문서 검토",
+          "task": "Bouncer API \ubb38\uc11c \uac80\ud1a0",
           "priority": "high",
-          "description": "https://lp.yoom.fun/apps/Bouncer 및 공식 API 문서 확인",
+          "description": "https://lp.yoom.fun/apps/Bouncer \ubc0f \uacf5\uc2dd API \ubb38\uc11c \ud655\uc778",
           "status": "pending"
         },
         {
-          "task": "Bouncer OAuth 앱 등록",
+          "task": "Bouncer OAuth \uc571 \ub4f1\ub85d",
           "priority": "high",
-          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "description": "API Console\uc5d0\uc11c OAuth \ud074\ub77c\uc774\uc5b8\ud2b8 \uc0dd\uc131, \ub9ac\ub2e4\uc774\ub809\ud2b8 URI \uc124\uc815",
           "status": "pending"
         },
         {
-          "task": "Client ID 및 Client Secret 획득",
+          "task": "Client ID \ubc0f Client Secret \ud68d\ub4dd",
           "priority": "high",
-          "description": "OAuth 앱에서 인증 정보 획득",
+          "description": "OAuth \uc571\uc5d0\uc11c \uc778\uc99d \uc815\ubcf4 \ud68d\ub4dd",
           "status": "pending"
         },
         {
-          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "task": "\ud14c\uc2a4\ud2b8 \uacc4\uc815 \ub610\ub294 \uc0cc\ub4dc\ubc15\uc2a4 \ud658\uacbd \uad6c\ucd95",
           "priority": "medium",
-          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "description": "\uc2e4\uc81c \uacc4\uc815 \uc0ac\uc6a9 \uc2dc \uc8fc\uc758, \ud14c\uc2a4\ud2b8 \ub370\uc774\ud130\ub85c \uad6c\ud604 \uac80\uc99d",
           "status": "pending"
         },
         {
-          "task": "2개 API 액션 단위 테스트 작성",
+          "task": "2\uac1c API \uc561\uc158 \ub2e8\uc704 \ud14c\uc2a4\ud2b8 \uc791\uc131",
           "priority": "low",
-          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "description": "\uac01 \uc561\uc158 \ubcc4 \ud14c\uc2a4\ud2b8 \ucf54\ub4dc \uc791\uc131, \ud30c\ub77c\ubbf8\ud130 \uac80\uc99d",
           "status": "pending"
         }
       ],
@@ -2822,44 +2822,44 @@
     },
     "bownow.md": {
       "service_name": "Bownow",
-      "category": "マーケティング",
+      "category": "\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0",
       "integration_type": "oauth",
       "integration_confidence": "high",
-      "integration_reasoning": "SaaS/OAuth 표준",
+      "integration_reasoning": "SaaS/OAuth \ud45c\uc900",
       "api_actions": {
-        "リード情報を取得": {
+        "\u30ea\u30fc\u30c9\u60c5\u5831\u3092\u53d6\u5f97": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires Bownow API key. Example: python bownow_api.py get <lead_id>"
         },
-        "リード情報を更新": {
+        "\u30ea\u30fc\u30c9\u60c5\u5831\u3092\u66f4\u65b0": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires Bownow API key. Example: python bownow_api.py update <lead_id>"
         },
-        "リード情報を削除": {
+        "\u30ea\u30fc\u30c9\u60c5\u5831\u3092\u524a\u9664": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires Bownow API key. Example: python bownow_api.py delete <lead_id>"
         },
-        "リード情報を検索": {
+        "\u30ea\u30fc\u30c9\u60c5\u5831\u3092\u691c\u7d22": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires Bownow API key. Example: python bownow_api.py search test@example.com"
         },
-        "リード情報を作成": {
+        "\u30ea\u30fc\u30c9\u60c5\u5831\u3092\u4f5c\u6210": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires Bownow API key. Example: python bownow_api.py create test@example.com"
         }
       },
       "triggers": {
-        "リード情報更新通知を受け取ったら（Webhook）": {
+        "\u30ea\u30fc\u30c9\u60c5\u5831\u66f4\u65b0\u901a\u77e5\u3092\u53d7\u3051\u53d6\u3063\u305f\u3089\uff08Webhook\uff09": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires public webhook endpoint. Use BownowWebhooks class with Flask server"
         },
-        "フォームコンバージョン通知を受け取ったら（Webhook）": {
+        "\u30d5\u30a9\u30fc\u30e0\u30b3\u30f3\u30d0\u30fc\u30b8\u30e7\u30f3\u901a\u77e5\u3092\u53d7\u3051\u53d6\u3063\u305f\u3089\uff08Webhook\uff09": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires public webhook endpoint. Example: python bownow_api.py webhook 8080"
@@ -2867,39 +2867,39 @@
       },
       "required_tasks": [
         {
-          "task": "Bownow API 문서 검토",
+          "task": "Bownow API \ubb38\uc11c \uac80\ud1a0",
           "priority": "high",
-          "description": "https://lp.yoom.fun/apps/Bownow 및 공식 API 문서 확인",
+          "description": "https://lp.yoom.fun/apps/Bownow \ubc0f \uacf5\uc2dd API \ubb38\uc11c \ud655\uc778",
           "status": "pending"
         },
         {
-          "task": "Bownow OAuth 앱 등록",
+          "task": "Bownow OAuth \uc571 \ub4f1\ub85d",
           "priority": "high",
-          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "description": "API Console\uc5d0\uc11c OAuth \ud074\ub77c\uc774\uc5b8\ud2b8 \uc0dd\uc131, \ub9ac\ub2e4\uc774\ub809\ud2b8 URI \uc124\uc815",
           "status": "pending"
         },
         {
-          "task": "Client ID 및 Client Secret 획득",
+          "task": "Client ID \ubc0f Client Secret \ud68d\ub4dd",
           "priority": "high",
-          "description": "OAuth 앱에서 인증 정보 획득",
+          "description": "OAuth \uc571\uc5d0\uc11c \uc778\uc99d \uc815\ubcf4 \ud68d\ub4dd",
           "status": "pending"
         },
         {
-          "task": "2개 트리거용 Webhook 엔드포인트 설정",
+          "task": "2\uac1c \ud2b8\ub9ac\uac70\uc6a9 Webhook \uc5d4\ub4dc\ud3ec\uc778\ud2b8 \uc124\uc815",
           "priority": "medium",
-          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "description": "Webhook URL \uc218\uc2e0\uc6a9 \uc11c\ubc84 \uc124\uc815, \uc774\ubca4\ud2b8 \ucc98\ub9ac \ub85c\uc9c1 \uad6c\ud604",
           "status": "pending"
         },
         {
-          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "task": "\ud14c\uc2a4\ud2b8 \uacc4\uc815 \ub610\ub294 \uc0cc\ub4dc\ubc15\uc2a4 \ud658\uacbd \uad6c\ucd95",
           "priority": "medium",
-          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "description": "\uc2e4\uc81c \uacc4\uc815 \uc0ac\uc6a9 \uc2dc \uc8fc\uc758, \ud14c\uc2a4\ud2b8 \ub370\uc774\ud130\ub85c \uad6c\ud604 \uac80\uc99d",
           "status": "pending"
         },
         {
-          "task": "5개 API 액션 단위 테스트 작성",
+          "task": "5\uac1c API \uc561\uc158 \ub2e8\uc704 \ud14c\uc2a4\ud2b8 \uc791\uc131",
           "priority": "low",
-          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "description": "\uac01 \uc561\uc158 \ubcc4 \ud14c\uc2a4\ud2b8 \ucf54\ub4dc \uc791\uc131, \ud30c\ub77c\ubbf8\ud130 \uac80\uc99d",
           "status": "pending"
         }
       ],
@@ -2908,104 +2908,104 @@
     },
     "brevo.md": {
       "service_name": "Brevo",
-      "category": "マーケティング",
+      "category": "\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0",
       "integration_type": "oauth",
       "integration_confidence": "high",
-      "integration_reasoning": "SaaS/OAuth 표준",
+      "integration_reasoning": "SaaS/OAuth \ud45c\uc900",
       "api_actions": {
-        "コンタクトを取得": {
+        "\u30b3\u30f3\u30bf\u30af\u30c8\u3092\u53d6\u5f97": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires Brevo API key"
         },
-        "SMSキャンペーンを作成": {
+        "SMS\u30ad\u30e3\u30f3\u30da\u30fc\u30f3\u3092\u4f5c\u6210": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires Brevo API key"
         },
-        "WhatsAppキャンペーンの作成と送信": {
+        "WhatsApp\u30ad\u30e3\u30f3\u30da\u30fc\u30f3\u306e\u4f5c\u6210\u3068\u9001\u4fe1": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires Brevo API key"
         },
-        "メールキャンペーンレポートを取得": {
+        "\u30e1\u30fc\u30eb\u30ad\u30e3\u30f3\u30da\u30fc\u30f3\u30ec\u30dd\u30fc\u30c8\u3092\u53d6\u5f97": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires Brevo API key"
         },
-        "キャンペーンレポートを送信": {
+        "\u30ad\u30e3\u30f3\u30da\u30fc\u30f3\u30ec\u30dd\u30fc\u30c8\u3092\u9001\u4fe1": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires Brevo API key"
         },
-        "SMSキャンペーンを即時送信": {
+        "SMS\u30ad\u30e3\u30f3\u30da\u30fc\u30f3\u3092\u5373\u6642\u9001\u4fe1": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires Brevo API key"
         },
-        "コンタクトを作成": {
+        "\u30b3\u30f3\u30bf\u30af\u30c8\u3092\u4f5c\u6210": {
           "status": "completed",
           "testable": true,
           "test_method": "Test with API key"
         },
-        "コンタクトを更新": {
+        "\u30b3\u30f3\u30bf\u30af\u30c8\u3092\u66f4\u65b0": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires Brevo API key"
         },
-        "取引メールを配信": {
+        "\u53d6\u5f15\u30e1\u30fc\u30eb\u3092\u914d\u4fe1": {
           "status": "completed",
           "testable": true,
           "test_method": "Test with API key"
         },
-        "既存のコンタクトをリストに追加": {
+        "\u65e2\u5b58\u306e\u30b3\u30f3\u30bf\u30af\u30c8\u3092\u30ea\u30b9\u30c8\u306b\u8ffd\u52a0": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires Brevo API key"
         },
-        "トランザクションメールを配信": {
+        "\u30c8\u30e9\u30f3\u30b6\u30af\u30b7\u30e7\u30f3\u30e1\u30fc\u30eb\u3092\u914d\u4fe1": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires Brevo API key"
         }
       },
       "triggers": {
-        "マーケティングメールが開封されたら（Webhook）": {
+        "\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0\u30e1\u30fc\u30eb\u304c\u958b\u5c01\u3055\u308c\u305f\u3089\uff08Webhook\uff09": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires public webhook endpoint"
         },
-        "トランザクションメールがクリックされたら（Webhook）": {
+        "\u30c8\u30e9\u30f3\u30b6\u30af\u30b7\u30e7\u30f3\u30e1\u30fc\u30eb\u304c\u30af\u30ea\u30c3\u30af\u3055\u308c\u305f\u3089\uff08Webhook\uff09": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires public webhook endpoint"
         },
-        "マーケティングメールが配信されたら（Webhook）": {
+        "\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0\u30e1\u30fc\u30eb\u304c\u914d\u4fe1\u3055\u308c\u305f\u3089\uff08Webhook\uff09": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires public webhook endpoint"
         },
-        "トランザクションメールが開封されたら（Webhook）": {
+        "\u30c8\u30e9\u30f3\u30b6\u30af\u30b7\u30e7\u30f3\u30e1\u30fc\u30eb\u304c\u958b\u5c01\u3055\u308c\u305f\u3089\uff08Webhook\uff09": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires public webhook endpoint"
         },
-        "マーケティングメールの配信が停止されたら（Webhook）": {
+        "\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0\u30e1\u30fc\u30eb\u306e\u914d\u4fe1\u304c\u505c\u6b62\u3055\u308c\u305f\u3089\uff08Webhook\uff09": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires public webhook endpoint"
         },
-        "マーケティングメールのリンクがクリックされたら（Webhook）": {
+        "\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0\u30e1\u30fc\u30eb\u306e\u30ea\u30f3\u30af\u304c\u30af\u30ea\u30c3\u30af\u3055\u308c\u305f\u3089\uff08Webhook\uff09": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires public webhook endpoint"
         },
-        "コンタクトが新たに作成されたら": {
+        "\u30b3\u30f3\u30bf\u30af\u30c8\u304c\u65b0\u305f\u306b\u4f5c\u6210\u3055\u308c\u305f\u3089": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires public webhook endpoint"
         },
-        "トランザクションメールが配信されたら（Webhook）": {
+        "\u30c8\u30e9\u30f3\u30b6\u30af\u30b7\u30e7\u30f3\u30e1\u30fc\u30eb\u304c\u914d\u4fe1\u3055\u308c\u305f\u3089\uff08Webhook\uff09": {
           "status": "completed",
           "testable": true,
           "test_method": "Requires public webhook endpoint"
@@ -3013,39 +3013,39 @@
       },
       "required_tasks": [
         {
-          "task": "Brevo API 문서 검토",
+          "task": "Brevo API \ubb38\uc11c \uac80\ud1a0",
           "priority": "high",
-          "description": "https://lp.yoom.fun/apps/Brevo 및 공식 API 문서 확인",
+          "description": "https://lp.yoom.fun/apps/Brevo \ubc0f \uacf5\uc2dd API \ubb38\uc11c \ud655\uc778",
           "status": "pending"
         },
         {
-          "task": "Brevo OAuth 앱 등록",
+          "task": "Brevo OAuth \uc571 \ub4f1\ub85d",
           "priority": "high",
-          "description": "API Console에서 OAuth 클라이언트 생성, 리다이렉트 URI 설정",
+          "description": "API Console\uc5d0\uc11c OAuth \ud074\ub77c\uc774\uc5b8\ud2b8 \uc0dd\uc131, \ub9ac\ub2e4\uc774\ub809\ud2b8 URI \uc124\uc815",
           "status": "pending"
         },
         {
-          "task": "Client ID 및 Client Secret 획득",
+          "task": "Client ID \ubc0f Client Secret \ud68d\ub4dd",
           "priority": "high",
-          "description": "OAuth 앱에서 인증 정보 획득",
+          "description": "OAuth \uc571\uc5d0\uc11c \uc778\uc99d \uc815\ubcf4 \ud68d\ub4dd",
           "status": "pending"
         },
         {
-          "task": "8개 트리거용 Webhook 엔드포인트 설정",
+          "task": "8\uac1c \ud2b8\ub9ac\uac70\uc6a9 Webhook \uc5d4\ub4dc\ud3ec\uc778\ud2b8 \uc124\uc815",
           "priority": "medium",
-          "description": "Webhook URL 수신용 서버 설정, 이벤트 처리 로직 구현",
+          "description": "Webhook URL \uc218\uc2e0\uc6a9 \uc11c\ubc84 \uc124\uc815, \uc774\ubca4\ud2b8 \ucc98\ub9ac \ub85c\uc9c1 \uad6c\ud604",
           "status": "pending"
         },
         {
-          "task": "테스트 계정 또는 샌드박스 환경 구축",
+          "task": "\ud14c\uc2a4\ud2b8 \uacc4\uc815 \ub610\ub294 \uc0cc\ub4dc\ubc15\uc2a4 \ud658\uacbd \uad6c\ucd95",
           "priority": "medium",
-          "description": "실제 계정 사용 시 주의, 테스트 데이터로 구현 검증",
+          "description": "\uc2e4\uc81c \uacc4\uc815 \uc0ac\uc6a9 \uc2dc \uc8fc\uc758, \ud14c\uc2a4\ud2b8 \ub370\uc774\ud130\ub85c \uad6c\ud604 \uac80\uc99d",
           "status": "pending"
         },
         {
-          "task": "10개 API 액션 단위 테스트 작성",
+          "task": "10\uac1c API \uc561\uc158 \ub2e8\uc704 \ud14c\uc2a4\ud2b8 \uc791\uc131",
           "priority": "low",
-          "description": "각 액션 별 테스트 코드 작성, 파라미터 검증",
+          "description": "\uac01 \uc561\uc158 \ubcc4 \ud14c\uc2a4\ud2b8 \ucf54\ub4dc \uc791\uc131, \ud30c\ub77c\ubbf8\ud130 \uac80\uc99d",
           "status": "pending"
         }
       ],
@@ -3054,10 +3054,10 @@
     },
     "agendor.md": {
       "service_name": "Agendor",
-      "category": "セールス",
+      "category": "\u30bb\u30fc\u30eb\u30b9",
       "integration_type": "api_key",
       "integration_confidence": "high",
-      "integration_reasoning": "API Key 인증 (Token: {api_token} in Authorization header)",
+      "integration_reasoning": "API Key \uc778\uc99d (Token: {api_token} in Authorization header)",
       "api_actions": {
         "Create Organization": {
           "status": "completed",
@@ -3304,21 +3304,21 @@
       },
       "required_tasks": [
         {
-          "task": "Agendor API 문서 검토",
+          "task": "Agendor API \ubb38\uc11c \uac80\ud1a0",
           "priority": "high",
-          "description": "https://api.agendor.com.br/docs/ 확인",
+          "description": "https://api.agendor.com.br/docs/ \ud655\uc778",
           "status": "completed"
         },
         {
-          "task": "API 토큰 획득",
+          "task": "API \ud1a0\ud070 \ud68d\ub4dd",
           "priority": "high",
-          "description": "https://app.agendor.com.br/settings/api에서 API 토큰 발급",
+          "description": "https://app.agendor.com.br/settings/api\uc5d0\uc11c API \ud1a0\ud070 \ubc1c\uae09",
           "status": "pending"
         },
         {
-          "task": "테스트 환경 구축",
+          "task": "\ud14c\uc2a4\ud2b8 \ud658\uacbd \uad6c\ucd95",
           "priority": "medium",
-          "description": "실제 API 토큰으로 27개 API 액션 테스트",
+          "description": "\uc2e4\uc81c API \ud1a0\ud070\uc73c\ub85c 27\uac1c API \uc561\uc158 \ud14c\uc2a4\ud2b8",
           "status": "pending"
         }
       ],
@@ -3327,36 +3327,36 @@
     },
     "amptalk.md": {
       "service_name": "Amptalk",
-      "category": "セールス",
+      "category": "\u30bb\u30fc\u30eb\u30b9",
       "integration_type": "api_key",
       "integration_confidence": "high",
-      "integration_reasoning": "API Key 인증 (X-API-Key header)",
+      "integration_reasoning": "API Key \uc778\uc99d (X-API-Key header)",
       "api_actions": {
-        "通話の要約を取得": {
+        "\u901a\u8a71\u306e\u8981\u7d04\u3092\u53d6\u5f97": {
           "status": "completed",
           "testable": true,
           "test_method": "Test with API key. Example: python amptalk_client.py or client.get_call_summary(...)",
           "code_file": "github/skill-factory/repo/amptalk/amptalk_client.py"
         },
-        "分析情報を取得": {
+        "\u5206\u6790\u60c5\u5831\u3092\u53d6\u5f97": {
           "status": "completed",
           "testable": true,
           "test_method": "Test with API key. Example: python amptalk_client.py or client.get_call_analysis(...)",
           "code_file": "github/skill-factory/repo/amptalk/amptalk_client.py"
         },
-        "ユーザーの一覧を取得": {
+        "\u30e6\u30fc\u30b6\u30fc\u306e\u4e00\u89a7\u3092\u53d6\u5f97": {
           "status": "completed",
           "testable": true,
           "test_method": "Test with API key. Example: python amptalk_client.py or client.get_users(...)",
           "code_file": "github/skill-factory/repo/amptalk/amptalk_client.py"
         },
-        "通話を検索": {
+        "\u901a\u8a71\u3092\u691c\u7d22": {
           "status": "completed",
           "testable": true,
           "test_method": "Test with API key. Example: python amptalk_client.py or client.search_calls(...)",
           "code_file": "github/skill-factory/repo/amptalk/amptalk_client.py"
         },
-        "通話を取得": {
+        "\u901a\u8a71\u3092\u53d6\u5f97": {
           "status": "completed",
           "testable": true,
           "test_method": "Test with API key. Example: python amptalk_client.py or client.get_call(...)",
@@ -3364,7 +3364,7 @@
         }
       },
       "triggers": {
-        "通話が完了したら": {
+        "\u901a\u8a71\u304c\u5b8c\u4e86\u3057\u305f\u3089": {
           "status": "completed",
           "testable": false,
           "test_method": "Webhook endpoint required. Use register_webhook() method",
@@ -3373,21 +3373,21 @@
       },
       "required_tasks": [
         {
-          "task": "Amptalk API 문서 검토",
+          "task": "Amptalk API \ubb38\uc11c \uac80\ud1a0",
           "priority": "high",
-          "description": "API 문서 확인",
+          "description": "API \ubb38\uc11c \ud655\uc778",
           "status": "completed"
         },
         {
-          "task": "API 키 획득",
+          "task": "API \ud0a4 \ud68d\ub4dd",
           "priority": "high",
-          "description": "API 키 발급 필요",
+          "description": "API \ud0a4 \ubc1c\uae09 \ud544\uc694",
           "status": "pending"
         },
         {
-          "task": "테스트 환경 구축",
+          "task": "\ud14c\uc2a4\ud2b8 \ud658\uacbd \uad6c\ucd95",
           "priority": "medium",
-          "description": "실제 API 키로 5개 API 액션 테스트",
+          "description": "\uc2e4\uc81c API \ud0a4\ub85c 5\uac1c API \uc561\uc158 \ud14c\uc2a4\ud2b8",
           "status": "pending"
         }
       ],
@@ -3396,60 +3396,60 @@
     },
     "apollo.md": {
       "service_name": "Apollo",
-      "category": "セールス",
+      "category": "\u30bb\u30fc\u30eb\u30b9",
       "integration_type": "api_key",
       "integration_confidence": "high",
-      "integration_reasoning": "API Key 인증 (Api-Key header)",
+      "integration_reasoning": "API Key \uc778\uc99d (Api-Key header)",
       "api_actions": {
-        "アカウントを更新": {
+        "\u30a2\u30ab\u30a6\u30f3\u30c8\u3092\u66f4\u65b0": {
           "status": "completed",
           "testable": true,
           "test_method": "Test with API key. Example: python apollo_client.py or client.update_account(...)",
           "code_file": "github/skill-factory/repo/apollo/apollo_client.py"
         },
-        "コンタクトを検索": {
+        "\u30b3\u30f3\u30bf\u30af\u30c8\u3092\u691c\u7d22": {
           "status": "completed",
           "testable": true,
           "test_method": "Test with API key. Example: python apollo_client.py or client.search_contacts(...)",
           "code_file": "github/skill-factory/repo/apollo/apollo_client.py"
         },
-        "人物情報のエンリッチメント": {
+        "\u4eba\u7269\u60c5\u5831\u306e\u30a8\u30f3\u30ea\u30c3\u30c1\u30e1\u30f3\u30c8": {
           "status": "completed",
           "testable": true,
           "test_method": "Test with API key. Example: python apollo_client.py or client.enrich_person(...)",
           "code_file": "github/skill-factory/repo/apollo/apollo_client.py"
         },
-        "組織情報のエンリッチメント": {
+        "\u7d44\u7e54\u60c5\u5831\u306e\u30a8\u30f3\u30ea\u30c3\u30c1\u30e1\u30f3\u30c8": {
           "status": "completed",
           "testable": true,
           "test_method": "Test with API key. Example: python apollo_client.py or client.enrich_organization(...)",
           "code_file": "github/skill-factory/repo/apollo/apollo_client.py"
         },
-        "人物情報を検索": {
+        "\u4eba\u7269\u60c5\u5831\u3092\u691c\u7d22": {
           "status": "completed",
           "testable": true,
           "test_method": "Test with API key. Example: python apollo_client.py or client.search_people(...)",
           "code_file": "github/skill-factory/repo/apollo/apollo_client.py"
         },
-        "アカウントを検索": {
+        "\u30a2\u30ab\u30a6\u30f3\u30c8\u3092\u691c\u7d22": {
           "status": "completed",
           "testable": true,
           "test_method": "Test with API key. Example: python apollo_client.py or client.search_accounts(...)",
           "code_file": "github/skill-factory/repo/apollo/apollo_client.py"
         },
-        "コンタクトを作成": {
+        "\u30b3\u30f3\u30bf\u30af\u30c8\u3092\u4f5c\u6210": {
           "status": "completed",
           "testable": true,
           "test_method": "Test with API key. Example: python apollo_client.py or client.create_contact(...)",
           "code_file": "github/skill-factory/repo/apollo/apollo_client.py"
         },
-        "コンタクトを更新": {
+        "\u30b3\u30f3\u30bf\u30af\u30c8\u3092\u66f4\u65b0": {
           "status": "completed",
           "testable": true,
           "test_method": "Test with API key. Example: python apollo_client.py or client.update_contact(...)",
           "code_file": "github/skill-factory/repo/apollo/apollo_client.py"
         },
-        "アカウントを作成": {
+        "\u30a2\u30ab\u30a6\u30f3\u30c8\u3092\u4f5c\u6210": {
           "status": "completed",
           "testable": true,
           "test_method": "Test with API key. Example: python apollo_client.py or client.create_account(...)",
@@ -3457,19 +3457,19 @@
         }
       },
       "triggers": {
-        "コンタクトが作成されたら": {
+        "\u30b3\u30f3\u30bf\u30af\u30c8\u304c\u4f5c\u6210\u3055\u308c\u305f\u3089": {
           "status": "completed",
           "testable": false,
           "test_method": "Webhook endpoint required. Use register_webhook() method",
           "webhook_method": "ApolloClient.register_webhook(callback_url, events)"
         },
-        "コンタクトが更新されたら": {
+        "\u30b3\u30f3\u30bf\u30af\u30c8\u304c\u66f4\u65b0\u3055\u308c\u305f\u3089": {
           "status": "completed",
           "testable": false,
           "test_method": "Webhook endpoint required. Use register_webhook() method",
           "webhook_method": "ApolloClient.register_webhook(callback_url, events)"
         },
-        "アカウントが作成されたら": {
+        "\u30a2\u30ab\u30a6\u30f3\u30c8\u304c\u4f5c\u6210\u3055\u308c\u305f\u3089": {
           "status": "completed",
           "testable": false,
           "test_method": "Webhook endpoint required. Use register_webhook() method",
@@ -3478,21 +3478,21 @@
       },
       "required_tasks": [
         {
-          "task": "Apollo API 문서 검토",
+          "task": "Apollo API \ubb38\uc11c \uac80\ud1a0",
           "priority": "high",
-          "description": "https://api.apollo.io/v1 확인",
+          "description": "https://api.apollo.io/v1 \ud655\uc778",
           "status": "completed"
         },
         {
-          "task": "API 키 획득",
+          "task": "API \ud0a4 \ud68d\ub4dd",
           "priority": "high",
-          "description": "https://app.apollo.io/settings/api에서 API 키 발급",
+          "description": "https://app.apollo.io/settings/api\uc5d0\uc11c API \ud0a4 \ubc1c\uae09",
           "status": "pending"
         },
         {
-          "task": "테스트 환경 구축",
+          "task": "\ud14c\uc2a4\ud2b8 \ud658\uacbd \uad6c\ucd95",
           "priority": "medium",
-          "description": "실제 API 키로 9개 API 액션 테스트",
+          "description": "\uc2e4\uc81c API \ud0a4\ub85c 9\uac1c API \uc561\uc158 \ud14c\uc2a4\ud2b8",
           "status": "pending"
         }
       ],
