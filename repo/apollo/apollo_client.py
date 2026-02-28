@@ -1,752 +1,363 @@
 """
 Apollo API Client
 
-Supports 9 API actions for B2B sales intelligence:
-- Update account (アカウントを更新)
-- Search contacts (コンタクトを検索)
-- Enrich person data (人物情報のエンリッチメント)
-- Enrich organization data (組織情報のエンリッチメント)
-- Search people (人物情報を検索)
-- Search accounts (アカウントを検索)
-- Create contact (コンタクトを作成)
-- Update contact (コンタクトを更新)
-- Create account (アカウントを作成)
+Sales intelligence and prospecting platform for:
+- Account management
+- Contact management
+- Enrichment for people and organizations
+- Search and discover
 
-And 3 triggers:
-- Contact created (コンタクトが作成されたら)
-- Contact updated (コンタクトが更新されたら)
-- Account created (アカウントが作成されたら)
+API Actions (9):
+1. アカウントを更新 (Update Account)
+2. コンタクトを検索 (Search Contacts)
+3. 人物情報のエンリッチメント (Enrich Person)
+4. 組織情報のエンリッチメント (Enrich Organization)
+5. 人物情報を検索 (Search People)
+6. アカウントを検索 (Search Accounts)
+7. コンタクトを作成 (Create Contact)
+8. コンタクトを更新 (Update Contact)
+9. アカウントを作成 (Create Account)
 
-API Reference: https://api.apollo.io/v1
+Triggers (3):
+- コンタクトが作成されたら (When contact is created)
+- コンタクトが更新されたら (When contact is updated)
+- アカウントが作成されたら (When account is created)
+
+Authentication: API Key
+Base URL: https://api.apollo.io/v1
 """
 
-import requests
+import aiohttp
+import asyncio
+from datetime import datetime
 from typing import Optional, Dict, Any, List
 from dataclasses import dataclass
 
 
 @dataclass
 class Account:
-    """Account (organization/company) representation"""
+    """Account model"""
     id: Optional[str] = None
     name: Optional[str] = None
     website: Optional[str] = None
     industry: Optional[str] = None
-    size: Optional[str] = None
-    revenue: Optional[str] = None
+    employee_count: Optional[int] = None
+    annual_revenue: Optional[float] = None
+    founded_year: Optional[int] = None
     linkedin_url: Optional[str] = None
-    phone: Optional[str] = None
-    address: Optional[Dict[str, Any]] = None
     created_at: Optional[str] = None
-    updated_at: Optional[str] = None
 
 
 @dataclass
 class Contact:
-    """Contact (person) representation"""
+    """Contact model"""
     id: Optional[str] = None
     first_name: Optional[str] = None
     last_name: Optional[str] = None
     email: Optional[str] = None
     title: Optional[str] = None
-    department: Optional[str] = None
     organization_id: Optional[str] = None
-    linkedin_url: Optional[str] = None
-    phone: Optional[str] = None
-    location: Optional[Dict[str, Any]] = None
-    status: Optional[str] = None
-    created_at: Optional[str] = None
-    updated_at: Optional[str] = None
-
-
-@dataclass
-class EnrichedPerson:
-    """Enriched person data"""
-    first_name: Optional[str] = None
-    last_name: Optional[str] = None
-    email: Optional[str] = None
-    title: Optional[str] = None
     organization_name: Optional[str] = None
-    organization_id: Optional[str] = None
     linkedin_url: Optional[str] = None
-    phone: Optional[str] = None
-    location: Optional[Dict[str, Any]] = None
-    confirmed_at: Optional[str] = None
-    confidence_score: Optional[float] = None
+    phone_number: Optional[str] = None
+    created_at: Optional[str] = None
 
 
 @dataclass
-class EnrichedOrganization:
-    """Enriched organization data"""
-    name: Optional[str] = None
+class EnrichmentResult:
+    """Enrichment result model"""
     id: Optional[str] = None
-    website: Optional[str] = None
-    industry: Optional[str] = None
-    size: Optional[str] = None
-    revenue: Optional[str] = None
-    linkedin_url: Optional[str] = None
-    phone: Optional[str] = None
-    address: Optional[Dict[str, Any]] = None
+    type: Optional[str] = None
+    data: Optional[Dict[str, Any]] = None
     confidence_score: Optional[float] = None
+
+
+class RateLimiter:
+    """Simple rate limiter for API requests"""
+
+    def __init__(self, calls_per_second: int = 10):
+        self.calls_per_second = calls_per_second
+        self.tokens = calls_per_second
+        self.last_update = datetime.now()
+
+    async def acquire(self):
+        """Acquire a token from the rate limiter"""
+        now = datetime.now()
+        elapsed = (now - self.last_update).total_seconds()
+        self.tokens = min(self.calls_per_second, self.tokens + elapsed * self.calls_per_second)
+        self.last_update = now
+
+        if self.tokens < 1:
+            sleep_time = (1 - self.tokens) / self.calls_per_second
+            await asyncio.sleep(sleep_time)
+            self.tokens = self.calls_per_second
+        else:
+            self.tokens -= 1
+
+
+class ApolloError(Exception):
+    """Base exception for Apollo errors"""
+
+    def __init__(self, message: str, status_code: Optional[int] = None):
+        self.message = message
+        self.status_code = status_code
+        super().__init__(f"{status_code}: {message}" if status_code else message)
 
 
 class ApolloClient:
     """
-    Apollo API client for B2B sales intelligence.
+    Apollo API Client
 
-    Authentication: API Key (Header: Api-Key: {api_key})
-    Base URL: https://api.apollo.io/v1
+    Example usage:
+        ```python
+        client = ApolloClient(api_key="your_key")
+
+        Search for contacts
+        contacts = await client.search_contacts(first_name="John")
+
+        Enrich person data
+        result = await client.enrich_person(email="john@acme.com")
+
+        Create account
+        account = await client.create_account(name="Acme Corp")
+        ```
     """
 
-    BASE_URL = "https://api.apollo.io/v1"
-
-    def __init__(self, api_key: str):
+    def __init__(self, api_key: str, base_url: str = "https://api.apollo.io/v1"):
         """
-        Initialize Apollo client.
+        Initialize Apollo client
 
         Args:
             api_key: Apollo API key
+            base_url: API base URL
         """
         self.api_key = api_key
-        self.session = requests.Session()
-        self.session.headers.update({
-            "Api-Key": self.api_key,
+        self.base_url = base_url.rstrip('/')
+        self._headers = {
             "Content-Type": "application/json",
-            "Accept": "application/json"
-        })
+            "X-Api-Key": api_key
+        }
+        self._rate_limiter = RateLimiter(calls_per_second=10)
 
-    def _request(self, method: str, endpoint: str, **kwargs) -> Dict[str, Any]:
-        """Make API request with error handling"""
-        url = f"{self.BASE_URL}{endpoint}"
-
-        try:
-            response = self.session.request(method, url, **kwargs)
-
-            if response.status_code in (200, 201):
-                data = response.json()
-                return data
-            elif response.status_code == 204:
-                return {}
-            elif response.status_code == 401:
-                raise Exception("Authentication failed: Invalid API key")
-            elif response.status_code == 403:
-                raise Exception("Forbidden: Insufficient permissions")
-            elif response.status_code == 404:
-                raise Exception(f"Resource not found: {endpoint}")
-            elif response.status_code == 429:
-                raise Exception("Rate limit exceeded")
-            elif response.status_code >= 500:
-                raise Exception(f"Server error: {response.status_code}")
-            else:
-                error_data = response.json() if response.content else {}
-                raise Exception(f"API error {response.status_code}: {error_data}")
-
-        except requests.exceptions.RequestException as e:
-            raise Exception(f"Request failed: {str(e)}")
-
-    # ==================== Account Operations ====================
-
-    def create_account(
+    async def _make_request(
         self,
-        name: str,
-        website: Optional[str] = None,
-        industry: Optional[str] = None,
-        size: Optional[str] = None,
-        revenue: Optional[str] = None,
-        linkedin_url: Optional[str] = None,
-        phone: Optional[str] = None,
-        address: Optional[Dict[str, Any]] = None
-    ) -> Account:
+        method: str,
+        endpoint: str,
+        data: Optional[Dict[str, Any]] = None,
+        params: Optional[Dict[str, Any]] = None
+    ) -> Dict[str, Any]:
+        """Make HTTP request to Apollo API"""
+        await self._rate_limiter.acquire()
+        url = f"{self.base_url}/{endpoint.lstrip('/')}"
+
+        async with aiohttp.ClientSession() as session:
+            try:
+                async with session.request(
+                    method=method,
+                    url=url,
+                    headers=self._headers,
+                    json=data,
+                    params=params
+                ) as response:
+                    response_text = await response.text()
+
+                    if response.status == 204:
+                        return {"status": "success"}
+
+                    if response.status >= 400:
+                        try:
+                            error_data = await response.json()
+                            error_msg = error_data.get("message", error_data.get("error", "Unknown error"))
+                        except:
+                            error_msg = response_text if response_text else "HTTP error"
+                        raise ApolloError(error_msg, response.status)
+
+                    return await response.json()
+
+            except aiohttp.ClientError as e:
+                raise ApolloError(f"Network error: {str(e)}")
+            except asyncio.TimeoutError:
+                raise ApolloError("Request timeout")
+
+    # Account methods
+
+    async def create_account(self, data: Dict[str, Any]) -> Account:
         """
-        Create a new account.
-        アカウントを作成
+        アカウントを作成 (Create Account)
 
         Args:
-            name: Account/company name (required)
-            website: Company website
-            industry: Industry
-            size: Company size (e.g., "11-50", "51-200")
-            revenue: Annual revenue
-            linkedin_url: LinkedIn URL
-            phone: Phone number
-            address: Address information
+            data: Account data (name, website, industry, etc.)
 
         Returns:
-            Account object
+            Created Account object
         """
-        if not name:
-            raise ValueError("Account name is required")
+        if not data.get("name"):
+            raise ApolloError("Account name is required")
 
-        payload = {"name": name}
+        response = await self._make_request("POST", "/accounts/create", data=data)
+        return Account(**response.get("account", {}))
 
-        if website:
-            payload["website"] = website
-        if industry:
-            payload["industry"] = industry
-        if size:
-            payload["size"] = size
-        if revenue:
-            payload["revenue"] = revenue
-        if linkedin_url:
-            payload["linkedin_url"] = linkedin_url
-        if phone:
-            payload["phone"] = phone
-        if address:
-            payload["address"] = address
-
-        result = self._request("POST", "/accounts", json=payload)
-        return self._parse_account(result.get("account", result))
-
-    def get_account(self, account_id: str) -> Account:
-        """Get account by ID"""
-        result = self._request("GET", f"/accounts/{account_id}")
-        return self._parse_account(result.get("account", result))
-
-    def update_account(
-        self,
-        account_id: str,
-        name: Optional[str] = None,
-        website: Optional[str] = None,
-        industry: Optional[str] = None,
-        size: Optional[str] = None,
-        revenue: Optional[str] = None,
-        linkedin_url: Optional[str] = None,
-        phone: Optional[str] = None,
-        address: Optional[Dict[str, Any]] = None
-    ) -> Account:
+    async def update_account(self, account_id: str, data: Dict[str, Any]) -> Account:
         """
-        Update account.
-        アカウントを更新
+        アカウントを更新 (Update Account)
 
         Args:
-            account_id: Account ID (required)
-            name: Account/company name
-            website: Company website
-            industry: Industry
-            size: Company size
-            revenue: Annual revenue
-            linkedin_url: LinkedIn URL
-            phone: Phone number
-            address: Address information
+            account_id: Account ID
+            data: Update data
 
         Returns:
-            Account object
+            Updated Account object
         """
-        if not account_id:
-            raise ValueError("Account ID is required")
+        data["account_id"] = account_id
+        response = await self._make_request("POST", "/accounts/update", data=data)
+        return Account(**response.get("account", {}))
 
-        payload = {}
-        if name:
-            payload["name"] = name
-        if website:
-            payload["website"] = website
-        if industry:
-            payload["industry"] = industry
-        if size:
-            payload["size"] = size
-        if revenue:
-            payload["revenue"] = revenue
-        if linkedin_url:
-            payload["linkedin_url"] = linkedin_url
-        if phone:
-            payload["phone"] = phone
-        if address:
-            payload["address"] = address
-
-        result = self._request("PATCH", f"/accounts/{account_id}", json=payload)
-        return self._parse_account(result.get("account", result))
-
-    def search_accounts(
-        self,
-        name: Optional[str] = None,
-        website: Optional[str] = None,
-        industry: Optional[str] = None,
-        size: Optional[str] = None,
-        limit: int = 50
-    ) -> List[Account]:
+    async def search_accounts(self, **params) -> List[Account]:
         """
-        Search accounts.
-        アカウントを検索
+        アカウントを検索 (Search Accounts)
 
         Args:
-            name: Filter by company name
-            website: Filter by website
-            industry: Filter by industry
-            size: Filter by company size
-            limit: Maximum results to return
+            **params: Search parameters (name, website, industry, etc.)
 
         Returns:
             List of Account objects
         """
-        params = {}
-        if name:
-            params["name"] = name
-        if website:
-            params["website"] = website
-        if industry:
-            params["industry"] = industry
-        if size:
-            params["size"] = size
-        params["page_size"] = limit
+        response = await self._make_request("GET", "/accounts/search", params=params)
+        if "data" in response:
+            return [Account(**item) for item in response["data"]]
+        if "accounts" in response:
+            return [Account(**item) for item in response["accounts"]]
+        return []
 
-        result = self._request("GET", "/accounts/search", params=params)
+    # Contact methods
 
-        accounts = []
-        if isinstance(result, dict) and "accounts" in result:
-            for account_data in result.get("accounts", []):
-                accounts.append(self._parse_account(account_data))
-        elif isinstance(result, list):
-            for account_data in result:
-                accounts.append(self._parse_account(account_data))
-
-        return accounts
-
-    # ==================== Contact Operations ====================
-
-    def create_contact(
-        self,
-        first_name: str,
-        last_name: str,
-        email: Optional[str] = None,
-        title: Optional[str] = None,
-        department: Optional[str] = None,
-        organization_id: Optional[str] = None,
-        linkedin_url: Optional[str] = None,
-        phone: Optional[str] = None,
-        location: Optional[Dict[str, Any]] = None
-    ) -> Contact:
+    async def create_contact(self, data: Dict[str, Any]) -> Contact:
         """
-        Create a new contact.
-        コンタクトを作成
+        コンタクトを作成 (Create Contact)
 
         Args:
-            first_name: First name (required)
-            last_name: Last name (required)
-            email: Email address
-            title: Job title
-            department: Department
-            organization_id: Organization ID
-            linkedin_url: LinkedIn URL
-            phone: Phone number
-            location: Location information
+            data: Contact data (first_name, last_name, email, organization_id, etc.)
 
         Returns:
-            Contact object
+            Created Contact object
         """
-        if not first_name or not last_name:
-            raise ValueError("First name and last name are required")
+        if not data.get("first_name") or not data.get("last_name"):
+            raise ApolloError("Contact first_name and last_name are required")
 
-        payload = {
-            "first_name": first_name,
-            "last_name": last_name
-        }
+        response = await self._make_request("POST", "/contacts/create", data=data)
+        return Contact(**response.get("contact", {}))
 
-        if email:
-            payload["email"] = email
-        if title:
-            payload["title"] = title
-        if department:
-            payload["department"] = department
-        if organization_id:
-            payload["organization_id"] = organization_id
-        if linkedin_url:
-            payload["linkedin_url"] = linkedin_url
-        if phone:
-            payload["phone"] = phone
-        if location:
-            payload["location"] = location
-
-        result = self._request("POST", "/contacts", json=payload)
-        return self._parse_contact(result.get("contact", result))
-
-    def get_contact(self, contact_id: str) -> Contact:
-        """Get contact by ID"""
-        result = self._request("GET", f"/contacts/{contact_id}")
-        return self._parse_contact(result.get("contact", result))
-
-    def update_contact(
-        self,
-        contact_id: str,
-        first_name: Optional[str] = None,
-        last_name: Optional[str] = None,
-        email: Optional[str] = None,
-        title: Optional[str] = None,
-        department: Optional[str] = None,
-        organization_id: Optional[str] = None,
-        linkedin_url: Optional[str] = None,
-        phone: Optional[str] = None,
-        location: Optional[Dict[str, Any]] = None,
-        status: Optional[str] = None
-    ) -> Contact:
+    async def update_contact(self, contact_id: str, data: Dict[str, Any]) -> Contact:
         """
-        Update contact.
-        コンタクトを更新
+        コンタクトを更新 (Update Contact)
 
         Args:
-            contact_id: Contact ID (required)
-            first_name: First name
-            last_name: Last name
-            email: Email address
-            title: Job title
-            department: Department
-            organization_id: Organization ID
-            linkedin_url: LinkedIn URL
-            phone: Phone number
-            location: Location information
-            status: Contact status
+            contact_id: Contact ID
+            data: Update data
 
         Returns:
-            Contact object
+            Updated Contact object
         """
-        if not contact_id:
-            raise ValueError("Contact ID is required")
+        data["contact_id"] = contact_id
+        response = await self._make_request("POST", "/contacts/update", data=data)
+        return Contact(**response.get("contact", {}))
 
-        payload = {}
-        if first_name:
-            payload["first_name"] = first_name
-        if last_name:
-            payload["last_name"] = last_name
-        if email:
-            payload["email"] = email
-        if title:
-            payload["title"] = title
-        if department:
-            payload["department"] = department
-        if organization_id:
-            payload["organization_id"] = organization_id
-        if linkedin_url:
-            payload["linkedin_url"] = linkedin_url
-        if phone:
-            payload["phone"] = phone
-        if location:
-            payload["location"] = location
-        if status:
-            payload["status"] = status
-
-        result = self._request("PATCH", f"/contacts/{contact_id}", json=payload)
-        return self._parse_contact(result.get("contact", result))
-
-    def search_contacts(
-        self,
-        first_name: Optional[str] = None,
-        last_name: Optional[str] = None,
-        email: Optional[str] = None,
-        title: Optional[str] = None,
-        organization_id: Optional[str] = None,
-        limit: int = 50
-    ) -> List[Contact]:
+    async def search_contacts(self, **params) -> List[Contact]:
         """
-        Search contacts.
-        コンタクトを検索
+        コンタクトを検索 (Search Contacts)
 
         Args:
-            first_name: Filter by first name
-            last_name: Filter by last name
-            email: Filter by email
-            title: Filter by job title
-            organization_id: Filter by organization ID
-            limit: Maximum results to return
+            **params: Search parameters (first_name, last_name, email, organization_id, etc.)
 
         Returns:
             List of Contact objects
         """
-        params = {}
-        if first_name:
-            params["first_name"] = first_name
-        if last_name:
-            params["last_name"] = last_name
-        if email:
-            params["email"] = email
-        if title:
-            params["title"] = title
-        if organization_id:
-            params["organization_id"] = organization_id
-        params["page_size"] = limit
-
-        result = self._request("GET", "/contacts/search", params=params)
-
-        contacts = []
-        if isinstance(result, dict) and "contacts" in result:
-            for contact_data in result.get("contacts", []):
-                contacts.append(self._parse_contact(contact_data))
-        elif isinstance(result, list):
-            for contact_data in result:
-                contacts.append(self._parse_contact(contact_data))
-
-        return contacts
-
-    # ==================== Enrichment Operations ====================
-
-    def search_people(
-        self,
-        first_name: Optional[str] = None,
-        last_name: Optional[str] = None,
-        organization_name: Optional[str] = None,
-        title: Optional[str] = None,
-        limit: int = 50
-    ) -> List[EnrichedPerson]:
-        """
-        Search people for enrichment.
-        人物情報を検索
-
-        Args:
-            first_name: Filter by first name
-            last_name: Filter by last name
-            organization_name: Filter by organization name
-            title: Filter by job title
-            limit: Maximum results to return
-
-        Returns:
-            List of EnrichedPerson objects
-        """
-        params = {}
-        if first_name:
-            params["q_first_name"] = first_name
-        if last_name:
-            params["q_last_name"] = last_name
-        if organization_name:
-            params["q_organization_name"] = organization_name
-        if title:
-            params["q_title"] = title
-        params["page_size"] = limit
-
-        result = self._request("GET", "/people/search", params=params)
-
-        people = []
-        if isinstance(result, dict) and "people" in result:
-            for person_data in result.get("people", []):
-                people.append(self._parse_enriched_person(person_data))
-        elif isinstance(result, list):
-            for person_data in result:
-                people.append(self._parse_enriched_person(person_data))
-
-        return people
-
-    def enrich_person(
-        self,
-        email: Optional[str] = None,
-        linkedin_url: Optional[str] = None,
-        first_name: Optional[str] = None,
-        last_name: Optional[str] = None,
-        organization_name: Optional[str] = None
-    ) -> EnrichedPerson:
-        """
-        Enrich person data.
-        人物情報のエンリッチメント
-
-        Args:
-            email: Email address to enrich
-            linkedin_url: LinkedIn URL to enrich
-            first_name: First name
-            last_name: Last name
-            organization_name: Organization name
-
-        Returns:
-            EnrichedPerson object
-        """
-        payload = {}
-        if email:
-            payload["email"] = email
-        if linkedin_url:
-            payload["linkedin_url"] = linkedin_url
-        if first_name:
-            payload["first_name"] = first_name
-        if last_name:
-            payload["last_name"] = last_name
-        if organization_name:
-            payload["organization_name"] = organization_name
-
-        result = self._request("POST", "/people/enrich", json=payload)
-        return self._parse_enriched_person(result.get("person", result))
-
-    def enrich_organization(
-        self,
-        website: Optional[str] = None,
-        linkedin_url: Optional[str] = None,
-        name: Optional[str] = None
-    ) -> EnrichedOrganization:
-        """
-        Enrich organization data.
-        組織情報のエンリッチメント
-
-        Args:
-            website: Website to enrich
-            linkedin_url: LinkedIn URL to enrich
-            name: Organization name
-
-        Returns:
-            EnrichedOrganization object
-        """
-        payload = {}
-        if website:
-            payload["website"] = website
-        if linkedin_url:
-            payload["linkedin_url"] = linkedin_url
-        if name:
-            payload["name"] = name
-
-        result = self._request("POST", "/organizations/enrich", json=payload)
-        return self._parse_enriched_organization(result.get("organization", result))
-
-    # ==================== Webhook/Trigger Support ====================
-
-    def register_webhook(
-        self,
-        callback_url: str,
-        events: Optional[List[str]] = None
-    ) -> Dict[str, Any]:
-        """
-        Register webhook for event notifications.
-        
-        Args:
-            callback_url: Your webhook endpoint URL
-            events: List of events to subscribe to
-
-        Returns:
-            Webhook registration response
-        """
-        if not callback_url:
-            raise ValueError("Callback URL is required")
-
-        if events is None:
-            events = ["contact.created", "contact.updated", "account.created"]
-
-        payload = {
-            "callback_url": callback_url,
-            "events": events
-        }
-
-        return self._request("POST", "/webhooks", json=payload)
-
-    def delete_webhook(self, webhook_id: str) -> None:
-        """Delete webhook registration"""
-        self._request("DELETE", f"/webhooks/{webhook_id}")
-
-    def get_webhooks(self) -> List[Dict[str, Any]]:
-        """Get list of registered webhooks"""
-        result = self._request("GET", "/webhooks")
-        if isinstance(result, dict) and "webhooks" in result:
-            return result.get("webhooks", [])
-        elif isinstance(result, list):
-            return result
+        response = await self._make_request("GET", "/contacts/search", params=params)
+        if "data" in response:
+            return [Contact(**item) for item in response["data"]]
+        if "contacts" in response:
+            return [Contact(**item) for item in response["contacts"]]
         return []
 
-    # ==================== Helper Methods ====================
+    async def search_people(self, **params) -> List[Contact]:
+        """
+        人物情報を検索 (Search People)
 
-    def _parse_account(self, data: Dict[str, Any]) -> Account:
-        """Parse account data from API response"""
-        return Account(
-            id=data.get("id"),
-            name=data.get("name"),
-            website=data.get("website"),
-            industry=data.get("industry"),
-            size=data.get("size"),
-            revenue=data.get("revenue"),
-            linkedin_url=data.get("linkedin_url"),
-            phone=data.get("phone"),
-            address=data.get("address"),
-            created_at=data.get("created_at"),
-            updated_at=data.get("updated_at")
+        Args:
+            **params: Search parameters (name, title, organization_name, etc.)
+
+        Returns:
+            List of Contact objects (people)
+        """
+        response = await self._make_request("GET", "/people/search", params=params)
+        if "data" in response:
+            return [Contact(**item) for item in response["data"]]
+        if "people" in response:
+            return [Contact(**item) for item in response["people"]]
+        return []
+
+    # Enrichment methods
+
+    async def enrich_person(self, **params) -> EnrichmentResult:
+        """
+        人物情報のエンリッチメント (Enrich Person)
+
+        Args:
+            **params: Enrichment parameters (email, linkedin_url, etc.)
+
+        Returns:
+            EnrichmentResult object with enriched data
+        """
+        response = await self._make_request("POST", "/people/enrich", data=params)
+        return EnrichmentResult(
+            id=response.get("id"),
+            type="person",
+            data=response.get("data"),
+            confidence_score=response.get("confidence_score")
         )
 
-    def _parse_contact(self, data: Dict[str, Any]) -> Contact:
-        """Parse contact data from API response"""
-        return Contact(
-            id=data.get("id"),
-            first_name=data.get("first_name"),
-            last_name=data.get("last_name"),
-            email=data.get("email"),
-            title=data.get("title"),
-            department=data.get("department"),
-            organization_id=data.get("organization_id"),
-            linkedin_url=data.get("linkedin_url"),
-            phone=data.get("phone"),
-            location=data.get("location"),
-            status=data.get("status"),
-            created_at=data.get("created_at"),
-            updated_at=data.get("updated_at")
+    async def enrich_organization(self, **params) -> EnrichmentResult:
+        """
+        組織情報のエンリッチメント (Enrich Organization)
+
+        Args:
+            **params: Enrichment parameters (website, linkedin_url, name, etc.)
+
+        Returns:
+            EnrichmentResult object with enriched data
+        """
+        response = await self._make_request("POST", "/organizations/enrich", data=params)
+        return EnrichmentResult(
+            id=response.get("id"),
+            type="organization",
+            data=response.get("data"),
+            confidence_score=response.get("confidence_score")
         )
 
-    def _parse_enriched_person(self, data: Dict[str, Any]) -> EnrichedPerson:
-        """Parse enriched person data from API response"""
-        return EnrichedPerson(
-            first_name=data.get("first_name"),
-            last_name=data.get("last_name"),
-            email=data.get("email"),
-            title=data.get("title"),
-            organization_name=data.get("organization_name"),
-            organization_id=data.get("organization_id"),
-            linkedin_url=data.get("linkedin_url"),
-            phone=data.get("phone"),
-            location=data.get("location"),
-            confirmed_at=data.get("confirmed_at"),
-            confidence_score=data.get("confidence_score")
-        )
+    # Webhook handling
 
-    def _parse_enriched_organization(self, data: Dict[str, Any]) -> EnrichedOrganization:
-        """Parse enriched organization data from API response"""
-        return EnrichedOrganization(
-            name=data.get("name"),
-            id=data.get("id"),
-            website=data.get("website"),
-            industry=data.get("industry"),
-            size=data.get("size"),
-            revenue=data.get("revenue"),
-            linkedin_url=data.get("linkedin_url"),
-            phone=data.get("phone"),
-            address=data.get("address"),
-            confidence_score=data.get("confidence_score")
-        )
+    def handle_webhook(self, webhook_data: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Process webhook event
 
-    def close(self):
-        """Close the HTTP session"""
-        self.session.close()
+        Triggers:
+        - コンタクトが作成されたら (When contact is created)
+        - コンタクトが更新されたら (When contact is updated)
+        - アカウントが作成されたら (When account is created)
 
+        Args:
+            webhook_data: Webhook payload
 
-def main():
-    """Example usage"""
-    api_key = "your_apollo_api_key"
+        Returns:
+            Processed event data
+        """
+        event_type = webhook_data.get("event_type", "unknown")
+        entity_type = webhook_data.get("entity_type", "unknown")
+        entity_id = webhook_data.get("entity_id")
 
-    client = ApolloClient(api_key=api_key)
-
-    try:
-        # Example: Create account
-        account = client.create_account(
-            name="Example Corp",
-            website="https://example.com",
-            industry="Technology",
-            size="51-200"
-        )
-        print(f"Created account: {account.name} (ID: {account.id})")
-
-        # Example: Create contact
-        contact = client.create_contact(
-            first_name="John",
-            last_name="Doe",
-            email="john.doe@example.com",
-            title="Sales Manager",
-            organization_id=account.id
-        )
-        print(f"Created contact: {contact.first_name} {contact.last_name} (ID: {contact.id})")
-
-        # Example: Search contacts
-        contacts = client.search_contacts(organization_id=account.id)
-        print(f"Found {len(contacts)} contacts")
-
-        # Example: Enrich person data
-        enriched = client.enrich_person(email="john.doe@example.com")
-        print(f"Enriched: {enriched.first_name} {enriched.last_name} - {enriched.title}")
-
-        # Example: Search people
-        people = client.search_people(organization_name="Example Corp")
-        print(f"Found {len(people)} people")
-
-    except Exception as e:
-        print(f"Error: {str(e)}")
-
-    finally:
-        client.close()
-
-
-if __name__ == "__main__":
-    main()
+        return {
+            "event_type": event_type,
+            "entity_type": entity_type,
+            "entity_id": entity_id,
+            "data": webhook_data
+        }

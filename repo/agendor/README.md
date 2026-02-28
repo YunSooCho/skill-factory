@@ -1,14 +1,23 @@
 # Agendor API Client
 
-Python client for Agendor CRM/PaaS API.
+Python client for Agendor CRM API.
 
 ## Features
 
-- **Organizations**: Create, get, update, search organizations
-- **People**: Create, get, update, search people (contacts)
-- **Deals**: Create, get, update, search deals for people and organizations
-- **Tasks**: Create and search tasks for people, organizations, and deals
-- **Products**: Create, get, update, search products
+- **Organizations**: Create, read, update, search organizations
+- **People**: Create, read, update, search contacts
+- **Deals**: Create, read, update, search deals/opportunities
+- **Products**: Create, read, update, search products
+- **Tasks**: Create, read, update, search tasks
+- **Error Handling**: Comprehensive error handling with custom exceptions
+- **Rate Limiting**: Built-in rate limiter (10 requests/second)
+- **Webhooks**: Webhook event handling for triggers
+
+## Installation
+
+```bash
+pip install aiohttp
+```
 
 ## API Actions (27)
 
@@ -40,73 +49,109 @@ Python client for Agendor CRM/PaaS API.
 26. Create Deal For Person
 27. Search Person
 
-## Installation
+## Triggers (13)
 
-```bash
-pip install -r requirements.txt
-```
+- Updated Stage Deal
+- Created Organization
+- Updated Deal
+- Won Deal
+- Updated Person
+- Lost Deal
+- Created Activity/Task/Comment
+- Deleted Person
+- Updated Organization
+- Created Deal
+- Deleted Organization
+- Created Person
+- Deleted Deal
 
 ## Usage
 
 ```python
-from agendor_client import AgendorClient
+import asyncio
+from agendor import AgendorClient
 
-# Initialize client
-client = AgendorClient(api_token="your_api_token")
+async def main():
+    # Initialize client with API token
+    client = AgendorClient(api_token="your_api_token")
 
-# Create organization
-org = client.create_organization(
-    name="Example Company",
-    email="contact@example.com"
-)
+    # Create an organization
+    org = await client.create_organization({
+        "name": "Acme Corporation",
+        "website": "https://acme.com",
+        "annual_revenue": 1000000
+    })
+    print(f"Created org: {org.id} - {org.name}")
 
+    # Create a person linked to organization
+    person = await client.create_person({
+        "name": "John Doe",
+        "email": "john@acme.com",
+        "phone": "+5511999999999",
+        "organization_id": org.id
+    })
+    print(f"Created person: {person.id} - {person.name}")
+
+    # Create a deal
+    deal = await client.create_deal({
+        "title": "New Project Contract",
+        "value": 50000.0,
+        "organization_id": org.id,
+        "person_id": person.id
+    })
+    print(f"Created deal: {deal.id} - {deal.title}")
+
+    # Update deal stage
+    from agendor.agendor_client import DealStage
+    deal = await client.update_deal_stage(deal.id, DealStage.PROPOSAL)
+    print(f"Deal stage updated to: {deal.stage}")
+
+    # Search organizations
+    orgs = await client.search_organization(name="Acme")
+    print(f"Found {len(orgs)} organizations")
+
+    # Handle webhook
+    webhook_data = {
+        "event_type": "updated_stage_deal",
+        "entity_type": "deal",
+        "entity_id": deal.id
+    }
+    event = client.handle_webhook(webhook_data)
+    print(f"Webhook event: {event['event_type']}")
+
+asyncio.run(main())
+```
+
+## Testing
+
+Requires API token (test organization/person/deal):
+```python
+# Create org
 # Create person
-person = client.create_person(
-    name="John Doe",
-    email="john@example.com",
-    organization_id=org.id
-)
-
 # Create deal
-deal = client.create_deal_for_organization(
-    organization_id=org.id,
-    title="Software License",
-    value=10000.0
-)
-
-# Create task
-task = client.create_task_for_deal(
-    deal_id=deal.id,
-    title="Send proposal"
-)
-
-# Search organizations
-orgs = client.search_organizations(name="Example")
-
-# Search deals
-deals = client.search_deals(organization_id=org.id, status="open")
-
-client.close()
+# Update deal stage
+# Search functions
 ```
 
 ## Authentication
 
-Agendor uses API token authentication. Get your token from: https://app.agendor.com.br/settings/api
+Get API token from: https://app.agendor.com.br/api
 
-## API Reference
+## Error Handling
 
-Official documentation: https://api.agendor.com.br/docs/
+```python
+from agendor.agendor_client import AgendorError
 
-## Testing
-
-To test with your API token:
-
-```bash
-python agendor_client.py
+try:
+    deal = await client.get_deal(deal_id)
+except AgendorError as e:
+    print(f"Error: {e.message} (HTTP {e.status_code})")
 ```
 
-Edit the `if __name__ == "__main__"` section with your actual API token.
+## Rate Limiting
+
+Built-in rate limiter respects 10 requests/second limit.
 
 ## License
 
-MIT License
+MIT

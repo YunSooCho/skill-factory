@@ -1,108 +1,93 @@
 # Amptalk API Client
 
-Python client for Amptalk API - call analysis and phone call analytics platform.
+Python client for Amptalk conversation analysis API.
 
 ## Features
 
-- **Call Operations**: Get call details, search calls
-- **Call Summary**: Retrieve AI-generated call summaries
-- **Call Analysis**: Get detailed analysis including sentiment, keywords, topics
-- **User Management**: List users in the account
-- **Webhooks**: Register for call completion notifications
-
-## API Actions (5)
-
-1. 通話の要約を取得 (Get call summary)
-2. 分析情報を取得 (Get analysis information)
-3. ユーザーの一覧を取得 (Get user list)
-4. 通話を検索 (Search calls)
-5. 通話を取得 (Get call details)
-
-## Triggers (1)
-
-1. 通話が完了したら (Call completed)
+- Call Summaries: Get AI-powered call summaries
+- Analytics: Retrieve conversation analytics and insights
+- User Management: List and manage users
+- Call Search: Search and retrieve calls
+- Error Handling: Comprehensive error handling
+- Rate Limiting: Built-in rate limiter
 
 ## Installation
 
 ```bash
-pip install -r requirements.txt
+pip install aiohttp
 ```
+
+## API Actions (5)
+
+1. 通話の要約を取得 (Get Call Summary)
+2. 分析情報を取得 (Get Analytics Info)
+3. ユーザーの一覧を取得 (List Users)
+4. 通話を検索 (Search Calls)
+5. 通話を取得 (Get Call)
+
+## Triggers (1)
+
+- 通話が完了したら (When call is completed)
 
 ## Usage
 
 ```python
-from amptalk_client import AmptalkClient
+import asyncio
+from amptalk import AmptalkClient
 
-# Initialize client
-client = AmptalkClient(api_key="your_api_key")
+async def main():
+    client = AmptalkClient(api_key="your_api_key")
 
-# Get user list
-users = client.get_users()
-print(f"Found {len(users)} users")
+    # List users
+    users = await client.list_users()
+    print(f"Found {len(users)} users")
 
-# Search calls
-calls = client.search_calls(
-    status="completed",
-    limit=10
-)
-print(f"Found {len(calls)} calls")
+    # Search calls
+    calls = await client.search_calls(user_id="user_123")
+    print(f"Found {len(calls)} calls")
 
-# Get call summary
-if calls:
-    call_summary = client.get_call_summary(calls[0].id)
-    print(f"Summary: {call_summary.summary}")
+    # Get call details
+    if calls:
+        call = calls[0]
+        print(f"Call: {call.title} ({call.duration}s)")
 
-    # Get call analysis
-    call_analysis = client.get_call_analysis(calls[0].id)
-    print(f"Sentiment: {call_analysis.sentiment_label}")
-    print(f"Keywords: {call_analysis.keywords}")
+        # Get call summary
+        summary = await client.get_call_summary(call.id)
+        print(f"Summary: {summary.summary}")
+        print(f"Key points: {summary.key_points}")
 
-# Register webhook
-webhook = client.register_webhook(
-    callback_url="https://your-server.com/webhook",
-    events=["call.completed"]
-)
-print(f"Webhook registered: {webhook['id']}")
+    # Get analytics
+    analytics = await client.get_analytics(start_date="2024-01-01")
+    print(f"Total calls: {analytics.total_calls}")
 
-client.close()
-```
-
-## Authentication
-
-Amptalk uses API key authentication. Set your API key in the constructor.
-
-## Webhook Setup
-
-To receive notifications when calls are completed:
-
-1. Create a public HTTPS endpoint on your server
-2. Register the webhook URL with the client
-3. Configure your server to handle POST requests
-
-Example webhook payload:
-```json
-{
-  "event": "call.completed",
-  "call_id": "12345",
-  "timestamp": "2026-02-28T09:00:00Z",
-  "data": {
-    "phone_number": "+819012345678",
-    "duration": 300,
-    "status": "completed"
-  }
-}
+asyncio.run(main())
 ```
 
 ## Testing
 
-To test with your API key:
-
-```bash
-python amptalk_client.py
+Requires API key (test with existing calls):
+```python
+# Get existing call ID
+# Get call summary
+# Search calls
+# Get analytics
 ```
 
-Edit the `if __name__ == "__main__"` section with your actual API key.
+## Authentication
+
+Get API key from Amptalk dashboard.
+
+## Error Handling
+
+```python
+from amptalk.amptalk_client import AmptalkError
+
+try:
+    summary = await client.get_call_summary(call_id)
+except AmptalkError as e:
+    print(f"Error: {e.message}")
+```
 
 ## License
 
-MIT License
+MIT
