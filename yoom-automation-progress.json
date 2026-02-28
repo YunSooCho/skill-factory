@@ -2787,8 +2787,8 @@
       "status": "completed"
     },
     {
-      "name": "프로젝트_진척",
-      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/프로젝트_진척/프로젝트_진척_client.py",
+      "name": "\ud504\ub85c\uc81d\ud2b8_\uc9c4\ucc99",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/\ud504\ub85c\uc81d\ud2b8_\uc9c4\ucc99/\ud504\ub85c\uc81d\ud2b8_\uc9c4\ucc99_client.py",
       "has_api_actions": true,
       "has_triggers": false,
       "status": "completed"
@@ -2832,9 +2832,36 @@
       "name": "zoho_writer.md",
       "status": "completed",
       "completed_at": "2026-02-28T17:00:00+09:00"
+    },
+    {
+      "name": "Pinterest",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/Pinterest/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed",
+      "implementation_structure": "client.py + __init__.py",
+      "updated_at": "2026-02-28T17:05:00+09:00"
+    },
+    {
+      "name": "big_mailer",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/big_mailer/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed",
+      "implementation_structure": "client.py + __init__.py",
+      "updated_at": "2026-02-28T17:05:00+09:00"
+    },
+    {
+      "name": "cloudcontact_AI",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/cloudcontact_AI/client.py",
+      "has_api_actions": true,
+      "has_triggers": false,
+      "status": "completed",
+      "implementation_structure": "client.py + __init__.py",
+      "updated_at": "2026-02-28T17:05:00+09:00"
     }
   ],
   "total_services": 749,
-  "completed_count": 399,
+  "completed_count": 410,
   "last_updated": "2026-02-28"
 }
