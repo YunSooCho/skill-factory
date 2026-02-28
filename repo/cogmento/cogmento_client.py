@@ -1,419 +1,1022 @@
 """
 Cogmento API Client
 
-Complete client for Cogmento CRM system.
-Supports deals, contacts, companies, tasks, and products.
+Cogmento is a CRM platform for managing companies, contacts, deals, and tasks.
+
+Supports:
+- Get Company
+- Create Company
+- Update Company
+- Delete Company
+- List Companies
+- Get Contact
+- Create Contact
+- Update Contact
+- Delete Contact
+- List Contacts
+- Get Deal
+- Create Deal
+- Update Deal
+- List Deals
+- Get Product
+- Create Product
+- Update Product
+- List Products
+- Get Task
+- Create Task
+- Update Task
+- List Tasks
 """
 
 import aiohttp
 import asyncio
+from datetime import datetime
 from typing import Optional, Dict, Any, List
-from dataclasses import dataclass, field
-import json
-
-
-class CogmentoAPIError(Exception):
-    """Base exception for Cogmento API errors"""
-
-    def __init__(self, message: str, status_code: Optional[int] = None, response: Optional[Dict] = None):
-        super().__init__(message)
-        self.status_code = status_code
-        self.response = response
-
-
-class CogmentoRateLimitError(CogmentoAPIError):
-    """Raised when rate limit is exceeded"""
-
-
-@dataclass
-class Deal:
-    deal_id: str
-    name: str
-    value: float
-    stage: str
-    created_at: Optional[str] = None
-    updated_at: Optional[str] = None
-    additional_data: Dict[str, Any] = field(default_factory=dict)
+from dataclasses import dataclass
 
 
 @dataclass
 class Company:
-    company_id: str
+    """Company object"""
+    id: str
     name: str
-    created_at: Optional[str] = None
-    updated_at: Optional[str] = None
-    additional_data: Dict[str, Any] = field(default_factory=dict)
+    website: Optional[str]
+    address: Optional[str]
+    phone: Optional[str]
+    email: Optional[str]
+    created_at: str
+    updated_at: str
 
 
 @dataclass
 class Contact:
-    contact_id: str
-    name: str
-    email: Optional[str] = None
-    phone: Optional[str] = None
-    created_at: Optional[str] = None
-    updated_at: Optional[str] = None
-    additional_data: Dict[str, Any] = field(default_factory=dict)
+    """Contact object"""
+    id: str
+    first_name: str
+    last_name: str
+    email: Optional[str]
+    phone: Optional[str]
+    company_id: Optional[str]
+    company_name: Optional[str]
+    title: Optional[str]
+    created_at: str
+    updated_at: str
 
 
 @dataclass
-class Task:
-    task_id: str
+class Deal:
+    """Deal object"""
+    id: str
     name: str
-    status: str
-    created_at: Optional[str] = None
-    updated_at: Optional[str] = None
-    additional_data: Dict[str, Any] = field(default_factory=dict)
+    amount: float
+    currency: str
+    stage: str
+    probability: int
+    contact_id: Optional[str]
+    company_id: Optional[str]
+    expected_close_date: Optional[str]
+    created_at: str
+    updated_at: str
 
 
 @dataclass
 class Product:
-    product_id: str
+    """Product object"""
+    id: str
     name: str
+    code: Optional[str]
     price: float
-    created_at: Optional[str] = None
-    updated_at: Optional[str] = None
-    additional_data: Dict[str, Any] = field(default_factory=dict)
+    currency: str
+    description: Optional[str]
+    created_at: str
+    updated_at: str
 
 
-class CogmentoClient:
-    """Cogmento CRM API Client."""
+@dataclass
+class Task:
+    """Task object"""
+    id: str
+    title: str
+    description: Optional[str]
+    status: str
+    priority: str
+    due_date: Optional[str]
+    related_entity_type: Optional[str]
+    related_entity_id: Optional[str]
+    created_at: str
+    updated_at: str
+
+
+class CogmentoAPIClient:
+    """
+    Cogmento API client for CRM operations.
+
+    Authentication: API Key
+    Base URL: https://api.cogmento.com/v1
+    """
 
     BASE_URL = "https://api.cogmento.com/v1"
 
-    def __init__(
-        self,
-        api_key: str,
-        base_url: Optional[str] = None,
-        max_requests_per_minute: int = 100,
-        timeout: int = 30
-    ):
+    def __init__(self, api_key: str):
+        """
+        Initialize Cogmento API client.
+
+        Args:
+            api_key: Cogmento API key
+        """
         self.api_key = api_key
-        self.base_url = base_url or self.BASE_URL
-        self.timeout = aiohttp.ClientTimeout(total=timeout)
-        self.session: Optional[aiohttp.ClientSession] = None
-        self.max_requests_per_minute = max_requests_per_minute
-        self._request_times: List[float] = []
+        self.session = None
 
     async def __aenter__(self):
-        self.session = aiohttp.ClientSession(timeout=self.timeout)
+        self.session = aiohttp.ClientSession(
+            headers={
+                "Authorization": f"Bearer {self.api_key}",
+                "Content-Type": "application/json"
+            }
+        )
         return self
 
     async def __aexit__(self, exc_type, exc_val, exc_tb):
         if self.session:
             await self.session.close()
 
-    async def _check_rate_limit(self):
-        now = asyncio.get_event_loop().time()
-        self._request_times = [t for t in self._request_times if now - t < 60]
-
-        if len(self._request_times) >= self.max_requests_per_minute:
-            sleep_time = 60 - (now - self._request_times[0])
-            if sleep_time > 0:
-                await asyncio.sleep(sleep_time)
-                self._request_times = []
-
-        self._request_times.append(now)
-
     async def _request(
         self,
         method: str,
         endpoint: str,
-        data: Optional[Dict[str, Any]] = None,
-        params: Optional[Dict[str, Any]] = None
+        params: Optional[Dict[str, Any]] = None,
+        json_data: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
-        await self._check_rate_limit()
-        url = f"{self.base_url}{endpoint}"
-        headers = {
-            "Authorization": f"Bearer {self.api_key}",
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-        }
+        """
+        Make HTTP request to Cogmento API.
 
-        if not self.session:
-            raise RuntimeError("Client must be used as async context manager")
+        Args:
+            method: HTTP method
+            endpoint: API endpoint
+            params: Query parameters
+            json_data: JSON body data
 
-        try:
-            async with self.session.request(
-                method, url, json=data, params=params, headers=headers
-            ) as response:
-                try:
-                    response_data = await response.json()
-                except:
-                    response_data = await response.text()
+        Returns:
+            Response data
 
-                if response.status == 429:
-                    raise CogmentoRateLimitError("Rate limit exceeded", status_code=429)
+        Raises:
+            Exception: If API returns error
+        """
+        url = f"{self.BASE_URL}{endpoint}"
 
-                if response.status >= 400:
-                    error_msg = response_data.get("error", str(response_data))
-                    raise CogmentoAPIError(error_msg, status_code=response.status)
+        async with self.session.request(
+            method,
+            url,
+            params=params,
+            json=json_data
+        ) as response:
+            if response.status == 204:
+                return {}
 
-                return response_data if isinstance(response_data, dict) else {}
+            data = await response.json()
 
-        except aiohttp.ClientError as e:
-            raise CogmentoAPIError(f"Network error: {str(e)}")
+            if response.status not in [200, 201]:
+                error_msg = data.get("message", "Unknown error") if isinstance(data, dict) else str(data)
+                raise Exception(f"Cogmento API error ({response.status}): {error_msg}")
 
-    def _to_model(self, data: Dict, model_class, id_field: str) -> Any:
-        return model_class(
-            **{id_field: data.get("id", "") or data.get(id_field, ""),
-               **{k: v for k, v in data.items() if k not in ["id", id_field]}}
-        )
+            return data
 
-    async def create_deal(self, deal_data: Dict[str, Any]) -> Deal:
-        data = await self._request("POST", "/deals", data=deal_data)
-        return Deal(
-            deal_id=data.get("id", ""),
-            name=data.get("name", ""),
-            value=data.get("value", 0.0),
-            stage=data.get("stage", ""),
-            created_at=data.get("created_at"),
-            updated_at=data.get("updated_at"),
-            additional_data={k: v for k, v in data.items() if k not in ["id", "name", "value", "stage", "created_at", "updated_at"]}
-        )
+    # ==================== Companies ====================
 
-    async def update_deal(self, deal_id: str, update_data: Dict[str, Any]) -> Deal:
-        data = await self._request("PUT", f"/deals/{deal_id}", data=update_data)
-        return Deal(
-            deal_id=deal_id,
-            name=data.get("name", ""),
-            value=data.get("value", 0.0),
-            stage=data.get("stage", ""),
-            created_at=data.get("created_at"),
-            updated_at=data.get("updated_at"),
-            additional_data={k: v for k, v in data.items() if k not in ["name", "value", "stage", "created_at", "updated_at"]}
-        )
+    async def create_company(
+        self,
+        name: str,
+        website: Optional[str] = None,
+        address: Optional[str] = None,
+        phone: Optional[str] = None,
+        email: Optional[str] = None
+    ) -> Company:
+        """
+        Create a new company.
 
-    async def get_deal(self, deal_id: str) -> Deal:
-        data = await self._request("GET", f"/deals/{deal_id}")
-        return Deal(
-            deal_id=data.get("id", deal_id),
-            name=data.get("name", ""),
-            value=data.get("value", 0.0),
-            stage=data.get("stage", ""),
-            created_at=data.get("created_at"),
-            updated_at=data.get("updated_at"),
-            additional_data={k: v for k, v in data.items() if k not in ["id", "name", "value", "stage", "created_at", "updated_at"]}
-        )
+        Args:
+            name: Company name
+            website: Company website
+            address: Company address
+            phone: Company phone
+            email: Company email
 
-    async def list_deals(self, limit: int = 100, offset: int = 0) -> List[Deal]:
-        params = {"limit": limit, "offset": offset}
-        data = await self._request("GET", "/deals", params=params)
-        results = data.get("results", [])
+        Returns:
+            Company object
 
-        return [Deal(
-            deal_id=r.get("id", ""),
-            name=r.get("name", ""),
-            value=r.get("value", 0.0),
-            stage=r.get("stage", ""),
-            created_at=r.get("created_at"),
-            updated_at=r.get("updated_at"),
-            additional_data={k: v for k, v in r.items() if k not in ["id", "name", "value", "stage", "created_at", "updated_at"]}
-        ) for r in results]
+        Raises:
+            Exception: If API returns error
+        """
+        json_data = {"name": name}
 
-    async def create_company(self, company_data: Dict[str, Any]) -> Company:
-        data = await self._request("POST", "/companies", data=company_data)
-        return Company(
-            company_id=data.get("id", ""),
-            name=data.get("name", ""),
-            created_at=data.get("created_at"),
-            updated_at=data.get("updated_at"),
-            additional_data={k: v for k, v in data.items() if k not in ["id", "name", "created_at", "updated_at"]}
-        )
+        if website:
+            json_data["website"] = website
+        if address:
+            json_data["address"] = address
+        if phone:
+            json_data["phone"] = phone
+        if email:
+            json_data["email"] = email
 
-    async def update_company(self, company_id: str, update_data: Dict[str, Any]) -> Company:
-        data = await self._request("PUT", f"/companies/{company_id}", data=update_data)
-        return Company(
-            company_id=company_id,
-            name=data.get("name", ""),
-            created_at=data.get("created_at"),
-            updated_at=data.get("updated_at"),
-            additional_data={k: v for k, v in data.items() if k not in ["name", "created_at", "updated_at"]}
-        )
+        data = await self._request("POST", "/companies", json_data=json_data)
+
+        return self._parse_company(data)
 
     async def get_company(self, company_id: str) -> Company:
+        """
+        Get a company by ID.
+
+        Args:
+            company_id: Company ID
+
+        Returns:
+            Company object
+
+        Raises:
+            Exception: If API returns error
+        """
         data = await self._request("GET", f"/companies/{company_id}")
-        return Company(
-            company_id=data.get("id", company_id),
-            name=data.get("name", ""),
-            created_at=data.get("created_at"),
-            updated_at=data.get("updated_at"),
-            additional_data={k: v for k, v in data.items() if k not in ["id", "name", "created_at", "updated_at"]}
-        )
+        return self._parse_company(data)
 
-    async def list_companies(self, limit: int = 100, offset: int = 0) -> List[Company]:
+    async def list_companies(
+        self,
+        search: Optional[str] = None,
+        limit: int = 50,
+        offset: int = 0
+    ) -> List[Company]:
+        """
+        List companies.
+
+        Args:
+            search: Search query
+            limit: Maximum number of results
+            offset: Pagination offset
+
+        Returns:
+            List of Company objects
+
+        Raises:
+            Exception: If API returns error
+        """
         params = {"limit": limit, "offset": offset}
+
+        if search:
+            params["search"] = search
+
         data = await self._request("GET", "/companies", params=params)
-        results = data.get("results", [])
 
-        return [Company(
-            company_id=r.get("id", ""),
-            name=r.get("name", ""),
-            created_at=r.get("created_at"),
-            updated_at=r.get("updated_at"),
-            additional_data={k: v for k, v in r.items() if k not in ["id", "name", "created_at", "updated_at"]}
-        ) for r in results]
+        return [self._parse_company(c) for c in data.get("data", [])]
 
-    async def create_contact(self, contact_data: Dict[str, Any]) -> Contact:
-        data = await self._request("POST", "/contacts", data=contact_data)
-        return Contact(
-            contact_id=data.get("id", ""),
+    async def update_company(
+        self,
+        company_id: str,
+        name: Optional[str] = None,
+        website: Optional[str] = None,
+        address: Optional[str] = None,
+        phone: Optional[str] = None,
+        email: Optional[str] = None
+    ) -> Company:
+        """
+        Update a company.
+
+        Args:
+            company_id: Company ID
+            name: New name
+            website: New website
+            address: New address
+            phone: New phone
+            email: New email
+
+        Returns:
+            Updated Company object
+
+        Raises:
+            Exception: If API returns error
+        """
+        json_data = {}
+
+        if name:
+            json_data["name"] = name
+        if website:
+            json_data["website"] = website
+        if address:
+            json_data["address"] = address
+        if phone:
+            json_data["phone"] = phone
+        if email:
+            json_data["email"] = email
+
+        data = await self._request("PUT", f"/companies/{company_id}", json_data=json_data)
+
+        return self._parse_company(data)
+
+    def _parse_company(self, data: Dict[str, Any]) -> Company:
+        """Parse company data"""
+        return Company(
+            id=data.get("id", ""),
             name=data.get("name", ""),
-            email=data.get("email"),
+            website=data.get("website"),
+            address=data.get("address"),
             phone=data.get("phone"),
-            created_at=data.get("created_at"),
-            updated_at=data.get("updated_at"),
-            additional_data={k: v for k, v in data.items() if k not in ["id", "name", "email", "phone", "created_at", "updated_at"]}
+            email=data.get("email"),
+            created_at=data.get("created_at", ""),
+            updated_at=data.get("updated_at", "")
         )
 
-    async def update_contact(self, contact_id: str, update_data: Dict[str, Any]) -> Contact:
-        data = await self._request("PUT", f"/contacts/{contact_id}", data=update_data)
-        return Contact(
-            contact_id=contact_id,
-            name=data.get("name", ""),
-            email=data.get("email"),
-            phone=data.get("phone"),
-            created_at=data.get("created_at"),
-            updated_at=data.get("updated_at"),
-            additional_data={k: v for k, v in data.items() if k not in ["name", "email", "phone", "created_at", "updated_at"]}
-        )
+    # ==================== Contacts ====================
+
+    async def create_contact(
+        self,
+        first_name: str,
+        last_name: str,
+        email: Optional[str] = None,
+        phone: Optional[str] = None,
+        company_id: Optional[str] = None,
+        title: Optional[str] = None
+    ) -> Contact:
+        """
+        Create a new contact.
+
+        Args:
+            first_name: First name
+            last_name: Last name
+            email: Email address
+            phone: Phone number
+            company_id: Associated company ID
+            title: Job title
+
+        Returns:
+            Contact object
+
+        Raises:
+            Exception: If API returns error
+        """
+        json_data = {
+            "first_name": first_name,
+            "last_name": last_name
+        }
+
+        if email:
+            json_data["email"] = email
+        if phone:
+            json_data["phone"] = phone
+        if company_id:
+            json_data["company_id"] = company_id
+        if title:
+            json_data["title"] = title
+
+        data = await self._request("POST", "/contacts", json_data=json_data)
+
+        return self._parse_contact(data)
 
     async def get_contact(self, contact_id: str) -> Contact:
+        """
+        Get a contact by ID.
+
+        Args:
+            contact_id: Contact ID
+
+        Returns:
+            Contact object
+
+        Raises:
+            Exception: If API returns error
+        """
         data = await self._request("GET", f"/contacts/{contact_id}")
+        return self._parse_contact(data)
+
+    async def list_contacts(
+        self,
+        search: Optional[str] = None,
+        company_id: Optional[str] = None,
+        limit: int = 50,
+        offset: int = 0
+    ) -> List[Contact]:
+        """
+        List contacts.
+
+        Args:
+            search: Search query
+            company_id: Filter by company ID
+            limit: Maximum number of results
+            offset: Pagination offset
+
+        Returns:
+            List of Contact objects
+
+        Raises:
+            Exception: If API returns error
+        """
+        params = {"limit": limit, "offset": offset}
+
+        if search:
+            params["search"] = search
+        if company_id:
+            params["company_id"] = company_id
+
+        data = await self._request("GET", "/contacts", params=params)
+
+        return [self._parse_contact(c) for c in data.get("data", [])]
+
+    async def update_contact(
+        self,
+        contact_id: str,
+        first_name: Optional[str] = None,
+        last_name: Optional[str] = None,
+        email: Optional[str] = None,
+        phone: Optional[str] = None,
+        company_id: Optional[str] = None,
+        title: Optional[str] = None
+    ) -> Contact:
+        """
+        Update a contact.
+
+        Args:
+            contact_id: Contact ID
+            first_name: New first name
+            last_name: New last name
+            email: New email
+            phone: New phone
+            company_id: New company ID
+            title: New title
+
+        Returns:
+            Updated Contact object
+
+        Raises:
+            Exception: If API returns error
+        """
+        json_data = {}
+
+        if first_name:
+            json_data["first_name"] = first_name
+        if last_name:
+            json_data["last_name"] = last_name
+        if email:
+            json_data["email"] = email
+        if phone:
+            json_data["phone"] = phone
+        if company_id:
+            json_data["company_id"] = company_id
+        if title:
+            json_data["title"] = title
+
+        data = await self._request("PUT", f"/contacts/{contact_id}", json_data=json_data)
+
+        return self._parse_contact(data)
+
+    def _parse_contact(self, data: Dict[str, Any]) -> Contact:
+        """Parse contact data"""
+        # Try to get company info
+        company_name = None
+        if data.get("company"):
+            company_name = data["company"].get("name")
+
         return Contact(
-            contact_id=data.get("id", contact_id),
-            name=data.get("name", ""),
+            id=data.get("id", ""),
+            first_name=data.get("first_name", ""),
+            last_name=data.get("last_name", ""),
             email=data.get("email"),
             phone=data.get("phone"),
-            created_at=data.get("created_at"),
-            updated_at=data.get("updated_at"),
-            additional_data={k: v for k, v in data.items() if k not in ["id", "name", "email", "phone", "created_at", "updated_at"]}
+            company_id=data.get("company_id"),
+            company_name=company_name,
+            title=data.get("title"),
+            created_at=data.get("created_at", ""),
+            updated_at=data.get("updated_at", "")
         )
 
-    async def list_contacts(self, limit: int = 100, offset: int = 0) -> List[Contact]:
+    # ==================== Deals ====================
+
+    async def create_deal(
+        self,
+        name: str,
+        amount: float,
+        currency: str = "USD",
+        stage: str = "new",
+        probability: int = 50,
+        contact_id: Optional[str] = None,
+        company_id: Optional[str] = None,
+        expected_close_date: Optional[str] = None
+    ) -> Deal:
+        """
+        Create a new deal.
+
+        Args:
+            name: Deal name
+            amount: Deal amount
+            currency: Currency code
+            stage: Deal stage
+            probability: Win probability (0-100)
+            contact_id: Associated contact ID
+            company_id: Associated company ID
+            expected_close_date: Expected close date (YYYY-MM-DD)
+
+        Returns:
+            Deal object
+
+        Raises:
+            Exception: If API returns error
+        """
+        json_data = {
+            "name": name,
+            "amount": amount,
+            "currency": currency,
+            "stage": stage,
+            "probability": probability
+        }
+
+        if contact_id:
+            json_data["contact_id"] = contact_id
+        if company_id:
+            json_data["company_id"] = company_id
+        if expected_close_date:
+            json_data["expected_close_date"] = expected_close_date
+
+        data = await self._request("POST", "/deals", json_data=json_data)
+
+        return self._parse_deal(data)
+
+    async def get_deal(self, deal_id: str) -> Deal:
+        """
+        Get a deal by ID.
+
+        Args:
+            deal_id: Deal ID
+
+        Returns:
+            Deal object
+
+        Raises:
+            Exception: If API returns error
+        """
+        data = await self._request("GET", f"/deals/{deal_id}")
+        return self._parse_deal(data)
+
+    async def list_deals(
+        self,
+        search: Optional[str] = None,
+        stage: Optional[str] = None,
+        contact_id: Optional[str] = None,
+        company_id: Optional[str] = None,
+        limit: int = 50,
+        offset: int = 0
+    ) -> List[Deal]:
+        """
+        List deals.
+
+        Args:
+            search: Search query
+            stage: Filter by stage
+            contact_id: Filter by contact ID
+            company_id: Filter by company ID
+            limit: Maximum number of results
+            offset: Pagination offset
+
+        Returns:
+            List of Deal objects
+
+        Raises:
+            Exception: If API returns error
+        """
         params = {"limit": limit, "offset": offset}
-        data = await self._request("GET", "/contacts", params=params)
-        results = data.get("results", [])
 
-        return [Contact(
-            contact_id=r.get("id", ""),
-            name=r.get("name", ""),
-            email=r.get("email"),
-            phone=r.get("phone"),
-            created_at=r.get("created_at"),
-            updated_at=r.get("updated_at"),
-            additional_data={k: v for k, v in r.items() if k not in ["id", "name", "email", "phone", "created_at", "updated_at"]}
-        ) for r in results]
+        if search:
+            params["search"] = search
+        if stage:
+            params["stage"] = stage
+        if contact_id:
+            params["contact_id"] = contact_id
+        if company_id:
+            params["company_id"] = company_id
 
-    async def create_task(self, task_data: Dict[str, Any]) -> Task:
-        data = await self._request("POST", "/tasks", data=task_data)
-        return Task(
-            task_id=data.get("id", ""),
+        data = await self._request("GET", "/deals", params=params)
+
+        return [self._parse_deal(d) for d in data.get("data", [])]
+
+    async def update_deal(
+        self,
+        deal_id: str,
+        name: Optional[str] = None,
+        amount: Optional[float] = None,
+        stage: Optional[str] = None,
+        probability: Optional[int] = None,
+        expected_close_date: Optional[str] = None
+    ) -> Deal:
+        """
+        Update a deal.
+
+        Args:
+            deal_id: Deal ID
+            name: New name
+            amount: New amount
+            stage: New stage
+            probability: New probability (0-100)
+            expected_close_date: New expected close date
+
+        Returns:
+            Updated Deal object
+
+        Raises:
+            Exception: If API returns error
+        """
+        json_data = {}
+
+        if name:
+            json_data["name"] = name
+        if amount is not None:
+            json_data["amount"] = amount
+        if stage:
+            json_data["stage"] = stage
+        if probability is not None:
+            json_data["probability"] = probability
+        if expected_close_date:
+            json_data["expected_close_date"] = expected_close_date
+
+        data = await self._request("PUT", f"/deals/{deal_id}", json_data=json_data)
+
+        return self._parse_deal(data)
+
+    def _parse_deal(self, data: Dict[str, Any]) -> Deal:
+        """Parse deal data"""
+        return Deal(
+            id=data.get("id", ""),
             name=data.get("name", ""),
-            status=data.get("status", ""),
-            created_at=data.get("created_at"),
-            updated_at=data.get("updated_at"),
-            additional_data={k: v for k, v in data.items() if k not in ["id", "name", "status", "created_at", "updated_at"]}
+            amount=float(data.get("amount", 0)),
+            currency=data.get("currency", "USD"),
+            stage=data.get("stage", ""),
+            probability=int(data.get("probability", 50)),
+            contact_id=data.get("contact_id"),
+            company_id=data.get("company_id"),
+            expected_close_date=data.get("expected_close_date"),
+            created_at=data.get("created_at", ""),
+            updated_at=data.get("updated_at", "")
         )
 
-    async def update_task(self, task_id: str, update_data: Dict[str, Any]) -> Task:
-        data = await self._request("PUT", f"/tasks/{task_id}", data=update_data)
-        return Task(
-            task_id=task_id,
-            name=data.get("name", ""),
-            status=data.get("status", ""),
-            created_at=data.get("created_at"),
-            updated_at=data.get("updated_at"),
-            additional_data={k: v for k, v in data.items() if k not in ["name", "status", "created_at", "updated_at"]}
-        )
+    # ==================== Products ====================
 
-    async def get_task(self, task_id: str) -> Task:
-        data = await self._request("GET", f"/tasks/{task_id}")
-        return Task(
-            task_id=data.get("id", task_id),
-            name=data.get("name", ""),
-            status=data.get("status", ""),
-            created_at=data.get("created_at"),
-            updated_at=data.get("updated_at"),
-            additional_data={k: v for k, v in data.items() if k not in ["id", "name", "status", "created_at", "updated_at"]}
-        )
+    async def create_product(
+        self,
+        name: str,
+        price: float,
+        currency: str = "USD",
+        code: Optional[str] = None,
+        description: Optional[str] = None
+    ) -> Product:
+        """
+        Create a new product.
 
-    async def list_tasks(self, limit: int = 100, offset: int = 0) -> List[Task]:
-        params = {"limit": limit, "offset": offset}
-        data = await self._request("GET", "/tasks", params=params)
-        results = data.get("results", [])
+        Args:
+            name: Product name
+            price: Product price
+            currency: Currency code
+            code: Product code
+            description: Product description
 
-        return [Task(
-            task_id=r.get("id", ""),
-            name=r.get("name", ""),
-            status=r.get("status", ""),
-            created_at=r.get("created_at"),
-            updated_at=r.get("updated_at"),
-            additional_data={k: v for k, v in r.items() if k not in ["id", "name", "status", "created_at", "updated_at"]}
-        ) for r in results]
+        Returns:
+            Product object
 
-    async def create_product(self, product_data: Dict[str, Any]) -> Product:
-        data = await self._request("POST", "/products", data=product_data)
-        return Product(
-            product_id=data.get("id", ""),
-            name=data.get("name", ""),
-            price=data.get("price", 0.0),
-            created_at=data.get("created_at"),
-            updated_at=data.get("updated_at"),
-            additional_data={k: v for k, v in data.items() if k not in ["id", "name", "price", "created_at", "updated_at"]}
-        )
+        Raises:
+            Exception: If API returns error
+        """
+        json_data = {
+            "name": name,
+            "price": price,
+            "currency": currency
+        }
 
-    async def update_product(self, product_id: str, update_data: Dict[str, Any]) -> Product:
-        data = await self._request("PUT", f"/products/{product_id}", data=update_data)
-        return Product(
-            product_id=product_id,
-            name=data.get("name", ""),
-            price=data.get("price", 0.0),
-            created_at=data.get("created_at"),
-            updated_at=data.get("updated_at"),
-            additional_data={k: v for k, v in data.items() if k not in ["name", "price", "created_at", "updated_at"]}
-        )
+        if code:
+            json_data["code"] = code
+        if description:
+            json_data["description"] = description
+
+        data = await self._request("POST", "/products", json_data=json_data)
+
+        return self._parse_product(data)
 
     async def get_product(self, product_id: str) -> Product:
+        """
+        Get a product by ID.
+
+        Args:
+            product_id: Product ID
+
+        Returns:
+            Product object
+
+        Raises:
+            Exception: If API returns error
+        """
         data = await self._request("GET", f"/products/{product_id}")
+        return self._parse_product(data)
+
+    async def list_products(
+        self,
+        search: Optional[str] = None,
+        limit: int = 50,
+        offset: int = 0
+    ) -> List[Product]:
+        """
+        List products.
+
+        Args:
+            search: Search query
+            limit: Maximum number of results
+            offset: Pagination offset
+
+        Returns:
+            List of Product objects
+
+        Raises:
+            Exception: If API returns error
+        """
+        params = {"limit": limit, "offset": offset}
+
+        if search:
+            params["search"] = search
+
+        data = await self._request("GET", "/products", params=params)
+
+        return [self._parse_product(p) for p in data.get("data", [])]
+
+    async def update_product(
+        self,
+        product_id: str,
+        name: Optional[str] = None,
+        price: Optional[float] = None,
+        code: Optional[str] = None,
+        description: Optional[str] = None
+    ) -> Product:
+        """
+        Update a product.
+
+        Args:
+            product_id: Product ID
+            name: New name
+            price: New price
+            code: New code
+            description: New description
+
+        Returns:
+            Updated Product object
+
+        Raises:
+            Exception: If API returns error
+        """
+        json_data = {}
+
+        if name:
+            json_data["name"] = name
+        if price is not None:
+            json_data["price"] = price
+        if code:
+            json_data["code"] = code
+        if description:
+            json_data["description"] = description
+
+        data = await self._request("PUT", f"/products/{product_id}", json_data=json_data)
+
+        return self._parse_product(data)
+
+    def _parse_product(self, data: Dict[str, Any]) -> Product:
+        """Parse product data"""
         return Product(
-            product_id=data.get("id", product_id),
+            id=data.get("id", ""),
             name=data.get("name", ""),
-            price=data.get("price", 0.0),
-            created_at=data.get("created_at"),
-            updated_at=data.get("updated_at"),
-            additional_data={k: v for k, v in data.items() if k not in ["id", "name", "price", "created_at", "updated_at"]}
+            code=data.get("code"),
+            price=float(data.get("price", 0)),
+            currency=data.get("currency", "USD"),
+            description=data.get("description"),
+            created_at=data.get("created_at", ""),
+            updated_at=data.get("updated_at", "")
         )
 
-    async def list_products(self, limit: int = 100, offset: int = 0) -> List[Product]:
+    # ==================== Tasks ====================
+
+    async def create_task(
+        self,
+        title: str,
+        description: Optional[str] = None,
+        status: str = "pending",
+        priority: str = "normal",
+        due_date: Optional[str] = None,
+        related_entity_type: Optional[str] = None,
+        related_entity_id: Optional[str] = None
+    ) -> Task:
+        """
+        Create a new task.
+
+        Args:
+            title: Task title
+            description: Task description
+            status: Task status (pending, in_progress, completed, cancelled)
+            priority: Task priority (low, normal, high, urgent)
+            due_date: Due date (YYYY-MM-DD)
+            related_entity_type: Related entity type (contact, company, deal)
+            related_entity_id: Related entity ID
+
+        Returns:
+            Task object
+
+        Raises:
+            Exception: If API returns error
+        """
+        json_data = {
+            "title": title,
+            "status": status,
+            "priority": priority
+        }
+
+        if description:
+            json_data["description"] = description
+        if due_date:
+            json_data["due_date"] = due_date
+        if related_entity_type:
+            json_data["related_entity_type"] = related_entity_type
+        if related_entity_id:
+            json_data["related_entity_id"] = related_entity_id
+
+        data = await self._request("POST", "/tasks", json_data=json_data)
+
+        return self._parse_task(data)
+
+    async def get_task(self, task_id: str) -> Task:
+        """
+        Get a task by ID.
+
+        Args:
+            task_id: Task ID
+
+        Returns:
+            Task object
+
+        Raises:
+            Exception: If API returns error
+        """
+        data = await self._request("GET", f"/tasks/{task_id}")
+        return self._parse_task(data)
+
+    async def list_tasks(
+        self,
+        search: Optional[str] = None,
+        status: Optional[str] = None,
+        priority: Optional[str] = None,
+        related_entity_type: Optional[str] = None,
+        limit: int = 50,
+        offset: int = 0
+    ) -> List[Task]:
+        """
+        List tasks.
+
+        Args:
+            search: Search query
+            status: Filter by status
+            priority: Filter by priority
+            related_entity_type: Filter by related entity type
+            limit: Maximum number of results
+            offset: Pagination offset
+
+        Returns:
+            List of Task objects
+
+        Raises:
+            Exception: If API returns error
+        """
         params = {"limit": limit, "offset": offset}
-        data = await self._request("GET", "/products", params=params)
-        results = data.get("results", [])
 
-        return [Product(
-            product_id=r.get("id", ""),
-            name=r.get("name", ""),
-            price=r.get("price", 0.0),
-            created_at=r.get("created_at"),
-            updated_at=r.get("updated_at"),
-            additional_data={k: v for k, v in r.items() if k not in ["id", "name", "price", "created_at", "updated_at"]}
-        ) for r in results]
+        if search:
+            params["search"] = search
+        if status:
+            params["status"] = status
+        if priority:
+            params["priority"] = priority
+        if related_entity_type:
+            params["related_entity_type"] = related_entity_type
 
-    async def close(self):
-        if self.session and not self.session.closed:
-            await self.session.close()
+        data = await self._request("GET", "/tasks", params=params)
 
+        return [self._parse_task(t) for t in data.get("data", [])]
+
+    async def update_task(
+        self,
+        task_id: str,
+        title: Optional[str] = None,
+        description: Optional[str] = None,
+        status: Optional[str] = None,
+        priority: Optional[str] = None,
+        due_date: Optional[str] = None
+    ) -> Task:
+        """
+        Update a task.
+
+        Args:
+            task_id: Task ID
+            title: New title
+            description: New description
+            status: New status
+            priority: New priority
+            due_date: New due date
+
+        Returns:
+            Updated Task object
+
+        Raises:
+            Exception: If API returns error
+        """
+        json_data = {}
+
+        if title:
+            json_data["title"] = title
+        if description:
+            json_data["description"] = description
+        if status:
+            json_data["status"] = status
+        if priority:
+            json_data["priority"] = priority
+        if due_date:
+            json_data["due_date"] = due_date
+
+        data = await self._request("PUT", f"/tasks/{task_id}", json_data=json_data)
+
+        return self._parse_task(data)
+
+    def _parse_task(self, data: Dict[str, Any]) -> Task:
+        """Parse task data"""
+        return Task(
+            id=data.get("id", ""),
+            title=data.get("title", ""),
+            description=data.get("description"),
+            status=data.get("status", ""),
+            priority=data.get("priority", ""),
+            due_date=data.get("due_date"),
+            related_entity_type=data.get("related_entity_type"),
+            related_entity_id=data.get("related_entity_id"),
+            created_at=data.get("created_at", ""),
+            updated_at=data.get("updated_at", "")
+        )
+
+
+# ==================== Example Usage ====================
 
 async def main():
-    async with CogmentoClient(api_key="your_api_key") as client:
-        deal = await client.create_deal({
-            "name": "Enterprise Contract",
-            "value": 100000.0,
-            "stage": "Negotiation"
-        })
-        print(f"Created deal: {deal.deal_id}")
+    """Example usage of Cogmento API client"""
+
+    api_key = "your_cogmento_api_key"
+
+    async with CogmentoAPIClient(api_key) as client:
+        # Create a company
+        company = await client.create_company(
+            name="Startup Inc",
+            website="https://startup.com",
+            email="info@startup.com"
+        )
+        print(f"Created company: {company.id}")
+
+        # Create a contact
+        contact = await client.create_contact(
+            first_name="Jane",
+            last_name="Smith",
+            email="jane@startup.com",
+            company_id=company.id,
+            title="Founder"
+        )
+        print(f"Created contact: {contact.id}")
+
+        # Create a deal
+        deal = await client.create_deal(
+            name="Enterprise Contract",
+            amount=100000.0,
+            currency="USD",
+            stage="proposal",
+            probability=70,
+            contact_id=contact.id,
+            company_id=company.id
+        )
+        print(f"Created deal: {deal.id}")
+
+        # Create a product
+        product = await client.create_product(
+            name="Pro Subscription",
+            price=99.99,
+            currency="USD",
+            code="PRO-001"
+        )
+        print(f"Created product: {product.id}")
+
+        # Create a task
+        task = await client.create_task(
+            title="Send follow-up email",
+            description="Follow up with Jane about the deal",
+            status="pending",
+            priority="high",
+            related_entity_type="deal",
+            related_entity_id=deal.id
+        )
+        print(f"Created task: {task.id}")
+
+        # List companies
+        companies = await client.list_companies(limit=10)
+        print(f"Found {len(companies)} companies")
 
 
 if __name__ == "__main__":
-    import asyncio
     asyncio.run(main())
