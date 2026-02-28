@@ -1,8 +1,23 @@
 """
-YoutubeDataClient API Client
+YouTube Data API Client for Yoom Apps Integration.
 """
 
-from .youtube_data_client import YoutubeDataClient
+from .actions import YoutubeDataActions
+from .exceptions import (
+    YoutubeDataError,
+    YoutubeDataAuthenticationError,
+    YoutubeDataRateLimitError,
+    YoutubeDataNotFoundError,
+    YoutubeDataValidationError,
+)
 
-__version__ = "0.1.0"
-__all__ = ["YoutubeDataClient"]
+__all__ = [
+    "YoutubeDataActions",
+    "YoutubeDataError",
+    "YoutubeDataAuthenticationError",
+    "YoutubeDataRateLimitError",
+    "YoutubeDataNotFoundError",
+    "YoutubeDataValidationError",
+]
+
+__version__ = "1.0.0"

@@ -1,7 +1,23 @@
 """
-# Rd Station Package
+Rd Station API Client for Yoom Apps Integration.
 """
 
-from .rd_station_client import #RdStationClient
+from .actions import RdStationActions
+from .exceptions import (
+    RdStationError,
+    RdStationAuthenticationError,
+    RdStationRateLimitError,
+    RdStationNotFoundError,
+    RdStationValidationError,
+)
 
-__all__ = ['#RdStationClient']
+__all__ = [
+    "RdStationActions",
+    "RdStationError",
+    "RdStationAuthenticationError",
+    "RdStationRateLimitError",
+    "RdStationNotFoundError",
+    "RdStationValidationError",
+]
+
+__version__ = "1.0.0"
