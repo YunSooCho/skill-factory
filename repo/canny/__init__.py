@@ -1,11 +1,8 @@
 """
-Canny Feature Request Platform Integration
-
-Canny is a platform for collecting and organizing feature requests,
-bug reports, and feedback from customers and teams.
+Canny - 피드백 및 기능 요청 관리 서비스
 """
 
 from .client import CannyClient
 
 __all__ = ['CannyClient']
-__version__ = '1.0.0'
+__version__ = '0.1.0'

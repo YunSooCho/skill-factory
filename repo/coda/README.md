@@ -1,367 +1,544 @@
-# Coda API Client
+# Coda Integration
 
-Python async client for Coda's document collaboration platform.
-
-## Features
-
-- ✅ Add/Update/Delete table rows
-- ✅ Search table rows
-- ✅ Get row details
-- ✅ Create pages
-- ✅ Manage permissions
-- ✅ Webhook verification (Row Created, Row Updated)
-- ✅ Async/await support
-- ✅ Type hints and dataclasses
+Coda is a document-database hybrid that combines the flexibility of documents with the power of databases. Build docs, tables, apps, and automations all in one place.
 
 ## Installation
-
 ```bash
-pip install -r requirements.txt
+pip install -e .
 ```
 
-## API Token
+## API Token Setup
 
-Get your API token from: https://coda.io/account
+1. Sign up at [coda.io](https://coda.io)
+2. Go to Account Settings > API Tokens
+3. Create a new API token
+4. Save the token for your application
+5. Note your document IDs for API access
 
 ## Usage
 
 ### Initialize Client
 
 ```python
-import asyncio
-from coda_client import CodaAPIClient
+from coda import CodaClient
 
-async def main():
-    api_token = "your-api-token-here"
-
-    async with CodaAPIClient(api_token) as client:
-        # Use the client
-        pass
-
-asyncio.run(main())
+client = CodaClient(api_token="your-api-token")
 ```
 
-### Add Row
-
-Add a new row to a Coda table.
+### Documents
 
 ```python
-async with CodaAPIClient(api_token) as client:
-    result = await client.add_row(
-        doc_id="doc-abc123",
-        table_id="table-xyz789",
-        cells={
-            "Name": "John Doe",
-            "Email": "john@example.com",
-            "Status": "Active",
-            "Priority": "High"
+# List all documents
+docs = client.list_docs()
+for doc in docs.get('items', []):
+    print(f"Doc: {doc['name']} (ID: {doc['id']})")
+
+# Search documents
+results = client.search_docs("Project Tracker")
+
+# Get document details
+doc = client.get_doc("doc-abc123")
+
+# Create new document
+new_doc = client.create_doc(
+    title="New Project Tracker",
+    folder_id="folder-xyz"
+)
+
+# Update document
+updated = client.update_doc("doc-abc123", title="Updated Title")
+
+# Delete document
+client.delete_doc("doc-abc123")
+
+# Publish document
+client.publish_doc("doc-abc123")
+
+# Unpublish document
+client.unpublish_doc("doc-abc123")
+```
+
+### Tables
+
+```python
+DOC_ID = "doc-abc123"
+
+# List tables
+tables = client.list_tables(DOC_ID)
+for table in tables:
+    print(f"Table: {table['name']} (ID: {table['id']})")
+
+# Get table details
+table = client.get_table(DOC_ID, "table-xyz")
+
+# Get table schema
+schema = client.get_table_schema(DOC_ID, "table-xyz")
+```
+
+### Rows CRUD
+
+```python
+DOC_ID = "doc-abc123"
+TABLE_ID = "table-xyz"
+
+# List rows
+rows = client.list_rows(DOC_ID, TABLE_ID, limit=50)
+
+# List rows with query and sort
+rows = client.list_rows(
+    DOC_ID,
+    TABLE_ID,
+    query='Status:"Active"',
+    sort_by='Created',
+    limit=100
+)
+
+# Get single row
+row = client.get_row(DOC_ID, TABLE_ID, "row-456")
+
+# Create row
+new_row = client.create_row(
+    DOC_ID,
+    TABLE_ID,
+    cells=[
+        {"column": "Name", "value": "John Doe"},
+        {"column": "Email", "value": "john@example.com"},
+        {"column": "Status", "value": "Active"}
+    ]
+)
+
+# Create row with key column
+new_row = client.create_row(
+    DOC_ID,
+    TABLE_ID,
+    key_column="Email",
+    rows=[
+        {"cells": [
+            {"column": "Name", "value": "Jane"},
+            {"column": "Email", "value": "jane@example.com"}
+        ]}
+    ]
+)
+
+# Update row
+updated = client.update_row(
+    DOC_ID,
+    TABLE_ID,
+    "row-456",
+    cells=[
+        {"column": "Status", "value": "Inactive"},
+        {"column": "Email", "value": "new@example.com"}
+    ]
+)
+
+# Delete row
+client.delete_row(DOC_ID, TABLE_ID, "row-456")
+
+# Get all rows (handles pagination automatically)
+for row in client.get_all_rows(DOC_ID, TABLE_ID):
+    print(row)
+```
+
+### Batch Operations
+
+```python
+# Batch create rows
+batch = client.batch_create_rows(
+    DOC_ID,
+    TABLE_ID,
+    rows=[
+        {"cells": [
+            {"column": "Name", "value": "Alice"},
+            {"column": "Email", "value": "alice@example.com"}
+        ]},
+        {"cells": [
+            {"column": "Name", "value": "Bob"},
+            {"column": "Email", "value": "bob@example.com"}
+        ]}
+    ]
+)
+
+# Batch update rows
+batch = client.batch_update_rows(
+    DOC_ID,
+    TABLE_ID,
+    updates=[
+        {
+            "id": "row-456",
+            "cells": [{"column": "Status", "value": "Active"}]
         },
-        key_columns=["Email"]  # Optional: for upsert
-    )
-
-    if result.success:
-        print(f"Row created: {result.row.id}")
-        print(f"Cells: {result.row.cells}")
-```
-
-### Get Row
-
-Retrieve a specific row.
-
-```python
-async with CodaAPIClient(api_token) as client:
-    result = await client.get_row(
-        doc_id="doc-abc123",
-        table_id="table-xyz789",
-        row_id="row-123",
-        use_column_names=True  # Use names instead of column IDs
-    )
-
-    if result.success:
-        print(f"Row ID: {result.row.id}")
-        print(f"Data: {result.row.cells}")
-```
-
-### Update Row
-
-Update an existing row.
-
-```python
-async with CodaAPIClient(api_token) as client:
-    result = await client.update_row(
-        doc_id="doc-abc123",
-        table_id="table-xyz789",
-        row_id="row-123",
-        cells={
-            "Status": "Completed",
-            "CompletedDate": "2026-02-28"
+        {
+            "id": "row-789",
+            "cells": [{"column": "Status", "value": "Active"}]
         }
-    )
+    ]
+)
 
-    if result.success:
-        print(f"Row updated: {result.row.id}")
-```
-
-### Delete Row
-
-Delete a row.
-
-```python
-async with CodaAPIClient(api_token) as client:
-    result = await client.delete_row(
-        doc_id="doc-abc123",
-        table_id="table-xyz789",
-        row_id="row-123"
-    )
-
-    if result.success:
-        print("Row deleted successfully")
-```
-
-### Search Row
-
-Search for rows matching a query.
-
-```python
-async with CodaAPIClient(api_token) as client:
-    result = await client.search_row(
-        doc_id="doc-abc123",
-        table_id="table-xyz789",
-        query="John",
-        use_column_names=True,
-        limit=50
-    )
-
-    print(f"Found {result.total} rows:")
-    for row in result.results:
-        print(f"  - {row.row.id}: {row.cells.get('Name', '')}")
-```
-
-### Create Page
-
-Create a new page in a document.
-
-```python
-async with CodaAPIClient(api_token) as client:
-    result = await client.create_page(
-        doc_id="doc-abc123",
-        title="New Section",
-        parent_id="page-456",  # Optional: parent page
-        predecessor_id="page-789"  # Optional: order position
-    )
-
-    if result.success:
-        page = result.page
-        print(f"Page created: {page.id}")
-        print(f"Title: {page.title}")
-        print(f"URL: {page.browser_link}")
-```
-
-### Add Permission
-
-Add permissions to a document.
-
-```python
-# Add user permission
-async with CodaAPIClient(api_token) as client:
-    result = await client.add_permission(
-        doc_id="doc-abc123",
-        permission_type="user",
-        access_level="edit",
-        email="john@example.com"
-    )
-
-    if result.success:
-        print("User permission added")
-
-# Add group permission
-result = await client.add_permission(
-    doc_id="doc-abc123",
-    permission_type="group",
-    access_level="read",
-    group_id="group-123"
+# Batch delete rows
+client.batch_delete_rows(
+    DOC_ID,
+    TABLE_ID,
+    row_ids=["row-456", "row-789"]
 )
 ```
 
-### Webhook Integration
-
-Set up webhooks for row events.
+### Columns
 
 ```python
-# Verify webhook signature
-def handle_webhook(payload: dict, signature: str, secret: str):
-    if client.verify_webhook(payload, signature, secret):
-        event = client.parse_webhook_event(payload)
+DOC_ID = "doc-abc123"
+TABLE_ID = "table-xyz"
 
-        if event["event_type"] == "doc.rowCreated":
-            row = event["data"].get("row", {})
-            print(f"New row created: {row.get('id')}")
-            # Process new row
+# List columns
+columns = client.list_columns(DOC_ID, TABLE_ID)
+for col in columns:
+    print(f"Column: {col['name']} ({col['type']})")
 
-        elif event["event_type"] == "doc.rowUpdated":
-            row = event["data"].get("row", {})
-            changes = event["data"].get("changes", {})
-            print(f"Row updated: {row.get('id')}")
-            print(f"Changes: {changes}")
-            # Process updated row
-    else:
-        print("Invalid webhook signature")
+# Get column details
+column = client.get_column(DOC_ID, TABLE_ID, "col-123")
+
+# Create text column
+new_col = client.create_column(
+    DOC_ID,
+    TABLE_ID,
+    name="Description",
+    type="text"
+)
+
+# Create number column
+num_col = client.create_column(
+    DOC_ID,
+    TABLE_ID,
+    name="Price",
+    type="number",
+    options={"currency": "USD"}
+)
+
+# Create date column
+date_col = client.create_column(
+    DOC_ID,
+    TABLE_ID,
+    name="Due Date",
+    type="date"
+)
+
+# Update column
+updated = client.update_column(
+    DOC_ID,
+    TABLE_ID,
+    "col-123",
+    name="Updated Name"
+)
+
+# Delete column
+client.delete_column(DOC_ID, TABLE_ID, "col-123")
 ```
 
-## API Actions
+### Special Column Types
 
-### Add Row
+```python
+# Create formula column
+formula_col = client.create_formula(
+    DOC_ID,
+    TABLE_ID,
+    name="Total",
+    formula='[Price] * [Quantity]'
+)
 
-Add a new row to a table.
+# Create lookup column
+lookup_col = client.create_lookup(
+    DOC_ID,
+    TABLE_ID,
+    name="Contact Name",
+    relationship="Contact",
+    target_column="Name"
+)
 
-**Parameters:**
-- `doc_id` (str): Document ID
-- `table_id` (str): Table ID
-- `cells` (Dict[str, Any]): Column values
-- `key_columns` (Optional[List[str]]): Key columns for upsert
+# Create rollup column
+rollup_col = client.create_rollup(
+    DOC_ID,
+    TABLE_ID,
+    name="Total Revenue",
+    relationship="Orders",
+    aggregation="sum"
+)
 
-**Returns:** `RowResponse`
-
-### Get Row
-
-Retrieve a specific row.
-
-**Parameters:**
-- `doc_id` (str): Document ID
-- `table_id` (str): Table ID
-- `row_id` (str): Row ID
-- `use_column_names` (bool): Use column names (default: False)
-
-**Returns:** `RowResponse`
-
-### Update Row
-
-Update an existing row.
-
-**Parameters:**
-- `doc_id` (str): Document ID
-- `table_id` (str): Table ID
-- `row_id` (str): Row ID
-- `cells` (Dict[str, Any]): Column values to update
-- `key_columns` (Optional[List[str]]): Key columns
-
-**Returns:** `RowResponse`
-
-### Delete Row
-
-Delete a row.
-
-**Parameters:**
-- `doc_id` (str): Document ID
-- `table_id` (str): Table ID
-- `row_id` (str): Row ID
-
-**Returns:** `RowResponse`
-
-### Search Row
-
-Search for rows.
-
-**Parameters:**
-- `doc_id` (str): Document ID
-- `table_id` (str): Table ID
-- `query` (str): Search query
-- `use_column_names` (bool): Use column names (default: False)
-- `limit` (int): Maximum results (default: 100)
-
-**Returns:** `SearchResponse`
-
-### Create Page
-
-Create a new page.
-
-**Parameters:**
-- `doc_id` (str): Document ID
-- `title` (str): Page title
-- `parent_id` (Optional[str]): Parent page ID
-- `predecessor_id` (Optional[str]): Predecessor page ID
-
-**Returns:** `PageResponse`
-
-### Add Permission
-
-Add document permissions.
-
-**Parameters:**
-- `doc_id` (str): Document ID
-- `permission_type` (str): 'user' or 'group'
-- `access_level` (str): 'read', 'write', 'edit', 'admin'
-- `email` (Optional[str]): User email (for user type)
-- `group_id` (Optional[str]): Group ID (for group type)
-
-**Returns:** `PermissionResponse`
-
-## Webhook Events
-
-### Row Created
-
-Triggered when a new row is created.
-
-**Event Type:** `doc.rowCreated`
-
-**Payload:**
-```json
-{
-  "type": "doc.rowCreated",
-  "id": "evt-123",
-  "timestamp": "2026-02-28T12:00:00Z",
-  "data": {
-    "row": {
-      "id": "row-123",
-      "cells": {...}
+# Create select column
+select_col = client.create_column(
+    DOC_ID,
+    TABLE_ID,
+    name="Status",
+    type="checkbox",
+    options={
+        "color": "green",
+        "label": "Active"
     }
-  }
-}
+)
 ```
 
-### Row Updated
+### Buttons
 
-Triggered when a row is updated.
+```python
+# List buttons
+buttons = client.list_buttons(DOC_ID, TABLE_ID)
 
-**Event Type:** `doc.rowUpdated`
-
-**Payload:**
-```json
-{
-  "type": "doc.rowUpdated",
-  "id": "evt-456",
-  "timestamp": "2026-02-28T12:00:00Z",
-  "data": {
-    "row": {...},
-    "changes": {...}
-  }
-}
+# Push a button
+result = client.push_button(
+    DOC_ID,
+    TABLE_ID,
+    "row-456",
+    "btn-123"
+)
 ```
 
-## Getting Document/Table IDs
+### Views
 
-1. **Document ID:** Found in the document URL
-   - URL: `https://coda.io/d/doc-abc123/My-Document`
-   - ID: `doc-abc123`
+```python
+# List views
+views = client.list_views(DOC_ID, TABLE_ID)
 
-2. **Table ID:**
-   - Right-click table → Copy → Copy table ID
-   - Or use the Coda API to list tables
+# Get view details
+view = client.get_view(DOC_ID, TABLE_ID, "view-456")
 
-3. **Row ID:** Returned from Add Row or Get Row operations
+# Get rows from a specific view
+view_rows = client.get_view_rows(DOC_ID, TABLE_ID, "view-456")
+```
+
+### Pages
+
+```python
+# List pages in document
+pages = client.list_pages(DOC_ID)
+for page in pages:
+    print(f"Page: {page['name']} (ID: {page['id']})")
+
+# Get page details
+page = client.get_page(DOC_ID, "page-789")
+```
+
+### Import Data
+
+```python
+# Import CSV data
+csv_data = """Name,Email,Status
+John,john@example.com,Active
+Jane,jane@example.com,Inactive"""
+
+result = client.import_csv(
+    DOC_ID,
+    TABLE_ID,
+    data=csv_data,
+    import_options={
+        "headerCaseSensitive": False
+    }
+)
+```
+
+## API Methods
+
+### Documents
+- `list_docs(query, limit, page_token)` - List documents
+- `get_doc(doc_id)` - Get document details
+- `create_doc(title, folder_id, source_doc_id)` - Create document
+- `update_doc(doc_id, title, folder_id)` - Update document
+- `delete_doc(doc_id)` - Delete document
+- `publish_doc(doc_id, share_link_expiration)` - Publish document
+- `unpublish_doc(doc_id)` - Unpublish document
+- `search_docs(query, limit)` - Search documents
+
+### Tables
+- `list_tables(doc_id)` - List tables
+- `get_table(doc_id, table_id)` - Get table details
+- `get_table_schema(doc_id, table_id)` - Get table schema
+
+### Rows
+- `list_rows(doc_id, table_id, ...)` - List rows
+- `get_row(doc_id, table_id, row_id)` - Get single row
+- `create_row(doc_id, table_id, cells, ...)` - Create row
+- `update_row(doc_id, table_id, row_id, cells)` - Update row
+- `delete_row(doc_id, table_id, row_id)` - Delete row
+- `get_all_rows(doc_id, table_id, max_rows)` - Get all rows with pagination
+
+### Batch Operations
+- `batch_create_rows(doc_id, table_id, rows)` - Batch create
+- `batch_update_rows(doc_id, table_id, updates)` - Batch update
+- `batch_delete_rows(doc_id, table_id, row_ids)` - Batch delete
+
+### Columns
+- `list_columns(doc_id, table_id)` - List columns
+- `get_column(doc_id, table_id, column_id)` - Get column details
+- `create_column(doc_id, table_id, name, type, options)` - Create column
+- `update_column(doc_id, table_id, column_id, ...)` - Update column
+- `delete_column(doc_id, table_id, column_id)` - Delete column
+
+### Special Column Types
+- `create_formula(doc_id, table_id, name, formula)` - Create formula
+- `create_lookup(doc_id, table_id, name, relationship, target_column)` - Create lookup
+- `create_rollup(doc_id, table_id, name, relationship, aggregation)` - Create rollup
+
+### Buttons
+- `list_buttons(doc_id, table_id)` - List buttons
+- `push_button(doc_id, table_id, row_id, button_id)` - Trigger button
+
+### Views
+- `list_views(doc_id, table_id)` - List views
+- `get_view(doc_id, table_id, view_id)` - Get view details
+- `get_view_rows(doc_id, table_id, view_id, limit)` - Get rows from view
+
+### Pages
+- `list_pages(doc_id)` - List pages
+- `get_page(doc_id, page_id)` - Get page details
+
+### Import
+- `import_csv(doc_id, table_id, data, import_options)` - Import CSV data
+
+## Cell References
+
+Coda uses column names for cell operations:
+
+```python
+# Cell with column name
+cells = [
+    {"column": "Name", "value": "John"},
+    {"column": "Email", "value": "john@example.com"}
+]
+
+# Cell with column ID
+cells = [
+    {"column": "c-abc123", "value": "John"}
+]
+
+# Multiple rows in batch
+rows = [
+    {
+        "cells": [
+            {"column": "Name", "value": "Alice"},
+            {"column": "Status", "value": "Active"}
+        ]
+    }
+]
+```
+
+## Query Syntax
+
+Coda supports various query formats:
+
+```python
+# Simple text search
+client.list_rows(DOC_ID, TABLE_ID, query="John")
+
+# Exact match
+client.list_rows(DOC_ID, TABLE_ID, query='Name:"John"')
+
+# Status matching
+client.list_rows(DOC_ID, TABLE_ID, query='Status:"Active"')
+
+# View filtering
+client.list_rows(DOC_ID, TABLE_ID, query='view:"view-456"')
+
+# Multiple filters (use AND in Coda UI to create a view)
+# Then query by that view
+```
+
+## Column Types
+
+Coda supports these column types:
+
+- `text` - Text
+- `number` - Numbers
+- `checkbox` - Boolean (yes/no)
+- `date` - Date values
+- `dateTime` - Date and time
+- `currency` - Money values
+- `formula` - Computed values
+- `lookup` - Reference related data
+- `rollup` - Aggregates related data
+- `relation` - Links between tables
+- `multiselect` - Multiple options
+- `select` - Single option
+- `people` - People/assignees
+- `files` - File attachments
+- `image` - Image files
+- `button` - Interactive buttons
+- `url` - Links
+- `email` - Email addresses
+- `progress` - Progress bars
+- `slider` - Numeric sliders
+- `duration` - Time durations
+
+## Formula Examples
+
+```python
+# Create formula column
+client.create_formula(
+    DOC_ID,
+    TABLE_ID,
+    name="Total Cost",
+    formula='[Price] * [Quantity]'
+)
+
+# Date formula
+client.create_formula(
+    DOC_ID,
+    TABLE_ID,
+    name="Days Since",
+    formula='TODAY() - [Created Date]'
+)
+
+# Conditional formula
+client.create_formula(
+    DOC_ID,
+    TABLE_ID,
+    name="Status Badge",
+    formula='IF([Status] = "Done", "✅", "❌")'
+)
+
+# Rollup
+client.create_rollup(
+    DOC_ID,
+    TABLE_ID,
+    name="Total Orders",
+    relationship="Orders",
+    aggregation="sum"
+)
+
+# Count related
+client.create_rollup(
+    DOC_ID,
+    TABLE_ID,
+    name="Order Count",
+    relationship="Orders",
+    aggregation="count"
+)
+```
 
 ## Best Practices
 
-1. **Use column names:** Set `use_column_names=True` for more readable code
-2. **Batch operations:** Use efficient queries to minimize API calls
-3. **Error handling:** Check `success` field before using results
-4. **Webhook security:** Always verify webhook signatures
-5. **Rate limits:** Coda has rate limits - implement backoff if needed
+1. **Pagination**: Use `pageToken` for large datasets
+2. **Column references**: Use column names for clarity
+3. **Batch operations**: Use batch methods for bulk operations
+4. **Error handling**: Always catch and handle HTTP exceptions
+5. **View filtering**: Create views for common filters, then query by view
+6. **Formula performance**: Keep formulas simple for better performance
+7. **Rate limits**: Coda has rate limits - implement backoff if needed
 
-## API Reference
+## Common Patterns
 
-Official documentation: https://coda.io/developers/apis/
+```python
+# Create table with columns
+doc = client.create_doc("New Doc")
+table = tables[0]  # Get default table
 
-## Support
+# Add columns
+client.create_column(DOC_ID, TABLE_ID, "Name", "text")
+client.create_column(DOC_ID, TABLE_ID, "Email", "email")
+client.create_column(DOC_ID, TABLE_ID, "Status", "checkbox")
 
-For issues, visit: https://help.coda.io/
+# Add data
+client.batch_create_rows(DOC_ID, TABLE_ID, rows=[...])
+
+# Create summary formula
+client.create_formula(DOC_ID, TABLE_ID, "Summary", ...)
+
+# Publish for sharing
+client.publish_doc(DOC_ID)
+```

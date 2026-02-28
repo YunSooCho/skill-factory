@@ -1,11 +1,8 @@
 """
-AskHandle Customer Support Integration
-
-AskHandle is a customer support platform that helps manage customer
-inquiries, ticket tracking, and multi-channel support automation.
+AskHandle - 고객 문의 및 요청 관리 서비스
 """
 
 from .client import AskHandleClient
 
 __all__ = ['AskHandleClient']
-__version__ = '1.0.0'
+__version__ = '0.1.0'

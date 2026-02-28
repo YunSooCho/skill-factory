@@ -1,25 +1,17 @@
 """
-Canny Feature Request Platform API Client
-
-This module provides a Python client for interacting with the Canny
-feature request platform API.
+Canny Client
+피드백 및 기능 요청 관리 API 클라이언트
 """
 
 import requests
-from typing import Dict, List, Optional, Any
+from typing import Optional, Dict, List, Any
 
 
 class CannyClient:
     """
-    Client for Canny Feature Request Platform API.
+    Canny API 클라이언트
 
-    Canny provides:
-    - Feature request collection
-    - Feedback management
-    - User voting
-    - Status tracking
-    - Roadmap management
-    - Activity tracking
+    사용자 피드백, 기능 요청 관리를 위한 클라이언트
     """
 
     def __init__(
@@ -29,496 +21,373 @@ class CannyClient:
         timeout: int = 30
     ):
         """
-        Initialize the Canny client.
+        Canny 클라이언트 초기화
 
         Args:
-            api_key: Your Canny API key
-            base_url: API base URL (default: https://canny.io/api/v1)
-            timeout: Request timeout in seconds
+            api_key: Canny API 키
+            base_url: API 기본 URL
+            timeout: 요청 타임아웃 (초)
         """
         self.api_key = api_key
         self.base_url = base_url.rstrip('/')
         self.timeout = timeout
         self.session = requests.Session()
-        self.session.params = {'apiKey': api_key}
 
     def _request(
         self,
         endpoint: str,
-        params: Optional[Dict[str, Any]] = None,
-        data: Optional[Dict[str, Any]] = None
+        data: Optional[Dict[str, Any]] = None,
+        params: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        Make an authenticated request to the Canny API.
+        API 요청 전송
 
         Args:
-            endpoint: API endpoint
-            params: Query parameters
-            data: Request body data
+            endpoint: API 엔드포인트
+            data: 요청 데이터
+            params: URL 파라미터
 
         Returns:
-            Response JSON
+            API 응답 데이터
+
+        Raises:
+            requests.RequestException: API 요청 실패
         """
-        url = f"{self.base_url}{endpoint}"
+        url = f"{self.base_url}/{endpoint.lstrip('/')}"
+        payload = {'apiKey': self.api_key}
+
+        if data:
+            payload.update(data)
+
         response = self.session.post(
             url,
+            json=payload,
             params=params,
-            json=data,
             timeout=self.timeout
         )
         response.raise_for_status()
         return response.json()
 
-    def list_posts(
+    def create_post(
         self,
-        board_id: Optional[str] = None,
-        limit: int = 100,
-        skip: int = 0,
-        status: Optional[str] = None
+        title: str,
+        description: str,
+        author_id: str,
+        board_id: str,
+        category_id: Optional[str] = None,
+        tags: Optional[List[str]] = None,
+        details: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        List posts.
+        새 피드백/게시물 생성
 
         Args:
-            board_id: Filter by board ID (optional)
-            limit: Maximum number of results
-            skip: Number of results to skip
-            status: Filter by status (optional)
+            title: 제목
+            description: 설명
+            author_id: 작성자 ID
+            board_id: 보드 ID
+            category_id: 카테고리 ID
+            tags: 태그 목록
+            details: 추가 세부사항
 
         Returns:
-            List of posts
+            생성된 게시물 정보
         """
-        params = {
-            'limit': limit,
-            'skip': skip
+        data = {
+            'title': title,
+            'details': description,
+            'authorID': author_id,
+            'boardID': board_id
         }
-        if board_id:
-            params['board'] = board_id
-        if status:
-            params['status'] = status
 
-        return self._request('/posts/list', params=params)
+        if category_id:
+            data['categoryID'] = category_id
+        if tags:
+            data['tags'] = tags
+        if details:
+            data['details'] = details
+
+        return self._request('/posts/create', data=data)
 
     def get_post(self, post_id: str) -> Dict[str, Any]:
         """
-        Get post details.
+        게시물 조회
 
         Args:
-            post_id: Post ID
+            post_id: 게시물 ID
 
         Returns:
-            Post details
+            게시물 정보
         """
-        return self._request('/posts/retrieve', params={'id': post_id})
+        return self._request('/posts/retrieve', data={'id': post_id})
 
-    def create_post(self, data: Dict[str, Any]) -> Dict[str, Any]:
+    def list_posts(
+        self,
+        board_id: Optional[str] = None,
+        author_id: Optional[str] = None,
+        limit: int = 50,
+        skip: int = 0,
+        status: Optional[str] = None
+    ) -> List[Dict[str, Any]]:
         """
-        Create a new post.
+        게시물 목록 조회
 
         Args:
-            data: Post data including authorID, boardID, title, details, etc.
+            board_id: 보드 ID 필터
+            author_id: 작성자 ID 필터
+            limit: 반환할 항목 수
+            skip: 건너뛸 항목 수
+            status: 상태 필터
 
         Returns:
-            Created post
+            게시물 목록
         """
-        return self._request('/posts/create', data=data)
+        data = {'limit': limit, 'skip': skip}
 
-    def update_post(self, post_id: str, data: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Update a post.
+        if board_id:
+            data['boardID'] = board_id
+        if author_id:
+            data['authorID'] = author_id
+        if status:
+            data['status'] = status
 
-        Args:
-            post_id: Post ID
-            data: Fields to update
+        response = self._request('/posts/list', data=data)
+        return response.get('posts', [])
 
-        Returns:
-            Updated post
-        """
-        data['id'] = post_id
-        return self._request('/posts/update', data=data)
-
-    def change_post_status(
+    def update_post(
         self,
         post_id: str,
-        status: str
+        title: Optional[str] = None,
+        description: Optional[str] = None,
+        status: Optional[str] = None,
+        tags: Optional[List[str]] = None
     ) -> Dict[str, Any]:
         """
-        Change post status.
+        게시물 업데이트
 
         Args:
-            post_id: Post ID
-            status: New status (planning, in_progress, implemented, etc.)
+            post_id: 게시물 ID
+            title: 새 제목
+            description: 새 설명
+            status: 새 상태
+            tags: 새 태그 목록
 
         Returns:
-            Updated post
+            업데이트된 게시물 정보
         """
-        return self._request('/posts/changeStatus', data={
-            'id': post_id,
-            'status': status
-        })
+        data = {'id': post_id}
 
-    def delete_post(self, post_id: str) -> Dict[str, Any]:
+        if title:
+            data['title'] = title
+        if description:
+            data['details'] = description
+        if status:
+            data['status'] = status
+        if tags:
+            data['tags'] = tags
+
+        return self._request('/posts/update', data=data)
+
+    def create_comment(
+        self,
+        post_id: str,
+        author_id: str,
+        content: str,
+        parent_comment_id: Optional[str] = None
+    ) -> Dict[str, Any]:
         """
-        Delete a post.
+        댓글 생성
 
         Args:
-            post_id: Post ID
+            post_id: 게시물 ID
+            author_id: 작성자 ID
+            content: 댓글 내용
+            parent_comment_id: 부모 댓글 ID (대댓글용)
 
         Returns:
-            Deletion result
+            생성된 댓글 정보
         """
-        return self._request('/posts/delete', data={'id': post_id})
+        data = {
+            'postID': post_id,
+            'authorID': author_id,
+            'value': content
+        }
+
+        if parent_comment_id:
+            data['parentID'] = parent_comment_id
+
+        return self._request('/comments/create', data=data)
 
     def list_comments(
         self,
         post_id: str,
-        limit: int = 100,
+        limit: int = 50,
         skip: int = 0
-    ) -> Dict[str, Any]:
+    ) -> List[Dict[str, Any]]:
         """
-        List comments for a post.
+        댓글 목록 조회
 
         Args:
-            post_id: Post ID
-            limit: Maximum number of comments
-            skip: Number of comments to skip
+            post_id: 게시물 ID
+            limit: 반환할 항목 수
+            skip: 건너뛸 항목 수
 
         Returns:
-            List of comments
+            댓글 목록
         """
-        return self._request('/comments/list', params={
-            'post': post_id,
-            'limit': limit,
-            'skip': skip
-        })
-
-    def create_comment(self, data: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Create a comment.
-
-        Args:
-            data: Comment data including authorID, postID, value, etc.
-
-        Returns:
-            Created comment
-        """
-        return self._request('/comments/create', data=data)
-
-    def delete_comment(self, comment_id: str) -> Dict[str, Any]:
-        """
-        Delete a comment.
-
-        Args:
-            comment_id: Comment ID
-
-        Returns:
-            Deletion result
-        """
-        return self._request('/comments/delete', data={'id': comment_id})
-
-    def list_voters(
-        self,
-        post_id: str,
-        limit: int = 100,
-        skip: int = 0
-    ) -> Dict[str, Any]:
-        """
-        List voters for a post.
-
-        Args:
-            post_id: Post ID
-            limit: Maximum number of voters
-            skip: Number of voters to skip
-
-        Returns:
-            List of voters
-        """
-        return self._request('/users/listVoters', params={
-            'post': post_id,
-            'limit': limit,
-            'skip': skip
-        })
-
-    def create_vote(self, data: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Create a vote.
-
-        Args:
-            data: Vote data including userID, postID, score
-
-        Returns:
-            Vote result
-        """
-        return self._request('/votes/create', data=data)
-
-    def delete_vote(self, user_id: str, post_id: str) -> Dict[str, Any]:
-        """
-        Delete a vote.
-
-        Args:
-            user_id: User ID
-            post_id: Post ID
-
-        Returns:
-            Deletion result
-        """
-        return self._request('/votes/delete', data={
-            'userID': user_id,
-            'postID': post_id
-        })
-
-    def list_boards(self, limit: int = 50, skip: int = 0) -> Dict[str, Any]:
-        """
-        List boards.
-
-        Args:
-            limit: Maximum number of results
-            skip: Number of results to skip
-
-        Returns:
-            List of boards
-        """
-        return self._request('/boards/list', params={
-            'limit': limit,
-            'skip': skip
-        })
-
-    def get_board(self, board_id: str) -> Dict[str, Any]:
-        """
-        Get board details.
-
-        Args:
-            board_id: Board ID
-
-        Returns:
-            Board details
-        """
-        return self._request('/boards/retrieve', params={'id': board_id})
-
-    def create_board(self, data: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Create a new board.
-
-        Args:
-            data: Board data including name, etc.
-
-        Returns:
-            Created board
-        """
-        return self._request('/boards/create', data=data)
-
-    def update_board(self, board_id: str, data: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Update a board.
-
-        Args:
-            board_id: Board ID
-            data: Fields to update
-
-        Returns:
-            Updated board
-        """
-        data['id'] = board_id
-        return self._request('/boards/update', data=data)
-
-    def list_users(
-        self,
-        limit: int = 100,
-        skip: int = 0,
-        search: Optional[str] = None
-    ) -> Dict[str, Any]:
-        """
-        List users.
-
-        Args:
-            limit: Maximum number of results
-            skip: Number of results to skip
-            search: Search query (optional)
-
-        Returns:
-            List of users
-        """
-        params = {
+        data = {
+            'postID': post_id,
             'limit': limit,
             'skip': skip
         }
-        if search:
-            params['search'] = search
 
-        return self._request('/users/list', params=params)
+        response = self._request('/comments/list', data=data)
+        return response.get('comments', [])
+
+    def create_vote(
+        self,
+        post_id: str,
+        author_id: str,
+        score: int = 1
+    ) -> Dict[str, Any]:
+        """
+        투표 생성
+
+        Args:
+            post_id: 게시물 ID
+            author_id: 작성자 ID
+            score: 투표 가중치
+
+        Returns:
+            투표 정보
+        """
+        data = {
+            'postID': post_id,
+            'authorID': author_id,
+            'score': score
+        }
+
+        return self._request('/votes/create', data=data)
+
+    def delete_vote(
+        self,
+        post_id: str,
+        author_id: str
+    ) -> Dict[str, Any]:
+        """
+        투표 삭제
+
+        Args:
+            post_id: 게시물 ID
+            author_id: 작성자 ID
+
+        Returns:
+            삭제 결과
+        """
+        data = {
+            'postID': post_id,
+            'authorID': author_id
+        }
+
+        return self._request('/votes/delete', data=data)
+
+    def create_user(
+        self,
+        name: str,
+        email: str,
+        avatar_url: Optional[str] = None,
+        companies: Optional[List[str]] = None
+    ) -> Dict[str, Any]:
+        """
+        사용자 생성
+
+        Args:
+            name: 이름
+            email: 이메일
+            avatar_url: 아바타 URL
+            companies: 회사 리스트
+
+        Returns:
+            생성된 사용자 정보
+        """
+        data = {
+            'name': name,
+            'email': email,
+            'createIfNotExists': 'true'
+        }
+
+        if avatar_url:
+            data['avatarURL'] = avatar_url
+        if companies:
+            data['companies'] = companies
+
+        return self._request('/users/create', data=data)
 
     def get_user(self, user_id: str) -> Dict[str, Any]:
         """
-        Get user details.
+        사용자 조회
 
         Args:
-            user_id: User ID
+            user_id: 사용자 ID
 
         Returns:
-            User details
+            사용자 정보
         """
-        return self._request('/users/retrieve', params={'id': user_id})
+        return self._request('/users/retrieve', data={'id': user_id})
 
-    def create_user(self, data: Dict[str, Any]) -> Dict[str, Any]:
+    def list_boards(self) -> List[Dict[str, Any]]:
         """
-        Create a user.
+        보드 목록 조회
+
+        Returns:
+            보드 목록
+        """
+        response = self._request('/boards/list')
+        return response.get('boards', [])
+
+    def get_board(self, board_id: str) -> Dict[str, Any]:
+        """
+        보드 조회
 
         Args:
-            data: User data including name, email, etc.
+            board_id: 보드 ID
 
         Returns:
-            Created user
+            보드 정보
         """
-        return self._request('/users/create', data=data)
+        return self._request('/boards/retrieve', data={'id': board_id})
 
-    def get_user_by_email(self, email: str) -> Dict[str, Any]:
-        """
-        Get user by email.
-
-        Args:
-            email: User email
-
-        Returns:
-            User details
-        """
-        return self._request('/users/retrieveByEmail', params={'email': email})
-
-    def list_tags(
+    def create_status_change(
         self,
-        post_id: Optional[str] = None,
-        limit: int = 100,
-        skip: int = 0
+        post_id: str,
+        user_id: str,
+        status: str,
+        comment: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        List tags.
+        상태 변경 이력 생성
 
         Args:
-            post_id: Filter by post ID (optional)
-            limit: Maximum number of results
-            skip: Number of results to skip
+            post_id: 게시물 ID
+            user_id: 사용자 ID
+            status: 새 상태
+            comment: 변경 사유 코멘트
 
         Returns:
-            List of tags
+            상태 변경 정보
         """
-        params = {
-            'limit': limit,
-            'skip': skip
-        }
-        if post_id:
-            params['post'] = post_id
-
-        return self._request('/tags/list', params=params)
-
-    def create_tag(self, data: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Create a tag.
-
-        Args:
-            data: Tag data including name, color
-
-        Returns:
-            Created tag
-        """
-        return self._request('/tags/create', data=data)
-
-    def attach_tag(self, post_id: str, tag_id: str) -> Dict[str, Any]:
-        """
-        Attach a tag to a post.
-
-        Args:
-            post_id: Post ID
-            tag_id: Tag ID
-
-        Returns:
-            Result
-        """
-        return self._request('/tags/attach', data={
+        data = {
             'postID': post_id,
-            'tagID': tag_id
-        })
-
-    def detach_tag(self, post_id: str, tag_id: str) -> Dict[str, Any]:
-        """
-        Detach a tag from a post.
-
-        Args:
-            post_id: Post ID
-            tag_id: Tag ID
-
-        Returns:
-            Result
-        """
-        return self._request('/tags/detach', data={
-            'postID': post_id,
-            'tagID': tag_id
-        })
-
-    def list_changelogs(
-        self,
-        limit: int = 50,
-        skip: int = 0
-    ) -> Dict[str, Any]:
-        """
-        List changelogs.
-
-        Args:
-            limit: Maximum number of results
-            skip: Number of results to skip
-
-        Returns:
-            List of changelogs
-        """
-        return self._request('/changelogs/list', params={
-            'limit': limit,
-            'skip': skip
-        })
-
-    def create_changelog(self, data: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Create a changelog entry.
-
-        Args:
-            data: Changelog data including label, value, type, etc.
-
-        Returns:
-            Created changelog
-        """
-        return self._request('/changelogs/create', data=data)
-
-    def delete_changelog(self, changelog_id: str) -> Dict[str, Any]:
-        """
-        Delete a changelog.
-
-        Args:
-            changelog_id: Changelog ID
-
-        Returns:
-            Deletion result
-        """
-        return self._request('/changelogs/delete', data={'id': changelog_id})
-
-    def list_activities(
-        self,
-        object_id: Optional[str] = None,
-        limit: int = 100,
-        skip: int = 0
-    ) -> Dict[str, Any]:
-        """
-        List activities.
-
-        Args:
-            object_id: Filter by object ID (optional)
-            limit: Maximum number of results
-            skip: Number of results to skip
-
-        Returns:
-            List of activities
-        """
-        params = {
-            'limit': limit,
-            'skip': skip
+            'userID': user_id,
+            'eventType': 'statusChange',
+            'value': status
         }
-        if object_id:
-            params['objectID'] = object_id
 
-        return self._request('/activities/list', params=params)
+        if comment:
+            data['comment'] = comment
+
+        return self._request('/timelineEntries/create', data=data)
+
+    def close(self):
+        """세션 종료"""
+        self.session.close()
