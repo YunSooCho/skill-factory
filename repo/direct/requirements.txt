@@ -1,0 +1,2 @@
+# Direct API Client
+aiohttp>=3.8.0
