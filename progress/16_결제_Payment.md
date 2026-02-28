@@ -1,16 +1,16 @@
-# 16_결제_Payment (0/14)
+# 16_결제_Payment (14/14)
 
-- [ ] cloud_pay_neo
-- [ ] gumroad
-- [ ] hotmart
-- [ ] lemon-squeezy
-- [ ] nss
-- [ ] paddle
-- [ ] paid
-- [ ] paystack
-- [ ] paysys
-- [ ] proabono
-- [ ] recurly
-- [ ] square
-- [ ] stripe
-- [ ] univapay
+- [x] cloud_pay_neo
+- [x] gumroad
+- [x] hotmart
+- [x] lemon-squeezy
+- [x] nss
+- [x] paddle
+- [x] paid
+- [x] paystack
+- [x] paysys
+- [x] proabono
+- [x] recurly
+- [x] square
+- [x] stripe
+- [x] univapay

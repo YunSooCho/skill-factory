@@ -1,4 +1,4 @@
-# 15_웹사이트제작_WebDev (7/18)
+# 15_웹사이트제작_WebDev (18/18)
 
 - [x] adalo
 - [x] agora
@@ -7,14 +7,14 @@
 - [x] contentful
 - [x] creatomate
 - [x] elementor
-- [ ] figma
-- [ ] glide
-- [ ] imgbb
-- [ ] leonardo-ai
-- [ ] remove-bg
-- [ ] softr
-- [ ] squarespace
-- [ ] userapi-ai
-- [ ] webflow
-- [ ] wix
-- [ ] wordpress
+- [x] figma
+- [x] glide
+- [x] imgbb
+- [x] leonardo-ai
+- [x] remove-bg
+- [x] softr
+- [x] squarespace
+- [x] userapi-ai
+- [x] webflow
+- [x] wix
+- [x] wordpress
