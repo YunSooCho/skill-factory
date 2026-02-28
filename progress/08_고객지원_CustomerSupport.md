@@ -1,28 +1,29 @@
-# 08_고객지원_CustomerSupport (1/36)
+# 08_고객지원_CustomerSupport (22/36)
 
 - [x] aircall
 - [ ] askhandle
 - [ ] canny
-- [ ] channel-talk
-- [ ] chat-plus
-- [ ] chatbot
-- [ ] cloudtalk
-- [ ] freshchat
-- [ ] freshdesk
-- [ ] freshservice
-- [ ] front
-- [ ] gist
-- [ ] groove
-- [ ] heartbeat
-- [ ] help-scout
-- [ ] helpwise
-- [ ] intercom
-- [ ] jitbit
-- [ ] justcall
-- [ ] kasika
-- [ ] liveagent
-- [ ] lodgify
-- [ ] missive
+- [x] channel-talk
+- [x] chat-plus
+- [x] chatbot
+- [x] cloudtalk
+- [x] freshchat
+- [x] freshdesk
+- [x] freshservice
+- [x] front
+- [x] gist
+- [x] groove
+- [x] heartbeat
+- [x] help-scout
+- [x] helpwise
+- [x] intercom
+- [x] jitbit
+- [x] justcall
+- [x] kasika
+- [x] liveagent
+- [x] lodgify
+- [x] missive
+- [x] notion-customercs
 - [ ] product_fruits
 - [ ] reamaze
 - [ ] refiner
