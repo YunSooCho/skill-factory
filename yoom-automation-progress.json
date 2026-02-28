@@ -1,5 +1,5 @@
 {
-  "currentCategory": "03_업무일반_General",
+  "currentCategory": "Marketing Category Completed",
   "completed": {
     "abstract.md": {
       "service_name": "Abstract",
@@ -13305,6 +13305,1605 @@
         "has_exceptions": true,
         "has_requirements": true
       }
+    },
+    "fullenrich.md": {
+      "service_name": "Fullenrich",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/API 표준",
+      "api_actions": {
+        "Enrich Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/fullenrich/actions.py"
+        },
+        "Get Enrichment Result": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/fullenrich/actions.py"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:23:30.258936",
+      "required_tasks": [
+        {
+          "task": "Fullenrich API 문서 검토",
+          "priority": "high",
+          "description": "https://api.fullenrich.com/v1 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Fullenrich API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:23:30.258942"
+    },
+    "keboola.md": {
+      "service_name": "Keboola",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/API 표준",
+      "api_actions": {
+        "Create Job": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/keboola/actions.py"
+        },
+        "Get Job Status": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/keboola/actions.py"
+        },
+        "List Jobs": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/keboola/actions.py"
+        }
+      },
+      "triggers": {
+        "Job Completed": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "KeboolaActions.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T15:23:30.258961",
+      "required_tasks": [
+        {
+          "task": "Keboola API 문서 검토",
+          "priority": "high",
+          "description": "https://connection.keboola.com 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Keboola API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:23:30.258963"
+    },
+    "kickbox.md": {
+      "service_name": "Kickbox",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/API 표준",
+      "api_actions": {
+        "Verify Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/kickbox/actions.py"
+        },
+        "Batch Verify": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/kickbox/actions.py"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:23:30.258973",
+      "required_tasks": [
+        {
+          "task": "Kickbox API 문서 검토",
+          "priority": "high",
+          "description": "https://api.kickbox.com/v2 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Kickbox API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:23:30.258975"
+    },
+    "klaviyo.md": {
+      "service_name": "Klaviyo",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/API 표준",
+      "api_actions": {
+        "Create Profile": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/klaviyo/actions.py"
+        },
+        "Get Profile": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/klaviyo/actions.py"
+        },
+        "Update Profile": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/klaviyo/actions.py"
+        },
+        "Create Event": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/klaviyo/actions.py"
+        },
+        "Create Campaign": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/klaviyo/actions.py"
+        },
+        "Send Campaign": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/klaviyo/actions.py"
+        }
+      },
+      "triggers": {
+        "Profile Created": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "KlaviyoActions.handle_webhook()"
+        },
+        "Event Created": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "KlaviyoActions.handle_webhook()"
+        },
+        "Campaign Sent": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "KlaviyoActions.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T15:23:30.258987",
+      "required_tasks": [
+        {
+          "task": "Klaviyo API 문서 검토",
+          "priority": "high",
+          "description": "https://a.klaviyo.com/api 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Klaviyo API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:23:30.258991"
+    },
+    "leady.md": {
+      "service_name": "Leady",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/API 표준",
+      "api_actions": {
+        "Create Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/leady/actions.py"
+        },
+        "Get Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/leady/actions.py"
+        },
+        "Update Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/leady/actions.py"
+        },
+        "List Leads": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/leady/actions.py"
+        }
+      },
+      "triggers": {
+        "Lead Created": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "LeadyActions.handle_webhook()"
+        },
+        "Lead Updated": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "LeadyActions.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T15:23:30.259002",
+      "required_tasks": [
+        {
+          "task": "Leady API 문서 검토",
+          "priority": "high",
+          "description": "https://api.leady.io/v1 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Leady API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:23:30.259004"
+    },
+    "lemlist.md": {
+      "service_name": "Lemlist",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/API 표준",
+      "api_actions": {
+        "Add Email To Campaign": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/lemlist/actions.py"
+        },
+        "Get Campaign Stats": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/lemlist/actions.py"
+        },
+        "Pause Campaign": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/lemlist/actions.py"
+        },
+        "Resume Campaign": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/lemlist/actions.py"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:23:30.259013",
+      "required_tasks": [
+        {
+          "task": "Lemlist API 문서 검토",
+          "priority": "high",
+          "description": "https://api.lemlist.com/api 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Lemlist API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:23:30.259015"
+    },
+    "line.md": {
+      "service_name": "Line",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/API 표준",
+      "api_actions": {
+        "Send Message": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/line/actions.py"
+        },
+        "Get Profile": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/line/actions.py"
+        },
+        "Get Group Summary": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/line/actions.py"
+        },
+        "Get Group Members": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/line/actions.py"
+        }
+      },
+      "triggers": {
+        "Message Received": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "LineActions.handle_webhook()"
+        },
+        " Webhook Event": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "LineActions.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T15:23:30.259025",
+      "required_tasks": [
+        {
+          "task": "Line API 문서 검토",
+          "priority": "high",
+          "description": "https://api.line.me/v2 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Line API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:23:30.259027"
+    },
+    "liny.md": {
+      "service_name": "Liny",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/API 표준",
+      "api_actions": {
+        "Create Link": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/liny/actions.py"
+        },
+        "Get Link": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/liny/actions.py"
+        },
+        "Update Link": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/liny/actions.py"
+        },
+        "Delete Link": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/liny/actions.py"
+        }
+      },
+      "triggers": {
+        "Link Clicked": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "LinyActions.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T15:23:30.259036",
+      "required_tasks": [
+        {
+          "task": "Liny API 문서 검토",
+          "priority": "high",
+          "description": "https://api.liny.co/v1 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Liny API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:23:30.259038"
+    },
+    "list-finder.md": {
+      "service_name": "List-Finder",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/API 표준",
+      "api_actions": {
+        "Find List": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/list-finder/actions.py"
+        },
+        "Get List Details": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/list-finder/actions.py"
+        },
+        "Download List": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/list-finder/actions.py"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:23:30.259051",
+      "required_tasks": [
+        {
+          "task": "List-Finder API 문서 검토",
+          "priority": "high",
+          "description": "https://api.listfinder.com/v1 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "List-Finder API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:23:30.259053"
+    },
+    "livestorm.md": {
+      "service_name": "Livestorm",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/API 표준",
+      "api_actions": {
+        "Create Event": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/livestorm/actions.py"
+        },
+        "Get Event": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/livestorm/actions.py"
+        },
+        "Update Event": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/livestorm/actions.py"
+        },
+        "Register Attendee": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/livestorm/actions.py"
+        },
+        "Get Attendees": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/livestorm/actions.py"
+        },
+        "List Events": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/livestorm/actions.py"
+        }
+      },
+      "triggers": {
+        "Attendee Registered": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "LivestormActions.handle_webhook()"
+        },
+        "Event Started": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "LivestormActions.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T15:23:30.259066",
+      "required_tasks": [
+        {
+          "task": "Livestorm API 문서 검토",
+          "priority": "high",
+          "description": "https://api.livestorm.co/v1 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Livestorm API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:23:30.259068"
+    },
+    "lob.md": {
+      "service_name": "Lob",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/API 표준",
+      "api_actions": {
+        "Create Letter": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/lob/actions.py"
+        },
+        "Create Postcard": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/lob/actions.py"
+        },
+        "Create Check": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/lob/actions.py"
+        },
+        "Get Letter": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/lob/actions.py"
+        },
+        "List Letters": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/lob/actions.py"
+        }
+      },
+      "triggers": {
+        "Letter Created": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "LobActions.handle_webhook()"
+        },
+        "Letter Delivered": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "LobActions.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T15:23:30.259079",
+      "required_tasks": [
+        {
+          "task": "Lob API 문서 검토",
+          "priority": "high",
+          "description": "https://api.lob.com/v1 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Lob API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:23:30.259080"
+    },
+    "loops.md": {
+      "service_name": "Loops",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/API 표준",
+      "api_actions": {
+        "Add Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/loops/actions.py"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/loops/actions.py"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/loops/actions.py"
+        },
+        "Send Transactional Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/loops/actions.py"
+        },
+        "Create Campaign": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/loops/actions.py"
+        }
+      },
+      "triggers": {
+        "Contact Added": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "LoopsActions.handle_webhook()"
+        },
+        "Contact Updated": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "LoopsActions.handle_webhook()"
+        },
+        "Email Opened": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "LoopsActions.handle_webhook()"
+        },
+        "Email Clicked": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "LoopsActions.handle_webhook()"
+        },
+        "Campaign Sent": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "LoopsActions.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T15:23:30.259107",
+      "required_tasks": [
+        {
+          "task": "Loops API 문서 검토",
+          "priority": "high",
+          "description": "https://app.loops.so/api 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Loops API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:23:30.259109"
+    },
+    "loqate.md": {
+      "service_name": "Loqate",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/API 표준",
+      "api_actions": {
+        "Address Verify": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/loqate/actions.py"
+        },
+        "Address Find": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/loqate/actions.py"
+        },
+        "Address Retrieve": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/loqate/actions.py"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:23:30.259118",
+      "required_tasks": [
+        {
+          "task": "Loqate API 문서 검토",
+          "priority": "high",
+          "description": "https://api.addressy.com 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Loqate API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:23:30.259120"
+    },
+    "luma.md": {
+      "service_name": "Luma",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/API 표준",
+      "api_actions": {
+        "Create Event": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/luma/actions.py"
+        },
+        "Get Event": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/luma/actions.py"
+        },
+        "Update Event": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/luma/actions.py"
+        },
+        "List Events": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/luma/actions.py"
+        }
+      },
+      "triggers": {
+        "Event Created": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "LumaActions.handle_webhook()"
+        },
+        "Attendee Joined": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "LumaActions.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T15:23:30.259130",
+      "required_tasks": [
+        {
+          "task": "Luma API 문서 검토",
+          "priority": "high",
+          "description": "https://api.lu.ma/calendar 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Luma API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:23:30.259131"
+    },
+    "mailbluster.md": {
+      "service_name": "Mailbluster",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/API 표준",
+      "api_actions": {
+        "Add Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailbluster/actions.py"
+        },
+        "Update Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailbluster/actions.py"
+        },
+        "Get Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailbluster/actions.py"
+        },
+        "Delete Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailbluster/actions.py"
+        },
+        "Import Leads": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailbluster/actions.py"
+        }
+      },
+      "triggers": {
+        "Lead Added": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "MailblusterActions.handle_webhook()"
+        },
+        "Lead Updated": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "MailblusterActions.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T15:23:30.259141",
+      "required_tasks": [
+        {
+          "task": "Mailbluster API 문서 검토",
+          "priority": "high",
+          "description": "https://api.mailbluster.com/api 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Mailbluster API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:23:30.259143"
+    },
+    "mailchimp.md": {
+      "service_name": "Mailchimp",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/API 표준",
+      "api_actions": {
+        "Add Member": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailchimp/actions.py"
+        },
+        "Get Member": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailchimp/actions.py"
+        },
+        "Update Member": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailchimp/actions.py"
+        },
+        "Delete Member": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailchimp/actions.py"
+        },
+        "Create Campaign": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailchimp/actions.py"
+        },
+        "Send Campaign": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailchimp/actions.py"
+        },
+        "Get Campaign Stats": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailchimp/actions.py"
+        }
+      },
+      "triggers": {
+        "Member Added": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "MailchimpActions.handle_webhook()"
+        },
+        "Member Updated": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "MailchimpActions.handle_webhook()"
+        },
+        "Campaign Sent": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "MailchimpActions.handle_webhook()"
+        },
+        "Email Opened": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "MailchimpActions.handle_webhook()"
+        },
+        "Email Clicked": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "MailchimpActions.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T15:23:30.259156",
+      "required_tasks": [
+        {
+          "task": "Mailchimp API 문서 검토",
+          "priority": "high",
+          "description": "https://<dc>.api.mailchimp.com/3.0 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Mailchimp API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:23:30.259158"
+    },
+    "mailercloud.md": {
+      "service_name": "Mailercloud",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/API 표준",
+      "api_actions": {
+        "Add Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailercloud/actions.py"
+        },
+        "Update Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailercloud/actions.py"
+        },
+        "Get Contact": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailercloud/actions.py"
+        },
+        "Create Campaign": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailercloud/actions.py"
+        },
+        "Send Campaign": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailercloud/actions.py"
+        }
+      },
+      "triggers": {
+        "Contact Added": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "MailercloudActions.handle_webhook()"
+        },
+        "Campaign Sent": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "MailercloudActions.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T15:23:30.259175",
+      "required_tasks": [
+        {
+          "task": "Mailercloud API 문서 검토",
+          "priority": "high",
+          "description": "https://cloudapi.mailercloud.com/api/v1 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Mailercloud API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:23:30.259177"
+    },
+    "mailerlite.md": {
+      "service_name": "Mailerlite",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/API 표준",
+      "api_actions": {
+        "Create Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailerlite/actions.py"
+        },
+        "Update Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailerlite/actions.py"
+        },
+        "Get Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailerlite/actions.py"
+        },
+        "Create Campaign": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailerlite/actions.py"
+        },
+        "Send Campaign": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailerlite/actions.py"
+        }
+      },
+      "triggers": {
+        "Subscriber Added": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "MailerliteActions.handle_webhook()"
+        },
+        "Subscriber Unsubscribed": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "MailerliteActions.handle_webhook()"
+        },
+        "Campaign Sent": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "MailerliteActions.handle_webhook()"
+        },
+        "Email Opened": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "MailerliteActions.handle_webhook()"
+        },
+        "Email Clicked": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "MailerliteActions.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T15:23:30.259190",
+      "required_tasks": [
+        {
+          "task": "Mailerlite API 문서 검토",
+          "priority": "high",
+          "description": "https://api.mailerlite.com/api/v2 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Mailerlite API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:23:30.259191"
+    },
+    "mailersend.md": {
+      "service_name": "Mailersend",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/API 표준",
+      "api_actions": {
+        "Send Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailersend/actions.py"
+        },
+        "Get Message": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailersend/actions.py"
+        },
+        "List Messages": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailersend/actions.py"
+        },
+        "Add Recipient": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailersend/actions.py"
+        },
+        "Get Recipient": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailersend/actions.py"
+        }
+      },
+      "triggers": {
+        "Email Delivered": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "MailersendActions.handle_webhook()"
+        },
+        "Email Opened": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "MailersendActions.handle_webhook()"
+        },
+        "Email Clicked": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "MailersendActions.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T15:23:30.259203",
+      "required_tasks": [
+        {
+          "task": "Mailersend API 문서 검토",
+          "priority": "high",
+          "description": "https://api.mailersend.com/v1 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Mailersend API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:23:30.259204"
+    },
+    "mailmodo.md": {
+      "service_name": "Mailmodo",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/API 표준",
+      "api_actions": {
+        "Send Transactional Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailmodo/actions.py"
+        },
+        "Get Campaign": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailmodo/actions.py"
+        },
+        "Create Campaign": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailmodo/actions.py"
+        },
+        "List Campaigns": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailmodo/actions.py"
+        }
+      },
+      "triggers": {
+        "Email Delivered": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "MailmodoActions.handle_webhook()"
+        },
+        "Email Opened": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "MailmodoActions.handle_webhook()"
+        },
+        "Email Clicked": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "MailmodoActions.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T15:23:30.259214",
+      "required_tasks": [
+        {
+          "task": "Mailmodo API 문서 검토",
+          "priority": "high",
+          "description": "https://api.mailmodo.com/api/v1 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Mailmodo API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:23:30.259216"
+    },
+    "mailrelay.md": {
+      "service_name": "Mailrelay",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/API 표준",
+      "api_actions": {
+        "Add Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailrelay/actions.py"
+        },
+        "Update Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailrelay/actions.py"
+        },
+        "Get Subscriber": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailrelay/actions.py"
+        },
+        "Send Newsletter": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailrelay/actions.py"
+        },
+        "Get Subscribers": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailrelay/actions.py"
+        }
+      },
+      "triggers": {
+        "Subscriber Added": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "MailrelayActions.handle_webhook()"
+        },
+        "Newsletter Sent": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "MailrelayActions.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T15:23:30.259236",
+      "required_tasks": [
+        {
+          "task": "Mailrelay API 문서 검토",
+          "priority": "high",
+          "description": "https://<account>.mailrelay.com/api/1.0 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Mailrelay API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:23:30.259238"
+    },
+    "rd-station.md": {
+      "service_name": "Rd-Station",
+      "category": "マーケティング",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/API 표준",
+      "api_actions": {
+        "Create Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/rd-station/actions.py"
+        },
+        "Update Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/rd-station/actions.py"
+        },
+        "Get Lead": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/rd-station/actions.py"
+        },
+        "Get Conversions": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/rd-station/actions.py"
+        },
+        "Track Conversion": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/rd-station/actions.py"
+        }
+      },
+      "triggers": {
+        "Lead Created": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "Rd-StationActions.handle_webhook()"
+        },
+        "Conversion Tracked": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "Rd-StationActions.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T15:23:40.633573",
+      "required_tasks": [
+        {
+          "task": "Rd-Station API 문서 검토",
+          "priority": "high",
+          "description": "https://api.rd.services 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Rd-Station API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:23:40.633578"
+    },
+    "location_io.md": {
+      "service_name": "Location Io",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/API 표준",
+      "api_actions": {
+        "Geocode": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/location_io/actions.py"
+        },
+        "Reverse Geocode": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/location_io/actions.py"
+        },
+        "Autocomplete": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/location_io/actions.py"
+        }
+      },
+      "triggers": {},
+      "implemented_at": "2026-02-28T15:23:58.258771",
+      "required_tasks": [
+        {
+          "task": "Location Io API 문서 검토",
+          "priority": "high",
+          "description": "https://api.location.io/v1 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Location Io API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:23:58.258777"
+    },
+    "mailchimp_transactional.md": {
+      "service_name": "Mailchimp Transactional",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/API 표준",
+      "api_actions": {
+        "Send Email": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailchimp_transactional/actions.py"
+        },
+        "Get Message": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailchimp_transactional/actions.py"
+        },
+        "List Messages": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/mailchimp_transactional/actions.py"
+        }
+      },
+      "triggers": {
+        "Email Delivered": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "Mailchimp TransactionalActions.handle_webhook()"
+        },
+        "Email Opened": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "Mailchimp TransactionalActions.handle_webhook()"
+        },
+        "Email Clicked": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "Mailchimp TransactionalActions.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T15:23:58.258811",
+      "required_tasks": [
+        {
+          "task": "Mailchimp Transactional API 문서 검토",
+          "priority": "high",
+          "description": "https://<dc>.api.mailchimp.com/3.0 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Mailchimp Transactional API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:23:58.258813"
+    },
+    "youtube_data.md": {
+      "service_name": "Youtube Data",
+      "category": "マーケティング",
+      "integration_type": "api_key",
+      "integration_confidence": "high",
+      "integration_reasoning": "SaaS/API 표준",
+      "api_actions": {
+        "Get Video Details": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/youtube_data/actions.py"
+        },
+        "Get Channel Details": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/youtube_data/actions.py"
+        },
+        "List Videos": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/youtube_data/actions.py"
+        },
+        "Get Analytics": {
+          "status": "completed",
+          "testable": true,
+          "test_method": "API 키 필요 - 실제 API 테스트 필요",
+          "code_file": "github/skill-factory/repo/youtube_data/actions.py"
+        }
+      },
+      "triggers": {
+        "Video Published": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "Youtube DataActions.handle_webhook()"
+        },
+        "Subscriber Gained": {
+          "status": "completed",
+          "testable": false,
+          "test_method": "Webhook 필요 - 실제 환경에서 테스트 필요",
+          "webhook_method": "Youtube DataActions.handle_webhook()"
+        }
+      },
+      "implemented_at": "2026-02-28T15:23:58.258841",
+      "required_tasks": [
+        {
+          "task": "Youtube Data API 문서 검토",
+          "priority": "high",
+          "description": "https://www.googleapis.com/youtube/v3 및 공식 API 문서 확인",
+          "status": "completed"
+        },
+        {
+          "task": "Youtube Data API 키 획득",
+          "priority": "high",
+          "description": "API Dashboard에서 API 키 획득",
+          "status": "pending"
+        }
+      ],
+      "analyzed_at": "2026-02-28T15:23:58.258842"
     }
   },
   "total_services": 749,
