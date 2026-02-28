@@ -17360,6 +17360,206 @@
       },
       "implemented_at": "2026-02-28T04:16:32.828153",
       "analyzed_at": "2026-02-28T04:16:32.828153"
+    },
+    "google-drive.md": {
+      "service_name": "Google Drive",
+      "category": "17_파일관리_FileManagement",
+      "integration_type": "oauth",
+      "integration_confidence": "high",
+      "integration_reasoning": "Google Drive API v3 with OAuth 2.0 authentication",
+      "api_actions": {
+        "Convert to Google Docs": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Convert to Google Slides": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Search Files": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Rename File": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "List Permissions": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Move File": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Download Google Doc": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Duplicate File": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Create Folder": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Delete Permission": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Search Shared Drives": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Download Sheets": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Update File Content": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Duplicate File Detailed": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Delete File": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Download File": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Search Files Exclude Trash": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Convert CSV to Sheets": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Download Sheets Specific": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Get File Info": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Search in Folder": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Create Shortcut": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Upload File": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Set Copy/Download Permission": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Convert PDF to Doc": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Grant Permission to Org": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Move to Trash": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Set Anyone Link Permission": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Create Shared Drive": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Download Slides": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "List Folders": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Convert Excel to Sheets": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Update Description": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "List Folder Contents": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        },
+        "Grant Permission to User": {
+          "status": "completed",
+          "testable": true,
+          "code_file": "repo/google-drive/google-drive_client.py"
+        }
+      },
+      "triggers": {
+        "File Created in Folder": {
+          "type": "webhook",
+          "status": "configured"
+        },
+        "File Created": {
+          "type": "webhook",
+          "status": "configured"
+        },
+        "File Created/Updated": {
+          "type": "webhook",
+          "status": "configured"
+        }
+      },
+      "implemented_at": "2026-02-28T04:17:28.745389",
+      "analyzed_at": "2026-02-28T04:17:28.745389"
     }
   },
   "last_updated": "2026-02-28 10:59:11",
