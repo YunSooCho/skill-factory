@@ -1,0 +1,3 @@
+# Alooma API Client (Deprecated - Historical Reference)
+aiohttp>=3.8.0
+# Note: Alooma was acquired by Google Cloud. Use Google Cloud Data Fusion instead.
