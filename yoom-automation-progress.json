@@ -2787,8 +2787,8 @@
       "status": "completed"
     },
     {
-      "name": "\ud504\ub85c\uc81d\ud2b8_\uc9c4\ucc99",
-      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/\ud504\ub85c\uc81d\ud2b8_\uc9c4\ucc99/\ud504\ub85c\uc81d\ud2b8_\uc9c4\ucc99_client.py",
+      "name": "프로젝트_진척",
+      "code_file": "/Users/clks001/.openclaw/workspace/github/skill-factory/repo/프로젝트_진척/프로젝트_진척_client.py",
       "has_api_actions": true,
       "has_triggers": false,
       "status": "completed"
@@ -2859,6 +2859,36 @@
       "status": "completed",
       "implementation_structure": "client.py + __init__.py",
       "updated_at": "2026-02-28T17:05:00+09:00"
+    },
+    {
+      "name": "bland_ai.md",
+      "status": "completed",
+      "completed_at": "2026-02-28T17:30:00+09:00"
+    },
+    {
+      "name": "exa_ai.md",
+      "status": "completed",
+      "completed_at": "2026-02-28T17:30:00+09:00"
+    },
+    {
+      "name": "mailparser-io.md",
+      "status": "completed",
+      "completed_at": "2026-02-28T17:30:00+09:00"
+    },
+    {
+      "name": "promptitude_io.md",
+      "status": "completed",
+      "completed_at": "2026-02-28T17:30:00+09:00"
+    },
+    {
+      "name": "scrapingbee.md",
+      "status": "completed",
+      "completed_at": "2026-02-28T17:30:00+09:00"
+    },
+    {
+      "name": "clickup.md",
+      "status": "completed",
+      "completed_at": "2026-02-28T17:30:00+09:00"
     }
   ],
   "total_services": 749,
