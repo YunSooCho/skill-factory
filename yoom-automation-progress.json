@@ -1,0 +1,3283 @@
+{
+  "total_services": 468,
+  "completed": 468,
+  "last_updated": "2026-02-28",
+  "services": [
+    {
+      "service_name": "abstract",
+      "api_actions": 1,
+      "triggers": 0,
+      "code_file": "repo/abstract/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "abyssale",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/abyssale/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "activecampaign",
+      "api_actions": 16,
+      "triggers": 4,
+      "code_file": "repo/activecampaign/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "adroll",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/adroll/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "agendor",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/agendor/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "aircall",
+      "api_actions": 0,
+      "triggers": 9,
+      "code_file": "repo/aircall/aircall_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "airparser",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/airparser/airparser_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "airtable",
+      "api_actions": 0,
+      "triggers": 2,
+      "code_file": "repo/airtable/airtable_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "all-images-ai",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/all-images-ai/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "amptalk",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/amptalk/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "anthropic",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/anthropic/anthropic_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "anymail-finder",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/anymail-finder/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "apify",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/apify/apify_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "apitemplate",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/apitemplate/apitemplate_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "apollo",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/apollo/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "appcues",
+      "api_actions": 5,
+      "triggers": 4,
+      "code_file": "repo/appcues/appcues_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "apptivo",
+      "api_actions": 5,
+      "triggers": 6,
+      "code_file": "repo/apptivo/apptivo_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "asana",
+      "api_actions": 0,
+      "triggers": 7,
+      "code_file": "repo/asana/asana_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "asana-oauth",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/asana-oauth/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "assembled",
+      "api_actions": 7,
+      "triggers": 5,
+      "code_file": "repo/assembled/assembled_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "assembly-ai",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/assembly-ai/assembly_ai_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "assignar",
+      "api_actions": 7,
+      "triggers": 5,
+      "code_file": "repo/assignar/assignar_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "atlassian",
+      "api_actions": 0,
+      "triggers": 5,
+      "code_file": "repo/atlassian/atlassian_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "attio",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/attio/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "avaza",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/avaza/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "aweber",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/aweber/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "awork",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/awork/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "axiom",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/axiom/axiom_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "axonaut",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/axonaut/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "backlog",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/backlog/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "bannerbear",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/bannerbear/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "bannerbite",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/bannerbite/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "beLazy",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/beLazy/beLazy_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "beamer",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/beamer/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "beehiiv",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/beehiiv/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "benchmark-email",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/benchmark-email/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "bettercontact",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/bettercontact/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "big_mailer",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/big_mailer/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "bigmailer",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/bigmailer/bigmailer_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "bigml",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/bigml/bigml_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "bigquery",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/bigquery/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "bird",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/bird/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "bitly",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/bitly/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "bitrix",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/bitrix/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "bizer-team",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/bizer-team/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "bland-ai",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/bland-ai/bland_ai_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "bland_ai",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/bland_ai/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "blink",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/blink/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "blogtrekkor",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/blogtrekkor/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "bloomreach",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/bloomreach/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "blueshift",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/blueshift/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "botpress",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/botpress/botpress_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "botsonic",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/botsonic/botsonic_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "botstar",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/botstar/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "bouncer",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/bouncer/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "bownow",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/bownow/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "brandfetch",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/brandfetch/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "brevo",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/brevo/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "brightback",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/brightback/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "brightcove",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/brightcove/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "browse-ai",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/browse-ai/browse_ai_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "brushup",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/brushup/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "buffer",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/buffer/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "bugfender",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/bugfender/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "bugherd",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/bugherd/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "builtforcoding",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/builtforcoding/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "burst-sms",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/burst-sms/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "burst_sms",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/burst_sms/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "buzzstream",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/buzzstream/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "byteplant-phone-validator",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/byteplant-phone-validator/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "callconnect",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/callconnect/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "canva",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/canva/canva_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "capsule-crm",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/capsule-crm/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "carbone",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/carbone/carbone_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "cdata-connect",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/cdata-connect/cdata_connect_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "chatgpt",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/chatgpt/chatgpt_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "chumonbunjo-cloud",
+      "api_actions": 0,
+      "triggers": 4,
+      "code_file": "repo/chumonbunjo-cloud/chumonbunjo_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "clearout",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/clearout/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "cleverreach",
+      "api_actions": 0,
+      "triggers": 1,
+      "code_file": "repo/cleverreach/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "clickfunnels",
+      "api_actions": 1,
+      "triggers": 10,
+      "code_file": "repo/clickfunnels/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "clickmeeting",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/clickmeeting/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "clicksend",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/clicksend/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "clickup",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/clickup/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "clio_manage",
+      "api_actions": 0,
+      "triggers": 8,
+      "code_file": "repo/clio_manage/clio_manage_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "clockify",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/clockify/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "close",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/close/close_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "cloudbot",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/cloudbot/cloudbot_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "cloudcontact-ai",
+      "api_actions": 1,
+      "triggers": 0,
+      "code_file": "repo/cloudcontact-ai/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "cloudcontact_ai",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/cloudcontact_ai/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "cloudconvert",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/cloudconvert/cloudconvert_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "cloudmersive",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/cloudmersive/cloudmersive_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "cloze",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/cloze/cloze_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "coda",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/coda/coda_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "codegpt",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/codegpt/codegpt_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "cogmento",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/cogmento/cogmento_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "cohere",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/cohere/cohere_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "connecteam",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/connecteam/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "constant-contact",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/constant-contact/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "contactship_ai",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/contactship_ai/contactship_ai_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "convertapi",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/convertapi/convertapi_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "convertio",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/convertio/convertio_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "convertkit",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/convertkit/convertkit_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "copper",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/copper/copper_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "craftmypdf",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/craftmypdf/craftmypdf_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "crowdin",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/crowdin/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "cuenote-sms",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/cuenote-sms/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "cuenote_sms",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/cuenote_sms/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "customer-io",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/customer-io/customer_io_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "cuttly",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/cuttly/cuttly_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "cyzen",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/cyzen/cyzen_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "dandoli",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/dandoli/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "dash",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/dash/dash_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "dataforseo",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/dataforseo/dataforseo_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "deepgram",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/deepgram/deepgram_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "deepl",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/deepl/deepl_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "deepseek",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/deepseek/deepseek_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "delighted",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/delighted/delighted_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "demio",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/demio/demio_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "diffbot",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/diffbot/diffbot_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "dify",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/dify/dify_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "dlvr-it",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/dlvr-it/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "dlvr_it",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/dlvr_it/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "docsfold",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/docsfold/docsfold_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "docugenerate",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/docugenerate/docugenerate_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "doppio",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/doppio/doppio_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "dotsimple",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/dotsimple/dotsimple_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "dribbble",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/dribbble/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "drip",
+      "api_actions": 12,
+      "triggers": 21,
+      "code_file": "repo/drip/drip_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "dropcontact",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/dropcontact/dropcontact_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "dub",
+      "api_actions": 8,
+      "triggers": 2,
+      "code_file": "repo/dub/dub_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "dumpling-ai",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/dumpling-ai/dumpling_ai_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "dynamics-crm",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/dynamics-crm/dynamics_crm_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "e_goi",
+      "api_actions": 14,
+      "triggers": 7,
+      "code_file": "repo/e_goi/e_goi_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "ecomail",
+      "api_actions": 9,
+      "triggers": 3,
+      "code_file": "repo/ecomail/ecomail_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "elastic-email",
+      "api_actions": 9,
+      "triggers": 1,
+      "code_file": "repo/elastic-email/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "elastic_email",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/elastic_email/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "elevenlabs",
+      "api_actions": 8,
+      "triggers": 1,
+      "code_file": "repo/elevenlabs/elevenlabs_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "email-list-verify",
+      "api_actions": 4,
+      "triggers": 1,
+      "code_file": "repo/email-list-verify/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "email_list_verify",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/email_list_verify/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "emailable",
+      "api_actions": 1,
+      "triggers": 1,
+      "code_file": "repo/emailable/emailable_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "emailoctopus",
+      "api_actions": 9,
+      "triggers": 8,
+      "code_file": "repo/emailoctopus/emailoctopus_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "emelia",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/emelia/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "encharge",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/encharge/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "endorsal",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/endorsal/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "entra-id",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/entra-id/entra_id_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "esim",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/esim/esim_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "espo_crm",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/espo_crm/espo_crm_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "eventbrite",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/eventbrite/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "eventee",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/eventee/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "everhour",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/everhour/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "exa-ai",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/exa-ai/exa_ai_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "exa_ai",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/exa_ai/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "facebook-ads",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/facebook-ads/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "fakturoid",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/fakturoid/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "fatture_in_cloud",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/fatture_in_cloud/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "findymail",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/findymail/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "fireberry",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/fireberry/fireberry_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "firecrawl",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/firecrawl/firecrawl_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "firstpromoter",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/firstpromoter/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "float",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/float/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "flodesk",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/flodesk/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "freee",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/freee/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "freee-iv",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/freee-iv/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "freee-pm",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/freee-pm/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "freelo",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/freelo/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "freshsales",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/freshsales/freshsales_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "frictio",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/frictio/frictio_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "fulleRich",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/fulleRich/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "fulleRich-backup",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/fulleRich-backup/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "fullenrich",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/fullenrich/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "fx",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/fx/fx_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "gamma",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/gamma/gamma_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "garoon",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/garoon/garoon_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "gbiz-info",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/gbiz-info/gbiz_info_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "gemini",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/gemini/gemini_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "gender-api",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/gender-api/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "gender_api",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/gender_api/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "geniee-sfa",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/geniee-sfa/geniee_sfa_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "getprospect",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/getprospect/getprospect_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "getresponse-api",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/getresponse-api/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "giphy",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/giphy/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "gmail",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/gmail/gmail_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "google-ads-oauth",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/google-ads-oauth/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "google-analytics",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/google-analytics/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "google-apps-script",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/google-apps-script/google_apps_script_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "google-business-profile",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/google-business-profile/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "google-contact",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/google-contact/google_contact_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "google-docs",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/google-docs/google_docs_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "google-drive",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/google-drive/google-drive_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "google-meet",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/google-meet/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "google-search",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/google-search/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "google-sheets",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/google-sheets/google-sheets_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "google-workspace",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/google-workspace/google-workspace_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "google_meet",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/google_meet/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "google_search",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/google_search/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "google_search_console",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/google_search_console/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "greptile",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/greptile/greptile_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "groq",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/groq/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "happy_scribe",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/happy_scribe/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "hasdata",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/hasdata/hasdata_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "hexomatic",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/hexomatic/hexomatic_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "heygen",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/heygen/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "hif",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/hif/hif_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "holded",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/holded/holded_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "hot-profile",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/hot-profile/hot_profile_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "hrdatawarp",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/hrdatawarp/hrdatawarp_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "html-css-to-image",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/html-css-to-image/html_css_to_image_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "hubspot",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/hubspot/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "hugging-face",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/hugging-face/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "hugging_face",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/hugging_face/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "hunter",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/hunter/hunter_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "idoklad",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/idoklad/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "inoreader",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/inoreader/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "insightly_crm",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/insightly_crm/insightly_crm_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "invoice-api",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/invoice-api/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "invoice_ninja",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/invoice_ninja/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "invox",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/invox/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "invox-issue",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/invox-issue/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "ipinfo",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/ipinfo/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "ipqualityscore",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/ipqualityscore/ipqualityscore_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "itreview",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/itreview/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "kairos",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/kairos/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "kairos-sales",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/kairos-sales/kairos_sales_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "kanjo-bugyo",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/kanjo-bugyo/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "keap",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/keap/keap_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "keboola",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/keboola/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "keygen",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/keygen/keygen_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "kickbox",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/kickbox/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "klaviyo",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/klaviyo/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "klenty",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/klenty/klenty_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "klippa_docHorizon",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/klippa_docHorizon/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "kommo",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/kommo/kommo_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "kyusms",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/kyusms/kyusms_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "landbot-platformapi",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/landbot-platformapi/landbot_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "launchdarkly",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/launchdarkly/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "leady",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/leady/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "lemlist",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/lemlist/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "lexoffice",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/lexoffice/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "line",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/line/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "linkprint",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/linkprint/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "liny",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/liny/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "list-finder",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/list-finder/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "livestorm",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/livestorm/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "llama_ai_logo",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/llama_ai_logo/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "lob",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/lob/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "location_io",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/location_io/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "looma",
+      "api_actions": 4,
+      "triggers": 0,
+      "code_file": "repo/looma/looma_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "loops",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/loops/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "loqate",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/loqate/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "luma",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/luma/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "mailbluster",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/mailbluster/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "mailchimp",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/mailchimp/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "mailchimp_transactional",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/mailchimp_transactional/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "mailercloud",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/mailercloud/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "mailerlite",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/mailerlite/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "mailersend",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/mailersend/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "mailmodo",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/mailmodo/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "mailrelay",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/mailrelay/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "mails_so",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/mails_so/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "makeleaps",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/makeleaps/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "manage",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/manage/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "manus",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/manus/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "manychat",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/manychat/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "mastodon",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/mastodon/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "mautic",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/mautic/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "mediasms",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/mediasms/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "medium",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/medium/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "melo",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/melo/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "mem",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/mem/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "memberful",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/memberful/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "memberspot_io",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/memberspot_io/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "memberstack",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/memberstack/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "meta-cv",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/meta-cv/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "meta_cv",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/meta_cv/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "metalife",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/metalife/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "microsoft-excel",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/microsoft-excel/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "miro",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/miro/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "misoca",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/misoca/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "mistral-ai",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/mistral-ai/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "mitto_sms",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/mitto_sms/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "mixmax",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/mixmax/mixmax_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "mixpanel",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/mixpanel/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "monday",
+      "api_actions": 0,
+      "triggers": 2,
+      "code_file": "repo/monday/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "moneybird",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/moneybird/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "moneyforward",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/moneyforward/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "moneyforward-expenses",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/moneyforward-expenses/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "moneyforward-invoice-three",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/moneyforward-invoice-three/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "moneyforward-kessai",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/moneyforward-kessai/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "moneyforward-payable",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/moneyforward-payable/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "moneyforward-plus",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/moneyforward-plus/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "moneyforward_cloudinvoice",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/moneyforward_cloudinvoice/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "monica-crm",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/monica-crm/monica_crm_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "moosend",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/moosend/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "moskit",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/moskit/moskit_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "moxie",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/moxie/moxie_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "mural",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/mural/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "myphoner",
+      "api_actions": 9,
+      "triggers": 4,
+      "code_file": "repo/myphoner/myphoner_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "nethunt",
+      "api_actions": 0,
+      "triggers": 3,
+      "code_file": "repo/nethunt/nethunt_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "neverbounce",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/neverbounce/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "next-sfa",
+      "api_actions": 0,
+      "triggers": 9,
+      "code_file": "repo/next-sfa/next_sfa_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "nimble",
+      "api_actions": 0,
+      "triggers": 1,
+      "code_file": "repo/nimble/nimble_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "nocrm_io",
+      "api_actions": 0,
+      "triggers": 8,
+      "code_file": "repo/nocrm_io/nocrm_io_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "notion",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/notion/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "np-kakebarai",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/np-kakebarai/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "numverify",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/numverify/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "omnisend",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/omnisend/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "one-signal",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/one-signal/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "one_signal",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/one_signal/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "onepagecrm",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/onepagecrm/onepagecrm_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "onesimpleapi",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/onesimpleapi/onesimpleapi_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "ontraport",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/ontraport/ontraport_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "oopspam_anti_spam",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/oopspam_anti_spam/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "openai",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/openai/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "openrouter",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/openrouter/openrouter_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "openweathermap",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/openweathermap/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "outlook",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/outlook/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "ovice",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/ovice/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "pagepixels_screenshots",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/pagepixels_screenshots/pagepixels_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "pappers",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/pappers/pappers_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "parsehub",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/parsehub/parsehub_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "parseur",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/parseur/parseur_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "parsio",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/parsio/parsio_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "partnero",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/partnero/partnero_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "pca-cloud-accounting",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/pca-cloud-accounting/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "pca_cloud_accounting_hyper",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/pca_cloud_accounting_hyper/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "pdf_maker",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/pdf_maker/pdf_maker_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "pdfco",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/pdfco/pdfco_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "pdfless",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/pdfless/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "pdfmonkey",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/pdfmonkey/pdfmonkey_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "pennylane",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/pennylane/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "people_data_labs",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/people_data_labs/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "perplexity",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/perplexity/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "phantombuster",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/phantombuster/phantombuster_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "phone-appli-people",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/phone-appli-people/phone_appli_people_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "photoroom",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/photoroom/photoroom_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "picsart",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/picsart/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "pinterest",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/pinterest/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "pinterest_api",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/pinterest_api/pinterest_api.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "pipedrive",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/pipedrive/pipedrive_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "placid",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/placid/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "ploomes",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/ploomes/ploomes_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "plumsail_documents",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/plumsail_documents/plumsail_documents_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "postalytics",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/postalytics/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "posthog",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/posthog/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "postmark",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/postmark/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "printbahn",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/printbahn/printbahn_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "promptitude-io",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/promptitude-io/promptitude_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "promptitude_io",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/promptitude_io/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "pushbullet",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/pushbullet/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "pushcut",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/pushcut/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "pushover",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/pushover/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "quaderno",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/quaderno/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "quickchart",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/quickchart/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "quickemailverification",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/quickemailverification/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "quipu-token",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/quipu-token/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "qwen",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/qwen/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "raindrop",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/raindrop/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "rakuraku-meisai",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/rakuraku-meisai/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "raynet-crm",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/raynet-crm/raynet_crm_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "rd-station",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/rd-station/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "rd-station-crm",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/rd-station-crm/rd_station_crm_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "rd_station",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/rd_station/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "rebrandly",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/rebrandly/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "reddit",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/reddit/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "renderform",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/renderform/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "reply_io",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/reply_io/reply_io_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "retell-ai",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/retell-ai/retell_ai_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "retently",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/retently/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "reverse_contact",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/reverse_contact/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "riskanalyze",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/riskanalyze/riskanalyze_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "riskeyes",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/riskeyes/riskeyes_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "roborobo",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/roborobo/roborobo_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "rocketreach",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/rocketreach/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "rows",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/rows/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "runway",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/runway/runway_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "salesflare",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/salesflare/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "salesforce",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/salesforce/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "salesforce-sb",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/salesforce-sb/salesforce_sb_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "saleslens",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/saleslens/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "salesmate",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/salesmate/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "sansan",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/sansan/sansan_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "sasuke-lead",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/sasuke-lead/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "sasuke_lead",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/sasuke_lead/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "satismeter",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/satismeter/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "satori",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/satori/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "scrapingbee",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/scrapingbee/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "scraptio",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/scraptio/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "scribe_transcription",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/scribe_transcription/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "scribeless",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/scribeless/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "sectorflow",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/sectorflow/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "sender",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/sender/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "sendgrid",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/sendgrid/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "sendpulse",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/sendpulse/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "sendx",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/sendx/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "sendy",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/sendy/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "senses",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/senses/senses_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "serpapi",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/serpapi/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "servicem",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/servicem/servicem_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "sevdesk",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/sevdesk/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "seven_io",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/seven_io/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "sho-bugyo",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/sho-bugyo/sho_bugyo_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "short-io",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/short-io/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "shotstack",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/shotstack/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "smartlead",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/smartlead/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "smartsheet",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/smartsheet/smartsheet_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "smoove",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/smoove/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "sms_alert",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/sms_alert/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "sms_hana",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/sms_hana/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "smslink",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/smslink/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "snack-prompt",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/snack-prompt/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "snov_io",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/snov_io/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "sparkpost",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/sparkpost/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "stability-ai",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/stability-ai/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "stores-yk",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/stores-yk/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "streak",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/streak/streak_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "synthflow_ai",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/synthflow_ai/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "systeme-io",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/systeme-io/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "teachable",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/teachable/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "teamleader",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/teamleader/teamleader_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "techulus_push",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/techulus_push/techulus_push_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "templated",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/templated/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "textcortex-ai",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/textcortex-ai/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "textit",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/textit/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "textmagic",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/textmagic/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "thanks_io",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/thanks_io/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "trint",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/trint/trint_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "tuemilio",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/tuemilio/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "tumblr",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/tumblr/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "twilio",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/twilio/twilio_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "twilio_verify",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/twilio_verify/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "twitch",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/twitch/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "uniqode",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/uniqode/uniqode_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "unisender",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/unisender/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "uproc",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/uproc/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "vapi",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/vapi/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "vectorizer-ai",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/vectorizer-ai/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "verificaremails",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/verificaremails/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "viewdns",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/viewdns/viewdns_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "wachete",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/wachete/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "whereby",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/whereby/whereby_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "whoisfreaks",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/whoisfreaks/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "wild-apricot",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/wild-apricot/wild_apricot_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "woodpecker",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/woodpecker/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "wooxy",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/wooxy/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "workplace",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/workplace/workplace_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "x-oauth",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/x-oauth/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "x_oauth",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/x_oauth/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "xai",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/xai/xai_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "youtube",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/youtube/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "youtube-data",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/youtube-data/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "youtube_data",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/youtube_data/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "zendesk-sell",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/zendesk-sell/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "zendesk_sell",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/zendesk_sell/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "zerobounce",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/zerobounce/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "zerocodekit",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/zerocodekit/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "zixflow",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/zixflow/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "zoho-bigin",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/zoho-bigin/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "zoho-crm-oauth",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/zoho-crm-oauth/zoho_crm_oauth_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "zoho-mail",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/zoho-mail/zoho_mail_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "zoho-sheet",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/zoho-sheet/zoho_sheet_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "zoho-writer",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/zoho-writer/zoho_writer_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "zoho_bigin",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/zoho_bigin/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "zoho_sheet",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/zoho_sheet/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "zoho_writer",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/zoho_writer/client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "zoom",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/zoom/zoom_client.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "zoom-phone",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/zoom-phone/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "zoom_phone",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/zoom_phone/__init__.py",
+      "status": "completed"
+    },
+    {
+      "service_name": "프로젝트_진척",
+      "api_actions": 0,
+      "triggers": 0,
+      "code_file": "repo/프로젝트_진척/__init__.py",
+      "status": "completed"
+    }
+  ]
+}
