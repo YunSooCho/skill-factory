@@ -1,9 +1,16 @@
 """
-abstract API Client
+Abstract API Client for Yoom Integration
 
-Yoom Apps integration for abstract
+This package provides integration with Abstract API services:
+- Exchange Rates API
+- Phone Validation API
+- Date & Time API
+- IP Geolocation API
+- Email Validation API
+- Holidays API
 """
 
-from .client import AbstractAPIClient
+from .client import AbstractClient
 
-__all__ = ['AbstractAPIClient']
+__version__ = "1.0.0"
+__all__ = ["AbstractClient"]
