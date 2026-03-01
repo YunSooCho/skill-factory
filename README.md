@@ -1,122 +1,80 @@
-# Skill Factory
+# Skill Factory (스킬 팩토리)
 
-**Skill Factory - 자동화된 일본 SaaS 스킬 생성 시스템**
-
-> 일본의 SaaS 시스템을 전부 오픈 클로랑 연동합니다. API가 있든 없든, SDK가 있든 없든, 모든 수단과 방법을 가리지 않고 OpenClaw가 쓸 수 있게 만듭니다.
-
----
-
-## 🎯 목표
-
-일본 전체 SaaS 생태계를 커버하는 **1000개+ 서비스 스펙**을 자동으로 발견하고 작성하여, OpenClaw가 대량 스킬 생성에 사용할 수 있는 데이터베이스를 구축합니다.
+> **Skill Factory**는 일본의 전체 SaaS 생태계를 커버하는 대규모 API/SDK 연동 구현체 저장소입니다.  
+> 1,000개 이상의 B2B 서비스 스펙을 수집하고, OpenClaw AI가 즉시 활용할 수 있는 형태의 스킬 데이터베이스를 구축하는 것을 목표로 합니다.
 
 ---
 
-## 📊 현재 상태
+## 🏗️ 프로젝트 아키텍처 (Kanban Workflow)
 
-| 항목 | 수치 |
-|-----|------|
-| 발견된 서비스 | 11 |
-| 스펙 작성 완료 | 11 |
-| 서비스별 md 파일 | 16 |
-| 하트비트 실행 주기 | 30분 |
+이 저장소는 **750개 이상의 서비스**를 효율적으로 관리하고 진척도를 한눈에 파악하기 위해, 디렉토리 구조 자체가 거대한 **칸반 보드(Kanban Board)** 역할을 하도록 설계되었습니다. 거추장스러운 외부 엑셀이나 진척도 추적 스크립트 없이 오직 **파일시스템(폴더 이동)**만으로 상태를 관리합니다.
 
----
+### 🗂️ 핵심 폴더 구조
 
-## 🚀 기능
+전체 751개의 서비스는 용도에 따라 **20개의 비즈니스 카테고리**(예: `01_Marketing`, `06_Accounting`)로 분류되어 `repo/` 디렉토리 아래에 위치합니다.
 
-### 1. 자동 서비스 발견
-- `scripts/real_service_discovery.py` - 현재 파이썬 하드코딩 방식
-- `industry_service_discovery.py` - 업종별 서비스 분석
-- **추후**: 더 동적이고 확장 가능한 방식으로 업그레이드 계획
-
-### 2. 스펙 자동 생성
-- `SERVICES_SPEC.md` - 전체 서비스 목록 (업종별 분류)
-- `services/*.md` - 서비스별 스펙 파일
-- 발견 → 스펙 작성 → Git commit & push 자동화
-
-### 3. 하트비트 자동 실행
-- 30분마다 자동으로 서비스 발견과 스펙 업데이트 실행
-- OpenClaw 하트비트와 연동하여 수행
-
----
-
-## 🔄 워크플로우
-
-### 단계별 접근
-
-**1단계: 스펙 대량 생산** (현재 단계)
-```
-서비스 발견 → 스펙 작성 → Git 저장 (1000개 목표)
-```
-
-**2단계: 스킬 생성** (다음 단계)
-```
-스펙 → AI 스킬 생성 → 테스트 → 배포
+```text
+repo/
+├── 01_Marketing/           # 카테고리명
+│   ├── developed/          # [To-Do] 개발 및 스펙 수집 완료 (테스트 작성이 필요한 상태)
+│   │   ├── activecampaign/
+│   │   │   ├── client.py   # API 구현체
+│   │   │   └── SPEC.md     # 📄 해당 서비스의 요구사항 및 API 명세서
+│   │   └── hubspot/
+│   └── verified/           # [Done] 검증 및 테스트 통과 완료 (배포 준비 완료 상태)
+│       └── mailchimp/
+│           ├── client.py
+│           ├── SPEC.md
+│           └── tests/      # ✅ 테스트 코드가 작성된 상태
 ```
 
 ---
 
-## 🛠️ 사용법
+## 🚀 개발자 & AI 협업 워크플로우
 
-### 하트비트 자동 실행
-OpenClaw 하트비트가 30분마다 자동 실행합니다. 별도 설정 없음.
+1. **작업 할당 (Pick)**
+   - `repo/*/developed/` 폴더 안에서 작업할 서비스를 하나 선택합니다.
+   
+2. **명세서 확인 및 개발 (Develop & Test)**
+   - 해당 서비스 폴더 안에 동봉된 `SPEC.md`를 열고 요구사항을 확인합니다.
+   - `client.py`에 API 연동 코드를 구현하고, `tests/` 폴더를 만들어 검증 코드를 작성합니다.
 
-### 수동 실행
+3. **작업 완료 처리 (Move to Verified)**
+   - 기능 및 테스트 작성이 100% 완료되면, 해당 서비스의 폴더를 통째로 **`developed/` 에서 `verified/` 로 이동(Move)** 시킵니다.
+   - 이 "폴더를 이동하는 행위" 자체가 진척률 상승을 의미하는 물리적 증표가 됩니다.
+
+---
+
+## 📊 진척률 파악 방법
+
+기존에 존재하던 복잡한 Python 진척도 추적 스크립트는 모두 제거되었습니다(Legacy). 
+현재 통합 상태나 팀의 생산성을 확인하고 싶다면, 단순히 터미널에서 **`verified` 폴더와 `developed` 폴더의 개수를 세어보는 것**으로 100% 정확한 실시간 진척도를 파악할 수 있습니다.
+
 ```bash
-cd /path/to/skill-factory
-python3 scripts/real_service_discovery.py
-```
-
-### Git push
-자동화 스크립트가 commit 후 자동으로 push합니다.
-
----
-
-## 📁 구조
-
-```
-skill-factory/
-├── README.md                    # 이 파일
-├── SERVICES_SPEC.md            # 11개 서비스 스펙 (업종별 분류)
-├── scripts/
-│   ├── git_helper.py           # Git 자동화
-│   ├── industry_service_discovery.py  # 업종별 분석
-│   └── real_service_discovery.py      # 메인 발견 스크립트
-├── services/                   # 16개 서비스별 md 파일
-└── memory/                     # 하트비트 기록
+# 예시: 검증 완료된 서비스 개수 파악
+find repo/ -type d -path "*/verified/*" -mindepth 1 -maxdepth 1 | wc -l
 ```
 
 ---
 
 ## ⚙️ 요구사항
 
-- Python 3.x
-- **No external dependencies** - 의존성 없이 실행 가능
+- Python 3.10+
+- `aiohttp`, `pytest` 등 개별 서비스 `requirements.txt`에 명시된 패키지
+- **Zero Configuration**: 복잡한 의존성 없이 즉시 실행 가능하도록 설계
 
 ---
 
-## 📈 향후 계획
-
-- [ ] 파이썬 하드코딩 방식 → 더 동적인 발견 방식으로 업그레이드
-- [ ] 1000개 서비스 스펙 완성
-- [ ] 스킬 자동 생성 시스템 개발
-- [ ] AI 기반 서비스 발견 알고리즘 고도화
-
----
-
-## 🤖 사용자
+## 🤖 대상 사용자
 
 **이 프로젝트의 주 사용자는 AI입니다.**
 
-OpenClaw AI 에이전트가 직접 이 데이터베이스를 사용하여 대량 스킬을 자동 생성합니다.
+OpenClaw AI 시스템이 이 저장소의 구조(`client.py`, `SPEC.md`)를 즉시 파싱하여 수백 개의 연동 스킬을 자동 생성하고 서비스형 에이전트에 주입합니다.
 
 ---
 
 ## 📝 License
 
-MIT
-
----
+MIT License
 
 **Skill Factory** · Made for OpenClaw · by [YunSooCho](https://github.com/YunSooCho)
