@@ -1,0 +1,4692 @@
+{
+  "summary": {
+    "total_services": 468,
+    "key_required": 468,
+    "key_ready": 0,
+    "test_passed": 0,
+    "test_failed": 0,
+    "blocked": 0
+  },
+  "services": {
+    "drip": {
+      "score": 33,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/drip",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "e_goi": {
+      "score": 21,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/e_goi",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "activecampaign": {
+      "score": 20,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/activecampaign",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "emailoctopus": {
+      "score": 17,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/emailoctopus",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "myphoner": {
+      "score": 13,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/myphoner",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "assembled": {
+      "score": 12,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/assembled",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "assignar": {
+      "score": 12,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/assignar",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "ecomail": {
+      "score": 12,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/ecomail",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "apptivo": {
+      "score": 11,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/apptivo",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "clickfunnels": {
+      "score": 11,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/clickfunnels",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "dub": {
+      "score": 10,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/dub",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "elastic-email": {
+      "score": 10,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/elastic-email",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "aircall": {
+      "score": 9,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/aircall",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "appcues": {
+      "score": 9,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/appcues",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "elevenlabs": {
+      "score": 9,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/elevenlabs",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "next-sfa": {
+      "score": 9,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/next-sfa",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "clio_manage": {
+      "score": 8,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/clio_manage",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "nocrm_io": {
+      "score": 8,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/nocrm_io",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "asana": {
+      "score": 7,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/asana",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "atlassian": {
+      "score": 5,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/atlassian",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "email-list-verify": {
+      "score": 5,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/email-list-verify",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "chumonbunjo-cloud": {
+      "score": 4,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/chumonbunjo-cloud",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "looma": {
+      "score": 4,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/looma",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "nethunt": {
+      "score": 3,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/nethunt",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "airtable": {
+      "score": 2,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/airtable",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "emailable": {
+      "score": 2,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/emailable",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "monday": {
+      "score": 2,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/monday",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "abstract": {
+      "score": 1,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/abstract",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "cleverreach": {
+      "score": 1,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/cleverreach",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "cloudcontact-ai": {
+      "score": 1,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/cloudcontact-ai",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "nimble": {
+      "score": 1,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/nimble",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "abyssale": {
+      "score": 0,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/abyssale",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "adroll": {
+      "score": 0,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/adroll",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "agendor": {
+      "score": 0,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/agendor",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "airparser": {
+      "score": 0,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/airparser",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "all-images-ai": {
+      "score": 0,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/all-images-ai",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "amptalk": {
+      "score": 0,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/amptalk",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "anthropic": {
+      "score": 0,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/anthropic",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "anymail-finder": {
+      "score": 0,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/anymail-finder",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "apify": {
+      "score": 0,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/apify",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "apitemplate": {
+      "score": 0,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/apitemplate",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "apollo": {
+      "score": 0,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/apollo",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "asana-oauth": {
+      "score": 0,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/asana-oauth",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "assembly-ai": {
+      "score": 0,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/assembly-ai",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "attio": {
+      "score": 0,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/attio",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "avaza": {
+      "score": 0,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/avaza",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "aweber": {
+      "score": 0,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/aweber",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "awork": {
+      "score": 0,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/awork",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "axiom": {
+      "score": 0,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/axiom",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "axonaut": {
+      "score": 0,
+      "phase": "Phase 1",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/axonaut",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "backlog": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/backlog",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "bannerbear": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/bannerbear",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "bannerbite": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/bannerbite",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "beLazy": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/beLazy",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "beamer": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/beamer",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "beehiiv": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/beehiiv",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "benchmark-email": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/benchmark-email",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "bettercontact": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/bettercontact",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "big_mailer": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/big_mailer",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "bigmailer": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/bigmailer",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "bigml": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/bigml",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "bigquery": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/bigquery",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "bird": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/bird",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "bitly": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/bitly",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "bitrix": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/bitrix",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "bizer-team": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/bizer-team",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "bland-ai": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/bland-ai",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "bland_ai": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/bland_ai",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "blink": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/blink",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "blogtrekkor": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/blogtrekkor",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "bloomreach": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/bloomreach",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "blueshift": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/blueshift",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "botpress": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/botpress",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "botsonic": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/botsonic",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "botstar": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/botstar",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "bouncer": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/bouncer",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "bownow": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/bownow",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "brandfetch": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/brandfetch",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "brevo": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/brevo",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "brightback": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/brightback",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "brightcove": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/brightcove",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "browse-ai": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/browse-ai",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "brushup": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/brushup",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "buffer": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/buffer",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "bugfender": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/bugfender",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "bugherd": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/bugherd",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "builtforcoding": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/builtforcoding",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "burst-sms": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/burst-sms",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "burst_sms": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/burst_sms",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "buzzstream": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/buzzstream",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "byteplant-phone-validator": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/byteplant-phone-validator",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "callconnect": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/callconnect",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "canva": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/canva",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "capsule-crm": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/capsule-crm",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "carbone": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/carbone",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "cdata-connect": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/cdata-connect",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "chatgpt": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/chatgpt",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "clearout": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/clearout",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "clickmeeting": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/clickmeeting",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "clicksend": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/clicksend",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "clickup": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/clickup",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "clockify": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/clockify",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "close": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/close",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "cloudbot": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/cloudbot",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "cloudcontact_ai": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/cloudcontact_ai",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "cloudconvert": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/cloudconvert",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "cloudmersive": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/cloudmersive",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "cloze": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/cloze",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "coda": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/coda",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "codegpt": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/codegpt",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "cogmento": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/cogmento",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "cohere": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/cohere",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "connecteam": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/connecteam",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "constant-contact": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/constant-contact",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "contactship_ai": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/contactship_ai",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "convertapi": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/convertapi",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "convertio": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/convertio",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "convertkit": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/convertkit",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "copper": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/copper",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "craftmypdf": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/craftmypdf",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "crowdin": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/crowdin",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "cuenote-sms": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/cuenote-sms",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "cuenote_sms": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/cuenote_sms",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "customer-io": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/customer-io",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "cuttly": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/cuttly",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "cyzen": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/cyzen",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "dandoli": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/dandoli",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "dash": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/dash",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "dataforseo": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/dataforseo",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "deepgram": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/deepgram",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "deepl": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/deepl",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "deepseek": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/deepseek",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "delighted": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/delighted",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "demio": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/demio",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "diffbot": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/diffbot",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "dify": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/dify",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "dlvr-it": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/dlvr-it",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "dlvr_it": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/dlvr_it",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "docsfold": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/docsfold",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "docugenerate": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/docugenerate",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "doppio": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/doppio",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "dotsimple": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/dotsimple",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "dribbble": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/dribbble",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "dropcontact": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/dropcontact",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "dumpling-ai": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/dumpling-ai",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "dynamics-crm": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/dynamics-crm",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "elastic_email": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/elastic_email",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "email_list_verify": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/email_list_verify",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "emelia": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/emelia",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "encharge": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/encharge",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "endorsal": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/endorsal",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "entra-id": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/entra-id",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "esim": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/esim",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "espo_crm": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/espo_crm",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "eventbrite": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/eventbrite",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "eventee": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/eventee",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "everhour": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/everhour",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "exa-ai": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/exa-ai",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "exa_ai": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/exa_ai",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "facebook-ads": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/facebook-ads",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "fakturoid": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/fakturoid",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "fatture_in_cloud": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/fatture_in_cloud",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "findymail": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/findymail",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "fireberry": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/fireberry",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "firecrawl": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/firecrawl",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "firstpromoter": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/firstpromoter",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "float": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/float",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "flodesk": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/flodesk",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "freee": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/freee",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "freee-iv": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/freee-iv",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "freee-pm": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/freee-pm",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "freelo": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/freelo",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "freshsales": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/freshsales",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "frictio": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/frictio",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "fulleRich": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/fulleRich",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "fulleRich-backup": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/fulleRich-backup",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "fullenrich": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/fullenrich",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "fx": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/fx",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "gamma": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/gamma",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "garoon": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/garoon",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "gbiz-info": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/gbiz-info",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "gemini": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/gemini",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "gender-api": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/gender-api",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "gender_api": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/gender_api",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "geniee-sfa": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/geniee-sfa",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "getprospect": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/getprospect",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "getresponse-api": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/getresponse-api",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "giphy": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/giphy",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "gmail": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/gmail",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "google-ads-oauth": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/google-ads-oauth",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "google-analytics": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/google-analytics",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "google-apps-script": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/google-apps-script",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "google-business-profile": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/google-business-profile",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "google-contact": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/google-contact",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "google-docs": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/google-docs",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "google-drive": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/google-drive",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "google-meet": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/google-meet",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "google-search": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/google-search",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "google-sheets": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/google-sheets",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "google-workspace": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/google-workspace",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "google_meet": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/google_meet",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "google_search": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/google_search",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "google_search_console": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/google_search_console",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "greptile": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/greptile",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "groq": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/groq",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "happy_scribe": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/happy_scribe",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "hasdata": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/hasdata",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "hexomatic": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/hexomatic",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "heygen": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/heygen",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "hif": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/hif",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "holded": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/holded",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "hot-profile": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/hot-profile",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "hrdatawarp": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/hrdatawarp",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "html-css-to-image": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/html-css-to-image",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "hubspot": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/hubspot",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "hugging-face": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/hugging-face",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "hugging_face": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/hugging_face",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "hunter": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/hunter",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "idoklad": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/idoklad",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "inoreader": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/inoreader",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "insightly_crm": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/insightly_crm",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "invoice-api": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/invoice-api",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "invoice_ninja": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/invoice_ninja",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "invox": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/invox",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "invox-issue": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/invox-issue",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "ipinfo": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/ipinfo",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "ipqualityscore": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/ipqualityscore",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "itreview": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/itreview",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "kairos": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/kairos",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "kairos-sales": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/kairos-sales",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "kanjo-bugyo": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/kanjo-bugyo",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "keap": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/keap",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "keboola": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/keboola",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "keygen": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/keygen",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "kickbox": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/kickbox",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "klaviyo": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/klaviyo",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "klenty": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/klenty",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "klippa_docHorizon": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/klippa_docHorizon",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "kommo": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/kommo",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "kyusms": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/kyusms",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "landbot-platformapi": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/landbot-platformapi",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "launchdarkly": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/launchdarkly",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "leady": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/leady",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "lemlist": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/lemlist",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "lexoffice": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/lexoffice",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "line": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/line",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "linkprint": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/linkprint",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "liny": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/liny",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "list-finder": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/list-finder",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "livestorm": {
+      "score": 0,
+      "phase": "Phase 2",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/livestorm",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "llama_ai_logo": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/llama_ai_logo",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "lob": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/lob",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "location_io": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/location_io",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "loops": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/loops",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "loqate": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/loqate",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "luma": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/luma",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "mailbluster": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/mailbluster",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "mailchimp": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/mailchimp",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "mailchimp_transactional": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/mailchimp_transactional",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "mailercloud": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/mailercloud",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "mailerlite": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/mailerlite",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "mailersend": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/mailersend",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "mailmodo": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/mailmodo",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "mailrelay": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/mailrelay",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "mails_so": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/mails_so",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "makeleaps": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/makeleaps",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "manage": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/manage",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "manus": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/manus",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "manychat": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/manychat",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "mastodon": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/mastodon",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "mautic": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/mautic",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "mediasms": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/mediasms",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "medium": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/medium",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "melo": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/melo",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "mem": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/mem",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "memberful": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/memberful",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "memberspot_io": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/memberspot_io",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "memberstack": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/memberstack",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "meta-cv": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/meta-cv",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "meta_cv": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/meta_cv",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "metalife": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/metalife",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "microsoft-excel": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/microsoft-excel",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "miro": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/miro",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "misoca": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/misoca",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "mistral-ai": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/mistral-ai",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "mitto_sms": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/mitto_sms",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "mixmax": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/mixmax",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "mixpanel": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/mixpanel",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "moneybird": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/moneybird",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "moneyforward": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/moneyforward",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "moneyforward-expenses": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/moneyforward-expenses",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "moneyforward-invoice-three": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/moneyforward-invoice-three",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "moneyforward-kessai": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/moneyforward-kessai",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "moneyforward-payable": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/moneyforward-payable",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "moneyforward-plus": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/moneyforward-plus",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "moneyforward_cloudinvoice": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/moneyforward_cloudinvoice",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "monica-crm": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/monica-crm",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "moosend": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/moosend",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "moskit": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/moskit",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "moxie": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/moxie",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "mural": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/mural",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "neverbounce": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/neverbounce",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "notion": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/notion",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "np-kakebarai": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/np-kakebarai",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "numverify": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/numverify",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "omnisend": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/omnisend",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "one-signal": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/one-signal",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "one_signal": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/one_signal",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "onepagecrm": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/onepagecrm",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "onesimpleapi": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/onesimpleapi",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "ontraport": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/ontraport",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "oopspam_anti_spam": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/oopspam_anti_spam",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "openai": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/openai",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "openrouter": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/openrouter",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "openweathermap": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/openweathermap",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "outlook": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/outlook",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "ovice": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/ovice",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "pagepixels_screenshots": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/pagepixels_screenshots",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "pappers": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/pappers",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "parsehub": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/parsehub",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "parseur": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/parseur",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "parsio": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/parsio",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "partnero": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/partnero",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "pca-cloud-accounting": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/pca-cloud-accounting",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "pca_cloud_accounting_hyper": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/pca_cloud_accounting_hyper",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "pdf_maker": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/pdf_maker",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "pdfco": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/pdfco",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "pdfless": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/pdfless",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "pdfmonkey": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/pdfmonkey",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "pennylane": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/pennylane",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "people_data_labs": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/people_data_labs",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "perplexity": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/perplexity",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "phantombuster": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/phantombuster",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "phone-appli-people": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/phone-appli-people",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "photoroom": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/photoroom",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "picsart": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/picsart",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "pinterest": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/pinterest",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "pinterest_api": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/pinterest_api",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "pipedrive": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/pipedrive",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "placid": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/placid",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "ploomes": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/ploomes",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "plumsail_documents": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/plumsail_documents",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "postalytics": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/postalytics",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "posthog": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/posthog",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "postmark": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/postmark",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "printbahn": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/printbahn",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "promptitude-io": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/promptitude-io",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "promptitude_io": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/promptitude_io",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "pushbullet": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/pushbullet",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "pushcut": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/pushcut",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "pushover": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/pushover",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "quaderno": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/quaderno",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "quickchart": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/quickchart",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "quickemailverification": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/quickemailverification",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "quipu-token": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/quipu-token",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "qwen": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/qwen",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "raindrop": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/raindrop",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "rakuraku-meisai": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/rakuraku-meisai",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "raynet-crm": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/raynet-crm",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "rd-station": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/rd-station",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "rd-station-crm": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/rd-station-crm",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "rd_station": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/rd_station",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "rebrandly": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/rebrandly",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "reddit": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/reddit",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "renderform": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/renderform",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "reply_io": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/reply_io",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "retell-ai": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/retell-ai",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "retently": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/retently",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "reverse_contact": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/reverse_contact",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "riskanalyze": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/riskanalyze",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "riskeyes": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/riskeyes",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "roborobo": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/roborobo",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "rocketreach": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/rocketreach",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "rows": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/rows",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "runway": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/runway",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "salesflare": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/salesflare",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "salesforce": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/salesforce",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "salesforce-sb": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/salesforce-sb",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "saleslens": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/saleslens",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "salesmate": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/salesmate",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "sansan": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/sansan",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "sasuke-lead": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/sasuke-lead",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "sasuke_lead": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/sasuke_lead",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "satismeter": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/satismeter",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "satori": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/satori",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "scrapingbee": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/scrapingbee",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "scraptio": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/scraptio",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "scribe_transcription": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/scribe_transcription",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "scribeless": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/scribeless",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "sectorflow": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/sectorflow",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "sender": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/sender",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "sendgrid": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/sendgrid",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "sendpulse": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/sendpulse",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "sendx": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/sendx",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "sendy": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/sendy",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "senses": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/senses",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "serpapi": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/serpapi",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "servicem": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/servicem",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "sevdesk": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/sevdesk",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "seven_io": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/seven_io",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "sho-bugyo": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/sho-bugyo",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "short-io": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/short-io",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "shotstack": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/shotstack",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "smartlead": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/smartlead",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "smartsheet": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/smartsheet",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "smoove": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/smoove",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "sms_alert": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/sms_alert",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "sms_hana": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/sms_hana",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "smslink": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/smslink",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "snack-prompt": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/snack-prompt",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "snov_io": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/snov_io",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "sparkpost": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/sparkpost",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "stability-ai": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/stability-ai",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "stores-yk": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/stores-yk",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "streak": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/streak",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "synthflow_ai": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/synthflow_ai",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "systeme-io": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/systeme-io",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "teachable": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/teachable",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "teamleader": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/teamleader",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "techulus_push": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/techulus_push",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "templated": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/templated",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "textcortex-ai": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/textcortex-ai",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "textit": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/textit",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "textmagic": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/textmagic",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "thanks_io": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/thanks_io",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "trint": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/trint",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "tuemilio": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/tuemilio",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "tumblr": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/tumblr",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "twilio": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/twilio",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "twilio_verify": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/twilio_verify",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "twitch": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/twitch",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "uniqode": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/uniqode",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "unisender": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/unisender",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "uproc": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/uproc",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "vapi": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/vapi",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "vectorizer-ai": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/vectorizer-ai",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "verificaremails": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/verificaremails",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "viewdns": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/viewdns",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "wachete": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/wachete",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "whereby": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/whereby",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "whoisfreaks": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/whoisfreaks",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "wild-apricot": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/wild-apricot",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "woodpecker": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/woodpecker",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "wooxy": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/wooxy",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "workplace": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/workplace",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "x-oauth": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/x-oauth",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "x_oauth": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/x_oauth",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "xai": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/xai",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "youtube": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/youtube",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "youtube-data": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/youtube-data",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "youtube_data": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/youtube_data",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "zendesk-sell": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/zendesk-sell",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "zendesk_sell": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/zendesk_sell",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "zerobounce": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/zerobounce",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "zerocodekit": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/zerocodekit",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "zixflow": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/zixflow",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "zoho-bigin": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/zoho-bigin",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "zoho-crm-oauth": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/zoho-crm-oauth",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "zoho-mail": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/zoho-mail",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "zoho-sheet": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/zoho-sheet",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "zoho-writer": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/zoho-writer",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "zoho_bigin": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/zoho_bigin",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "zoho_sheet": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/zoho_sheet",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "zoho_writer": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/zoho_writer",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "zoom": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/zoom",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "zoom-phone": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/zoom-phone",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "zoom_phone": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/zoom_phone",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    },
+    "프로젝트_진척": {
+      "score": 0,
+      "phase": "Phase 3",
+      "status": "KEY_REQUIRED",
+      "api_key_type": "UNKNOWN",
+      "secret_manager_path": "yoom/api-keys/프로젝트_진척",
+      "tested_at": null,
+      "errors": [],
+      "notes": ""
+    }
+  }
+}
