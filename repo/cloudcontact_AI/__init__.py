@@ -1,6 +1,7 @@
-"""CloudContact AI Integration
+"""
+CloudContact AI API Integration
 
-CloudContact AI provides AI-powered contact solutions.
+AI-powered contact center platform
 """
 
 from .client import CloudContactAIClient

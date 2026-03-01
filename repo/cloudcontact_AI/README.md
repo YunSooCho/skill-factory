@@ -1,118 +1,77 @@
-# cloudcontact-ai
+# CloudContact AI API 클라이언트
 
-CloudContact AI Integration
+CloudContact AI를 위한 Python 클라이언트입니다. AI 기반 고객센터 관리 기능을 제공합니다.
 
-> CloudContact AI provides AI-powered contact solutions.
+## 개요
 
-## Installation
+CloudContact AI는 AI 기반 고객센터 플랫폼입니다. 이 클라이언트는 OAuth 인증을 통해 CloudContact AI API에 접근합니다.
+
+## 설치
+
+```bash
+pip install requests
+```
+
+또는:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Configuration
+## OAuth 액세스 토큰 발급
 
-Get your API credentials from cloudcontact-ai:
+1. 해당 서비스에서 앱 등록
+2. OAuth 2.0 흐름을 통해 액세스 토큰 발급
+3. 발급된 토큰을 안전하게 저장
 
-1. Sign up at the official cloudcontact-ai website
-2. Navigate to API settings
-3. Generate your API key or access token
-4. Configure environment variables or pass credentials directly
+## 사용법
 
-## Usage
-
-### Basic Setup
+### 초기화
 
 ```python
-from cloudcontactai import CloudContactAIClient
+from cloudcontact_AI import CloudContactAIClient, CloudcontactAIError
 
-# Initialize with API key
 client = CloudContactAIClient(
-    api_key="your-api-key"
-)
-
-# Or with access token
-client = CloudContactAIClient(
-    access_token="your-access-token"
+    access_token="YOUR_ACCESS_TOKEN",
+    timeout=30
 )
 ```
 
-### Example: List Resources
+### 주요 기능
+
+- contacts
+- calls
+- chats
+
+### 예시
 
 ```python
-resources = client.list_resources()
-for resource in resources:
-    print(resource['id'], resource['name'])
+# 연락처 조회
+contacts = client.get_contacts()
+
+# 연락처 생성
+contact = client.create_contact(name="John Doe", email="john@example.com")
+
+# 통화 기록 조회
+calls = client.get_calls()
+
+# 채팅 기록 조회
+chats = client.get_chats()
 ```
 
-### Example: Create Resource
-
-```python
-data = {
-    'name': 'Example Resource',
-    'description': 'This is an example'
-}
-resource = client.create_resource(data)
-print(f"Created resource: {resource['id']}")
-```
-
-### Example: Search
-
-```python
-results = client.search("keyword", limit=10)
-for result in results:
-    print(result['name'])
-```
-
-### Example: Webhooks
-
-```python
-# Get all webhooks
-webhooks = client.get_webhooks()
-
-# Create webhook
-client.create_webhook(
-    url="https://your-site.com/webhook",
-    events=["created", "updated"]
-)
-```
-
-## API Methods
-
-- `get_status()` - Get API status
-- `list_resources(**kwargs)` - List resources with optional filtering
-- `get_resource(resource_id)` - Get specific resource by ID
-- `create_resource(data)` - Create new resource
-- `update_resource(resource_id, data)` - Update resource
-- `delete_resource(resource_id)` - Delete resource
-- `search(query, **kwargs)` - Search resources
-- `batch_create(items)` - Create multiple resources
-- `batch_update(updates)` - Update multiple resources
-- `batch_delete(resource_ids)` - Delete multiple resources
-- `get_webhooks()` - Get list of webhooks
-- `create_webhook(url, events, **kwargs)` - Create webhook
-- `delete_webhook(webhook_id)` - Delete webhook
-- `get_account_info()` - Get account information
-- `get_usage_stats(start_date, end_date)` - Get usage statistics
-
-## Error Handling
+## 에러 처리
 
 ```python
 try:
-    resource = client.get_resource("id")
-except requests.exceptions.HTTPError as e:
-    print(f"Error: {e.response.status_code}")
-    print(f"Message: {e.response.json()}")
+    contacts = client.get_contacts()
+except CloudcontactAIAuthenticationError:
+    print("인증 실패")
+except CloudcontactAIRateLimitError:
+    print("속도 제한 초과")
+except CloudcontactAIError as e:
+    print(f"요청 실패: {str(e)}")
 ```
 
-## Rate Limiting
-
-The client respects rate limits automatically. Adjust the `timeout` parameter as needed.
-
-## Support
-
-For more information, visit the official cloudcontact-ai documentation.
-
-## License
+## 라이선스
 
 MIT License
