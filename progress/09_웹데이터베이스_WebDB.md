@@ -1,4 +1,4 @@
-# 09_웹데이터베이스_WebDB (27/27)
+# 09_웹데이터베이스_WebDB (25/27)
 
 - [x] airtable-oauth
 - [x] aitable
@@ -8,22 +8,22 @@
 - [x] canbus
 - [x] cnpja
 - [x] desknets-neo
-- [x] ezcraft
+- [ ] ezcraft
 - [x] grist
-- [x] just-sfa
+- [ ] just-sfa
 - [x] kintone
 - [x] knack
 - [x] ninox
 - [x] pinecone
-- [ ] podio
-- [ ] qdrant
-- [ ] quickbase
-- [ ] quintadb
-- [ ] rakuraku-hanbai
-- [ ] retable
-- [ ] sasuke-works
-- [ ] sheetrocks
-- [ ] slopebase
-- [ ] spiral
-- [ ] tabidoo
-- [ ] zoho_creator
+- [x] podio
+- [x] qdrant
+- [x] quickbase
+- [x] quintadb
+- [x] rakuraku-hanbai
+- [x] retable
+- [x] sasuke-works
+- [x] sheetrocks
+- [x] slopebase
+- [x] spiral
+- [x] tabidoo
+- [x] zoho_creator

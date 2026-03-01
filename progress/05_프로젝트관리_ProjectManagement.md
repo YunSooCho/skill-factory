@@ -1,4 +1,4 @@
-# 05_프로젝트관리_ProjectManagement (58/58)
+# 05_프로젝트관리_ProjectManagement (19/58)
 
 - [x] asana-oauth
 - [x] avaza
@@ -18,43 +18,43 @@
 - [x] freee-pm
 - [x] freelo
 - [x] ganttpro
-- [x] github
-- [x] gitlab
-- [x] harness
-- [x] harvest
-- [x] hive
-- [x] jira
-- [x] jooto
-- [x] kaiten
-- [x] kanban_tool
-- [x] kanbanzone
-- [x] keeping
+- [ ] github
+- [ ] gitlab
+- [ ] harness
+- [ ] harvest
+- [ ] hive
+- [ ] jira
+- [ ] jooto
+- [ ] kaiten
+- [ ] kanban_tool
+- [ ] kanbanzone
+- [ ] keeping
 - [x] launchDarkly
-- [x] linear
-- [x] meistertask
-- [x] moco
-- [x] nozbe
-- [x] openproject
-- [x] paymo
-- [x] pingdom
-- [x] pledge
-- [x] resource_guru
-- [x] runrun_it
-- [x] sentry
-- [x] shortcut
-- [x] signupgenius
-- [x] sonderplan
-- [x] taiga
-- [x] teamwork
-- [x] ticktick
-- [x] timecamp
-- [x] timely
-- [x] timing
-- [x] tmetric
-- [x] todoist
-- [x] toggl
-- [x] toodledo
-- [x] trello
-- [x] workast
-- [x] wrike
-- [x] zoho_project
+- [ ] linear
+- [ ] meistertask
+- [ ] moco
+- [ ] nozbe
+- [ ] openproject
+- [ ] paymo
+- [ ] pingdom
+- [ ] pledge
+- [ ] resource_guru
+- [ ] runrun_it
+- [ ] sentry
+- [ ] shortcut
+- [ ] signupgenius
+- [ ] sonderplan
+- [ ] taiga
+- [ ] teamwork
+- [ ] ticktick
+- [ ] timecamp
+- [ ] timely
+- [ ] timing
+- [ ] tmetric
+- [ ] todoist
+- [ ] toggl
+- [ ] toodledo
+- [ ] trello
+- [ ] workast
+- [ ] wrike
+- [ ] zoho_project

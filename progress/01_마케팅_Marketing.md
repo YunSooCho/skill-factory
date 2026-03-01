@@ -1,4 +1,4 @@
-# 01_마케팅_Marketing (162/162)
+# 01_마케팅_Marketing (161/162)
 
 - [x] Pinterest
 - [x] abstract
@@ -28,7 +28,7 @@
 - [x] clickfunnels
 - [x] clickmeeting
 - [x] clicksend
-- [ ] cloudcontact_AI
+- [x] cloudcontact_AI
 - [x] constant-contact
 - [x] convertkit
 - [x] cuenote_sms
@@ -161,4 +161,4 @@
 - [x] youtube_data
 - [x] zerobounce
 - [x] zixflow
-- [x] 프로젝트_진척
+- [ ] 프로젝트_진척

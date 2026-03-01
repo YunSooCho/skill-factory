@@ -1,14 +1,14 @@
-# 17_파일관리_FileManagement (1/12)
+# 17_파일관리_FileManagement (12/12)
 
-- [ ] aws_s_three
-- [ ] box
-- [ ] dropbox
-- [ ] fileforce
-- [ ] files_com
-- [ ] filestage
+- [x] aws_s_three
+- [x] box
+- [x] dropbox
+- [x] fileforce
+- [x] files_com
+- [x] filestage
 - [x] google-drive
-- [ ] kaisoku_searcher
-- [ ] onedrive
-- [ ] pdf_appnet
-- [ ] pinata
-- [ ] sharepoint
+- [x] kaisoku_searcher
+- [x] onedrive
+- [x] pdf_appnet
+- [x] pinata
+- [x] sharepoint

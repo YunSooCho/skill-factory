@@ -1,16 +1,16 @@
-# 06_회계경리_Accounting (49/49)
+# 06_회계경리_Accounting (38/49)
 
-- [x] bakuraku-denshichobohozon
-- [x] bakuraku-kyotsukanri
-- [x] bakuraku-seikyushohakko
-- [x] bakuraku-shinsei-keihiseisan
-- [x] billing-robo
-- [x] board
-- [x] chargebee
-- [x] chartmogul
-- [x] climbercloud
-- [x] dx-suite
-- [x] easybill
+- [ ] bakuraku-denshichobohozon
+- [ ] bakuraku-kyotsukanri
+- [ ] bakuraku-seikyushohakko
+- [ ] bakuraku-shinsei-keihiseisan
+- [ ] billing-robo
+- [ ] board
+- [ ] chargebee
+- [ ] chartmogul
+- [ ] climbercloud
+- [ ] dx-suite
+- [ ] easybill
 - [x] fakturoid
 - [x] fatture_in_cloud
 - [x] freee-iv

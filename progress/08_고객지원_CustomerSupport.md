@@ -1,4 +1,4 @@
-# 08_고객지원_CustomerSupport (36/36)
+# 08_고객지원_CustomerSupport (32/37)
 
 - [x] aircall
 - [x] askhandle
@@ -32,8 +32,8 @@
 - [x] sleekflow
 - [x] statuspage
 - [x] superchat
-- [x] telnyx
-- [x] timelinesai
-- [x] typebot
-- [x] zendesk
-- [x] zoho_desk
+- [ ] telnyx
+- [ ] timelinesai
+- [ ] typebot
+- [ ] zendesk
+- [ ] zoho_desk
