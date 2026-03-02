@@ -1,32 +1,32 @@
-# Wachete API 클라이언트
+#Wachete APIクライアント
 
-Wachete를 위한 Python API 클라이언트입니다. 웹페이지 모니터링 기능을 제공합니다.
+Wachete用のPython APIクライアントです。 Webページ監視機能を提供します。
 
-## 개요
+## 概要
 
-Wachete는 웹페이지 변경을 모니터링하는 서비스입니다.
+WacheteはWebページの変更を監視するサービスです。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-또는:
+または：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급
+## API キー発行
 
-1. [Wachete](https://wachete.com/)에서 계정 생성
-2. API 키 발급
-3. API 키를 안전하게 저장
+1. [Wachete]（https://wachete.com/)에서アカウントを作成
+2. API キー発行
+3. API キーを安全に保存
 
-## 사용법
+##使用法
 
-### 초기화
+### 初期化
 
 ```python
 from wachete import WacheteClient, WacheteError
@@ -37,7 +37,7 @@ client = WacheteClient(
 )
 ```
 
-### Wachet 생성
+### Wachetの作成
 
 ```python
 result = client.create_wachet(
@@ -48,13 +48,13 @@ result = client.create_wachet(
 )
 ```
 
-### Wachet 조회
+### Wachet ルックアップ
 
 ```python
 wachet = client.get_wachet("wachet_id_here")
 ```
 
-### Wachet 검색
+### Wachetを検索
 
 ```python
 result = client.search_wachets(
@@ -66,7 +66,7 @@ for wachet in result.get("wachets", []):
     print(f"- {wachet.get('name')}")
 ```
 
-### Wachet 업데이트
+### Wachet アップデート
 
 ```python
 result = client.update_wachet(
@@ -76,19 +76,19 @@ result = client.update_wachet(
 )
 ```
 
-### Wachet 삭제
+### Wachetを削除
 
 ```python
 result = client.delete_wachet("wachet_id_here")
 ```
 
-### 변경 이력 조회
+### 変更履歴の照会
 
 ```python
 result = client.get_wachet_changes("wachet_id_here", limit=10)
 ```
 
-## 에러 처리
+## エラー処理
 
 ```python
 try:
@@ -101,11 +101,11 @@ except WacheteError as e:
     print(f"요청 실패: {str(e)}")
 ```
 
-## 라이선스
+##ライセンス
 
 MIT License
 
-## 지원
+## サポート
 
-- [Wachete 공식 사이트](https://wachete.com/)
-- [Wachete 문서](https://docs.wachete.com/)
+- [Wachete公式サイト]（https://wachete.com/)
+- [Wacheteドキュメント]（https://docs.wachete.com/)

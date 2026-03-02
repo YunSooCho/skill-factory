@@ -1,6 +1,6 @@
 """
 AskHandle Client
-고객 문의 및 요청 관리 API 클라이언트
+顧客の問い合わせとリクエスト管理APIクライアント
 """
 
 import requests
@@ -10,9 +10,9 @@ from datetime import datetime
 
 class AskHandleClient:
     """
-    AskHandle API 클라이언트
+    AskHandle APIクライアント
 
-    高객 문의, 요청, 티켓 관리를 위한 클라이언트
+    顧客の問い合わせ、要求、チケット管理のためのクライアント
     """
 
     def __init__(
@@ -22,12 +22,12 @@ class AskHandleClient:
         timeout: int = 30
     ):
         """
-        AskHandle 클라이언트 초기화
+        AskHandleクライアントの初期化
 
         Args:
-            api_key: AskHandle API 키
-            base_url: API 기본 URL
-            timeout: 요청 타임아웃 (초)
+            api_key: AskHandle API キー
+            base_url：APIベースURL
+            timeout：リクエストタイムアウト（秒）
         """
         self.api_key = api_key
         self.base_url = base_url.rstrip('/')
@@ -47,19 +47,19 @@ class AskHandleClient:
         params: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        API 요청 전송
+        APIリクエストの送信
 
         Args:
-            method: HTTP 메서드
-            endpoint: API 엔드포인트
-            data: 요청 본문 데이터
-            params: URL 파라미터
+            method: HTTP メソッド
+            endpoint: API エンドポイント
+            data: 要求本文データ
+            params: URL パラメータ
 
         Returns:
-            API 응답 데이터
+            API応答データ
 
         Raises:
-            requests.RequestException: API 요청 실패
+            requests.RequestException: API リクエストに失敗しました
         """
         url = f"{self.base_url}/{endpoint.lstrip('/')}"
         response = self.session.request(
@@ -83,19 +83,19 @@ class AskHandleClient:
         tags: Optional[List[str]] = None
     ) -> Dict[str, Any]:
         """
-        새로운 티켓 생성
+        新しいチケットの作成
 
         Args:
-            title: 티켓 제목
-            description: 티켓 설명
-            requester_name: 요청자 이름
-            requester_email: 요청자 이메일
-            priority: 우선순위 (low, medium, high, urgent)
-            category: 티켓 카테고리
-            tags: 티켓 태그 목록
+            title: チケットのタイトル
+            description: チケットの説明
+            requester_name: リクエスタ名
+            requester_email：リクエスタメール
+            priority: 優先順位 (low, medium, high, urgent)
+            category: チケットカテゴリ
+            タグ：チケットタグリスト
 
         Returns:
-            생성된 티켓 정보
+            生成されたチケット情報
         """
         data = {
             'title': title,
@@ -116,13 +116,13 @@ class AskHandleClient:
 
     def get_ticket(self, ticket_id: str) -> Dict[str, Any]:
         """
-        티켓 상세 조회
+        チケット詳細検索
 
         Args:
-            ticket_id: 티켓 ID
+            ticket_id：チケットID
 
         Returns:
-            티켓 상세 정보
+            チケット詳細
         """
         return self._request('GET', f'/tickets/{ticket_id}')
 
@@ -134,16 +134,16 @@ class AskHandleClient:
         offset: int = 0
     ) -> List[Dict[str, Any]]:
         """
-        티켓 목록 조회
+        チケットリストを見る
 
         Args:
-            status: 상태 필터 (open, in_progress, resolved, closed)
-            priority: 우선순위 필터
-            limit: 반환할 항목 수
-            offset: 오프셋
+            status: ステータスフィルタ (open, in_progress, resolved, closed)
+            priority: 優先順位フィルタ
+            limit: 返す項目の数
+            offset: オフセット
 
         Returns:
-            티켓 목록
+            チケット一覧
         """
         params = {'limit': limit, 'offset': offset}
         if status:
@@ -163,17 +163,17 @@ class AskHandleClient:
         tags: Optional[List[str]] = None
     ) -> Dict[str, Any]:
         """
-        티켓 업데이트
+        チケットの更新
 
         Args:
-            ticket_id: 티켓 ID
-            status: 새 상태
-            priority: 새 우선순위
-            assignee_id: 담당자 ID
-            tags: 업데이트할 태그 목록
+            ticket_id：チケットID
+            status: 新しい状態
+            priority: 新しい優先順位
+            assignee_id：担当者ID
+            tags: 更新するタグのリスト
 
         Returns:
-            업데이트된 티켓 정보
+            更新されたチケット情報
         """
         data = {}
         if status:
@@ -196,17 +196,17 @@ class AskHandleClient:
         is_internal: bool = False
     ) -> Dict[str, Any]:
         """
-        티켓에 댓글 추가
+        チケットにコメントを追加
 
         Args:
-            ticket_id: 티켓 ID
-            comment: 댓글 내용
-            author_name: 작성자 이름
-            author_email: 작성자 이메일
-            is_internal: 내부용 댓글 여부
+            ticket_id：チケットID
+            comment: コメント内容
+            author_name：作成者名
+            author_email：作成者のEメール
+            is_internal：内部でコメントするかどうか
 
         Returns:
-            추가된 댓글 정보
+            追加されたコメント情報
         """
         data = {
             'comment': comment,
@@ -221,13 +221,13 @@ class AskHandleClient:
 
     def get_ticket_comments(self, ticket_id: str) -> List[Dict[str, Any]]:
         """
-        티켓 댓글 목록 조회
+        チケットのコメントリストを見る
 
         Args:
-            ticket_id: 티켓 ID
+            ticket_id：チケットID
 
         Returns:
-            댓글 목록
+            コメントリスト
         """
         response = self._request('GET', f'/tickets/{ticket_id}/comments')
         return response.get('comments', [])
@@ -241,17 +241,17 @@ class AskHandleClient:
         metadata: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        새 고객 생성
+        新しい顧客を作成
 
         Args:
-            name: 고객 이름
-            email: 고객 이메일
-            phone: 전화번호
-            company: 회사명
-            metadata: 추가 메타데이터
+            name：顧客名
+            email：顧客の電子メール
+            phone: 電話番号
+            company：会社名
+            metadata: 追加のメタデータ
 
         Returns:
-            생성된 고객 정보
+            生成された顧客情報
         """
         data = {
             'name': name,
@@ -269,13 +269,13 @@ class AskHandleClient:
 
     def get_customer(self, customer_id: str) -> Dict[str, Any]:
         """
-        고객 조회
+        顧客の照会
 
         Args:
-            customer_id: 고객 ID
+            customer_id：顧客ID
 
         Returns:
-            고객 정보
+            顧客情報
         """
         return self._request('GET', f'/customers/{customer_id}')
 
@@ -286,15 +286,15 @@ class AskHandleClient:
         offset: int = 0
     ) -> List[Dict[str, Any]]:
         """
-        고객 목록 조회
+        顧客リストの照会
 
         Args:
-            search: 검색어
-            limit: 반환할 항목 수
-            offset: 오프셋
+            search: 検索語
+            limit: 返す項目の数
+            offset: オフセット
 
         Returns:
-            고객 목록
+            顧客リスト
         """
         params = {'limit': limit, 'offset': offset}
         if search:
@@ -309,14 +309,14 @@ class AskHandleClient:
         end_date: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        통계 정보 조회
+        統計情報の照会
 
         Args:
-            start_date: 시작 날짜 (YYYY-MM-DD)
-            end_date: 종료 날짜 (YYYY-MM-DD)
+            start_date：開始日（YYYY-MM-DD）
+            end_date: 終了日 (YYYY-MM-DD)
 
         Returns:
-            통계 정보
+            統計情報
         """
         params = {}
         if start_date:
@@ -327,5 +327,5 @@ class AskHandleClient:
         return self._request('GET', '/statistics', params=params)
 
     def close(self):
-        """세션 종료"""
+        """セッション終了"""
         self.session.close()

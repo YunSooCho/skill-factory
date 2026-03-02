@@ -1,23 +1,23 @@
-# Canbus 비즈니스 관리 SDK
+# Canbus Business Management SDK
 
-Canbus는 프로젝트 및 작업 관리를 위한 플랫폼에 대한 Python SDK입니다.
+Canbusは、プロジェクトとタスク管理のためのプラットフォーム用のPython SDKです。
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [Canbus 웹사이트](https://www.canbus.io)에 접속하여 계정을 생성합니다.
-2. 설정(Settings) > API Keys 섹션으로 이동합니다.
-3. 'Create API Key' 버튼을 클릭하여 새 API 키를 생성합니다.
-4. 생성된 API 키를 안전한 곳에 저장합니다.
+1. [Canbusウェブサイト]（https://www.canbus.io)에にアクセスしてアカウントを作成します。
+2. 「設定」(Settings) > API Keys セクションに移動します。
+3. [Create API Key]ボタンをクリックして新しいAPIキーを生成します。
+4. 生成された API キーを安全な場所に保存します。
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from canbus import CanbusClient
@@ -27,7 +27,7 @@ client = CanbusClient(
 )
 ```
 
-### 워크스페이스 관리
+### ワークスペース管理
 
 ```python
 # 모든 워크스페이스 목록
@@ -54,7 +54,7 @@ client.update_workspace(
 client.delete_workspace(workspace_id="workspace_id")
 ```
 
-### 프로젝트 관리
+###プロジェクト管理
 
 ```python
 # 프로젝트 목록
@@ -86,7 +86,7 @@ client.update_project(
 client.delete_project(workspace_id="workspace_id", project_id="project_id")
 ```
 
-### 작업(Task) 관리
+### タスク(Task)の管理
 
 ```python
 # 작업 목록 조회
@@ -137,7 +137,7 @@ client.delete_task(
 )
 ```
 
-### 댓글 관리
+### コメントの管理
 
 ```python
 # 작업 댓글 작성
@@ -157,7 +157,7 @@ comments = client.get_task_comments(
 )
 ```
 
-### 팀 멤버 관리
+###チームメンバーの管理
 
 ```python
 # 팀 멤버 목록
@@ -179,7 +179,7 @@ client.remove_team_member(
 )
 ```
 
-### 리포트 및 통계
+### レポートと統計
 
 ```python
 # 리포트 생성
@@ -199,7 +199,7 @@ print(f"완료된 작업: {stats['completedTasks']}")
 print(f"진행 중인 작업: {stats['inProgressTasks']}")
 ```
 
-### 검색
+###検索
 
 ```python
 # 작업 검색
@@ -213,7 +213,7 @@ for task in results:
     print(f"검색 결과: {task['title']}")
 ```
 
-### 라벨 관리
+### ラベル管理
 
 ```python
 # 라벨 목록
@@ -227,7 +227,7 @@ label = client.create_label(
 )
 ```
 
-### 활동 로그
+### アクティビティログ
 
 ```python
 # 워크스페이스 활동 로그
@@ -240,18 +240,18 @@ for activity in activities:
     print(f"{activity['timestamp']}: {activity['description']}")
 ```
 
-## 주요 기능
+##主な機能
 
-- ✅ 워크스페이스 관리
-- ✅ 프로젝트 생성 및 관리
-- ✅ 작업(Task) CRUD 작업
-- ✅ 팀 멤버 관리
-- ✅ 댓글 및 협업 기능
-- ✅ 리포트 및 통계
-- ✅ 작업 검색
-- ✅ 라벨 및 태그 관리
-- ✅ 활동 로그 추적
+- ✅ワークスペース管理
+- ✅プロジェクトの作成と管理
+- ✅タスク（タスク）CRUDタスク
+- ✅チームメンバー管理
+- ✅コメントとコラボレーション機能
+- ✅レポートと統計
+- ✅ジョブ検索
+- ✅ラベルとタグの管理
+- ✅アクティビティログ追跡
 
-## 라이선스
+##ライセンス
 
 MIT License

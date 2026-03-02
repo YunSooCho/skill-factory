@@ -1,6 +1,6 @@
 """
 Sleekflow Client
-채팅 및 고객지원 워크플로우 API 클라이언트
+チャットとカスタマーサポートワークフローAPIクライアント
 """
 
 import requests
@@ -9,9 +9,9 @@ from typing import Optional, Dict, List, Any
 
 class SleekflowClient:
     """
-    Sleekflow API 클라이언트
+    Sleekflow APIクライアント
 
-    채팅, 워크플로우 자동화, 고객 트래킹을 위한 클라이언트
+    チャット、ワークフロー自動化、顧客トラッキングのためのクライアント
     """
 
     def __init__(
@@ -22,13 +22,13 @@ class SleekflowClient:
         timeout: int = 30
     ):
         """
-        Sleekflow 클라이언트 초기화
+        Sleekflowクライアントの初期化
 
         Args:
-            api_key: Sleekflow API 키
-            workspace_id: 워크스페이스 ID
-            base_url: API 기본 URL
-            timeout: 요청 타임아웃 (초)
+            api_key: Sleekflow API キー
+            workspace_id: ワークスペース ID
+            base_url：APIベースURL
+            timeout：リクエストタイムアウト（秒）
         """
         self.api_key = api_key
         self.workspace_id = workspace_id
@@ -50,19 +50,19 @@ class SleekflowClient:
         params: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        API 요청 전송
+        APIリクエストの送信
 
         Args:
-            method: HTTP 메서드
-            endpoint: API 엔드포인트
-            data: 요청 본문 데이터
-            params: URL 파라미터
+            method: HTTP メソッド
+            endpoint: API エンドポイント
+            data: 要求本文データ
+            params: URL パラメータ
 
         Returns:
-            API 응답 데이터
+            API応答データ
 
         Raises:
-            requests.RequestException: API 요청 실패
+            requests.RequestException: API リクエストに失敗しました
         """
         url = f"{self.base_url}/{endpoint.lstrip('/')}"
         response = self.session.request(
@@ -82,15 +82,15 @@ class SleekflowClient:
         metadata: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        새 채팅 세션 생성
+        新しいチャットセッションの作成
 
         Args:
-            customer_id: 고객 ID
-            channel: 채널 타입 (web, whatsapp, messenger, telegram)
-            metadata: 추가 메타데이터
+            customer_id：顧客ID
+            channel: チャンネルタイプ (web, whatsapp, messenger, telegram)
+            metadata: 追加のメタデータ
 
         Returns:
-            생성된 채팅 세션 정보
+            生成されたチャットセッション情報
         """
         data = {
             'customerId': customer_id,
@@ -104,13 +104,13 @@ class SleekflowClient:
 
     def get_chat_session(self, session_id: str) -> Dict[str, Any]:
         """
-        채팅 세션 조회
+        チャットセッションの検索
 
         Args:
-            session_id: 채팅 세션 ID
+            session_id: チャットセッションID
 
         Returns:
-            채팅 세션 정보
+            チャットセッションについて
         """
         return self._request('GET', f'/chat/sessions/{session_id}')
 
@@ -123,17 +123,17 @@ class SleekflowClient:
         offset: int = 0
     ) -> List[Dict[str, Any]]:
         """
-        채팅 세션 목록 조회
+        チャットセッションリストの検索
 
         Args:
-            customer_id: 고객 ID 필터
-            status: 상태 필터 (active, closed, archived)
-            channel: 채널 필터
-            limit: 반환할 항목 수
-            offset: 오프셋
+            customer_id：顧客IDフィルタ
+            status: ステータスフィルタ (active, closed, archived)
+            channel: チャンネルフィルタ
+            limit: 返す項目の数
+            offset: オフセット
 
         Returns:
-            채팅 세션 목록
+            チャットセッション一覧
         """
         params = {'limit': limit, 'offset': offset}
         if customer_id:
@@ -155,17 +155,17 @@ class SleekflowClient:
         file_url: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        메시지 전송
+        メッセージ送信
 
         Args:
-            session_id: 채팅 세션 ID
-            text: 메시지 내용
-            message_type: 메시지 타입 (text, image, video, file)
-            sender_type: 발신자 타입 (agent, customer, bot)
-            file_url: 파일 URL
+            session_id: チャットセッションID
+            text: メッセージ内容
+            message_type：メッセージタイプ（text、image、video、file）
+            sender_type：発信者タイプ（agent、customer、bot）
+            file_url：ファイルURL
 
         Returns:
-            전송된 메시지 정보
+            送信されたメッセージ情報
         """
         data = {
             'sessionId': session_id,
@@ -186,15 +186,15 @@ class SleekflowClient:
         offset: int = 0
     ) -> List[Dict[str, Any]]:
         """
-        메시지 목록 조회
+        メッセージリストの照会
 
         Args:
-            session_id: 채팅 세션 ID
-            limit: 반환할 항목 수
-            offset: 오프셋
+            session_id: チャットセッションID
+            limit: 返す項目の数
+            offset: オフセット
 
         Returns:
-            메시지 목록
+            メッセージ一覧
         """
         params = {'limit': limit, 'offset': offset}
         response = self._request('GET', f'/chat/sessions/{session_id}/messages', params=params)
@@ -209,17 +209,17 @@ class SleekflowClient:
         is_active: bool = False
     ) -> Dict[str, Any]:
         """
-        새 워크플로우 생성
+        新しいワークフローの作成
 
         Args:
-            name: 워크플로우 이름
-            description: 설명
-            steps: 워크플로우 단계 목록
-            trigger_type: 트리거 타입 (manual, schedule, event)
-            is_active: 활성화 여부
+            name: ワークフロー名
+            description: 説明
+            steps: ワークフローステップのリスト
+            trigger_type: トリガータイプ (manual, schedule, event)
+            is_active: 有効かどうか
 
         Returns:
-            생성된 워크플로우 정보
+            生成されたワークフロー情報
         """
         data = {
             'name': name,
@@ -233,13 +233,13 @@ class SleekflowClient:
 
     def get_workflow(self, workflow_id: str) -> Dict[str, Any]:
         """
-        워크플로우 조회
+        ワークフロー照会
 
         Args:
-            workflow_id: 워크플로우 ID
+            workflow_id: ワークフローID
 
         Returns:
-            워크플로우 상세 정보
+            ワークフローの詳細
         """
         return self._request('GET', f'/workflows/{workflow_id}')
 
@@ -250,15 +250,15 @@ class SleekflowClient:
         offset: int = 0
     ) -> List[Dict[str, Any]]:
         """
-        워크플로우 목록 조회
+        ワークフローリストの照会
 
         Args:
-            is_active: 활성화 상태 필터
-            limit: 반환할 항목 수
-            offset: 오프셋
+            is_active: アクティブ状態フィルタ
+            limit: 返す項目の数
+            offset: オフセット
 
         Returns:
-            워크플로우 목록
+            ワークフローリスト
         """
         params = {'limit': limit, 'offset': offset}
         if is_active is not None:
@@ -274,15 +274,15 @@ class SleekflowClient:
         parameters: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        워크플로우 트리거
+        ワークフロートリガー
 
         Args:
-            workflow_id: 워크플로우 ID
-            customer_id: 고객 ID
-            parameters: 워크플로우 파라미터
+            workflow_id: ワークフローID
+            customer_id：顧客ID
+            parameters: ワークフローパラメータ
 
         Returns:
-            트리거 결과
+            トリガー結果
         """
         data = {
             'workflowId': workflow_id,
@@ -303,17 +303,17 @@ class SleekflowClient:
         language: str = "ko"
     ) -> Dict[str, Any]:
         """
-        메시지 템플릿 생성
+        メッセージテンプレートの生成
 
         Args:
-            name: 템플릿 이름
-            category: 카테고리 (greeting, followup, notification)
-            content: 템플릿 내용
-            variables: 변수 목록
-            language: 언어 코드
+            name: テンプレート名
+            category: カテゴリ (greeting, followup, notification)
+            content: テンプレートの内容
+            variables: 変数リスト
+            language: 言語コード
 
         Returns:
-            생성된 템플릿 정보
+            生成されたテンプレート情報
         """
         data = {
             'name': name,
@@ -329,13 +329,13 @@ class SleekflowClient:
 
     def get_template(self, template_id: str) -> Dict[str, Any]:
         """
-        템플릿 조회
+        テンプレート検索
 
         Args:
-            template_id: 템플릿 ID
+            template_id：テンプレートID
 
         Returns:
-            템플릿 정보
+            テンプレート情報
         """
         return self._request('GET', f'/templates/{template_id}')
 
@@ -346,15 +346,15 @@ class SleekflowClient:
         offset: int = 0
     ) -> List[Dict[str, Any]]:
         """
-        템플릿 목록 조회
+        テンプレートリストの照会
 
         Args:
-            category: 카테고리 필터
-            limit: 반환할 항목 수
-            offset: 오프셋
+            category: カテゴリフィルタ
+            limit: 返す項目の数
+            offset: オフセット
 
         Returns:
-            템플릿 목록
+            テンプレートリスト
         """
         params = {'limit': limit, 'offset': offset}
         if category:
@@ -372,17 +372,17 @@ class SleekflowClient:
         knowledge_base: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        AI 챗봇 생성
+        AIチャットボットの作成
 
         Args:
-            name: 봇 이름
-            description: 설명
-            greeting_message: 환영 메시지
-            ai_model: AI 모델 (gpt-3.5, gpt-4, claude)
-            knowledge_base: 지식 베이스 ID
+            name: ボット名
+            description: 説明
+            greeting_message: ようこそメッセージ
+            ai_model：AIモデル（gpt-3.5、gpt-4、claude）
+            knowledge_base: 知識ベース ID
 
         Returns:
-            생성된 봇 정보
+            生成されたボット情報
         """
         data = {
             'name': name,
@@ -398,22 +398,22 @@ class SleekflowClient:
 
     def get_bot(self, bot_id: str) -> Dict[str, Any]:
         """
-        봇 조회
+        ボットを見る
 
         Args:
-            bot_id: 봇 ID
+            bot_id: ボット ID
 
         Returns:
-            봇 정보
+            ボット情報
         """
         return self._request('GET', f'/bots/{bot_id}')
 
     def list_bots(self) -> List[Dict[str, Any]]:
         """
-        봇 목록 조회
+        ボットリストの照会
 
         Returns:
-            봇 목록
+            ボット一覧
         """
         response = self._request('GET', '/bots')
         return response.get('bots', [])
@@ -426,16 +426,16 @@ class SleekflowClient:
         channel: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        분석 데이터 조회
+        分析データの照会
 
         Args:
-            start_date: 시작 날짜 (YYYY-MM-DD)
-            end_date: 종료 날짜 (YYYY-MM-DD)
-            metric: 메트릭 (all, messages, sessions, satisfaction)
-            channel: 채널 필터
+            start_date：開始日（YYYY-MM-DD）
+            end_date: 終了日 (YYYY-MM-DD)
+            metric: メトリック (all, messages, sessions, satisfaction)
+            channel: チャンネルフィルタ
 
         Returns:
-            분석 데이터
+            分析データ
         """
         params = {
             'startDate': start_date,
@@ -455,15 +455,15 @@ class SleekflowClient:
         properties: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        고객 이벤트 추적
+        顧客イベントの追跡
 
         Args:
-            customer_id: 고객 ID
-            event_name: 이벤트 이름
-            properties: 이벤트 속성
+            customer_id：顧客ID
+            event_name：イベント名
+            properties: イベント属性
 
         Returns:
-            추적 결과
+            追跡結果
         """
         data = {
             'customerId': customer_id,
@@ -476,5 +476,5 @@ class SleekflowClient:
         return self._request('POST', '/customers/events', data=data)
 
     def close(self):
-        """세션 종료"""
+        """セッション終了"""
         self.session.close()

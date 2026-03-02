@@ -1,49 +1,49 @@
 # Brightcove API Client
 
-Yoom Apps 연계용 Brightcove Video Cloud API 클라이언트
+Yoom Apps 連携用 Brightcove Video Cloud API クライアント
 
-## 인증 정보 획득 방법
+##認証情報取得方法
 
-1. **Brightcove Studio 로그인**: https://studio.brightcove.com
-2. **Admin → API Authentication** 이동
-3. **Register New Application** 클릭
-4. **Client ID, Client Secret** 확인
-5. **Account ID** 확인 (Studi 오른쪽 상단)
+1. **Brightcove Studio ログイン**: https://studio.brightcove.com
+2. **Admin→API Authentication**の移動
+3. **Register New Application**をクリック
+4. **Client ID、Client Secret**の確認
+5. **Account ID**の確認（Studiの右上）
 
-## 예제
+## 例
 
-### 비디오 목록 조회
+### 動画リストの閲覧
 ```bash
 python brightcove_client.py list <account_id> <client_id> <client_secret>
 ```
 
-### 비디오 생성
+###動画を作成
 ```bash
 python brightcove_client.py create <account_id> <client_id> <client_secret> "My Video"
 ```
 
-### 업로드 URL 획득
+###アップロードURLを取得
 ```bash
 python brightcove_client.py upload-url <account_id> <client_id> <client_secret> <video_id>
 ```
 
-### 파일 업로드
+### ファイルのアップロード
 ```bash
 python brightcove_client.py upload-file <account_id> <client_id> <client_secret> <video_id> /path/to/video.mp4
 ```
 
-## 주요 기능
+##主な機能
 
-- **비디오 목록**: 계정의 모든 비디오 목록 가져오기
-- **비디오 생성**: 비디오 객체 생성 (메타데이터)
-- **비디오 업데이트**: 비디오 메타데이터 수정
-- **임시 업로드 URL**: 서명된 업로드 URL 획득
-- **파일 업로드**: 비디오 파일 직접 업로드
-- **미디어 가져오기**: URL 또는 파일로 미디어 가져오기
-- **비디오 삭제**: 비디오 삭제
+- **ビデオリスト**：アカウントのすべてのビデオリストを取得する
+- **ビデオ作成**：ビデオオブジェクトの作成（メタデータ）
+- **ビデオアップデート**：ビデオメタデータを編集
+- **一時アップロードURL**：署名付きアップロードURLを取得
+- **ファイルアップロード**：ビデオファイルを直接アップロード
+- **メディアのインポート**：URLまたはファイルにメディアをインポートする
+- **ビデオを削除**：ビデオを削除
 
-## 인증
+##認証
 
 - OAuth 2.0 (Client Credentials Flow)
-- Access Token 자동 갱신
-- Rate Limiting 처리 (429 상태 코드 감지)
+- アクセストークンの自動更新
+- Rate Limiting処理(429ステータスコード検出)

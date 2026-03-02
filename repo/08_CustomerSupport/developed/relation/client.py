@@ -1,6 +1,6 @@
 """
 Relation Client
-고객 관계 관리 API 클라이언트
+顧客関係管理APIクライアント
 """
 
 import requests
@@ -10,9 +10,9 @@ from datetime import datetime
 
 class RelationClient:
     """
-    Relation API 클라이언트
+    Relation API クライアント
 
-    고객 관계 관리, 세그먼트, 캠페인 관리를 위한 클라이언트
+    顧客関係管理、セグメント、キャンペーン管理のためのクライアント
     """
 
     def __init__(
@@ -22,12 +22,12 @@ class RelationClient:
         timeout: int = 30
     ):
         """
-        Relation 클라이언트 초기화
+        Relation クライアントの初期化
 
         Args:
-            api_key: Relation API 키
-            base_url: API 기본 URL
-            timeout: 요청 타임아웃 (초)
+            api_key: Relation API キー
+            base_url：APIベースURL
+            timeout：リクエストタイムアウト（秒）
         """
         self.api_key = api_key
         self.base_url = base_url.rstrip('/')
@@ -47,19 +47,19 @@ class RelationClient:
         params: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        API 요청 전송
+        APIリクエストの送信
 
         Args:
-            method: HTTP 메서드
-            endpoint: API 엔드포인트
-            data: 요청 본문 데이터
-            params: URL 파라미터
+            method: HTTP メソッド
+            endpoint: API エンドポイント
+            data: 要求本文データ
+            params: URL パラメータ
 
         Returns:
-            API 응답 데이터
+            API応答データ
 
         Raises:
-            requests.RequestException: API 요청 실패
+            requests.RequestException: API リクエストに失敗しました
         """
         url = f"{self.base_url}/{endpoint.lstrip('/')}"
         response = self.session.request(
@@ -84,20 +84,20 @@ class RelationClient:
         attributes: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        새 연락처 생성
+        新しい連絡先の作成
 
         Args:
-            email: 이메일 (필수)
-            first_name: 이름
-            last_name: 성
-            phone: 전화번호
-            company: 회사
-            title: 직함
-            tags: 태그 목록
-            attributes: 추가 속성
+            email：Eメール（必須）
+            first_name：名前
+            last_name: 姓
+            phone: 電話番号
+            company: 会社
+            title: 役職
+            タグ：タグリスト
+            attributes: 追加属性
 
         Returns:
-            생성된 연락처 정보
+            生成された連絡先情報
         """
         data = {'email': email}
 
@@ -120,13 +120,13 @@ class RelationClient:
 
     def get_contact(self, contact_id: str) -> Dict[str, Any]:
         """
-        연락처 조회
+        お問い合わせ
 
         Args:
-            contact_id: 연락처 ID
+            contact_id：連絡先ID
 
         Returns:
-            연락처 정보
+            連絡先情報
         """
         return self._request('GET', f'/contacts/{contact_id}')
 
@@ -143,21 +143,21 @@ class RelationClient:
         remove_tags: Optional[List[str]] = None
     ) -> Dict[str, Any]:
         """
-        연락처 업데이트
+        連絡先の更新
 
         Args:
-            contact_id: 연락처 ID
-            email: 새 이메일
-            first_name: 새 이름
-            last_name: 새 성
-            phone: 새 전화번호
-            company: 새 회사
-            title: 새 직함
-            add_tags: 추가할 태그
-            remove_tags: 제거할 태그
+            contact_id：連絡先ID
+            email: 新しいメール
+            first_name：新しい名前
+            last_name: 新しい姓
+            phone: 新しい電話番号
+            company: 新しい会社
+            title: 新しい役職
+            add_tags：追加するタグ
+            remove_tags: 削除するタグ
 
         Returns:
-            업데이트된 연락처 정보
+            更新された連絡先情報
         """
         data = {}
         if email:
@@ -189,18 +189,18 @@ class RelationClient:
         offset: int = 0
     ) -> List[Dict[str, Any]]:
         """
-        연락처 목록 조회
+        連絡先リストの照会
 
         Args:
-            tags: 태그 필터
-            created_after: 생성일 이후 (YYYY-MM-DD)
-            created_before: 생성일 이전 (YYYY-MM-DD)
-            search: 검색어
-            limit: 반환할 항목 수
-            offset: 오프셋
+            タグ：タグフィルタ
+            created_after：作成日以降（YYYY-MM-DD）
+            created_before：作成日前（YYYY-MM-DD）
+            search: 検索語
+            limit: 返す項目の数
+            offset: オフセット
 
         Returns:
-            연락처 목록
+            連絡先リスト
         """
         params = {'limit': limit, 'offset': offset}
         if tags:
@@ -217,13 +217,13 @@ class RelationClient:
 
     def delete_contact(self, contact_id: str) -> Dict[str, Any]:
         """
-        연락처 삭제
+        連絡先の削除
 
         Args:
-            contact_id: 연락처 ID
+            contact_id：連絡先ID
 
         Returns:
-            삭제 결과
+            削除結果
         """
         return self._request('DELETE', f'/contacts/{contact_id}')
 
@@ -234,15 +234,15 @@ class RelationClient:
         criteria: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        새 세그먼트 생성
+        新しいセグメントの作成
 
         Args:
-            name: 세그먼트 이름
-            description: 설명
-            criteria: 필터링 기준
+            name: セグメント名
+            description: 説明
+            criteria: フィルタリング基準
 
         Returns:
-            생성된 세그먼트 정보
+            生成されたセグメント情報
         """
         data = {'name': name}
 
@@ -255,13 +255,13 @@ class RelationClient:
 
     def get_segment(self, segment_id: str) -> Dict[str, Any]:
         """
-        세그먼트 조회
+        セグメント照会
 
         Args:
-            segment_id: 세그먼트 ID
+            segment_id：セグメントID
 
         Returns:
-            세그먼트 정보
+            セグメント情報
         """
         return self._request('GET', f'/segments/{segment_id}')
 
@@ -271,14 +271,14 @@ class RelationClient:
         offset: int = 0
     ) -> List[Dict[str, Any]]:
         """
-        세그먼트 목록 조회
+        セグメントリストの照会
 
         Args:
-            limit: 반환할 항목 수
-            offset: 오프셋
+            limit: 返す項目の数
+            offset: オフセット
 
         Returns:
-            세그먼트 목록
+            セグメントリスト
         """
         params = {'limit': limit, 'offset': offset}
         response = self._request('GET', '/segments', params=params)
@@ -291,15 +291,15 @@ class RelationClient:
         offset: int = 0
     ) -> List[Dict[str, Any]]:
         """
-        세그먼트에 속한 연락처 조회
+        セグメントに属する連絡先の検索
 
         Args:
-            segment_id: 세그먼트 ID
-            limit: 반환할 항목 수
-            offset: 오프셋
+            segment_id：セグメントID
+            limit: 返す項目の数
+            offset: オフセット
 
         Returns:
-            연락처 목록
+            連絡先リスト
         """
         params = {'limit': limit, 'offset': offset}
         response = self._request('GET', f'/segments/{segment_id}/contacts', params=params)
@@ -313,16 +313,16 @@ class RelationClient:
         note_type: str = "general"
     ) -> Dict[str, Any]:
         """
-        노트 생성
+        ノートの作成
 
         Args:
-            contact_id: 연락처 ID
-            content: 노트 내용
-            author_id: 작성자 ID
-            note_type: 노트 타입 (general, meeting, call, email)
+            contact_id：連絡先ID
+            content: ノートの内容
+            author_id：作成者ID
+            note_type: ノートタイプ (general, meeting, call, email)
 
         Returns:
-            생성된 노트 정보
+            生成されたノート情報
         """
         data = {
             'contactId': contact_id,
@@ -342,15 +342,15 @@ class RelationClient:
         offset: int = 0
     ) -> List[Dict[str, Any]]:
         """
-        연락처 노트 목록 조회
+        連絡先ノートリストの表示
 
         Args:
-            contact_id: 연락처 ID
-            limit: 반환할 항목 수
-            offset: 오프셋
+            contact_id：連絡先ID
+            limit: 返す項目の数
+            offset: オフセット
 
         Returns:
-            노트 목록
+            ノートリスト
         """
         params = {'limit': limit, 'offset': offset}
         response = self._request('GET', f'/contacts/{contact_id}/notes', params=params)
@@ -366,18 +366,18 @@ class RelationClient:
         priority: str = "medium"
     ) -> Dict[str, Any]:
         """
-        태스크 생성
+        タスクの作成
 
         Args:
-            contact_id: 연락처 ID
-            title: 제목
-            description: 설명
-            due_date: 마감일 (YYYY-MM-DD)
-            assignee_id: 담당자 ID
-            priority: 우선순위 (low, medium, high)
+            contact_id：連絡先ID
+            title: タイトル
+            description: 説明
+            due_date：期限（YYYY-MM-DD）
+            assignee_id：担当者ID
+            priority: 優先順位 (low, medium, high)
 
         Returns:
-            생성된 태스크 정보
+            生成されたタスク情報
         """
         data = {
             'contactId': contact_id,
@@ -403,17 +403,17 @@ class RelationClient:
         offset: int = 0
     ) -> List[Dict[str, Any]]:
         """
-        태스크 목록 조회
+        タスクリストの照会
 
         Args:
-            contact_id: 연락처 ID 필터
-            status: 상태 필터 (pending, in_progress, completed)
-            priority: 우선순위 필터
-            limit: 반환할 항목 수
-            offset: 오프셋
+            contact_id：連絡先IDフィルタ
+            status: ステータスフィルタ (pending, in_progress, completed)
+            priority：優先順位フィルタ
+            limit: 返す項目の数
+            offset: オフセット
 
         Returns:
-            태스크 목록
+            タスクリスト
         """
         params = {'limit': limit, 'offset': offset}
         if contact_id:
@@ -433,15 +433,15 @@ class RelationClient:
         properties: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        이벤트 추적
+        イベント追跡
 
         Args:
-            contact_id: 연락처 ID
-            event_name: 이벤트 이름
-            properties: 이벤트 속성
+            contact_id：連絡先ID
+            event_name：イベント名
+            properties: イベント属性
 
         Returns:
-            이벤트 추적 결과
+            イベント追跡結果
         """
         data = {
             'contactId': contact_id,
@@ -461,16 +461,16 @@ class RelationClient:
         offset: int = 0
     ) -> List[Dict[str, Any]]:
         """
-        연락처 이벤트 기록 조회
+        連絡先イベント履歴の照会
 
         Args:
-            contact_id: 연락처 ID
-            event_type: 이벤트 타입 필터
-            limit: 반환할 항목 수
-            offset: 오프셋
+            contact_id：連絡先ID
+            event_type：イベントタイプフィルタ
+            limit: 返す項目の数
+            offset: オフセット
 
         Returns:
-            이벤트 목록
+            イベント一覧
         """
         params = {'limit': limit, 'offset': offset}
         if event_type:
@@ -480,5 +480,5 @@ class RelationClient:
         return response.get('events', [])
 
     def close(self):
-        """세션 종료"""
+        """セッション終了"""
         self.session.close()

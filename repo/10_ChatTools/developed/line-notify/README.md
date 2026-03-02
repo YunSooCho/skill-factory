@@ -1,39 +1,39 @@
-# Line Notify API 클라이언트
+# Line Notify APIクライアント
 
-Line Notify를 위한 Python API 클라이언트입니다.
+Line Notify用のPython APIクライアント。
 
-## 개요
+## 概要
 
-이 클라이언트는 Line Notify API에 접근하여 토크룸으로 알림 메시지와 이미지를 전송하는 기능을 제공합니다.
+このクライアントは、Line Notify APIにアクセスし、トークルームに通知メッセージと画像を送信する機能を提供します。
 
-## 설치
+## インストール
 
-의존성 패키지:
+依存パッケージ：
 
 ```bash
 pip install requests
 ```
 
-또는:
+または：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 토큰 발급
+## APIトークン発行
 
-1. LINE Notify 웹사이트 접속: https://notify-bot.line.me
-2. 로그인 후 "로그인" 버튼 클릭
-3. "トークンを発行する" (토큰 발행) 클릭
-4. 토큰 이름 입력 후 발행
-5. 발행된 토큰 저장
+1. LINE Notifyウェブサイトへのアクセス: https://notify-bot.line.me
+2. ログイン後「ログイン」ボタンをクリック
+3. 「トークンを発行する」（トークン発行）をクリック
+4. トークン名の入力後に発行
+5. 発行されたトークンの保存
 
-또는 LINE Notify 공식 개발자 문서 참조:
+またはLINE Notify公式開発者ドキュメントを参照してください。
 https://notify-bot.line.me/doc/en/
 
-## 사용법
+##使用法
 
-### 초기화
+### 初期化
 
 ```python
 from line_notify import LineNotifyClient
@@ -43,7 +43,7 @@ client = LineNotifyClient(
 )
 ```
 
-### 예시 코드
+### サンプルコード
 
 ```python
 # 텍스트 메시지 전송
@@ -74,13 +74,13 @@ status = client.get_status()
 print(status)
 ```
 
-## API 액션
+## APIアクション
 
-- `send_message` - 토크룸에 메시지 전송
-- `send_message_with_image` - 토크룸에 메시지와 이미지 전송
-- `get_status` - 연결 상태 확인
+- `send_message` - トークルームにメッセージを送信する
+- `send_message_with_image` - トークルームへのメッセージと画像の転送
+- `get_status` - 接続状態の確認
 
-## 에러 처리
+## エラー処理
 
 ```python
 try:
@@ -93,19 +93,19 @@ except Exception as e:
 
 ## Rate Limiting
 
-Line Notify는 요청에 대한 레이트 리밋이 적용됩니다. 과도한 요청은 429 에러를 반환합니다.
+Line Notifyはリクエストのレートリミットが適用されます。過剰な要求は429エラーを返します。
 
-## 스티커 정보
+##ステッカー情報
 
-공식 스티커 리스트는 다음 URL에서 확인 가능:
+公式ステッカーリストは、次のURLで確認できます。
 https://devdocs.line.me/files/sticker_list.pdf
 
-## 주의사항
+## 注意事項
 
-- 메시지는 최대 1000자까지 가능합니다
-- 이미지는 JPEG 또는 PNG 형식만 지원합니다
-- 이미지 크기는 최대 10MB 입니다
+- メッセージは最大1000文字まで可能です
+- 画像はJPEGまたはPNG形式のみをサポートします
+- 画像サイズは最大10MBです
 
-## 라이선스
+##ライセンス
 
 MIT License

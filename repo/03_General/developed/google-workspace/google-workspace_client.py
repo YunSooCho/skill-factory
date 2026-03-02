@@ -221,7 +221,7 @@ class GoogleWorkspaceClient:
         org_unit_path: str = '/'
     ) -> Dict[str, Any]:
         """
-        7. 새로운 사용자를 추가하기 (Add New User)
+        7. 新しいユーザーを追加する (Add New User)
         
         Creates a new user in Google Workspace.
         
@@ -277,7 +277,7 @@ class GoogleWorkspaceClient:
         user_key: str
     ) -> Dict[str, Any]:
         """
-        1. 사용자를 삭제하기 (Delete User)
+        1. ユーザーを削除する (Delete User)
         
         Deletes a user from Google Workspace.
         
@@ -307,7 +307,7 @@ class GoogleWorkspaceClient:
         user_key: str
     ) -> Dict[str, Any]:
         """
-        2. 사용자를 중지하기 (Suspend User)
+        2. ユーザーを停止する（Suspend User）
         
         Suspends a user account.
         
@@ -344,7 +344,7 @@ class GoogleWorkspaceClient:
         user_key: str
     ) -> Dict[str, Any]:
         """
-        3. 사용자에게 비밀번호 변경 요구하기 (Require Password Change)
+        3. ユーザーにパスワード変更を要求する (Require Password Change)
         
         Forces the user to change password at next login.
         
@@ -382,7 +382,7 @@ class GoogleWorkspaceClient:
         max_results: int = 100
     ) -> Dict[str, Any]:
         """
-        5. 사용자 검색하기 (Search User)
+        5. ユーザーを検索する (Search User)
         
         Searches for users matching the query.
         
@@ -434,7 +434,7 @@ class GoogleWorkspaceClient:
         page_token: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        13. 사용자 목록 가져오기 (Get User List)
+        13. ユーザーリストのインポート (Get User List)
         
         Retrieves a paginated list of users in the domain.
         
@@ -491,7 +491,7 @@ class GoogleWorkspaceClient:
         **kwargs
     ) -> Dict[str, Any]:
         """
-        11. 사용자 정보 업데이트하기 (Update User Information)
+        11. ユーザー情報の更新 (Update User Information)
         
         Updates user information.
         
@@ -563,7 +563,7 @@ class GoogleWorkspaceClient:
         description: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        12. 그룹 생성하기 (Create Group)
+        12. グループの作成 (Create Group)
         
         Creates a new group in Google Workspace.
         
@@ -614,7 +614,7 @@ class GoogleWorkspaceClient:
         page_token: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        9. 그룹 목록 가져오기 (Get Group List)
+        9. グループリストのインポート (Get Group List)
         
         Retrieves a paginated list of groups.
         
@@ -667,7 +667,7 @@ class GoogleWorkspaceClient:
         max_results: int = 100
     ) -> Dict[str, Any]:
         """
-        6. 그룹 검색하기 (Search Groups)
+        6. グループ検索 (Search Groups)
         
         Searches for groups matching the query.
         
@@ -715,7 +715,7 @@ class GoogleWorkspaceClient:
         role: str = 'MEMBER'
     ) -> Dict[str, Any]:
         """
-        10. 그룹에 멤버 추가하기 (Add Member to Group)
+        10. グループにメンバーを追加する (Add Member to Group)
         
         Adds a member to a group.
         
@@ -762,7 +762,7 @@ class GoogleWorkspaceClient:
         member_key: str
     ) -> Dict[str, Any]:
         """
-        4. 그룹에서 멤버 삭제하기 (Remove Member from Group)
+        4. グループからメンバーを削除する (Remove Member from Group)
         
         Removes a member from a group.
         
@@ -799,7 +799,7 @@ class GoogleWorkspaceClient:
         page_token: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        8. 그룹의 멤버 목록 가져오기 (Get Group Member List)
+        8. グループのメンバーリストのインポート (Get Group Member List)
         
         Retrieves a paginated list of group members.
         

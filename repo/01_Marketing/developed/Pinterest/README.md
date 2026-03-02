@@ -1,24 +1,24 @@
 # Pinterest API Client
 
-Pinterest API 클라이언트입니다.
+Pinterest API クライアントです。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-## API 키 발급
+## API キー発行
 
-1. Pinterest API 앱 등록: https://developers.pinterest.com/apps/
+1. Pinterest API アプリ登録: https://developers.pinterest.com/apps/
 
-2. 앱 생성 후 OAuth 2.0 클라이언트 ID 및 시크릿 확인
+2. アプリ作成後のOAuth 2.0クライアントIDとシークレットの確認
 
-3. Access 토큰 발급:
-   - OAuth 2.0 인증 또는
-   - 앱 설정에서 토큰 생성
+3. Accessトークン発行：
+   - OAuth 2.0認証または
+   - アプリ設定でトークンを生成
 
-## 사용 예시
+## 使用例
 
 ```python
 from client import PinterestClient
@@ -48,12 +48,12 @@ pins = client.list_pins(board_id="board_id")
 boards = client.list_boards()
 ```
 
-## API 메서드
+## APIメソッド
 
-- `get_pin(pin_id)` - Pin 세부 정보 조회
-- `create_pin(...)` - Pin 생성
-- `get_board(board_id)` - 보드 세부 정보 조회
-- `create_board(...)` - 보드 생성
-- `list_pins(...)` - Pin 목록 조회
-- `update_board(...)` - 보드 업데이트
-- `list_boards(...)` - 보드 목록 조회
+- `get_pin(pin_id)` - Pin 詳細の照会
+- `create_pin(...)` - Pin 生成
+- `get_board(board_id)` - ボード詳細の照会
+- `create_board(...)` - ボードの作成
+- `list_pins(...)` - Pin リスト照会
+- `update_board(...)` - ボードアップデート
+- `list_boards(...)` - ボードリストの照会

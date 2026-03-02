@@ -1,14 +1,14 @@
-# ClickUp API 클라이언트
+#ClickUp APIクライアント
 
-ClickUp을 위한 Python API 클라이언트입니다. 프로젝트 관리 기능을 제공합니다.
+ClickUp用のPython APIクライアントです。プロジェクト管理機能を提供します。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-## 사용법
+##使用法
 
 ```python
 from clickup import ClickUpClient, ClickUpError
@@ -25,6 +25,6 @@ task = client.create_task("list_id", {
 })
 ```
 
-## 라이선스
+##ライセンス
 
 MIT License

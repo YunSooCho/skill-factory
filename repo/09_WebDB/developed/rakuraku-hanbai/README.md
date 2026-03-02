@@ -1,23 +1,23 @@
-# ラクラク販売（활용매매） 판매 관리 SDK
+＃ラクラク販売（活用売買）販売管理SDK
 
-ラクラク販売（활용매매）는 일본의 판매 및 고객 관리 플랫폼에 대한 Python SDK입니다.
+ラクラク販売（活用売買）は、日本の販売および顧客管理プラットフォーム用のPython SDKです。
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [ラクラク販売](https://rakuraku-hanbai.jp/) 웹사이트에 접속하여 계정을 생성합니다.
-2. 설정(Settings) > API Keys 섹션으로 이동합니다.
-3. 새 API 키를 생성합니다.
-4. 생성된 API 키를 안전한 곳에 저장합니다.
+1. [ラクラク販売]（https://rakuraku-hanbai.jp/)ウェブサイトにアクセスしてアカウントを作成します。
+2. 「設定」(Settings) > API Keys セクションに移動します。
+3. 新しい API キーを生成します。
+4. 生成された API キーを安全な場所に保存します。
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from rakuraku_hanbai import RakurakuHanbaiClient
@@ -27,7 +27,7 @@ client = RakurakuHanbaiClient(
 )
 ```
 
-### 고객 관리
+###顧客管理
 
 ```python
 # 고객 목록 조회
@@ -66,7 +66,7 @@ client.update_customer(
 client.delete_customer(customer_id="customer_id")
 ```
 
-### 판매 기회(Deal) 관리
+### 販売機会（Deal）管理
 
 ```python
 # 판매 기회 목록 조회
@@ -107,7 +107,7 @@ client.update_deal(
 client.delete_deal(deal_id="deal_id")
 ```
 
-### 견적서(Quote) 관리
+### 見積書(Quote)の管理
 
 ```python
 # 견적서 목록 조회
@@ -159,7 +159,7 @@ client.update_quote(
 client.delete_quote(quote_id="quote_id")
 ```
 
-### 주문(Order) 관리
+### 注文管理
 
 ```python
 # 주문 목록 조회
@@ -202,7 +202,7 @@ client.update_order(
 client.delete_order(order_id="order_id")
 ```
 
-### 활동(Activity) 관리
+### アクティビティ(Activity)の管理
 
 ```python
 # 활동 목록 조회
@@ -237,7 +237,7 @@ client.update_activity(
 client.delete_activity(activity_id="activity_id")
 ```
 
-### 제품(Product) 관리
+### 製品(Product)の管理
 
 ```python
 # 제품 목록 조회
@@ -273,7 +273,7 @@ client.update_product(
 client.delete_product(product_id="product_id")
 ```
 
-### 리포트 및 분석
+### レポートと分析
 
 ```python
 # 판매 보고서
@@ -293,7 +293,7 @@ for stage in pipeline_report['stages']:
     print(f"단계: {stage['name']}, 건수: {stage['count']}, 가치: {stage['value']}")
 ```
 
-### 사용자 정보
+### ユーザー情報
 
 ```python
 # 현재 사용자 정보
@@ -301,49 +301,49 @@ user_info = client.get_user_info()
 print(f"사용자: {user_info['name']}, 이메일: {user_info['email']}")
 ```
 
-## 거래 단계(Stage) 예시
+＃＃取引段階（Stage）の例
 
-- **prospect**: 고객 발굴 단계
-- **qualification**: 고객 자격 단계
-- **proposal**: 제안 단계
-- **negotiation**: 협상 단계
-- **closed_won**: 성공으로 종료
-- **closed_lost**: 실패로 종료
+- **prospect**: 顧客発掘段階
+- **qualification**: 顧客資格ステップ
+- **proposal**: 提案ステップ
+- **negotiation**: 交渉段階
+- **closed_won**: 成功で終了
+- **closed_lost**: 失敗で終了
 
-## 활동 유형(Type) 예시
+＃＃アクティビティタイプ（Type）の例
 
-- **call**: 전화 통화
-- **email**: 이메일
-- **meeting**: 미팅/면담
-- **task**: 작업
-- **note**: 메모
+- **call**: 電話通話
+- **email**: メール
+- **meeting**: ミーティング/インタビュー
+- **task**: タスク
+- **note**: メモ
 
-## 주문 상태(Status) 예시
+＃＃注文ステータス（Status）の例
 
-- **pending**: 대기 중
-- **processing**: 처리 중
-- **shipped**: 배송 중
-- **delivered**: 배송 완료
-- **cancelled**: 취소됨
+- **pending**: 待機中
+- **processing**: 処理中
+- **shipped**: 配送中
+- **delivered**: 配送完了
+- **キャンセル済み**：キャンセル済み
 
-## 결제 방법(Payment Method) 예시
+## お支払い方法 (Payment Method) の例
 
-- **bank_transfer**: 은행 송금
-- **credit_card**: 신용카드
+- **bank_transfer**: 銀行振込
+- **credit_card**: クレジットカード
 - **paypal**: PayPal
-- **cash**: 현금
+- **cash**: 現金
 
-## 주요 기능
+##主な機能
 
-- ✅ 고객 관리
-- ✅ 판매 기회(Deal) 추적
-- ✅ 견적서 생성 및 관리
-- ✅ 주문 관리
-- ✅ 활동(Activity) 추적
-- ✅ 제품/서비스 관리
-- ✅ 판매 보고서 및 분석
-- ✅ 파이프라인 추적
+- ✅顧客管理
+- ✅販売機会（Deal）追跡
+- ✅見積書の作成と管理
+- ✅注文管理
+- ✅活動（Activity）追跡
+- ✅製品/サービス管理
+- ✅販売レポートと分析
+- ✅パイプライン追跡
 
-## 라이선스
+##ライセンス
 
 MIT License

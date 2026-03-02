@@ -1,23 +1,23 @@
-# Slopebase 데이터베이스 SDK
+#SlopebaseデータベースSDK
 
-Slopebase는 현대적인 데이터베이스 관리 플랫폼에 대한 Python SDK입니다.
+Slopebaseは、最新のデータベース管理プラットフォーム用のPython SDKです。
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [Slopebase](https://slopebase.com)에 접속하여 계정을 생성합니다.
-2. 설정(Settings) > API Keys 섹션으로 이동합니다.
-3. 새 API 키를 생성합니다.
-4. 생성된 API 키를 안전한 곳에 저장합니다.
+1. [Slopebase](https://slopebase.com)에 にアクセスしてアカウントを作成します。
+2. 「設定」(Settings) > API Keys セクションに移動します。
+3. 新しい API キーを生成します。
+4. 生成された API キーを安全な場所に保存します。
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from slopebase import SlopebaseClient
@@ -27,7 +27,7 @@ client = SlopebaseClient(
 )
 ```
 
-### 데이터베이스 관리
+### データベース管理
 
 ```python
 # 모든 데이터베이스 목록
@@ -54,7 +54,7 @@ client.update_database(
 client.delete_database(database_id="database_id")
 ```
 
-### 테이블 관리
+### テーブル管理
 
 ```python
 # 데이터베이스 내 테이블 목록
@@ -81,7 +81,7 @@ new_table = client.create_table(
 client.delete_table(table_id="table_id")
 ```
 
-### 레코드 관리
+### レコード管理
 
 ```python
 # 레코드 목록 조회
@@ -118,7 +118,7 @@ client.update_record(
 client.delete_record(table_id="table_id", record_id="record_id")
 ```
 
-### 쿼리 및 일괄 처리
+### クエリとバッチ処理
 
 ```python
 # 레코드 쿼리
@@ -155,7 +155,7 @@ client.batch_update_records(
 client.batch_delete_records(["id1", "id2", "id3"])
 ```
 
-### 사용자 관리
+### ユーザー管理
 
 ```python
 # 모든 사용자 목록
@@ -180,15 +180,15 @@ client.update_user(
 client.delete_user(user_id="user_id")
 ```
 
-## 주요 기능
+##主な機能
 
-- ✅ 데이터베이스 CRUD 작업
-- ✅ 테이블 생성 및 스키마 관리
-- ✅ 레코드 CRUD 작업
-- ✅ 쿼리 및 필터링
-- ✅ 일괄 작업 지원
-- ✅ 사용자 관리
+- ✅データベースCRUD操作
+- ✅テーブル作成とスキーマ管理
+- ✅レコードCRUD操作
+- ✅クエリとフィルタリング
+- ✅バッチジョブのサポート
+- ✅ユーザー管理
 
-## 라이선스
+##ライセンス
 
 MIT License

@@ -1,34 +1,34 @@
-# Noor API 클라이언트
+#Noor APIクライアント
 
-Noor API를 위한 Python API 클라이언트입니다.
+Noor API用のPython APIクライアント。
 
-## 개요
+## 概要
 
-이 클라이언트는 Noor API에 접근하여 멤버 목록 조회 및 메시지 게시 기능을 제공합니다.
+このクライアントはNoor APIにアクセスし、メンバーリストの検索とメッセージの公開機能を提供します。
 
-## 설치
+## インストール
 
-의존성 패키지:
+依存パッケージ：
 
 ```bash
 pip install requests
 ```
 
-또는:
+または：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급
+## API キー発行
 
-1. Noor 개발자 포털 접속
-2. 앱 생성 및 API 키 발급
-3. 발급된 API 키 저장
+1. Noor開発者ポータルへのアクセス
+2. アプリの生成とAPIキーの発行
+3. 発行された API キーの保存
 
-## 사용법
+##使用法
 
-### 초기화
+### 初期化
 
 ```python
 from noor import NoorClient
@@ -38,7 +38,7 @@ client = NoorClient(
 )
 ```
 
-### 예시 코드
+### サンプルコード
 
 ```python
 # 전체 멤버 목록 조회
@@ -71,25 +71,25 @@ result = client.post_message(
 )
 ```
 
-## API 액션
+## APIアクション
 
 - `get_members` - Get Members
 - `post_message` - Post Message
 
-## 액션 파라미터
+## アクションパラメータ
 
 ### get_members
-- `group_id` (string, optional) - 그룹 ID (필터링용)
-- `limit` (integer, optional) - 반환할 결과 수 (기본값: 50)
-- `offset` (integer, optional) - 페이지네이션 오프셋 (기본값: 0)
+- `group_id`(string, optional) - グループID(フィルタリング用)
+- `limit` (integer, optional) - 返す結果の数 (デフォルト: 50)
+- `offset`（integer、optional） - ページネーションオフセット（デフォルト：0）
 
 ### post_message
-- `chat_id` (string, required) - 채팅 ID
-- `text` (string, required) - 게시할 메시지 내용
-- `mention_user_ids` (array of strings, optional) - 멘션할 사용자 ID 리스트
-- `reply_to_message_id` (string, optional) - 리플라이할 메시지 ID
+- `chat_id`(string, required) - チャットID
+- `text`(string, required) - 投稿するメッセージの内容
+- `mention_user_ids`（array of strings、optional） - メンションするユーザーIDのリスト
+- `reply_to_message_id`(string, optional) - リプライするメッセージID
 
-## 에러 처리
+## エラー処理
 
 ```python
 try:
@@ -102,8 +102,8 @@ except Exception as e:
 
 ## Rate Limiting
 
-API 요청에 대한 레이트 리밋이 적용될 수 있습니다.
+API リクエストのレートリミットが適用される場合があります。
 
-## 라이선스
+##ライセンス
 
 MIT License

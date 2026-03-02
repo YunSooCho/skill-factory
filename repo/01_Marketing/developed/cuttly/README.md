@@ -1,23 +1,23 @@
 # Cuttly API Client
 
-Cuenote SMS용 Python 클라이언트 - URL 단축 및 분석 API
+Cuenote SMS用Pythonクライアント - URL短縮と分析API
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API Key 획득
+## API Keyを取得
 
-1. [Cuttly 계정 생성](https://cutt.ly/)
-2. 로그인 후 Dashboard 접근
-3. Settings > API Keys 메뉴에서 API 키 생성
-4. API 키 복사
+1. [Cuttly アカウントの作成](https://cutt.ly/)
+2. ログイン後のダッシュボードへのアクセス
+3. Settings > API Keys メニューから API キーを生成
+4. API キーのコピー
 
-## 사용법
+##使用法
 
-### 기본 클라이언트 초기화
+###デフォルトクライアントの初期化
 
 ```python
 from cuttly_client import create_cuttly_client
@@ -26,7 +26,7 @@ from cuttly_client import create_cuttly_client
 client = create_cuttly_client(api_key='your-api-key')
 ```
 
-### URL 단축
+### URLの短縮
 
 ```python
 result = client.shorten_url(
@@ -40,7 +40,7 @@ short_link = result['url']['shortLink']
 print(f"Short URL: {short_link}")
 ```
 
-### 분석 데이터 조회
+### 分析データの照会
 
 ```python
 analytics = client.get_analytics(
@@ -53,14 +53,14 @@ analytics = client.get_analytics(
 print(f"Total clicks: {analytics['url']['clicks']}")
 ```
 
-## 주요 기능
+##主な機能
 
-1. **URL 단축**: 긴 URL을 짧은 링크로 변환
-2. **분석 데이터**: 클릭 수, 리퍼러, 위치 등 조회
-3. **사용자 정의 이름**: 원하는 짧은 URL 지정 가능
-4. **태그 지원**: 링크를 태그로 분류
+1. **URLの短縮**: 長いURLを短いリンクに変換
+2. **分析データ**: クリック数、リファラー、位置などの照会
+3. **カスタム名**: 希望する短いURLを指定可能
+4. **タグのサポート**: リンクをタグに分類
 
-## 에러 처리
+## エラー処理
 
 ```python
 from cuttly_client import CuttlyError, RateLimitError
@@ -73,12 +73,12 @@ except CuttlyError as e:
     print(f"API error: {e}")
 ```
 
-## API 제한
+## APIの制限
 
-- 기본 제한: 초당 10 요청
-- 무료 요금제: 월 1,000 단축
-- Rate limit 초과 시 429 에러 반환
+- 基本制限：1秒あたり10リクエスト
+- 無料プラン：月1,000短縮
+- Rate limitを超えると429エラーを返す
 
-## 지원
+## サポート
 
-자세한 API 문서: [Cuttly API Documentation](https://cutt.ly/api-documentation)
+詳細なAPIドキュメント：[Cuttly API Documentation]（https://cutt.ly/api-documentation)

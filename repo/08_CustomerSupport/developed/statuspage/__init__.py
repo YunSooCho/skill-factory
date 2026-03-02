@@ -1,5 +1,5 @@
 """
-Statuspage - 서비스 상태 모니터링 서비스
+Statuspage - サービス状態監視サービス
 """
 
 from .client import StatuspageClient

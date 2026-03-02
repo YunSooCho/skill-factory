@@ -1,41 +1,41 @@
-# Slack API 클라이언트
+#Slack APIクライアント
 
-Slack를 위한 Python API 클라이언트입니다.
+Slack用のPython APIクライアント。
 
-## 개요
+## 概要
 
-이 클라이언트는 Slack Web API에 접근하여 사용자 관리, 채널 작업, 메시지 작업, 그룹 관리, 리액션 조회 등 다양한 작업을 지원합니다.
+このクライアントはSlack Web APIにアクセスし、ユーザー管理、チャネル操作、メッセージ操作、グループ管理、リアクション検索などのさまざまなタスクをサポートします。
 
-## 설치
+## インストール
 
-의존성 패키지:
+依存パッケージ：
 
 ```bash
 pip install requests
 ```
 
-또는:
+または：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Bot Token 발급
+## Bot Tokenの発行
 
-1. Slack API 사이트 접속: https://api.slack.com
-2. "Create New App" 클릭
-3. "From scratch" 선택
-4. 앱 이름 작성 및 워크스페이스 선택
-5. "OAuth & Permissions" 탭에서 Bot Token Scopes 설정
-6. "Install to Workspace" 클릭
-7. 발급된 Bot Token 저장 (xoxb-로 시작)
+1. Slack API サイトへのアクセス: https://api.slack.com
+2. 「Create New App」をクリック
+3. 「From scratch」を選択
+4. アプリ名の作成とワークスペースの選択
+5. 「OAuth & Permissions」タブでBot Token Scopesを設定する
+6. 「Install to Workspace」をクリック
+7. 発行された Bot Token を保存 (xoxb- で始まる)
 
-API 문서:
+APIドキュメント：
 https://api.slack.com/web
 
-## 사용법
+##使用法
 
-### 초기화
+### 初期化
 
 ```python
 from slack import SlackClient
@@ -45,7 +45,7 @@ client = SlackClient(
 )
 ```
 
-### 예시 코드
+### サンプルコード
 
 ```python
 # 사용자 정보 조회
@@ -142,21 +142,21 @@ reactions = client.get_message_reactions("C123456", "1234567890.123456")
 print(reactions)
 ```
 
-## API 액션
+## APIアクション
 
-### 사용자 작업
-- `get_user_info` - ユーザー情報를取得
-- `find_user_by_email` - 이메일로 사용자 검색
+###ユーザー操作
+- `get_user_info` - ユーザー情報を取得
+- `find_user_by_email` - 電子メールでユーザーを検索
 
-### 채널 작업
+###チャンネル操作
 - `list_public_channels` - パブリックチャンネルの一覧を取得
 - `create_channel` - チャンネルを作成
 - `archive_channel` - チャンネルをアーカイブ
 - `invite_to_channel` - チャンネルにメンバーを招待
 - `remove_from_channel` - プライベートチャンネルからメンバーを退出させる
-- `get_channel_members` - チャンネル内のメンバーID를取得する
+- `get_channel_members` - チャンネル内のメンバーIDを取得する
 
-### 메시지 작업
+### メッセージ操作
 - `send_message` - チャンネルにメッセージを送る
 - `send_direct_message` - ダイレクトメッセージを送る
 - `send_message_with_attachments` - アタッチメントを指定しチャンネルにメッセージを送る
@@ -165,14 +165,14 @@ print(reactions)
 - `get_channel_messages` - チャンネルのメッセージ一覧を取得
 - `get_thread_messages` - スレッドのメッセージを取得
 
-### 기타 작업
+###その他の操作
 - `get_message_link` - メッセージのリンクを取得
 - `create_user_group` - ユーザーグループを作成する
 - `list_user_groups` - ユーザーグループの一覧を取得
 - `get_user_group_users` - ユーザーグループ内のユーザー一覧を取得
 - `get_message_reactions` - 特定のメッセージのリアクション一覧を取得
 
-## 에러 처리
+## エラー処理
 
 ```python
 try:
@@ -183,12 +183,12 @@ except Exception as e:
 
 ## Rate Limiting
 
-Slack Web API는 레이트 리밋이 적용됩니다. Tier T1은 1분당 1회, 1분당 200회 등의 제한이 있습니다.
+Slack Web APIにはレートリミットが適用されます。 Tier T1は、1分あたり1回、1分あたり200回などの制限があります。
 
-## 참고 문서
+## 参考資料
 
 - Slack Web API: https://api.slack.com/web
 
-## 라이선스
+##ライセンス
 
 MIT License

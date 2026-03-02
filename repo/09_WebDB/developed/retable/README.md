@@ -1,23 +1,23 @@
-# Retable 협업 스프레드시트 SDK
+＃RetableコラボレーションスプレッドシートSDK
 
-Retable는 현대적인 스프레드시트 및 데이터베이스 협업 플랫폼에 대한 Python SDK입니다.
+Retableは、現代のスプレッドシートおよびデータベースコラボレーションプラットフォーム用のPython SDKです。
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [Retable.io](https://retable.io)에 접속하여 계정을 생성합니다.
-2. 프로필 설정(Settings) > API Keys 섹션으로 이동합니다.
-3. 새 API 키를 생성합니다.
-4. 생성된 API 키를 안전한 곳에 저장합니다.
+1. [Retable.io](https://retable.io)에 にアクセスしてアカウントを作成します。
+2. プロファイル設定 (Settings) > API Keys セクションに移動します。
+3. 新しい API キーを生成します。
+4. 生成された API キーを安全な場所に保存します。
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from retable import RetableClient
@@ -27,7 +27,7 @@ client = RetableClient(
 )
 ```
 
-### 워크스페이스 관리
+### ワークスペース管理
 
 ```python
 # 모든 워크스페이스 목록
@@ -54,7 +54,7 @@ client.update_workspace(
 client.delete_workspace(workspace_id="workspace_id")
 ```
 
-### 프로젝트 관리
+###プロジェクト管理
 
 ```python
 # 워크스페이스 내 프로젝트 목록
@@ -82,7 +82,7 @@ client.update_project(
 client.delete_project(project_id="project_id")
 ```
 
-### 테이블 관리
+### テーブル管理
 
 ```python
 # 프로젝트 내 테이블 목록
@@ -110,7 +110,7 @@ client.update_table(
 client.delete_table(table_id="table_id")
 ```
 
-### 열(Column) 관리
+### 列(Column)の管理
 
 ```python
 # 테이블 내 열 목록
@@ -156,7 +156,7 @@ client.update_column(
 client.delete_column(column_id="column_id")
 ```
 
-### 행(Row) 관리
+### 行(Row)管理
 
 ```python
 # 행 목록 조회
@@ -199,7 +199,7 @@ client.update_row(
 client.delete_row(row_id="row_id")
 ```
 
-### 일괄 작업
+### バッチジョブ
 
 ```python
 # 여러 행 일괄 생성
@@ -224,7 +224,7 @@ batch_update = client.batch_update_rows(
 client.batch_delete_rows(["row1", "row2", "row3"])
 ```
 
-### 쿼리 및 필터링
+###クエリとフィルタリング
 
 ```python
 # 쿼리로 행 검색
@@ -263,7 +263,7 @@ filtered_rows = client.query_rows(
 )
 ```
 
-### 뷰(View) 관리
+### ビュー(View)の管理
 
 ```python
 # 테이블 뷰 목록
@@ -306,7 +306,7 @@ client.update_view(
 client.delete_view(view_id="view_id")
 ```
 
-### 폼(Form) 관리
+### フォーム(Form)の管理
 
 ```python
 # 프로젝트 내 폼 목록
@@ -336,7 +336,7 @@ client.update_form(
 client.delete_form(form_id="form_id")
 ```
 
-### 멤버 관리
+###メンバーの管理
 
 ```python
 # 워크스페이스 멤버 목록
@@ -361,7 +361,7 @@ client.update_member(
 client.remove_member(member_id="member_id")
 ```
 
-### 파일 관리
+###ファイル管理
 
 ```python
 # 파일 업로드
@@ -375,61 +375,61 @@ print(f"파일 ID: {uploaded_file['id']}")
 client.delete_file(file_id="file_id")
 ```
 
-## 열 유형
+##列タイプ
 
-Retable는 다양한 열 유형을 지원합니다:
+Retableはさまざまな列タイプをサポートしています。
 
-- **text**: 텍스트
-- **number**: 숫자
-- **dropdown**: 드롭다운 선택
-- **single_select**: 단일 선택
-- **multi_select**: 다중 선택
-- **date**: 날짜
-- **date_time**: 날짜 및 시간
-- **checkbox**: 체크박스
-- **email**: 이메일
-- **phone**: 전화번호
+- **text**: テキスト
+- **number**: 数字
+- **dropdown**: ドロップダウン選択
+- **single_select**: 単一選択
+- **multi_select**：複数選択
+- **date**: 日付
+- **date_time**: 日時
+- **checkbox**: チェックボックス
+- **email**: メール
+- **phone**: 電話番号
 - **url**: URL
-- **currency**: 통화
-- **percent**: 백분율
-- **rating**: 등급
-- **formula**: 수식
-- **auto_number**: 자동 번호
-- **created_at**: 생성일시
-- **updated_at**: 수정일시
-- **created_by**: 작성자
-- **file**: 파일 첨부
+- **currency**: 通貨
+- **percent**: パーセント
+- **rating**: 評価
+- **formula**: 式
+- **auto_number**: 自動番号
+- **created_at**：作成日時
+- **updated_at**：編集日時
+- **created_by**: 作成者
+- **file**: ファイル添付
 
-## 뷰 유형
+## ビュータイプ
 
-- **grid**: 그리드 뷰 (기본)
-- **kanban**: 칸반 보드
-- **calendar**: 캘린더 뷰
-- **timeline**: 타임라인 뷰
-- **gallery**: 갤러리 뷰
+- **grid**: グリッドビュー(基本)
+- **kanban**: カンバンボード
+- **calendar**: カレンダービュー
+- **timeline**: タイムラインビュー
+- **gallery**: ギャラリービュー
 
-## 역할 유형
+##ロールタイプ
 
-- **owner**: 소유자
-- **admin**: 관리자
-- **editor**: 편집자
-- **commenter**: 댓글 작성자
-- **member**: 멤버
-- **viewer**: 뷰어
+- **owner**: 所有者
+- **admin**: 管理者
+- **editor**: 編集者
+- **commenter**: コメント作成者
+- **member**: メンバー
+- **viewer**: ビューア
 
-## 주요 기능
+##主な機能
 
-- ✅ 워크스페이스 및 프로젝트 관리
-- ✅ 테이블 CRUD 작업
-- ✅ 열(Column) 관리
-- ✅ 행(Row) CRUD 작업
-- ✅ 일괄 작업 지원
-- ✅ 쿼리 및 필터링
-- ✅ 뷰(View) 관리
-- ✅ 폼(Form) 생성
-- ✅ 팀 멤버 관리
-- ✅ 파일 첨부
+- ✅ワークスペースとプロジェクト管理
+- ✅テーブルCRUD操作
+- ✅列(Column)管理
+- ✅行（Row）CRUD操作
+- ✅バッチジョブのサポート
+- ✅クエリとフィルタリング
+- ✅ ビュー(View)管理
+- ✅ フォーム(Form)の生成
+- ✅チームメンバー管理
+- ✅ファイル添付
 
-## 라이선스
+##ライセンス
 
 MIT License

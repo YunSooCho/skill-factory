@@ -1,34 +1,34 @@
-# Memberspot Io API 클라이언트
+# Memberspot Io API クライアント
 
-Memberspot Io를 위한 Python API 클라이언트입니다.
+Memberspot Io用のPython APIクライアント。
 
-## 개요
+## 概要
 
-이 클라이언트는 Memberspot Io API에 접근하여 각종 CRUD 작업 및 이벤트 처리를 지원합니다.
+このクライアントはMemberspot Io APIにアクセスし、さまざまなCRUD操作とイベント処理をサポートします。
 
-## 설치
+## インストール
 
-의존성 패키지:
+依存パッケージ：
 
 ```bash
 pip install requests
 ```
 
-또는:
+または：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급
+## API キー発行
 
-1. Memberspot Io 개발자 포털에서 앱 생성
-2. API 키/토큰 발급
-3. 발급된 API 키/토큰 저장
+1. Memberspot Io開発者ポータルでアプリを作成する
+2. APIキー/トークン発行
+3. 発行された API キー/トークンの保存
 
-## 사용법
+##使用法
 
-### 초기화
+### 初期化
 
 ```python
 from memberspot_io.client import MemberspotIoClient
@@ -39,7 +39,7 @@ client = MemberspotIoClient(
 )
 ```
 
-### 예시 코드
+### サンプルコード
 
 ```python
 # CRUD 작업
@@ -55,12 +55,12 @@ for item in items:
     print(item['id'], item['name'])
 ```
 
-## API 액션
+## APIアクション
 
 - `__init__` - Initialize # Memberspot_io API client Args: api_key: API key for authentication ...
 - `_wait_for_rate_limit` - Wait if necessary to respect rate limits
 
-## 에러 처리
+## エラー処理
 
 ```python
 try:
@@ -71,8 +71,8 @@ except Exception as e:
 
 ## Rate Limiting
 
-API 요청 간 최소 0.1초 지연이 적용됩니다. 너무 많은 요청이 발생하면 Rate Limit 에러가 발생할 수 있습니다.
+APIリクエスト間の最小0.1秒遅延が適用されます。要求が多すぎると、Rate Limitエラーが発生する可能性があります。
 
-## 라이선스
+##ライセンス
 
 MIT License

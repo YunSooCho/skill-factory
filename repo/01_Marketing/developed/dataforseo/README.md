@@ -1,23 +1,23 @@
 # DataForSEO API Client
 
-DataForSEO용 Python 클라이언트 - SEO 데이터 및 분석
+DataForSEO用Pythonクライアント - SEOデータと分析
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API Credentials 획득
+## API Credentialsを取得
 
-1. [DataForSEO 계정 생성](https://dataforseo.com/)
-2. Dashboard에서 API Login과 API Password 획득
-3. Settings > API API Credentials 접근
-4. Login과 Password 복사
+1. [DataForSEOアカウントの作成]（https://dataforseo.com/)
+2. DashboardでAPI LoginとAPI Passwordを取得
+3. Settings > API API Credentials アクセス
+4. LoginとPasswordのコピー
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from dataforseo_client import create_dataforseo_client
@@ -28,7 +28,7 @@ client = create_dataforseo_client(
 )
 ```
 
-### 검색량 및 경쟁 데이터 조회
+###検索量と競合データの検索
 
 ```python
 result = client.get_search_volume(
@@ -46,7 +46,7 @@ for item in result['tasks'][0]['result']:
     print(f"{kw}: Volume={volume}, CPC=${cpc:.2f}, Competition={competition:.2f}")
 ```
 
-### SERP 데이터 조회
+### SERPデータ検索
 
 ```python
 serp = client.get_serp_data(
@@ -61,7 +61,7 @@ for result in serp['tasks'][0]['result'][0]['items']:
     print(f"{result['title']}: {result.get('url', 'N/A')}")
 ```
 
-### 도메인 랭크 개요
+###ドメインランクの概要
 
 ```python
 rank = client.get_domain_rank_overview(
@@ -75,7 +75,7 @@ page_auth = rank['tasks'][0]['result'][0]['page_authority']
 print(f"DA: {domain_auth}, PA: {page_auth}")
 ```
 
-### 백링크 데이터 조회
+### バックリンクデータの照会
 
 ```python
 backlinks = client.get_backlink_data(
@@ -91,7 +91,7 @@ for bl in backlinks['tasks'][0]['result'][0]['backlinks']:
     print(f"{bl['domain_from']} -> PA={bl['page_authority']}")
 ```
 
-### 백링크 요약
+### バックリンクサマリー
 
 ```python
 summary = client.get_backlink_summary(target='example.com')
@@ -102,7 +102,7 @@ dofollow = summary['tasks'][0]['result'][0]['dofollow']
 print(f"Total: {total}, Dofollow: {dofollow}")
 ```
 
-### 비즈니스 목록 검색 (Google Maps, etc.)
+###ビジネスリストの検索（Google Maps、etc.）
 
 ```python
 businesses = client.search_business_listings(
@@ -118,9 +118,9 @@ for item in businesses['tasks'][0]['result'][0]['items']:
     print(f"  Address: {item.get('address', 'N/A')}")
 ```
 
-## 위치 및 언어 코드
+## 場所と言語コード
 
-DataForSEO는 표준 위치 및 언어 코드를 사용합니다:
+DataForSEOは標準の場所と言語コードを使用します。
 
 - **Location Code**: [DataForSEO Location Codes](https://docs.dataforseo.com/v3/serp/google/locations/)
   - 2840: Global
@@ -130,15 +130,15 @@ DataForSEO는 표준 위치 및 언어 코드를 사용합니다:
 
 - **Language Code**: ISO 639-1 (en, ja, ko, de, fr, etc.)
 
-## 주요 기능
+##主な機能
 
-1. **검색량 데이터**: 키워드 검색량, CPC, 경쟁도
-2. **SERP 데이터**: 검색 결과 페이지 분석
-3. **도메인 랭크**: DA, PA 및 백링크 정보
-4. **백링크 분석**: 백링크 요약 및 세부 정보
-5. **비즈니스 목록**: Google Maps 비즈니스 데이터
+1. **検索量データ**: キーワード検索量、クリック単価、競争度
+2. **SERPデータ**: 検索結果ページの分析
+3. **ドメインランク**: DA、PA、バックリンク情報
+4. **バックリンク分析**: バックリンクの要約と詳細
+5. **ビジネスリスト**：Google Mapsビジネスデータ
 
-## 에러 처리
+## エラー処理
 
 ```python
 from dataforseo_client import DataForSEOError, RateLimitError
@@ -151,15 +151,15 @@ except DataForSEOError as e:
     print(f"API error: {e}")
 ```
 
-## API 제한
+## APIの制限
 
-- 기본 제한: 초당 50 요청
-- 무료 평가판: 데이터 조회 무료
-- 유료 요금제: 종량제 (API 사용량 기반)
+- 基本制限：毎秒50リクエスト
+- 無料試用版：データ検索無料
+- 有料プラン：従量制（API使用量ベース）
 
-## 비동기 작업
+## 非同期操作
 
-일부 작업은 비동기로 처리됩니다. 작업 ID를 사용하여 결과를 조회:
+一部の操作は非同期として扱われます。ジョブIDを使用して結果を照会する：
 
 ```python
 # 작업 제출
@@ -169,6 +169,6 @@ task_id = "your-task-id"
 result = client.get_task_result(task_id)
 ```
 
-## 지원
+## サポート
 
-자세한 API 문서: [DataForSEO API Documentation](https://docs.dataforseo.com/v3/)
+詳細なAPIドキュメント：[DataForSEO API Documentation]（https://docs.dataforseo.com/v3/)

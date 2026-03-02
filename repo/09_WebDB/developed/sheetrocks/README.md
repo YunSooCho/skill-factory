@@ -1,23 +1,23 @@
-# SheetRocks 스프레드시트 SDK
+＃SheetRocksスプレッドシートSDK
 
-SheetRocks는 현대적인 스프레드시트 관리 플랫폼에 대한 Python SDK입니다.
+SheetRocksは、現代のスプレッドシート管理プラットフォーム用のPython SDKです。
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [SheetRocks.io](https://sheetrocks.io)에 접속하여 계정을 생성합니다.
-2. 설정(Settings) > API Keys 섹션으로 이동합니다.
-3. 새 API 키를 생성합니다.
-4. 생성된 API 키를 안전한 곳에 저장합니다.
+1. [SheetRocks.io]（https://sheetrocks.io)에にアクセスしてアカウントを作成します。
+2. 「設定」(Settings) > API Keys セクションに移動します。
+3. 新しい API キーを生成します。
+4. 生成された API キーを安全な場所に保存します。
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from sheetrocks import SheetRocksClient
@@ -27,7 +27,7 @@ client = SheetRocksClient(
 )
 ```
 
-### 스프레드시트 관리
+### スプレッドシートの管理
 
 ```python
 # 모든 스프레드시트 목록
@@ -61,7 +61,7 @@ duplicate = client.duplicate_spreadsheet(
 client.delete_spreadsheet(spreadsheet_id="spreadsheet_id")
 ```
 
-### 시트(Sheet) 관리
+### シートの管理
 
 ```python
 # 스프레드시트 내 시트 목록
@@ -98,7 +98,7 @@ client.update_sheet(
 client.delete_sheet(sheet_id="sheet_id")
 ```
 
-### 셀(Cell) 관리
+### セル(Cell)の管理
 
 ```python
 # 범위 내 셀 조회
@@ -155,7 +155,7 @@ client.copy_range(
 )
 ```
 
-### 행(Row) 관리
+### 行(Row)の管理
 
 ```python
 # 전체 행 조회
@@ -184,7 +184,7 @@ client.delete_row(
 )
 ```
 
-### 열(Column) 관리
+### 列(Column)の管理
 
 ```python
 # 전체 열 조회
@@ -213,7 +213,7 @@ client.delete_column(
 )
 ```
 
-### 데이터 내보내기/가져오기
+### データのエクスポート/インポート
 
 ```python
 # 시트 내보내기
@@ -245,7 +245,7 @@ client.import_data(
 )
 ```
 
-### 검색
+###検索
 
 ```python
 # 스프레드시트 내 검색
@@ -265,7 +265,7 @@ sheet_results = client.search(
 )
 ```
 
-### 공유 및 권한 관리
+### 共有と権限の管理
 
 ```python
 # 권한 목록 조회
@@ -285,7 +285,7 @@ client.remove_permission(
 )
 ```
 
-### 댓글 관리
+### コメントの管理
 
 ```python
 # 셀에 댓글 추가
@@ -308,7 +308,7 @@ client.delete_comment(
 )
 ```
 
-### 필터링
+###フィルタリング
 
 ```python
 # 필터 추가
@@ -336,7 +336,7 @@ client.remove_filter(
 )
 ```
 
-### 셀 형식 지정 예시
+### セル書式の例
 
 ```python
 # 굴게체 및 색상
@@ -375,48 +375,48 @@ client.update_cell(
 )
 ```
 
-## 권한(Role) 유형
+## 権限 (Role) タイプ
 
-- **owner**: 소유자 (모든 권한)
-- **editor**: 편집자 (읽기 및 쓰기)
-- **commenter**: 댓글러 (읽기 및 댓글)
-- **viewer**: 뷰어 (읽기 전용)
+- **owner**：所有者（すべての権限）
+- **editor**：編集者（読み取りと書き込み）
+- **commenter**: コメント(読書とコメント)
+- **viewer**：ビューア（読み取り専用）
 
-## 지원하는 내보내기 형식
+## サポートするエクスポート形式
 
-- **xlsx**: Excel 파일
-- **xls**: 이전 Excel 형식
-- **csv**: CSV 파일
-- **pdf**: PDF 문서
-- **html**: HTML 형식
+- **xlsx**: Excel ファイル
+- **xls**: 古いExcel形式
+- **csv**: CSVファイル
+- **pdf**: PDF文書
+- **html**：HTML形式
 
-## 연산자(Operator) 예시
+## 演算子(Operator)の例
 
-- **equals**: 같음
-- **not_equals**: 다름
-- **greater_than**: 보다 큼
-- **less_than**: 보다 작음
-- **greater_than_or_equals**: 보다 크거나 같음
-- **less_than_or_equals**: 보다 작거나 같음
-- **contains**: 포함
-- **starts_with**: 시작
-- **ends_with**: 끝
-- **not_contains**: 포함하지 않음
+- **equals**: 同じ
+- **not_equals**: 相違
+- **greater_than**: より大きい
+- **less_than**: より小さい
+- **greater_than_or_equals**: より大きいか等しい
+- **less_than_or_equals**: より小さいか等しい
+- **contains**: 含む
+- **starts_with**: スタート
+- **ends_with**: 終了
+- **not_contains**: 含まない
 
-## 주요 기능
+##主な機能
 
-- ✅ 스프레드시트 CRUD
-- ✅ 시트(Sheet) 관리
-- ✅ 셀(Cell) 관리
-- ✅ 행 및 열 관리
-- ✅ 범위 작업
-- ✅ 데이터 내보내기/가져오기
-- ✅ 검색 기능
-- ✅ 공유 및 권한 관리
-- ✅ 댓글 기능
-- ✅ 필터링
-- ✅ 셀 서식 지정
+- ✅スプレッドシートCRUD
+- ✅シート(Sheet)管理
+- ✅セル（Cell）管理
+- ✅ 行と列の管理
+- ✅範囲操作
+- ✅データのエクスポート/インポート
+- ✅検索機能
+- ✅共有と権限管理
+- ✅コメント機能
+- ✅フィルタリング
+- ✅セルの書式設定
 
-## 라이선스
+##ライセンス
 
 MIT License

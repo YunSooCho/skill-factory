@@ -1,23 +1,23 @@
-# QuintaDB 데이터베이스 SDK
+# QuintaDB データベース SDK
 
-QuintaDB는 강력한 온라인 데이터베이스 및 양식 플랫폼에 대한 Python SDK입니다.
+QuintaDBは、強力なオンラインデータベースとフォームプラットフォーム用のPython SDKです。
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [QuintaDB](https://quintadb.com)에 접속하여 계정을 생성합니다.
-2. 설정(Settings) > API Keys 섹션으로 이동합니다.
-3. 새 API 토큰을 생성합니다.
-4. 생성된 API 토큰을 안전한 곳에 저장합니다.
+1. [QuintaDB](https://quintadb.com)에 にアクセスしてアカウントを作成します。
+2. 「設定」(Settings) > API Keys セクションに移動します。
+3. 新しい API トークンを生成します。
+4. 生成された API トークンを安全な場所に保存します。
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from quintadb import QuintaDBClient
@@ -27,7 +27,7 @@ client = QuintaDBClient(
 )
 ```
 
-### 데이터베이스 관리
+### データベース管理
 
 ```python
 # 모든 데이터베이스 목록
@@ -49,7 +49,7 @@ stats = client.get_database_statistics(database_id=12345)
 print(f"테이블 수: {stats['tables_count']}")
 ```
 
-### 테이블 관리
+### テーブル管理
 
 ```python
 # 테이블 상세 정보
@@ -65,7 +65,7 @@ stats = client.get_table_statistics(table_id=67890)
 print(f"레코드 수: {stats['records_count']}")
 ```
 
-### 필드 관리
+### フィールド管理
 
 ```python
 # 필드 상세 정보
@@ -100,7 +100,7 @@ client.update_field(
 client.delete_field(field_id=11111)
 ```
 
-### 레코드 관리
+### レコード管理
 
 ```python
 # 레코드 목록 조회
@@ -144,7 +144,7 @@ count = client.get_count(table_id=67890)
 print(f"총 레코드: {count['count']}")
 ```
 
-### 레코드 필터링 및 검색
+### レコードのフィルタリングと検索
 
 ```python
 # 레코드 필터링
@@ -162,7 +162,7 @@ search_results = client.search_records(
 )
 ```
 
-### 뷰(View) 관리
+### ビュー(View)の管理
 
 ```python
 # 테이블 뷰 목록
@@ -200,7 +200,7 @@ client.update_view(
 client.delete_view(view_id=33333)
 ```
 
-### 폼(Form) 관리
+### フォーム(Form)の管理
 
 ```python
 # 모든 폼 목록
@@ -229,7 +229,7 @@ client.update_form(
 client.delete_form(form_id=44444)
 ```
 
-### 사용자 관리
+### ユーザー管理
 
 ```python
 # 모든 사용자 목록
@@ -258,7 +258,7 @@ client.update_user(
 client.delete_user(user_id=55555)
 ```
 
-### 역할 관리
+###ロール管理
 
 ```python
 # 모든 역할 목록
@@ -270,7 +270,7 @@ for role in roles['roles']:
 role = client.get_role(role_id=66666)
 ```
 
-### 파일 관리
+###ファイル管理
 
 ```python
 # 파일 업로드
@@ -287,7 +287,7 @@ file_info = client.get_file(file_id=77777)
 client.delete_file(file_id=77777)
 ```
 
-### 쿼리 예제
+### クエリの例
 
 ```python
 # 정확한 값 일치
@@ -306,39 +306,39 @@ query = "field_33333 = '진행 중' OR field_33333 = '확인 중'"
 query = "(field_33333 = '진행 중' OR field_33333 = '확인 중') AND field_44444 = '높음'"
 ```
 
-## 필드 유형
+## フィールドタイプ
 
-QuintaDB는 다양한 필드 유형을 지원합니다:
+QuintaDBはさまざまなフィールドタイプをサポートしています。
 
-- **text**: 텍스트 필드
-- **textarea**: 여러 행 텍스트 필드
-- **dropdown**: 드롭다운 필드
-- **radio**: 라디오 버튼
-- **checkbox**: 체크박스
-- **number**: 숫자 필드
-- **date**: 날짜 필드
-- **date_time**: 날짜 및 시간 필드
-- **currency**: 통화 필드
-- **email**: 이메일 필드
-- **url**: URL 필드
-- **phone**: 전화번호 필드
-- **file**: 파일 업로드 필드
-- **image**: 이미지 필드
-- **user**: 사용자 필드
-- **formula**: 수식 필드
+- **text**: テキストフィールド
+- **textarea**: 複数行のテキストフィールド
+- **dropdown**: ドロップダウンフィールド
+- **radio**: ラジオボタン
+- **checkbox**: チェックボックス
+- **number**: 数値フィールド
+- **date**: 日付フィールド
+- **date_time**: 日時フィールド
+- **currency**: 通貨フィールド
+- **email**: メールフィールド
+- **url**: URL フィールド
+- **phone**：電話番号フィールド
+- **file**: ファイルアップロードフィールド
+- **image**: イメージフィールド
+- **user**: ユーザーフィールド
+- **formula**: 数式フィールド
 
-## 주요 기능
+##主な機能
 
-- ✅ 데이터베이스 및 테이블 관리
-- ✅ 필드 CRUD 작업
-- ✅ 레코드 관리
-- ✅ 레코드 필터링 및 검색
-- ✅ 뷰(View) 생성 및 관리
-- ✅ 폼(Form) 생성 및 관리
-- ✅ 사용자 및 역할 관리
-- ✅ 파일 업로드 및 관리
-- ✅ 통계 및 보고
+- ✅データベースとテーブルの管理
+- ✅フィールドCRUD操作
+- ✅レコード管理
+- ✅レコードのフィルタリングと検索
+- ✅ ビュー(View)の作成と管理
+- ✅ フォーム(Form)の作成と管理
+- ✅ユーザーと役割の管理
+- ✅ファイルのアップロードと管理
+- ✅統計と報告
 
-## 라이선스
+##ライセンス
 
 MIT License

@@ -157,7 +157,7 @@ class GoogleDriveClient:
         name: str,
         parent_folder_id: Optional[str] = None
     ) -> Dict[str, Any]:
-        """9. 폴더 생성하기"""
+        """9. フォルダの作成"""
         self.rate_limiter.wait_if_needed()
         
         file_metadata = {
@@ -187,7 +187,7 @@ class GoogleDriveClient:
         page_size: int = 100,
         fields: str = 'files(id,name,mimeType,webViewLink,webContentLink)'
     ) -> Dict[str, Any]:
-        """3. 파일/폴더 검색하기, 17. 특정 폴더 검색(휴지통 제외), 21. 특정 폴더 검색"""
+        """3.ファイル/フォルダを検索する、17.特定のフォルダを検索する（ごみ箱を除く）、21.特定のフォルダを検索する"""
         self.rate_limiter.wait_if_needed()
         
         try:
@@ -213,7 +213,7 @@ class GoogleDriveClient:
         file_id: str,
         new_name: str
     ) -> Dict[str, Any]:
-        """4. 파일명 변경하기"""
+        """4. ファイル名の変更"""
         self.rate_limiter.wait_if_needed()
         
         file_metadata = {'name': new_name}
@@ -239,7 +239,7 @@ class GoogleDriveClient:
         file_id: str,
         description: str
     ) -> Dict[str, Any]:
-        """33. 파일/폴더 설명 업데이트하기"""
+        """33. ファイル/フォルダの説明を更新する"""
         self.rate_limiter.wait_if_needed()
         
         file_metadata = {'description': description}
@@ -264,7 +264,7 @@ class GoogleDriveClient:
         self,
         file_id: str
     ) -> Dict[str, Any]:
-        """15. 파일 삭제하기"""
+        """15. ファイルを削除する"""
         self.rate_limiter.wait_if_needed()
         
         try:
@@ -281,7 +281,7 @@ class GoogleDriveClient:
         file_id: str,
         new_parent_folder_id: str
     ) -> Dict[str, Any]:
-        """6. 파일 저장 폴더 변경하기"""
+        """6. ファイル保存フォルダの変更"""
         self.rate_limiter.wait_if_needed()
         
         # First get the file to retrieve current parents
@@ -315,7 +315,7 @@ class GoogleDriveClient:
         self,
         file_id: str
     ) -> Dict[str, Any]:
-        """27. 파일을 휴지통으로 이동하기"""
+        """27. ファイルをごみ箱に移動する"""
         self.rate_limiter.wait_if_needed()
         
         file_metadata = {'trashed': True}
@@ -338,7 +338,7 @@ class GoogleDriveClient:
         file_id: str,
         fields: str = 'id,name,mimeType,size,createdTime,modifiedTime,owners,webContentLink,webViewLink'
     ) -> Dict[str, Any]:
-        """20. 파일/폴더 정보 가져오기"""
+        """20. ファイル/フォルダ情報のインポート"""
         self.rate_limiter.wait_if_needed()
         
         try:
@@ -357,7 +357,7 @@ class GoogleDriveClient:
         folder_id: str,
         page_size: int = 100
     ) -> Dict[str, Any]:
-        """21. 특정 폴더 내 파일/폴더 검색, 31. 특정 폴더 내 폴더 목록, 34. 특정 폴더 내 파일/폴더 목록"""
+        """21. 特定のフォルダ内のファイル/フォルダの検索、31. 特定のフォルダ内のフォルダ一覧、34. 特定のフォルダ内のファイル/フォルダの一覧"""
         self.rate_limiter.wait_if_needed()
         
         query = f"'{folder_id}' in parents and trashed=false"
@@ -374,7 +374,7 @@ class GoogleDriveClient:
         parent_folder_id: Optional[str] = None,
         file_name: Optional[str] = None
     ) -> Dict[str, Any]:
-        """23. 파일 업로드하기"""
+        """23. ファイルをアップロードする"""
         self.rate_limiter.wait_if_needed()
         
         file_name = file_name or os.path.basename(file_path)
@@ -412,7 +412,7 @@ class GoogleDriveClient:
         file_id: str,
         output_path: Optional[str] = None
     ) -> Dict[str, Any]:
-        """16. 파일 다운로드하기"""
+        """16. ファイルのダウンロード"""
         self.rate_limiter.wait_if_needed()
         
         # Get file info to determine if it's a Google Workspace file
@@ -499,7 +499,7 @@ class GoogleDriveClient:
         self,
         file_id: str
     ) -> Dict[str, Any]:
-        """1. 파일을 Google Docs로 변환하기"""
+        """1. ファイルを Google Docs に変換する"""
         self.rate_limiter.wait_if_needed()
         
         file_metadata = {
@@ -525,7 +525,7 @@ class GoogleDriveClient:
         self,
         file_id: str
     ) -> Dict[str, Any]:
-        """2. 프레젠테이션 파일을 Google Slides로 변환하기"""
+        """2. プレゼンテーション ファイルを Google Slides に変換する"""
         self.rate_limiter.wait_if_needed()
         
         try:
@@ -546,7 +546,7 @@ class GoogleDriveClient:
         file_path: str,
         parent_folder_id: Optional[str] = None
     ) -> Dict[str, Any]:
-        """18. CSV 파일을 스프레드시트로 변환하기, 32. 엑셀 파일 변환하기"""
+        """18. CSVファイルをスプレッドシートに変換する、32. Excelファイルを変換する"""
         self.rate_limiter.wait_if_needed()
         
         file_metadata = {
@@ -586,7 +586,7 @@ class GoogleDriveClient:
         format: str = 'docx',
         output_path: Optional[str] = None
     ) -> Dict[str, Any]:
-        """7. Google Docs 다운로드하기"""
+        """7. Google Docsをダウンロードする"""
         self.rate_limiter.wait_if_needed()
         
         mime_map = {
@@ -625,7 +625,7 @@ class GoogleDriveClient:
         format: str = 'xlsx',
         sheet_name: Optional[str] = None
     ) -> Dict[str, Any]:
-        """12. Google Sheets 다운로드하기, 19. 시트 지정 다운로드"""
+        """12. Googleシートをダウンロードする、19.シート指定をダウンロードする"""
         self.rate_limiter.wait_if_needed()
         
         mime_map = {
@@ -661,7 +661,7 @@ class GoogleDriveClient:
         file_id: str,
         format: str = 'pptx'
     ) -> Dict[str, Any]:
-        """30. Google Slides 다운로드하기"""
+        """30. Google Slidesをダウンロードする"""
         self.rate_limiter.wait_if_needed()
         
         mime_map = {
@@ -690,7 +690,7 @@ class GoogleDriveClient:
         self,
         file_id: str
     ) -> Dict[str, Any]:
-        """25. PDF 파일을 Google Docs로 변환하기"""
+        """25. PDF ファイルを Google Docs に変換する"""
         self.rate_limiter.wait_if_needed()
         
         try:
@@ -715,7 +715,7 @@ class GoogleDriveClient:
         file_id: str,
         new_name: Optional[str] = None
     ) -> Dict[str, Any]:
-        """8. 파일 복제하기, 14. 파일 복제하기(상세), 22. 파일 단축키 만들기"""
+        """8. ファイルの複製、14. ファイルの複製 (詳細)、22. ファイルのショートカットの作成"""
         self.rate_limiter.wait_if_needed()
         
         file_metadata = {}
@@ -743,7 +743,7 @@ class GoogleDriveClient:
         self,
         file_id: str
     ) -> Dict[str, Any]:
-        """5. 파일/폴더 권한 목록 가져오기"""
+        """5. ファイル/フォルダ権限リストのインポート"""
         self.rate_limiter.wait_if_needed()
         
         try:
@@ -765,7 +765,7 @@ class GoogleDriveClient:
         file_id: str,
         permission_id: str
     ) -> Dict[str, Any]:
-        """10. 파일/폴더에서 권한 삭제하기"""
+        """10. ファイル/フォルダから権限を削除する"""
         self.rate_limiter.wait_if_needed()
         
         try:
@@ -787,7 +787,7 @@ class GoogleDriveClient:
         role: str = 'reader',
         transfer_ownership: bool = False
     ) -> Dict[str, Any]:
-        """35. 지정 사용자에게 권한 부여하기"""
+        """35. 指定ユーザーに許可を与える"""
         self.rate_limiter.wait_if_needed()
         
         valid_roles = ['reader', 'writer', 'commenter', 'owner']
@@ -819,7 +819,7 @@ class GoogleDriveClient:
         domain: str,
         role: str = 'reader'
     ) -> Dict[str, Any]:
-        """26. 특정 조직에 권한 부여하기"""
+        """26. 特定の組織への承認"""
         self.rate_limiter.wait_if_needed()
         
         permission = {
@@ -847,7 +847,7 @@ class GoogleDriveClient:
         role: str = 'reader',
         allow_discovery: bool = False
     ) -> Dict[str, Any]:
-        """28. 파일 권한을 '링크를 아는 모든 사람'으로 변경하기"""
+        """28. ファイル権限を"リンクを知っているすべての人"に変更する"""
         self.rate_limiter.wait_if_needed()
         
         permission = {
@@ -877,7 +877,7 @@ class GoogleDriveClient:
         allow_copy: bool = True,
         allow_download: bool = True
     ) -> Dict[str, Any]:
-        """24. 파일 다운로드/복사 허용 설정하기"""
+        """24. ファイルのダウンロード/コピーを許可する設定"""
         self.rate_limiter.wait_if_needed()
         
         try:
@@ -925,7 +925,7 @@ class GoogleDriveClient:
         self,
         query: str = ''
     ) -> Dict[str, Any]:
-        """11. 공유 드라이브 검색하기"""
+        """11. 共有ドライブを検索する"""
         self.rate_limiter.wait_if_needed()
         
         try:
@@ -948,7 +948,7 @@ class GoogleDriveClient:
         name: str,
         request_id: Optional[str] = None
     ) -> Dict[str, Any]:
-        """29. 공유 드라이브 생성하기"""
+        """29. 共有ドライブの作成"""
         self.rate_limiter.wait_if_needed()
         
         import uuid
@@ -980,7 +980,7 @@ class GoogleDriveClient:
         file_id: str,
         file_path: str
     ) -> Dict[str, Any]:
-        """13. 특정 파일 업데이트하기"""
+        """13. 特定のファイルを更新する"""
         self.rate_limiter.wait_if_needed()
         
         file_metadata = {}

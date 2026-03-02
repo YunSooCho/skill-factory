@@ -1,21 +1,21 @@
-# Fakturoid API 클라이언트
+#Fakturoid APIクライアント
 
-Fakturoid을 위한 Python API 클라이언트입니다. 체코 송장 및 결제 관리 기능을 제공합니다.
+Fakturoid用のPython APIクライアント。チェコの請求書と支払い管理機能を提供します。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [Fakturoid](https://app.fakturoid.cz/)에 로그인
-2. Settings > API Keys 메뉴로 이동
-3. API Key 생성 (Email과 API Key 필요)
-4. Slug 확인 (계정 URL에서 확인 가능)
+1. [Fakturoid](https://app.fakturoid.cz/)에 ログイン
+2. Settings > API Keys メニューに移動
+3. API Keyの生成(EmailとAPI Keyが必要)
+4. Slug 確認 (アカウント URL で確認可能)
 
-## 사용법
+##使用法
 
 ```python
 from fakturoid import FakturoidClient, FakturoidError
@@ -53,14 +53,14 @@ client.send_invoice("invoice_id", message="Message")
 client.pay_invoice("invoice_id", "2024-01-15", "VS001", 1210.0)
 ```
 
-## 기능
+## 機能
 
-- 송장 CRUD (생성, 조회, 수정, 삭제)
-- 거래처(Subject) 관리
-- 송장 템플릿(Generator) 관리
-- 송장 전송 및 결제 처리
-- 계정 정보 조회
+- 請求書CRUD(作成、照会、修正、削除)
+- 取引先(Subject)管理
+- 請求書テンプレート（Generator）管理
+- 請求書の転送と支払い処理
+- アカウント情報の照会
 
-## 라이선스
+##ライセンス
 
 MIT License

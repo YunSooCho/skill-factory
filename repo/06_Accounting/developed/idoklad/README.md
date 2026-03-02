@@ -1,20 +1,20 @@
-# iDoklad API 클라이언트
+#iDoklad APIクライアント
 
-iDoklad를 위한 Python API 클라이언트입니다. 체코 회계 시스템 기능을 제공합니다.
+iDoklad用のPython APIクライアント。チェコ会計システムの機能を提供します。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [iDoklad Developers](https://developers.idoklad.cz/)에 접속
-2. 애플리케이션 등록 (Client ID, Client Secret 획득)
-3. OAuth2 인증을 통해 Refresh Token 획득
+1. [iDoklad Developers](https://developers.idoklad.cz/)에 接続
+2. アプリケーション登録(Client ID、Client Secret獲得)
+3. OAuth2認証でリフレッシュトークンを獲得
 
-## 사용법
+##使用法
 
 ```python
 from idoklad import IdokladClient, IdokladError
@@ -63,15 +63,15 @@ client.send_invoice_by_email("invoice_id", {
 })
 ```
 
-## 기능
+## 機能
 
-- 발행 송장(Issued Invoices) CRUD
-- 수신 송장(Received Invoices) 관리
-- 거래처(Contacts) 관리
-- 계좌(Bank Accounts) 및 이동 내역 관리
-- 송장 이메일 발송
-- 자사 정보 조회
+- 発行請求書(Issued Invoices) CRUD
+- 受信請求書（Received Invoices）管理
+- 取引先（Contacts）管理
+- 口座(Bank Accounts)と移動履歴管理
+- 請求書メール送信
+- 自社情報の照会
 
-## 라이선스
+##ライセンス
 
 MIT License

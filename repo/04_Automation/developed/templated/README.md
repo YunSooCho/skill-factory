@@ -1,32 +1,32 @@
-# Templated API 클라이언트
+#Templated APIクライアント
 
-Templated를 위한 Python API 클라이언트입니다. 템플릿 기반 문서 생성 및 렌더링을 지원합니다.
+Templated用のPython APIクライアント。テンプレートベースの文書の作成とレンダリングをサポートします。
 
-## 개요
+## 概要
 
-Templated는 템플릿을 사용하여 PDF, 이미지 등의 문서를 자동으로 생성하는 서비스입니다.
+テンプレートは、テンプレートを使用してPDF、画像などの文書を自動的に生成するサービスです。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-또는:
+または：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급
+## API キー発行
 
-1. [Templated](https://templated.io/)에서 계정 생성
-2. API 키 발급
-3. API 키를 안전하게 저장
+1. [Templated](https://templated.io/)에서 アカウントの作成
+2. API キー発行
+3. API キーを安全に保存
 
-## 사용법
+##使用法
 
-### 초기화
+### 初期化
 
 ```python
 from templated import TemplatedClient, TemplatedError
@@ -37,7 +37,7 @@ client = TemplatedClient(
 )
 ```
 
-### 템플릿 검색
+###テンプレート検索
 
 ```python
 result = client.search_templates(
@@ -50,7 +50,7 @@ for template in result.get("templates", []):
     print(f"- {template.get('name')}: {template.get('id')}")
 ```
 
-### 렌더 생성
+###レンダリング
 
 ```python
 result = client.create_render(
@@ -71,7 +71,7 @@ render_id = result.get("render_id")
 print(f"Render ID: {render_id}")
 ```
 
-### 이미지 업로드
+###画像のアップロード
 
 ```python
 result = client.upload_image(
@@ -83,7 +83,7 @@ image_url = result.get("url")
 print(f"Image URL: {image_url}")
 ```
 
-### 렌더 다운로드
+###レンダリングダウンロード
 
 ```python
 # 메모리에 다운로드
@@ -94,7 +94,7 @@ output_path = client.download_render(render_id, "output.pdf")
 print(f"Saved to: {output_path}")
 ```
 
-### 여러 렌더 병합
+### 複数のレンダーをマージ
 
 ```python
 result = client.merge_renders(
@@ -105,14 +105,14 @@ result = client.merge_renders(
 merged_render_id = result.get("render_id")
 ```
 
-### 렌더 상태 확인
+### レンダーの状態を確認する
 
 ```python
 status = client.get_render_status(render_id)
 print(f"Status: {status.get('status')}")  # "pending", "completed", "failed"
 ```
 
-## 에러 처리
+## エラー処理
 
 ```python
 from templated import TemplatedError, TemplatedRateLimitError, TemplatedAuthenticationError
@@ -127,11 +127,11 @@ except TemplatedError as e:
     print(f"요청 실패: {str(e)}")
 ```
 
-## 라이선스
+##ライセンス
 
 MIT License
 
-## 지원
+## サポート
 
-- [Templated 공식 사이트](https://templated.io/)
-- [Templated 문서](https://docs.templated.io/)
+- [Templated公式サイト]（https://templated.io/)
+- [Templatedドキュメント]（https://docs.templated.io/)

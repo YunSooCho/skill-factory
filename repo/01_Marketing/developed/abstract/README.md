@@ -1,36 +1,36 @@
 # Abstract API Client
 
-Yoom Apps 자동화를 위한 Abstract API 통합 클라이언트입니다.
+Yoom Apps自動化のためのAbstract API統合クライアント。
 
-## 지원하는 API 서비스
+## サポートする API サービス
 
-| 서비스 | 기능 |
+|サービス|機能
 |--------|------|
-| **Exchange Rates API** | 실시간 환율 조회, 환율 변환 |
-| **Phone Validation API** | 전화번호 유효성 검사 |
-| **Date & Time API** | 현재 시간 조회, 시간대 변환 |
-| **IP Geolocation API** | IP 주소 기반 지리적 정보 조회 |
-| **Email Validation API** | 이메일 유효성 검사 |
-| **Holidays API** | 국가 공휴일 조회 |
+| **Exchange Rates API** |リアルタイム為替レートの表示、為替レートの変換|
+| **Phone Validation API** |電話番号の検証|
+| **Date & Time API** |現在時刻照会、タイムゾーン変換|
+| **IP Geolocation API** | IPアドレスベースの地理的情報検索|
+| **Email Validation API** |電子メールの検証
+| **Holidays API** |国の祝日の照会
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [Abstract API](https://www.abstractapi.com/) 접속
-2. 계정 생성 및 로그인
-3. Dashboard에서 API Key 발급
-4. 환경변수에 설정
+1. [Abstract API](https://www.abstractapi.com/) 接続
+2. アカウントの作成とログイン
+3. DashboardからAPI Keyを発行
+4. 環境変数に設定
 
 ```bash
 export ABSTRACT_API_KEY=your_api_key_here
 ```
 
-## 사용 예시
+## 使用例
 
 ```python
 from abstract import AbstractClient
@@ -78,7 +78,7 @@ finally:
     client.close()
 ```
 
-## API 상세
+## API詳細
 
 ### Exchange Rates API
 
@@ -133,7 +133,7 @@ email_info = client.validate_email("test@example.com")
 holidays = client.get_country_holidays("KR", 2025)
 ```
 
-## 오류 처리
+## エラー処理
 
 ```python
 from abstract import AbstractClient
@@ -152,7 +152,7 @@ finally:
     client.close()
 ```
 
-# Context Manager 사용
+# Context Managerの使用
 
 ```python
 from abstract import AbstractClient
@@ -163,6 +163,6 @@ with AbstractClient() as client:
 # 자동으로 세선 종료
 ```
 
-## 라이선스
+##ライセンス
 
 MIT License

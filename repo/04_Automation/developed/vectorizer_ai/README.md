@@ -1,32 +1,32 @@
-# Vectorizer AI API 클라이언트
+#Vectorizer AI APIクライアント
 
-Vectorizer AI를 위한 Python API 클라이언트입니다. 이미지를 벡터 그래픽으로 변환하는 기능을 제공합니다.
+Vectorizer AI用のPython APIクライアント。画像をベクターグラフィックに変換する機能を提供します。
 
-## 개요
+## 概要
 
-Vectorizer AI는 래스터 이미지(SVG, PNG 등)를 벡터 그래픽으로 변환하는 서비스입니다.
+Vectorizer AIは、ラスター画像（SVG、PNGなど）をベクターグラフィックに変換するサービスです。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-또는:
+または：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급
+## API キー発行
 
-1. [Vectorizer AI](https://vectorizer.ai/)에서 계정 생성
-2. API 키 발급
-3. API 키를 안전하게 저장
+1. [Vectorizer AI]（https://vectorizer.ai/)에서アカウントの作成
+2. API キー発行
+3. API キーを安全に保存
 
-## 사용법
+##使用法
 
-### 초기화
+### 初期化
 
 ```python
 from vectorizer_ai import VectorizerAIClient, VectorizerAIError
@@ -37,7 +37,7 @@ client = VectorizerAIClient(
 )
 ```
 
-### 이미지 벡터화
+###画像のベクトル化
 
 ```python
 result = client.vectorize_image(
@@ -50,14 +50,14 @@ result = client.vectorize_image(
 job_id = result.get("job_id")
 ```
 
-### 작업 상태 확인
+### ジョブステータスの確認
 
 ```python
 status = client.get_vectorization_status(job_id)
 print(f"Status: {status.get('status')}")
 ```
 
-### 벡터 파일 다운로드
+### ベクトルファイルのダウンロード
 
 ```python
 # 메모리에 다운로드
@@ -68,7 +68,7 @@ output_path = client.download_vector(job_id, "output.svg")
 print(f"Saved to: {output_path}")
 ```
 
-## 에러 처리
+## エラー処理
 
 ```python
 try:
@@ -81,11 +81,11 @@ except VectorizerAIError as e:
     print(f"요청 실패: {str(e)}")
 ```
 
-## 라이선스
+##ライセンス
 
 MIT License
 
-## 지원
+## サポート
 
-- [Vectorizer AI 공식 사이트](https://vectorizer.ai/)
-- [Vectorizer AI 문서](https://docs.vectorizer.ai/)
+- [Vectorizer AI公式サイト]（https://vectorizer.ai/)
+- [Vectorizer AIドキュメント]（https://docs.vectorizer.ai/)

@@ -1,23 +1,23 @@
-# Spiral 비즈니스 플랫폼 SDK
+#Spiral Business Platform SDK
 
-Spiral은 통합 비즈니스 관리 플랫폼에 대한 Python SDK입니다.
+Spiralは、統合ビジネス管理プラットフォーム用のPython SDKです。
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [Spiral](https://spiralplatform.com)에 접속하여 계정을 생성합니다.
-2. 설정(Settings) > API Keys 섹션으로 이동합니다.
-3. 새 API 키를 생성합니다.
-4. 생성된 API 키를 안전한 곳에 저장합니다.
+1. [Spiral](https://spiralplatform.com)에 にアクセスしてアカウントを作成します。
+2. 「設定」(Settings) > API Keys セクションに移動します。
+3. 新しい API キーを生成します。
+4. 生成された API キーを安全な場所に保存します。
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from spiral import SpiralClient
@@ -27,7 +27,7 @@ client = SpiralClient(
 )
 ```
 
-### 고객 관리
+###顧客管理
 
 ```python
 # 고객 목록
@@ -46,7 +46,7 @@ client.update_customer(customer_id="id", name="수정된 이름")
 client.delete_customer(customer_id="id")
 ```
 
-### 프로젝트 관리
+###プロジェクト管理
 
 ```python
 # 프로젝트 목록
@@ -61,7 +61,7 @@ client.create_project(
 )
 ```
 
-### 작업 관리
+###ジョブ管理
 
 ```python
 # 작업 목록
@@ -77,7 +77,7 @@ client.create_task(
 )
 ```
 
-### 판매 기회(Deal) 관리
+### 販売機会（Deal）管理
 
 ```python
 # 딜 목록
@@ -92,14 +92,14 @@ client.create_deal(
 )
 ```
 
-## 주요 기능
+##主な機能
 
-- ✅ 고객 관리
-- ✅ 프로젝트 관리
-- ✅ 작업(Task) 관리
-- ✅ 판매 기회(Deal) 추적
-- ✅ 리포트
+- ✅顧客管理
+- ✅プロジェクト管理
+- ✅タスク（Task）管理
+- ✅販売機会（Deal）追跡
+- ✅レポート
 
-## 라이선스
+##ライセンス
 
 MIT License

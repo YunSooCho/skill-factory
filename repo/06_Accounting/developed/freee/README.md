@@ -1,21 +1,21 @@
-# Freee API 클라이언트
+#Freee API クライアント
 
-Freee를 위한 Python API 클라이언트입니다. 일본 종합 회계 플랫폼 기능을 제공합니다.
+Freee用のPython APIクライアントです。日本総合会計プラットフォーム機能を提供します。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [Freee Developers](https://developers.freee.co.jp/)에 접속
-2. 애플리케이션 등록
-3. OAuth2 인증을 통해 Access Token 획득
-4. Company ID 확인
+1. [Freee Developers](https://developers.freee.co.jp/)에 接続
+2. アプリケーション登録
+3. OAuth2認証でAccess Tokenを取得
+4. Company IDの確認
 
-## 사용법
+##使用法
 
 ```python
 from freee import FreeeClient, FreeeError
@@ -66,16 +66,16 @@ client.create_transfer({
 })
 ```
 
-## 기능
+## 機能
 
-- 거래(Deals) CRUD
-- 거래처(Partners) 관리
-- 지갑/자산(Walletables) 관리
-- 지갑 거래(Wallet Transactions) 관리
-- 직접 경비(Direct Expenses) 관리
-- 계좌이동(Transfers) 관리
-- 송금 템플릿 관리
+- 取引(Deals) CRUD
+- 取引先(Partners)管理
+- ウォレット/資産(Walletables)管理
+- ウォレット取引（Wallet Transactions）管理
+- 直接経費（Direct Expenses）管理
+- 口座移動(Transfers)管理
+- 送金テンプレートの管理
 
-## 라이선스
+##ライセンス
 
 MIT License

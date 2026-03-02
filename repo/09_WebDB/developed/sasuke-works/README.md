@@ -1,23 +1,23 @@
-# Sasuke Works 비즈니스 관리 SDK
+#Sasuke Works Business Management SDK
 
-Sasuke Works는 프로젝트 및 작업 관리 플랫폼에 대한 Python SDK입니다.
+Sasuke Worksは、プロジェクトおよびタスク管理プラットフォーム用のPython SDKです。
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [Sasuke Works](https://sasukeworks.com) 웹사이트에 접속하여 계정을 생성합니다.
-2. 설정(Settings) > API Keys 섹션으로 이동합니다.
-3. 새 API 키를 생성합니다.
-4. 생성된 API 키를 안전한 곳에 저장합니다.
+1. [Sasuke Works]（https://sasukeworks.com) Webサイトにアクセスしてアカウントを作成します。
+2. 「設定」(Settings) > API Keys セクションに移動します。
+3. 新しい API キーを生成します。
+4. 生成された API キーを安全な場所に保存します。
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from sasuke_works import SasukeWorksClient
@@ -27,7 +27,7 @@ client = SasukeWorksClient(
 )
 ```
 
-### 클라이언트(고객) 관리
+### クライアント（顧客）管理
 
 ```python
 # 모든 클라이언트 목록
@@ -64,7 +64,7 @@ client.update_client(
 client.delete_client(client_id="client_id")
 ```
 
-### 프로젝트 관리
+###プロジェクト管理
 
 ```python
 # 프로젝트 목록 조회
@@ -104,7 +104,7 @@ client.update_project(
 client.delete_project(project_id="project_id")
 ```
 
-### 작업(Task) 관리
+### タスク(Task)の管理
 
 ```python
 # 작업 목록 조회
@@ -147,7 +147,7 @@ client.update_task(
 client.delete_task(task_id="task_id")
 ```
 
-### 시간 추적(Time Tracking)
+### 時間追跡(Time Tracking)
 
 ```python
 # 시간 기록 목록 조회
@@ -186,7 +186,7 @@ client.update_time_entry(
 client.delete_time_entry(entry_id="entry_id")
 ```
 
-### 송장서(Invoice) 관리
+### 請求書(Invoice)の管理
 
 ```python
 # 송장서 목록 조회
@@ -237,7 +237,7 @@ client.update_invoice(
 client.delete_invoice(invoice_id="invoice_id")
 ```
 
-### 팀 멤버 관리
+###チームメンバーの管理
 
 ```python
 # 팀 멤버 목록
@@ -267,7 +267,7 @@ client.update_team_member(
 client.remove_team_member(member_id="member_id")
 ```
 
-### 리포트
+### レポート
 
 ```python
 # 시간 추적 리포트
@@ -304,7 +304,7 @@ print(f"총 매출: {revenue_report['total_revenue']}")
 print(f"미수금: {revenue_report['outstanding']}")
 ```
 
-### 사용자 정보
+### ユーザー情報
 
 ```python
 # 현재 사용자 정보
@@ -312,54 +312,54 @@ user_info = client.get_user_info()
 print(f"사용자: {user_info['name']}, 이메일: {user_info['email']}")
 ```
 
-## 상태(Status) 예시
+＃＃ステータス（Status）の例
 
-### 프로젝트 상태
-- **draft**: 초안
-- **active**: 활성
-- **in_progress**: 진행 중
-- **completed**: 완료
-- **on_hold**: 보류
-- **cancelled**: 취소됨
+###プロジェクトステータス
+- **draft**: ドラフト
+- **active**: アクティブ
+- **in_progress**：進行中
+- **completed**: 完了
+- **on_hold**: 保留
+- **キャンセル済み**：キャンセル済み
 
-### 작업 상태
-- **todo**: 할 일
-- **in_progress**: 진행 중
-- **review**: 검토 중
-- **completed**: 완료
-- **cancelled**: 취소됨
+### ジョブステータス
+- **todo**: やるべきこと
+- **in_progress**：進行中
+- **review**: レビュー中
+- **completed**: 完了
+- **キャンセル済み**：キャンセル済み
 
-### 우선순위(Priority)
-- **low**: 낮음
-- **medium**: 중간 (기본값)
-- **high**: 높음
-- **urgent**: 긴급
+### 優先順位
+- **low**: 低
+- **medium**：中（デフォルト）
+- **high**: 高
+- **urgent**: 緊急
 
-### 송장서 상태
-- **draft**: 초안
-- **sent**: 전송됨
-- **viewed**: 확인됨
-- **paid**: 결제됨
-- **overdue**: 지연됨
-- **cancelled**: 취소됨
+### 請求書のステータス
+- **draft**: ドラフト
+- **sent**: 送信済み
+- **viewed**：確認済み
+- **paid**: お支払い済み
+- **overdue**: 遅延
+- **キャンセル済み**：キャンセル済み
 
-### 역할(Role)
-- **owner**: 소유자
-- **admin**: 관리자
-- **manager**: 매니저
-- **member**: 멤버
+### 役割(Role)
+- **owner**: 所有者
+- **admin**: 管理者
+- **manager**: マネージャー
+- **member**: メンバー
 
-## 주요 기능
+##主な機能
 
-- ✅ 클라이언트/고객 관리
-- ✅ 프로젝트 관리
-- ✅ 작업(Task) 관리
-- ✅ 시간 추적
-- ✅ 송장서(Invoice) 생성 및 관리
-- ✅ 팀 멤버 관리
-- ✅ 다양한 리포트 제공
-- ✅ 시간 기반 청구
+- ✅クライアント/顧客管理
+- ✅プロジェクト管理
+- ✅タスク（Task）管理
+- ✅時間追跡
+- ✅ 請求書の作成と管理
+- ✅チームメンバー管理
+- ✅さまざまなレポートを提供
+- ✅時間ベースの請求
 
-## 라이선스
+##ライセンス
 
 MIT License

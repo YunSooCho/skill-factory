@@ -1,6 +1,6 @@
 """
 Refiner Client
-AI 기반 콘텐츠 최적화 API 클라이언트
+AIベースのコンテンツ最適化APIクライアント
 """
 
 import requests
@@ -9,9 +9,9 @@ from typing import Optional, Dict, List, Any
 
 class RefinerClient:
     """
-    Refiner API 클라이언트
+    Refiner APIクライアント
 
-    AI 기반 콘텐츠 최적화, 파라프레이징, 문서 개선을 위한 클라이언트
+    AIベースのコンテンツ最適化、パラフレージング、文書改善のためのクライアント
     """
 
     def __init__(
@@ -21,12 +21,12 @@ class RefinerClient:
         timeout: int = 30
     ):
         """
-        Refiner 클라이언트 초기화
+        Refiner クライアントの初期化
 
         Args:
-            api_key: Refiner API 키
-            base_url: API 기본 URL
-            timeout: 요청 타임아웃 (초)
+            api_key: Refiner API キー
+            base_url：APIベースURL
+            timeout：リクエストタイムアウト（秒）
         """
         self.api_key = api_key
         self.base_url = base_url.rstrip('/')
@@ -46,19 +46,19 @@ class RefinerClient:
         params: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        API 요청 전송
+        APIリクエストの送信
 
         Args:
-            method: HTTP 메서드
-            endpoint: API 엔드포인트
-            data: 요청 본문 데이터
-            params: URL 파라미터
+            method: HTTP メソッド
+            endpoint: API エンドポイント
+            data: 要求本文データ
+            params: URL パラメータ
 
         Returns:
-            API 응답 데이터
+            API応答データ
 
         Raises:
-            requests.RequestException: API 요청 실패
+            requests.RequestException: API リクエストに失敗しました
         """
         url = f"{self.base_url}/{endpoint.lstrip('/')}"
         response = self.session.request(
@@ -79,16 +79,16 @@ class RefinerClient:
         goal: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        텍스트 최적화 (글 고치기)
+        テキストの最適化(書き換え)
 
         Args:
-            text: 최적화할 텍스트
-            tone: 톤 (professional, casual, formal, friendly)
-            length: 길이 (shorter, same, longer)
-            goal: 최적화 목표 (클라리티, 설득력, 명확성 등)
+            text: 最適化するテキスト
+            tone: トーン (professional, casual, formal, friendly)
+            length: 長さ (shorter, same, longer)
+            goal：最適化目標（クラリティ、説得力、明確性など）
 
         Returns:
-            최적화된 텍스트 및 메타데이터
+            最適化されたテキストとメタデータ
         """
         data = {
             'text': text,
@@ -108,15 +108,15 @@ class RefinerClient:
         variations: int = 3
     ) -> Dict[str, Any]:
         """
-        텍스트 파라프레이징 (다시 쓰기)
+        テキストパラフレージング(再書き込み)
 
         Args:
-            text: 파라프레이징할 텍스트
-            style: 스타일 (standard, academic, creative, business)
-            variations: 변형 개수
+            text: パラフレージングするテキスト
+            style: スタイル (standard, academic, creative, business)
+            variations: 変形数
 
         Returns:
-            파라프레이징된 텍스트 목록
+            パラフレージングされたテキストのリスト
         """
         data = {
             'text': text,
@@ -133,15 +133,15 @@ class RefinerClient:
         format: str = "paragraph"
     ) -> Dict[str, Any]:
         """
-        텍스트 요약
+        テキストの要約
 
         Args:
-            text: 요약할 텍스트
-            max_length: 최대 길이 (문자 수)
-            format: 요약 포맷 (paragraph, bullet, sentence)
+            text: 要約するテキスト
+            max_length：最大長（文字数）
+            format: 要約フォーマット (paragraph, bullet, sentence)
 
         Returns:
-            요약된 텍스트
+            要約されたテキスト
         """
         data = {
             'text': text,
@@ -159,14 +159,14 @@ class RefinerClient:
         language: str = "en"
     ) -> Dict[str, Any]:
         """
-        문법 및 맞춤법 검사
+        文法とスペルチェック
 
         Args:
-            text: 검사할 텍스트
-            language: 언어 코드 (en, ko, ja, zh)
+            text: 検査するテキスト
+            language: 言語コード (en, ja, ja, zh)
 
         Returns:
-            문법 오류 및 수정 제안
+            文法エラーと修正提案
         """
         data = {
             'text': text,
@@ -182,15 +182,15 @@ class RefinerClient:
         length: int = 200
     ) -> Dict[str, Any]:
         """
-        텍스트 확장 (내용 추가)
+        テキスト拡張(コンテンツの追加)
 
         Args:
-            text: 확장할 텍스트
-            context: 추가 컨텍스트
-            length: 추가할 길이 (문자 수)
+            text: 拡張するテキスト
+            context: 追加のコンテキスト
+            length：追加する長さ（文字数）
 
         Returns:
-            확장된 텍스트
+            拡張テキスト
         """
         data = {
             'text': text,
@@ -209,15 +209,15 @@ class RefinerClient:
         source_language: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        텍스트 번역
+        テキスト翻訳
 
         Args:
-            text: 번역할 텍스트
-            target_language: 대상 언어 코드 (en, ko, ja, zh, fr, de, es)
-            source_language: 원본 언어 코드 (선택 - 자동 감지)
+            text: 翻訳するテキスト
+            target_language：ターゲット言語コード（en、ja、ja、zh、fr、de、es）
+            source_language：元の言語コード（選択 - 自動検出）
 
         Returns:
-            번역된 텍스트
+            翻訳されたテキスト
         """
         data = {
             'text': text,
@@ -234,13 +234,13 @@ class RefinerClient:
         text: str
     ) -> Dict[str, Any]:
         """
-        감성 분석
+        感情分析
 
         Args:
-            text: 분석할 텍스트
+            text: 分析するテキスト
 
         Returns:
-            감성 분석 결과 (긍정/부정/중립, 점수)
+            感性分析結果（肯定/否定/中立、スコア）
         """
         data = {'text': text}
 
@@ -252,14 +252,14 @@ class RefinerClient:
         max_keywords: int = 10
     ) -> Dict[str, Any]:
         """
-        키워드 추출
+        キーワード抽出
 
         Args:
-            text: 키워드 추출할 텍스트
-            max_keywords: 최대 키워드 개수
+            text: キーワード抽出するテキスト
+            max_keywords：最大キーワード数
 
         Returns:
-            추출된 키워드 목록 및 점수
+            抽出されたキーワードのリストとスコア
         """
         data = {
             'text': text,
@@ -275,15 +275,15 @@ class RefinerClient:
         style: str = "engaging"
     ) -> Dict[str, Any]:
         """
-        제목 생성
+        タイトルの作成
 
         Args:
-            text: 텍스트 본문
-            count: 제안 개수
-            style: 스타일 (engaging, professional, creative, concise)
+            text: テキスト本文
+            count：提案数
+            style: スタイル (engaging, professional, creative, concise)
 
         Returns:
-            생성된 제안 제목 목록
+            生成された提案タイトルのリスト
         """
         data = {
             'text': text,
@@ -300,15 +300,15 @@ class RefinerClient:
         reading_level: str = "medium"
     ) -> Dict[str, Any]:
         """
-        가독성 개선
+        読みやすさの改善
 
         Args:
-            text: 개선할 텍스트
-            target_audience: 타겟 오디언스 (general, academic, business, children)
-            reading_level: 읽기 수준 (easy, medium, advanced)
+            text: 改善するテキスト
+            target_audience：ターゲットオーディエンス（general、academic、business、children）
+            reading_level：読み取りレベル（easy、medium、advanced）
 
         Returns:
-            개선된 텍스트 및 원본 점수 비교
+            改善されたテキストと元のスコアの比較
         """
         data = {
             'text': text,
@@ -325,15 +325,15 @@ class RefinerClient:
         **kwargs
     ) -> Dict[str, Any]:
         """
-        배치 처리
+        バッチ処理
 
         Args:
-            texts: 처리할 텍스트 목록
-            operation: 작업 유형 (refine, paraphrase, summarize, grammar)
-            **kwargs: 작업별 추가 파라미터
+            texts: 処理するテキストのリスト
+            operation: ジョブタイプ (refine, paraphrase, summarize, grammar)
+            **kwargs：タスク別の追加パラメータ
 
         Returns:
-            배치 처리 결과 목록
+            バッチ処理結果一覧
         """
         data = {
             'texts': texts,
@@ -350,14 +350,14 @@ class RefinerClient:
         end_date: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        사용 통계 조회
+        使用統計の照会
 
         Args:
-            start_date: 시작 날짜 (YYYY-MM-DD)
-            end_date: 종료 날짜 (YYYY-MM-DD)
+            start_date：開始日（YYYY-MM-DD）
+            end_date: 終了日 (YYYY-MM-DD)
 
         Returns:
-            사용 통계
+            使用統計
         """
         params = {}
         if start_date:
@@ -368,5 +368,5 @@ class RefinerClient:
         return self._request('GET', '/stats', params=params)
 
     def close(self):
-        """세션 종료"""
+        """セッション終了"""
         self.session.close()

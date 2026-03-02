@@ -1,48 +1,48 @@
 # Constant Contact API Client
 
-Yoom Apps 연계용 Constant Contact V3 API 클라이언트
+Yoom Apps連携用Constant Contact V3 APIクライアント
 
-## 인증 정보 획득 방법
+##認証情報取得方法
 
-1. **Constant Contact 개발자 계정**: https://app.constantcontact.com/
-2. **API Key 생성**:
+1. **Constant Contact 開発者アカウント**: https://app.constantcontact.com/
+2. **API Key 生成**:
    - My Account → API & OAuth → Register Application
-   - API Key 확인
-3. **OAuth Access Token 획득**:
-   - OAuth 2.0 Authorization Code Flow 사용
-   - Access Token 발급
+   - API Keyの確認
+3. **OAuth Access Token 獲得**:
+   - OAuth 2.0 Authorization Code Flowを使用する
+   - アクセストークン発行
 
-## 예제
+## 例
 
-### 컨택트 생성
+### コンタクトの作成
 ```bash
 python constant_contact_client.py create <API_KEY> test@example.com John Doe
 ```
 
-### 컨택트 검색
+### コンタクト検索
 ```bash
 python constant_contact_client.py search <API_KEY> test@example.com
 ```
 
-### 리스트 생성
+### リスト生成
 ```bash
 python constant_contact_client.py create-list <API_KEY> "My List"
 ```
 
-### Webhook 서버 실행
+### Webhookサーバーの実行
 ```bash
 python constant_contact_client.py webhook 8080
 ```
 
-## 주요 기능
+##主な機能
 
-- **컨택트 관리**: 생성, 검색, 수정, 삭제
-- **컨택트 리스트**: 생성, 검색, 수정, 삭제
-- **태그**: 생성, 검색, 수정, 삭제
-- **활동 데이터**: 컨택트 활동, 행동 요약
-- **Webhook**: 새 컨택트, 수정, 이메일 이벤트 처리
+- **コンタクト管理**：作成、検索、編集、削除
+- **コンタクトリスト**：作成、検索、編集、削除
+- **タグ**：作成、検索、編集、削除
+- **活動データ**：コンタクト活動、行動のまとめ
+- **Webhook**：新しい連絡先、編集、電子メールイベントの処理
 
-## 인증
+##認証
 
 - OAuth 2.0 Bearer Token
-- Rate Limiting 처리 (429 상태 코드 감지)
+- Rate Limiting処理(429ステータスコード検出)

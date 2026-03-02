@@ -1,21 +1,21 @@
-# Fatture in Cloud API 클라이언트
+#Fatture in Cloud API クライアント
 
-Fatture in Cloud를 위한 Python API 클라이언트입니다. 이탈리아 청구서 및 결제 관리 기능을 제공합니다.
+Fatture in Cloud用のPython APIクライアント。イタリアの請求書と支払い管理機能を提供します。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [Fatture in Cloud](https://app.fattureincloud.it/)에 로그인
-2. Settings > Developer > App Settings 이동
-3. OAuth 앱 생성 또는 API 키 발급
-4. Access Token 및 Company ID 확인
+1. [Fatture in Cloud](https://app.fattureincloud.it/)에 ログイン
+2. Settings > Developer > App Settingsの移動
+3. OAuthアプリの生成またはAPIキーの発行
+4. Access Token と Company ID の確認
 
-## 사용법
+##使用法
 
 ```python
 from fatture_in_cloud import FattureInCloudClient, FattureInCloudError
@@ -63,14 +63,14 @@ client.create_client({
 })
 ```
 
-## 기능
+## 機能
 
-- 청구서 (Issued Documents) CRUD
-- 수신 문서 (Received Documents) 관리
-- 거래처 (Clients) 관리
-- 제품 (Products) 관리
-- 청구서 이메일 발송
+- 請求書 (Issued Documents) CRUD
+- 受信文書(Received Documents)の管理
+- 取引先（クライアント）の管理
+- 製品(Products)管理
+- 請求書Eメールを送信
 
-## 라이선스
+##ライセンス
 
 MIT License

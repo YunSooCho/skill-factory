@@ -1,35 +1,35 @@
-# Scraptio API 클라이언트
+#Scraptio APIクライアント
 
-Scraptio를 위한 Python API 클라이언트입니다. 웹사이트에서 텍스트, 링크, 이메일을 쉽게 추출할 수 있습니다.
+Scraptio用のPython APIクライアント。ウェブサイトからテキスト、リンク、電子メールを簡単に抽出できます。
 
-## 개요
+## 概要
 
-Scraptio는 복잡한 웹 스크래핑을 단순화한 서비스입니다. Zapier, Make 및 기타 자동화 도구와 연동하여 웹사이트 데이터를 자동으로 추출할 수 있습니다.
+Scraptioは、複雑なWebスクレイピングを簡素化したサービスです。 Zapier、Make、その他の自動化ツールと連携して、ウェブサイトのデータを自動的に抽出できます。
 
-## 설치
+## インストール
 
-의존성 패키지:
+依存パッケージ：
 
 ```bash
 pip install requests
 ```
 
-또는:
+または：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급
+## API キー発行
 
-1. [Scraptio](https://scraptio.com/)에서 계정 생성
-2. 무료 플랜으로 시작 (월 30회 요청)
-3. 대시보드에서 API 키 확인 또는 발급
-4. API 키를 안전하게 저장
+1. [Scraptio](https://scraptio.com/)에서 アカウントの作成
+2.無料プランで開始（月30回要請）
+3.ダッシュボードでAPIキーを確認または発行
+4. API キーを安全に保存
 
-## 사용법
+##使用法
 
-### 초기화
+### 初期化
 
 ```python
 from scraptio import ScraptioClient, ScraptioError
@@ -40,7 +40,7 @@ client = ScraptioClient(
 )
 ```
 
-### 기본 URL 스크래핑
+###デフォルトURLスクレイピング
 
 ```python
 try:
@@ -50,7 +50,7 @@ except ScraptioError as e:
     print("Error:", str(e))
 ```
 
-### CSS 선택자로 특정 데이터 추출
+### CSSセレクタによる特定のデータの抽出
 
 ```python
 css_selectors = {
@@ -65,7 +65,7 @@ result = client.scrape_url(
 )
 ```
 
-### 이메일 추출
+### メール抽出
 
 ```python
 result = client.scrape_url(
@@ -75,7 +75,7 @@ result = client.scrape_url(
 print("Emails:", result.get("emails", []))
 ```
 
-### 링크 추출
+### リンク抽出
 
 ```python
 result = client.scrape_url(
@@ -85,7 +85,7 @@ result = client.scrape_url(
 print("Links:", result.get("links", []))
 ```
 
-### 대기 시간 설정 (자바스크립트 렌더링 대기)
+###待機時間の設定（JavaScriptレンダリング待ち）
 
 ```python
 result = client.scrape_url(
@@ -94,59 +94,59 @@ result = client.scrape_url(
 )
 ```
 
-### 스크래핑 결과 조회
+### スクレイピング結果の照会
 
 ```python
 # 비동기 스크래핑인 경우 결과 ID로 조회
 result = client.get_scrape_result("scrape_id_here")
 ```
 
-### 최근 스크래핑 목록
+###最近のスクレイピングリスト
 
 ```python
 result = client.list_scrapes(limit=20, offset=0)
 print("Recent scrapes:", result.get("scrapes", []))
 ```
 
-## API 메서드
+## APIメソッド
 
 ### scrape_url
 
-웹사이트 URL을 스크래핑하여 데이터를 추출합니다.
+WebサイトのURLをスクラップしてデータを抽出します。
 
-**매개변수:**
-- `url` (str): 스크래핑할 URL (필수)
-- `wait` (int, optional): 스크래핑 전 대기 시간 (밀리초)
-- `css_selectors` (dict, optional): 필드 이름과 CSS 선택자 매핑
-- `extract_emails` (bool): 이메일 추출 여부 (기본값: False)
-- `extract_links` (bool): 링크 추출 여부 (기본값: False)
-- `extract_texts` (bool): 텍스트 추출 여부 (기본값: True)
+**パラメータ：**
+- `url`（str）：スクラップするURL（必須）
+- `wait` (int, optional): スクレイピング前の待機時間 (ミリ秒)
+- `css_selectors`（dict、optional）：フィールド名とCSSセレクタのマッピング
+- `extract_emails`（bool）：電子メールを抽出するかどうか（デフォルト：False）
+- `extract_links`（bool）：リンクを抽出するかどうか（デフォルト：False）
+- `extract_texts`（bool）：テキストを抽出するかどうか（デフォルト：True）
 
-**반환값:**
-- `dict`: 추출된 데이터를 포함한 딕셔너리
+**戻り値:**
+- `dict`：抽出されたデータを含む辞書
 
 ### get_scrape_result
 
-비동기 스크래핑 작업의 결과를 조회합니다.
+非同期スクレイピング操作の結果を照会します。
 
-**매개변수:**
-- `scrape_id` (str): 스크래핑 작업 ID
+**パラメータ：**
+- `scrape_id`（str）：スクレイピングジョブID
 
-**반환값:**
-- `dict`: 스크래핑 결과
+**戻り値:**
+- `dict`：スクレイピング結果
 
 ### list_scrapes
 
-최근 스크래핑 작업 목록을 조회합니다.
+最近のスクレイピングジョブのリストを照会します。
 
-**매개변수:**
-- `limit` (int): 반환할 결과 수 (기본값: 10)
-- `offset` (int): 건너뛸 결과 수 (기본값: 0)
+**パラメータ：**
+- `limit`（int）：返される結果の数（デフォルト：10）
+- `offset`（int）：スキップした結果の数（デフォルト：0）
 
-**반환값:**
-- `dict`: 스크래핑 작업 목록
+**戻り値:**
+- `dict`：スクレイピングジョブリスト
 
-## 에러 처리
+## エラー処理
 
 ```python
 from scraptio import ScraptioError, ScraptioRateLimitError, ScraptioAuthenticationError
@@ -163,11 +163,11 @@ except ScraptioError as e:
 
 ## Rate Limiting
 
-API 요청 간 최소 100ms 지연이 자동으로 적용됩니다.
+APIリクエスト間の最低100msの遅延が自動的に適用されます。
 
-## 예시 코드
+## 例コード
 
-### 전체 예시
+###完全な例
 
 ```python
 from scraptio import ScraptioClient, ScraptioError
@@ -197,13 +197,13 @@ except ScraptioError as e:
     print(f"Error: {str(e)}")
 ```
 
-## 라이선스
+##ライセンス
 
 MIT License
 
-## 지원
+## サポート
 
-- [Scraptio 공식 사이트](https://scraptio.com/)
-- [Scraptio 문서](https://scraptio.notion.site/)
-- [Zapier 통합 가이드](https://scraptio.notion.site/How-to-use-Scraptio-with-Zapier-45ba2b93ffb94df5966d0a9f9b7394a2)
-- [Make 통합 가이드](https://scraptio.notion.site/How-to-use-Scraptio-with-Make-2a727a5acb8746bf9eed039661781722)
+- [Scraptio公式サイト]（https://scraptio.com/)
+- [Scraptioドキュメント]（https://scraptio.notion.site/)
+- [Zapier統合ガイド]（https://scraptio.notion.site/How-to-use-Scraptio-with-Zapier-45ba2b93ffb94df5966d0a9f9b7394a2)
+- [Make統合ガイド]（https://scraptio.notion.site/How-to-use-Scraptio-with-Make-2a727a5acb8746bf9eed039661781722)

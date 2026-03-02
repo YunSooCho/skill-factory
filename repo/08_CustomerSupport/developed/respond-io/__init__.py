@@ -1,5 +1,5 @@
 """
-Respond.io - 멀티채널 고객지원 서비스
+Respond.io - マルチチャンネルカスタマーサポートサービス
 """
 
 from .client import RespondIOClient

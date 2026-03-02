@@ -1,14 +1,14 @@
-# Backlog API 클라이언트
+#Backlog APIクライアント
 
-Backlog를 위한 Python API 클라이언트입니다. 프로젝트 및 이슈 관리 기능을 제공합니다.
+Backlog用のPython APIクライアント。プロジェクトと課題管理機能を提供します。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-## 사용법
+##使用法
 
 ```python
 from backlog import BacklogClient, BacklogError
@@ -26,6 +26,6 @@ issue = client.create_issue({
 })
 ```
 
-## 라이선스
+##ライセンス
 
 MIT License

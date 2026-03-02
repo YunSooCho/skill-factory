@@ -1,5 +1,5 @@
 """
-Reamaze - 고객관계 관리 및 지원 티켓 서비스
+Reamaze - 顧客関係管理およびサポートチケットサービス
 """
 
 from .client import ReamazeClient

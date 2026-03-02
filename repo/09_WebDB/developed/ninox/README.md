@@ -1,23 +1,23 @@
-# Ninox 저코드 데이터베이스 SDK
+＃Ninox低コードデータベースSDK
 
-Ninox는 저코드(low-code)로 데이터베이스를 구축하고 관리할 수 있는 플랫폼에 대한 Python SDK입니다.
+Ninoxは、低コードでデータベースを構築および管理できるプラットフォーム用のPython SDKです。
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [Ninox 웹사이트](https://www.ninox.com)에 접속하여 계정을 생성합니다.
-2. Settings > API 섹션으로 이동합니다.
-3. 'Create API Token' 버튼을 클릭하여 새 API 토큰을 생성합니다.
-4. 생성된 토큰을 안전한 곳에 저장합니다.
+1. [Ninoxウェブサイト]（https://www.ninox.com)에にアクセスしてアカウントを作成します。
+2. Settings > API セクションに移動します。
+3. [Create API Token]ボタンをクリックして新しいAPIトークンを作成します。
+4. 生成されたトークンを安全な場所に保存します。
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from ninox import NinoxClient
@@ -27,7 +27,7 @@ client = NinoxClient(
 )
 ```
 
-### 팀 및 데이터베이스 관리
+###チームとデータベースの管理
 
 ```python
 # 모든 팀 목록
@@ -52,7 +52,7 @@ print(f"데이터베이스: {database}")
 schema = client.get_schema(team_id="team_id", database_id="db_id")
 ```
 
-### 테이블 관리
+### テーブル管理
 
 ```python
 # 테이블 목록
@@ -64,7 +64,7 @@ for table in tables:
 table = client.get_table(team_id="team_id", database_id="db_id", table_id="table_id")
 ```
 
-### 레코드 CRUD 작업
+###レコードCRUD操作
 
 ```python
 # 레코드 생성
@@ -121,7 +121,7 @@ client.delete_record(
 )
 ```
 
-### 정렬 및 페이지네이션
+###ソートとページネーション
 
 ```python
 # 정렬된 레코드 목록
@@ -151,7 +151,7 @@ page2 = client.list_records(
 )
 ```
 
-### 배치 작업
+### バッチジョブ
 
 ```python
 # 여러 레코드 동시 생성
@@ -190,7 +190,7 @@ client.delete_records(
 )
 ```
 
-### 쿼리 및 검색
+###クエリと検索
 
 ```python
 # 쿼리 실행
@@ -226,7 +226,7 @@ filtered_count = client.count_records(
 )
 ```
 
-### 파일 업로드
+### ファイルのアップロード
 
 ```python
 # 레코드에 파일 첨부
@@ -241,7 +241,7 @@ client.upload_file(
 )
 ```
 
-### 관계 설정
+###関係の設定
 
 ```python
 # 레코드 간 관계 설정
@@ -255,7 +255,7 @@ client.create_relationship(
 )
 ```
 
-### 웹훅 관리
+### ウェブフック管理
 
 ```python
 # 웹훅 생성
@@ -279,7 +279,7 @@ client.delete_webhook(
 )
 ```
 
-### 사용자 정보
+### ユーザー情報
 
 ```python
 # 현재 사용자 정보
@@ -287,18 +287,18 @@ user_info = client.get_user_info()
 print(f"사용자: {user_info['name']}")
 ```
 
-## 주요 기능
+##主な機能
 
-- ✅ 팀 및 데이터베이스 관리
-- ✅ 테이블 및 스키마 조회
-- ✅ 레코드 CRUD 작업 (단일 및 배치)
-- ✅ 고급 쿼리 기능
-- ✅ 파일 업로드 및 관리
-- ✅ 테이블 간 관계 설정
-- ✅ 웹훅 지원
-- ✅ 정렬 및 페이지네이션
-- ✅ 실시간 데이터 동기화
+- ✅チームとデータベース管理
+- ✅テーブルとスキーマの照会
+- ✅レコードCRUD操作（シングルとバッチ）
+- ✅高度なクエリ機能
+- ✅ファイルのアップロードと管理
+- ✅テーブル間の関係の設定
+- ✅ウェブフックサポート
+- ✅ソートとページネーション
+- ✅リアルタイムデータ同期
 
-## 라이선스
+##ライセンス
 
 MIT License

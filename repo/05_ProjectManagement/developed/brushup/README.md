@@ -1,14 +1,14 @@
-# Brushup API 클라이언트
+#Brushup APIクライアント
 
-Brushup을 위한 Python API 클라이언트입니다. 디자인 검토 기능을 제공합니다.
+Brushup用のPython APIクライアント。デザインレビュー機能を提供します。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-## 사용법
+##使用法
 
 ```python
 from brushup import BrushupClient, BrushupError
@@ -22,6 +22,6 @@ review = client.create_design_review({
 })
 ```
 
-## 라이선스
+##ライセンス
 
 MIT License

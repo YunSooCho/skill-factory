@@ -1,5 +1,5 @@
 """
-Canny - 피드백 및 기능 요청 관리 서비스
+Canny - フィードバックと機能要求管理サービス
 """
 
 from .client import CannyClient

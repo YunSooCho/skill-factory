@@ -1,32 +1,32 @@
-# LaunchDarkly API 클라이언트
+#LaunchDarkly APIクライアント
 
-LaunchDarkly를 위한 Python 클라이언트입니다. 기능 플래그 관리 기능을 제공합니다.
+LaunchDarklyのためのPythonクライアントです。機能フラグ管理機能を提供します。
 
-## 개요
+## 概要
 
-LaunchDarkly는 기능 플래그 관리 플랫폼입니다. 이 클라이언트는 API를 통해 LaunchDarkly에 접근합니다.
+LaunchDarklyは機能フラグ管理プラットフォームです。このクライアントはAPIを介してLaunchDarklyにアクセスします。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-또는:
+または：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급
+## API キー発行
 
-1. [LaunchDarkly](https://launchdarkly.com/)에서 계정 생성
-2. API 키 발급
-3. 발급된 키를 안전하게 저장
+1. [LaunchDarkly]（https://launchdarkly.com/)에서アカウントの作成
+2. API キー発行
+3. 発行された鍵を安全に保存
 
-## 사용법
+##使用法
 
-### 초기화
+### 初期化
 
 ```python
 from launchdarkly import LaunchDarklyClient, LaunchDarklyError
@@ -37,13 +37,13 @@ client = LaunchDarklyClient(
 )
 ```
 
-### 주요 기능
+###主な機能
 
 - flags
 - projects
 - environments
 
-### 예시
+### 例
 
 ```python
 # 프로젝트 조회
@@ -67,7 +67,7 @@ flag = client.create_flag(
 environments = client.get_environments("my-project")
 ```
 
-## 에러 처리
+## エラー処理
 
 ```python
 try:
@@ -80,10 +80,10 @@ except LaunchDarklyError as e:
     print(f"요청 실패: {str(e)}")
 ```
 
-## 라이선스
+##ライセンス
 
 MIT License
 
-## 지원
+## サポート
 
 - [LaunchDarkly Documentation](https://docs.launchdarkly.com/)

@@ -1,5 +1,5 @@
 """
-Superchat - 라이브채팅 및 고객지원 서비스
+Superchat - ライブチャットとカスタマーサポートサービス
 """
 
 from .client import SuperchatClient

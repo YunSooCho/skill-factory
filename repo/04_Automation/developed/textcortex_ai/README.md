@@ -1,32 +1,32 @@
-# TextCortex AI API 클라이언트
+#TextCortex AI APIクライアント
 
-TextCortex AI를 위한 Python API 클라이언트입니다. 다양한 텍스트 생성 및 변환 기능을 제공합니다.
+TextCortex AI用のPython APIクライアントです。さまざまなテキスト生成および変換機能を提供します。
 
-## 개요
+## 概要
 
-TextCortex AI는 텍스트 요약, 생성, 번역, 재작성 등 다양한 AI 기반 텍스트 기능을 제공합니다.
+TextCortex AIは、テキストの要約、生成、翻訳、書き換えなど、さまざまなAIベースのテキスト機能を提供します。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-또는:
+または：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급
+## API キー発行
 
-1. [TextCortex](https://textcortex.com/)에서 계정 생성
-2. API 키 발급
-3. API 키를 안전하게 저장
+1. [TextCortex](https://textcortex.com/)에서 アカウントの作成
+2. API キー発行
+3. API キーを安全に保存
 
-## 사용법
+##使用法
 
-### 초기화
+### 初期化
 
 ```python
 from textcortex_ai import TextCortexClient, TextCortexError
@@ -37,7 +37,7 @@ client = TextCortexClient(
 )
 ```
 
-### 1. 텍스트 요약
+### 1. テキストの要約
 
 ```python
 result = client.generate_summary(
@@ -47,7 +47,7 @@ result = client.generate_summary(
 print("Summary:", result.get("summary"))
 ```
 
-### 2. 제품 설명 생성
+### 2. 製品説明の生成
 
 ```python
 result = client.generate_product_description(
@@ -57,7 +57,7 @@ result = client.generate_product_description(
 )
 ```
 
-### 3. 텍스트 단순화
+### 3. テキストの簡略化
 
 ```python
 result = client.simplify_text(
@@ -66,7 +66,7 @@ result = client.simplify_text(
 )
 ```
 
-### 4. 번역
+### 4. 翻訳
 
 ```python
 result = client.translate_text(
@@ -75,7 +75,7 @@ result = client.translate_text(
 )
 ```
 
-### 5. paraphrase (의역)
+### 5. paraphrase (義務)
 
 ```python
 result = client.paraphrase_text(
@@ -84,7 +84,7 @@ result = client.paraphrase_text(
 )
 ```
 
-### 6. 텍스트 재작성
+### 6. テキストの書き換え
 
 ```python
 result = client.rewrite_text(
@@ -93,7 +93,7 @@ result = client.rewrite_text(
 )
 ```
 
-### 7. 소셜 미디어 포스트 생성
+### 7. ソーシャルメディアポストの作成
 
 ```python
 result = client.generate_social_media_post(
@@ -103,7 +103,7 @@ result = client.generate_social_media_post(
 )
 ```
 
-### 8. 텍스트 완성
+### 8. テキストの完成
 
 ```python
 result = client.generate_text_completion(
@@ -112,7 +112,7 @@ result = client.generate_text_completion(
 )
 ```
 
-### 9. 코드 생성
+### 9. コード生成
 
 ```python
 result = client.generate_code(
@@ -121,7 +121,7 @@ result = client.generate_code(
 )
 ```
 
-### 10. 이메일 생성
+### 10. 電子メールの生成
 
 ```python
 result = client.generate_email(
@@ -131,7 +131,7 @@ result = client.generate_email(
 )
 ```
 
-## 에러 처리
+## エラー処理
 
 ```python
 from textcortex_ai import TextCortexError, TextCortexRateLimitError, TextCortexAuthenticationError
@@ -146,11 +146,11 @@ except TextCortexError as e:
     print(f"요청 실패: {str(e)}")
 ```
 
-## 라이선스
+##ライセンス
 
 MIT License
 
-## 지원
+## サポート
 
-- [TextCortex 공식 사이트](https://textcortex.com/)
-- [TextCortex API 문서](https://api.textcortex.com/)
+- [TextCortex公式サイト]（https://textcortex.com/)
+- [TextCortex APIドキュメント]（https://api.textcortex.com/)

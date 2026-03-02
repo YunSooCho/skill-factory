@@ -1,23 +1,23 @@
 # Canny SDK
 
-Canny는 사용자 피드백 및 기능 요청 관리를 위한 Python SDK입니다.
+Cannyは、ユーザーフィードバックと機能要求を管理するためのPython SDKです。
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [Canny 웹사이트](https://canny.io)에 접속하여 계정을 생성합니다.
-2. Settings > API Keys 메뉴로 이동합니다.
-3. 'Create API Key' 버튼을 클릭하여 새 API 키를 생성합니다.
-4. 생성된 API 키를 안전한 곳에 저장합니다.
+1. [Cannyウェブサイト]（https://canny.io)에にアクセスしてアカウントを作成します。
+2. Settings > API Keys メニューに移動します。
+3. [Create API Key]ボタンをクリックして新しいAPIキーを生成します。
+4. 生成された API キーを安全な場所に保存します。
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from canny import CannyClient
@@ -28,7 +28,7 @@ client = CannyClient(
 )
 ```
 
-### 피드백 게시물 생성
+###フィードバック投稿の作成
 
 ```python
 post = client.create_post(
@@ -42,7 +42,7 @@ post = client.create_post(
 print(f"게시물 ID: {post['id']}")
 ```
 
-### 게시물 목록 조회
+###投稿リストの閲覧
 
 ```python
 posts = client.list_posts(
@@ -55,7 +55,7 @@ for post in posts:
     print(f"{post['id']}: {post['title']} ({post['status']})")
 ```
 
-### 게시물 업데이트
+###投稿の更新
 
 ```python
 updated_post = client.update_post(
@@ -65,7 +65,7 @@ updated_post = client.update_post(
 )
 ```
 
-### 댓글 추가
+###コメントを追加
 
 ```python
 comment = client.create_comment(
@@ -75,7 +75,7 @@ comment = client.create_comment(
 )
 ```
 
-### 투표 생성
+###投票の作成
 
 ```python
 vote = client.create_vote(
@@ -85,7 +85,7 @@ vote = client.create_vote(
 )
 ```
 
-### 사용자 생성
+### ユーザーの作成
 
 ```python
 user = client.create_user(
@@ -96,7 +96,7 @@ user = client.create_user(
 )
 ```
 
-### 보드 목록 조회
+### ボードリストの照会
 
 ```python
 boards = client.list_boards()
@@ -105,7 +105,7 @@ for board in boards:
     print(f"{board['id']}: {board['name']}")
 ```
 
-### 상태 변경
+### 状態の変更
 
 ```python
 status_change = client.create_status_change(
@@ -116,15 +116,15 @@ status_change = client.create_status_change(
 )
 ```
 
-## 기능
+## 機能
 
-- ✅ 피드백 게시물 생성, 조회, 업데이트
-- ✅ 댓글 관리
-- ✅ 투표 기능
-- ✅ 사용자 관리
-- ✅ 보드 관리
-- ✅ 상태 변경 추적
+- ✅フィードバック投稿の作成、照会、更新
+- ✅コメント管理
+- ✅投票機能
+- ✅ユーザー管理
+- ✅ボード管理
+- ✅ステータス変更追跡
 
-## 라이선스
+##ライセンス
 
 MIT License

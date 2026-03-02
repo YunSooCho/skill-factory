@@ -1,32 +1,32 @@
-# Vapi API 클라이언트
+#Vapi APIクライアント
 
-Vapi를 위한 Python API 클라이언트입니다. 음성 통화 자동화 기능을 제공합니다.
+Vapi用のPython APIクライアントです。音声通話の自動化機能を提供します。
 
-## 개요
+## 概要
 
-Vapi는 AI 기반 음성 통화 자동화 서비스입니다. 통화 생성, 로그 검색, 분석 등의 기능을 제공합니다.
+VapiはAIベースの音声通話自動化サービスです。コール生成、ログ検索、分析などの機能を提供します。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-또는:
+または：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급
+## API キー発行
 
-1. [Vapi](https://vapi.ai/)에서 계정 생성
-2. API 키 발급
-3. API 키를 안전하게 저장
+1. [Vapi]（https://vapi.ai/)에서アカウントを作成
+2. API キー発行
+3. API キーを安全に保存
 
-## 사용법
+##使用法
 
-### 초기화
+### 初期化
 
 ```python
 from vapi import VapiClient, VapiError
@@ -37,7 +37,7 @@ client = VapiClient(
 )
 ```
 
-### 발신 통화 생성
+###発信通話の生成
 
 ```python
 result = client.create_outbound_call(
@@ -50,7 +50,7 @@ call_id = result.get("id")
 print(f"Call ID: {call_id}")
 ```
 
-### 통화 검색
+###通話検索
 
 ```python
 result = client.search_calls(
@@ -63,7 +63,7 @@ for call in result.get("calls", []):
     print(f"- {call.get('id')}: {call.get('status')}")
 ```
 
-### 로그 검색
+### ログ検索
 
 ```python
 result = client.search_logs(
@@ -73,7 +73,7 @@ result = client.search_logs(
 )
 ```
 
-### 데이터 분석
+### データ分析
 
 ```python
 result = client.search_data_analytics(
@@ -84,7 +84,7 @@ result = client.search_data_analytics(
 )
 ```
 
-### 파일 업로드
+### ファイルのアップロード
 
 ```python
 result = client.upload_file(
@@ -97,7 +97,7 @@ file_id = result.get("id")
 print(f"File ID: {file_id}")
 ```
 
-### 통화 상세 조회
+### 通話詳細の照会
 
 ```python
 call = client.get_call("call_id_here")
@@ -105,7 +105,7 @@ print(f"Status: {call.get('status')}")
 print(f"Duration: {call.get('duration')}")
 ```
 
-## 에러 처리
+## エラー処理
 
 ```python
 try:
@@ -118,11 +118,11 @@ except VapiError as e:
     print(f"요청 실패: {str(e)}")
 ```
 
-## 라이선스
+##ライセンス
 
 MIT License
 
-## 지원
+## サポート
 
-- [Vapi 공식 사이트](https://vapi.ai/)
-- [Vapi 문서](https://docs.vapi.ai/)
+- [Vapi公式サイト]（https://vapi.ai/)
+- [Vapiドキュメント]（https://docs.vapi.ai/)

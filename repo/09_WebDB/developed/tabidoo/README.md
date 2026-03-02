@@ -1,23 +1,23 @@
-# Tabidoo 데이터베이스 SDK
+#TabidooデータベースSDK
 
-Tabidoo는 간편한 데이터베이스 관리 플랫폼에 대한 Python SDK입니다.
+Tabidooは、簡単なデータベース管理プラットフォーム用のPython SDKです。
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [Tabidoo](https://tabidoo.io)에 접속하여 계정을 생성합니다.
-2. 설정(Settings) > API Keys 섹션으로 이동합니다.
-3. 새 API 키를 생성합니다.
-4. 생성된 API 키를 안전한 곳에 저장합니다.
+1. [Tabidoo](https://tabidoo.io)에 にアクセスしてアカウントを作成します。
+2. 「設定」(Settings) > API Keys セクションに移動します。
+3. 新しい API キーを生成します。
+4. 生成された API キーを安全な場所に保存します。
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from tabidoo import TabidooClient
@@ -27,7 +27,7 @@ client = TabidooClient(
 )
 ```
 
-### 테이블 관리
+### テーブル管理
 
 ```python
 # 모든 테이블 목록
@@ -48,7 +48,7 @@ new_table = client.create_table(
 client.delete_table(table_id="table_id")
 ```
 
-### 행(Row) 관리
+### 行(Row)の管理
 
 ```python
 # 행 목록 조회
@@ -75,7 +75,7 @@ client.update_row(
 client.delete_row(table_id="table_id", row_id="row_id")
 ```
 
-### 쿼리 및 일괄 처리
+### クエリとバッチ処理
 
 ```python
 # 쿼리
@@ -99,7 +99,7 @@ client.batch_create_rows(
 )
 ```
 
-### 열(Column) 관리
+### 列(Column)の管理
 
 ```python
 # 열 목록
@@ -116,7 +116,7 @@ client.add_column(
 client.delete_column(table_id="table_id", column_id="column_id")
 ```
 
-### 폼(Form) 관리
+### フォーム(Form)の管理
 
 ```python
 # 폼 목록
@@ -133,15 +133,15 @@ client.create_form(
 client.delete_form(form_id="form_id")
 ```
 
-## 주요 기능
+##主な機能
 
-- ✅ 테이블 관리
-- ✅ 행(Row) CRUD 작업
-- ✅ 열(Column) 관리
-- ✅ 쿼리 및 필터링
-- ✅ 일괄 작업 지원
-- ✅ 폼(Form) 생성
+- ✅テーブル管理
+- ✅行（Row）CRUD操作
+- ✅列(Column)管理
+- ✅クエリとフィルタリング
+- ✅バッチジョブのサポート
+- ✅ フォーム(Form)の生成
 
-## 라이선스
+##ライセンス
 
 MIT License

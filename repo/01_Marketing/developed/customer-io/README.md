@@ -1,23 +1,23 @@
 # Customer.io API Client
 
-Customer.io용 Python 클라이언트 - 고객 참여 및 자동화 플랫폼
+Customer.io用Pythonクライアント - 顧客エンゲージメントと自動化プラットフォーム
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API Credentials 획득
+## API Credentialsを取得
 
-1. [Customer.io 계정 생성](https://customer.io/)
-2. 로그인 후 Settings > Integrations > API Credentials 접근
-3. Site ID와 API Key 획득
-4. 리전 확인 (US 또는 EU)
+1. [Customer.io アカウントの作成](https://customer.io/)
+2. ログイン後の Settings > Integrations > API Credentials アクセス
+3. Site IDとAPI Keyを取得
+4.リージョンの確認（USまたはEU）
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from customer_io_client import create_customerio_client
@@ -29,7 +29,7 @@ client = create_customerio_client(
 )
 ```
 
-### 고객 생성
+### 顧客作成
 
 ```python
 customer = client.create_customer(
@@ -47,7 +47,7 @@ customer = client.create_customer(
 print(f"Customer ID: {customer.get('id')}")
 ```
 
-### 고객 업데이트
+###カスタマーアップデート
 
 ```python
 client.update_customer(
@@ -57,13 +57,13 @@ client.update_customer(
 )
 ```
 
-### 고객 삭제
+### 顧客の削除
 
 ```python
 client.delete_customer(id='customer_123')
 ```
 
-### 고객 이벤트 추적
+### 顧客イベントの追跡
 
 ```python
 client.track_customer_event(
@@ -78,7 +78,7 @@ client.track_customer_event(
 )
 ```
 
-### 익명 이벤트 추적
+### 匿名イベントの追跡
 
 ```python
 client.track_anonymous_event(
@@ -91,7 +91,7 @@ client.track_anonymous_event(
 )
 ```
 
-### 수동 세그먼트에 고객 추가
+### 手動セグメントに顧客を追加
 
 ```python
 client.add_customer_to_segment(
@@ -100,7 +100,7 @@ client.add_customer_to_segment(
 )
 ```
 
-### 수동 세그먼트에서 고객 삭제
+### 手動セグメントから顧客を削除する
 
 ```python
 client.remove_customer_from_segment(
@@ -109,7 +109,7 @@ client.remove_customer_from_segment(
 )
 ```
 
-### 고객 목록 조회
+### 顧客リストの照会
 
 ```python
 customers = client.list_customers(
@@ -122,7 +122,7 @@ for customer in customers:
     print(f"{customer['email']}: {customer['name']}")
 ```
 
-### 고객 활동 내역 조회
+### 顧客活動履歴の照会
 
 ```python
 activities = client.get_customer_activities(
@@ -135,7 +135,7 @@ for activity in activities:
     print(f"{activity['type']}: {activity['timestamp']}")
 ```
 
-### 폼 제출
+###フォーム提出
 
 ```python
 client.submit_form(
@@ -151,17 +151,17 @@ client.submit_form(
 
 ## Track API vs Management API
 
-Customer.io는 두 개의 API를 제공합니다:
+Customer.ioには2つのAPIがあります。
 
-1. **Management API** (`/v1`): 고객 데이터 관리
-2. **Track API** (`/track/v1`): 이벤트 및 익명 활동 추적
+1. **Management API** (`/v1`): 顧客データの管理
+2. **Track API** (`/track/v1`): イベントと匿名アクティビティの追跡
 
-이 클라이언트는 두 API를 자동으로 처리합니다.
+このクライアントは両方のAPIを自動的に処理します。
 
-## 리전 설정
+##リージョンの設定
 
-- **US 리전**: 기본값, `https://api.customer.io` 및 `https://track.customer.io`
-- **EU 리전**: `https://api-eu.customer.io` 및 `https://track-eu.customer.io`
+- **USリージョン**：デフォルト、 `https://api.customer.io`と `https://track.customer.io`
+- **EUリージョン**： `https://api-eu.customer.io`と `https://track-eu.customer.io`
 
 ```python
 client = create_customerio_client(
@@ -171,15 +171,15 @@ client = create_customerio_client(
 )
 ```
 
-## 주요 기능
+##主な機能
 
-1. **고객 관리**: 생성, 업데이트, 삭제, 조회
-2. **이벤트 추적**: 고객 및 익명 이벤트
-3. **세그먼트 관리**: 수동 세그먼트 조작
-4. **활동 내역**: 고객 활동 기록 조회
-5. **폼 제출**: 웹폼 데이터 수집
+1. **顧客管理**: 作成、更新、削除、照会
+2. **イベント追跡**：顧客と匿名イベント
+3. **セグメント管理**: 手動セグメント操作
+4. **活動履歴**: 顧客活動記録の照会
+5. **フォーム提出**: Webフォームデータの収集
 
-## 에러 처리
+## エラー処理
 
 ```python
 from customer_io_client import CustomerIOError, RateLimitError
@@ -195,20 +195,20 @@ except CustomerIOError as e:
     print(f"API error: {e}")
 ```
 
-## API 제한
+## APIの制限
 
-- 기본 제한: 초당 60 요청
-- Rate limit 초과 시 `Retry-After` 헤더 반환
-- 무료 요금제: 월 400 고객
-- 유료 요금제: 무제한
+- 基本制限：毎秒60リクエスト
+- Rate limitを超えると `Retry-After`ヘッダを返す
+- 無料プラン：月400のお客様
+- 有料プラン：無制限
 
-## 모범 사례
+## ベストプラクティス
 
-1. **이메일 필수**: 이메일은 식별자로 사용됩니다
-2. **속성 정규화**: 커스텀 속성에 underscore 사용 (`last_login`)
-3. **일관된 이벤트 이름**: 이벤트 이름에 snake_case 사용
-4. **Rate Limiting**: 클라이언트가 자동 처리하므로 걱정 없음
+1. **Eメール必須**：Eメールは識別子として使用されます
+2. **属性の正規化**: カスタム属性に underscore を使う (`last_login`)
+3. **一貫したイベント名**：イベント名にsnake_caseを使用する
+4. **Rate Limiting**: クライアントが自動処理するので心配なし
 
-## 지원
+## サポート
 
-자세한 API 문서: [Customer.io API Documentation](https://customer.io/docs/api/)
+詳細なAPIドキュメント：[Customer.io API Documentation]（https://customer.io/docs/api/)

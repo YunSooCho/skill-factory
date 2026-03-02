@@ -1,5 +1,5 @@
 """
-AskHandle - 고객 문의 및 요청 관리 서비스
+AskHandle - 顧客の問い合わせおよび要求管理サービス
 """
 
 from .client import AskHandleClient

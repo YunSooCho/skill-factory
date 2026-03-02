@@ -1,14 +1,14 @@
-# Dandoli API 클라이언트
+#Dandoli APIクライアント
 
-Dandoli를 위한 Python API 클라이언트입니다. 작업 관리 기능을 제공합니다.
+Dandoli用のPython APIクライアントです。ジョブ管理機能を提供します。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-## 사용법
+##使用法
 
 ```python
 from dandoli import DandoliClient, DandoliError
@@ -22,6 +22,6 @@ tasks = client.get_tasks()
 task = client.create_task({"title": "Task", "description": "Description"})
 ```
 
-## 라이선스
+##ライセンス
 
 MIT License

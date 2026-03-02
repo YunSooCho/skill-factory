@@ -199,7 +199,7 @@ class GoogleSheetsClient:
         sheets: Optional[List[Dict[str, Any]]] = None
     ) -> Dict[str, Any]:
         """
-        8. 새로운 스프레드시트를 생성하는 (Create New Spreadsheet)
+        8. 新しいスプレッドシートを作成する (Create New Spreadsheet)
         
         Creates a new Google Sheets spreadsheet.
         
@@ -262,7 +262,7 @@ class GoogleSheetsClient:
         include_grid_data: bool = False
     ) -> Dict[str, Any]:
         """
-        13. 스프레드시트의 정보를 가져오기 (Get Spreadsheet Information)
+        13. スプレッドシートの情報を取得する (Get Spreadsheet Information)
         
         Retrieves metadata about a spreadsheet.
         
@@ -314,7 +314,7 @@ class GoogleSheetsClient:
         columns: int = 26
     ) -> Dict[str, Any]:
         """
-        20. 새로운 시트(탭)을 추가하는 (Add New Sheet)
+        20. 新しいシート (タブ) を追加する (Add New Sheet)
         
         Adds a new sheet (tab) to the spreadsheet.
         
@@ -371,7 +371,7 @@ class GoogleSheetsClient:
         sheet_name: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        15. 시트(탭)을 삭제하는 (Delete Sheet)
+        15.シート（タブ）を削除する（Delete Sheet）
         
         Deletes a sheet from the spreadsheet.
         
@@ -423,7 +423,7 @@ class GoogleSheetsClient:
         new_title: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        11. 시트(탭)을 복사하는 (Copy Sheet)
+        11.シート（タブ）をコピーする（Copy Sheet）
         
         Copies a sheet within the same spreadsheet.
         
@@ -494,7 +494,7 @@ class GoogleSheetsClient:
         new_title: str = None
     ) -> Dict[str, Any]:
         """
-        4. 시트 이름을 업데이트하는 (Update Sheet Name)
+        4. シート名を更新する (Update Sheet Name)
         
         Renames a sheet.
         
@@ -548,7 +548,7 @@ class GoogleSheetsClient:
         spreadsheet_id: str
     ) -> List[Dict[str, Any]]:
         """
-        21. 시트 이름을 가져오기 (Get Sheet Names)
+        21.シート名を取得する（Get Sheet Names）
         
         Retrieves all sheet names in the spreadsheet.
         
@@ -570,7 +570,7 @@ class GoogleSheetsClient:
         sheet_name: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        14. 시트를 숨기기 (Hide Sheet)
+        14. シートを隠す (Hide Sheet)
         
         Hides a sheet from the spreadsheet.
         
@@ -626,7 +626,7 @@ class GoogleSheetsClient:
         value_render_option: str = 'FORMATTED_VALUE'
     ) -> Dict[str, Any]:
         """
-        16. 값을 가져오기 (Get Values)
+        16. 値の取得 (Get Values)
         
         Retrieves values from a range of cells.
         
@@ -667,7 +667,7 @@ class GoogleSheetsClient:
         value_input_option: str = 'USER_ENTERED'
     ) -> Dict[str, Any]:
         """
-        6. 셀에 값을 입력하는 (Enter Value in Cell)
+        6. セルに値を入力する (Enter Value in Cell)
         
         Sets a value in a single cell or small range.
         
@@ -713,7 +713,7 @@ class GoogleSheetsClient:
         value_input_option: str = 'USER_ENTERED'
     ) -> Dict[str, Any]:
         """
-        9. 범위에 값을 입력하는 (Enter Values in Range)
+        9. 範囲に値を入力する (Enter Values in Range)
         
         Sets values in a range of cells.
         
@@ -760,7 +760,7 @@ class GoogleSheetsClient:
         sheet_name: str = ''
     ) -> Dict[str, Any]:
         """
-        5. 여러 열에 값을 입력하는 (Enter Values in Multiple Columns)
+        5. 複数の列に値を入力する (Enter Values in Multiple Columns)
         
         Sets values in multiple columns at specified positions.
         
@@ -841,7 +841,7 @@ class GoogleSheetsClient:
         match_entire_cell: bool = False
     ) -> Dict[str, Any]:
         """
-        3. 값을 치환하는 (Replace Values)
+        3. 値を置換する (Replace Values)
         
         Finds and replaces values in a sheet.
         
@@ -917,7 +917,7 @@ class GoogleSheetsClient:
         range_a1: str
     ) -> Dict[str, Any]:
         """
-        17. 값을 삭제하는 (Delete Values)
+        17. 値を削除する (Delete Values)
         
         Clears values from a range of cells.
         
@@ -1014,7 +1014,7 @@ class GoogleSheetsClient:
         number_of_rows: int = 1
     ) -> Dict[str, Any]:
         """
-        1. 행을 삭제하는 (Delete Row)
+        1. 行を削除する (Delete Row)
         
         Deletes rows from a sheet.
         
@@ -1074,7 +1074,7 @@ class GoogleSheetsClient:
         number_of_columns: int = 1
     ) -> Dict[str, Any]:
         """
-        18. 열을 추가하는 (Add Column)
+        18. 列を追加する (Add Column)
         
         Adds columns to a sheet.
         
@@ -1134,7 +1134,7 @@ class GoogleSheetsClient:
         number_of_columns: int = 1
     ) -> Dict[str, Any]:
         """
-        2. 열을 삭제하는 (Delete Column)
+        2. 列を削除する (Delete Column)
         
         Deletes columns from a sheet.
         
@@ -1195,7 +1195,7 @@ class GoogleSheetsClient:
         sheet_name: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        10. 특정 열로 정렬하는 (Sort by Specific Column)
+        10. 特定の列に並べ替える (Sort by Specific Column)
         
         Sorts data in a range by a specific column.
         
@@ -1261,7 +1261,7 @@ class GoogleSheetsClient:
         sheet_name: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        19. 지정된 셀에 메모를 추가하는 (Add Note to Specified Cell)
+        19. 指定したセルにメモを追加する（Add Note to Specified Cell）
         
         Adds a note to a cell.
         
@@ -1333,7 +1333,7 @@ class GoogleSheetsClient:
         sheet_name: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        12. 셀에 이미지를 임베드하는 (Embed Image in Cell)
+        12. セルにイメージを埋め込む (Embed Image in Cell)
         
         Embeds an image in a spreadsheet.
         
@@ -1403,7 +1403,7 @@ class GoogleSheetsClient:
         sheet_name: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        7. 수식을 반복하는 (Repeat Formula)
+        7. 数式を繰り返す (Repeat Formula)
         
         Repeats formulas down a column (array formula or drag fill).
         

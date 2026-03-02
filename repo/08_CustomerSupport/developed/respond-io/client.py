@@ -1,6 +1,6 @@
 """
 Respond.io Client
-멀티채널 고객지원 API 클라이언트
+マルチチャンネルカスタマーサポートAPIクライアント
 """
 
 import requests
@@ -9,9 +9,9 @@ from typing import Optional, Dict, List, Any
 
 class RespondIOClient:
     """
-    Respond.io API 클라이언트
+    Respond.io API クライアント
 
-    멀티채널 고객지원, 메시지 관리, 고객 추적을 위한 클라이언트
+    マルチチャンネルカスタマーサポート、メッセージ管理、顧客追跡のためのクライアント
     """
 
     def __init__(
@@ -21,12 +21,12 @@ class RespondIOClient:
         timeout: int = 30
     ):
         """
-        Respond.io 클라이언트 초기화
+        Respond.io クライアントの初期化
 
         Args:
-            api_key: Respond.io API 키
-            base_url: API 기본 URL
-            timeout: 요청 타임아웃 (초)
+            api_key: Respond.io API キー
+            base_url：APIベースURL
+            timeout：リクエストタイムアウト（秒）
         """
         self.api_key = api_key
         self.base_url = base_url.rstrip('/')
@@ -46,19 +46,19 @@ class RespondIOClient:
         params: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        API 요청 전송
+        APIリクエストの送信
 
         Args:
-            method: HTTP 메서드
-            endpoint: API 엔드포인트
-            data: 요청 본문 데이터
-            params: URL 파라미터
+            method: HTTP メソッド
+            endpoint: API エンドポイント
+            data: 要求本文データ
+            params: URL パラメータ
 
         Returns:
-            API 응답 데이터
+            API応答データ
 
         Raises:
-            requests.RequestException: API 요청 실패
+            requests.RequestException: API リクエストに失敗しました
         """
         url = f"{self.base_url}/{endpoint.lstrip('/')}"
         response = self.session.request(
@@ -80,17 +80,17 @@ class RespondIOClient:
         metadata: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        메시지 전송
+        メッセージ送信
 
         Args:
-            channel_id: 채널 ID
-            text: 메시지 내용
-            customer_id: 고객 ID (선택)
-            file_urls: 파일 URL 목록
-            metadata: 추가 메타데이터
+            channel_id：チャンネルID
+            text: メッセージ内容
+            customer_id：顧客ID（選択）
+            file_urls：ファイルURLリスト
+            metadata: 追加のメタデータ
 
         Returns:
-            전송된 메시지 정보
+            送信されたメッセージ情報
         """
         data = {
             'channelId': channel_id,
@@ -108,13 +108,13 @@ class RespondIOClient:
 
     def get_message(self, message_id: str) -> Dict[str, Any]:
         """
-        메시지 조회
+        メッセージの照会
 
         Args:
-            message_id: 메시지 ID
+            message_id：メッセージID
 
         Returns:
-            메시지 정보
+            メッセージ情報
         """
         return self._request('GET', f'/messages/{message_id}')
 
@@ -126,16 +126,16 @@ class RespondIOClient:
         offset: int = 0
     ) -> List[Dict[str, Any]]:
         """
-        메시지 목록 조회
+        メッセージリストの照会
 
         Args:
-            conversation_id: 대화 ID 필터
-            channel_id: 채널 ID 필터
-            limit: 반환할 항목 수
-            offset: 오프셋
+            conversation_id: 会話 ID フィルタ
+            channel_id：チャンネルIDフィルタ
+            limit: 返す項目の数
+            offset: オフセット
 
         Returns:
-            메시지 목록
+            メッセージ一覧
         """
         params = {'limit': limit, 'offset': offset}
         if conversation_id:
@@ -154,16 +154,16 @@ class RespondIOClient:
         tags: Optional[List[str]] = None
     ) -> Dict[str, Any]:
         """
-        새 대화 생성
+        新しい会話の作成
 
         Args:
-            customer_id: 고객 ID
-            channel_id: 채널 ID
-            initial_message: 초기 메시지
-            tags: 태그 목록
+            customer_id：顧客ID
+            channel_id：チャンネルID
+            initial_message: 初期メッセージ
+            タグ：タグリスト
 
         Returns:
-            생성된 대화 정보
+            生成された会話情報
         """
         data = {
             'customerId': customer_id,
@@ -179,13 +179,13 @@ class RespondIOClient:
 
     def get_conversation(self, conversation_id: str) -> Dict[str, Any]:
         """
-        대화 조회
+        会話の照会
 
         Args:
-            conversation_id: 대화 ID
+            conversation_id: 会話 ID
 
         Returns:
-            대화 정보
+            会話情報
         """
         return self._request('GET', f'/conversations/{conversation_id}')
 
@@ -198,17 +198,17 @@ class RespondIOClient:
         offset: int = 0
     ) -> List[Dict[str, Any]]:
         """
-        대화 목록 조회
+        会話リストの照会
 
         Args:
-            status: 상태 필터 (open, pending, closed)
-            channel_id: 채널 ID 필터
-            assigned_to: 담당자 ID 필터
-            limit: 반환할 항목 수
-            offset: 오프셋
+            status: ステータスフィルタ (open, pending, closed)
+            channel_id：チャンネルIDフィルタ
+            assigned_to：担当者IDフィルタ
+            limit: 返す項目の数
+            offset: オフセット
 
         Returns:
-            대화 목록
+            会話リスト
         """
         params = {'limit': limit, 'offset': offset}
         if status:
@@ -229,16 +229,16 @@ class RespondIOClient:
         tags: Optional[List[str]] = None
     ) -> Dict[str, Any]:
         """
-        대화 업데이트
+        会話の更新
 
         Args:
-            conversation_id: 대화 ID
-            status: 새 상태
-            assigned_to: 새 담당자
-            tags: 새 태그 목록
+            conversation_id: 会話 ID
+            status: 新しい状態
+            assigned_to：新しい担当者
+            タグ：新しいタグリスト
 
         Returns:
-            업데이트된 대화 정보
+            更新された会話情報
         """
         data = {}
         if status:
@@ -252,13 +252,13 @@ class RespondIOClient:
 
     def close_conversation(self, conversation_id: str) -> Dict[str, Any]:
         """
-        대화 종료
+        会話の終了
 
         Args:
-            conversation_id: 대화 ID
+            conversation_id: 会話 ID
 
         Returns:
-            종료된 대화 정보
+            終了した会話情報
         """
         return self._request('POST', f'/conversations/{conversation_id}/close')
 
@@ -272,18 +272,18 @@ class RespondIOClient:
         custom_attributes: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        새 고객 생성
+        新しい顧客を作成
 
         Args:
-            external_id: 외부 시스템 고객 ID
-            name: 이름
-            email: 이메일
-            phone: 전화번호
-            avatar_url: 아바터 URL
-            custom_attributes: 사용자 정의 속성
+            external_id：外部システムの顧客ID
+            name: 名前
+            email: メール
+            phone: 電話番号
+            avatar_url：アバターURL
+            custom_attributes: カスタム属性
 
         Returns:
-            생성된 고객 정보
+            生成された顧客情報
         """
         data = {'externalId': external_id}
 
@@ -302,13 +302,13 @@ class RespondIOClient:
 
     def get_customer(self, customer_id: str) -> Dict[str, Any]:
         """
-        고객 조회
+        顧客の照会
 
         Args:
-            customer_id: 고객 ID
+            customer_id：顧客ID
 
         Returns:
-            고객 정보
+            顧客情報
         """
         return self._request('GET', f'/customers/{customer_id}')
 
@@ -322,18 +322,18 @@ class RespondIOClient:
         custom_attributes: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        고객 업데이트
+        顧客の更新
 
         Args:
-            customer_id: 고객 ID
-            name: 새 이름
-            email: 새 이메일
-            phone: 새 전화번호
-            avatar_url: 새 아바타 URL
-            custom_attributes: 사용자 정의 속성
+            customer_id：顧客ID
+            name: 新しい名前
+            email: 新しいメール
+            phone: 新しい電話番号
+            avatar_url：新しいアバターURL
+            custom_attributes: カスタム属性
 
         Returns:
-            업데이트된 고객 정보
+            更新された顧客情報
         """
         data = {}
         if name:
@@ -351,20 +351,20 @@ class RespondIOClient:
 
     def list_channels(self) -> List[Dict[str, Any]]:
         """
-        채널 목록 조회
+        チャンネルリストを見る
 
         Returns:
-            채널 목록
+            チャンネルリスト
         """
         response = self._request('GET', '/channels')
         return response.get('channels', [])
 
     def list_users(self) -> List[Dict[str, Any]]:
         """
-        사용자 목록 조회
+        ユーザーリストの照会
 
         Returns:
-            사용자 목록
+            ユーザーリスト
         """
         response = self._request('GET', '/users')
         return response.get('users', [])
@@ -375,14 +375,14 @@ class RespondIOClient:
         user_id: str
     ) -> Dict[str, Any]:
         """
-        대화 담당자 지정
+        会話担当者の指定
 
         Args:
-            conversation_id: 대화 ID
-            user_id: 사용자 ID
+            conversation_id: 会話 ID
+            user_id：ユーザーID
 
         Returns:
-            업데이트된 대화 정보
+            更新された会話情報
         """
         data = {
             'conversationId': conversation_id,
@@ -398,15 +398,15 @@ class RespondIOClient:
         author_id: str
     ) -> Dict[str, Any]:
         """
-        대화에 노트 추가
+        会話にメモを追加する
 
         Args:
-            conversation_id: 대화 ID
-            content: 노트 내용
-            author_id: 작성자 ID
+            conversation_id: 会話 ID
+            content: ノートの内容
+            author_id：作成者ID
 
         Returns:
-            추가된 노트 정보
+            追加されたノート情報
         """
         data = {
             'conversationId': conversation_id,
@@ -422,14 +422,14 @@ class RespondIOClient:
         end_date: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        통계 정보 조회
+        統計情報の照会
 
         Args:
-            start_date: 시작 날짜 (YYYY-MM-DD)
-            end_date: 종료 날짜 (YYYY-MM-DD)
+            start_date：開始日（YYYY-MM-DD）
+            end_date: 終了日 (YYYY-MM-DD)
 
         Returns:
-            통계 정보
+            統計情報
         """
         params = {}
         if start_date:
@@ -440,5 +440,5 @@ class RespondIOClient:
         return self._request('GET', '/statistics', params=params)
 
     def close(self):
-        """세션 종료"""
+        """セッション終了"""
         self.session.close()

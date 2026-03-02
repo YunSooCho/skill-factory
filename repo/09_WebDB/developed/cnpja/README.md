@@ -2,22 +2,22 @@
 
 CNPJA provides access to the Brazilian National Company Registry (Cadastro Nacional da Pessoa Jurídica), allowing you to query company information by CNPJ number.
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [CNPJA 웹사이트](https://cnpj.ws)에 접속합니다.
-2. 무료 API 사용은 제한된 수로 가능합니다.
-3. 더 많은 요청이 필요하면 유료 플랜에서 API 키를 발급받습니다.
-4. API 키를 발급받으면 클라이언트 초기화 시 사용합니다.
+1. [CNPJAウェブサイト]（https://cnpj.ws)에にアクセスします。
+2.無料APIの使用は限られた数で可能です。
+3. さらにリクエストが必要な場合は、有料プランからAPIキーを発行します。
+4. APIキーが発行されたら、クライアントの初期化に使用します。
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from cnpja import CNPJAClient
@@ -29,7 +29,7 @@ client = CNPJAClient()
 client = CNPJAClient(api_key="your_api_key_here")
 ```
 
-### 회사 정보 조회
+###会社情報の照会
 
 ```python
 cnpj = "00.000.000/0001-91"
@@ -43,7 +43,7 @@ print(f"상태: {company['descricao_situacao_cadastral']}")
 print(f"설립일: {company['data_inicio_atividade']}")
 ```
 
-### CNPJ 유효성 검사
+### CNPJ検証
 
 ```python
 cnpj = "00.000.000/0001-91"
@@ -54,7 +54,7 @@ else:
     print("유효하지 않은 CNPJ입니다")
 ```
 
-### 회사 요약 정보
+###会社概要情報
 
 ```python
 summary = client.get_company_summary("00.000.000/0001-91")
@@ -66,7 +66,7 @@ print(f"주소: {summary['address']['city']}, {summary['address']['state']}")
 print(f"주요 활동: {summary['activities']['primary']}")
 ```
 
-### QSA (자격 있는 주주) 정보
+### QSA（資格のある株主）情報
 
 ```python
 qsa_list = client.get_company_qsa("00.000.000/0001-91")
@@ -77,7 +77,7 @@ for qsa in qsa_list:
     print(f"대표자 여부: {qsa['representante_legal']}")
 ```
 
-### 회사 파트너 정보
+###会社パートナー情報
 
 ```python
 partners = client.get_company_partners("00.000.000/0001-91")
@@ -88,7 +88,7 @@ for partner in partners:
     print(f"담당자 역할: {partner['qualificacao_socio']}")
 ```
 
-### 회사 활동 (CNAE) 정보
+###会社活動(CNAE)情報
 
 ```python
 activities = client.get_company_activities("00.000.000/0001-91")
@@ -102,7 +102,7 @@ for atv in activities['atividades_secundarias']:
     print(f"  {atv['codigo']} - {atv['descricao']}")
 ```
 
-### Simples Nacional 정보
+### Simples Nacionalについて
 
 ```python
 simples = client.get_company_simples("00.000.000/0001-91")
@@ -112,7 +112,7 @@ print(f"MEI: {simples['mei']}")
 print(f"옵션: {simples['opcao_pelo_simples']}")
 ```
 
-### 회사 등록 이력
+###会社登録履歴
 
 ```python
 history = client.get_company_history("00.000.000/0001-91")
@@ -123,7 +123,7 @@ for entry in history:
     print(f"상태: {entry['situacao']}")
 ```
 
-### 회사 검색
+###会社検索
 
 ```python
 # 프리미엄 API 기능
@@ -138,7 +138,7 @@ for company in results:
     print(f"{company['cnpj']} - {company['razao_social']}")
 ```
 
-### CNPJ 포맷팅
+### CNPJフォーマット
 
 ```python
 # 14자리 숫자
@@ -147,19 +147,19 @@ formatted = client.format_cnpj(cnpj_raw)
 print(formatted)  # "00.000.000/0001-91"
 ```
 
-## 주요 기능
+##主な機能
 
-- ✅ CNPJ로 회사 정보 조회
-- ✅ CNPJ 유효성 검사
-- ✅ QSA (자격 있는 주주) 정보
-- ✅ 파트너/주주 정보
-- ✅ 경제 활동 (CNAE) 정보
-- ✅ Simples Nacional 상태
-- ✅ 회사 등록 이력
-- ✅ 주소 및 연락처 정보
-- ✅ CNPJ 포맷팅
+- ✅ CNPJで会社情報を照会
+- ✅ CNPJ検証
+- ✅ QSA（資格のある株主）情報
+- ✅パートナー/株主情報
+- ✅経済活動(CNAE)情報
+- ✅ Simples Nacional ステータス
+- ✅会社登録履歴
+- ✅住所と連絡先情報
+- ✅ CNPJフォーマット
 
-## 에러 처리
+## エラー処理
 
 ```python
 try:
@@ -170,13 +170,13 @@ except Exception as e:
     print(f"API 오류: {e}")
 ```
 
-## 규제 및 사용 제한
+##規制と使用制限
 
-- 무료 API: 요청 수 제한
-- 프리미엄 API: 더 많은 요청 가능
-- 상업적 사용 시 라이선스 확인 필요
-- 데이터 사용 시 원본 출처 표기 필요
+- 無料API：リクエスト数制限
+- プレミアムAPI：より多くのリクエストが可能
+- 商業使用時にライセンス確認が必要
+- データを使用する際に元のソース表記が必要
 
-## 라이선스
+##ライセンス
 
 MIT License

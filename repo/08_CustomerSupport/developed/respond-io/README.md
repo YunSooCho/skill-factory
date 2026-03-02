@@ -1,23 +1,23 @@
 # Respond.io SDK
 
-Respond.io는 멀티채널 고객지원을 위한 Python SDK입니다.
+Respond.ioはマルチチャンネルカスタマーサポートのためのPython SDKです。
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [Respond.io 웹사이트](https://respond.io)에 접속하여 계정을 생성합니다.
-2. Settings > APIs & Webhooks 메뉴로 이동합니다.
-3. 'Generate API Token' 버튼을 클릭하여 새 API 키를 생성합니다.
-4. 생성된 API 키를 안전한 곳에 저장합니다.
+1. [Respond.io Webサイト]（https://respond.io)에にアクセスしてアカウントを作成します。
+2. Settings > APIs & Webhooks メニューに移動します。
+3. [Generate API Token]ボタンをクリックして新しいAPIキーを生成します。
+4. 生成された API キーを安全な場所に保存します。
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from respond_io import RespondIOClient
@@ -28,7 +28,7 @@ client = RespondIOClient(
 )
 ```
 
-### 메시지 전송
+### メッセージ送信
 
 ```python
 message = client.create_message(
@@ -40,7 +40,7 @@ message = client.create_message(
 print(f"메시지 ID: {message['id']}")
 ```
 
-### 대화 생성
+### 会話の作成
 
 ```python
 conversation = client.create_conversation(
@@ -53,7 +53,7 @@ conversation = client.create_conversation(
 print(f"대화 ID: {conversation['id']}")
 ```
 
-### 대화 목록 조회
+### 会話リストの照会
 
 ```python
 conversations = client.list_conversations(
@@ -66,7 +66,7 @@ for conv in conversations:
     print(f"{conv['id']}: {conv['status']} (할당: {conv['assignedTo']})")
 ```
 
-### 대화 업데이트
+###会話の更新
 
 ```python
 updated = client.update_conversation(
@@ -76,14 +76,14 @@ updated = client.update_conversation(
 )
 ```
 
-### 대화 종료
+### 会話終了
 
 ```python
 result = client.close_conversation(conversation_id="conv_123")
 print(f"대화 종료 완료: {result['success']}")
 ```
 
-### 고객 생성
+### 顧客作成
 
 ```python
 customer = client.create_customer(
@@ -101,7 +101,7 @@ customer = client.create_customer(
 print(f"고객 ID: {customer['id']}")
 ```
 
-### 고객 정보 업데이트
+### 顧客情報の更新
 
 ```python
 updated = client.update_customer(
@@ -113,7 +113,7 @@ updated = client.update_customer(
 )
 ```
 
-### 채널 목록 조회
+###チャンネルリストの閲覧
 
 ```python
 channels = client.list_channels()
@@ -122,7 +122,7 @@ for channel in channels:
     print(f"{channel['name']}: {channel['type']}")
 ```
 
-### 사용자 목록 조회
+### ユーザーリストの照会
 
 ```python
 users = client.list_users()
@@ -131,7 +131,7 @@ for user in users:
     print(f"{user['name']}: {user['role']}")
 ```
 
-### 대화 담당자 지정
+### 会話担当者の指定
 
 ```python
 result = client.assign_conversation(
@@ -142,7 +142,7 @@ result = client.assign_conversation(
 print(f"담당자 지정 완료: {result['success']}")
 ```
 
-### 노트 추가
+### ノートを追加
 
 ```python
 note = client.add_note(
@@ -154,7 +154,7 @@ note = client.add_note(
 print(f"노트 ID: {note['id']}")
 ```
 
-### 메시지 내역 조회
+### メッセージ履歴の照会
 
 ```python
 messages = client.list_messages(
@@ -166,7 +166,7 @@ for msg in messages:
     print(f"{msg['author']} ( {msg['createdAt']}): {msg['text']}")
 ```
 
-### 통계 조회
+###統計照会
 
 ```python
 stats = client.get_statistics(
@@ -179,19 +179,19 @@ print(f"평균 응답 시간: {stats['avgResponseTime']}초")
 print(f"해결된 대화: {stats['resolvedConversations']}")
 ```
 
-## 기능
+## 機能
 
-- ✅ 멀티채널 메시지 관리
-- ✅ 대화 생성, 조회, 업데이트, 종료
-- ✅ 고객 관리
-- ✅ 담당자 지정
-- ✅ 노트 추가
-- ✅ 채널 및 사용자 관리
-- ✅ 통계 및 분석
+- ✅マルチチャンネルメッセージ管理
+- ✅会話の作成、照会、更新、終了
+- ✅顧客管理
+- ✅担当者指定
+- ✅ノートを追加
+- ✅チャンネルとユーザー管理
+- ✅統計と分析
 
-## 지원 채널
+## サポートチャンネル
 
-- 웹사이트 라이브 채팅
+- ウェブサイトライブチャット
 - WhatsApp
 - Facebook Messenger
 - Telegram
@@ -200,6 +200,6 @@ print(f"해결된 대화: {stats['resolvedConversations']}")
 - Line
 - Viber
 
-## 라이선스
+##ライセンス
 
 MIT License

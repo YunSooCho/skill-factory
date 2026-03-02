@@ -1,5 +1,5 @@
 """
-Product Fruits - 제품 온보딩 및 사용자 가이드 서비스
+Product Fruits - 製品オンボーディングおよびユーザーガイドサービス
 """
 
 from .client import ProductFruitsClient

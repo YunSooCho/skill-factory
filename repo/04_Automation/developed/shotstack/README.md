@@ -1,35 +1,35 @@
-# Shotstack API 클라이언트
+#Shotstack APIクライアント
 
-Shotstack를 위한 Python API 클라이언트입니다. 비디오 생성, 오디오 생성, 이미지 생성 및 자산 관리를 지원합니다.
+Shotstack用のPython APIクライアントです。ビデオ生成、オーディオ生成、画像生成、資産管理をサポートします。
 
-## 개요
+## 概要
 
-Shotstack은 클라우드 기반 비디오 생성 플랫폼으로, 텍스트에서 오디오/이미지 생성, 이미지에서 비디오 생성, 완전한 비디오 렌더링 워크플로우 실행 등의 기능을 제공합니다.
+Shotstackはクラウドベースのビデオ生成プラットフォームで、テキストからオーディオ/画像を生成し、画像からビデオを生成し、完全なビデオレンダリングワークフローを実行するなどの機能を提供します。
 
-## 설치
+## インストール
 
-의존성 패키지:
+依存パッケージ：
 
 ```bash
 pip install requests
 ```
 
-또는:
+または：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급
+## API キー発行
 
-1. [Shotstack](https://shotstack.io/)에서 계정 생성
-2. 대시보드에서 API 키 발급
-3. Stage 또는 Production 환경 키를 선택
-4. API 키를 안전하게 저장
+1. [Shotstack](https://shotstack.io/)에서 アカウントの作成
+2.ダッシュボードでAPIキーを発行する
+3. Stage または Production 環境キーを選択
+4. API キーを安全に保存
 
-## 사용법
+##使用法
 
-### 초기화
+### 初期化
 
 ```python
 from shotstack import ShotstackClient, ShotstackError
@@ -40,7 +40,7 @@ client = ShotstackClient(
 )
 ```
 
-### 1. 자산 정보 조회
+### 1. 資産情報の照会
 
 ```python
 try:
@@ -52,7 +52,7 @@ except ShotstackError as e:
     print("Error:", str(e))
 ```
 
-### 2. 자산 다운로드
+### 2. 資産のダウンロード
 
 ```python
 try:
@@ -62,7 +62,7 @@ except ShotstackError as e:
     print("Error:", str(e))
 ```
 
-### 3. 텍스트-투-스피치 (TTS) 오디오 생성
+### 3. テキスト・ツー・スピーチ（TTS）オーディオの生成
 
 ```python
 try:
@@ -78,7 +78,7 @@ except ShotstackError as e:
     print("Error:", str(e))
 ```
 
-### 4. 워크플로우 작업 시작 (비디오 렌더링)
+### 4. ワークフロータスクの開始（ビデオレンダリング）
 
 ```python
 workflow_config = {
@@ -117,7 +117,7 @@ except ShotstackError as e:
     print("Error:", str(e))
 ```
 
-### 5. 텍스트-투-이미지 생성
+### 5. テキスト・ツー・イメージの生成
 
 ```python
 try:
@@ -133,7 +133,7 @@ except ShotstackError as e:
     print("Error:", str(e))
 ```
 
-### 6. 파일 목록 조회
+### 6. ファイルリストの照会
 
 ```python
 try:
@@ -145,7 +145,7 @@ except ShotstackError as e:
     print("Error:", str(e))
 ```
 
-### 7. 파일 업로드
+### 7. ファイルのアップロード
 
 ```python
 try:
@@ -158,7 +158,7 @@ except ShotstackError as e:
     print("Error:", str(e))
 ```
 
-### 8. 이미지-투-비디오 생성
+### 8. 画像ツービデオを作成
 
 ```python
 try:
@@ -173,7 +173,7 @@ except ShotstackError as e:
     print("Error:", str(e))
 ```
 
-### 렌더링 상태 확인
+### レンダリングステータスの確認
 
 ```python
 render_id = "render_job_id_here"
@@ -186,105 +186,105 @@ except ShotstackError as e:
     print("Error:", str(e))
 ```
 
-## API 메서드
+## APIメソッド
 
 ### get_asset_information
-자산의 상세 정보를 조회합니다.
+資産の詳細情報を照会します。
 
-**매개변수:**
-- `asset_id` (str): 조회할 자산 ID
+**パラメータ：**
+- `asset_id`（str）：照会する資産ID
 
-**반환값:**
-- `dict`: 자산 정보 (ID, 타입, 상태, URL 등)
+**戻り値:**
+- `dict`：資産情報（ID、タイプ、ステータス、URLなど）
 
 ### download_asset_data
-자산을 로컬 파일로 다운로드합니다.
+アセットをローカルファイルにダウンロードします。
 
-**매개변수:**
-- `asset_id` (str): 다운로드할 자산 ID
-- `output_path` (str): 저장할 로컬 파일 경로
+**パラメータ：**
+- `asset_id`（str）：ダウンロードする資産ID
+- `output_path`（str）：保存するローカルファイルパス
 
-**반환값:**
-- `str`: 다운로드된 파일 경로
+**戻り値:**
+- `str`：ダウンロードされたファイルパス
 
 ### generate_text_to_speech
-텍스트를 오디오로 변환합니다.
+テキストをオーディオに変換します。
 
-**매개변수:**
-- `text` (str): 변환할 텍스트
-- `voice` (str): 음성 (기본값: "samantha")
-- `speed` (float): 속도 배수 (기본값: 1.0)
-- `pitch` (float): 피치 배수 (기본값: 1.0)
-- `output_format` (str): 오디오 형식, "mp3" 또는 "wav" (기본값: "mp3")
+**パラメータ：**
+- `text`（str）：変換するテキスト
+- `voice` (str): 音声 (デフォルト: "samantha")
+- `speed`（float）：速度倍数（デフォルト：1.0）
+- `pitch`（float）：ピッチ倍数（デフォルト：1.0）
+- `output_format`（str）：オーディオフォーマット、「mp3」または「wav」（デフォルト：「mp3」）
 
-**반환값:**
-- `dict`: 생성 결과와 자산 ID
+**戻り値:**
+- `dict`：生成結果と資産ID
 
 ### start_workflow_job
-비디오 렌더링 워크플로우 작업을 시작합니다.
+ビデオレンダリングワークフロー操作を開始します。
 
-**매개변수:**
-- `workflow_config` (dict): 워크플로우 설정 (timeline, output 등)
+**パラメータ：**
+- `workflow_config`（dict）：ワークフロー設定（タイムライン、出力など）
 
-**반환값:**
-- `dict`: 작업 정보와 작업 ID
+**戻り値:**
+- `dict`：ジョブ情報とジョブID
 
 ### generate_text_to_image
-텍스트 프롬프트로 이미지를 생성합니다.
+テキストプロンプトで画像を生成します。
 
-**매개변수:**
-- `prompt` (str): 이미지 생성 프롬프트
-- `width` (int): 너비 (기본값: 1024)
-- `height` (int): 높이 (기본값: 1024)
-- `num_images` (int): 생성할 이미지 수 (기본값: 1)
-- `style` (str, optional): 스타일
+**パラメータ：**
+- `prompt`（str）：画像生成のプロンプト
+- `width` (int): 幅 (デフォルト: 1024)
+- `height`（int）：高さ（デフォルト：1024）
+- `num_images`（int）：生成する画像の数（デフォルト：1）
+- `style` (str, optional): スタイル
 
-**반환값:**
-- `dict`: 생성 결과와 자산 ID 목록
+**戻り値:**
+- `dict`：生成結果と資産IDのリスト
 
 ### list_files
-업로드된 파일과 자산 목록을 조회합니다.
+アップロードされたファイルと資産のリストを検索します。
 
-**매개변수:**
-- `limit` (int): 반환할 결과 수 (기본값: 100)
-- `offset` (int): 건너뛸 결과 수 (기본값: 0)
-- `file_type` (str, optional): 파일 타입 필터
+**パラメータ：**
+- `limit`（int）：返される結果の数（デフォルト：100）
+- `offset`（int）：スキップした結果の数（デフォルト：0）
+- `file_type` (str, optional): ファイルタイプフィルタ
 
-**반환값:**
-- `dict`: 파일 목록
+**戻り値:**
+- `dict`：ファイルリスト
 
 ### upload_file
-파일을 Shotstack에 업로드합니다.
+ファイルをShotstackにアップロードします。
 
-**매개변수:**
-- `file_path` (str): 업로드할 로컬 파일 경로
-- `file_type` (str, optional): 파일 타입
+**パラメータ：**
+- `file_path`（str）：アップロードするローカルファイルパス
+- `file_type` (str, optional): ファイルタイプ
 
-**반환값:**
-- `dict`: 업로드 결과와 자산 ID
+**戻り値:**
+- `dict`：アップロード結果とアセットID
 
 ### generate_image_to_video
-이미지에서 비디오를 생성합니다.
+画像からビデオを生成します。
 
-**매개변수:**
-- `image_asset_id` (str): 원본 이미지 자산 ID
-- `duration` (float): 비디오 길이 (초) (기본값: 5.0)
-- `motion` (str, optional): 모션 효과 ("zoom", "pan" 등)
-- `audio_asset_id` (str, optional): 배경 오디오 자산 ID
+**パラメータ：**
+- `image_asset_id`（str）：元の画像資産ID
+- `duration`（float）：ビデオの長さ（秒）（デフォルト：5.0）
+- `motion`（str、optional）：モーション効果（「zoom」、「pan」など）
+- `audio_asset_id`（str、optional）：バックグラウンドオーディオアセットID
 
-**반환값:**
-- `dict`: 생성 결과와 자산 ID
+**戻り値:**
+- `dict`：生成結果と資産ID
 
 ### get_render_status
-렌더링 작업의 상태를 조회합니다.
+レンダリング操作の状態を照会します。
 
-**매개변수:**
-- `render_id` (str): 렌더링 작업 ID
+**パラメータ：**
+- `render_id`（str）：レンダリングジョブID
 
-**반환값:**
-- `dict`: 렌더링 상태
+**戻り値:**
+- `dict`：レンダリングステータス
 
-## 에러 처리
+## エラー処理
 
 ```python
 from shotstack import ShotstackError, ShotstackRateLimitError, ShotstackAuthenticationError
@@ -301,11 +301,11 @@ except ShotstackError as e:
 
 ## Rate Limiting
 
-API 요청 간 최소 100ms 지연이 자동으로 적용됩니다.
+APIリクエスト間の最低100msの遅延が自動的に適用されます。
 
-## 예시 코드
+## 例コード
 
-### 비디오 생성 전체 예시
+### ビデオ生成の完全な例
 
 ```python
 from shotstack import ShotstackClient, ShotstackError
@@ -381,12 +381,12 @@ except ShotstackError as e:
     print(f"Error: {str(e)}")
 ```
 
-## 라이선스
+##ライセンス
 
 MIT License
 
-## 지원
+## サポート
 
-- [Shotstack 공식 사이트](https://shotstack.io/)
-- [Shotstack 문서](https://shotstack.io/docs/)
-- [API 참조](https://shotstack.io/docs/api/)
+- [Shotstack公式サイト]（https://shotstack.io/)
+- [Shotstackドキュメント]（https://shotstack.io/docs/)
+- [APIリファレンス]（https://shotstack.io/docs/api/)

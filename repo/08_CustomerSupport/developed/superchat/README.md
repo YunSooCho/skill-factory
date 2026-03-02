@@ -1,23 +1,23 @@
 # Superchat SDK
 
-Superchat은 라이브채팅 및 고객지원 서비스를 위한 Python SDK입니다.
+SuperchatはライブチャットとカスタマーサポートサービスのためのPython SDKです。
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [Superchat 웹사이트](https://superchat.com)에 접속하여 계정을 생성합니다.
-2. 대시보드에서 Settings > API Keys 메뉴로 이동합니다.
-3. 'Generate API Key' 버튼을 클릭하여 새 API 키를 생성합니다.
-4. 생성된 API 키와 Account ID를 안전한 곳에 저장합니다.
+1. [Superchatウェブサイト]（https://superchat.com)에にアクセスしてアカウントを作成します。
+2. ダッシュボードで、Settings > API Keys メニューに移動します。
+3. [Generate API Key]ボタンをクリックして新しいAPIキーを生成します。
+4. 生成された API キーと Account ID を安全な場所に保存します。
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from superchat import SuperchatClient
@@ -29,7 +29,7 @@ client = SuperchatClient(
 )
 ```
 
-### 채팅 시작
+###チャット開始
 
 ```python
 chat = client.start_chat(
@@ -46,7 +46,7 @@ chat = client.start_chat(
 print(f"채팅 ID: {chat['id']}")
 ```
 
-### 메시지 전송
+### メッセージ送信
 
 ```python
 message = client.send_message(
@@ -59,7 +59,7 @@ message = client.send_message(
 print(f"메시지 ID: {message['id']}")
 ```
 
-### 메시지 내역 조회
+### メッセージ履歴の照会
 
 ```python
 messages = client.get_messages(
@@ -71,7 +71,7 @@ for msg in messages:
     print(f"{msg['senderType']} ({msg['createdAt']}): {msg['message']}")
 ```
 
-### 채팅 목록 조회
+###チャットリストの閲覧
 
 ```python
 chats = client.list_chats(
@@ -84,7 +84,7 @@ for chat in chats:
     print(f"{chat['id']}: {chat['customerName']} - {chat['status']}")
 ```
 
-### 채팅 업데이트
+###チャットの更新
 
 ```python
 updated = client.update_chat(
@@ -94,14 +94,14 @@ updated = client.update_chat(
 )
 ```
 
-### 채팅 종료
+###チャット終了
 
 ```python
 result = client.close_chat(chat_id="chat_123")
 print(f"채팅 종료: {result['success']}")
 ```
 
-### 채팅 담당자 지정
+###チャット担当者の指定
 
 ```python
 result = client.assign_chat(
@@ -112,7 +112,7 @@ result = client.assign_chat(
 print(f"담당자 지정: {result['success']}")
 ```
 
-### 고객 생성
+### 顧客作成
 
 ```python
 customer = client.create_customer(
@@ -129,7 +129,7 @@ customer = client.create_customer(
 print(f"고객 ID: {customer['id']}")
 ```
 
-### 고객 정보 업데이트
+### 顧客情報の更新
 
 ```python
 updated = client.update_customer(
@@ -141,7 +141,7 @@ updated = client.update_customer(
 )
 ```
 
-### AI 챗봇 생성
+### AIチャットボットの作成
 
 ```python
 bot = client.create_bot(
@@ -157,7 +157,7 @@ bot = client.create_bot(
 print(f"봇 ID: {bot['id']}")
 ```
 
-### 봇 목록 조회
+### ボットリストの照会
 
 ```python
 bots = client.list_bots()
@@ -166,7 +166,7 @@ for bot in bots:
     print(f"{bot['name']} ({bot['aiModel']}) - {bot['status']}")
 ```
 
-### 봇 업데이트
+###ボットアップデート
 
 ```python
 updated = client.update_bot(
@@ -176,7 +176,7 @@ updated = client.update_bot(
 )
 ```
 
-### 템플릿 응답 생성
+###テンプレート応答の生成
 
 ```python
 canned = client.create_canned_response(
@@ -189,7 +189,7 @@ canned = client.create_canned_response(
 print(f"템플릿 ID: {canned['id']}")
 ```
 
-### 템플릿 응답 목록 조회
+###テンプレート応答リストの検索
 
 ```python
 responses = client.list_canned_responses(
@@ -201,7 +201,7 @@ for resp in responses:
     print(f"{resp['title']}: {resp['content']}")
 ```
 
-### 에이전트 목록 조회
+### エージェントリストの照会
 
 ```python
 agents = client.list_agents()
@@ -210,7 +210,7 @@ for agent in agents:
     print(f"{agent['name']} - {agent['status']} ({agent['role']})")
 ```
 
-### 분석 데이터 조회
+### 分析データの照会
 
 ```python
 analytics = client.get_analytics(
@@ -225,47 +225,47 @@ print(f"평균 응답 시간: {analytics['avgResponseTime']}초")
 print(f"고객 만족도: {analytics['satisfactionScore']}")
 ```
 
-## 채팅 상태
+##チャットステータス
 
-- **active**: 활성
-- **closed**: 종료
-- **archived**: 보관
+- **active**: アクティブ
+- **closed**: 終了
+- **archived**: アーカイブ
 
-## 발신자 타입
+## 発信者タイプ
 
-- **agent**: 에이전트
-- **customer**: 고객
-- **bot**: 봇
-- **system**: 시스템
+- **agent**: エージェント
+- **customer**: 顧客
+- **bot**: ボット
+- **system**: システム
 
-## 메시지 타입
+## メッセージタイプ
 
-- **text**: 텍스트
-- **image**: 이미지
-- **video**: 비디오
-- **file**: 파일
-- **location**: 위치
+- **text**: テキスト
+- **image**: イメージ
+- **video**: ビデオ
+- **file**: ファイル
+- **location**: 場所
 
-## 기능
+## 機能
 
-- ✅ 라이브 채팅 관리
-- ✅ 메시지 전송 및 조회
-- ✅ 고객 관리
-- ✅ AI 챗봇 통합
-- ✅ 템플릿 응답
-- ✅ 에이전트 관리
-- ✅ 담당자 지정
-- ✅ 분석 및 리포트
+- ✅ライブチャット管理
+- ✅メッセージの送信と照会
+- ✅顧客管理
+- ✅ AIチャットボット統合
+- ✅テンプレート応答
+- ✅エージェント管理
+- ✅担当者指定
+- ✅分析とレポート
 
-## 지원 채널
+## サポートチャンネル
 
-- 웹사이트 라이브 채팅
+- ウェブサイトライブチャット
 - WhatsApp
 - Facebook Messenger
 - Telegram
 - Line
 - SMS
 
-## 라이선스
+##ライセンス
 
 MIT License

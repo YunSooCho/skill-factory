@@ -1,5 +1,5 @@
 """
-Relation - 고객 관계 관리 서비스
+Relation - 顧客関係管理サービス
 """
 
 from .client import RelationClient

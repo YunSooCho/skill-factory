@@ -1801,7 +1801,7 @@
 | 1504 | UNITRONICS | 製造 | [unitronics.com](https://www.unitronics.com) | ✅ (200) |
 
 
-### Yoom Apps (추가)
+### Yoom Apps (追加)
 
 | # | サービス | カテゴリー | ホームページ | URL検証 | yoom連携 |
 |---|----------|----------|-------------|----------|-----------|

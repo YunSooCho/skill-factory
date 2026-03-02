@@ -1,6 +1,6 @@
 """
 Superchat Client
-라이브채팅 및 고객지원 API 클라이언트
+ライブチャットとカスタマーサポートAPIクライアント
 """
 
 import requests
@@ -9,9 +9,9 @@ from typing import Optional, Dict, List, Any
 
 class SuperchatClient:
     """
-    Superchat API 클라이언트
+    Superchat API クライアント
 
-    라이브채팅, 고객지원, 챗봇 관리를 위한 클라이언트
+    ライブチャット、カスタマーサポート、チャットボット管理のためのクライアント
     """
 
     def __init__(
@@ -22,13 +22,13 @@ class SuperchatClient:
         timeout: int = 30
     ):
         """
-        Superchat 클라이언트 초기화
+        Superchat クライアントの初期化
 
         Args:
-            api_key: Superchat API 키
-            account_id: 계정 ID
-            base_url: API 기본 URL
-            timeout: 요청 타임아웃 (초)
+            api_key: Superchat API キー
+            account_id：アカウントID
+            base_url：APIベースURL
+            timeout：リクエストタイムアウト（秒）
         """
         self.api_key = api_key
         self.account_id = account_id
@@ -50,19 +50,19 @@ class SuperchatClient:
         params: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        API 요청 전송
+        APIリクエストの送信
 
         Args:
-            method: HTTP 메서드
-            endpoint: API 엔드포인트
-            data: 요청 본문 데이터
-            params: URL 파라미터
+            method: HTTP メソッド
+            endpoint: API エンドポイント
+            data: 要求本文データ
+            params: URL パラメータ
 
         Returns:
-            API 응답 데이터
+            API応答データ
 
         Raises:
-            requests.RequestException: API 요청 실패
+            requests.RequestException: API リクエストに失敗しました
         """
         url = f"{self.base_url}/{endpoint.lstrip('/')}"
         response = self.session.request(
@@ -84,17 +84,17 @@ class SuperchatClient:
         metadata: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        새 채팅 시작
+        新しいチャットを開始
 
         Args:
-            customer_name: 고객 이름
-            customer_email: 고객 이메일
-            initial_message: 초기 메시지
-            channel: 채널 타입 (web, whatsapp, messenger, telegram)
-            metadata: 추가 메타데이터
+            customer_name：顧客名
+            customer_email：顧客の電子メール
+            initial_message: 初期メッセージ
+            channel: チャンネルタイプ (web, whatsapp, messenger, telegram)
+            metadata: 追加のメタデータ
 
         Returns:
-            생성된 채팅 정보
+            生成されたチャット情報
         """
         data = {
             'customerName': customer_name,
@@ -112,13 +112,13 @@ class SuperchatClient:
 
     def get_chat(self, chat_id: str) -> Dict[str, Any]:
         """
-        채팅 조회
+        チャットを見る
 
         Args:
-            chat_id: 채팅 ID
+            chat_id：チャットID
 
         Returns:
-            채팅 상세 정보
+            チャットの詳細
         """
         return self._request('GET', f'/chats/{chat_id}')
 
@@ -131,17 +131,17 @@ class SuperchatClient:
         offset: int = 0
     ) -> List[Dict[str, Any]]:
         """
-        채팅 목록 조회
+        チャットリストを見る
 
         Args:
-            status: 상태 필터 (active, closed, archived)
-            channel: 채널 필터
-            assigned_to: 담당자 ID 필터
-            limit: 반환할 항목 수
-            offset: 오프셋
+            status: ステータスフィルタ (active, closed, archived)
+            channel: チャンネルフィルタ
+            assigned_to：担当者IDフィルタ
+            limit: 返す項目の数
+            offset: オフセット
 
         Returns:
-            채팅 목록
+            チャットリスト
         """
         params = {'limit': limit, 'offset': offset}
         if status:
@@ -163,17 +163,17 @@ class SuperchatClient:
         file_url: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        메시지 전송
+        メッセージ送信
 
         Args:
-            chat_id: 채팅 ID
-            message: 메시지 내용
-            message_type: 메시지 타입 (text, image, video, file, location)
-            sender_type: 발신자 타입 (agent, customer, bot, system)
-            file_url: 파일 URL
+            chat_id：チャットID
+            message: メッセージ内容
+            message_type：メッセージタイプ（text、image、video、file、location）
+            sender_type：発信者タイプ（agent、customer、bot、system）
+            file_url：ファイルURL
 
         Returns:
-            전송된 메시지 정보
+            送信されたメッセージ情報
         """
         data = {
             'chatId': chat_id,
@@ -194,15 +194,15 @@ class SuperchatClient:
         offset: int = 0
     ) -> List[Dict[str, Any]]:
         """
-        메시지 목록 조회
+        メッセージリストの照会
 
         Args:
-            chat_id: 채팅 ID
-            limit: 반환할 항목 수
-            offset: 오프셋
+            chat_id：チャットID
+            limit: 返す項目の数
+            offset: オフセット
 
         Returns:
-            메시지 목록
+            メッセージ一覧
         """
         params = {'limit': limit, 'offset': offset}
         response = self._request('GET', f'/chats/{chat_id}/messages', params=params)
@@ -216,16 +216,16 @@ class SuperchatClient:
         tags: Optional[List[str]] = None
     ) -> Dict[str, Any]:
         """
-        채팅 업데이트
+        チャットの更新
 
         Args:
-            chat_id: 채팅 ID
-            status: 새 상태
-            assigned_to: 새 담당자
-            tags: 태그 목록
+            chat_id：チャットID
+            status: 新しい状態
+            assigned_to：新しい担当者
+            タグ：タグリスト
 
         Returns:
-            업데이트된 채팅 정보
+            更新されたチャット情報
         """
         data = {}
         if status:
@@ -239,13 +239,13 @@ class SuperchatClient:
 
     def close_chat(self, chat_id: str) -> Dict[str, Any]:
         """
-        채팅 종료
+        チャット終了
 
         Args:
-            chat_id: 채팅 ID
+            chat_id：チャットID
 
         Returns:
-            종료된 채팅 정보
+            終了したチャット情報
         """
         return self._request('POST', f'/chats/{chat_id}/close')
 
@@ -255,14 +255,14 @@ class SuperchatClient:
         agent_id: str
     ) -> Dict[str, Any]:
         """
-        채팅 담당자 지정
+        チャット担当者の指定
 
         Args:
-            chat_id: 채팅 ID
-            agent_id: 에이전트 ID
+            chat_id：チャットID
+            agent_id：エージェントID
 
         Returns:
-            업데이트된 채팅 정보
+            更新されたチャット情報
         """
         data = {
             'chatId': chat_id,
@@ -281,18 +281,18 @@ class SuperchatClient:
         custom_attributes: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        새 고객 생성
+        新しい顧客を作成
 
         Args:
-            name: 이름
-            email: 이메일
-            phone: 전화번호
-            avatar_url: 아바타 URL
-            company: 회사
-            custom_attributes: 사용자 정의 속성
+            name: 名前
+            email: メール
+            phone: 電話番号
+            avatar_url：アバターURL
+            company: 会社
+            custom_attributes: カスタム属性
 
         Returns:
-            생성된 고객 정보
+            生成された顧客情報
         """
         data = {
             'name': name,
@@ -312,13 +312,13 @@ class SuperchatClient:
 
     def get_customer(self, customer_id: str) -> Dict[str, Any]:
         """
-        고객 조회
+        顧客の照会
 
         Args:
-            customer_id: 고객 ID
+            customer_id：顧客ID
 
         Returns:
-            고객 정보
+            顧客情報
         """
         return self._request('GET', f'/customers/{customer_id}')
 
@@ -333,19 +333,19 @@ class SuperchatClient:
         custom_attributes: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        고객 업데이트
+        顧客の更新
 
         Args:
-            customer_id: 고객 ID
-            name: 새 이름
-            email: 새 이메일
-            phone: 새 전화번호
-            avatar_url: 새 아바타 URL
-            company: 새 회사
-            custom_attributes: 사용자 정의 속성
+            customer_id：顧客ID
+            name: 新しい名前
+            email: 新しいメール
+            phone: 新しい電話番号
+            avatar_url：新しいアバターURL
+            company: 新しい会社
+            custom_attributes: カスタム属性
 
         Returns:
-            업데이트된 고객 정보
+            更新された顧客情報
         """
         data = {}
         if name:
@@ -374,19 +374,19 @@ class SuperchatClient:
         is_active: bool = False
     ) -> Dict[str, Any]:
         """
-        AI 챗봇 생성
+        AIチャットボットの作成
 
         Args:
-            name: 봇 이름
-            welcome_message: 환영 메시지
-            handoff_message: 에이전트 전달 메시지
-            ai_provider: AI 제공자 (openai, anthropic, google)
-            ai_model: AI 모델
-            knowledge_base: 지식 베이스 ID
-            is_active: 활성화 여부
+            name: ボット名
+            welcome_message: ようこそメッセージ
+            handoff_message: エージェント転送メッセージ
+            ai_provider：AIプロバイダ（openai、anthropic、google）
+            ai_model：AIモデル
+            knowledge_base: 知識ベース ID
+            is_active: 有効かどうか
 
         Returns:
-            생성된 봇 정보
+            生成されたボット情報
         """
         data = {
             'name': name,
@@ -404,22 +404,22 @@ class SuperchatClient:
 
     def get_bot(self, bot_id: str) -> Dict[str, Any]:
         """
-        봇 조회
+        ボットを見る
 
         Args:
-            bot_id: 봇 ID
+            bot_id: ボット ID
 
         Returns:
-            봇 정보
+            ボット情報
         """
         return self._request('GET', f'/bots/{bot_id}')
 
     def list_bots(self) -> List[Dict[str, Any]]:
         """
-        봇 목록 조회
+        ボットリストの照会
 
         Returns:
-            봇 목록
+            ボット一覧
         """
         response = self._request('GET', '/bots')
         return response.get('bots', [])
@@ -432,16 +432,16 @@ class SuperchatClient:
         is_active: Optional[bool] = None
     ) -> Dict[str, Any]:
         """
-        봇 업데이트
+        ボットアップデート
 
         Args:
-            bot_id: 봇 ID
-            name: 새 이름
-            welcome_message: 새 환영 메시지
-            is_active: 활성화 상태
+            bot_id: ボット ID
+            name: 新しい名前
+            welcome_message: 新しいウェルカムメッセージ
+            is_active: アクティブ状態
 
         Returns:
-            업데이트된 봇 정보
+            更新されたボット情報
         """
         data = {}
         if name:
@@ -461,16 +461,16 @@ class SuperchatClient:
         category: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        템플릿 응답 생성
+        テンプレート応答の生成
 
         Args:
-            title: 제목
-            content: 내용
-            shortcuts: 단축키 목록
-            category: 카테고리
+            title: タイトル
+            content: 内容
+            ショートカット：ショートカットリスト
+            category：カテゴリ
 
         Returns:
-            생성된 템플릿 응답 정보
+            生成されたテンプレート応答情報
         """
         data = {
             'title': title,
@@ -490,14 +490,14 @@ class SuperchatClient:
         limit: int = 50
     ) -> List[Dict[str, Any]]:
         """
-        템플릿 응답 목록 조회
+        テンプレート応答リストの照会
 
         Args:
-            category: 카테고리 필터
-            limit: 반환할 항목 수
+            category: カテゴリフィルタ
+            limit: 返す項目の数
 
         Returns:
-            템플릿 응답 목록
+            テンプレート応答リスト
         """
         params = {'limit': limit}
         if category:
@@ -513,15 +513,15 @@ class SuperchatClient:
         metric: str = "all"
     ) -> Dict[str, Any]:
         """
-        분석 데이터 조회
+        分析データの照会
 
         Args:
-            start_date: 시작 날짜 (YYYY-MM-DD)
-            end_date: 종료 날짜 (YYYY-MM-DD)
-            metric: 메트릭 (all, messages, chats, satisfaction, response_time)
+            start_date：開始日（YYYY-MM-DD）
+            end_date: 終了日 (YYYY-MM-DD)
+            metric: メトリック (all, messages, chats, satisfaction, response_time)
 
         Returns:
-            분석 데이터
+            分析データ
         """
         params = {
             'startDate': start_date,
@@ -533,14 +533,14 @@ class SuperchatClient:
 
     def list_agents(self) -> List[Dict[str, Any]]:
         """
-        에이전트 목록 조회
+        エージェントリストの照会
 
         Returns:
-            에이전트 목록
+            エージェント一覧
         """
         response = self._request('GET', '/agents')
         return response.get('agents', [])
 
     def close(self):
-        """세션 종료"""
+        """セッション終了"""
         self.session.close()

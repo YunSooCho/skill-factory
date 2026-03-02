@@ -10,7 +10,7 @@ import time
 
 
 class DemioError(Exception):
-    """Demio API 에러"""
+    """Demio APIエラー""""
     pass
 
 
@@ -27,12 +27,12 @@ class DemioClient:
 
     def __init__(self, api_key: str, api_secret: str, base_url: str = "https://api.demio.com/v1"):
         """
-        Demio API 클라이언트 초기화
+        Demio APIクライアントの初期化
 
         Args:
             api_key: Demio API key
             api_secret: Demio API secret
-            base_url: API 기본 URL
+            base_url：APIベースURL
         """
         self.api_key = api_key
         self.api_secret = api_secret
@@ -47,7 +47,7 @@ class DemioClient:
         self.min_request_interval = 0.1  # 100ms between requests (10 requests/second)
 
     def _handle_rate_limit(self) -> None:
-        """Rate limiting 처리"""
+        """Rate limiting 処理""""
         current_time = time.time()
         time_since_last_request = current_time - self.last_request_time
         if time_since_last_request < self.min_request_interval:
@@ -62,20 +62,20 @@ class DemioClient:
         data: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        API 요청 실행
+        APIリクエストの実行
 
         Args:
-            method: HTTP 메서드 (GET, POST, PUT, DELETE)
-            endpoint: API 엔드포인트
-            params: 쿼리 파라미터
-            data: 요청 본문 데이터
+            method: HTTP メソッド (GET、POST、PUT、DELETE)
+            endpoint: API エンドポイント
+            params: クエリパラメータ
+            data: 要求本文データ
 
         Returns:
-            API 응답
+            APIレスポンス
 
         Raises:
-            DemioError: API 에러 발생 시
-            RateLimitError: Rate limit 초과 시
+            DemioError：APIエラーが発生したとき
+            RateLimitError: Rate limit 超過時
         """
         self._handle_rate_limit()
 
@@ -90,7 +90,7 @@ class DemioClient:
                 timeout=30
             )
 
-            # Rate limit 처리
+            # Rate limit 処理
             if response.status_code == 429:
                 raise RateLimitError("Rate limit exceeded")
 
@@ -118,15 +118,15 @@ class DemioClient:
         offset: Optional[int] = None
     ) -> Dict[str, Any]:
         """
-        이벤트 목록 조회
+        イベントリストの照会
 
         Args:
-            status: 상태 필터 ('scheduled', 'completed', 'active', 'cancelled')
-            limit: 반환할 최대 결과 수
-            offset: 페이지 오프셋
+            status: ステータスフィルタ ('scheduled', 'completed', 'active', 'cancelled')
+            limit: 返す最大結果数
+            offset: ページオフセット
 
         Returns:
-            이벤트 목록
+            イベント一覧
             {
                 "events": [
                     {
@@ -160,13 +160,13 @@ class DemioClient:
 
     def get_event(self, event_id: int) -> Dict[str, Any]:
         """
-        이벤트 상세 정보 조회
+        イベント詳細の照会
 
         Args:
-            event_id: 이벤트 ID
+            event_id：イベントID
 
         Returns:
-            이벤트 상세 정보
+            イベント詳細
             {
                 "id": int,
                 "name": str,
@@ -193,15 +193,15 @@ class DemioClient:
         offset: Optional[int] = None
     ) -> Dict[str, Any]:
         """
-        이벤트 참여자 목록 조회
+        イベント参加者リストの照会
 
         Args:
-            event_id: 이벤트 ID
-            limit: 반환할 최대 결과 수
-            offset: 페이지 오프셋
+            event_id：イベントID
+            limit: 返す最大結果数
+            offset: ページオフセット
 
         Returns:
-            참여자 목록
+            参加者リスト
             {
                 "participants": [
                     {
@@ -238,15 +238,15 @@ class DemioClient:
         offset: Optional[int] = None
     ) -> Dict[str, Any]:
         """
-        이벤트 등록자 목록 조회
+        イベント登録者リストの照会
 
         Args:
-            event_id: 이벤트 ID
-            limit: 반환할 최대 결과 수
-            offset: 페이지 오프셋
+            event_id：イベントID
+            limit: 返す最大結果数
+            offset: ページオフセット
 
         Returns:
-            등록자 목록
+            登録者リスト
             {
                 "registrants": [
                     {
@@ -284,18 +284,18 @@ class DemioClient:
         custom_fields: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        이벤트 참여자 등록
+        イベント参加者登録
 
         Args:
-            event_id: 이벤트 ID
-            email: 참여자 이메일
-            name: 참여자 이름
-            first_name: 이름 (선택, name과 우선시)
-            last_name: 성 (선택)
-            custom_fields: 커스텀 필드 사전
+            event_id：イベントID
+            email：参加者のメール
+            name：参加者名
+            first_name：名前（オプション、nameと優先順位）
+            last_name: 姓 (選択)
+            custom_fields: カスタムフィールド辞書
 
         Returns:
-            등록 결과
+            登録結果
             {
                 "uuid": str,
                 "name": str,
@@ -322,38 +322,38 @@ class DemioClient:
 
     def cancel_registration(self, event_id: int, email: str) -> Dict[str, Any]:
         """
-        참여자 등록 취소
+        参加者登録解除
 
         Args:
-            event_id: 이벤트 ID
-            email: 참여자 이메일
+            event_id：イベントID
+            email：参加者のメール
 
         Returns:
-            취소 결과
+            キャンセル結果
         """
         return self._make_request('POST', f'/events/{event_id}/registrations/cancel', data={'email': email})
 
     def get_upcoming_events(self, limit: Optional[int] = None) -> Dict[str, Any]:
         """
-        다가오는 이벤트 목록 조회
+        今後のイベントリストの検索
 
         Args:
-            limit: 반환할 최대 결과 수
+            limit: 返す最大結果数
 
         Returns:
-            다가오는 이벤트 목록
+            今後のイベント一覧
         """
         return self.list_events(status='scheduled', limit=limit)
 
     def get_completed_events(self, limit: Optional[int] = None) -> Dict[str, Any]:
         """
-        완료된 이벤트 목록 조회
+        完了したイベントリストの検索
 
         Args:
-            limit: 반환할 최대 결과 수
+            limit: 返す最大結果数
 
         Returns:
-            완료된 이벤트 목록
+            完了したイベントのリスト
         """
         return self.list_events(status='completed', limit=limit)
 
@@ -361,31 +361,31 @@ class DemioClient:
 if __name__ == "__main__":
     import os
 
-    # 테스트 코드
+    #テストコード
     api_key = os.environ.get('DEMIO_API_KEY', 'your-api-key')
     api_secret = os.environ.get('DEMIO_API_SECRET', 'your-api-secret')
     client = DemioClient(api_key, api_secret)
 
     try:
-        # 이벤트 목록 조회 테스트
+        # イベントリスト検索テスト
         events = client.list_events(status='scheduled', limit=5)
         print("Events:", events)
 
-        # 특정 이벤트 조회 테스트
+        #特定のイベント検索テスト
         if events.get('events'):
             event_id = events['events'][0]['id']
             event = client.get_event(event_id)
             print("Event details:", event)
 
-            # 참여자 목록 조회 테스트
+            #参加者リスト検索テスト
             participants = client.list_event_participants(event_id)
             print("Participants:", participants)
 
-            # 등록자 목록 조회 테스트
+            # 登録者リスト検索テスト
             registrants = client.get_event_registrants(event_id)
             print("Registrants:", registrants)
 
-            # 새 참여자 등록 테스트
+            #新しい参加者登録テスト
             registration_result = client.register_event_participant(
                 event_id=event_id,
                 email='new@example.com',

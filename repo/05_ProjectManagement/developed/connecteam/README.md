@@ -1,14 +1,14 @@
-# Connecteam API 클라이언트
+#Connecteam APIクライアント
 
-Connecteam을 위한 Python API 클라이언트입니다. 인력 관리 기능을 제공합니다.
+Connecteam用のPython APIクライアントです。人材管理機能を提供します。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-## 사용법
+##使用法
 
 ```python
 from connecteam import ConnecteamClient, ConnecteamError
@@ -22,6 +22,6 @@ employees = client.get_employees()
 shift = client.create_shift({"employeeId": "123", "start": "2024-01-01T09:00:00Z"})
 ```
 
-## 라이선스
+##ライセンス
 
 MIT License

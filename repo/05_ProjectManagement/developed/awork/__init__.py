@@ -1,5 +1,5 @@
 """
-Awor크 API Client
+Awork API Client
 """
 
 from .client import AworkClient, AworkError

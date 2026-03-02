@@ -1,35 +1,35 @@
-# Google Business Profile API 클라이언트
+#Google Business Profile API クライアント
 
-Google Business Profile를 위한 Python API 클라이언트입니다.
+Google Business Profile用のPython APIクライアント。
 
-## 개요
+## 概要
 
-이 클라이언트는 Google Business Profile API에 접근하여 비즈니스 위치 정보를 관리합니다.
+このクライアントは Google Business Profile API にアクセスし、ビジネス位置情報を管理します。
 
-## 설치
+## インストール
 
-의존성 패키지:
+依存パッケージ：
 
 ```bash
 pip install requests
 ```
 
-또는:
+または：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급
+## API キー発行
 
-1. [Google Cloud Console](https://console.cloud.google.com/)에서 프로젝트 생성
-2. Google My Business API 사용 설정
-3. OAuth 2.0 또는 Service Account 인증 토큰 발급
-4. 발급된 Access Token 저장
+1. [Google Cloud Console]（https://console.cloud.google.com/)에서プロジェクトの作成
+2. Google My Business API を有効にする
+3. OAuth 2.0 または Service Account 認証トークンの発行
+4. 発行された Access Token を保存
 
-## 사용법
+##使用法
 
-### 초기화
+### 初期化
 
 ```python
 from google_business_profile.google_business_profile_client import GoogleBusinessProfileClient
@@ -40,7 +40,7 @@ client = GoogleBusinessProfileClient(
 )
 ```
 
-### 예시 코드
+### サンプルコード
 
 ```python
 # 계정의 모든 위치 조회
@@ -57,12 +57,12 @@ location_detail = client.get_location(
 print("Location detail:", location_detail)
 ```
 
-## API 액션
+## APIアクション
 
-- `get_locations` - 계정의 비즈니스 위치 목록 조회
-- `get_location` - 특정 비즈니스 위치 상세 조회
+- `get_locations` - アカウントのビジネスロケーションリストの検索
+- `get_location` - 特定のビジネスロケーションの詳細検索
 
-## 에러 처리
+## エラー処理
 
 ```python
 try:
@@ -73,8 +73,8 @@ except Exception as e:
 
 ## Rate Limiting
 
-API 요청 간 최소 0.1초 지연이 적용됩니다. 너무 많은 요청이 발생하면 Rate Limit 에러가 발생할 수 있습니다.
+APIリクエスト間の最小0.1秒遅延が適用されます。要求が多すぎると、Rate Limitエラーが発生する可能性があります。
 
-## 라이선스
+##ライセンス
 
 MIT License

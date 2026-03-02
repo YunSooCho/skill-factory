@@ -1,20 +1,20 @@
-# Invoice API 클라이언트
+#Invoice APIクライアント
 
-Invoice API를 위한 Python API 클라이언트입니다. 범용 송장 관리 기능을 제공합니다.
+Invoice API用のPython APIクライアント。汎用請求書管理機能を提供します。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. Invoice API 웹사이트에 로그인
-2. 설정 > API Keys 메뉴에서 API Key 생성
-3. API Key 확인
+1. Invoice APIウェブサイトにログイン
+2. 設定 > API Keys メニューから API Key を生成
+3. API Keyの確認
 
-## 사용법
+##使用法
 
 ```python
 from invoice_api import InvoiceAPIClient, InvoiceAPIError
@@ -55,15 +55,15 @@ client.create_payment({
 recurring_invoices = client.get_recurring_invoices()
 ```
 
-## 기능
+## 機能
 
-- 송장(Invoices) CRUD
-- 거래처(Clients) 관리
-- 제품(Products) 관리
-- 송장 전송
-- 결제(Payments) 관리
-- 반복 송장(Recurring Invoices) 관리
+- 請求書(Invoices) CRUD
+- 取引先(Clients)管理
+- 製品(Products)管理
+- 請求書転送
+- 決済（Payments）管理
+- 繰り返し請求書(Recurring Invoices)管理
 
-## 라이선스
+##ライセンス
 
 MIT License

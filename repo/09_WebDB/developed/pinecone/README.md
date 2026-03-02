@@ -1,24 +1,24 @@
-# Pinecone 벡터 데이터베이스 SDK
+# Pinecone Vector Database SDK
 
-Pinecone는 고성능 벡터 유사도 검색을 위한 Python SDK입니다.
+Pineconeは、高性能ベクトル類似度検索のためのPython SDKです。
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [Pinecone 웹사이트](https://www.pinecone.io)에 접속하여 계정을 생성합니다.
-2. 대시보드에서 API Keys 섹션으로 이동합니다.
-3. 'Create API Key' 버튼을 클릭하여 새 API 키를 생성합니다.
-4. Environment 정보(예: us-west1-gcp)를 확인합니다.
-5. 생성된 API 키를 안전한 곳에 저장합니다.
+1. [Pineconeウェブサイト]（https://www.pinecone.io)에にアクセスしてアカウントを作成します。
+2.ダッシュボードのAPI Keysセクションに移動します。
+3. [Create API Key]ボタンをクリックして新しいAPIキーを生成します。
+4. Environment情報（us-west1-gcpなど）を確認します。
+5. 生成された API キーを安全な場所に保存します。
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from pinecone import PineconeClient
@@ -29,7 +29,7 @@ client = PineconeClient(
 )
 ```
 
-### 인덱스 생성
+### インデックスの生成
 
 ```python
 response = client.create_index(
@@ -43,7 +43,7 @@ response = client.create_index(
 print(f"인덱스 생성 완료: {response}")
 ```
 
-### 벡터 업서트 (Upsert)
+### ベクトルアップサート(Upsert)
 
 ```python
 vectors = [
@@ -76,7 +76,7 @@ result = client.upsert_vectors(
 print(f"업서트된 벡터 수: {result['upsertedCount']}")
 ```
 
-### 벡터 검색
+###ベクトル検索
 
 ```python
 query_vector = [0.15, 0.18, 0.35, 0.42, 0.48]
@@ -96,7 +96,7 @@ for match in results.get('matches', []):
         print(f"  Metadata: {match['metadata']}")
 ```
 
-### 벡터 가져오기
+### ベクトルの取得
 
 ```python
 vectors = client.fetch_vectors(
@@ -110,7 +110,7 @@ for vec_id, vector_data in vectors.get('vectors', {}).items():
     print(f"  차원: {len(vector_data['values'])}")
 ```
 
-### 벡터 업데이트
+###ベクトル更新
 
 ```python
 client.update_vector(
@@ -120,7 +120,7 @@ client.update_vector(
 )
 ```
 
-### 벡터 삭제
+### ベクトルの削除
 
 ```python
 # 특정 ID로 삭제
@@ -145,7 +145,7 @@ client.delete_vectors(
 )
 ```
 
-### 인덱스 관리
+### インデックス管理
 
 ```python
 # 모든 인덱스 목록
@@ -165,7 +165,7 @@ print(f"전체 벡터 수: {stats.get('totalVectorCount', 0)}")
 client.delete_index("my-index")
 ```
 
-### 컬렉션 관리
+### コレクション管理
 
 ```python
 # 컬렉션 생성 (인덱스 스냅샷)
@@ -187,17 +187,17 @@ client.create_index_from_collection(
 client.delete_collection("my-collection")
 ```
 
-## 주요 기능
+##主な機能
 
-- ✅ 벡터 인덱스 생성 및 관리
-- ✅ 대규모 벡터 업서트 (배치 처리 지원)
-- ✅ 고성능 유사도 검색
-- ✅ 메타데이터 필터링
-- ✅ 네임스페이스 지원
-- ✅ 컬렉션을 통한 스냅샷 및 복원
-- ✅ 실시간 인덱싱
-- ✅ 다양한 거리 지표 (cosine, euclidean, dotproduct)
+- ✅ベクトルインデックスの作成と管理
+- ✅大規模ベクトルアップサート(バッチ処理サポート)
+- ✅高性能類似度検索
+- ✅メタデータフィルタリング
+- ✅ネームスペースサポート
+- ✅コレクションによるスナップショットと復元
+- ✅リアルタイムインデックス作成
+- ✅様々な距離指標（cosine、euclidean、dotproduct）
 
-## 라이선스
+##ライセンス
 
 MIT License

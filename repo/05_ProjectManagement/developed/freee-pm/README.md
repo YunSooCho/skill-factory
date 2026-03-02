@@ -1,14 +1,14 @@
-# Freee PM API 클라이언트
+#Freee PM API クライアント
 
-Freee PM을 위한 Python API 클라이언트입니다. 프로젝트 관리 기능을 제공합니다.
+Freee PM用のPython APIクライアント。プロジェクト管理機能を提供します。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-## 사용법
+##使用法
 
 ```python
 from freee_pm import FreeePMClient, FreeePMError
@@ -22,6 +22,6 @@ projects = client.get_projects()
 task = client.create_task({"name": "Task", "project_id": "123"})
 ```
 
-## 라이선스
+##ライセンス
 
 MIT License

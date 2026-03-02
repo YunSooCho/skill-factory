@@ -1,26 +1,26 @@
-# Zoho Creator 로우코드 플랫폼 SDK
+# Zoho Creator ローコードプラットフォーム SDK
 
-Zoho Creator는 Zoho의 로우코드 애플리케이션 개발 플랫폼에 대한 Python SDK입니다.
+Zoho Creatorは、Zohoのローコードアプリケーション開発プラットフォーム用のPython SDKです。
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [Zoho Developer Console](https://zoho.com/creator/)에 접속합니다.
-2. 새 애플리케이션을 생성하거나 기존 애플리케이션을 선택합니다.
-3. Settings > API Settings로 이동합니다.
-4. OAuth 인증을 설정하고 클라이언트 ID, 클라이언트 비밀을 발급받습니다.
-5. 액세스 토큰을 생성합니다.
-6. Account Owner ID (예: 123456789)를 확인합니다.
-7. 애플리케이션 Link Name을 확인합니다.
+1. [Zoho Developer Console](https://zoho.com/creator/)에 接続します。
+2. 新しいアプリケーションを作成するか、既存のアプリケーションを選択します。
+3. Settings > API Settings に移動します。
+4. OAuth認証を設定し、クライアントID、クライアント秘密を発行します。
+5. アクセストークンを生成します。
+6. Account Owner ID（例：123456789）を確認します。
+7. アプリケーションのリンク名を確認します。
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from zoho_creator import ZohoCreatorClient
@@ -32,7 +32,7 @@ client = ZohoCreatorClient(
 )
 ```
 
-### 폼(Form) 관리
+### フォーム(Form)の管理
 
 ```python
 # 모든 폼 목록
@@ -48,7 +48,7 @@ settings = client.get_settings()
 print(f"설정: {settings}")
 ```
 
-### 레코드 관리
+### レコード管理
 
 ```python
 # 레코드 목록 조회
@@ -101,7 +101,7 @@ client.delete_record(
 )
 ```
 
-### 일괄 작업
+### バッチジョブ
 
 ```python
 # 일괄 레코드 생성
@@ -130,7 +130,7 @@ client.batch_delete_records(
 )
 ```
 
-### 필드 관리
+### フィールド管理
 
 ```python
 # 폼의 모든 필드 목록
@@ -153,7 +153,7 @@ client.delete_field(
 )
 ```
 
-### 리포트 관리
+### レポート管理
 
 ```python
 # 모든 리포트 목록
@@ -175,7 +175,7 @@ for record in report_data['data']:
     print(f"데이터: {record}")
 ```
 
-### 검색
+###検索
 
 ```python
 # 필드로 검색
@@ -190,7 +190,7 @@ for result in search_results['data']:
     print(f"결과: {result}")
 ```
 
-### 관련 레코드
+### 関連レコード
 
 ```python
 # 관련 레코드 조회 (Lookup 관계)
@@ -201,7 +201,7 @@ related = client.get_related_records(
 )
 ```
 
-### 댓글 관리
+### コメントの管理
 
 ```python
 # 레코드에 댓글 추가
@@ -221,7 +221,7 @@ for comment in comments:
     print(f"댓글: {comment['content']}, 작성자: {comment['added_by']}")
 ```
 
-### 파일 관리
+###ファイル管理
 
 ```python
 # 파일 업로드
@@ -240,7 +240,7 @@ file_info = client.download_file(
 )
 ```
 
-### 워크플로우
+### ワークフロー
 
 ```python
 # 커스텀 워크플로우 트리거
@@ -257,7 +257,7 @@ result = client.trigger_workflow(
 )
 ```
 
-### 통계
+###統計
 
 ```python
 # 폼 통계
@@ -271,28 +271,28 @@ for page in pages:
     print(f"페이지: {page['title']} ({page['link_name']})")
 ```
 
-## 필드 유형 예시
+## フィールドタイプの例
 
-- **text**: 텍스트
-- **multiline**: 여러 줄 텍스트
-- **number**: 숫자
-- **currency**: 통화
-- **email**: 이메일
-- **phone**: 전화번호
-- **date**: 날짜
-- **datetime**: 날짜 및 시간
-- **boolean**: 부울 (참/거짓)
-- **file**: 파일 업로드
-- **image**: 이미지
-- **lookup**: 조회 필드
-- **dropdown**: 드롭다운
-- **radio**: 라디오 버튼
-- **checkbox**: 체크박스
-- **multiselect**: 다중 선택
+- **text**: テキスト
+- **multiline**: 複数行テキスト
+- **number**: 数字
+- **currency**: 通貨
+- **email**: メール
+- **phone**: 電話番号
+- **date**: 日付
+- **datetime**: 日時
+- **boolean**: ブール (true/false)
+- **file**: ファイルのアップロード
+- **image**: イメージ
+- **lookup**: 照会フィールド
+- **dropdown**: ドロップダウン
+- **radio**: ラジオボタン
+- **checkbox**: チェックボックス
+- **multiselect**: 複数選択
 - **url**: URL
-- **formula**: 수식
+- **formula**: 式
 
-## 쿼리 조건(Criteria) 예시
+＃＃クエリ条件（Criteria）の例
 
 ```python
 # 단일 조건
@@ -311,24 +311,24 @@ criteria = "Name starts_with '홍'"
 criteria = "Email contains '@'"
 ```
 
-## 주요 기능
+##主な機能
 
-- ✅ 폼(Form) 및 레코드 관리
-- ✅ CRUD 작업
-- ✅ 일괄 작업 지원
-- ✅ 필드 관리
-- ✅ 리포트 생성 및 실행
-- ✅ 검색 기능
-- ✅ 레코드 관계
-- ✅ 댓글 기능
-- ✅ 파일 업로드/다운로드
-- ✅ 워크플로우 트리거
-- ✅ 통계 및 분석
+- ✅フォーム（フォーム）とレコード管理
+- ✅ CRUD操作
+- ✅バッチジョブのサポート
+- ✅フィールド管理
+- ✅レポートの作成と実行
+- ✅検索機能
+- ✅レコード関係
+- ✅コメント機能
+- ✅ファイルのアップロード/ダウンロード
+- ✅ワークフロートリガ
+- ✅統計と分析
 
-## 인증
+##認証
 
-Zoho Creator는 OAuth 2.0 인증을 사용합니다. 클라이언트는 발급받은 액세스 토큰을 사용하여 인증합니다.
+Zoho Creator は OAuth 2.0 認証を使用します。クライアントは発行されたアクセストークンを使用して認証します。
 
-## 라이선스
+##ライセンス
 
 MIT License

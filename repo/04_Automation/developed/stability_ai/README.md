@@ -1,32 +1,32 @@
-# Stability AI API 클라이언트
+#Stability AI APIクライアント
 
-Stability AI를 위한 Python API 클라이언트입니다. 이미지 생성, 그리고 편집 기능을 제공합니다.
+Stability AI用のPython APIクライアント。画像を生成し、編集機能を提供します。
 
-## 개요
+## 概要
 
-Stability AI는 Stable Diffusion 기반의 최신 이미지 생성 및 편집 서비스입니다. 다양한 이미지 생성, 편집, 배경 제거 등의 기능을 제공합니다.
+Stability AIは、Stable Diffusionベースの最新の画像作成および編集サービスです。さまざまな画像の作成、編集、背景の削除などの機能を提供します。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-또는:
+または：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급
+## API キー発行
 
-1. [Stability AI](https://platform.stability.ai/)에서 계정 생성
-2. API 키 발급
-3. API 키를 안전하게 저장
+1. [Stability AI](https://platform.stability.ai/)에서 アカウントの作成
+2. API キー発行
+3. API キーを安全に保存
 
-## 사용법
+##使用法
 
-### 초기화
+### 初期化
 
 ```python
 from stability_ai import StabilityAIClient, StabilityAIError
@@ -37,7 +37,7 @@ client = StabilityAIClient(
 )
 ```
 
-### 1. 이미지 아웃페인팅 (확장)
+### 1. イメージアウトペインティング(拡張)
 
 ```python
 try:
@@ -54,7 +54,7 @@ except StabilityAIError as e:
     print("Error:", str(e))
 ```
 
-### 2. 이미지 생성 (Stable Image Core)
+### 2. イメージの作成 (Stable Image Core)
 
 ```python
 result = client.generate_image_core(
@@ -67,7 +67,7 @@ result = client.generate_image_core(
 )
 ```
 
-### 3. 고화질 이미지 생성 (Stable Image Ultra)
+### 3. 高画質画像の生成 (Stable Image Ultra)
 
 ```python
 result = client.generate_image_ultra(
@@ -76,7 +76,7 @@ result = client.generate_image_ultra(
 )
 ```
 
-### 4. 객체 제거
+### 4. オブジェクトの削除
 
 ```python
 result = client.remove_object(
@@ -85,7 +85,7 @@ result = client.remove_object(
 )
 ```
 
-### 5. 배경 제거
+### 5. 背景を削除
 
 ```python
 result = client.remove_background(
@@ -94,7 +94,7 @@ result = client.remove_background(
 )
 ```
 
-### 6. 구조 기반 이미지 생성
+### 6. 構造ベースの画像の生成
 
 ```python
 result = client.generate_from_structure(
@@ -104,7 +104,7 @@ result = client.generate_from_structure(
 )
 ```
 
-### 7. 이미지 인페인팅
+### 7. イメージインペインティング
 
 ```python
 result = client.inpaint_image(
@@ -114,7 +114,7 @@ result = client.inpaint_image(
 )
 ```
 
-### 8. 레퍼런스 기반 이미지 생성 (Ultra)
+### 8. リファレンスベースの画像を生成する（Ultra）
 
 ```python
 result = client.generate_from_reference_ultra(
@@ -124,7 +124,7 @@ result = client.generate_from_reference_ultra(
 )
 ```
 
-### 9. 스케치에서 이미지 생성
+### 9. スケッチから画像を作成
 
 ```python
 result = client.generate_from_sketch(
@@ -134,36 +134,36 @@ result = client.generate_from_sketch(
 )
 ```
 
-## API 메서드
+## APIメソッド
 
 ### outpaint_image
-이미지를 선택한 방향으로 확장합니다.
+画像を選択した方向に拡大します。
 
 ### generate_image_core
-기본 이미지 생성 (Core 모델).
+基本画像の生成(Coreモデル).
 
 ### generate_image_ultra
-고화질 이미지 생성 (Ultra 모델).
+高精細画像生成(Ultraモデル)
 
 ### remove_object
-이미지에서 원하지 않는 객체 제거.
+画像から不要なオブジェクトを削除します。
 
 ### remove_background
-이미지 배경 제거.
+画像の背景を削除します。
 
 ### generate_from_structure
-구조/스켈레톤을 기반으로 이미지 생성.
+構造/スケルトンに基づいて画像を作成します。
 
 ### inpaint_image
-마스크를 사용하여 이미지 부분 수정.
+マスクを使用した画像部分の修正。
 
 ### generate_from_reference_ultra
-레퍼런스 이미지 비슷하게 생성 (Ultra).
+参照画像のように生成（Ultra）。
 
 ### generate_from_sketch
-스케치/드로잉에서 실사 이미지 생성.
+スケッチ/図面で実写画像を作成します。
 
-## 에러 처리
+## エラー処理
 
 ```python
 from stability_ai import StabilityAIError, StabilityAIRateLimitError, StabilityAIAuthenticationError
@@ -180,13 +180,13 @@ except StabilityAIError as e:
 
 ## Rate Limiting
 
-API 요청 간 최소 100ms 지연이 적용됩니다.
+API リクエスト間に少なくとも 100ms の遅延が適用されます。
 
-## 라이선스
+##ライセンス
 
 MIT License
 
-## 지원
+## サポート
 
-- [Stability AI 플랫폼](https://platform.stability.ai/)
-- [API 문서](https://platform.stability.ai/docs)
+- [Stability AIプラットフォーム]（https://platform.stability.ai/)
+- [APIドキュメント]（https://platform.stability.ai/docs)

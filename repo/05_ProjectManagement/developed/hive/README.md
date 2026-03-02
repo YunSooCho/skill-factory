@@ -1,32 +1,32 @@
-# Hive API 클라이언트
+#Hive APIクライアント
 
-Project management and collaboration platform를 위한 Python 클라이언트입니다.
+Project management and collaboration platform 用の Python クライアントです。
 
-## 개요
+## 概要
 
-Project management and collaboration platform. 이 클라이언트는 OAuth 인증을 통해 Hive API에 접근합니다.
+Project management and collaboration platform.このクライアントはOAuth認証を介してHive APIにアクセスします。
 
-## 설치
+## インストール
 
 \`\`\`bash
 pip install requests
 \`\`\`
 
-또는:
+または：
 
 \`\`\`bash
 pip install -r requirements.txt
 \`\`\`
 
-## OAuth 액세스 토큰 발급
+## OAuthアクセストークン発行
 
-1. 해당 서비스에서 앱 등록
-2. OAuth 2.0 흐름을 통해 액세스 토큰 발급
-3. 발급된 토큰을 안전하게 저장
+1. そのサービスでアプリを登録する
+2. OAuth 2.0フローによるアクセストークンの発行
+3. 発行されたトークンを安全に保存
 
-## 사용법
+##使用法
 
-### 초기화
+### 初期化
 
 \`\`\`python
 from hive import HiveClient, HiveError
@@ -37,7 +37,7 @@ client = HiveClient(
 )
 \`\`\`
 
-### 주요 기능
+###主な機能
 
 \`\`\`python
 - projects
@@ -45,31 +45,31 @@ client = HiveClient(
 - actions
 \`\`\`
 
-### 예시
+### 例
 
 \`\`\`python
-# 데이터 조회
+#データ検索
 result = client.get_projects()
 
-# 데이터 생성
+#データ生成
 result = client.create_project(
     name="Example Name"
 )
 \`\`\`
 
-## 에러 처리
+## エラー処理
 
 \`\`\`python
 try:
     result = client.get_projects()
 except HiveAuthenticationError:
-    print("인증 실패")
+    print("認証失敗")
 except HiveRateLimitError:
-    print("속도 제한 초과")
+    print("速度制限超過")
 except HiveError as e:
-    print(f"요청 실패: {str(e)}")
+    print(f"リクエストに失敗しました: {str(e)}")
 \`\`\`
 
-## 라이선스
+##ライセンス
 
 MIT License

@@ -10,7 +10,7 @@ import time
 
 
 class DataForSEOError(Exception):
-    """DataForSEO API 에러"""
+    """DataForSEO APIエラー"""
     pass
 
 
@@ -32,12 +32,12 @@ class DataForSEOClient:
         base_url: str = "https://api.dataforseo.com/v3"
     ):
         """
-        DataForSEO API 클라이언트 초기화
+        DataForSEO APIクライアントの初期化
 
         Args:
             api_login: DataForSEO API login
             api_password: DataForSEO API password
-            base_url: API 기본 URL
+            base_url：APIベースURL
         """
         self.api_login = api_login
         self.api_password = api_password
@@ -51,9 +51,9 @@ class DataForSEOClient:
         self.min_request_interval = 0.02  # 50 requests/second
 
     def _handle_rate_limit(self, response: Optional[requests.Response] = None) -> None:
-        """Rate limiting 처리"""
+        """Rate limiting 処理""""
         if response:
-            # 응답 헤더에서 rate limit 정보 확인
+            ＃応答ヘッダーのレート制限情報を確認する
             limit_remaining = int(response.headers.get('X-RateLimit-Remaining', 10))
             if limit_remaining <= 1:
                 time.sleep(0.1)
@@ -72,20 +72,20 @@ class DataForSEOClient:
         params: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        API 요청 실행
+        APIリクエストの実行
 
         Args:
-            method: HTTP 메서드 (GET, POST, DELETE)
-            endpoint: API 엔드포인트
-            data: 요청 본문 데이터
-            params: 쿼리 파라미터
+            method: HTTP メソッド (GET, POST, DELETE)
+            endpoint: API エンドポイント
+            data: 要求本文データ
+            params: クエリパラメータ
 
         Returns:
-            API 응답
+            APIレスポンス
 
         Raises:
-            DataForSEOError: API 에러 발생 시
-            RateLimitError: Rate limit 초과 시
+            DataForSEOError：APIエラーが発生したとき
+            RateLimitError: Rate limit 超過時
         """
         url = f"{self.base_url}{endpoint}"
 
@@ -107,7 +107,7 @@ class DataForSEOClient:
 
             result = response.json()
 
-            # 에러 처리
+            # エラー処理
             if result.get('status_code') not in [20000, 20100]:
                 error_message = result.get('status_message', 'Unknown error')
                 raise DataForSEOError(f"API error ({result.get('status_code')}): {error_message}")
@@ -128,19 +128,19 @@ class DataForSEOClient:
     def get_search_volume(
         self,
         keywords: List[str],
-        location_code: int = 2840,  # 기본값: Global
+        location_code: int = 2840, # デフォルト: Global
         language_code: str = "en"
     ) -> Dict[str, Any]:
         """
-        검색량 및 경쟁 데이터 조회
+        検索量と競争データの照会
 
         Args:
-            keywords: 키워드 목록 (최대 100개)
-            location_code: 위치 코드 (DataForSEO 지역 코드)
-            language_code: 언어 코드 (ISO 639-1)
+            キーワード：キーワードリスト（最大100個）
+            location_code：位置コード（DataForSEO地域コード）
+            language_code：言語コード（ISO 639-1）
 
         Returns:
-            키워드 데이터
+            キーワードデータ
             {
                 "status_code": 20000,
                 "tasks": [
@@ -180,17 +180,17 @@ class DataForSEOClient:
         depth: int = 10
     ) -> Dict[str, Any]:
         """
-        SERP (Search Engine Results Page) 데이터 조회
+        SERP (Search Engine Results Page) データの照会
 
         Args:
-            keyword: 검색 키워드
-            location_code: 위치 코드
-            language_code: 언어 코드
-            search_engine: 검색 엔진 (google, bing, etc.)
-            depth: 결과 깊이 (기본값: 10)
+            keyword：検索キーワード
+            location_code：位置コード
+            language_code: 言語コード
+            search_engine: 検索エンジン (google, bing, etc.)
+            depth：結果の深さ（デフォルト：10）
 
         Returns:
-            SERP 결과
+            SERP結果
         """
         data = [{
             "keyword": keyword,
@@ -208,14 +208,14 @@ class DataForSEOClient:
         language_code: str = "en"
     ) -> Dict[str, Any]:
         """
-        도메인 랭크 개요 조회
+        ドメインランクの概要を表示
 
         Args:
-            target: 도메인 또는 URL
-            language_code: 언어 코드
+            target: ドメインまたは URL
+            language_code: 言語コード
 
         Returns:
-            도메인 랭크 데이터
+            ドメインランクデータ
             {
                 "status_code": 20000,
                 "tasks": [
@@ -252,19 +252,19 @@ class DataForSEOClient:
         filters: Optional[List[Dict[str, Any]]] = None
     ) -> Dict[str, Any]:
         """
-        백링크 데이터 조회
+        バックリンクデータの照会
 
         Args:
-            target: 도메인 또는 URL
-            limit: 반환할 최대 결과 수 (최대 1000)
-            filters: 필터 조건
+            target: ドメインまたは URL
+            limit：返す最大結果数（最大1000）
+            filters: フィルタ条件
                 [
                     ["dofollow", "=", true],
                     ["type", "in", ["link", "redirect"]]
                 ]
 
         Returns:
-            백링크 데이터
+            バックリンクデータ
             {
                 "status_code": 20000,
                 "tasks": [
@@ -308,13 +308,13 @@ class DataForSEOClient:
         target: str
     ) -> Dict[str, Any]:
         """
-        백링크 요약 조회
+        バックリンクサマリービュー
 
         Args:
-            target: 도메인 또는 URL
+            target: ドメインまたは URL
 
         Returns:
-            백링크 요약 데이터
+            バックリンクサマリーデータ
             {
                 "status_code": 20000,
                 "tasks": [
@@ -355,16 +355,16 @@ class DataForSEOClient:
         depth: int = 20
     ) -> Dict[str, Any]:
         """
-        비즈니스 목록 검색 (Google Maps, Yandex Maps, etc.)
+        ビジネスリストの検索（Google Maps、Yandex Maps、etc.）
 
         Args:
-            query: 검색 쿼리 (예: "restaurants", "plumber")
-            location_name: 위치 이름 (예: "New York", "Tokyo")
-            location_code: 위치 코드 (DataForSEO 코드)
-            depth: 결과 깊이
+            query: 検索クエリ (例: "restaurants", "plumber")
+            location_name：場所名（例：「ニューヨーク」、「東京」）
+            location_code：位置コード（DataForSEOコード）
+            depth: 結果の深さ
 
         Returns:
-            비즈니스 목록 데이터
+            ビジネスリストデータ
             {
                 "status_code": 20000,
                 "tasks": [
@@ -408,27 +408,27 @@ class DataForSEOClient:
 
     def get_task_result(self, task_id: str) -> Dict[str, Any]:
         """
-        비동기 작업 결과 조회
+        非同期操作結果の照会
 
         Args:
-            task_id: 작업 ID
+            task_id：ジョブID
 
         Returns:
-            작업 결과
+            作業結果
         """
         return self._make_request('GET', f'/serp/task_get/{task_id}')
 
 
 def create_dataforseo_client(api_login: str, api_password: str) -> DataForSEOClient:
     """
-    DataForSEO 클라이언트 생성 (Factory function)
+    DataForSEO クライアントの作成 (Factory function)
 
     Args:
         api_login: DataForSEO API login
         api_password: DataForSEO API password
 
     Returns:
-        DataForSEOClient 인스턴스
+        DataForSEOClient インスタンス
     """
     return DataForSEOClient(api_login, api_password)
 
@@ -436,33 +436,33 @@ def create_dataforseo_client(api_login: str, api_password: str) -> DataForSEOCli
 if __name__ == "__main__":
     import os
 
-    # 테스트 코드
+    #テストコード
     api_login = os.environ.get('DATAFORSEO_API_LOGIN', 'your-api-login')
     api_password = os.environ.get('DATAFORSEO_API_PASSWORD', 'your-api-password')
     client = create_dataforseo_client(api_login, api_password)
 
     try:
-        # 검색량 조회 테스트
+        # 検索ボリューム照会テスト
         volume_result = client.get_search_volume(['python programming', 'machine learning'])
         print("Search volume:", volume_result)
 
-        # SERP 데이터 조회 테스트
+        #SERPデータ検索テスト
         serp_result = client.get_serp_data('python tutorial')
         print("SERP data:", serp_result)
 
-        # 도메인 랭크 조회 테스트
+        #ドメインランクルックアップテスト
         rank_result = client.get_domain_rank_overview('example.com')
         print("Domain rank:", rank_result)
 
-        # 백링크 데이터 조회 테스트
+        ＃バックリンクデータ検索テスト
         backlink_result = client.get_backlink_data('example.com', limit=10)
         print("Backlink data:", backlink_result)
 
-        # 백링크 요약 조회 테스트
+        ＃バックリンクサマリールックアップテスト
         summary_result = client.get_backlink_summary('example.com')
         print("Backlink summary:", summary_result)
 
-        # 비즈니스 목록 검색 테스트
+        # ビジネスリスト検索テスト
         business_result = client.search_business_listings(
             query='restaurants',
             location_name='New York',

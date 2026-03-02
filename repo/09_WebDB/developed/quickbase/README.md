@@ -1,23 +1,23 @@
-# QuickBase 로우코드 플랫폼 SDK
+＃QuickBaseローコードプラットフォームSDK
 
-QuickBase는 온디맨드 로우코드 웹 애플리케이션 플랫폼에 대한 Python SDK입니다.
+QuickBaseは、オンデマンドのローコードWebアプリケーションプラットフォーム用のPython SDKです。
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [QuickBase](https://www.quickbase.com/)에 접속하여 계정을 로그인합니다.
-2. 설정(Home) > My Preferences > User Token 섹션으로 이동합니다.
-3. User Token을 생성합니다 (액세스 권한을 설정합니다).
-4. QuickBase Realm Hostname (예: mycompany.quickbase.com)을 확인합니다.
+1. [QuickBase]（https://www.quickbase.com/)에にアクセスしてアカウントにログインします。
+2. 「設定」(Home) > 「My Preferences」 > 「User Token」セクションに移動します。
+3. User Token を作成します（アクセス権を設定します）。
+4. QuickBase Realm Hostname（例：mycompany.quickbase.com）を確認します。
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from quickbase import QuickBaseClient
@@ -28,7 +28,7 @@ client = QuickBaseClient(
 )
 ```
 
-### 앱 관리
+###アプリ管理
 
 ```python
 # 모든 앱 목록
@@ -56,7 +56,7 @@ client.update_app(
 client.delete_app(app_id="app_id")
 ```
 
-### 테이블 관리
+### テーブル管理
 
 ```python
 # 앱 내 테이블 목록
@@ -87,7 +87,7 @@ client.update_table(
 client.delete_table(table_id="table_id", app_id="app_id")
 ```
 
-### 필드 관리
+### フィールド管理
 
 ```python
 # 테이블 내 필드 목록
@@ -120,7 +120,7 @@ client.update_field(
 client.delete_field(field_id="field_id", table_id="table_id")
 ```
 
-### 레코드 관리
+### レコード管理
 
 ```python
 # 레코드 조회
@@ -196,7 +196,7 @@ client.delete_records(
 )
 ```
 
-### 쿼리 및 필터링
+###クエリとフィルタリング
 
 ```python
 # WHERE 쿼리
@@ -216,7 +216,7 @@ results = client.query(
 )
 ```
 
-### 리포트 관리
+### レポート管理
 
 ```python
 # 테이블 리포트 목록
@@ -236,7 +236,7 @@ for record in report_data['data']:
     print(f"데이터: {record}")
 ```
 
-### 사용자 관리
+### ユーザー管理
 
 ```python
 # 앱 사용자 목록
@@ -259,7 +259,7 @@ current_user = client.get_current_user()
 print(f"이메일: {current_user['email']}")
 ```
 
-### 역할 관리
+### 役割の管理
 
 ```python
 # 앱 역할 목록
@@ -268,7 +268,7 @@ for role in roles:
     print(f"역할 ID: {role['id']}, 이름: {role['name']}")
 ```
 
-### 폼 관리
+### フォーム管理
 
 ```python
 # 폼 생성
@@ -284,27 +284,27 @@ for form in forms:
     print(f"폼 ID: {form['id']}, 이름: {form['name']}")
 ```
 
-## 필드 유형
+## フィールドタイプ
 
-QuickBase는 다양한 필드 유형을 지원합니다:
+QuickBaseはさまざまなフィールドタイプをサポートしています。
 
-- **text**: 텍스트 필드
-- **rich-text**: 리치 텍스트 필드
-- **numeric**: 숫자 필드
-- **currency**: 통화 필드
-- **percent**: 백분율 필드
-- **date**: 날짜 필드
-- **date-time**: 날짜 및 시간 필드
-- **checkbox**: 체크박스 필드
-- **phone**: 전화번호 필드
-- **email**: 이메일 필드
-- **url**: URL 필드
-- **user**: 사용자 필드
-- **file**: 파일 첨부 필드
-- **multi-select-text**: 다중 선택 텍스트 필드
-- **record-id**: 레코드 ID 필드 (주로 필드 6)
+- **text**: テキストフィールド
+- **rich-text**: リッチテキストフィールド
+- **numeric**: 数値フィールド
+- **currency**: 通貨フィールド
+- **percent**: パーセントフィールド
+- **date**: 日付フィールド
+- **date-time**: 日時フィールド
+- **checkbox**: チェックボックスフィールド
+- **phone**：電話番号フィールド
+- **email**: メールフィールド
+- **url**: URL フィールド
+- **user**: ユーザーフィールド
+- **file**: ファイル添付フィールド
+- **multi-select-text**: 複数選択テキストフィールド
+- **record-id**：レコードIDフィールド（主にフィールド6）
 
-## 쿼리 문법 예제
+## クエリ文法の例
 
 ```python
 # 정확한 값 일치
@@ -331,18 +331,18 @@ where="'20' is null"
 where="'20' is not null"
 ```
 
-## 주요 기능
+##主な機能
 
-- ✅ 애플리케이션 CRUD 작업
-- ✅ 테이블 관리
-- ✅ 필드 생성 및 수정
-- ✅ 레코드 삽입, 업데이트, 삭제
-- ✅ 쿼리 및 필터링
-- ✅ 리포트 실행
-- ✅ 사용자 및 역할 관리
-- ✅ 폼 관리
-- ✅ 일괄 작업 지원
+- ✅アプリケーションCRUD操作
+- ✅テーブル管理
+- ✅フィールドの作成と修正
+- ✅レコードの挿入、更新、削除
+- ✅クエリとフィルタリング
+- ✅レポートの実行
+- ✅ユーザーと役割の管理
+- ✅フォーム管理
+- ✅バッチジョブのサポート
 
-## 라이선스
+##ライセンス
 
 MIT License

@@ -1,14 +1,14 @@
-# Awork API 클라이언트
+#Awork APIクライアント
 
-Awork를 위한 Python API 클라이언트입니다. 작업 관리 기능을 제공합니다.
+Awork用のPython APIクライアントです。ジョブ管理機能を提供します。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-## 사용법
+##使用法
 
 ```python
 from awork import AworkClient, AworkError
@@ -22,6 +22,6 @@ projects = client.get_projects()
 task = client.create_task({"projectId": "123", "name": "Task"})
 ```
 
-## 라이선스
+##ライセンス
 
 MIT License

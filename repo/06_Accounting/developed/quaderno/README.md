@@ -1,20 +1,20 @@
-# Quaderno API 클라이언트
+# Quaderno API クライアント
 
-Quaderno를 위한 Python API 클라이언트입니다. Tax Compliance Platform.
+Quaderno用のPython APIクライアントです。 Tax Compliance Platform.
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. Quaderno 웹사이트에 로그인
-2. 설정 또는 개발자 페이지에서 API Key 발급
-3. API Key 확인
+1. Quadernoのウェブサイトにログイン
+2. 設定ページまたは開発者ページで API Key を発行
+3. API Keyの確認
 
-## 사용법
+##使用法
 
 ```python
 from quaderno import QuadernoClient, QuadernoError
@@ -48,13 +48,13 @@ clients = client.get_clients()
 client.create_client({"name": "Client Name", "email": "client@example.com"})
 ```
 
-## 기능
+## 機能
 
-- 송장(Invoices) CRUD
-- 거래처(Clients) 관리
-- 제품(Products) 관리
-- 송장 전송
+- 請求書(Invoices) CRUD
+- 取引先(Clients)管理
+- 製品(Products)管理
+- 請求書転送
 
-## 라이선스
+##ライセンス
 
 MIT License

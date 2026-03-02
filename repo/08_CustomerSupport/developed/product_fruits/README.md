@@ -1,23 +1,23 @@
 # Product Fruits SDK
 
-Product Fruits는 제품 온보딩 및 사용자 가이드 관리를 위한 Python SDK입니다.
+Product Fruitsは、製品のオンボーディングとユーザーガイドを管理するためのPython SDKです。
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [Product Fruits 웹사이트](https://productfruits.com)에 접속하여 계정을 생성합니다.
-2. 대시보드에서 Settings > API Keys 메뉴로 이동합니다.
-3. 'Create API Key' 버튼을 클릭하여 새 API 키를 생성합니다.
-4. 생성된 API 키와 Workspace ID를 안전한 곳에 저장합니다.
+1. [Product Fruits ウェブサイト](https://productfruits.com)에 にアクセスしてアカウントを作成します。
+2. ダッシュボードで、Settings > API Keys メニューに移動します。
+3. [Create API Key]ボタンをクリックして新しいAPIキーを生成します。
+4. 生成された API キーと Workspace ID を安全な場所に保存します。
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from product_fruits import ProductFruitsClient
@@ -29,7 +29,7 @@ client = ProductFruitsClient(
 )
 ```
 
-### 투어 생성
+###ツアーの作成
 
 ```python
 tour = client.create_tour(
@@ -57,7 +57,7 @@ tour = client.create_tour(
 print(f"투어 ID: {tour['id']}")
 ```
 
-### 툴팁 생성
+### ツールチップの作成
 
 ```python
 tooltip = client.create_tooltip(
@@ -70,7 +70,7 @@ tooltip = client.create_tooltip(
 )
 ```
 
-### 체크리스트 생성
+### チェックリストの生成
 
 ```python
 checklist = client.create_checklist(
@@ -93,7 +93,7 @@ checklist = client.create_checklist(
 )
 ```
 
-### 사용자 진행상황 조회
+### ユーザーの進捗状況の確認
 
 ```python
 progress = client.get_user_progress(
@@ -105,7 +105,7 @@ print(f"진행률: {progress['completionPercentage']}%")
 print(f"완료 항목: {progress['completedItems']}/{progress['totalItems']}")
 ```
 
-### 이벤트 추적
+### イベント追跡
 
 ```python
 client.track_event(
@@ -118,7 +118,7 @@ client.track_event(
 )
 ```
 
-### 공지사항 생성
+### お知らせの生成
 
 ```python
 announcement = client.create_announcement(
@@ -132,7 +132,7 @@ announcement = client.create_announcement(
 )
 ```
 
-### 분석 데이터 조회
+### 分析データの照会
 
 ```python
 analytics = client.get_analytics(
@@ -145,16 +145,16 @@ print(f"투어 조회수: {analytics['tourViews']}")
 print(f"완료율: {analytics['completionRate']}%")
 ```
 
-## 기능
+## 機能
 
-- ✅ 투어 관리 (생성, 조회, 업데이트)
-- ✅ 툴팁 관리
-- ✅ 체크리스트 관리
-- ✅ 사용자 진행상황 추적
-- ✅ 이벤트 추적
-- ✅ 공지사항 관리
-- ✅ 분석 및 리포트
+- ✅ツアー管理（作成、閲覧、更新）
+- ✅ツールチップ管理
+- ✅チェックリスト管理
+- ✅ユーザー進捗状況の追跡
+- ✅イベント追跡
+- ✅お知らせ管理
+- ✅分析とレポート
 
-## 라이선스
+##ライセンス
 
 MIT License

@@ -1,6 +1,6 @@
 """
 Canny Client
-피드백 및 기능 요청 관리 API 클라이언트
+フィードバックと機能リクエスト管理APIクライアント
 """
 
 import requests
@@ -9,9 +9,9 @@ from typing import Optional, Dict, List, Any
 
 class CannyClient:
     """
-    Canny API 클라이언트
+    Canny API クライアント
 
-    사용자 피드백, 기능 요청 관리를 위한 클라이언트
+    ユーザーフィードバック、機能要求管理のためのクライアント
     """
 
     def __init__(
@@ -21,12 +21,12 @@ class CannyClient:
         timeout: int = 30
     ):
         """
-        Canny 클라이언트 초기화
+        Cannyクライアントの初期化
 
         Args:
-            api_key: Canny API 키
-            base_url: API 기본 URL
-            timeout: 요청 타임아웃 (초)
+            api_key: Canny API キー
+            base_url：APIベースURL
+            timeout：リクエストタイムアウト（秒）
         """
         self.api_key = api_key
         self.base_url = base_url.rstrip('/')
@@ -40,18 +40,18 @@ class CannyClient:
         params: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        API 요청 전송
+        APIリクエストの送信
 
         Args:
-            endpoint: API 엔드포인트
-            data: 요청 데이터
-            params: URL 파라미터
+            endpoint: API エンドポイント
+            data: 要求データ
+            params: URL パラメータ
 
         Returns:
-            API 응답 데이터
+            API応答データ
 
         Raises:
-            requests.RequestException: API 요청 실패
+            requests.RequestException: API リクエストに失敗しました
         """
         url = f"{self.base_url}/{endpoint.lstrip('/')}"
         payload = {'apiKey': self.api_key}
@@ -79,19 +79,19 @@ class CannyClient:
         details: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        새 피드백/게시물 생성
+        新しいフィードバック/投稿の作成
 
         Args:
-            title: 제목
-            description: 설명
-            author_id: 작성자 ID
-            board_id: 보드 ID
-            category_id: 카테고리 ID
-            tags: 태그 목록
-            details: 추가 세부사항
+            title: タイトル
+            description: 説明
+            author_id：作成者ID
+            board_id：ボードID
+            category_id：カテゴリID
+            タグ：タグリスト
+            details: 追加の詳細
 
         Returns:
-            생성된 게시물 정보
+            生成された投稿情報
         """
         data = {
             'title': title,
@@ -111,13 +111,13 @@ class CannyClient:
 
     def get_post(self, post_id: str) -> Dict[str, Any]:
         """
-        게시물 조회
+        投稿を見る
 
         Args:
-            post_id: 게시물 ID
+            post_id：投稿ID
 
         Returns:
-            게시물 정보
+            投稿情報
         """
         return self._request('/posts/retrieve', data={'id': post_id})
 
@@ -130,17 +130,17 @@ class CannyClient:
         status: Optional[str] = None
     ) -> List[Dict[str, Any]]:
         """
-        게시물 목록 조회
+        投稿リストを見る
 
         Args:
-            board_id: 보드 ID 필터
-            author_id: 작성자 ID 필터
-            limit: 반환할 항목 수
-            skip: 건너뛸 항목 수
-            status: 상태 필터
+            board_id：ボードIDフィルタ
+            author_id：作成者IDフィルタ
+            limit: 返す項目の数
+            skip: スキップするアイテム数
+            status: ステータスフィルタ
 
         Returns:
-            게시물 목록
+            投稿リスト
         """
         data = {'limit': limit, 'skip': skip}
 
@@ -163,17 +163,17 @@ class CannyClient:
         tags: Optional[List[str]] = None
     ) -> Dict[str, Any]:
         """
-        게시물 업데이트
+        投稿の更新
 
         Args:
-            post_id: 게시물 ID
-            title: 새 제목
-            description: 새 설명
-            status: 새 상태
-            tags: 새 태그 목록
+            post_id：投稿ID
+            title: 新しいタイトル
+            description: 新しい説明
+            status: 新しい状態
+            タグ：新しいタグリスト
 
         Returns:
-            업데이트된 게시물 정보
+            更新された投稿情報
         """
         data = {'id': post_id}
 
@@ -196,16 +196,16 @@ class CannyClient:
         parent_comment_id: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        댓글 생성
+        コメントを生成
 
         Args:
-            post_id: 게시물 ID
-            author_id: 작성자 ID
-            content: 댓글 내용
-            parent_comment_id: 부모 댓글 ID (대댓글용)
+            post_id：投稿ID
+            author_id：作成者ID
+            content：コメント内容
+            parent_comment_id：親コメントID（大コメント用）
 
         Returns:
-            생성된 댓글 정보
+            生成されたコメント情報
         """
         data = {
             'postID': post_id,
@@ -225,15 +225,15 @@ class CannyClient:
         skip: int = 0
     ) -> List[Dict[str, Any]]:
         """
-        댓글 목록 조회
+        コメントリストを見る
 
         Args:
-            post_id: 게시물 ID
-            limit: 반환할 항목 수
-            skip: 건너뛸 항목 수
+            post_id：投稿ID
+            limit: 返す項目の数
+            skip: スキップするアイテム数
 
         Returns:
-            댓글 목록
+            コメントリスト
         """
         data = {
             'postID': post_id,
@@ -251,15 +251,15 @@ class CannyClient:
         score: int = 1
     ) -> Dict[str, Any]:
         """
-        투표 생성
+        投票の作成
 
         Args:
-            post_id: 게시물 ID
-            author_id: 작성자 ID
-            score: 투표 가중치
+            post_id：投稿ID
+            author_id：作成者ID
+            score: 投票の重み
 
         Returns:
-            투표 정보
+            投票情報
         """
         data = {
             'postID': post_id,
@@ -275,14 +275,14 @@ class CannyClient:
         author_id: str
     ) -> Dict[str, Any]:
         """
-        투표 삭제
+        投票の削除
 
         Args:
-            post_id: 게시물 ID
-            author_id: 작성자 ID
+            post_id：投稿ID
+            author_id：作成者ID
 
         Returns:
-            삭제 결과
+            削除結果
         """
         data = {
             'postID': post_id,
@@ -299,16 +299,16 @@ class CannyClient:
         companies: Optional[List[str]] = None
     ) -> Dict[str, Any]:
         """
-        사용자 생성
+        ユーザーの作成
 
         Args:
-            name: 이름
-            email: 이메일
-            avatar_url: 아바타 URL
-            companies: 회사 리스트
+            name: 名前
+            email: メール
+            avatar_url：アバターURL
+            companies: 会社リスト
 
         Returns:
-            생성된 사용자 정보
+            生成されたユーザー情報
         """
         data = {
             'name': name,
@@ -325,35 +325,35 @@ class CannyClient:
 
     def get_user(self, user_id: str) -> Dict[str, Any]:
         """
-        사용자 조회
+        ユーザー検索
 
         Args:
-            user_id: 사용자 ID
+            user_id：ユーザーID
 
         Returns:
-            사용자 정보
+            ユーザー情報
         """
         return self._request('/users/retrieve', data={'id': user_id})
 
     def list_boards(self) -> List[Dict[str, Any]]:
         """
-        보드 목록 조회
+        ボードリストの照会
 
         Returns:
-            보드 목록
+            ボードリスト
         """
         response = self._request('/boards/list')
         return response.get('boards', [])
 
     def get_board(self, board_id: str) -> Dict[str, Any]:
         """
-        보드 조회
+        ボード検索
 
         Args:
-            board_id: 보드 ID
+            board_id：ボードID
 
         Returns:
-            보드 정보
+            ボード情報
         """
         return self._request('/boards/retrieve', data={'id': board_id})
 
@@ -365,16 +365,16 @@ class CannyClient:
         comment: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        상태 변경 이력 생성
+        状態変更履歴の作成
 
         Args:
-            post_id: 게시물 ID
-            user_id: 사용자 ID
-            status: 새 상태
-            comment: 변경 사유 코멘트
+            post_id：投稿ID
+            user_id：ユーザーID
+            status: 新しい状態
+            comment: 変更理由コメント
 
         Returns:
-            상태 변경 정보
+            状態変更情報
         """
         data = {
             'postID': post_id,
@@ -389,5 +389,5 @@ class CannyClient:
         return self._request('/timelineEntries/create', data=data)
 
     def close(self):
-        """세션 종료"""
+        """セッション終了"""
         self.session.close()

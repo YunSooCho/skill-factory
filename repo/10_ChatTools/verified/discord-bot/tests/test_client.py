@@ -219,7 +219,7 @@ async def test_optional_parameters_and_exceptions(client):
 
 @pytest.mark.asyncio
 async def test_extended_api_features(client):
-    """23개의 새로운 통합 API 기능에 대한 포괄적 Mock 테스트 (파괴적 변경 방지)"""
+    """23の新しい統合API機能の包括的なMockテスト（破壊的な変更を防ぐ）"""
     from unittest.mock import patch, MagicMock, AsyncMock
     import aiohttp
 

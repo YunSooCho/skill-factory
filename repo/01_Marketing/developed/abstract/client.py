@@ -1,7 +1,7 @@
 """
 Abstract API Client
 
-Yoom Apps 자동화를 위한 Abstract API 통합 클라이언트.
+Yoom Apps自動化のためのAbstract API統合クライアント。
 """
 
 import os
@@ -12,9 +12,9 @@ from datetime import datetime
 
 class AbstractClient:
     """
-    Abstract API 클라이언트
+    Abstract API クライアント
 
-    지원하는 API:
+    サポートするAPI：
     - Exchange Rates API
     - Phone Validation API
     - Date & Time API
@@ -25,15 +25,15 @@ class AbstractClient:
 
     def __init__(self, api_key: Optional[str] = None):
         """
-        AbstractClient 초기화
+        AbstractClient 初期化
 
         Args:
-            api_key: Abstract API 키. None이면 환경변수 ABSTRACT_API_KEY 사용
+            api_key: Abstract API キー。 Noneの場合、環境変数ABSTRACT_API_KEYを使用する
         """
         self.api_key = api_key or os.getenv("ABSTRACT_API_KEY")
         if not self.api_key:
-            raise ValueError("Abstract API 키가 필요합니다. "
-                           "환경변수 ABSTRACT_API_KEY를 설정하거나 인자로 전달하세요.")
+            raise ValueError("Abstract API キーが必要です。"
+                           「環境変数ABSTRACT_API_KEYを設定するか、引数として渡してください。」）
 
         self.base_url = "https://api.abstractapi.com/v1"
         self.session = requests.Session()
@@ -42,10 +42,10 @@ class AbstractClient:
 
     def get_live_exchange_rates(self) -> Dict[str, Any]:
         """
-        실시간 환율 조회
+        リアルタイム為替レートの表示
 
         Returns:
-            환율 정보 응답 (USD 기준)
+            為替レート情報の回答(USDに基づく)
         """
         url = f"{self.base_url}/exchange_rates"
         params = {"api_key": self.api_key}
@@ -60,15 +60,15 @@ class AbstractClient:
         target: str
     ) -> Dict[str, Any]:
         """
-        환율 변환
+        為替レート変換
 
         Args:
-            amount: 변환할 금액
-            base: 기준 통화 (ex: USD)
-            target: 대상 통화 (ex: KRW)
+            amount: 変換する金額
+            base: 基準通貨 (ex: USD)
+            target: 宛先通貨 (ex: JPY)
 
         Returns:
-            변환된 금액 정보
+            変換された金額情報
         """
         url = f"{self.base_url}/exchange_rates/convert"
         params = {
@@ -89,14 +89,14 @@ class AbstractClient:
         country_code: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        전화번호 유효성 검사
+        電話番号の検証
 
         Args:
-            phone_number: 전화번호 (E.164 형식 권장)
-            country_code: 국가 코드 (ex: US, KR)
+            phone_number：電話番号（E.164形式を推奨）
+            country_code: 国コード (ex: US, JP)
 
         Returns:
-            전화번호 유효성 검사 결과
+            電話番号検証結果
         """
         url = f"{self.base_url}/phone_validation"
         params = {
@@ -117,14 +117,14 @@ class AbstractClient:
         timezone: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        현재 시간 조회
+        現在時刻の照会
 
         Args:
-            location: 도시 또는 지역명 (ex: Tokyo, New York)
-            timezone: 타임존 (ex: Asia/Tokyo, America/New_York)
+            location: 都市または地域名 (ex: Tokyo, New York)
+            timezone: タイムゾーン (ex: Asia/Tokyo, America/New_York)
 
         Returns:
-            현재 시간 정보
+            現在時刻情報
         """
         url = f"{self.base_url}/date_time"
         params = {"api_key": self.api_key}
@@ -144,16 +144,16 @@ class AbstractClient:
         target_location: str
     ) -> Dict[str, Any]:
         """
-        시간 변환
+        時間変換
 
         Args:
-            base_location: 기준 도시 (ex: Tokyo)
-            base_date: 기준 날짜 (YYYY-MM-DD 형식)
-            base_time: 기준 시간 (HH:MM 형식, 24시간제)
-            target_location: 대상 도시 (ex: New York)
+            base_location：基準都市（ex：東京）
+            base_date：基準日（YYYY-MM-DD形式）
+            base_time：基準時間（HH：MM形式、24時間制）
+            target_location: 対象都市 (ex: New York)
 
         Returns:
-            변환된 시간 정보
+            変換された時間情報
         """
         url = f"{self.base_url}/date_time/convert"
         params = {
@@ -171,13 +171,13 @@ class AbstractClient:
 
     def get_ip_geolocation(self, ip_address: str) -> Dict[str, Any]:
         """
-        IP 주소 기반 지리적 정보 조회
+        IPアドレスベースの地理的情報検索
 
         Args:
-            ip_address: IP 주소
+            ip_address: IP アドレス
 
         Returns:
-            IP 지리적 정보 (국가, 도시, 위도/경도 등)
+            IP地理的情報（国、都市、緯度/経度など）
         """
         url = f"{self.base_url}/ip_geolocation"
         params = {
@@ -192,13 +192,13 @@ class AbstractClient:
 
     def validate_email(self, email: str) -> Dict[str, Any]:
         """
-        이메일 유효성 검사
+        電子メールの検証
 
         Args:
-            email: 이메일 주소
+            email: メールアドレス
 
         Returns:
-            이메일 유효성 검사 결과 (형식, MX 레코드, SMTP 등)
+            電子メールの検証結果（フォーマット、MXレコード、SMTPなど）
         """
         url = f"{self.base_url}/email_verification"
         params = {
@@ -217,14 +217,14 @@ class AbstractClient:
         year: Optional[int] = None
     ) -> Dict[str, Any]:
         """
-        국가 공휴일 조회
+        国の祝日の照会
 
         Args:
-            country: 국가 코드 (ISO 3166-1 alpha-2, ex: US, KR, JP)
-            year: 연도 (지정하지 않으면 현재 연도)
+            country: 国コード (ISO 3166-1 alpha-2, ex: US, KR, JP)
+            year：年（指定しない場合は現在の年）
 
         Returns:
-            연중 공휴일 목록
+            年中祝日一覧
         """
         if year is None:
             year = datetime.now().year
@@ -240,7 +240,7 @@ class AbstractClient:
         return response.json()
 
     def close(self):
-        """세션 종료"""
+        """セッション終了"""
         self.session.close()
 
     def __enter__(self):

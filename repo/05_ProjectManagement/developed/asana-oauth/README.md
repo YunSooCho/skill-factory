@@ -1,32 +1,32 @@
-# Asana OAuth API 클라이언트
+#Asana OAuth APIクライアント
 
-Asana OAuth를 위한 Python API 클라이언트입니다. 프로젝트 및 작업 관리 기능을 제공합니다.
+Asana OAuth用のPython APIクライアント。プロジェクトとタスク管理機能を提供します。
 
-## 개요
+## 概要
 
-Asana는 프로젝트 관리 및 협업 플랫폼입니다. 이 클라이언트는 OAuth 인증을 통해 Asana API에 접근합니다.
+Asanaはプロジェクト管理とコラボレーションプラットフォームです。このクライアントは、OAuth認証を介してAsana APIにアクセスします。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-또는:
+または：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## OAuth 액세스 토큰 발급
+## OAuthアクセストークン発行
 
-1. [Asana Developers](https://developers.asana.com/)에서 앱 등록
-2. OAuth 2.0 흐름을 통해 액세스 토큰 발급
-3. 발급된 토큰을 안전하게 저장
+1. [Asana Developers](https://developers.asana.com/)에서アプリ登録
+2. OAuth 2.0フローによるアクセストークンの発行
+3. 発行されたトークンを安全に保存
 
-## 사용법
+##使用法
 
-### 초기화
+### 初期化
 
 ```python
 from asana_oauth import AsanaOAuthClient, AsanaOAuthError
@@ -37,19 +37,19 @@ client = AsanaOAuthClient(
 )
 ```
 
-### 워크스페이스 조회
+### ワークスペースの検索
 
 ```python
 workspaces = client.get_workspaces()
 ```
 
-### 팀 조회
+###チーム検索
 
 ```python
 teams = client.get_teams(workspace_id="123456789")
 ```
 
-### 프로젝트 조회
+###プロジェクトの照会
 
 ```python
 # 모든 프로젝트
@@ -62,7 +62,7 @@ projects = client.get_projects(workspace="123456789")
 projects = client.get_projects(team="987654321")
 ```
 
-### 프로젝트 생성
+###プロジェクトの作成
 
 ```python
 project = client.create_project(
@@ -72,7 +72,7 @@ project = client.create_project(
 )
 ```
 
-### 작업 조회
+### ジョブの照会
 
 ```python
 # 프로젝트의 작업
@@ -85,7 +85,7 @@ tasks = client.get_tasks(assignee="user_id")
 tasks = client.get_tasks(completed=True)
 ```
 
-### 작업 생성
+### ジョブの作成
 
 ```python
 task = client.create_task(
@@ -97,13 +97,13 @@ task = client.create_task(
 )
 ```
 
-### 작업 완료
+### ジョブ完了
 
 ```python
 task = client.complete_task("task_id")
 ```
 
-### 작업 업데이트
+### ジョブの更新
 
 ```python
 task = client.update_task(
@@ -114,7 +114,7 @@ task = client.update_task(
 )
 ```
 
-### 섹션 관리
+###セクション管理
 
 ```python
 # 섹션 조회
@@ -127,7 +127,7 @@ section = client.create_section("project_id", "To Do")
 result = client.add_task_to_section("section_id", "task_id")
 ```
 
-### 사용자 관리
+### ユーザー管理
 
 ```python
 # 워크스페이스 사용자
@@ -137,13 +137,13 @@ users = client.get_users("workspace_id")
 user = client.get_user("user_id")
 ```
 
-### 코멘트 추가
+###コメントを追加
 
 ```python
 comment = client.add_comment_to_task("task_id", "This is a comment")
 ```
 
-### 작업 검색
+###ジョブ検索
 
 ```python
 results = client.search_tasks(
@@ -152,13 +152,13 @@ results = client.search_tasks(
 )
 ```
 
-### 파일 첨부
+### ファイルの添付
 
 ```python
 attachment = client.attach_file_to_task("task_id", "document.pdf")
 ```
 
-## 에러 처리
+## エラー処理
 
 ```python
 try:
@@ -171,11 +171,11 @@ except AsanaOAuthError as e:
     print(f"요청 실패: {str(e)}")
 ```
 
-## 라이선스
+##ライセンス
 
 MIT License
 
-## 지원
+## サポート
 
 - [Asana Developers](https://developers.asana.com/)
-- [API 문서](https://developers.asana.com/docs)
+- [APIドキュメント]（https://developers.asana.com/docs)

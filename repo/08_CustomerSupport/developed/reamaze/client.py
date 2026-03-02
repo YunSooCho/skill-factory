@@ -1,6 +1,6 @@
 """
 Reamaze Client
-고객관계 관리 및 지원 티켓 API 클라이언트
+顧客関係管理およびサポートチケットAPIクライアント
 """
 
 import requests
@@ -9,9 +9,9 @@ from typing import Optional, Dict, List, Any
 
 class ReamazeClient:
     """
-    Reamaze API 클라이언트
+    Reamaze API クライアント
 
-    고객관계 관리, 지원 티켓, 채팅 관리를 위한 클라이언트
+    顧客関係管理、サポートチケット、チャット管理のためのクライアント
     """
 
     def __init__(
@@ -22,13 +22,13 @@ class ReamazeClient:
         timeout: int = 30
     ):
         """
-        Reamaze 클라이언트 초기화
+        Reamaze クライアントの初期化
 
         Args:
-            api_key: Reamaze API 키
-            account: Reamaze 계정 (브랜드)
-            base_url: API 기본 URL
-            timeout: 요청 타임아웃 (초)
+            api_key: Reamaze API キー
+            account: Reamaze アカウント (ブランド)
+            base_url：APIベースURL
+            timeout：リクエストタイムアウト（秒）
         """
         self.api_key = api_key
         self.account = account
@@ -49,19 +49,19 @@ class ReamazeClient:
         params: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        API 요청 전송
+        APIリクエストの送信
 
         Args:
-            method: HTTP 메서드
-            endpoint: API 엔드포인트
-            data: 요청 본문 데이터
-            params: URL 파라미터
+            method: HTTP メソッド
+            endpoint: API エンドポイント
+            data: 要求本文データ
+            params: URL パラメータ
 
         Returns:
-            API 응답 데이터
+            API応答データ
 
         Raises:
-            requests.RequestException: API 요청 실패
+            requests.RequestException: API リクエストに失敗しました
         """
         url = f"{self.base_url}/{self.account}/{endpoint.lstrip('/')}"
         response = self.session.request(
@@ -85,19 +85,19 @@ class ReamazeClient:
         user_assignee: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        새 대화(티켓) 생성
+        新しい会話（チケット）の作成
 
         Args:
-            subject: 제목
-            message: 메시지 내용
-            customer_email: 고객 이메일
-            customer_name: 고객 이름
-            channel: 채널 타입 (email, chat, facebook, twitter)
-            tags: 태그 목록
-            user_assignee: 담당자 이메일
+            subject: タイトル
+            message: メッセージ内容
+            customer_email：顧客の電子メール
+            customer_name：顧客名
+            channel: チャンネルタイプ (email, chat, facebook, twitter)
+            タグ：タグリスト
+            user_assignee: 担当者のメール
 
         Returns:
-            생성된 대화 정보
+            生成された会話情報
         """
         data = {
             'conversation': {
@@ -122,13 +122,13 @@ class ReamazeClient:
 
     def get_conversation(self, conversation_id: str) -> Dict[str, Any]:
         """
-        대화 조회
+        会話の照会
 
         Args:
-            conversation_id: 대화 ID (slug)
+            conversation_id: 会話 ID (slug)
 
         Returns:
-            대화 상세 정보
+            会話の詳細
         """
         return self._request('GET', f'/conversations/{conversation_id}')
 
@@ -140,16 +140,16 @@ class ReamazeClient:
         page: int = 1
     ) -> List[Dict[str, Any]]:
         """
-        대화 목록 조회
+        会話リストの照会
 
         Args:
-            status: 상태 필터 (open, pending, resolved, archived)
-            channel: 채널 필터
-            limit: 반환할 항목 수
-            page: 페이지 번호
+            status: ステータスフィルタ (open, pending, resolved, archived)
+            channel: チャンネルフィルタ
+            limit: 返す項目の数
+            page: ページ番号
 
         Returns:
-            대화 목록
+            会話リスト
         """
         params = {'limit': limit, 'page': page}
         if status:
@@ -168,16 +168,16 @@ class ReamazeClient:
         tags: Optional[List[str]] = None
     ) -> Dict[str, Any]:
         """
-        대화 업데이트
+        会話の更新
 
         Args:
-            conversation_id: 대화 ID
-            status: 새 상태
-            user_assignee: 새 담당자
-            tags: 새 태그 목록
+            conversation_id: 会話 ID
+            status: 新しい状態
+            user_assignee: 新しい担当者
+            タグ：新しいタグリスト
 
         Returns:
-            업데이트된 대화 정보
+            更新された会話情報
         """
         data = {}
         if status:
@@ -197,16 +197,16 @@ class ReamazeClient:
         attachments: Optional[List[str]] = None
     ) -> Dict[str, Any]:
         """
-        대화에 메시지 추가
+        会話にメッセージを追加する
 
         Args:
-            conversation_id: 대화 ID
-            body: 메시지 내용
-            internal: 내부용 메시지 여부
-            attachments: 첨부파일 URLs
+            conversation_id: 会話 ID
+            body：メッセージ内容
+            internal：内部メッセージがあるかどうか
+            attachments: 添付ファイル URLs
 
         Returns:
-            추가된 메시지 정보
+            追加されたメッセージ情報
         """
         data = {
             'message': {
@@ -227,15 +227,15 @@ class ReamazeClient:
         page: int = 1
     ) -> List[Dict[str, Any]]:
         """
-        대화 메시지 목록 조회
+        会話メッセージリストの照会
 
         Args:
-            conversation_id: 대화 ID
-            limit: 반환할 항목 수
-            page: 페이지 번호
+            conversation_id: 会話 ID
+            limit: 返す項目の数
+            page: ページ番号
 
         Returns:
-            메시지 목록
+            メッセージ一覧
         """
         params = {'limit': limit, 'page': page}
         response = self._request('GET', f'/conversations/{conversation_id}/messages', params=params)
@@ -251,18 +251,18 @@ class ReamazeClient:
         metadata: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        새 고객 생성
+        新しい顧客を作成
 
         Args:
-            email: 고객 이메일
-            name: 고객 이름
-            phone: 전화번호
-            company: 회사명
-            location: 위치
-            metadata: 추가 메타데이터
+            email：顧客の電子メール
+            name：顧客名
+            phone: 電話番号
+            company：会社名
+            location: 場所
+            metadata: 追加のメタデータ
 
         Returns:
-            생성된 고객 정보
+            生成された顧客情報
         """
         data = {
             'customer': {
@@ -285,13 +285,13 @@ class ReamazeClient:
 
     def get_customer(self, customer_id: str) -> Dict[str, Any]:
         """
-        고객 조회
+        顧客の照会
 
         Args:
-            customer_id: 고객 ID
+            customer_id：顧客ID
 
         Returns:
-            고객 정보
+            顧客情報
         """
         return self._request('GET', f'/customers/{customer_id}')
 
@@ -302,15 +302,15 @@ class ReamazeClient:
         page: int = 1
     ) -> List[Dict[str, Any]]:
         """
-        고객 목록 조회
+        顧客リストの照会
 
         Args:
-            search: 검색어 (이름, 이메일, 회사)
-            limit: 반환할 항목 수
-            page: 페이지 번호
+            search：クエリ（名前、Eメール、会社）
+            limit: 返す項目の数
+            page: ページ番号
 
         Returns:
-            고객 목록
+            顧客リスト
         """
         params = {'limit': limit, 'page': page}
         if search:
@@ -321,22 +321,22 @@ class ReamazeClient:
 
     def get_user(self, user_id: str) -> Dict[str, Any]:
         """
-        사용자(직원) 조회
+        ユーザー（従業員）の照会
 
         Args:
-            user_id: 사용자 ID
+            user_id：ユーザーID
 
         Returns:
-            사용자 정보
+            ユーザー情報
         """
         return self._request('GET', f'/users/{user_id}')
 
     def list_users(self) -> List[Dict[str, Any]]:
         """
-        사용자(직원) 목록 조회
+        ユーザー（従業員）リストの照会
 
         Returns:
-            사용자 목록
+            ユーザーリスト
         """
         response = self._request('GET', '/users')
         return response.get('users', [])
@@ -347,14 +347,14 @@ class ReamazeClient:
         end_date: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        통계 정보 조회
+        統計情報の照会
 
         Args:
-            start_date: 시작 날짜 (YYYY-MM-DD)
-            end_date: 종료 날짜 (YYYY-MM-DD)
+            start_date：開始日（YYYY-MM-DD）
+            end_date: 終了日 (YYYY-MM-DD)
 
         Returns:
-            통계 정보
+            統計情報
         """
         params = {}
         if start_date:
@@ -372,16 +372,16 @@ class ReamazeClient:
         published: bool = False
     ) -> Dict[str, Any]:
         """
-        도움말 문서(아티클) 생성
+        ヘルプドキュメント（記事）の作成
 
         Args:
-            title: 문서 제목
-            content: 문서 내용 (HTML/Markdown)
-            category_id: 카테고리 ID
-            published: 게시 여부
+            title: ドキュメントのタイトル
+            content: 文書の内容 (HTML/Markdown)
+            category_id：カテゴリID
+            published: 公開するかどうか
 
         Returns:
-            생성된 문서 정보
+            生成された文書情報
         """
         data = {
             'article': {
@@ -396,14 +396,14 @@ class ReamazeClient:
 
     def list_channels(self) -> List[Dict[str, Any]]:
         """
-        채널 목록 조회
+        チャンネルリストを見る
 
         Returns:
-            채널 목록
+            チャンネルリスト
         """
         response = self._request('GET', '/channels')
         return response.get('channels', [])
 
     def close(self):
-        """세션 종료"""
+        """セッション終了"""
         self.session.close()

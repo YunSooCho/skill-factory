@@ -1,32 +1,32 @@
-# Snack Prompt API 클라이언트
+#Snack Prompt APIクライアント
 
-Snack Prompt를 위한 Python API 클라이언트입니다. 요소(Elemental) 검색 기능을 제공합니다.
+Snack Prompt用のPython APIクライアント。要素検索機能を提供します。
 
-## 개요
+## 概要
 
-Snack Prompt는 프롬프트 템플릿, UI 요소 등 다양한 요소를 검색하고 활용할 수 있는 서비스입니다.
+Snack Promptは、プロンプトテンプレート、UI要素など、さまざまな要素を検索して活用できるサービスです。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-또는:
+または：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급
+## API キー発行
 
-1. [Snack Prompt](https://snackprompt.com/)에서 계정 생성
-2. 대시보드에서 API 키 발급
-3. API 키를 안전하게 저장
+1. [Snack Prompt]（https://snackprompt.com/)에서アカウントの作成
+2.ダッシュボードでAPIキーを発行する
+3. API キーを安全に保存
 
-## 사용법
+##使用法
 
-### 초기화
+### 初期化
 
 ```python
 from snack_prompt import SnackPromptClient, SnackPromptError
@@ -37,7 +37,7 @@ client = SnackPromptClient(
 )
 ```
 
-### 요소 검색
+###要素検索
 
 ```python
 try:
@@ -52,7 +52,7 @@ except SnackPromptError as e:
     print("Error:", str(e))
 ```
 
-### 카테고리 및 태그 필터
+### カテゴリとタグフィルタ
 
 ```python
 result = client.search_elementals(
@@ -63,7 +63,7 @@ result = client.search_elementals(
 )
 ```
 
-### 특정 요소 상세 조회
+### 特定の要素の詳細検索
 
 ```python
 try:
@@ -74,7 +74,7 @@ except SnackPromptError as e:
     print("Error:", str(e))
 ```
 
-### 카테고리 목록 조회
+### カテゴリリストの照会
 
 ```python
 categories = client.list_categories()
@@ -82,7 +82,7 @@ for category in categories.get('categories', []):
     print(f"- {category.get('name')}")
 ```
 
-## 에러 처리
+## エラー処理
 
 ```python
 from snack_prompt import SnackPromptError, SnackPromptRateLimitError, SnackPromptAuthenticationError
@@ -97,6 +97,6 @@ except SnackPromptError as e:
     print(f"요청 실패: {str(e)}")
 ```
 
-## 라이선스
+##ライセンス
 
 MIT License

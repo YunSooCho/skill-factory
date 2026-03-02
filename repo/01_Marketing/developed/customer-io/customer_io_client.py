@@ -10,7 +10,7 @@ import time
 
 
 class CustomerIOError(Exception):
-    """Customer.io API 에러"""
+    """Customer.io APIエラー"""
     pass
 
 
@@ -33,13 +33,13 @@ class CustomerIOClient:
         base_url: Optional[str] = None
     ):
         """
-        Customer.io API 클라이언트 초기화
+        Customer.io API クライアントの初期化
 
         Args:
             site_id: Customer.io Site ID
             api_key: Customer.io API key
-            region: 리전 ('us' or 'eu')
-            base_url: API 기본 URL (None이면 자동 설정)
+            region: リージョン ('us' or 'eu')
+            base_url：APIベースURL（Noneの場合は自動設定）
         """
         self.site_id = site_id
         self.api_key = api_key
@@ -76,7 +76,7 @@ class CustomerIOClient:
         })
 
     def _handle_rate_limit(self) -> None:
-        """Rate limiting 처리"""
+        """Rate limiting 処理""""
         current_time = time.time()
         time_since_last_request = current_time - self.last_request_time
         if time_since_last_request < self.min_request_interval:
@@ -92,21 +92,21 @@ class CustomerIOClient:
         data: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        API 요청 실행
+        APIリクエストの実行
 
         Args:
-            method: HTTP 메서드 (GET, POST, PUT, DELETE)
-            endpoint: API 엔드포인트
-            use_track_api: Track API 사용 여부
-            params: 쿼리 파라미터
-            data: 요청 본문 데이터
+            method: HTTP メソッド (GET、POST、PUT、DELETE)
+            endpoint: API エンドポイント
+            use_track_api: Track API を使用するかどうか
+            params: クエリパラメータ
+            data: 要求本文データ
 
         Returns:
-            API 응답
+            APIレスポンス
 
         Raises:
-            CustomerIOError: API 에러 발생 시
-            RateLimitError: Rate limit 초과 시
+            CustomerIOError：APIエラーが発生したとき
+            RateLimitError: Rate limit 超過時
         """
         self._handle_rate_limit()
 
@@ -126,7 +126,7 @@ class CustomerIOClient:
                 timeout=30
             )
 
-            # Rate limit 처리
+            # Rate limit 処理
             if response.status_code == 429:
                 retry_after = response.headers.get('Retry-After', 10)
                 raise RateLimitError(f"Rate limit exceeded. Retry after {retry_after} seconds")
@@ -158,17 +158,17 @@ class CustomerIOClient:
         created_at: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        고객 생성
+        顧客作成
 
         Args:
-            id: 고객 ID (필수, 변경 불가)
-            email: 이메일 주소
-            name: 이름
-            attributes: 추가 속성 사전
-            created_at: 생성 날짜 (Unix timestamp)
+            id：顧客ID（必須、変更不可）
+            email: メールアドレス
+            name: 名前
+            attributes: 追加属性辞書
+            created_at: 作成日 (Unix timestamp)
 
         Returns:
-            생성된 고객 정보
+            生成された顧客情報
         """
         data = {'id': id}
 
@@ -194,16 +194,16 @@ class CustomerIOClient:
         attributes: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        고객 정보 업데이트
+        顧客情報の更新
 
         Args:
-            id: 고객 ID
-            email: 새 이메일
-            name: 새 이름
-            attributes: 업데이트할 속성
+            id：顧客ID
+            email: 新しいメール
+            name: 新しい名前
+            attributes: 更新する属性
 
         Returns:
-            업데이트된 고객 정보
+            更新された顧客情報
         """
         data = {}
 
@@ -220,25 +220,25 @@ class CustomerIOClient:
 
     def delete_customer(self, id: str) -> Dict[str, Any]:
         """
-        고객 삭제
+        顧客を削除
 
         Args:
-            id: 고객 ID
+            id：顧客ID
 
         Returns:
-            삭제 결과
+            削除結果
         """
         return self._make_request('DELETE', f'/customers/{id}')
 
     def get_customer(self, id: str) -> Dict[str, Any]:
         """
-        고객 정보 조회
+        顧客情報の照会
 
         Args:
-            id: 고객 ID
+            id：顧客ID
 
         Returns:
-            고객 상세 정보
+            顧客の詳細
         """
         return self._make_request('GET', f'/customers/{id}')
 
@@ -248,14 +248,14 @@ class CustomerIOClient:
         segment_id: int
     ) -> Dict[str, Any]:
         """
-        수동 세그먼트에 고객 추가
+        手動セグメントに顧客を追加する
 
         Args:
-            customer_id: 고객 ID
-            segment_id: 세그먼트 ID
+            customer_id：顧客ID
+            segment_id：セグメントID
 
         Returns:
-            결과
+            結果
         """
         return self._make_request(
             'POST',
@@ -268,14 +268,14 @@ class CustomerIOClient:
         segment_id: int
     ) -> Dict[str, Any]:
         """
-        수동 세그먼트에서 고객 삭제
+        手動セグメントから顧客を削除する
 
         Args:
-            customer_id: 고객 ID
-            segment_id: 세그먼트 ID
+            customer_id：顧客ID
+            segment_id：セグメントID
 
         Returns:
-            결과
+            結果
         """
         return self._make_request(
             'DELETE',
@@ -290,16 +290,16 @@ class CustomerIOClient:
         timestamp: Optional[int] = None
     ) -> Dict[str, Any]:
         """
-        고객 이벤트 추적
+        顧客イベントの追跡
 
         Args:
-            customer_id: 고객 ID
-            name: 이벤트 이름
-            data: 이벤트 데이터
-            timestamp: 이벤트 타임스탬프 (Unix timestamp)
+            customer_id：顧客ID
+            name: イベント名
+            data: イベントデータ
+            timestamp: イベントタイムスタンプ (Unix timestamp)
 
         Returns:
-            추적 결과
+            追跡結果
         """
         event_data = {
             'name': name
@@ -325,15 +325,15 @@ class CustomerIOClient:
         timestamp: Optional[int] = None
     ) -> Dict[str, Any]:
         """
-        익명 이벤트 추적 (이름 없는 사용자 이벤트)
+        匿名イベントの追跡（名前のないユーザーイベント）
 
         Args:
-            name: 이벤트 이름
-            data: 이벤트 데이터
-            timestamp: 이벤트 타임스탬프 (Unix timestamp)
+            name: イベント名
+            data: イベントデータ
+            timestamp: イベントタイムスタンプ (Unix timestamp)
 
         Returns:
-            추적 결과
+            追跡結果
         """
         event_data = {
             'name': name
@@ -359,15 +359,15 @@ class CustomerIOClient:
         data: Dict[str, Any]
     ) -> Dict[str, Any]:
         """
-        폼 제출
+        フォーム提出
 
         Args:
-            form_id: 폼 ID
-            customer_id: 고객 ID
-            data: 폼 데이터
+            form_id：フォームID
+            customer_id：顧客ID
+            data: フォームデータ
 
         Returns:
-            제출 결과
+            提出結果
         """
         form_data = {
             'data': data
@@ -386,15 +386,15 @@ class CustomerIOClient:
         email: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        고객 목록 조회
+        顧客リストの照会
 
         Args:
-            limit: 반환할 최대 결과 수
-            start: 페이징 시작점 (고객 ID)
-            email: 이메일로 필터링
+            limit: 返す最大結果数
+            start：ページング開始点（顧客ID）
+            email：電子メールでフィルタリング
 
         Returns:
-            고객 목록
+            顧客リスト
         """
         params = {}
 
@@ -417,17 +417,17 @@ class CustomerIOClient:
         type: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        고객 활동 내역 조회
+        顧客活動履歴の照会
 
         Args:
-            customer_id: 고객 ID
-            limit: 반환할 최대 결과 수
-            start: 페이징 시작점
-            type: 활동 타입 필터
+            customer_id：顧客ID
+            limit: 返す最大結果数
+            start: ページング開始点
+            type: アクティビティタイプフィルタ
                 ('email_actioned', 'email_opened', 'email_clicked', etc.)
 
         Returns:
-            활동 목록
+            活動一覧
         """
         params = {}
 
@@ -449,15 +449,15 @@ def create_customerio_client(
     region: str = "us"
 ) -> CustomerIOClient:
     """
-    Customer.io 클라이언트 생성 (Factory function)
+    Customer.io クライアントの作成 (Factory function)
 
     Args:
         site_id: Customer.io Site ID
         api_key: Customer.io API key
-        region: 리전 ('us' or 'eu')
+        region: リージョン ('us' or 'eu')
 
     Returns:
-        CustomerIOClient 인스턴스
+        CustomerIOClient インスタンス
     """
     return CustomerIOClient(site_id, api_key, region)
 
@@ -465,13 +465,13 @@ def create_customerio_client(
 if __name__ == "__main__":
     import os
 
-    # 테스트 코드
+    #テストコード
     site_id = os.environ.get('CUSTOMERIO_SITE_ID', 'your-site-id')
     api_key = os.environ.get('CUSTOMERIO_API_KEY', 'your-api-key')
     client = create_customerio_client(site_id, api_key)
 
     try:
-        # 고객 생성 테스트
+        # 顧客生成テスト
         result = client.create_customer(
             id='customer_123',
             email='test@example.com',
@@ -480,14 +480,14 @@ if __name__ == "__main__":
         )
         print("Created customer:", result)
 
-        # 고객 업데이트 테스트
+        #カスタマーアップデートテスト
         update_result = client.update_customer(
             id='customer_123',
             attributes={'last_login': '2026-02-28'}
         )
         print("Updated customer:", update_result)
 
-        # 이벤트 추적 테스트
+        # イベント追跡テスト
         event_result = client.track_customer_event(
             customer_id='customer_123',
             name='purchase_completed',
@@ -495,28 +495,28 @@ if __name__ == "__main__":
         )
         print("Tracked event:", event_result)
 
-        # 익명 이벤트 추적 테스트
+        #匿名イベント追跡テスト
         anon_result = client.track_anonymous_event(
             name='page_viewed',
             data={'page': '/pricing', 'referrer': 'google.com'}
         )
         print("Tracked anonymous event:", anon_result)
 
-        # 세그먼트 추가 테스트
+        #セグメント追加テスト
         segment_result = client.add_customer_to_segment(
             customer_id='customer_123',
             segment_id=1
         )
         print("Added to segment:", segment_result)
 
-        # 세그먼트 삭제 테스트
+        #セグメント削除テスト
         remove_result = client.remove_customer_from_segment(
             customer_id='customer_123',
             segment_id=1
         )
         print("Removed from segment:", remove_result)
 
-        # 고객 삭제 테스트
+        # 顧客削除テスト
         delete_result = client.delete_customer(id='customer_123')
         print("Deleted customer:", delete_result)
 

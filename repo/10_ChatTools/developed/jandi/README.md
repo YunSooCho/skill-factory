@@ -20,8 +20,8 @@ pip install -r requirements.txt
 
 1. Visit [Jandi](https://lp.yoom.fun/apps/jandi)
 2. Sign up or log in to your account (in Korean)
-3. Navigate to Settings → API Keys (설정 → API 키)
-4. Click "Generate New API Key" (새 API 키 생성)
+3. Navigate to Settings → API Keys (設定 → API キー)
+4. Click "Generate New API Key" (新しい API キーの生成)
 5. Copy your API key and store it securely
 
 ## Usage

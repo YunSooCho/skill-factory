@@ -1,32 +1,32 @@
-# Uproc API 클라이언트
+#Uproc APIクライアント
 
-Uproc를 위한 Python API 클라이언트입니다. 데이터 처리 기능을 제공합니다.
+Uproc用のPython APIクライアントです。データ処理機能を提供します。
 
-## 개요
+## 概要
 
-Uproc는 데이터 행 처리 및 배치 처리 기능을 제공하는 서비스입니다.
+Uprocは、データ行処理およびバッチ処理機能を提供するサービスです。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-또는:
+または：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급
+## API キー発行
 
-1. [Uproc](https://uproc.com/)에서 계정 생성
-2. API 키 발급
-3. API 키를 안전하게 저장
+1. [Uproc]（https://uproc.com/)에서アカウントの作成
+2. API キー発行
+3. API キーを安全に保存
 
-## 사용법
+##使用法
 
-### 초기화
+### 初期化
 
 ```python
 from uproc import UprocClient, UprocError
@@ -37,7 +37,7 @@ client = UprocClient(
 )
 ```
 
-### 단일 행 처리
+### 単一行処理
 
 ```python
 result = client.process_row(
@@ -50,7 +50,7 @@ result = client.process_row(
 )
 ```
 
-### 여러 행 처리
+### 複数行の処理
 
 ```python
 rows = [
@@ -65,14 +65,14 @@ result = client.process_multiple_rows(
 )
 ```
 
-### 작업 상태 확인
+### ジョブステータスの確認
 
 ```python
 status = client.get_job_status("job_id_here")
 print(f"Status: {status.get('status')}")
 ```
 
-## 에러 처리
+## エラー処理
 
 ```python
 try:
@@ -85,6 +85,6 @@ except UprocError as e:
     print(f"요청 실패: {str(e)}")
 ```
 
-## 라이선스
+##ライセンス
 
 MIT License

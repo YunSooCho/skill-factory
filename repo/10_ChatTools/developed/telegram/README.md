@@ -1,39 +1,39 @@
-# Telegram Bot API 클라이언트
+# Telegram Bot API クライアント
 
-Telegram Bot API를 위한 Python API 클라이언트입니다.
+Telegram Bot API用のPython APIクライアント。
 
-## 개요
+## 概要
 
-이 클라이언트는 Telegram Bot API에 접근하여 메시지 전송, 업데이트 수신, 웹훅 설정 등 다양한 작업을 지원합니다.
+このクライアントはTelegram Bot APIにアクセスし、メッセージの送信、更新の受信、Webフックの設定など、さまざまなタスクをサポートします。
 
-## 설치
+## インストール
 
-의존성 패키지:
+依存パッケージ：
 
 ```bash
 pip install requests
 ```
 
-또는:
+または：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Bot Token 발급
+## Bot Tokenの発行
 
-1. Telegram에서 @BotFather 봇 검색
-2. `/newbot` 명령어 입력
-3. 봇 이름 작성
-4. 봇 사용자 이름 작성 (@로 시작해야 함)
-5. 발급된 Bot Token 저장
+1. Telegramで@BotFatherボットを検索する
+2. `/newbot` コマンド入力
+3. ボット名の作成
+4. ボットユーザー名の作成（@で始まる必要があります）
+5. 発行されたBot Tokenの貯蔵
 
-API 문서:
+APIドキュメント：
 https://core.telegram.org/bots/api
 
-## 사용법
+##使用法
 
-### 초기화
+### 初期化
 
 ```python
 from telegram import TelegramClient
@@ -43,7 +43,7 @@ client = TelegramClient(
 )
 ```
 
-### 예시 코드
+### サンプルコード
 
 ```python
 # 간단한 메시지 전송
@@ -107,43 +107,43 @@ print(f"Webhook: {webhook_info.get('url')}")
 result = client.delete_webhook()
 ```
 
-## API 액션
+## APIアクション
 
 - `send_message` - メッセージを送信
-- `get_me` - 봇 정보 조회
-- `get_updates` - 업데이트 수신 (long polling)
-- `set_webhook` - Webhook 설정
-- `delete_webhook` - Webhook 삭제
-- `get_webhook_info` - Webhook 정보 조회
+- `get_me` - ボット情報の照会
+- `get_updates` - 更新を受け取る（long polling）
+- `set_webhook` - Webhook設定
+- `delete_webhook` - Webhookを削除
+- `get_webhook_info` - Webhook情報の照会
 
-## 액션 파라미터
+## アクションパラメータ
 
 ### send_message
-- `chat_id` (string, required) - 대상 채팅 ID (username@ 또는 숫자 ID)
-- `text` (string, required) - 전송할 메시지 내용
-- `parse_mode` (string, optional) - 텍스트 파싱 모드 (Markdown, MarkdownV2, HTML)
-- `disable_web_page_preview` (boolean, optional) - 링크 미리보기 비활성화
-- `disable_notification` (boolean, optional) - 알림 없이 전송
-- `reply_to_message_id` (string, optional) - 리플라이할 메시지 ID
+- `chat_id`(string, required) - ターゲットチャットID(username@または数値ID)
+- `text`(string, required) - 送信するメッセージの内容
+- `parse_mode`(string, optional) - テキスト解析モード(Markdown、MarkdownV2、HTML)
+- `disable_web_page_preview`(boolean, optional) - リンクプレビューを無効にする
+- `disable_notification` (boolean, optional) - 通知なしで送信
+- `reply_to_message_id`(string, optional) - リプライするメッセージID
 
-## Parse Mode 옵션
+## Parse Modeオプション
 
-1. **Markdown**: 기본 Markdown 형식
-   - `*bold*` - 굵게
-   - `_italic_` - 기울임
-   - `[text](url)` - 링크
+1. **Markdown**: デフォルトの Markdown 形式
+   - `*bold*` - 太字
+   - `_italic_` - 傾斜
+   - `[text](url)` - リンク
 
-2. **MarkdownV2**: 향상된 Markdown 형식
-   - `*bold \*text\**` - 굵게
-   - `_italic \*text\__` - 기울임
-   - `[text](url)` - 링크
+2. **MarkdownV2**: 拡張 Markdown 形式
+   - `*bold \*text\**` - 太字
+   - `_italic \*text\__` - 傾く
+   - `[text](url)` - リンク
 
-3. **HTML**: HTML 형식
-   - `<b>text</b>` - 굵게
-   - `<i>text</i>` - 기울임
-   - `<a href="url">text</a>` - 링크
+3. **HTML**: HTML形式
+   - `<b>text</b>` - 太字
+   - `<i>text</i>` - 傾斜
+   - `<a href="url">text</a>` - リンク
 
-## 에러 처리
+## エラー処理
 
 ```python
 try:
@@ -156,28 +156,28 @@ except Exception as e:
 
 ## Webhook vs Long Polling
 
-### Webhook (권장)
-- 푸시 방식으로 실시간 업데이트 수신
-- HTTPS 웹서버 필요
-- `set_webhook()`으로 설정
+### Webhook (推奨)
+- プッシュ方式でリアルタイムアップデートを受信
+- HTTPS Webサーバーが必要
+- `set_webhook()` に設定
 
 ### Long Polling
-- 폴링 방식으로 업데이트 수신
-- 별도의 웹서버 불필요
-- `get_updates()`로 수신
+- ポーリング方式でアップデートを受信
+- 別途ウェブサーバー不要
+- `get_updates()`で受信
 
 ## Rate Limiting
 
-Telegram API는 레이트 리밋이 적용됩니다:
-- 그룹 채팅: 초당 20개 메시지
-- 개인 채팅: 초당 30개 메시지
-- 그룹당 초당 1개 메시지
+Telegram APIにはレートリミットが適用されます。
+- グループチャット：毎秒20メッセージ
+- プライベートチャット：毎秒30メッセージ
+- グループあたり1秒あたり1メッセージ
 
-## 참고 문서
+## 参考資料
 
 - Telegram Bot API: https://core.telegram.org/bots/api
-- @BotFather: Telegram에서 BotFather 봇과 대화
+- @BotFather: TelegramでBotFatherボットと会話
 
-## 라이선스
+##ライセンス
 
 MIT License

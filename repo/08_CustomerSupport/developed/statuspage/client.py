@@ -1,6 +1,6 @@
 """
 Statuspage Client
-서비스 상태 모니터링 API 클라이언트
+サービス状態監視APIクライアント
 """
 
 import requests
@@ -9,9 +9,9 @@ from typing import Optional, Dict, List, Any
 
 class StatuspageClient:
     """
-    Statuspage API 클라이언트
+    Statuspage API クライアント
 
-    서비스 상태 모니터링, 인시던트 관리, 메인테넌스 예약을 위한 클라이언트
+    サービス状態監視、インシデント管理、メンテナンス予約のためのクライアント
     """
 
     def __init__(
@@ -22,13 +22,13 @@ class StatuspageClient:
         timeout: int = 30
     ):
         """
-        Statuspage 클라이언트 초기화
+        Statuspage クライアントの初期化
 
         Args:
-            api_key: Statuspage API 키
-            page_id: 상태페이지 ID
-            base_url: API 기본 URL
-            timeout: 요청 타임아웃 (초)
+            api_key: Statuspage API キー
+            page_id：ステータスページID
+            base_url：APIベースURL
+            timeout：リクエストタイムアウト（秒）
         """
         self.api_key = api_key
         self.page_id = page_id
@@ -49,19 +49,19 @@ class StatuspageClient:
         params: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        API 요청 전송
+        APIリクエストの送信
 
         Args:
-            method: HTTP 메서드
-            endpoint: API 엔드포인트
-            data: 요청 본문 데이터
-            params: URL 파라미터
+            method: HTTP メソッド
+            endpoint: API エンドポイント
+            data: 要求本文データ
+            params: URL パラメータ
 
         Returns:
-            API 응답 데이터
+            API応答データ
 
         Raises:
-            requests.RequestException: API 요청 실패
+            requests.RequestException: API リクエストに失敗しました
         """
         url = f"{self.base_url}/{endpoint.lstrip('/')}"
         response = self.session.request(
@@ -76,10 +76,10 @@ class StatuspageClient:
 
     def get_page_summary(self) -> Dict[str, Any]:
         """
-        상태페이지 요약 조회
+        ステータスページの要約検索
 
         Returns:
-            페이지 요약 정보
+            ページ概要情報
         """
         return self._request('GET', f'/pages/{self.page_id}')
 
@@ -88,13 +88,13 @@ class StatuspageClient:
         page_id: Optional[str] = None
     ) -> List[Dict[str, Any]]:
         """
-        컴포넌트 목록 조회
+        コンポーネントリストの照会
 
         Args:
-            page_id: 페이지 ID (선택 - 기본값은 초기화 시 설정)
+            page_id：ページID（選択 - デフォルトは初期化時に設定）
 
         Returns:
-            컴포넌트 목록
+            コンポーネントリスト
         """
         pid = page_id if page_id else self.page_id
         response = self._request('GET', f'/pages/{pid}/components')
@@ -110,18 +110,18 @@ class StatuspageClient:
         group_id: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        컴포넌트 생성
+        コンポーネントの作成
 
         Args:
-            name: 컴포넌트 이름
-            status: 초기 상태 (operational, degraded, partial_outage, major_outage, under_maintenance)
-            description: 설명
-            only_show_if_degraded: 문제 발생 시에만 표시
-            showcase: 메인 컴포넌트로 표시
-            group_id: 그룹 ID
+            name: コンポーネント名
+            status: 初期状態 (operational, degraded, partial_outage, major_outage, under_maintenance)
+            description: 説明
+            only_show_if_degraded：問題が発生した場合にのみ表示
+            showcase: メインコンポーネントとして表示
+            group_id：グループID
 
         Returns:
-            생성된 컴포넌트 정보
+            生成されたコンポーネント情報
         """
         data = {
             'component': {
@@ -141,13 +141,13 @@ class StatuspageClient:
 
     def get_component(self, component_id: str) -> Dict[str, Any]:
         """
-        컴포넌트 조회
+        コンポーネントの照会
 
         Args:
-            component_id: 컴포넌트 ID
+            component_id: コンポーネントID
 
         Returns:
-            컴포넌트 정보
+            コンポーネント情報
         """
         return self._request('GET', f'/pages/{self.page_id}/components/{component_id}')
 
@@ -160,17 +160,17 @@ class StatuspageClient:
         showcase: Optional[bool] = None
     ) -> Dict[str, Any]:
         """
-        컴포넌트 업데이트
+        コンポーネントの更新
 
         Args:
-            component_id: 컴포넌트 ID
-            status: 새 상태
-            description: 새 설명
-            only_show_if_degraded: 표시 옵션
-            showcase: 쇼케이스 옵션
+            component_id: コンポーネントID
+            status: 新しい状態
+            description: 新しい説明
+            only_show_if_degraded: 表示オプション
+            showcase: ショーケースオプション
 
         Returns:
-            업데이트된 컴포넌트 정보
+            更新されたコンポーネント情報
         """
         data = {'component': {}}
 
@@ -187,13 +187,13 @@ class StatuspageClient:
 
     def delete_component(self, component_id: str) -> Dict[str, Any]:
         """
-        컴포넌트 삭제
+        コンポーネントの削除
 
         Args:
-            component_id: 컴포넌트 ID
+            component_id: コンポーネントID
 
         Returns:
-            삭제 결과
+            削除結果
         """
         return self._request('DELETE', f'/pages/{self.page_id}/components/{component_id}')
 
@@ -212,23 +212,23 @@ class StatuspageClient:
         auto_transition_to_operational: bool = False
     ) -> Dict[str, Any]:
         """
-        인시던트 생성
+        インシデントの生成
 
         Args:
-            name: 인시던트 이름
-            status: 상태 (investigating, identified, monitoring, resolved, scheduled, in_progress, verifying, completed)
-            body: 설명
-            incident_updates: 업데이트 목록
-            component_ids: 영향받는 컴포넌트 ID 목록
-            components: 컴포넌트 상태 맵 {id: status}
-            deliver_notifications: 알림 전송 여부
-            impact_override: 영향도 (critical, major, minor, none)
-            scheduled_for: 예약 시간 (YYYY-MM-DDTHH:MM:SS)
-            auto_transition_to_maintenance: 메인테넌스로 자동 전환
-            auto_transition_to_operational: 정상 상태로 자동 전환
+            name: インシデント名
+            status: 状態 (investigating, identified, monitoring, resolved, scheduled, in_progress, verifying, completed)
+            body：説明
+            incident_updates：アップデートリスト
+            component_ids：影響を受けるコンポーネントIDのリスト
+            components: コンポーネント状態マップ {id: status}
+            deliver_notifications: 通知を送信するかどうか
+            impact_override: 影響度 (critical, major, minor, none)
+            scheduled_for: 予約時間 (YYYY-MM-DDTHH:MM:SS)
+            auto_transition_to_maintenance: メンテナンスに自動切り替え
+            auto_transition_to_operational：定常状態に自動切り替え
 
         Returns:
-            생성된 인시던트 정보
+            生成されたインシデント情報
         """
         data = {
             'incident': {
@@ -259,13 +259,13 @@ class StatuspageClient:
 
     def get_incident(self, incident_id: str) -> Dict[str, Any]:
         """
-        인시던트 조회
+        インシデント照会
 
         Args:
-            incident_id: 인시던트 ID
+            incident_id：インシデントID
 
         Returns:
-            인시던트 정보
+            インシデント情報
         """
         return self._request('GET', f'/pages/{self.page_id}/incidents/{incident_id}')
 
@@ -277,16 +277,16 @@ class StatuspageClient:
         page: int = 1
     ) -> List[Dict[str, Any]]:
         """
-        인시던트 목록 조회
+        インシデントリストの照会
 
         Args:
-            status: 상태 필터
-            impact: 영향도 필터
-            limit: 반환할 항목 수
-            page: 페이지 번호
+            status: ステータスフィルタ
+            impact: 影響度フィルタ
+            limit: 返す項目の数
+            page: ページ番号
 
         Returns:
-            인시던트 목록
+            インシデントリスト
         """
         params = {'limit': limit, 'page': page}
         if status:
@@ -308,19 +308,19 @@ class StatuspageClient:
         deliver_notifications: Optional[bool] = None
     ) -> Dict[str, Any]:
         """
-        인시던트 업데이트
+        インシデントの更新
 
         Args:
-            incident_id: 인시던트 ID
-            status: 새 상태
-            name: 새 이름
-            body: 새 설명
-            component_ids: 영향받는 컴포넌트 ID 목록
-            components: 컴포넌트 상태 맵
-            deliver_notifications: 알림 전송 여부
+            incident_id：インシデントID
+            status: 新しい状態
+            name: 新しい名前
+            body：新しい説明
+            component_ids：影響を受けるコンポーネントIDのリスト
+            components: コンポーネント状態マップ
+            deliver_notifications: 通知を送信するかどうか
 
         Returns:
-            업데이트된 인시던트 정보
+            更新されたインシデント情報
         """
         data = {'incident': {}}
 
@@ -341,13 +341,13 @@ class StatuspageClient:
 
     def delete_incident(self, incident_id: str) -> Dict[str, Any]:
         """
-        인시던트 삭제
+        インシデントの削除
 
         Args:
-            incident_id: 인시던트 ID
+            incident_id：インシデントID
 
         Returns:
-            삭제 결과
+            削除結果
         """
         return self._request('DELETE', f'/pages/{self.page_id}/incidents/{incident_id}')
 
@@ -359,16 +359,16 @@ class StatuspageClient:
         deliver_notifications: bool = True
     ) -> Dict[str, Any]:
         """
-        인시던트 업데이트 추가
+        インシデント更新の追加
 
         Args:
-            incident_id: 인시던트 ID
-            body: 업데이트 내용
-            status: 새 상태
-            deliver_notifications: 알림 전송 여부
+            incident_id：インシデントID
+            body：アップデート内容
+            status: 新しい状態
+            deliver_notifications: 通知を送信するかどうか
 
         Returns:
-            추가된 업데이트 정보
+            追加された更新情報
         """
         data = {
             'incident_update': {
@@ -387,13 +387,13 @@ class StatuspageClient:
         incident_id: str
     ) -> List[Dict[str, Any]]:
         """
-        인시던트 업데이트 목록 조회
+        インシデント更新リストの照会
 
         Args:
-            incident_id: 인시던트 ID
+            incident_id：インシデントID
 
         Returns:
-            업데이트 목록
+            アップデートリスト
         """
         response = self._request('GET', f'/pages/{self.page_id}/incidents/{incident_id}/incident_updates')
         return response.get('incident_updates', [])
@@ -411,21 +411,21 @@ class StatuspageClient:
         auto_transition_to_in_progress: bool = False
     ) -> Dict[str, Any]:
         """
-        메인테넌스 생성
+        メンテナンスの作成
 
         Args:
-            name: 메인테넌스 이름
-            scheduled_for: 시작 시간 (YYYY-MM-DDTHH:MM:SS)
-            scheduled_until: 종료 시간 (YYYY-MM-DDTHH:MM:SS)
-            status: 상태 (scheduled, in_progress, verifying, completed)
-            body: 설명
-            component_ids: 영향받는 컴포넌트 ID 목록
-            components: 컴포넌트 상태 맵
-            auto_transition_to_operational: 정상 상태로 자동 전환
-            auto_transition_to_in_progress: 진행 중 상태로 자동 전환
+            name: メンテナンス名
+            scheduled_for: 開始時間 (YYYY-MM-DDTHH:MM:SS)
+            scheduled_until: 終了時間 (YYYY-MM-DDTHH:MM:SS)
+            status: 状態 (scheduled, in_progress, verifying, completed)
+            body：説明
+            component_ids：影響を受けるコンポーネントIDのリスト
+            components: コンポーネント状態マップ
+            auto_transition_to_operational：定常状態に自動切り替え
+            auto_transition_to_in_progress：進行中の状態に自動切り替え
 
         Returns:
-            생성된 메인테넌스 정보
+            生成されたメンテナンス情報
         """
         data = {
             'scheduled_maintenance': {
@@ -453,14 +453,14 @@ class StatuspageClient:
         limit: int = 50
     ) -> List[Dict[str, Any]]:
         """
-        메인테넌스 목록 조회
+        メンテナンスリストの照会
 
         Args:
-            status: 상태 필터
-            limit: 반환할 항목 수
+            status: ステータスフィルタ
+            limit: 返す項目の数
 
         Returns:
-            메인테넌스 목록
+            メンテナンスリスト
         """
         params = {'limit': limit}
         if status:
@@ -479,18 +479,18 @@ class StatuspageClient:
         scheduled_until: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        메인테넌스 업데이트
+        メンテナンスアップデート
 
         Args:
-            maintenance_id: 메인테넌스 ID
-            name: 새 이름
-            status: 새 상태
-            body: 새 설명
-            scheduled_for: 새 시작 시간
-            scheduled_until: 새 종료 시간
+            maintenance_id：メンテナンスID
+            name: 新しい名前
+            status: 新しい状態
+            body：新しい説明
+            scheduled_for: 新しい開始時間
+            scheduled_until: 新しい終了時間
 
         Returns:
-            업데이트된 메인테넌스 정보
+            更新されたメンテナンス情報
         """
         data = {'scheduled_maintenance': {}}
 
@@ -509,13 +509,13 @@ class StatuspageClient:
 
     def delete_maintenance(self, maintenance_id: str) -> Dict[str, Any]:
         """
-        메인테넌스 삭제
+        メンテナンスの削除
 
         Args:
-            maintenance_id: 메인테넌스 ID
+            maintenance_id：メンテナンスID
 
         Returns:
-            삭제 결과
+            削除結果
         """
         return self._request('DELETE', f'/pages/{self.page_id}/scheduled-maintenances/{maintenance_id}')
 
@@ -525,19 +525,19 @@ class StatuspageClient:
         page: int = 1
     ) -> List[Dict[str, Any]]:
         """
-        구독자 목록 조회
+        購読者リストの閲覧
 
         Args:
-            limit: 반환할 항목 수
-            page: 페이지 번호
+            limit: 返す項目の数
+            page: ページ番号
 
         Returns:
-            구독자 목록
+            加入者リスト
         """
         params = {'limit': limit, 'page': page}
         response = self._request('GET', f'/pages/{self.page_id}/subscribers', params=params)
         return response.get('subscribers', [])
 
     def close(self):
-        """세션 종료"""
+        """セッション終了"""
         self.session.close()

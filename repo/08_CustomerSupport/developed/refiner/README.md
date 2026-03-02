@@ -1,23 +1,23 @@
 # Refiner SDK
 
-Refiner는 AI 기반 콘텐츠 최적화 도구를 위한 Python SDK입니다.
+RefinerはAIベースのコンテンツ最適化ツールのためのPython SDKです。
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [Refiner 웹사이트](https://refiner.ai)에 접속하여 계정을 생성합니다.
-2. 대시보드에서 API Keys 메뉴로 이동합니다.
-3. 'Create New API Key' 버튼을 클릭하여 새 API 키를 생성합니다.
-4. 생성된 API 키를 안전한 곳에 저장합니다.
+1. [Refinerウェブサイト]（https://refiner.ai)에にアクセスしてアカウントを作成します。
+2.ダッシュボードでAPI Keysメニューに移動します。
+3. [Create New API Key]ボタンをクリックして新しいAPIキーを生成します。
+4. 生成された API キーを安全な場所に保存します。
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from refiner import RefinerClient
@@ -28,7 +28,7 @@ client = RefinerClient(
 )
 ```
 
-### 텍스트 최적화
+###テキストの最適化
 
 ```python
 result = client.refine_text(
@@ -42,7 +42,7 @@ print(f"최적화된 텍스트: {result['refinedText']}")
 print(f"변경 사항: {result['changes']}")
 ```
 
-### 파라프레이징
+###パラフレージング
 
 ```python
 result = client.paraphrase(
@@ -55,7 +55,7 @@ for variant in result['variations']:
     print(f"- {variant}")
 ```
 
-### 텍스트 요약
+###テキストの要約
 
 ```python
 result = client.summarize(
@@ -67,7 +67,7 @@ result = client.summarize(
 print(f"요약: {result['summary']}")
 ```
 
-### 문법 검사
+###文法チェック
 
 ```python
 result = client.check_grammar(
@@ -80,7 +80,7 @@ for error in result['errors']:
     print(f"수정: {error['suggestion']}")
 ```
 
-### 텍스트 확장
+### テキスト拡張
 
 ```python
 result = client.expand_text(
@@ -92,7 +92,7 @@ result = client.expand_text(
 print(f"확장된 텍스트: {result['expandedText']}")
 ```
 
-### 번역
+###翻訳
 
 ```python
 result = client.translate(
@@ -104,7 +104,7 @@ result = client.translate(
 print(f"번역: {result['translatedText']}")
 ```
 
-### 감성 분석
+###感性分析
 
 ```python
 result = client.detect_sentiment(
@@ -116,7 +116,7 @@ print(f"점수: {result['score']}")
 print(f"신뢰도: {result['confidence']}")
 ```
 
-### 키워드 추출
+### キーワード抽出
 
 ```python
 result = client.extract_keywords(
@@ -128,7 +128,7 @@ for keyword in result['keywords']:
     print(f"{keyword['word']}: {keyword['score']}")
 ```
 
-### 제목 생성
+###タイトルの作成
 
 ```python
 result = client.generate_title(
@@ -141,7 +141,7 @@ for title in result['titles']:
     print(f"- {title}")
 ```
 
-### 가독성 개선
+### 読みやすさの改善
 
 ```python
 result = client.improve_readability(
@@ -155,7 +155,7 @@ print(f"원본 난이도: {result['originalLevel']}")
 print(f"개선 후 난이도: {result['improvedLevel']}")
 ```
 
-### 배치 처리
+### バッチ処理
 
 ```python
 texts = [
@@ -175,7 +175,7 @@ for item in result['results']:
     print(f"결과: {item['result']}\\n")
 ```
 
-### 사용 통계
+### 使用統計
 
 ```python
 stats = client.get_usage_stats(
@@ -187,20 +187,20 @@ print(f"총 API 호출: {stats['totalCalls']}")
 print(f"토큰 사용량: {stats['tokenUsage']}")
 ```
 
-## 기능
+## 機能
 
-- ✅ 텍스트 최적화 (글 고치기)
-- ✅ 파라프레이징 (다시 쓰기)
-- ✅ 텍스트 요약
-- ✅ 문법 및 맞춤법 검사
-- ✅ 텍스트 확장
-- ✅ 다국어 번역
-- ✅ 감성 분석
-- ✅ 키워드 추출
-- ✅ 제목 생성
-- ✅ 가독성 개선
-- ✅ 배치 처리
+- ✅テキストの最適化（投稿を修正）
+- ✅パラフレージング（再書き込み）
+- ✅テキストサマリー
+- ✅文法とスペルチェック
+- ✅テキスト拡張
+- ✅多言語翻訳
+- ✅感性分析
+- ✅キーワード抽出
+- ✅タイトルの作成
+- ✅ 読みやすさの改善
+- ✅バッチ処理
 
-## 라이선스
+##ライセンス
 
 MIT License

@@ -1,32 +1,32 @@
-# CloudContact AI API 클라이언트
+#CloudContact AI API クライアント
 
-CloudContact AI를 위한 Python 클라이언트입니다. AI 기반 고객센터 관리 기능을 제공합니다.
+CloudContact AI用のPythonクライアントです。 AIベースの顧客センター管理機能を提供します。
 
-## 개요
+## 概要
 
-CloudContact AI는 AI 기반 고객센터 플랫폼입니다. 이 클라이언트는 OAuth 인증을 통해 CloudContact AI API에 접근합니다.
+CloudContact AIはAIベースのカスタマーセンタープラットフォームです。このクライアントは、OAuth認証を介してCloudContact AI APIにアクセスします。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-또는:
+または：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## OAuth 액세스 토큰 발급
+## OAuthアクセストークン発行
 
-1. 해당 서비스에서 앱 등록
-2. OAuth 2.0 흐름을 통해 액세스 토큰 발급
-3. 발급된 토큰을 안전하게 저장
+1. そのサービスでアプリを登録する
+2. OAuth 2.0フローによるアクセストークンの発行
+3. 発行されたトークンを安全に保存
 
-## 사용법
+##使用法
 
-### 초기화
+### 初期化
 
 ```python
 from cloudcontact_AI import CloudContactAIClient, CloudcontactAIError
@@ -37,13 +37,13 @@ client = CloudContactAIClient(
 )
 ```
 
-### 주요 기능
+###主な機能
 
 - contacts
 - calls
 - chats
 
-### 예시
+### 例
 
 ```python
 # 연락처 조회
@@ -59,7 +59,7 @@ calls = client.get_calls()
 chats = client.get_chats()
 ```
 
-## 에러 처리
+## エラー処理
 
 ```python
 try:
@@ -72,6 +72,6 @@ except CloudcontactAIError as e:
     print(f"요청 실패: {str(e)}")
 ```
 
-## 라이선스
+##ライセンス
 
 MIT License

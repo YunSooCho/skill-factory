@@ -1,14 +1,14 @@
-# Bizer Team API 클라이언트
+#Bizer Team APIクライアント
 
-Bizer Team를 위한 Python API 클라이언트입니다. 팀 관리 기능을 제공합니다.
+Bizer Team用のPython APIクライアント。チーム管理機能を提供します。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-## 사용법
+##使用法
 
 ```python
 from bizer_team import BizerTeamClient, BizerTeamError
@@ -22,6 +22,6 @@ teams = client.get_teams()
 task = client.create_task("team_id", {"name": "Task", "description": "Description"})
 ```
 
-## 라이선스
+##ライセンス
 
 MIT License

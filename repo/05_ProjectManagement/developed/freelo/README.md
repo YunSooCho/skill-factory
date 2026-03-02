@@ -1,14 +1,14 @@
-# Freelo API 클라이언트
+#Freelo API クライアント
 
-Freelo를 위한 Python API 클라이언트입니다. 작업 관리 기능을 제공합니다.
+Freelo用のPython APIクライアントです。ジョブ管理機能を提供します。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-## 사용법
+##使用法
 
 ```python
 from freelo import FreeloClient, FreeloError
@@ -25,6 +25,6 @@ task = client.create_task({"name": "Task", "description": "Description"})
 comment = client.create_comment("task_id", {"text": "Comment text"})
 ```
 
-## 라이선스
+##ライセンス
 
 MIT License

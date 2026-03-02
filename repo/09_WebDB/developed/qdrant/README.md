@@ -1,23 +1,23 @@
-# Qdrant 벡터 데이터베이스 SDK
+#QdrantベクトルデータベースSDK
 
-Qdrant는 고성능 벡터 유사도 검색을 위한 오픈소스 벡터 데이터베이스에 대한 Python SDK입니다.
+Qdrantは、高性能ベクトル類似度検索用のオープンソースベクトルデータベース用のPython SDKです。
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [Qdrant Cloud](https://cloud.qdrant.io/)에 접속하여 계정을 생성합니다.
-2. 새 클러스터를 생성하거나 기존 클러스터를 선택합니다.
-3. API 탭에서 API 키를 생성합니다.
-4. 클러스터 URL과 API 키를 안전한 곳에 저장합니다.
+1. [Qdrant Cloud]（https://cloud.qdrant.io/)에にアクセスしてアカウントを作成します。
+2. 新しいクラスタを作成するか、既存のクラスタを選択します。
+3. API タブで API キーを生成します。
+4. クラスタ URL と API キーを安全な場所に保存します。
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from qdrant import QdrantClient
@@ -28,7 +28,7 @@ client = QdrantClient(
 )
 ```
 
-### 컬렉션 관리
+### コレクション管理
 
 ```python
 # 모든 컬렉션 목록
@@ -70,7 +70,7 @@ client.recreate_collection(
 )
 ```
 
-### 포인트(Point) 관리
+### ポイント(Point)管理
 
 ```python
 # 포인트 삽입
@@ -141,7 +141,7 @@ client.delete_points(
 )
 ```
 
-### 벡터 검색
+###ベクトル検索
 
 ```python
 # 벡터 검색
@@ -191,7 +191,7 @@ batch_results = client.search_batch(
 )
 ```
 
-### 추천 검색
+###おすすめ検索
 
 ```python
 # 양성/음성 벡터를 사용한 추천
@@ -207,7 +207,7 @@ for rec in recommendations['result']:
     print(f"추천: {rec['payload']['title']}, 점수: {rec['score']}")
 ```
 
-### 벡터 업데이트
+###ベクトル更新
 
 ```python
 # 벡터 업데이트
@@ -230,7 +230,7 @@ client.delete_vectors(
 )
 ```
 
-### 페이로드(Payload) 관리
+### ペイロードの管理
 
 ```python
 # 페이로드 업데이트
@@ -279,7 +279,7 @@ client.delete_payload(
 )
 ```
 
-### 필터링 및 인덱스
+### フィルタリングとインデックス
 
 ```python
 # 페이로드 인덱스 생성
@@ -296,7 +296,7 @@ client.delete_index(
 )
 ```
 
-### 카운트 및 통계
+### カウントと統計
 
 ```python
 # 컬렉션 전체 포인트 수
@@ -314,7 +314,7 @@ filtered_count = client.count(
 )
 ```
 
-### 클러스터 정보
+### クラスタ情報
 
 ```python
 # 클러스터 정보 조회
@@ -322,7 +322,7 @@ cluster_info = client.get_cluster_info()
 print(f"클러스터 상태: {cluster_info['status']}")
 ```
 
-### 컬렉션 잠금/잠금 해제
+### コレクションのロック/ロック解除
 
 ```python
 # 컬렉션 잠금
@@ -335,7 +335,7 @@ client.lock_collection(
 client.unlock_collection(collection_name="documents")
 ```
 
-## 필터 예제
+## フィルタの例
 
 ```python
 # 정확히 일치
@@ -379,24 +379,24 @@ filter = {
 }
 ```
 
-## 주요 기능
+##主な機能
 
-- ✅ 컬렉션 생성 및 관리
-- ✅ 벡터 삽입, 업데이트, 삭제
-- ✅ 고성능 벡터 유사도 검색
-- ✅ 필터링 및 추천
-- ✅ 페이로드 관리
-- ✅ 일괄 작업 지원
-- ✅ 페이로드 인덱싱
-- ✅ 다양한 거리 메트릭 (Cosine, Euclidean, Dot)
-- ✅ 클러스터 관리
+- ✅コレクションの作成と管理
+- ✅ベクトルの挿入、更新、削除
+- ✅高性能ベクトル類似度検索
+- ✅フィルタリングと推奨
+- ✅ペイロード管理
+- ✅バッチジョブのサポート
+- ✅ペイロード索引付け
+- ✅さまざまな距離メトリック（Cosine、Euclidean、Dot）
+- ✅クラスタ管理
 
-## 거리 메트릭
+## 距離メトリック
 
-- **Cosine**: 코사인 유사도 (기본값)
-- **Euclidean**: 유클리드 거리
-- **Dot**: 내적
+- **Cosine**：コサイン類似度（デフォルト）
+- **Euclidean**: ユークリッド距離
+- **Dot**: 内積
 
-## 라이선스
+##ライセンス
 
 MIT License

@@ -1,23 +1,23 @@
 # Reamaze SDK
 
-Reamaze는 고객관계 관리 및 지원 티켓 관리를 위한 Python SDK입니다.
+Reamazeは、顧客関係管理およびサポートチケット管理のためのPython SDKです。
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [Reamaze 웹사이트](https://www.reamaze.com)에 접속하여 계정을 생성합니다.
-2. Settings > API & Webhooks 메뉴로 이동합니다.
-3. 'Generate API Key' 버튼을 클릭하여 새 API 키를 생성합니다.
-4. 생성된 API 키와 계정 브랜드 이름을 안전한 곳에 저장합니다.
+1. [Reamaze Webサイト]（https://www.reamaze.com)에にアクセスしてアカウントを作成します。
+2. Settings > API & Webhooks メニューに移動します。
+3. [Generate API Key]ボタンをクリックして新しいAPIキーを生成します。
+4. 生成された API キーとアカウントのブランド名を安全な場所に保存します。
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from reamaze import ReamazeClient
@@ -29,7 +29,7 @@ client = ReamazeClient(
 )
 ```
 
-### 대화(티켓) 생성
+###会話（チケット）の作成
 
 ```python
 conversation = client.create_conversation(
@@ -45,7 +45,7 @@ conversation = client.create_conversation(
 print(f"대화 ID: {conversation['conversation']['slug']}")
 ```
 
-### 대화 목록 조회
+### 会話リストの照会
 
 ```python
 conversations = client.list_conversations(
@@ -59,7 +59,7 @@ for conv in conversations:
     print(f"{conv['slug']}: {conv['subject']} ({conv['status']})")
 ```
 
-### 대화 업데이트
+###会話の更新
 
 ```python
 updated = client.update_conversation(
@@ -69,7 +69,7 @@ updated = client.update_conversation(
 )
 ```
 
-### 메시지 추가
+### メッセージの追加
 
 ```python
 message = client.add_message(
@@ -81,7 +81,7 @@ message = client.add_message(
 print(f"메시지 ID: {message['message']['id']}")
 ```
 
-### 고객 생성
+### 顧客作成
 
 ```python
 customer = client.create_customer(
@@ -99,7 +99,7 @@ customer = client.create_customer(
 print(f"고객 ID: {customer['customer']['id']}")
 ```
 
-### 고객 목록 조회
+### 顧客リストの照会
 
 ```python
 customers = client.list_customers(
@@ -112,7 +112,7 @@ for customer in customers:
     print(f"{customer['email']}: {customer['name']}")
 ```
 
-### 직원 목록 조회
+###従業員リストの照会
 
 ```python
 users = client.list_users()
@@ -121,7 +121,7 @@ for user in users:
     print(f"{user['name']}: {user['email']}")
 ```
 
-### 통계 조회
+###統計照会
 
 ```python
 stats = client.get_statistics(
@@ -134,7 +134,7 @@ print(f"해결된 대화: {stats['resolvedConversations']}")
 print(f"평균 응답 시간: {stats['avgResponseTime']}분")
 ```
 
-### 도움말 문서 생성
+### ヘルプ文書の生成
 
 ```python
 article = client.create_article(
@@ -147,7 +147,7 @@ article = client.create_article(
 print(f"문서 ID: {article['article']['id']}")
 ```
 
-### 채널 목록 조회
+###チャンネルリストの閲覧
 
 ```python
 channels = client.list_channels()
@@ -156,16 +156,16 @@ for channel in channels:
     print(f"{channel['name']}: {channel['type']}")
 ```
 
-## 기능
+## 機能
 
-- ✅ 대화(티켓) 관리
-- ✅ 메시지 관리
-- ✅ 고객 관리
-- ✅ 직원 관리
-- ✅ 통계 및 분석
-- ✅ 도움말 문서 관리
-- ✅ 멀티채널 지원 (이메일, 채팅, 소셜)
+- ✅会話（チケット）管理
+- ✅メッセージ管理
+- ✅顧客管理
+- ✅従業員管理
+- ✅統計と分析
+- ✅ヘルプ文書の管理
+- ✅マルチチャンネルサポート（Eメール、チャット、ソーシャル）
 
-## 라이선스
+##ライセンス
 
 MIT License

@@ -1,23 +1,23 @@
 # AskHandle SDK
 
-AskHandle는 고객 문의 및 요청 관리를 위한 Python SDK입니다.
+AskHandleは、顧客の問い合わせと要求を管理するためのPython SDKです。
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [AskHandle 웹사이트](https://askhandle.com)에 접속하여 계정을 생성합니다.
-2. 대시보드에서 Settings > API Keys 메뉴로 이동합니다.
-3. 'Create API Key' 버튼을 클릭하여 새 API 키를 생성합니다.
-4. 생성된 API 키를 안전한 곳에 저장합니다.
+1. [AskHandleウェブサイト]（https://askhandle.com)에にアクセスしてアカウントを作成します。
+2. ダッシュボードで、Settings > API Keys メニューに移動します。
+3. [Create API Key]ボタンをクリックして新しいAPIキーを生成します。
+4. 生成された API キーを安全な場所に保存します。
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from askhandle import AskHandleClient
@@ -28,7 +28,7 @@ client = AskHandleClient(
 )
 ```
 
-### 티켓 생성
+### チケットの作成
 
 ```python
 ticket = client.create_ticket(
@@ -44,7 +44,7 @@ ticket = client.create_ticket(
 print(f"티켓 ID: {ticket['id']}")
 ```
 
-### 티켓 목록 조회
+### チケットリストの照会
 
 ```python
 tickets = client.list_tickets(
@@ -57,7 +57,7 @@ for ticket in tickets:
     print(f"{ticket['id']}: {ticket['title']} ({ticket['status']})")
 ```
 
-### 티켓 업데이트
+### チケットの更新
 
 ```python
 updated_ticket = client.update_ticket(
@@ -67,7 +67,7 @@ updated_ticket = client.update_ticket(
 )
 ```
 
-### 댓글 추가
+###コメントを追加
 
 ```python
 comment = client.add_comment(
@@ -78,7 +78,7 @@ comment = client.add_comment(
 )
 ```
 
-### 고객 생성
+### 顧客作成
 
 ```python
 customer = client.create_customer(
@@ -89,7 +89,7 @@ customer = client.create_customer(
 )
 ```
 
-### 통계 조회
+###統計照会
 
 ```python
 stats = client.get_statistics(
@@ -101,14 +101,14 @@ print(f"총 티켓: {stats['total_tickets']}")
 print(f"해결된 티켓: {stats['resolved_tickets']}")
 ```
 
-## 기능
+## 機能
 
-- ✅ 티켓 생성, 조회, 업데이트
-- ✅ 댓글 추가 및 조회
-- ✅ 고객 관리
-- ✅ 통계 및 리포트
-- ✅ 우선순위 및 상태 관리
+- ✅チケットの作成、照会、更新
+- ✅コメントの追加と閲覧
+- ✅顧客管理
+- ✅統計とレポート
+- ✅優先順位と状態管理
 
-## 라이선스
+##ライセンス
 
 MIT License

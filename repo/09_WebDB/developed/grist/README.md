@@ -1,24 +1,24 @@
-# Grist 스프레드시트 데이터베이스 SDK
+＃GristスプレッドシートデータベースSDK
 
-Grist는 스프레드시트와 데이터베이스의 장점을 결합한 플랫폼에 대한 Python SDK입니다.
+Gristは、スプレッドシートとデータベースの利点を組み合わせたプラットフォーム用のPython SDKです。
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [Grist 웹사이트](https://www.getgrist.com)에 접속하여 계정을 생성합니다.
-2. 우측 상단의 프로필 아이콘 > Account Settings를 클릭합니다.
-3. API Keys 섹션에서 'Create API Key' 버튼을 클릭합니다.
-4. API 키의 이름을 입력하고 생성합니다.
-5. 생성된 API 키를 안전한 곳에 저장합니다.
+1. [Grist ウェブサイト](https://www.getgrist.com)에 にアクセスしてアカウントを作成します。
+2. 右上のプロファイルアイコン > Account Settings をクリックします。
+3. API Keysセクションで、[Create API Key]ボタンをクリックします。
+4. API キーの名前を入力して生成します。
+5. 生成された API キーを安全な場所に保存します。
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from grist import GristClient
@@ -29,7 +29,7 @@ client = GristClient(
 )
 ```
 
-### 문서(Document) 관리
+### 文書管理
 
 ```python
 # 모든 문서 목록
@@ -55,7 +55,7 @@ client.update_doc(doc_id="doc_id", name="프로젝트 관리 2024")
 client.delete_doc(doc_id="doc_id")
 ```
 
-### 테이블 관리
+### テーブル管理
 
 ```python
 # 테이블 목록
@@ -76,7 +76,7 @@ client.create_table(
 )
 ```
 
-### 레코드 관리
+### レコード管理
 
 ```python
 # 레코드 생성
@@ -141,7 +141,7 @@ client.delete_record(
 )
 ```
 
-### 배치 작업
+### バッチジョブ
 
 ```python
 # 여러 레코드 생성
@@ -178,7 +178,7 @@ client.delete_records(
 )
 ```
 
-### 컬럼 관리
+### 列管理
 
 ```python
 # 컬럼 정보 조회
@@ -207,7 +207,7 @@ client.add_column(
 )
 ```
 
-### 쿼리 및 검색
+###クエリと検索
 
 ```python
 # 고급 쿼리
@@ -223,7 +223,7 @@ for record in results:
     print(f"{record['fields']['name']}: {record['fields']['age']}")
 ```
 
-### 접근 권한 관리
+### アクセス権の管理
 
 ```python
 # 접근 권한 조회
@@ -239,7 +239,7 @@ client.set_access_permissions(
 )
 ```
 
-### 사용자 정보
+### ユーザー情報
 
 ```python
 # 현재 사용자 프로필
@@ -248,17 +248,17 @@ print(f"사용자명: {profile['name']}")
 print(f"이메일: {profile['email']}")
 ```
 
-## 주요 기능
+##主な機能
 
-- ✅ 문서 생성, 조회, 수정, 삭제
-- ✅ 테이블 및 컬럼 관리
-- ✅ 레코드 CRUD 작업 (단일 및 배치)
-- ✅ 필터링 및 정렬
-- ✅ 수식 컬럼 지원
-- ✅ 접근 권한 관리
-- ✅ 고급 쿼리 기능
-- ✅ 실시간 데이터 동기화
+- ✅文書の作成、照会、修正、削除
+- ✅テーブルと列の管理
+- ✅レコードCRUD操作（シングルとバッチ）
+- ✅フィルタリングとソート
+- ✅数式列のサポート
+- ✅アクセス権の管理
+- ✅高度なクエリ機能
+- ✅リアルタイムデータ同期
 
-## 라이선스
+##ライセンス
 
 MIT License

@@ -1,23 +1,23 @@
 # Demio API Client
 
-Demio용 Python 클라이언트 - 웨비나 플랫폼 자동화
+Demio用Pythonクライアント - ウェビナープラットフォームの自動化
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API Credentials 획득
+## API Credentialsを取得
 
-1. [Demio 계정 생성](https://demio.com/)
-2. 로그인 후 Settings > Integrations > API 접근
-3. API Key와 API Secret 생성
-4. 자격 증명 복사
+1. [Demio アカウントの作成](https://demio.com/)
+2. ログイン後の Settings > Integrations > API アクセス
+3. API KeyとAPI Secretの生成
+4. 資格情報のコピー
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from demio_client import DemioClient
@@ -28,7 +28,7 @@ client = DemioClient(
 )
 ```
 
-### 이벤트 목록 조회
+### イベントリストの照会
 
 ```python
 events = client.list_events(
@@ -40,7 +40,7 @@ for event in events['events']:
     print(f"{event['name']}: {event['start_date']}")
 ```
 
-### 이벤트 상세 조회
+### イベント詳細検索
 
 ```python
 event = client.get_event(event_id=12345)
@@ -49,7 +49,7 @@ print(f"Status: {event['status']}")
 print(f"Duration: {event['duration']} minutes")
 ```
 
-### 이벤트 참여자 목록
+### イベント参加者リスト
 
 ```python
 participants = client.list_event_participants(
@@ -61,7 +61,7 @@ for p in participants['participants']:
     print(f"{p['name']} ({p['email']}): Attended {p['is_attended']}")
 ```
 
-### 이벤트 등록자 목록
+### イベント登録者リスト
 
 ```python
 registrants = client.get_event_registrants(event_id=12345)
@@ -70,7 +70,7 @@ for r in registrants['registrants']:
     print(f"{r['email']}: {r['join_link']}")
 ```
 
-### 참여자 등록
+###参加者登録
 
 ```python
 result = client.register_event_participant(
@@ -86,7 +86,7 @@ print(f"Join link: {result['join_link']}")
 print(f"UUID: {result['uuid']}")
 ```
 
-### 등록 취소
+###登録解除
 
 ```python
 client.cancel_registration(
@@ -95,26 +95,26 @@ client.cancel_registration(
 )
 ```
 
-### 다가오는 이벤트 조회
+### 今後のイベント検索
 
 ```python
 upcoming = client.get_upcoming_events(limit=5)
 ```
 
-### 완료된 이벤트 조회
+### 完了したイベントの検索
 
 ```python
 completed = client.get_completed_events(limit=10)
 ```
 
-## 주요 기능
+##主な機能
 
-1. **이벤트 관리**: 웨비나 이벤트 조회
-2. **참여자 관리**: 등록, 참여 조회
-3. **자동화**: 웨비나 등록 자동화
-4. **분석**: 참여자 데이터 추출
+1. **イベント管理**: ウェビナーイベントの照会
+2. **参加者管理**: 登録、参加照会
+3. **自動化**: ウェビナー登録の自動化
+4. **分析**: 参加者データの抽出
 
-## 에러 처리
+## エラー処理
 
 ```python
 from demio_client import DemioError, RateLimitError
@@ -127,12 +127,12 @@ except DemioError as e:
     print(f"API error: {e}")
 ```
 
-## API 제한
+## APIの制限
 
-- 기본 제한: 초당 10 요청
-- 무료 요금제: 월 50 참여자
-- 유료 요금제: 무제한
+- 基本制限：1秒あたり10リクエスト
+- 無料プラン：月50参加者
+- 有料プラン：無制限
 
-## 지원
+## サポート
 
-자세한 API 문서: [Demio API Documentation](https://demio.com/docs/developers/)
+詳細なAPIドキュメント：[Demio API Documentation]（https://demio.com/docs/developers/)

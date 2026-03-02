@@ -1,14 +1,14 @@
-# Crowdin API 클라이언트
+#Crowdin APIクライアント
 
-Crowdin을 위한 Python API 클라이언트입니다. 현지화 관리 기능을 제공합니다.
+Crowdin用のPython APIクライアント。ローカライズ管理機能を提供します。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-## 사용법
+##使用法
 
 ```python
 from crowdin import CrowdinClient, CrowdinError
@@ -22,6 +22,6 @@ projects = client.list_projects()
 status = client.get_translation_status("project_id")
 ```
 
-## 라이선스
+##ライセンス
 
 MIT License

@@ -1,23 +1,23 @@
 # Relation SDK
 
-Relation은 고객 관계 관리(CRM)를 위한 Python SDK입니다.
+Relationは、顧客関係管理（CRM）用のPython SDKです。
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [Relation 웹사이트](https://relation.io)에 접속하여 계정을 생성합니다.
-2. 대시보드에서 Settings > API Keys 메뉴로 이동합니다.
-3. 'Generate API Key' 버튼을 클릭하여 새 API 키를 생성합니다.
-4. 생성된 API 키를 안전한 곳에 저장합니다.
+1. [Relation ウェブサイト](https://relation.io)에 にアクセスしてアカウントを作成します。
+2. ダッシュボードで、Settings > API Keys メニューに移動します。
+3. [Generate API Key]ボタンをクリックして新しいAPIキーを生成します。
+4. 生成された API キーを安全な場所に保存します。
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from relation import RelationClient
@@ -28,7 +28,7 @@ client = RelationClient(
 )
 ```
 
-### 연락처 생성
+###連絡先の作成
 
 ```python
 contact = client.create_contact(
@@ -48,7 +48,7 @@ contact = client.create_contact(
 print(f"연락처 ID: {contact['id']}")
 ```
 
-### 연락처 조회
+###連絡先の検索
 
 ```python
 contact = client.get_contact(contact_id="contact_123")
@@ -58,7 +58,7 @@ print(f"회사: {contact['company']}")
 print(f"태그: {contact['tags']}")
 ```
 
-### 연락처 목록 조회
+###連絡先リストの検索
 
 ```python
 contacts = client.list_contacts(
@@ -71,7 +71,7 @@ for contact in contacts:
     print(f"{contact['email']}: {contact['firstName']} {contact['lastName']}")
 ```
 
-### 연락처 업데이트
+###連絡先の更新
 
 ```python
 updated = client.update_contact(
@@ -82,7 +82,7 @@ updated = client.update_contact(
 )
 ```
 
-### 세그먼트 생성
+### セグメントの作成
 
 ```python
 segment = client.create_segment(
@@ -99,7 +99,7 @@ segment = client.create_segment(
 print(f"세그먼트 ID: {segment['id']}")
 ```
 
-### 세그먼트 연락처 조회
+###セグメント連絡先の検索
 
 ```python
 contacts = client.get_segment_contacts(
@@ -110,7 +110,7 @@ contacts = client.get_segment_contacts(
 print(f"VIP 고객 수: {len(contacts)}")
 ```
 
-### 노트 생성
+### ノートの生成
 
 ```python
 note = client.create_note(
@@ -123,7 +123,7 @@ note = client.create_note(
 print(f"노트 ID: {note['id']}")
 ```
 
-### 태스크 생성
+### タスクの作成
 
 ```python
 task = client.create_task(
@@ -138,7 +138,7 @@ task = client.create_task(
 print(f"태스크 ID: {task['id']}")
 ```
 
-### 태스크 목록 조회
+### タスクリストの照会
 
 ```python
 tasks = client.list_tasks(
@@ -152,7 +152,7 @@ for task in tasks:
     print(f"{task['title']} - {task['dueDate']}")
 ```
 
-### 이벤트 추적
+### イベント追跡
 
 ```python
 client.track_event(
@@ -166,7 +166,7 @@ client.track_event(
 )
 ```
 
-### 연락처 이벤트 기록 조회
+###連絡先イベント履歴の照会
 
 ```python
 events = client.get_contact_events(
@@ -180,22 +180,22 @@ for event in events:
     print(f"시간: {event['createdAt']}")
 ```
 
-### 연락처 삭제
+###連絡先の削除
 
 ```python
 result = client.delete_contact(contact_id="contact_123")
 print(f"삭제 완료: {result['success']}")
 ```
 
-## 기능
+## 機能
 
-- ✅ 연락처 관리 (생성, 조회, 업데이트, 삭제)
-- ✅ 세그먼트 기반 고객 분류
-- ✅ 노트 및 활동 기록
-- ✅ 태스크 관리
-- ✅ 이벤트 추적
-- ✅ 통합 검색
+- ✅連絡先管理（作成、照会、更新、削除）
+- ✅セグメントベースの顧客分類
+- ✅ノートと活動記録
+- ✅タスク管理
+- ✅イベント追跡
+- ✅統合検索
 
-## 라이선스
+##ライセンス
 
 MIT License

@@ -1,34 +1,34 @@
-# Facebook Ads API 클라이언트
+#Facebook Ads API クライアント
 
-Facebook Ads를 위한 Python API 클라이언트입니다.
+Facebook Ads用のPython APIクライアント。
 
-## 개요
+## 概要
 
-이 클라이언트는 Facebook Ads API에 접근하여 광고 성과 보고서 및 Webhook 처리를 지원합니다.
+このクライアントはFacebook Ads APIにアクセスし、広告パフォーマンスレポートとWebhook処理をサポートします。
 
-## 설치
+## インストール
 
-의존성 패키지:
+依存パッケージ：
 
 ```bash
 pip install requests
 ```
 
-또는:
+または：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급
+## API キー発行
 
-1. [Meta for Developers](https://developers.facebook.com/)에서 앱 생성
-2. Ads 앱 설정에서 Access Token 발급
-3. 발급된 Access Token 및 Webhook Secret 저장
+1. [Meta for Developers](https://developers.facebook.com/)에서 アプリの作成
+2. Adsアプリ設定でAccess Tokenを発行
+3. 発行された Access Token および Webhook Secret の保存
 
-## 사용법
+##使用法
 
-### 초기화
+### 初期化
 
 ```python
 from facebook_ads.facebook_ads_client import FacebookAdsClient
@@ -40,7 +40,7 @@ client = FacebookAdsClient(
 )
 ```
 
-### 예시 코드
+### サンプルコード
 
 ```python
 # 광고 계정 보고서 생성
@@ -60,24 +60,24 @@ campaign_report = client.create_campaign_report(
 print("Campaign report:", campaign_report)
 ```
 
-## API 액션
+## APIアクション
 
-- `create_account_report` - 계정 광고 보고서 생성
-- `get_account_report` - 계정 광고 보고서 조회
-- `create_campaign_report` - 캠페인 보고서 생성
-- `get_campaign_report` - 캠페인 보고서 조회
-- `create_adset_report` - 광고 세트 보고서 생성
-- `get_adset_report` - 광고 세트 보고서 조회
-- `create_ad_report` - 광고 보고서 생성
-- `get_ad_report` - 광고 보고서 조회
+- `create_account_report` - アカウント広告レポートの生成
+- `get_account_report` - アカウント広告レポートの検索
+- `create_campaign_report` - キャンペーンレポートの生成
+- `get_campaign_report` - キャンペーンレポートの照会
+- `create_adset_report` - 広告セットレポートの生成
+- `get_adset_report` - 広告セットレポートの照会
+- `create_ad_report` - 広告レポートの生成
+- `get_ad_report` - 広告レポートの照会
 
-## Webhook 트리거
+## Webhookトリガー
 
-- **Webhook** - 이 서비스는 Webhook 트리거를 지원합니다
+- **Webhook** - このサービスはWebhookトリガーをサポートします
 
-Webhook 설정은 Meta for Developers 페이지에서 수행하십시오.
+Webhook の設定は、Meta for Developers ページで行います。
 
-## 에러 처리
+## エラー処理
 
 ```python
 try:
@@ -88,8 +88,8 @@ except Exception as e:
 
 ## Rate Limiting
 
-API 요청 간 최소 0.1초 지연이 적용됩니다. 너무 많은 요청이 발생하면 Rate Limit 에러가 발생할 수 있습니다.
+APIリクエスト間の最小0.1秒遅延が適用されます。要求が多すぎると、Rate Limitエラーが発生する可能性があります。
 
-## 라이선스
+##ライセンス
 
 MIT License

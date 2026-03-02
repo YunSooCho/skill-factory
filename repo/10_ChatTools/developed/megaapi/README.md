@@ -1,34 +1,34 @@
-# MEGA API 클라이언트
+#MEGA APIクライアント
 
-MEGA API를 위한 Python API 클라이언트입니다.
+MEGA API用のPython APIクライアント。
 
-## 개요
+## 概要
 
-이 클라이언트는 MEGA API에 접근하여 텍스트 메시지 전송 및 삭제 기능을 제공합니다.
+このクライアントはMEGA APIにアクセスし、テキストメッセージの送信と削除を提供します。
 
-## 설치
+## インストール
 
-의존성 패키지:
+依存パッケージ：
 
 ```bash
 pip install requests
 ```
 
-또는:
+または：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급
+## API キー発行
 
-1. MEGA 개발자 포털 접속
-2. 앱 생성 및 API 키 발급
-3. 발급된 API 키 저장
+1. MEGA開発者ポータルへのアクセス
+2. アプリの生成とAPIキーの発行
+3. 発行された API キーの保存
 
-## 사용법
+##使用法
 
-### 초기화
+### 初期化
 
 ```python
 from megaapi import MegaapiClient
@@ -38,7 +38,7 @@ client = MegaapiClient(
 )
 ```
 
-### 예시 코드
+### サンプルコード
 
 ```python
 # 텍스트 메시지 전송
@@ -70,24 +70,24 @@ result = client.delete_message(
 )
 ```
 
-## API 액션
+## APIアクション
 
 - `send_text_message` - Send Text Message
 - `delete_message` - Delete Message
 
-## 액션 파라미터
+## アクションパラメータ
 
 ### send_text_message
-- `chat_id` (string, required) - 채팅 ID 또는 사용자 ID
-- `text` (string, required) - 전송할 메시지 내용
-- `reply_to_message_id` (string, optional) - 리플라이할 메시지 ID
+- `chat_id`(string, required) - チャットIDまたはユーザーID
+- `text`(string, required) - 送信するメッセージの内容
+- `reply_to_message_id`(string, optional) - リプライするメッセージID
 
 ### delete_message
-- `chat_id` (string, required) - 채팅 ID
-- `message_id` (string, required) - 삭제할 메시지 ID
-- `for_all_users` (boolean, optional) - 모든 사용자에 대해 삭제 여부 (기본값: false)
+- `chat_id`(string, required) - チャットID
+- `message_id`(string, required) - 削除するメッセージID
+- `for_all_users`（boolean、optional） - すべてのユーザーに対して削除するかどうか（デフォルト：false）
 
-## 에러 처리
+## エラー処理
 
 ```python
 try:
@@ -100,8 +100,8 @@ except Exception as e:
 
 ## Rate Limiting
 
-API 요청에 대한 레이트 리밋이 적용될 수 있습니다.
+API リクエストのレートリミットが適用される場合があります。
 
-## 라이선스
+##ライセンス
 
 MIT License

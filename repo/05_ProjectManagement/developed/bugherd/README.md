@@ -1,14 +1,14 @@
-# BugHerd API 클라이언트
+#BugHerd APIクライアント
 
-BugHerd를 위한 Python API 클라이언트입니다. 버그 추적 기능을 제공합니다.
+BugHerd用のPython APIクライアントです。バグ追跡機能を提供します。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-## 사용법
+##使用法
 
 ```python
 from bugherd import BugHerdClient, BugHerdError
@@ -25,6 +25,6 @@ task = client.create_task("project_id", {
 })
 ```
 
-## 라이선스
+##ライセンス
 
 MIT License

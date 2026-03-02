@@ -1,39 +1,39 @@
-# LINE WORKS OAuth API 클라이언트
+#LINE WORKS OAuth APIクライアント
 
-LINE WORKS OAuth를 위한 Python API 클라이언트입니다.
+LINE WORKS OAuth用のPython APIクライアントです。
 
-## 개요
+## 概要
 
-이 클라이언트는 LINE WORKS OAuth API에 접근하여 사용자 관리, 메시지 전송, 캘린더 운영, 그룹 관리, 파일 관리, 메일, 게시판 등 다양한 작업을 지원합니다.
+このクライアントはLINE WORKS OAuth APIにアクセスし、ユーザー管理、メッセージ転送、カレンダー操作、グループ管理、ファイル管理、メール、掲示板などのさまざまなタスクをサポートします。
 
-## 설치
+## インストール
 
-의존성 패키지:
+依存パッケージ：
 
 ```bash
 pip install requests
 ```
 
-또는:
+または：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## OAuth 인증 설정
+## OAuth認証の設定
 
-1. LINE WORKS 개발자 포털 접속: https://developers.works.mobile.co.kr
-2. 앱 (Service) 생성
-3. 클라이언트 ID, 시크릿 설정
-4. OAuth 2.0 액세스 토큰 발급
-5. 발급된 액세스 토큰 저장
+1. LINE WORKS開発者ポータルへのアクセス：https://developers.works.mobile.co.kr
+2. アプリ(Service)の作成
+3. クライアントID、シークレット設定
+4. OAuth 2.0 アクセストークン発行
+5. 発行されたアクセストークンの保存
 
-API 문서:
+APIドキュメント：
 https://developers.works.mobile.co.kr/reference
 
-## 사용법
+##使用法
 
-### 초기화
+### 初期化
 
 ```python
 from line_works_oauth import LineWorksOAuthClient
@@ -44,7 +44,7 @@ client = LineWorksOAuthClient(
 )
 ```
 
-### 예시 코드
+### サンプルコード
 
 ```python
 # 사용자 목록 조회
@@ -228,67 +228,67 @@ room = client.create_bot_talk_room(
 )
 ```
 
-## API 액션
+## APIアクション
 
-### 사용자 관리
-- `list_users` - 사용자 목록 조회
-- `get_user` - 사용자 정보 조회
-- `create_user` - 새 사용자 생성
-- `update_user` - 사용자 정보 업데이트
-- `delete_user` - 사용자 삭제
-- `suspend_user` - 사용자 정지
-- `unsuspend_user` - 사용자 정지 취소
+### ユーザー管理
+- `list_users` - ユーザーリストの照会
+- `get_user` - ユーザー情報の照会
+- `create_user` - 新しいユーザーの作成
+- `update_user` - ユーザー情報の更新
+- `delete_user` - ユーザーの削除
+- `suspend_user` - ユーザーの停止
+- `unsuspend_user` - ユーザー停止のキャンセル
 
-### 메시지 작업
-- `send_message_to_user` - 특정 사용자에게 메시지 전송
-- `send_message_to_room` - 토크룸에 메시지 전송
-- `send_message_with_button` - 버튼이 있는 메시지 전송
-- `send_message_via_webhook` - Incoming Webhook으로 메시지 전송
-- `send_file_to_user` - 사용자에게 파일 전송
-- `send_file_to_room` - 토크룸에 파일 전송
+### メッセージ操作
+- `send_message_to_user` - 特定のユーザーにメッセージを送信する
+- `send_message_to_room` - トークルームにメッセージを送信する
+- `send_message_with_button` - ボタンでメッセージを送信する
+- `send_message_via_webhook` - Incoming Webhookにメッセージを送信する
+- `send_file_to_user` - ユーザーにファイルを転送する
+- `send_file_to_room` - トークルームへのファイル転送
 
-### 캘린더 작업
-- `list_calendars` - 사용자 캘린더 목록 조회
-- `get_calendar_events` - 캘린더 이벤트 목록 조회
-- `create_event` - 캘린더 이벤트 생성
-- `create_event` (종일) - 종일 이벤트 생성
-- `update_event` - 캘린더 이벤트 업데이트
-- `update_event` (종일) - 종일 이벤트 업데이트
-- `delete_event` - 캘린더 이벤트 삭제
-- `get_event_detail` - 캘린더 이벤트 상세 조회
+###カレンダーの操作
+- `list_calendars` - ユーザーカレンダーリストの検索
+- `get_calendar_events` - カレンダーイベントリストの検索
+- `create_event` - カレンダーイベントの生成
+- `create_event` (終日) - 終日イベントの生成
+- `update_event` - カレンダーイベントの更新
+- `update_event`(終日) - 終日イベントの更新
+- `delete_event` - カレンダーイベントを削除
+- `get_event_detail` - カレンダーイベントの詳細検索
 
-### 그룹 관리
-- `create_group` - 그룹 생성
-- `update_group_members` - 그룹 멤버 목록 업데이트
+### グループ管理
+- `create_group` - グループの作成
+- `update_group_members` - グループメンバーリストの更新
 
-### 파일 작업
-- `get_upload_url` - 파일 업로드 URL 획득
-- `upload_file` - 파일 업로드 실행
-- `list_group_files` - 그룹 루트 폴더 파일 목록
-- `list_group_folder_files` - 그룹 특정 폴더 파일 목록
-- `create_group_folder` - 그룹 루트 폴더에 폴더 생성
-- `create_group_folder` - 그룹 특정 폴더 내에 폴더 생성
-- `duplicate_group_file` - 그룹 폴더 내 파일/폴더 복제
+###ファイル操作
+- `get_upload_url` - ファイルアップロードURLを取得
+- `upload_file` - ファイルアップロードの実行
+- `list_group_files` - グループルートフォルダファイルのリスト
+- `list_group_folder_files` - グループ固有のフォルダファイルのリスト
+- `create_group_folder` - グループルートフォルダにフォルダを作成する
+- `create_group_folder` - グループ固有のフォルダ内にフォルダを作成する
+- `duplicate_group_file` - グループフォルダ内のファイル/フォルダの複製
 
-### 메일 작업
-- `get_mails` - 메일 목록 조회
-- `get_mail` - 메일 상세 조회
-- `send_mail` - 메일 전송
-- `get_mails` - 메일 폴더 내 메일 조회
+###メール操作
+- `get_mails` - メーリングリストの検索
+- `get_mail` - メール詳細検索
+- `send_mail` - メール送信
+- `get_mails` - メールフォルダ内のメールの検索
 
-### 게시판 작업
-- `create_bulletin_board` - 게시판 생성
-- `create_bulletin_post` - 게시판 게시물 작성
+###掲示板の操作
+- `create_bulletin_board` - 掲示板の作成
+- `create_bulletin_post` - 掲示板の投稿を書く
 
-### 외부 브라우저 설정
-- `enable_external_browser` - 외부 브라우저 설정 활성화
-- `disable_external_browser` - 외부 브라우저 설정 비활성화
-- `get_external_browser_status` - 외부 브라우저 이용 상태 조회
+### 外部ブラウザ設定
+- `enable_external_browser` - 外部ブラウザ設定を有効にする
+- `disable_external_browser` - 外部ブラウザ設定を無効にする
+- `get_external_browser_status` - 外部ブラウザ使用状況の照会
 
-### 봇 작업
-- `create_bot_talk_room` - 봇이 포함된 토크룸 생성
+### ボット操作
+- `create_bot_talk_room` - ボットを含むトークルームを作成する
 
-## 에러 처리
+## エラー処理
 
 ```python
 try:
@@ -299,13 +299,13 @@ except Exception as e:
 
 ## Rate Limiting
 
-LINE WORKS API는 요청에 대한 레이트 리밋이 적용됩니다.
+LINE WORKS APIはリクエストのレートリミットが適用されます。
 
-## 참고 문서
+## 参考資料
 
-- LINE WORKS 개발자 문서: https://developers.works.mobile.co.kr
-- API 레퍼런스: https://developers.works.mobile.co.kr/reference
+- LINE WORKS開発者ドキュメント：https://developers.works.mobile.co.kr
+- APIリファレンス：https://developers.works.mobile.co.kr/reference
 
-## 라이선스
+##ライセンス
 
 MIT License

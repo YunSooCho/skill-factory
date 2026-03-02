@@ -1,6 +1,6 @@
 """
 Product Fruits Client
-제품 온보딩 및 사용자 가이드 API 클라이언트
+製品オンボーディングおよびユーザーガイドAPIクライアント
 """
 
 import requests
@@ -9,9 +9,9 @@ from typing import Optional, Dict, List, Any
 
 class ProductFruitsClient:
     """
-    Product Fruits API 클라이언트
+    Product Fruits API クライアント
 
-    제품 온보딩, 사용자 가이드, 투어, 툴팁 관리를 위한 클라이언트
+    製品オンボーディング、ユーザーガイド、ツアー、ツールチップ管理のためのクライアント
     """
 
     def __init__(
@@ -22,13 +22,13 @@ class ProductFruitsClient:
         timeout: int = 30
     ):
         """
-        Product Fruits 클라이언트 초기화
+        Product Fruits クライアントの初期化
 
         Args:
-            api_key: Product Fruits API 키
-            workspace_id: 워크스페이스 ID
-            base_url: API 기본 URL
-            timeout: 요청 타임아웃 (초)
+            api_key: Product Fruits API キー
+            workspace_id: ワークスペース ID
+            base_url：APIベースURL
+            timeout：リクエストタイムアウト（秒）
         """
         self.api_key = api_key
         self.workspace_id = workspace_id
@@ -50,19 +50,19 @@ class ProductFruitsClient:
         params: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        API 요청 전송
+        APIリクエストの送信
 
         Args:
-            method: HTTP 메서드
-            endpoint: API 엔드포인트
-            data: 요청 본문 데이터
-            params: URL 파라미터
+            method: HTTP メソッド
+            endpoint: API エンドポイント
+            data: 要求本文データ
+            params: URL パラメータ
 
         Returns:
-            API 응답 데이터
+            API応答データ
 
         Raises:
-            requests.RequestException: API 요청 실패
+            requests.RequestException: API リクエストに失敗しました
         """
         url = f"{self.base_url}/{endpoint.lstrip('/')}"
         response = self.session.request(
@@ -85,18 +85,18 @@ class ProductFruitsClient:
         is_active: bool = False
     ) -> Dict[str, Any]:
         """
-        새 투어 생성
+        新しいツアーを作成
 
         Args:
-            name: 투어 이름
-            description: 투어 설명
-            steps: 투어 단계 목록
-            target_url_pattern: 타겟 URL 패턴
-            trigger_type: 트리거 타입 (manual, auto, onboarding)
-            is_active: 활성화 여부
+            name: ツアー名
+            description: ツアーの説明
+            steps: ツアーステップ一覧
+            target_url_pattern：ターゲットURLパターン
+            trigger_type：トリガータイプ（manual、auto、onboarding）
+            is_active: 有効かどうか
 
         Returns:
-            생성된 투어 정보
+            生成されたツアー情報
         """
         data = {
             'name': name,
@@ -111,13 +111,13 @@ class ProductFruitsClient:
 
     def get_tour(self, tour_id: str) -> Dict[str, Any]:
         """
-        투어 조회
+        ツアービュー
 
         Args:
-            tour_id: 투어 ID
+            tour_id：ツアーID
 
         Returns:
-            투어 상세 정보
+            ツアー詳細
         """
         return self._request('GET', f'/tours/{tour_id}')
 
@@ -128,15 +128,15 @@ class ProductFruitsClient:
         offset: int = 0
     ) -> List[Dict[str, Any]]:
         """
-        투어 목록 조회
+        ツアーリストを見る
 
         Args:
-            is_active: 활성화 상태 필터
-            limit: 반환할 항목 수
-            offset: 오프셋
+            is_active: アクティブ状態フィルタ
+            limit: 返す項目の数
+            offset: オフセット
 
         Returns:
-            투어 목록
+            ツアー一覧
         """
         params = {'limit': limit, 'offset': offset}
         if is_active is not None:
@@ -154,17 +154,17 @@ class ProductFruitsClient:
         is_active: Optional[bool] = None
     ) -> Dict[str, Any]:
         """
-        투어 업데이트
+        ツアーアップデート
 
         Args:
-            tour_id: 투어 ID
-            name: 새 이름
-            description: 새 설명
-            steps: 새 단계 목록
-            is_active: 활성화 여부
+            tour_id：ツアーID
+            name: 新しい名前
+            description: 新しい説明
+            steps: 新しいステップのリスト
+            is_active: 有効かどうか
 
         Returns:
-            업데이트된 투어 정보
+            更新されたツアー情報
         """
         data = {}
         if name:
@@ -188,18 +188,18 @@ class ProductFruitsClient:
         is_active: bool = False
     ) -> Dict[str, Any]:
         """
-        새 툴팁 생성
+        新しいツールチップの作成
 
         Args:
-            name: 툴팁 이름
-            selector: CSS 선택자
-            content: 툴팁 내용
-            position: 위치 (top, right, bottom, left)
-            trigger_type: 트리거 타입 (hover, click)
-            is_active: 활성화 여부
+            name: ツールチップ名
+            セレクタ：CSSセレクタ
+            content: ツールチップの内容
+            position: 位置 (top, right, bottom, left)
+            trigger_type：トリガータイプ（hover、click）
+            is_active: 有効かどうか
 
         Returns:
-            생성된 툴팁 정보
+            生成されたツールチップ情報
         """
         data = {
             'name': name,
@@ -214,13 +214,13 @@ class ProductFruitsClient:
 
     def get_tooltip(self, tooltip_id: str) -> Dict[str, Any]:
         """
-        툴팁 조회
+        ツールチップの検索
 
         Args:
-            tooltip_id: 툴팁 ID
+            tooltip_id：ツールチップID
 
         Returns:
-            툴팁 상세 정보
+            ツールチップの詳細
         """
         return self._request('GET', f'/tooltips/{tooltip_id}')
 
@@ -231,15 +231,15 @@ class ProductFruitsClient:
         offset: int = 0
     ) -> List[Dict[str, Any]]:
         """
-        툴팁 목록 조회
+        ツールチップリストの照会
 
         Args:
-            is_active: 활성화 상태 필터
-            limit: 반환할 항목 수
-            offset: 오프셋
+            is_active: アクティブ状態フィルタ
+            limit: 返す項目の数
+            offset: オフセット
 
         Returns:
-            툴팁 목록
+            ツールチップリスト
         """
         params = {'limit': limit, 'offset': offset}
         if is_active is not None:
@@ -257,17 +257,17 @@ class ProductFruitsClient:
         is_active: Optional[bool] = None
     ) -> Dict[str, Any]:
         """
-        툴팁 업데이트
+        ツールチップの更新
 
         Args:
-            tooltip_id: 툴팁 ID
-            name: 새 이름
-            selector: 새 CSS 선택자
-            content: 새 내용
-            is_active: 활성화 여부
+            tooltip_id：ツールチップID
+            name: 新しい名前
+            セレクタ：新しいCSSセレクタ
+            content: 新しいコンテンツ
+            is_active: 有効かどうか
 
         Returns:
-            업데이트된 툴팁 정보
+            更新されたツールチップ情報
         """
         data = {}
         if name:
@@ -290,17 +290,17 @@ class ProductFruitsClient:
         is_active: bool = False
     ) -> Dict[str, Any]:
         """
-        새 체크리스트 생성
+        新しいチェックリストの作成
 
         Args:
-            name: 체크리스트 이름
-            description: 체크리스트 설명
-            items: 체크리스트 항목 목록
-            target_url_pattern: 타겟 URL 패턴
-            is_active: 활성화 여부
+            name: チェックリスト名
+            description: チェックリストの説明
+            items: チェックリスト項目リスト
+            target_url_pattern：ターゲットURLパターン
+            is_active: 有効かどうか
 
         Returns:
-            생성된 체크리스트 정보
+            生成されたチェックリスト情報
         """
         data = {
             'name': name,
@@ -314,13 +314,13 @@ class ProductFruitsClient:
 
     def get_checklist(self, checklist_id: str) -> Dict[str, Any]:
         """
-        체크리스트 조회
+        チェックリストの照会
 
         Args:
-            checklist_id: 체크리스트 ID
+            checklist_id: チェックリスト ID
 
         Returns:
-            체크리스트 상세 정보
+            チェックリスト詳細
         """
         return self._request('GET', f'/checklists/{checklist_id}')
 
@@ -330,14 +330,14 @@ class ProductFruitsClient:
         checklist_id: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        사용자 진행상황 조회
+        ユーザーの進捗状況の表示
 
         Args:
-            user_id: 사용자 ID
-            checklist_id: 체크리스트 ID (선택)
+            user_id：ユーザーID
+            checklist_id：チェックリストID（オプション）
 
         Returns:
-            진행상황정보
+            進行状況情報
         """
         params = {'userId': user_id}
         if checklist_id:
@@ -352,15 +352,15 @@ class ProductFruitsClient:
         properties: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        사용자 이벤트 추적
+        ユーザーイベントの追跡
 
         Args:
-            user_id: 사용자 ID
-            event_name: 이벤트 이름
-            properties: 이벤트 속성
+            user_id：ユーザーID
+            event_name：イベント名
+            properties: イベント属性
 
         Returns:
-            이벤트 추적 결과
+            イベント追跡結果
         """
         data = {
             'userId': user_id,
@@ -383,19 +383,19 @@ class ProductFruitsClient:
         is_active: bool = False
     ) -> Dict[str, Any]:
         """
-        새 공지사항 생성
+        新しいお知らせの作成
 
         Args:
-            name: 공지사항 이름
-            content: 공지사항 내용
-            target_url_pattern: 타겟 URL 패턴
-            display_type: 표시 타입 (modal, banner, tooltip)
-            start_date: 시작 날짜 (YYYY-MM-DD)
-            end_date: 종료 날짜 (YYYY-MM-DD)
-            is_active: 활성화 여부
+            name: お知らせ名
+            content: お知らせ内容
+            target_url_pattern：ターゲットURLパターン
+            display_type：表示タイプ（modal、banner、tooltip）
+            start_date：開始日（YYYY-MM-DD）
+            end_date: 終了日 (YYYY-MM-DD)
+            is_active: 有効かどうか
 
         Returns:
-            생성된 공지사항 정보
+            生成されたお知らせ情報
         """
         data = {
             'name': name,
@@ -419,15 +419,15 @@ class ProductFruitsClient:
         offset: int = 0
     ) -> List[Dict[str, Any]]:
         """
-        공지사항 목록 조회
+        お知らせリストの照会
 
         Args:
-            is_active: 활성화 상태 필터
-            limit: 반환할 항목 수
-            offset: 오프셋
+            is_active: アクティブ状態フィルタ
+            limit: 返す項目の数
+            offset: オフセット
 
         Returns:
-            공지사항 목록
+            お知らせ一覧
         """
         params = {'limit': limit, 'offset': offset}
         if is_active is not None:
@@ -443,15 +443,15 @@ class ProductFruitsClient:
         content_type: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        분석 데이터 조회
+        分析データの照会
 
         Args:
-            start_date: 시작 날짜 (YYYY-MM-DD)
-            end_date: 종료 날짜 (YYYY-MM-DD)
-            content_type: 콘텐츠 타입 필터 (tour, tooltip, checklist)
+            start_date：開始日（YYYY-MM-DD）
+            end_date: 終了日 (YYYY-MM-DD)
+            content_type：コンテンツタイプフィルタ（tour、tooltip、checklist）
 
         Returns:
-            분석 데이터
+            分析データ
         """
         params = {
             'startDate': start_date,
@@ -463,5 +463,5 @@ class ProductFruitsClient:
         return self._request('GET', '/analytics', params=params)
 
     def close(self):
-        """세션 종료"""
+        """セッション終了"""
         self.session.close()

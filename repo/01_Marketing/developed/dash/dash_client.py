@@ -13,7 +13,7 @@ import mimetypes
 
 
 class DashError(Exception):
-    """Dash API 에러"""
+    """Dash APIエラー""""
     pass
 
 
@@ -30,11 +30,11 @@ class DashClient:
 
     def __init__(self, api_key: str, base_url: str = "https://api.dashhq.com"):
         """
-        Dash API 클라이언트 초기화
+        Dash API クライアントの初期化
 
         Args:
             api_key: Dash API key or JWT token
-            base_url: API 기본 URL
+            base_url：APIベースURL
         """
         self.api_key = api_key
         self.base_url = base_url
@@ -48,7 +48,7 @@ class DashClient:
         self.min_request_interval = 0.05  # 50ms between requests (20 requests/second)
 
     def _handle_rate_limit(self) -> None:
-        """Rate limiting 처리"""
+        """Rate limiting 処理""""
         current_time = time.time()
         time_since_last_request = current_time - self.last_request_time
         if time_since_last_request < self.min_request_interval:
@@ -64,21 +64,21 @@ class DashClient:
         files: Optional[Dict[str, BinaryIO]] = None
     ) -> Dict[str, Any]:
         """
-        API 요청 실행
+        APIリクエストの実行
 
         Args:
-            method: HTTP 메서드 (GET, POST, PUT, DELETE)
-            endpoint: API 엔드포인트
-            data: 요청 본문 데이터
-            params: 쿼리 파라미터
-            files: 파일 데이터
+            method: HTTP メソッド (GET、POST、PUT、DELETE)
+            endpoint: API エンドポイント
+            data: 要求本文データ
+            params: クエリパラメータ
+            files: ファイルデータ
 
         Returns:
-            API 응답
+            APIレスポンス
 
         Raises:
-            DashError: API 에러 발생 시
-            RateLimitError: Rate limit 초과 시
+            DashError：APIエラーが発生したとき
+            RateLimitError: Rate limit 超過時
         """
         self._handle_rate_limit()
 
@@ -86,7 +86,7 @@ class DashClient:
 
         headers = self.session.headers.copy()
         if files:
-            headers.pop('Content-Type', None)  # multipart/form-data를 위해 제거
+            headers.pop('Content-Type', None) # multipart/form-data のために削除
 
         try:
             response = self.session.request(
@@ -102,7 +102,7 @@ class DashClient:
 
             result = response.json()
 
-            # 에러 처리
+            # エラー処理
             if result.get('error'):
                 if response.status_code == 429:
                     raise RateLimitError(f"Rate limit exceeded: {result.get('error')}")
@@ -127,20 +127,20 @@ class DashClient:
         offset: Optional[int] = None
     ) -> Dict[str, Any]:
         """
-        에셋 검색
+        アセット検索
 
         Args:
-            query: 검색 쿼리 (파일 이름, 메타데이터 등)
-            tags: 태그 필터
-            asset_type: 에셋 타입 필터 (image, video, document, audio, etc.)
-            folder_id: 폴더 ID 필터
-            created_after: 생성일 시작 (ISO 8601 format)
-            created_before: 생성일 종료 (ISO 8601 format)
-            limit: 반환할 최대 결과 수
-            offset: 페이지 오프셋
+            query：検索クエリ（ファイル名、メタデータなど）
+            タグ：タグフィルタ
+            asset_type: アセットタイプフィルタ (image, video, document, audio, etc.)
+            folder_id：フォルダIDフィルタ
+            created_after: 作成日の開始 (ISO 8601 format)
+            created_before: 作成日の終了 (ISO 8601 format)
+            limit: 返す最大結果数
+            offset: ページオフセット
 
         Returns:
-            에셋 목록
+            アセットリスト
             {
                 "assets": [
                     {
@@ -191,13 +191,13 @@ class DashClient:
 
     def get_asset(self, asset_id: str) -> Dict[str, Any]:
         """
-        에셋 상세 정보 조회
+        アセット詳細情報の照会
 
         Args:
-            asset_id: 에셋 ID
+            asset_id：アセットID
 
         Returns:
-            에셋 상세 정보
+            アセットの詳細
             {
                 "id": str,
                 "name": str,
@@ -222,15 +222,15 @@ class DashClient:
         version: Optional[str] = None
     ) -> Union[bytes, str]:
         """
-        에셋 다운로드
+        アセットのダウンロード
 
         Args:
-            asset_id: 에셋 ID
-            output_path: 저장 경로 (None이면 바이너리 반환)
-            version: 다운로드할 버전 (기본값: 최신)
+            asset_id：アセットID
+            output_path：保存パス（Noneの場合はバイナリを返す）
+            version：ダウンロードするバージョン（デフォルト：最新）
 
         Returns:
-            바이너리 데이터 또는 저장된 파일 경로
+            バイナリデータまたは保存されたファイルパス
         """
         self._handle_rate_limit()
 
@@ -266,12 +266,12 @@ class DashClient:
         expires_in: Optional[int] = 3600
     ) -> str:
         """
-        에셋 파일 URL 조회 (signed URL)
+        アセットファイルのURLルックアップ(signed URL)
 
         Args:
-            asset_id: 에셋 ID
-            version: 버전 (기본값: 최신)
-            expires_in: URL 만료 시간 (초, 기본값: 1시간)
+            asset_id：アセットID
+            version：バージョン（デフォルト：最新）
+            expires_in：URLの有効期限（秒、デフォルト：1時間）
 
         Returns:
             Signed URL
@@ -287,13 +287,13 @@ class DashClient:
 
     def delete_asset(self, asset_id: str) -> Dict[str, Any]:
         """
-        에셋 삭제
+        アセットの削除
 
         Args:
-            asset_id: 에셋 ID
+            asset_id：アセットID
 
         Returns:
-            삭제 결과
+            削除結果
             {
                 "success": bool,
                 "message": str
@@ -310,17 +310,17 @@ class DashClient:
         metadata: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        에셋 업로드
+        アセットをアップロード
 
         Args:
-            file_path: 업로드할 파일 경로
-            name: 에셋 이름 (기본값: 파일명)
-            folder_id: 업로드할 폴더 ID
-            tags: 태그 목록
-            metadata: 메타데이터 사전
+            file_path: アップロードするファイルパス
+            name：アセット名（デフォルト：ファイル名）
+            folder_id：アップロードするフォルダID
+            タグ：タグリスト
+            metadata: メタデータ辞書
 
         Returns:
-            업로드된 에셋 정보
+            アップロードされたアセット情報
         """
         if not os.path.exists(file_path):
             raise DashError(f"File not found: {file_path}")
@@ -354,16 +354,16 @@ class DashClient:
         metadata: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        에셋 업데이트
+        アセットの更新
 
         Args:
-            asset_id: 에셋 ID
-            name: 새 이름
-            tags: 태그 목록 (전체 교체)
-            metadata: 메타데이터 (병합)
+            asset_id：アセットID
+            name: 新しい名前
+            タグ：タグリスト（完全交換）
+            metadata：メタデータ（マージ）
 
         Returns:
-            업데이트된 에셋 정보
+            更新されたアセット情報
         """
         data = {}
 
@@ -380,28 +380,28 @@ class DashClient:
 
 
 if __name__ == "__main__":
-    # 테스트 코드
+    #テストコード
     import os
 
     api_key = os.environ.get('DASH_API_KEY', 'your-api-key')
     client = DashClient(api_key)
 
     try:
-        # 에셋 검색 테스트
+        #アセット検索テスト
         search_result = client.search_assets(query='logo', limit=5)
         print("Search results:", search_result)
 
-        # 특정 에셋 조회 테스트
+        #特定のアセットルックアップテスト
         if search_result.get('assets'):
             asset_id = search_result['assets'][0]['id']
             asset = client.get_asset(asset_id)
             print("Asset details:", asset)
 
-            # URL 조회 테스트
+            # URL ルックアップテスト
             file_url = client.get_asset_file_url(asset_id)
             print("Asset URL:", file_url)
 
-            # 다운로드 테스트
+            #ダウンロードテスト
             downloaded_path = client.download_asset(asset_id, '/tmp/test_asset.png')
             print("Downloaded to:", downloaded_path)
 

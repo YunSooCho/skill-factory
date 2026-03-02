@@ -1,24 +1,24 @@
 # Dash API Client
 
-Dash DAM (Digital Asset Management)용 Python 클라이언트
+Dash DAM (Digital Asset Management) 用 Python クライアント
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API Key 획득
+## API Keyを取得
 
-1. [Dash 계정 생성](https://www.dashhq.com/)
-2. Workspace 설정에서 API key 생성
-3. 로그인 후 Settings > API & Integrations 접근
-4. Generate API Key 버튼 클릭
-5. API 키 복사
+1. [Dashアカウントの作成]（https://www.dashhq.com/)
+2. Workspace設定でAPIキーを生成する
+3. ログイン後の Settings > API & Integrations アクセス
+4. Generate API Key ボタンをクリック
+5. API キーのコピー
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from dash_client import DashClient
@@ -26,7 +26,7 @@ from dash_client import DashClient
 client = DashClient(api_key='your-api-key')
 ```
 
-### 에셋 검색
+### アセット検索
 
 ```python
 result = client.search_assets(
@@ -40,7 +40,7 @@ for asset in result['assets']:
     print(f"{asset['name']}: {asset['url']}")
 ```
 
-### 에셋 업로드
+### アセットをアップロード
 
 ```python
 result = client.upload_asset(
@@ -55,7 +55,7 @@ asset_id = result['id']
 print(f"Uploaded asset with ID: {asset_id}")
 ```
 
-### 에셋 상세 조회
+### アセット詳細検索
 
 ```python
 asset = client.get_asset(asset_id='asset-123')
@@ -64,7 +64,7 @@ print(f"Type: {asset['type']}")
 print(f"Size: {asset['size']} bytes")
 ```
 
-### 에셋 다운로드
+### アセットのダウンロード
 
 ```python
 # 파일 경로로 저장
@@ -78,7 +78,7 @@ print(f"Saved to: {saved_path}")
 binary_data = client.download_asset(asset_id='asset-123')
 ```
 
-### Signed URL 획득
+### Signed URLを取得
 
 ```python
 signed_url = client.get_asset_file_url(
@@ -88,7 +88,7 @@ signed_url = client.get_asset_file_url(
 print(f"Signed URL: {signed_url}")
 ```
 
-### 에셋 업데이트
+### アセットの更新
 
 ```python
 client.update_asset(
@@ -99,22 +99,22 @@ client.update_asset(
 )
 ```
 
-### 에셋 삭제
+### アセットの削除
 
 ```python
 result = client.delete_asset(asset_id='asset-123')
 print(f"Deleted: {result['success']}")
 ```
 
-## 주요 기능
+##主な機能
 
-1. **에셋 검색**: 이름, 태그, 타입, 날짜로 검색
-2. **에셋 업로드**: 로컬 파일 서버로 업로드
-3. **에셋 다운로드**: 서버에서 로컬로 다운로드
-4. **Signed URL**: 안전하게 공유 가능한 URL 생성
-5. **메타데이터 관리**: 커스텀 속성 저장
+1. **アセット検索**: 名前、タグ、タイプ、日付で検索
+2. **アセットアップロード**: ローカルファイルサーバーにアップロード
+3. **アセットのダウンロード**: サーバーからローカルにダウンロード
+4. **Signed URL**: 安全に共有可能な URL を作成
+5. **メタデータ管理**: カスタム属性の保存
 
-## 에러 처리
+## エラー処理
 
 ```python
 from dash_client import DashError, RateLimitError
@@ -127,12 +127,12 @@ except DashError as e:
     print(f"API error: {e}")
 ```
 
-## API 제한
+## APIの制限
 
-- 기본 제한: 초당 20 요청
-- 무료 요금제: 10GB 저장소
-- 유료 요금제: 무제한 업로드
+- 基本制限：毎秒20リクエスト
+- 無料プラン：10GBストレージ
+- 有料プラン：無制限のアップロード
 
-## 지원
+## サポート
 
-자세한 API 문서: [Dash Documentation](https://www.dashhq.com/developers/)
+詳細なAPIドキュメント：[Dash Documentation]（https://www.dashhq.com/developers/)

@@ -1,23 +1,23 @@
-# Podio 웹 데이터베이스 SDK
+#Podio WebデータベースSDK
 
-Podio는 유연한 웹 데이터베이스 및 협업 플랫폼에 대한 Python SDK입니다.
+Podioは、柔軟なWebデータベースとコラボレーションプラットフォーム用のPython SDKです。
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [Podio 개발자 포털](https://developers.podio.com/)에 접속합니다.
-2. "API Keys" 섹션에서 새 애플리케이션을 생성합니다.
-3. Client ID와 Client Secret을 발급받습니다.
-4. OAuth 인증을 위해 사용자 이름과 비밀번호를 준비합니다.
+1. [Podio開発者ポータル]（https://developers.podio.com/)에にアクセスします。
+2. 「API Keys」セクションで新しいアプリケーションを作成します。
+3. Client IDとClient Secretを発行します。
+4. OAuth認証用にユーザー名とパスワードを準備します。
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from podio import PodioClient
@@ -30,7 +30,7 @@ client = PodioClient(
 )
 ```
 
-### 영역 및 앱 관리
+###ゾーンとアプリの管理
 
 ```python
 # 모든 영역(워크스페이스) 목록
@@ -66,7 +66,7 @@ items = client.get_app_items(
 )
 ```
 
-### 아이템 관리
+### アイテム管理
 
 ```python
 # 아이템 필터링
@@ -117,7 +117,7 @@ cloned_item = client.clone_item(
 client.delete_item(item_id=45678)
 ```
 
-### 댓글 관리
+### コメントの管理
 
 ```python
 # 아이템 댓글 목록
@@ -145,7 +145,7 @@ client.update_comment(
 client.delete_comment(comment_id=78901)
 ```
 
-### 작업(Task) 관리
+### タスク(Task)の管理
 
 ```python
 # 작업 목록 조회
@@ -198,7 +198,7 @@ label = client.create_task_label(
 )
 ```
 
-### 조직 및 사용자 관리
+###組織とユーザーの管理
 
 ```python
 # 모든 조직 목록
@@ -217,7 +217,7 @@ current_user = client.get_current_user()
 print(f"현재 사용자: {current_user['profile']['name']}")
 ```
 
-### 관계 관리
+###関係管理
 
 ```python
 # 관련 아이템 조회
@@ -228,7 +228,7 @@ related_items = client.get_relationships(
 )
 ```
 
-### 활동 스트림
+###アクティビティストリーム
 
 ```python
 # 객체 활동 스트림 조회
@@ -243,22 +243,22 @@ for activity in activities:
     print(f"작업: {activity['text']}")
 ```
 
-## 주요 기능
+##主な機能
 
-- ✅ 영역 및 앱 관리
-- ✅ 아이템 CRUD 작업 및 필터링
-- ✅ 댓글 관리
-- ✅ 작업(Task) 생성, 할당, 완료
-- ✅ 레이블管理
-- ✅ 사용자 및 조직 관리
-- ✅ 활동 스트림 추적
-- ✅ 관계 및 참조 관리
-- ✅ 파일 첨부 지원
+- ✅ゾーンとアプリの管理
+- ✅アイテムCRUDの操作とフィルタリング
+- ✅コメント管理
+- ✅タスク（Task）の作成、割り当て、完了
+- ✅ ラベル管理
+- ✅ユーザーと組織の管理
+- ✅アクティビティストリーム追跡
+- ✅関係と参照管理
+- ✅ファイル添付サポート
 
-## 인증
+##認証
 
-Podio는 OAuth 2.0 인증을 사용합니다. 클라이언트는 자동으로 액세스 토큰을 관리하고 만료 시 갱신합니다.
+Podio は OAuth 2.0 認証を使用します。クライアントは自動的にアクセストークンを管理し、有効期限が切れると更新します。
 
-## 라이선스
+##ライセンス
 
 MIT License

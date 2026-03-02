@@ -1,33 +1,33 @@
-# Microsoft Teams API 클라이언트
+# Microsoft Teams API クライアント
 
-Microsoft Teams를 위한 Python API 클라이언트입니다.
+Microsoft Teams用のPython APIクライアント。
 
-## 개요
+## 概要
 
-이 클라이언트는 Microsoft Graph API를 사용하여 Teams의 팀, 채널, 채팅, 사용자, 캘린더, 파일 등 다양한 작업을 지원합니다.
+このクライアントは、Microsoft Graph APIを使用してTeamsのチーム、チャンネル、チャット、ユーザー、カレンダー、ファイルなど、さまざまなタスクをサポートします。
 
-## 설치
+## インストール
 
-의존성 패키지:
+依存パッケージ：
 
 ```bash
 pip install requests
 ```
 
-또는:
+または：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## 액세스 토큰 발급
+## アクセストークン発行
 
-1. Azure Portal 접속: https://portal.azure.com
-2. "Azure Active Directory" > "앱 등록" 선택
-3. "새 등록" 클릭
-4. 앱 이름 작성 및 리디렉션 URI 설정
-5. 등록 후 "API 권한" > "추가" 클릭
-6. "Microsoft Graph" > "위임된 권한"에서 필요한 권한 추가:
+1. Azureポータルへのアクセス：https://portal.azure.com
+2. 「Azure Active Directory」>「アプリ登録」を選択
+3. 「新規登録」をクリック
+4. アプリ名の作成とリダイレクト URI の設定
+5. 登録後、「API権限」 > 「追加」をクリック
+6. 「Microsoft Graph」>「委任された権限」で必要な権限を追加します。
    - TeamMember.Read.All
    - TeamMember.ReadWrite.All
    - Channel.Read.All
@@ -41,15 +41,15 @@ pip install -r requirements.txt
    - Calendars.ReadWrite
    - Files.Read
    - Files.Read.All
-7. "권한 부여" 클릭
-8. 토큰 발급 (client credentials flow 또는 auth code flow)
+7. 「権限付与」をクリック
+8. トークン発行 (client credentials flow または auth code flow)
 
-API 문서:
+APIドキュメント：
 https://docs.microsoft.com/en-us/graph/api/team-overview
 
-## 사용법
+##使用法
 
-### 초기화
+### 初期化
 
 ```python
 from teams import TeamsClient
@@ -59,7 +59,7 @@ client = TeamsClient(
 )
 ```
 
-### 예시 코드
+### サンプルコード
 
 ```python
 # 팀 목록
@@ -158,14 +158,14 @@ with open("downloaded_file.pdf", "wb") as f:
     f.write(file_content)
 ```
 
-## API 액션
+## APIアクション
 
-### 팀 작업
+###チームワーク
 - `list_teams` - チームの一覧を取得
 - `add_team_member` - チームにメンバーを追加
 - `get_team_members` - チームメンバーの一覧を取得
 
-### 채널 작업
+###チャンネル操作
 - `list_channels` - チャネルの一覧を取得
 - `create_channel` - チャネルを作成
 - `send_channel_message` - チャネルにメッセージを送る
@@ -174,22 +174,22 @@ with open("downloaded_file.pdf", "wb") as f:
 - `reply_to_channel_message` - チャネルに投稿されたメッセージに返信する
 - `get_message_replies` - 特定のメッセージの返信一覧を取得
 
-### 채팅 작업
+###チャットタスク
 - `list_chats` - チャットの一覧を取得
 - `send_chat_message` - チャットにメッセージを送る
 
-### 사용자 작업
+###ユーザー操作
 - `get_user_info` - ユーザー情報を取得
 - `get_user_presence` - ユーザーのプレゼンスを取得する
 
-### 캘린더 작업
+###カレンダーの操作
 - `create_calendar_event` - カレンダーに予定を作成する
 
-### 파일 작업
+###ファイル操作
 - `get_folder_info` - フォルダ情報を取得する
 - `download_file` - ファイルをダウンロード
 
-## 에러 처리
+## エラー処理
 
 ```python
 try:
@@ -200,14 +200,14 @@ except Exception as e:
 
 ## Rate Limiting
 
-Microsoft Graph API는 레이트 리밋이 적용됩니다. 자세한 내용은:
+Microsoft Graph APIにはレートリミットが適用されます。詳細は：
 https://docs.microsoft.com/en-us/graph/throttling
 
-## 참고 문서
+## 参考資料
 
 - Microsoft Graph Teams API: https://docs.microsoft.com/en-us/graph/api/resources/teams-api-overview
 - Microsoft Graph v1.0: https://docs.microsoft.com/en-us/graph/api/overview
 
-## 라이선스
+##ライセンス
 
 MIT License

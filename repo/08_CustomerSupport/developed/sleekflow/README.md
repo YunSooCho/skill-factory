@@ -1,23 +1,23 @@
 # Sleekflow SDK
 
-Sleekflow는 채팅 및 고객지원 워크플로우 관리를 위한 Python SDK입니다.
+Sleekflowはチャットとカスタマーサポートのワークフロー管理のためのPython SDKです。
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급 방법
+## API キーの発行方法
 
-1. [Sleekflow 웹사이트](https://sleekflow.io)에 접속하여 계정을 생성합니다.
-2. 대시보드에서 Settings > API Keys 메뉴로 이동합니다.
-3. 'Create API Key' 버튼을 클릭하여 새 API 키를 생성합니다.
-4. 생성된 API 키와 Workspace ID를 안전한 곳에 저장합니다.
+1. [Sleekflowウェブサイト]（https://sleekflow.io)에にアクセスしてアカウントを作成します。
+2. ダッシュボードで、Settings > API Keys メニューに移動します。
+3. [Create API Key]ボタンをクリックして新しいAPIキーを生成します。
+4.生成されたAPIキーとWorkspace IDを安全な場所に保存します。
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from sleekflow import SleekflowClient
@@ -29,7 +29,7 @@ client = SleekflowClient(
 )
 ```
 
-### 채팅 세션 생성
+###チャットセッションの作成
 
 ```python
 session = client.create_chat_session(
@@ -44,7 +44,7 @@ session = client.create_chat_session(
 print(f"세션 ID: {session['id']}")
 ```
 
-### 메시지 전송
+### メッセージ送信
 
 ```python
 message = client.send_message(
@@ -57,7 +57,7 @@ message = client.send_message(
 print(f"메시지 ID: {message['id']}")
 ```
 
-### 메시지 내역 조회
+### メッセージ履歴の照会
 
 ```python
 messages = client.get_messages(
@@ -69,7 +69,7 @@ for msg in messages:
     print(f"{msg['senderType']}: {msg['text']}")
 ```
 
-### 워크플로우 생성
+### ワークフローの作成
 
 ```python
 workflow = client.create_workflow(
@@ -99,7 +99,7 @@ workflow = client.create_workflow(
 print(f"워크플로우 ID: {workflow['id']}")
 ```
 
-### 워크플로우 트리거
+### ワークフロートリガー
 
 ```python
 result = client.trigger_workflow(
@@ -114,7 +114,7 @@ result = client.trigger_workflow(
 print(f"워크플로우 실행: {result['success']}")
 ```
 
-### 템플릿 생성
+###テンプレートの作成
 
 ```python
 template = client.create_template(
@@ -128,7 +128,7 @@ template = client.create_template(
 print(f"템플릿 ID: {template['id']}")
 ```
 
-### AI 챗봇 생성
+### AIチャットボットの作成
 
 ```python
 bot = client.create_bot(
@@ -142,7 +142,7 @@ bot = client.create_bot(
 print(f"봇 ID: {bot['id']}")
 ```
 
-### 봇 목록 조회
+### ボットリストの照会
 
 ```python
 bots = client.list_bots()
@@ -151,7 +151,7 @@ for bot in bots:
     print(f"{bot['name']} ({bot['aiModel']}) - {bot['status']}")
 ```
 
-### 채팅 세션 목록 조회
+###チャットセッションリストの検索
 
 ```python
 sessions = client.list_chat_sessions(
@@ -164,7 +164,7 @@ for session in sessions:
     print(f"{session['id']}: {session['channel']} - {session['status']}")
 ```
 
-### 분석 데이터 조회
+### 分析データの照会
 
 ```python
 analytics = client.get_analytics(
@@ -178,7 +178,7 @@ print(f"총 메시지: {analytics['totalMessages']}")
 print(f"평균 응답 시간: {analytics['avgResponseTime']}초")
 ```
 
-### 고객 이벤트 추적
+### 顧客イベントの追跡
 
 ```python
 client.track_customer_event(
@@ -192,25 +192,25 @@ client.track_customer_event(
 )
 ```
 
-## 기능
+## 機能
 
-- ✅ 채팅 세션 관리
-- ✅ 메시지 전송 및 조회
-- ✅ 워크플로우 자동화
-- ✅ 메시지 템플릿
-- ✅ AI 챗봇 통합
-- ✅ 고객 이벤트 추적
-- ✅ 분석 및 리포트
-- ✅ 멀티채널 지원
+- ✅チャットセッション管理
+- ✅メッセージの送信と照会
+- ✅ワークフロー自動化
+- ✅メッセージテンプレート
+- ✅ AIチャットボット統合
+- ✅顧客イベント追跡
+- ✅分析とレポート
+- ✅マルチチャンネルサポート
 
-## 지원 채널
+## サポートチャンネル
 
-- 웹사이트 채팅
+- ウェブサイトチャット
 - WhatsApp
 - Facebook Messenger
 - Telegram
 - Line
 
-## 라이선스
+##ライセンス
 
 MIT License

@@ -1,32 +1,32 @@
-# ZeroCodeKit API 클라이언트
+#ZeroCodeKit APIクライアント
 
-ZeroCodeKit를 위한 Python API 클라이언트입니다. 다양한 유틸리티 기능을 제공합니다.
+ZeroCodeKit用のPython APIクライアント。さまざまなユーティリティ機能を提供します。
 
-## 개요
+## 概要
 
-ZeroCodeKit은 파일 변환, 코드 생성, 데이터 처리 등 다양한 유틸리티 기능을 제공하는 서비스입니다.
+ZeroCodeKitは、ファイル変換、コード生成、データ処理など、さまざまなユーティリティ機能を提供するサービスです。
 
-## 설치
+## インストール
 
 ```bash
 pip install requests
 ```
 
-또는:
+または：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급
+## API キー発行
 
-1. [ZeroCodeKit](https://zerocodekit.com/)에서 계정 생성
-2. API 키 발급
-3. API 키를 안전하게 저장
+1. [ZeroCodeKit]（https://zerocodekit.com/)에서アカウントの作成
+2. API キー発行
+3. API キーを安全に保存
 
-## 사용법
+##使用法
 
-### 초기화
+### 初期化
 
 ```python
 from zerocodekit import ZeroCodeKitClient, ZeroCodeKitError
@@ -37,13 +37,13 @@ client = ZeroCodeKitClient(
 )
 ```
 
-### 1. DOCX를 PDF로 변환
+### 1. DOCXをPDFに変換
 
 ```python
 result = client.convert_docx_to_pdf("document.docx")
 ```
 
-### 2. 랜덤 문자열 생성
+### 2. ランダム文字列の生成
 
 ```python
 result = client.generate_random_string(
@@ -53,25 +53,25 @@ result = client.generate_random_string(
 )
 ```
 
-### 3. 무료 이메일 확인
+### 3. 無料メールを確認
 
 ```python
 result = client.check_free_email("user@gmail.com")
 ```
 
-### 4. PDF 분할
+### 4. PDF分割
 
 ```python
 result = client.split_pdf("file.pdf", pages=[1, 2, 3])
 ```
 
-### 5. 바코드 생성
+### 5. バーコードの生成
 
 ```python
 result = client.generate_barcode(data="123456", barcode_type="QR")
 ```
 
-### 6. 시간대 변환
+### 6. タイムゾーン変換
 
 ```python
 result = client.convert_timezone(
@@ -81,7 +81,7 @@ result = client.convert_timezone(
 )
 ```
 
-### 7. 이미지 생성
+### 7. 画像の生成
 
 ```python
 result = client.generate_image(
@@ -90,13 +90,13 @@ result = client.generate_image(
 )
 ```
 
-### 8. PDF를 Base64로 변환
+### 8. PDFをBase64に変換
 
 ```python
 result = client.pdf_to_base64("document.pdf")
 ```
 
-### 9. HTML/URL을 PDF로 변환
+### 9. HTML/URLをPDFに変換
 
 ```python
 result = client.html_to_pdf(
@@ -105,19 +105,19 @@ result = client.html_to_pdf(
 )
 ```
 
-### 10. 이름 분할
+### 10. 名前の分割
 
 ```python
 result = client.split_name("John Doe")
 ```
 
-### 11. 숫자 생성
+### 11. 数値の生成
 
 ```python
 result = client.generate_number(min_val=1, max_val=1000)
 ```
 
-### 12. 임시 스토리지 파일 업로드
+### 12. 一時ストレージファイルのアップロード
 
 ```python
 result = client.upload_temp_file(
@@ -127,55 +127,55 @@ result = client.upload_temp_file(
 )
 ```
 
-### 13. 텍스트 해시화
+### 13. テキストハッシュ化
 
 ```python
 result = client.hash_text(text="secret", algorithm="sha256")
 ```
 
-### 14. 로고 URL 가져오기
+### 14. ロゴURLの取得
 
 ```python
 result = client.get_logo_url("example.com")
 ```
 
-### 15. PDF를 이미지로 변환
+### 15. PDFを画像に変換
 
 ```python
 result = client.pdf_to_image("file.pdf", page=1)
 ```
 
-### 16. Python 코드 생성
+### 16. Pythonコードの生成
 
 ```python
 result = client.generate_python_code(prompt="Create a function to sort a list")
 ```
 
-### 17. IP 주소를 지리 정보로 변환
+### 17. IPアドレスを地理情報に変換
 
 ```python
 result = client.ip_to_geolocation(ip_address="8.8.8.8")
 ```
 
-### 18. JavaScript 코드 생성
+### 18. JavaScriptコードの生成
 
 ```python
 result = client.generate_javascript_code(prompt="Create a function to validate email")
 ```
 
-### 19. QR 코드 생성
+### 19. QRコードの生成
 
 ```python
 result = client.generate_qrcode(data="https://example.com", size=300)
 ```
 
-### 20. 썸네일 가져오기
+### 20. サムネイルのインポート
 
 ```python
 result = client.get_thumbnail(url="https://example.com/image.jpg")
 ```
 
-### 21. HTML/URL을 이미지로 변환
+### 21. HTML/URLを画像に変換
 
 ```python
 result = client.html_to_image(
@@ -184,7 +184,7 @@ result = client.html_to_image(
 )
 ```
 
-## 에러 처리
+## エラー処理
 
 ```python
 try:
@@ -197,11 +197,11 @@ except ZeroCodeKitError as e:
     print(f"요청 실패: {str(e)}")
 ```
 
-## 라이선스
+##ライセンス
 
 MIT License
 
-## 지원
+## サポート
 
-- [ZeroCodeKit 공식 사이트](https://zerocodekit.com/)
-- [ZeroCodeKit 문서](https://docs.zerocodekit.com/)
+- [ZeroCodeKit公式サイト]（https://zerocodekit.com/)
+- [ZeroCodeKitドキュメント]（https://docs.zerocodekit.com/)

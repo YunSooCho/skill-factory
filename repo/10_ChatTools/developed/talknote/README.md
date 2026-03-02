@@ -1,34 +1,34 @@
-# Talknote API 클라이언트
+#Talknote APIクライアント
 
-Talknote를 위한 Python API 클라이언트입니다.
+Talknote用のPython APIクライアント。
 
-## 개요
+## 概要
 
-이 클라이언트는 Talknote API에 접근하여 스레드 및 노트에 메시지를 게시하는 기능을 제공합니다.
+このクライアントは、Talknote API にアクセスしてスレッドとメモにメッセージを投稿する機能を提供します。
 
-## 설치
+## インストール
 
-의존성 패키지:
+依存パッケージ：
 
 ```bash
 pip install requests
 ```
 
-또는:
+または：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API 키 발급
+## API キー発行
 
-1. Talknote 개발자 포털 접속
-2. 앱 생성 및 API 키 발급
-3. 발급된 API 키 저장
+1. Talknote開発者ポータルへのアクセス
+2. アプリの生成とAPIキーの発行
+3. 発行された API キーの保存
 
-## 사용법
+##使用法
 
-### 초기화
+### 初期化
 
 ```python
 from talknote import TalknoteClient
@@ -38,7 +38,7 @@ client = TalknoteClient(
 )
 ```
 
-### 예시 코드
+### サンプルコード
 
 ```python
 # 스레드에 메시지 게시
@@ -70,24 +70,24 @@ result = client.post_message_to_note(
 )
 ```
 
-## API 액션
+## APIアクション
 
 - `post_message_to_thread` - スレッドにメッセージを投稿
 - `post_message_to_note` - ノートへメッセージを投稿
 
-## 액션 파라미터
+## アクションパラメータ
 
 ### post_message_to_thread
-- `thread_id` (string, required) - 스레드 ID
-- `message` (string, required) - 게시할 메시지 내용
-- `mention_user_ids` (array of strings, optional) - 멘션할 사용자 ID 리스트
+- `thread_id`(string, required) - スレッドID
+- `message` (string, required) - 投稿するメッセージの内容
+- `mention_user_ids`（array of strings、optional） - メンションするユーザーIDのリスト
 
 ### post_message_to_note
-- `note_id` (string, required) - 노트 ID
-- `message` (string, required) - 게시할 메시지 내용
-- `mention_user_ids` (array of strings, optional) - 멘션할 사용자 ID 리스트
+- `note_id`(string, required) - ノートID
+- `message` (string, required) - 投稿するメッセージの内容
+- `mention_user_ids`（array of strings、optional） - メンションするユーザーIDのリスト
 
-## 에러 처리
+## エラー処理
 
 ```python
 try:
@@ -100,8 +100,8 @@ except Exception as e:
 
 ## Rate Limiting
 
-API 요청에 대한 레이트 리밋이 적용될 수 있습니다.
+API リクエストのレートリミットが適用される場合があります。
 
-## 라이선스
+##ライセンス
 
 MIT License

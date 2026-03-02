@@ -1,5 +1,5 @@
 """
-Refiner - AI 기반 콘텐츠 최적화 서비스
+Refiner - AIベースのコンテンツ最適化サービス
 """
 
 from .client import RefinerClient

@@ -1,23 +1,23 @@
 # Delighted API Client
 
-Delighted용 Python 클라이언트 - 고객 만족도 설문 및 피드백 관리
+Delighted用Pyt​​honクライアント - 顧客満足度調査とフィードバック管理
 
-## 설치
+## インストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## API Key 획득
+## API Keyを取得
 
-1. [Delighted 계정 생성](https://delighted.com/)
-2. 로그인 후 Settings > API Keys 접근
-3. 각 Project별 API 키 생성
-5. API 키 복사
+1. [Delighted アカウントの作成](https://delighted.com/)
+2. ログイン後の Settings > API Keys アクセス
+3. プロジェクトごとにAPIキーを生成する
+5. API キーのコピー
 
-## 사용법
+##使用法
 
-### 클라이언트 초기화
+### クライアントの初期化
 
 ```python
 from delighted_client import create_delighted_client
@@ -25,7 +25,7 @@ from delighted_client import create_delighted_client
 client = create_delighted_client(api_key='your-api-key')
 ```
 
-### NPS 메트릭 조회
+### NPSメトリック照会
 
 ```python
 metrics = client.get_metrics(
@@ -38,7 +38,7 @@ print(f"NPS Score: {metrics['nps']}")
 print(f"Total Responses: {metrics['total_responses']}")
 ```
 
-### 사람 생성
+###人の作成
 
 ```python
 person = client.create_person(
@@ -52,7 +52,7 @@ person = client.create_person(
 print(f"Created person with ID: {person.get('id')}")
 ```
 
-### 사람 업데이트
+### 人の更新
 
 ```python
 client.update_person(
@@ -64,7 +64,7 @@ client.update_person(
 )
 ```
 
-### 사람 검색
+###人検索
 
 ```python
 # 이메일로 검색
@@ -73,7 +73,7 @@ for person in people:
     print(f"{person['email']}: {person['name']}")
 ```
 
-### 설문응답 검색
+### アンケート回答の検索
 
 ```python
 responses = client.search_survey_responses(
@@ -87,7 +87,7 @@ for response in responses:
     print(f"Score: {response['score']}, Comment: {response.get('comment', 'N/A')}")
 ```
 
-### 사람 구독 취소
+### 人の購読をキャンセル
 
 ```python
 client.unsubscribe_people(email='customer@example.com')
@@ -95,7 +95,7 @@ client.unsubscribe_people(email='customer@example.com')
 client.unsubscribe_people(person_id='person-123')
 ```
 
-### 응답 추가 (외부 소스에서)
+### 応答の追加(外部ソースから)
 
 ```python
 client.add_survey_response(
@@ -106,9 +106,9 @@ client.add_survey_response(
 )
 ```
 
-## 웹훅 핸들러
+## Webhookハンドラ
 
-Delighted에서 새 응답이나 구독 취소 이벤트를 수신하려면 웹훅 서버를 실행하세요:
+Delightedで新しい応答または購読解除イベントを受信するには、Webフックサーバーを実行します。
 
 ```python
 from delighted_client import DelightedWebhookHandler
@@ -136,18 +136,18 @@ while True:
     time.sleep(1)
 ```
 
-Delighted 대시보드에서 웹훅 URL을 설정하세요:
+DelightedダッシュボードでWebフックURLを設定します。
 `https://your-server.com/webhook`
 
-## 주요 기능
+##主な機能
 
-1. **NPS 메트릭**: 넷 프로모터 스코어 계산
-2. **사람 관리**: 생성, 업데이트, 검색
-3. **설문 응답**: 응답 조회 및 필터링
-4. **구독 관리**: 구독 취소 처리
-5. **웹훅**: 실시간 이벤트 수신
+1. **NPSメトリック**：ネットプロモータースコアの計算
+2. **人の管理**: 作成、更新、検索
+3. **アンケートの回答**: 回答の照会とフィルタリング
+4. **サブスクリプション管理**：サブスクリプションキャンセル処理
+5. **ウェブフック**: リアルタイムイベント受信
 
-## 에러 처리
+## エラー処理
 
 ```python
 from delighted_client import DelightedError, RateLimitError
@@ -160,12 +160,12 @@ except DelightedError as e:
     print(f"API error: {e}")
 ```
 
-## API 제한
+## APIの制限
 
-- 기본 제한: 초당 10 요청
-- Rate limit 초과 시 429 응답
-- 무료 요금제: 월 250 설문응답
+- 基本制限：1秒あたり10リクエスト
+- Rate limitを超えると429応答
+- 無料プラン：月250アンケート回答
 
-## 지원
+## サポート
 
-자세한 API 문서: [Delighted API Documentation](https://delighted.com/docs/api)
+詳細なAPIドキュメント：[Delighted API Documentation]（https://delighted.com/docs/api)

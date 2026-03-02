@@ -11,7 +11,7 @@ import time
 
 
 class CuttlyError(Exception):
-    """Cuttly API 에러"""
+    """Cuttly API エラー""""
     pass
 
 
@@ -28,11 +28,11 @@ class CuttlyClient:
 
     def __init__(self, api_key: str, base_url: str = "https://cutt.ly/api/api.php"):
         """
-        Cuttly API 클라이언트 초기화
+        Cuttly APIクライアントの初期化
 
         Args:
             api_key: Cuttly API key
-            base_url: API 기본 URL
+            base_url：APIベースURL
         """
         self.api_key = api_key
         self.base_url = base_url
@@ -41,7 +41,7 @@ class CuttlyClient:
         self.min_request_interval = 0.1  # 100ms between requests (10 requests/second)
 
     def _handle_rate_limit(self) -> None:
-        """Rate limiting 처리"""
+        """Rate limiting 処理""""
         current_time = time.time()
         time_since_last_request = current_time - self.last_request_time
         if time_since_last_request < self.min_request_interval:
@@ -50,17 +50,17 @@ class CuttlyClient:
 
     def _make_request(self, params: Dict[str, Any]) -> Dict[str, Any]:
         """
-        API 요청 실행
+        APIリクエストの実行
 
         Args:
-            params: 요청 파라미터
+            params: リクエストパラメータ
 
         Returns:
-            API 응답
+            APIレスポンス
 
         Raises:
-            CuttlyError: API 에러 발생 시
-            RateLimitError: Rate limit 초과 시
+            CuttlyError：APIエラーが発生したとき
+            RateLimitError: Rate limit 超過時
         """
         self._handle_rate_limit()
 
@@ -71,7 +71,7 @@ class CuttlyClient:
             response.raise_for_status()
             data = response.json()
 
-            # 에러 처리
+            # エラー処理
             if data.get('url', {}).get('status') == '4':
                 raise RateLimitError(f"Rate limit exceeded: {data.get('url', {}).get('title')}")
             elif data.get('url', {}).get('status') == '2':
@@ -94,16 +94,16 @@ class CuttlyClient:
         public: Optional[bool] = None
     ) -> Dict[str, Any]:
         """
-        URL 단축
+        URLの短縮
 
         Args:
-            url: 단축할 원본 URL
-            name: 사용자 정의 단축 URL 이름 (선택)
-            tags: 태그 목록 (선택)
-            public: 공개 여부 (선택)
+            url：短縮する元のURL
+            name：カスタムショートカットURL名（オプション）
+            タグ：タグリスト（オプション）
+            public：公開するかどうか（選択）
 
         Returns:
-            단축 URL 정보
+            短縮URL情報
             {
                 "url": {
                     "status": int,
@@ -134,16 +134,16 @@ class CuttlyClient:
         date_to: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        단축 URL 분석 데이터 조회
+        短縮URL分析データの照会
 
         Args:
-            url: 분석할 단축 URL
-            limit: 반환할 최대 결과 수 (선택)
-            date_from: 시작 날짜 (YYYY-MM-DD, 선택)
-            date_to: 종료 날짜 (YYYY-MM-DD, 선택)
+            url：分析する短縮URL
+            limit：返す最大結果数（選択）
+            date_from：開始日（YYYY-MM-DD、選択）
+            date_to：終了日（YYYY-MM-DD、選択）
 
         Returns:
-            분석 데이터
+            分析データ
             {
                 "url": {
                     "status": int,
@@ -177,11 +177,11 @@ class CuttlyClientV2:
 
     def __init__(self, api_key: str, base_url: str = "https://api.cutt.ly"):
         """
-        Cuttly V2 API 클라이언트 초기화
+        Cuttly V2 APIクライアントの初期化
 
         Args:
             api_key: Cuttly API key
-            base_url: API 기본 URL
+            base_url：APIベースURL
         """
         self.api_key = api_key
         self.base_url = base_url
@@ -194,7 +194,7 @@ class CuttlyClientV2:
         self.min_request_interval = 0.1
 
     def _handle_rate_limit(self) -> None:
-        """Rate limiting 처리"""
+        """Rate limiting 処理""""
         current_time = time.time()
         time_since_last_request = current_time - self.last_request_time
         if time_since_last_request < self.min_request_interval:
@@ -209,16 +209,16 @@ class CuttlyClientV2:
         params: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        API 요청 실행
+        APIリクエストの実行
 
         Args:
-            method: HTTP 메서드 (GET, POST, PUT, DELETE)
-            endpoint: API 엔드포인트
-            data: 요청 본문 데이터
-            params: 쿼리 파라미터
+            method: HTTP メソッド (GET、POST、PUT、DELETE)
+            endpoint: API エンドポイント
+            data: 要求本文データ
+            params: クエリパラメータ
 
         Returns:
-            API 응답
+            APIレスポンス
         """
         self._handle_rate_limit()
 
@@ -245,14 +245,14 @@ class CuttlyClientV2:
 # Factory function for easy instantiation
 def create_cuttly_client(api_key: str, use_v2: bool = False) -> Any:
     """
-    Cuttly 클라이언트 생성
+    Cuttly クライアントの作成
 
     Args:
         api_key: Cuttly API key
-        use_v2: V2 API 사용 여부
+        use_v2: V2 API を使用するかどうか
 
     Returns:
-        CuttlyClient 또는 CuttlyClientV2 인스턴스
+        CuttlyClient または CuttlyClientV2 インスタンス
     """
     if use_v2:
         return CuttlyClientV2(api_key)
@@ -260,18 +260,18 @@ def create_cuttly_client(api_key: str, use_v2: bool = False) -> Any:
 
 
 if __name__ == "__main__":
-    # 테스트 코드
+    #テストコード
     import os
 
     api_key = os.environ.get('CUTTLY_API_KEY', 'your-api-key')
     client = create_cuttly_client(api_key)
 
     try:
-        # URL 단축 테스트
+        # URL短縮テスト
         result = client.shorten_url('https://example.com', name='test-link')
         print("Shortened URL:", result)
 
-        # 분석 데이터 조회 테스트
+        ＃分析データ検索テスト
         short_link = result.get('url', {}).get('shortLink')
         if short_link:
             analytics = client.get_analytics(short_link)

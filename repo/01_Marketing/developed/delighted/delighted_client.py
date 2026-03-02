@@ -12,7 +12,7 @@ import threading
 
 
 class DelightedError(Exception):
-    """Delighted API 에러"""
+    """Delighted APIエラー"""
     pass
 
 
@@ -29,11 +29,11 @@ class DelightedClient:
 
     def __init__(self, api_key: str, base_url: str = "https://api.delighted.com/v1"):
         """
-        Delighted API 클라이언트 초기화
+        Delighted API クライアントの初期化
 
         Args:
             api_key: Delighted API key
-            base_url: API 기본 URL
+            base_url：APIベースURL
         """
         self.api_key = api_key
         self.base_url = base_url
@@ -46,7 +46,7 @@ class DelightedClient:
         self.min_request_interval = 0.1  # 100ms between requests (10 requests/second)
 
     def _handle_rate_limit(self) -> None:
-        """Rate limiting 처리"""
+        """Rate limiting 処理""""
         current_time = time.time()
         time_since_last_request = current_time - self.last_request_time
         if time_since_last_request < self.min_request_interval:
@@ -61,20 +61,20 @@ class DelightedClient:
         data: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        API 요청 실행
+        APIリクエストの実行
 
         Args:
-            method: HTTP 메서드 (GET, POST, PUT, DELETE)
-            endpoint: API 엔드포인트
-            params: 쿼리 파라미터
-            data: 요청 본문 데이터
+            method: HTTP メソッド (GET、POST、PUT、DELETE)
+            endpoint: API エンドポイント
+            params: クエリパラメータ
+            data: 要求本文データ
 
         Returns:
-            API 응답
+            APIレスポンス
 
         Raises:
-            DelightedError: API 에러 발생 시
-            RateLimitError: Rate limit 초과 시
+            DelightedError：APIエラーが発生したとき
+            RateLimitError: Rate limit 超過時
         """
         self._handle_rate_limit()
 
@@ -89,7 +89,7 @@ class DelightedClient:
                 timeout=30
             )
 
-            # Rate limit 처리
+            # Rate limit 処理
             if response.status_code == 429:
                 retry_after = int(response.headers.get('Retry-After', 1))
                 raise RateLimitError(f"Rate limit exceeded. Retry after {retry_after} seconds")
@@ -120,15 +120,15 @@ class DelightedClient:
         trend: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        NPS 메트릭 조회
+        NPSメトリック照会
 
         Args:
-            since: 시작일 (YYYY-MM-DD)
-            until: 종료일 (YYYY-MM-DD)
-            trend: 트렌드 기간 (30d, 90d, etc.)
+            since: 開始日 (YYYY-MM-DD)
+            until：終了日（YYYY-MM-DD）
+            trend：トレンド期間（30d、90d、etc.）
 
         Returns:
-            메트릭 데이터
+            メトリックデータ
             {
                 "nps": float,
                 "promoters": int,
@@ -153,20 +153,20 @@ class DelightedClient:
 
     def create_person(self, person: Dict[str, Any]) -> Dict[str, Any]:
         """
-        사람 생성
+        人の作成
 
         Args:
-            person: 사람 정보
+            person: 人情報
                 {
                     "email": str,
                     "name": str,
                     "properties": dict,
                     "locale": str,  # en, es, fr, de, pt, it, nl, cs, da, pt-BR
-                    "send": bool   # 설문조사 바로 전송 여부
+                    "send": bool # アンケートをすぐに送信するかどうか
                 }
 
         Returns:
-            생성된 사람 정보
+            作成された人情報
         """
         return self._make_request('POST', '/people', data=person)
 
@@ -176,11 +176,11 @@ class DelightedClient:
         updates: Dict[str, Any]
     ) -> Dict[str, Any]:
         """
-        사람 정보 업데이트
+        人情報更新
 
         Args:
-            person_id: 사람 ID
-            updates: 업데이트할 정보
+            person_id：人ID
+            updates: 更新する情報
                 {
                     "email": str,
                     "name": str,
@@ -189,19 +189,19 @@ class DelightedClient:
                 }
 
         Returns:
-            업데이트된 사람 정보
+            更新された人情報
         """
         return self._make_request('PUT', f'/people/{person_id}', data=updates)
 
     def create_or_update_person(self, person: Dict[str, Any]) -> Dict[str, Any]:
         """
-        사람 생성 또는 업데이트 (email을 기반)
+        人の作成または更新（電子メールに基づいて）
 
         Args:
-            person: 사람 정보
+            person: 人情報
 
         Returns:
-            사람 정보
+            人情報
         """
         return self._make_request('PUT', '/people', data=person)
 
@@ -212,15 +212,15 @@ class DelightedClient:
         page: Optional[int] = None
     ) -> List[Dict[str, Any]]:
         """
-        사람 검색
+        人検索
 
         Args:
-            email: 이메일 주소로 검색
-            limit: 반환할 최대 결과 수
-            page: 페이지 번호
+            email：Eメールアドレスで検索
+            limit: 返す最大結果数
+            page: ページ番号
 
         Returns:
-            사람 목록
+            人リスト
         """
         params = {}
         if email:
@@ -238,14 +238,14 @@ class DelightedClient:
         person_id: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        사람 구독 취소 (설문조스에서 제외)
+        人の購読をキャンセル（アンケートから除く）
 
         Args:
-            email: 이메일 주소
-            person_id: 사람 ID (둘 중 하나 제공 필요)
+            email: メールアドレス
+            person_id：人ID（2つのうちの1つが必要です）
 
         Returns:
-            결과
+            結果
         """
         data = {}
         if email:
@@ -270,20 +270,20 @@ class DelightedClient:
         person_id: Optional[str] = None
     ) -> List[Dict[str, Any]]:
         """
-        설문조사 응답 검색
+        アンケート調査回答の検索
 
         Args:
-            per_page: 페이지당 결과 수
-            page: 페이지 번호
-            since: 시작일 (YYYY-MM-DD)
-            until: 종료일 (YYYY-MM-DD)
-            trend: 트렌드 기간
-            min_score: 최소 점수 (0-10)
-            max_score: 최대 점수 (0-10)
-            person_id: 특정 사람의 응답 검색
+            per_page：ページあたりの結果数
+            page: ページ番号
+            since: 開始日 (YYYY-MM-DD)
+            until：終了日（YYYY-MM-DD）
+            trend：トレンド期間
+            min_score：最小スコア（0-10）
+            max_score：最大スコア（0-10）
+            person_id：特定の人の回答を検索する
 
         Returns:
-            응답 목록
+            レスポンスリスト
         """
         params = {}
         if per_page:
@@ -313,17 +313,17 @@ class DelightedClient:
         properties: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
-        설문조사 응답 추가 (소스로부터)
+        アンケート調査の回答を追加（ソースから）
         注意: これは主に他のソースからの回答を追加する場合に使用
 
         Args:
-            person_email: 사람 이메일
-            score: 점수 (0-10)
-            comment: 코멘트
-            properties: 추가 속성
+            person_email：人のEメール
+            スコア：スコア（0-10）
+            comment: コメント
+            properties: 追加プロパティ
 
         Returns:
-            추가된 응답 정보
+            追加された応答情報
         """
         data = {
             'person_email': person_email,
@@ -340,30 +340,30 @@ class DelightedClient:
 
     def delete_person(self, person_id: str) -> Dict[str, Any]:
         """
-        사람 삭제
+        人を削除
 
         Args:
-            person_id: 사람 ID
+            person_id：人ID
 
         Returns:
-            삭제 결과
+            削除結果
         """
         return self._make_request('DELETE', f'/people/{person_id}')
 
 
 class DelightedWebhookHandler:
     """
-    Delighted Web 핸들러
-    Flask 서버로 웹훅 수신 및 처리
+    Delighted Webハンドラ
+    FlaskサーバーによるWebフックの受信と処理
     """
 
     def __init__(self, port: int = 5000, webhook_path: str = '/webhook'):
         """
-        웹훅 핸들러 초기화
+        Webフックハンドラの初期化
 
         Args:
-            port: 서버 포트
-            webhook_path: 웹훅 경로
+            port：サーバーポート
+            webhook_path：Webフックパス
         """
         self.app = Flask(__name__)
         self.port = port
@@ -376,7 +376,7 @@ class DelightedWebhookHandler:
         self._setup_routes()
 
     def _setup_routes(self):
-        """Flask 라우트 설정"""
+        """Flask ルート設定"""
         @self.app.route(self.webhook_path, methods=['POST'])
         def handle_webhook():
             event = request.get_json()
@@ -387,7 +387,7 @@ class DelightedWebhookHandler:
             event_type = event.get('event')
             event_data = event.get('data', {})
 
-            # 이벤트 타입별 핸들러 실행
+            ＃イベントタイプ別ハンドラの実行
             handlers = self.response_handlers.get(event_type, [])
             if handlers:
                 for handler in handlers:
@@ -404,29 +404,29 @@ class DelightedWebhookHandler:
 
     def on_new_response(self, handler: callable):
         """
-        새 응답 이벤트 핸들러 등록
+        新しい応答イベントハンドラの登録
         """
         self.response_handlers['response.created'].append(handler)
 
     def on_new_unsubscribe(self, handler: callable):
         """
-        구독 취소 이벤트 핸들러 등록
+        サブスクリプションキャンセルイベントハンドラの登録
         """
         self.response_handlers['person.unsubscribed'].append(handler)
 
     def on_new_comment(self, handler: callable):
         """
-        새 코멘트 이벤트 핸들러 등록
+        新しいコメントイベントハンドラの登録
         """
         self.response_handlers['comment.created'].append(handler)
 
     def run(self, host: str = '0.0.0.0', debug: bool = False):
         """
-        웹훅 서버 시작
+        Webフックサーバーの起動
 
         Args:
-            host: 호스트 주소
-            debug: 디버그 모드
+            host：ホストアドレス
+            debug: デバッグモード
         """
         def run_server():
             self.app.run(host=host, port=self.port, debug=debug, threaded=True)
@@ -439,13 +439,13 @@ class DelightedWebhookHandler:
 
 def create_delighted_client(api_key: str) -> DelightedClient:
     """
-    Delighted 클라이언트 생성 (Factory function)
+    Delighted クライアントの作成 (Factory function)
 
     Args:
         api_key: Delighted API key
 
     Returns:
-        DelightedClient 인스턴스
+        DelightedClient インスタンス
     """
     return DelightedClient(api_key)
 
@@ -453,16 +453,16 @@ def create_delighted_client(api_key: str) -> DelightedClient:
 if __name__ == "__main__":
     import os
 
-    # 테스트 코드
+    #テストコード
     api_key = os.environ.get('DELIGHTED_API_KEY', 'your-api-key')
     client = create_delighted_client(api_key)
 
     try:
-        # 메트릭 조회 테스트
+        # メトリック検索テスト
         metrics = client.get_metrics()
         print("Metrics:", metrics)
 
-        # 사람 생성 테스트
+        #人生成テスト
         result = client.create_person({
             'email': 'test@example.com',
             'name': 'Test User',
@@ -471,11 +471,11 @@ if __name__ == "__main__":
         })
         print("Created person:", result)
 
-        # 응답 검색 테스트
+        # レスポンス検索テスト
         responses = client.search_survey_responses(per_page=5)
         print("Survey responses:", responses)
 
-        # 웹훅 서버 테스트
+        ＃Webフックサーバーのテスト
         def handle_new_response(data):
             print(f"New response received: {data}")
 
@@ -487,7 +487,7 @@ if __name__ == "__main__":
         webhook_handler.on_new_unsubscribe(handle_new_unsubscribe)
         webhook_handler.run()
 
-        # 서버 유지
+        ＃サーバーの維持
         while True:
             time.sleep(1)
 
